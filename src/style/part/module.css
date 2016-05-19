@@ -1,0 +1,74 @@
+/*
+  Module
+*/
+.bar{
+  position: fixed 0 * 0 0;
+  background: rgba(0, 0, 0, 0.11);
+  background-image: url(/img/tile.png);
+  background-repeat: repeat;
+  background-position: center;
+  width:220px;
+  z-index: 10;
+  
+  .gt-logo {
+    display: block;
+    padding: 25px 0 15px;
+    text-align: center;
+  }
+  .bar-menu{
+    position: relative;
+    overflow: hidden;
+    
+    .bar-block{
+      background: rgba(0, 0, 0, 0.18);
+      display: block;
+      padding: 5px;
+      
+      .bar-ava{
+          display: inline-block;
+          float: left;
+          width: 40px;
+
+          img{
+            max-width: 100%;
+            border-radius: 50%;
+          }
+      }
+      
+      .bar-username{
+        padding-left: 50px;
+
+        .bar-name{
+          color: #fff;
+          font-size: 14px;
+          font-weight: 300;
+        }
+        .bar-links{
+
+          .bar-label{
+            background-color: $green;
+            color: $subgreen;
+            padding: 0 6px;
+            text-transform: uppercase;
+            line-height: 1;
+            font-size: 11px;
+            border-radius: 10px;
+          }
+          .u-opt, 
+          .u-off{
+              float: right;
+              color: $link-light-blue;
+              font-size: 14px;
+              margin: 0 5px;
+
+              &:hover,
+              &:active,
+              &:focus{
+                color: $link-light-blue-active;
+              }
+           }
+        }
+      }
+    }
+  }
+}

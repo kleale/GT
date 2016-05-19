@@ -1,0 +1,13 @@
+/*
+  Base
+*/
+body{
+  color:$text-main;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: $body-bg;
+}
+.csgo{
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
