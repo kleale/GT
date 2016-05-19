@@ -29,10 +29,70 @@
   //= template/bar.html
   
   <div class="container">
-    //= template/header.html
-
-    <section class="content">
-
+    //= template/breadcrumbs.html
+    
+    <div class="otstup" style="height:100px;"></div>
+    
+    <section class="mhead">
+      <div class="stage">
+        <ul>
+          <li class="s-pass"><a href=""><b>1</b><span>Квалификация</span></a></li>
+          <li class="s-pass"><a href=""><b>2</b><span>Групповой раунд</span></a></li>
+          <li class="active"><a href=""><b>3</b><span>China</span></a></li>
+          <li><a href=""><b>4</b><span>China #2</span></a></li>
+          <li><a href=""><b>5</b><span>America</span></a></li>
+          <li><a href=""><b>6</b><span>America #2</span></a></li>
+          <li><a href=""><b>7</b><span>SEA</span></a></li>
+          <li><a href=""><b>8</b><span>SEA #2</span></a></li>
+          <li><a href=""><b>9</b><span>Europe</span></a></li>
+          <li><a href=""><b>10</b><span>Europe #2</span></a></li>
+          <li><a href=""><b>11</b><span>Финал</span></a></li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <span id="rates" class="rating">
+            <span class="gti-star" rel="10" onclick="rate(10)"></span>
+            <span class="gti-star-o" rel="9" onclick="rate(9)"></span>
+            <span class="gti-star-o" rel="8" onclick="rate(8)"></span>
+            <span class="gti-star-o" rel="7" onclick="rate(7)"></span>
+            <span class="gti-star-o" rel="6" onclick="rate(6)"></span>
+            <span class="gti-star-o" rel="5" onclick="rate(5)"></span>
+            <span class="gti-star-half-o starred-half" rel="4" onclick="rate(4)"></span>
+            <span class="gti-star starred" rel="3" onclick="rate(3)"></span>
+            <span class="gti-star starred" rel="2" onclick="rate(2)"></span>
+            <span class="gti-star starred" rel="1" onclick="rate(1)"></span>
+          </span>
+          <span class="rgg" id="r_my" itemtype="http://schema.org/AggregateRating" itemscope="" itemprop="aggregateRating">
+            <span itemprop="ratingValue">7.56</span>
+            <meta content="184" itemprop="reviewCount">
+            <meta content="5" itemprop="bestRating">
+            <meta content="184" itemprop="ratingCount">
+          </span>
+        </div>
+        <div class="col-md-6">
+          <h1 class="m-title"><span>Матч London Conspiracy Dota2 vs SuperCloud7</span></h1>
+          <div class="m-time">29 ЯНВ 2016 15:30 МСК</div>
+          <div class="m-icons">
+            <span class="m-i-1"></span>
+            <span class="m-i-2"></span>
+            <span class="m-i-3"></span>
+            <span class="m-i-4"></span>
+            <span class="m-i-5"></span>
+            <span class="m-i-6"></span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="mrs">
+            <span class="m-v"><i class="gti-eye"></i>123</span>
+            <a href="" class="shr"><i class="gti-vk"></i>123</a>
+            <a href="" class="shr"><i class="gti-facebook">123</i></a>
+            <a href="" class="shr"><i class="gti-twitter"></i>123</a>
+            <a href="" class="shr"><i class="gti-google-plus"></i>123</a>
+          </div>
+        </div>
+      </div>
+      
     </section>
 
     //= template/footer.html

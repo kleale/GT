@@ -17,15 +17,16 @@ var gulp         = require('gulp'),
     //uncss        = require('gulp-uncss'),              // удаление неиспользуемых стилей
     postcss      = require('gulp-postcss'),
     atImport     = require('postcss-import'),            // import in css
+    postcssMixins  = require('postcss-mixins')({
+        mixins: cssMixins
+    }),
     postcssNested = require('postcss-nested'),           // sass in postcss
     postcssShort = require('postcss-short'),             // сокращенная запись в css
     postcssVars  = require('postcss-simple-vars')({
         variables: cssVariables
     }),
-    postcssMixins  = require('postcss-mixins')({
-        mixins: cssMixins
-    }),
-    postcssColor = require('postcss-color'),
+    postcssColor = require('postcss-color-function'),
+    postcssAssets = require('postcss-assets'),
     
     cssnano      = require('cssnano'),                   // mincss + postcss
     //assets       = require('postcss-assets'),          // картинки в цсс
@@ -62,7 +63,7 @@ var path = {
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
-        style: 'src/style/**/*.css',
+        style: 'src/style/**/*.*',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -74,7 +75,7 @@ var config = {
     server: {
         baseDir: "./build"
     },
-    tunnel: true,
+    tunnel: false,
     host: 'localhost',
     port: 9000,
     logPrefix: "Frontend_Kleale"
@@ -116,14 +117,15 @@ gulp.task('style:build', function () {
 */
 gulp.task('style:build', function () {
     var processors = [
-      autoprefixer({browsers: ['last 2 version']}),
       atImport,
       postcssShort,
+      postcssMixins,
       postcssNested,
       postcssVars,
-      postcssMixins,
       postcssColor,
-      //cssnano(),
+      postcssAssets,
+      autoprefixer({browsers: ['last 2 version']}),
+      cssnano(),
     ];
     return gulp.src(path.src.style) //Выберем наш main.scss
         .pipe(postcss(processors))

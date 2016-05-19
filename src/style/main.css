@@ -11,4 +11,9 @@
 @import "part/module.css";
 @import "part/state.css";
 @import "part/theme.css";
-@import "gtfont.css";
+@import "gticons.css";
+
+/*
+* Pages
+*/
+@import "part/matchpage.css";

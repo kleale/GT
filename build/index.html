@@ -27,30 +27,150 @@
 </head>
 <body class="csgo">
   <div class="bar">
+    <span id="menu-toggle" class="opener"><i class="gti-bars"></i></span>
     <a href="#!" class="gt-logo"><img src="/img/gt-logo.png" alt="Game-tournaments.com"></a>
     <div class="bar-menu">
       <div class="bar-block">
         <a href="#!" class="bar-ava"><img src="/img/uava.png" alt="User"></a>
         <div class="bar-username">
-          <a href="#!" class="bar-name">Алексей Kleale</a>
+          <a href="#!" class="bar-name">Алексей Kleale Алексей Kleale</a>
           <div class="bar-links">
             <span class="bar-label">pro</span>
-            <a href="#!" class="u-opt"><i class="gticon gticon-wrench"></i></a>
-            <a href="#!" class="u-off"><i class="gticon gticon-power-off"></i></a>
+            <a href="#!" class="u-opt"><i class="gti-wrench"></i></a>
+            <a href="#!" class="u-off"><i class="gti-power-off"></i></a>
+          </div>
+        </div>
+      </div>
+      <ul class="bar-nav-games">
+        <li class="active"><a href="#!"><img src="http://game-tournaments.com/html/img/logo-582.png" alt="Dota 2"></a></li>
+        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-704.png" alt="CS:GO"></a></li>
+        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-313.png" alt="League of Legends"></a></li>
+        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-758.png" alt="Heroes of the Storm"></a></li>
+        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-755.png" alt="HearthStone"></a></li>
+      </ul>
+      <ul class="bar-nav">
+        <li class="active"><a href="#!"><i class="gti-vs"></i> Матчи</a></li>
+        <li><a href="#!"><i class="gti-trophy"></i>Турниры</a></li>
+        <li><a href="#!"><i class="gti-newspaper-o"></i>Новости</a></li>
+        <li><a href="#!"><i class="gti-users"></i>Команды</a></li>
+        <li><a href="#!"><i class="gti-user"></i>Игроки</a></li>
+        <li><a href="#!"><i class="gti-bullhorn"></i>Ставки</a></li>
+        <li><a href="#!"><i class="gti-bell"></i>Прогнозы</a></li>
+        <li><a href="#!"><i class="gti-star"></i>Рейтинг</a></li>
+        <li><a href="#!" ><i class="gti-play-circle-o"></i>Медиа</a></li>
+        <li><a href="#!"><i class="gti-comments"></i>Форум</a></li>
+      </ul>
+      <div class="dropers">
+        <div class="s-lang">
+          <div class="dropdown">
+            <a class="dla" id="ddlang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              RU
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ddlang">
+              <li class="active"><a href="#">Русский</a></li>
+              <li><a href="#">English</a></li>
+              <li><a href="#">Italiano</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="s-time">
+          <div class="dropdown">
+            <a class="sub" id="ddtime" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              15:08 (GMT +3:00)
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ddtime">
+              <li><a href="#">12:08 (GMT 0:00)</a></li>
+              <li><a href="#">13:08 (GMT +1:00)</a></li>
+              <li><a href="#">14:08 (GMT +2:00)</a></li>
+              <li class="active"><a href="#">15:08 (GMT +2:00)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="sercher">
+      <input type="text" name="" id="" class="form-control" placeholder="Поиск">
+      <a href=""><i class="gti-search"></i></a>
+    </div>  
+  </div>
+  
+  <div class="container">
+    <div class="bread">
+      <ol id="breadcumbs" class="breadcrumb hidden-xs">
+        <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+          <a itemprop="url" href="/"><span itemprop="title">Турниры</span></a>
+        </li>
+        <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+          <a title="Dota 2" itemprop="url" href="/dota-2"><span itemprop="title">Dota 2</span></a>
+        </li>
+      </ol>
+    </div>
+    
+    <div class="otstup" style="height:100px;"></div>
+    
+    <section class="mhead">
+      <div class="stage">
+        <ul>
+          <li class="s-pass"><a href=""><b>1</b><span>Квалификация</span></a></li>
+          <li class="s-pass"><a href=""><b>2</b><span>Групповой раунд</span></a></li>
+          <li class="active"><a href=""><b>3</b><span>China</span></a></li>
+          <li><a href=""><b>4</b><span>China #2</span></a></li>
+          <li><a href=""><b>5</b><span>America</span></a></li>
+          <li><a href=""><b>6</b><span>America #2</span></a></li>
+          <li><a href=""><b>7</b><span>SEA</span></a></li>
+          <li><a href=""><b>8</b><span>SEA #2</span></a></li>
+          <li><a href=""><b>9</b><span>Europe</span></a></li>
+          <li><a href=""><b>10</b><span>Europe #2</span></a></li>
+          <li><a href=""><b>11</b><span>Финал</span></a></li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <span id="rates" class="rating">
+            <span class="gti-star" rel="10" onclick="rate(10)"></span>
+            <span class="gti-star-o" rel="9" onclick="rate(9)"></span>
+            <span class="gti-star-o" rel="8" onclick="rate(8)"></span>
+            <span class="gti-star-o" rel="7" onclick="rate(7)"></span>
+            <span class="gti-star-o" rel="6" onclick="rate(6)"></span>
+            <span class="gti-star-o" rel="5" onclick="rate(5)"></span>
+            <span class="gti-star-half-o starred-half" rel="4" onclick="rate(4)"></span>
+            <span class="gti-star starred" rel="3" onclick="rate(3)"></span>
+            <span class="gti-star starred" rel="2" onclick="rate(2)"></span>
+            <span class="gti-star starred" rel="1" onclick="rate(1)"></span>
+          </span>
+          <span class="rgg" id="r_my" itemtype="http://schema.org/AggregateRating" itemscope="" itemprop="aggregateRating">
+            <span itemprop="ratingValue">7.56</span>
+            <meta content="184" itemprop="reviewCount">
+            <meta content="5" itemprop="bestRating">
+            <meta content="184" itemprop="ratingCount">
+          </span>
+        </div>
+        <div class="col-md-6">
+          <h1 class="m-title"><span>Матч London Conspiracy Dota2 vs SuperCloud7</span></h1>
+          <div class="m-time">29 ЯНВ 2016 15:30 МСК</div>
+          <div class="m-icons">
+            <span class="m-i-1"></span>
+            <span class="m-i-2"></span>
+            <span class="m-i-3"></span>
+            <span class="m-i-4"></span>
+            <span class="m-i-5"></span>
+            <span class="m-i-6"></span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="mrs">
+            <span class="m-v"><i class="gti-eye"></i>123</span>
+            <a href="" class="shr"><i class="gti-vk"></i>123</a>
+            <a href="" class="shr"><i class="gti-facebook">123</i></a>
+            <a href="" class="shr"><i class="gti-twitter"></i>123</a>
+            <a href="" class="shr"><i class="gti-google-plus"></i>123</a>
           </div>
         </div>
       </div>
       
-    </div>
-  </div>
-  
-  <div class="container">
-    <section class="header">
-        
-    </section>
-
-    <section class="content">
-
     </section>
 
     <section class="header">

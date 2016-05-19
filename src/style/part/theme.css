@@ -1,6 +1,56 @@
 /*
   Theme
 */
+a{
+  transition: $tease;
+}
 
 
+/*
+* Bootstrap Theme
+*/
+
+.dropdown.open{
+  > a{
+    background: $bg-dropdown;
+    color: $link-gray-active;
+    box-shadow: 0 6px 12px rgba(0,0,0,.2);
+  }
+}
+
+.dropdown-menu {
+  background: $bg-dropdown;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  width: 100%;
+  
+  li{
+    
+    &.active a{
+      background: $$button-blue;
+      color: $button-blue-text;
+    }
+    
+    a{
+      color: $link-gray;
+      padding: 10px 15px;
+      
+      &:active,
+      &:focus,
+      &:hover{
+        text-decoration: none;
+        color: $link-gray-active;
+        background: $button-blue;
+      }
+    }
+  }
+}
+
+
+.breadcrumb{
+  background-color: transparent;
+  border-radius: 0;
+}
 
