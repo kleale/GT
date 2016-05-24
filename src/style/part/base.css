@@ -11,3 +11,86 @@ body{
   background-repeat: no-repeat;
   background-position: 50% 0;
 }
+
+
+
+
+/*
+* Match Icons
+*/
+[class^="m-i-"], [class*=" m-i-"] {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width:32px;
+  height:32px;
+}
+.m-i-1{
+  background-image: url(../img/mi1.svg);
+}
+.m-i-2{
+  background-image: url(../img/mi2.svg);
+}
+.m-i-3{
+  background-image: url(../img/mi3.svg);
+}
+.m-i-4{
+  background-image: url(../img/mi4.svg);
+}
+.m-i-5{
+  background-image: url(../img/mi5.svg);
+}
+.m-i-6{
+  background-image: url(../img/mi6.svg);
+}
+.m-i-7{
+  background-image: url(../img/mi7.svg);
+}
+.m-i-8{
+  background-image: url(../img/mi8.svg);
+}
+.m-i-9{
+  background-image: url(../img/mi9.svg);
+}
+.m-i-10{
+  background-image: url(../img/mi10.svg);
+}
+.m-i-11{
+  background-image: url(../img/mi11.svg);
+}
+
+/*
+* Predictors Icons
+*/
+[class^="p-i-"], [class*=" p-i-"] {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width:32px;
+  height:32px;
+}
+.p-i-1{
+  background-image: url(../img/p1.svg);
+}
+.p-i-2{
+  background-image: url(../img/p2.svg);
+}
+.p-i-3{
+  background-image: url(../img/p3.svg);
+}
+.p-i-4{
+  background-image: url(../img/p4.svg);
+}
+.p-i-5{
+  background-image: url(../img/p5.svg);
+}
+
+.close {
+  color: #99fffd;
+  font-size: 31px;
+  margin-right: 10px;
+  opacity: 0.6;
+  text-shadow: 0 1px 0 #000000;
+}

@@ -16,4 +16,8 @@
 /*
 * Pages
 */
-@import "part/matchpage.css";
+@import "part/match-page.css";
+@import "part/match-player.css";
+@import "part/match-player-chat.css";
+@import "part/match-player-stat.css";
+@import "part/match-player-log.css";

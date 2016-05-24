@@ -1,0 +1,571 @@
+/*
+    stream stat block
+*/
+
+.stf{
+  display: table;
+  
+  span{
+    transition: $tease;
+    color:#3f79a2;
+    padding: 10px;
+    display: table-cell;
+    text-transform: uppercase;
+    cursor: pointer;
+      
+    &.active{
+      color:#c5d8ed;
+      background: #12232d;
+    }
+    &:hover,
+    &:active,
+    &:focus{
+      color:#c5d8ed;
+    }
+  }
+}
+
+.nostat {
+  position: relative;
+  text-align: center;
+  color: #386E92;
+  
+  i {
+    display: block;
+    font-size: 50px;
+    margin: 90px 0 10px;
+  }
+  span {
+    display: block;
+    margin-bottom: 140px;
+    text-transform: uppercase;
+  }
+}
+
+.filters{
+  position: relative;
+  z-index: 20;
+  padding: 0px 10px;
+  
+  table{
+    width: 100%;
+    
+    td{
+      padding: 5px
+    }
+  }
+  .statsdelay{
+    text-align: center;
+    font-size: 10px;
+    color: #3f79a2;
+  }
+  .span{
+    cursor: pointer;
+  }
+  .fi .btn{
+    background: #143848;
+    font-size: 11px;
+    text-transform: none;
+    color: #3f79a2;
+  }
+  .ti>span{
+    color: #3f79a2;
+    cursor: pointer;
+    i{
+      margin-right: 5px;
+      position: relative;
+      top: 1px;
+    }
+  }
+  .dlyi{
+    position: relative;
+    padding: 10px;
+    
+    .btn{
+      position: absolute 10px 10px * *;
+    }
+    input{
+      padding-right:30px;
+      margin-right: 40px;
+      width: 100px;
+    }
+    b{
+      position: absolute 17px 55px 0 *;
+      font-size: 11px;
+    }
+  }
+  .open span{
+    color: #c5d8ed;
+  }
+}
+
+/* .Stat*/
+
+
+/*NEED to edit*/
+
+.stm{
+  float:left;
+
+  a {
+    width: 50px;
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 17px;
+    line-height: 50px;
+    opacity: 0.4;
+    text-align: center;
+    position:relative;
+    
+    .current {
+      background: #333;
+      opacity: 1;
+    }
+  }
+}
+
+.statsort{
+    color: #8f8f8f;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 60px;
+}
+.stats {
+    padding: 7px;
+    position:relative;
+}
+
+.splayers{
+  padding: 10px 15px;
+  list-style: none;
+  margin: 0;
+  
+  li {
+    margin: 0 0 2px;
+    position: relative;
+    line-height: 27px;
+    min-height: 27px;
+    
+    &.radiant{
+      background: linear-gradient(to right,  rgba(44,186,37,0.2) 0%,rgba(97,225,99,0.09) 57%,rgba(137,255,145,0) 100%);
+      
+      .sprogress > u {
+        background: linear-gradient(to right,  rgba(3,229,0,0.15) 0%,rgba(2,158,0,0.53) 100%);
+      }
+    }
+    &.dire{
+      background: linear-gradient(to right,  rgba(255,50,50,0.2) 0%,rgba(255,22,22,0.09) 57%,rgba(255,0,0,0) 100%);
+      
+      .sprogress > u {
+        background: linear-gradient(to right,  rgba(255,50,50,0.15) 0%,rgba(255,0,0,0.53) 100%);
+      }
+    }
+    .heroava {
+      box-shadow:none;
+      display: block;
+      margin-right: 5px;
+      float:left;
+      
+      img{
+        height: 28px;    
+        display:block;
+      }
+    }
+    .sitem {
+      font-size: 13px;
+      
+      b{
+        font-weight:500;
+      }
+      .snum{
+        color: #f9ffc2;
+        display: inline-block;
+        width: 80px;
+        margin-right:-10px;
+        font-weight:400;
+      }
+    }
+    
+    .sprogress {
+      display: inline-block;
+      height: 2px;
+      vertical-align: middle;
+      width: 60px;
+      margin-right:-10px;
+      
+      u {
+        background: #fff;
+        display: block;
+        height: 2px;
+        position:relative;
+        
+        &:after {
+          background: #fcffa0;
+          border-radius: 50%;
+          box-shadow: 0 0 3px #fff;
+          content: "";
+          display: block;
+          height: 6px;
+          position: absolute;
+          right: 0;
+          top: -2px;
+          width: 6px;
+        }
+      }
+    }
+    
+    
+  }
+} /*splayers*/
+
+
+.pitems {
+    float: right;
+    width: 135px;
+    
+  > a {
+    display: block;
+    float: left;
+    img {
+    width: 22px;
+    }
+  }
+}
+
+
+.listbyteams{
+    margin-bottom:10px;
+    
+  li.radiant:before,
+  li.radiant:after {
+    background: linear-gradient(to right,  rgba(3,229,0,0.79) 0%,rgba(2,158,0,0.05) 100%);
+  }
+  
+  li.dire:before,
+  li.dire:after {
+    background: linear-gradient(to right,  rgba(224,0,0,0.79) 0%,rgba(204,0,0,0.05) 100%);
+  }
+  .heroava {
+    float: left;
+  }
+}
+  
+.sname {
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  max-width: 115px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top:2px;
+  
+  a{
+    color: #fff;
+  }
+  
+  small {
+    color: #a3a3a3;
+    display: block;
+    font-size: 10px;
+    font-weight: normal;
+  }
+}
+
+  
+.sitemname {
+    display: block;
+    float: left;
+    overflow: hidden;
+    width: 100px;
+    padding:0 5px;
+}
+.statsblock .stname:first-child{
+    margin-top:-5px;
+}
+  
+.pskills {
+  float: right;
+  height: 28px;
+  width: 130px;
+  > a {
+    display: block;
+    float: left;
+    height: 14px;
+    overflow: hidden;
+    
+    >img {
+    display: block;
+    width: 18px;
+    }
+  }
+}
+
+/*Dalay*/
+.dblock{
+  position:relative;
+  
+  > a {
+    color: #8b8b8b;
+    display: block;
+    padding: 6px;
+    
+    &:hover {
+      text-decoration:none;
+      cursor:pointer;
+    }
+  }
+  .dropdown-menu {
+    left: auto;
+    margin-top: 0;
+    padding: 10px;
+    right: -1px;
+    top: 100%;
+    width: 200px;
+  }
+}
+  
+.dlyinput{
+  float: left; 
+  width: 130px; 
+  margin-right: 10px;
+  position:relative;
+  
+  b {
+    color: #8195ae;
+    font-size: 11px;
+    font-weight: normal;
+    position: absolute;
+    right: 8px;
+    top: 7px;
+  }
+}
+
+.dropdown.dblock.open > a {
+    background: #3a3f44;
+    border-radius:2px 2px 0 0;
+}
+  
+/*Team names*/
+.stname {
+  margin-top: 1px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 2px;
+    
+  &:after {
+    background: #4f4f4f;
+    bottom: 8px;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
+  span {
+    background: #333333;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/*Match Select*/
+.stat_m_select {
+  margin-bottom: 2px;
+    
+  .dropdown-menu{
+    box-shadow: 0 4px 10px #090808;
+    border: 1px solid #1c1c1c;
+    a{
+      padding: 7px 10px;
+    }
+  }
+  .dropdown .btn {
+    background: #444444;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+
+/*EXPAND*/
+.expanded{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1000;
+}
+.sbtn{
+    float:right;
+}
+#srteamslider.expanded {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 5px;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+#srteamslider.expanded .srteamview {
+    bottom: 0;
+    height: 100%;
+    position: fixed;
+    margin-right: 0 !important;
+    top:0;
+    left:0;
+    right: 50px;
+}
+#srteamslider.expanded.toggled_stream .srteamview {
+    right:328px;
+}
+#srteamslider.expanded .srteamtoggle{
+    bottom: 0;
+    height: 100% !important;
+    position: fixed;
+    right: 0;
+    top:0;
+}
+#srteamslider.expanded #kof{
+    display:none;
+}
+#srteamslider.expanded.toggled_stream #kof {
+    bottom: -4px;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 10px;
+}
+.expanded .stmblock{
+    height: auto;
+    max-height:none;
+    padding-bottom:15px;
+}
+
+
+/*KOEF NEW*/
+.expanded.toggled_stream .stm_koef {
+    background: #3c3c3c;
+    display: block;
+    margin: 5px 0 0 0;
+    padding: 15px 5px;
+    text-align: center;
+    z-index: 10;
+    
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.stm_koef > h2 {
+    font-size: 13px;
+    margin: 0;
+    padding: 0 0 20px;
+    text-transform: uppercase;
+}
+.blogo {
+    display: inline-block;
+    width: 45px;
+}
+.blogo img{
+    max-width:100%;
+}
+.kft td{
+    padding:4px 0;
+}
+.kft .koeftable td{
+    padding: 0;
+}
+/**/
+
+
+
+
+/*BRAND*/
+.expanded.toggled_stream.branded .st_brand {
+    background-position: 50% 50%;
+    background-repeat:no-repeat;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    height:60px;
+}
+#srteamslider.expanded.branded.toggled_stream .srteamtoggle{
+    width: 368px !important;
+    padding:0 20px;
+}
+#srteamslider.expanded.toggled_stream.branded .srteamview {
+    right: 368px;
+}
+.expanded.branded .srteamtoggle .stat_m_select .dropdown .btn {
+    background: #333;
+}
+.expanded.branded .srteamtoggle .stmblock {
+    background: rgba(0, 0, 0, 0.5) ;
+}
+.expanded.toggled_stream.branded .srteambrand{
+    opacity:.2;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:block!important;
+    z-index:1;
+}
+.expanded.toggled_stream.branded .srteambrandhead{
+    display:block!important;
+    height:100px;
+}
+.expanded.branded.toggled_stream .stm_koef {
+    background:rgba(0, 0, 0, 0.54);
+    box-shadow:none;
+}
+.expanded.branded.toggled_stream .stm_koef::after {
+    display:none;
+}
+
+
+
+/*
+      BRANDS --------------------------------
+*/
+.st_brand{
+    transition:all .2s linear;
+}
+/* .b_head */
+#srteamslider.expanded.branded.toggled_stream.b_headshot .srteamtoggle{
+    background: url("/html/imgbrand/st_bg_head.jpg") no-repeat scroll 50% 0;
+}
+.b_headshot .st_brand{
+    background-image: url(/html/imgbrand/sbrand_head.png);
+}
+
+/* .b_egb */
+#srteamslider.expanded.branded.toggled_stream.b_egb .srteamtoggle{
+    background: url("/html/imgbrand/st_bg_egb.jpg") no-repeat scroll 50% 0;
+}
+.b_egb .st_brand{
+    background-image: url(/html/imgbrand/sbrand_egb.png);
+}
+
+/* .b_vital */
+#srteamslider.expanded.branded.toggled_stream.b_vital .srteamtoggle{
+    background: url("/html/imgbrand/st_bg_vital.jpg") no-repeat scroll 50% 0;
+}
+.b_vital .st_brand{
+    background-image: url(/html/imgbrand/sbrand_vital.png);
+}
+/* ------------------------------------------ */

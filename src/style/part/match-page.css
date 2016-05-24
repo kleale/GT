@@ -1,0 +1,496 @@
+/*
+* Matchpage
+*/
+
+.m-head{
+  background: $bg-main url(../img/$section_bg_1) repeat 50% 50%;
+  position: relative;
+  padding: 50px 40px 10px;
+  border-top: 1px solid color($button-blue b(50%));
+  
+  @media (max-width: $XM){
+    text-align: center;
+  }
+}
+
+.stage{
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  margin: -65px -40px 40px;
+  
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+    
+    li{
+      display: table-cell;
+      vertical-align: top;
+      width: auto;
+      padding: 0 5px;
+      position: relative;
+      
+      @media (max-width: $M){
+        display:none;
+      }
+      
+      &.active{
+        @media (max-width: $M){
+          display:block;
+        }
+      }
+      
+      a{
+        display: inline-block;
+        color: $button-gray-text;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 11px;
+        
+        b{
+          background: $button-gray;
+          display: inline-block;
+          width:30px;
+          height: 30px;
+          line-height: 31px;
+          font-size: 14px;
+          font-weight: 600;
+          box-shadow: $bsh;
+          border-radius: 50%;
+          margin-bottom: 5px;
+          position: relative;
+          z-index: 1;
+        }
+        span{
+          display: block;
+        }
+        
+        &:hover b,
+        &:active b,
+        &:focus b{
+          background-color: $button-blue;
+          color: $button-blue-text;
+          text-decoration: none;
+        }
+        
+        &:hover,
+        &:active,
+        &:focus {
+          color: $link-blue-active;
+          text-decoration: none;
+        }
+      }
+      
+      &.s-pass:before,
+      &.active:before{
+        content: '';
+        display: block;
+        width:100%;
+        position: absolute 13px 0 * 0;
+        height: 3px;
+        background: color($button-blue b(50%));
+        
+        @media (max-width: $M){
+          display:block;
+        }
+      }
+      &.active:before{
+        width:50%;
+      }
+      &.s-pass a b,
+      &.active a b{
+        background: $button-blue;
+        color: $button-blue-text;
+      }
+      &.s-pass a b{
+        background: color($button-blue b(50%));
+        color: color($button-blue b(30%));
+      }
+      &.s-pass a span,
+      &.active a span{
+        color: color($button-blue b(30%));
+      }
+    }
+  }
+  
+}/** STAGE **/
+
+/*
+Headline
+*/
+
+.m-rate{
+  overflow: hidden;
+  display: inline-block;
+  font-size: 16px;
+  padding: 1px 3px 1px 0;
+  position: relative;
+  top: 4px;
+  margin: 1px 0 0 -10px;
+  
+  @media (max-width: $L){
+    margin: 1px;
+  }
+  
+  span {
+    display: block;
+    float: right;
+    font-family: gticons;
+    font-style: normal;
+    font-weight: normal;
+    cursor: pointer;
+    
+    &:before {
+      color: color($link-light-blue b(60%));
+      content: "";
+      padding-right: 4px;
+    }
+    &:hover:before,
+    &:hover ~ span:before{
+      color: #f6c000;
+      content: "";
+    }
+    &.starred:before{
+      color: #f6c000;
+      content: ""; 
+    }
+    &.starred-half:before{
+      color: #f6c000;
+      content: ""!important; 
+    }
+  }
+
+}
+.rgg{
+  background: $button-blue;
+  color: $button-blue-text;
+  box-shadow: $bsh;
+  border-radius: $br;
+  padding: 4px 5px 2px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.m-title{
+  font-size: 19px;
+  font-weight: 300;
+  text-align: center;
+  margin: 4px 0 15px;
+  line-height: 1;
+  
+  @media (max-width: $XM){
+    font-size: 24px;
+    margin-top:15px;
+  }
+  
+  span{
+    position: relative;
+    display: inline-block;
+  
+    &:after{
+      content: inline(../img/hline1.png);
+      position: absolute -4px * * 100%;
+      margin-left: 0px;
+    }
+    &:before{
+      content: inline(../img/hline.png);
+      position: absolute -4px 100% * *;
+      margin-right: 0px;
+    }
+  }
+}
+.m-time{
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  @media (max-width: $L){
+    display: inline-block;
+  }
+}
+
+.m-icons{
+  text-align: center;
+  margin-bottom: -9px;
+  vertical-align: bottom;
+  @media (max-width: $L){
+    display: inline-block;
+  }
+}
+
+.m-shr {
+  text-align: right;
+  margin: 1px -10px;
+  
+  @media (max-width: $L){
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+.m-v{
+  font-size: 12px;
+  padding: 3px;
+  display: inline-block;
+  margin-right: 5px;
+  
+  i {
+    font-size: 16px;
+    margin-right: 5px;
+    position: relative 2px * * *;
+  }
+}
+.shr{
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 12px;
+  color: $button-gray-text;
+  background-color: $button-gray;
+  border-radius: $br;
+  box-shadow: $bsh;
+  
+    &:hover,
+    &:active,
+    &:focus{
+      background-color: $button-blue;
+      color: $button-blue-text;
+      text-decoration: none;
+    }
+  
+    i{
+      font-size: 16px;
+      margin-right: 5px;
+      position: relative 2px * * *;
+    }
+}
+
+.m-tags{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: $link-blue;
+  max-width: 300px;
+  font-size: 11px;
+  float: right;
+  
+  @media (max-width: $XM){
+    text-align: center;
+    float: none;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  a{
+    
+  }
+}
+.m-fast{
+  position: absolute -1px 0 * 100%;
+  font-size: 18px;
+  color: $button-gray-text;
+  padding: 2px 0;
+  background-color: $bg-main;
+  background-image: inline(../img/tile.png);
+  text-align: center;
+  width: 40px;
+  
+  a{
+    color: $button-gray-text;
+    padding: 0px 2px;
+    display: block;
+    width: 40px;
+    height: 37px;
+    line-height: 37px;
+    
+    &:hover,
+    &:active,
+    &:focus{
+      color: $link-gray-active;
+      text-decoration: none;
+    }
+  }
+
+}
+
+.m-team{
+  @media (max-width: $L){
+    text-align: center;
+  }
+  
+  .mtn{
+    font-size: 22px;
+    text-decoration: none;
+    color: $text-main;
+    
+  }
+  .mtp{
+    display: block;
+    height: 70px;
+    width: 70px;
+    line-height: 48px;
+    padding: 7px;
+    position: relative;
+    background-color: $overlay-blue;
+    border-radius:50%;
+    
+    b{
+      /*background-color: $overlay-blue;*/
+      background-color: rgb(42, 62, 74);
+      border: 1px solid $bg-main;
+      color: $link-light-blue;
+      position: absolute -10px -10px * *;
+      display: block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 11px;
+      text-align: center;
+      border-radius: 50%
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+  
+  &.mt1{
+    text-align: right;
+    
+    @media (max-width: $L){
+      text-align: center;
+    }
+    @media (max-width: $M){
+      background: inline(../img/hline-c.png) no-repeat 50% 100%;
+      padding-bottom: 20px;
+    }
+    .mtp{
+      float: right;
+      margin-left: 20px;
+      
+      @media (max-width: $L){
+        margin: 0 auto;
+        float: none;
+        
+      }
+    }
+  }
+  
+  .mpl{
+    font-size: 11px;
+    padding-top: 10px;
+    margin-right: 90px;
+    margin-top: 5px;
+    background: inline(../img/hline_l.png) no-repeat 100% 0;
+    
+    @media (max-width: $L){
+      margin: 0;
+      background: inline(../img/hline-c.png) no-repeat 50% 0;
+    }
+    @media (max-width: $M){
+      background-image:none;
+    }
+    a{
+      color:$link-gray;
+      
+      &:hover,
+      &:active,
+      &:focus{
+        color: $link-gray-active;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  &.mt2{
+    @media (max-width: $M){
+      background: inline(../img/hline-c.png) no-repeat 50% 0;
+      padding-top: 20px;
+    }
+    .mpl{
+      background: inline(../img/hline_l1.png) no-repeat 0 0;
+      margin-left: 90px;
+      margin-right: 0;
+      @media (max-width: $L){
+        margin: 0;
+        background: inline(../img/hline-c.png) no-repeat 50% 0;
+      }
+      @media (max-width: $M){
+        background-image:none;
+      }
+    }
+    .mtp{
+      float: left;
+      margin-right: 20px;
+      
+      @media (max-width: $L){
+        margin: 0 auto;
+        float: none;
+      }
+      b{
+        position: absolute * -10px * -10px;
+      }
+    }
+  }
+  
+}
+
+.m-act{
+  text-align: center;
+  margin: 20px 0;
+  
+  .gti-vs{
+    font-size: 20px;
+  }
+  .m-links{
+    margin: 10px 0;
+    font-size: 11px;
+  }
+}
+.m-r-ozh{
+  font-size: 11px;
+  color: $text-gray-2;
+}
+
+
+/*
+.Headline
+*/
+
+.block{
+}
+.bh{
+  
+  .ih{
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  h3{
+    font-size: 21px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+  }
+  .gti-info-circle{
+    font-size: 16px;
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

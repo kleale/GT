@@ -6,9 +6,11 @@ module.exports = {
     "$SM": "550px", 
     "$toM": "767px",
     "$M": "768px", 
-    "$XM": "950px", 
+    "$XM": "991px", 
     "$L": "1200px", 
     "$XL": "1328px",
+  
+    "$MH": "600px",
   
     // Colors
     "$text-main": "#fff",
@@ -23,6 +25,7 @@ module.exports = {
     "$link-white": "#fff",
     "$link-white-active": "#a6c6cb",
     "$link-gray": "#b7b7b7",
+    "$link-gray-1": "#6c6c6c",
     "$link-gray-active": "#fff",
   
     "$body-bg": "#2b2b2b",
@@ -33,16 +36,23 @@ module.exports = {
     "$button-blue-text": "#fff",
     "$button-gray": "#444950",
     "$button-gray-text": "#8f8f8f",  
-  
-  
-    "$bg-dropdown": "#31373a",
     
+    "$bg-dropdown": "#31373a",
+    "$bg-form": "#444950",
+  
     // bg images
     "$section_bg_1": "section_bg_1.jpg",
   
     "$green": "#44930a",
     "$subgreen": "#e8f39a",
+    "$overlay-blue": "rgba(3, 125, 181, 0.13)",
   
     //transitions
-    "tease": "all .2s ease"
+    "$tease": "all .2s ease",
+  
+    //border-radius
+    "$br": "2px",
+    //box-shadow
+    "$bsh": "1px 1px 2px rgba(0, 0, 0, 0.3)",
+    "$bsh2": "4px 4px 10px rgba(0, 0, 0, 0.4)"
 };

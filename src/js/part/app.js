@@ -7,8 +7,11 @@
       $(this).toggleClass("active");
 	});
     
+    //$('#pop').popover();
     
-    
+    $(function () {
+      $('[data-toggle="popover"]').popover();
+    })
     
   }); //end ready
 

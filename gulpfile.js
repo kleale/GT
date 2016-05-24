@@ -125,7 +125,7 @@ gulp.task('style:build', function () {
       postcssColor,
       postcssAssets,
       autoprefixer({browsers: ['last 2 version']}),
-      cssnano(),
+      //cssnano(),
     ];
     return gulp.src(path.src.style) //Выберем наш main.scss
         .pipe(postcss(processors))

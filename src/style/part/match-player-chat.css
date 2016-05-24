@@ -1,0 +1,957 @@
+/*
+* stream chat block
+*/
+
+/*NEED to edit*/
+
+
+/*CHAT*/
+.chat-inner {
+  position: absolute 0 0 0 0;
+}
+.chat-head {
+  background: #153542;
+  height: 45px;
+  
+  .dropdown{
+    display:inline-block;
+  }
+  .dropdown-menu{
+    li a{
+      color: inherit;
+      padding: 0;
+      
+      &:hover{
+        background: transparent;
+      }
+    }
+  }
+  
+  
+  .ch_room {
+    .dropdown-toggle {
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      font-size: 14px;
+      max-width: 300px;
+      overflow: hidden;
+      padding: 13px 15px 11px 10px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      
+      &:hover i{
+        color: #fff;
+      }
+    }
+    .dropdown-toggle i {
+      position: relative;
+      top: 0px;
+      margin-right: 10px;
+      margin-left: 5px;
+      color: #337AB7;
+    }
+    .dropdown-menu {
+      border: 0 none;
+      margin: 0;
+      width: 328px;
+    }
+    .ch_menu {
+      background: #0e82b8;
+      max-height: 408px;
+      overflow: auto;
+      padding: 10px 0 0 0;
+      
+      strong {
+        color: #eee;
+        display: block;
+        padding: 10px 15px 0px 10px;
+        text-transform: uppercase;
+      }
+      .badge {
+        background: transparent;
+        border: 1px solid rgba(146, 192, 217, 0.76);
+        color: rgba(191, 225, 244, 0.78);
+        font-weight: normal;
+      }
+      li:hover{
+        background:#0A6392;
+      }
+      .room_list{
+        margin: 0;
+        max-height: none;
+        overflow: unset;
+        padding: 10px 0 0;
+        
+        li a {
+          color: #c6ebff;
+          display: block;
+          overflow: hidden;
+          padding: 4px 10px 4px 10px;
+          margin-right: 55px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          transition:initial;
+          
+          &:hover{
+            text-decoration:none;
+            background:#0A6392;
+            color:#fff;
+          }
+        }
+        .badge:hover{
+          background:#fff;
+          color:#0e82b8;
+          border-color:#fff;
+        }
+      }
+      
+    } /*ch_menu*/
+  } /*ch_room*/
+
+  .room_create {
+    border: 1px solid;
+    border-radius: 40px;
+    color: #b1dce8;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 12px;
+    height: 29px;
+    line-height: 26px;
+    margin: 6px 9px 0 0;
+    opacity: 0.8;
+    text-align: center;
+    width: 89px;
+    
+    &:hover{
+      text-decoration:none;
+      background:#fff;
+      color:#0e82b8;
+      border-color: #0e82b8;
+      opacity: 1;
+    }
+  }
+
+
+  .ch_opti{
+    float:right;
+  }
+  .ch_cog,
+  .ch_users{
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 37px;
+    min-width: 40px;
+    padding: 3px 3px;
+    text-align: center;
+    height: 45px;
+    
+    i {
+      font-size: 15px;
+      line-height: 12px;
+      vertical-align: middle;
+    }
+  }
+  .ch_cog{
+    &:hover{
+      background:#0e82b8;
+      color:#fff;
+    }
+    i{
+      font-size: 18px;
+      margin: 6px;
+      position: relative;
+      top: -2px;
+    }
+  }
+  .ch_users span {
+    background: #2c546c;
+    border-radius: $br;
+    box-shadow: $bsh;
+    color: #64a5d4;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    padding: 3px 7px;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+  .open .ch_users,
+  .open .ch_cog.active{
+    background:#0e82b8;
+    color:#fff;
+  }
+  .open .ch_users span{
+    color: #dcf3ff;
+  }
+  .ch_opti .dropdown {
+    position: inherit;
+  }
+  .ch_users_window, .ch_opti_window {
+    background: #243036;
+    border: 0 none;
+    bottom: 0px;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 40px 0 0 0;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    z-index: 1800;
+    border-bottom:2px solid #0e82b8;
+  }
+  .ch_header {
+    background: #0e82b8;
+    color: #cef3fe;
+    font-size: 16px;
+    left: 0;
+    padding: 10px 11px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+  }
+  .cwcl,
+  .cexternal{
+    color: #CEF3FE;
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    margin: -10px;
+    padding: 11px;
+    width: 40px;
+    transition:all .2s linear;
+    
+    a:hover {
+      transform:scale(1.2);
+    }
+  }
+  .cexternal {
+    float: left;
+  }
+  .udo {
+    float: right;
+    opacity: 0.5;
+    cursor:pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .hhh {
+    display: block;
+    padding: 20px 20px 0;
+    text-transform: uppercase;
+  }
+  
+  .ulist{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li{
+      padding:0 20px;
+    }
+  }
+  
+  .ch_options {
+    font-size: 13px;
+    padding: 10px 20px;
+    
+    .hhh{
+      padding: 15px 0;
+    }
+    .active{
+      box-shadow: 0 0 0 2px #fff inset;
+    }
+    a {
+      background: #eee;
+      border-radius: 50%;
+      display: inline-block;
+      height: 20px;
+      margin: 2px;
+      width: 20px;
+      cursor:pointer;
+      transition:all .2s linear;
+      &:hover {
+        box-shadow: 0 0 0 2px #fff inset;
+        transform:scale(1.2);
+      }
+    }
+  }/*ch_options*/
+  
+} /*chat-head*/
+
+
+
+
+.chat-head .dropdown a.dropdown-toggle:hover,
+.chat-head .dropdown.open a.dropdown-toggle{
+    text-decoration:none;
+    background:#0e82b8;
+    color:#fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*EMO*/
+.emotic-btn {
+  cursor: pointer;
+  font-size: 20px;
+  opacity: .8;
+  position: absolute;
+  right: 66px;
+  top: 7px;
+  &:hover{
+    opacity:1;
+    text-decoration: none;
+  }
+}
+
+.emo_block {
+  transition: &tease;
+  background: #0E82B8;
+  position: absolute * -10px 50px -10px;
+  height: 0px;
+  z-index: 11;
+  opacity:0;
+  display:none;
+  &.active {
+    height: 280px;
+    opacity:1;
+    display:block;
+    
+    &:after{
+	content: '';
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    right: 72px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #0E82B8;
+    }
+  }
+}/*.emo_block*/
+
+.stickerer{
+  width: 328px;
+  height: 270px;
+  
+  .stickers-list{
+    padding:9px;
+    
+    img{
+      margin: 0px;
+      width: 49px;
+    }
+    a:hover{
+      text-decoration:none;
+    }
+  } 
+}
+
+/*
+.s_choser{
+    height:40px;
+    background:#0c6b97;
+    overflow:hidden;
+}
+.s_choser li.active{
+    background: #0E82B8;
+    opacity:1;
+}
+.s_choser li:hover {
+    opacity: 1;
+}
+.s_choser li {
+    float: left;
+    padding: 4px;
+    cursor:pointer;
+    opacity: .7;
+}
+.smore {
+  float: right!important;
+  font-size: 24px;
+  position: relative;
+  color: #c3f3f8;
+  width: 32px;
+  height: 32px;
+  line-height: 33px;
+    
+  b {
+    background: red;
+    color: #fff;
+    position: absolute;
+    top: 2px;
+    font-size: 10px;
+    right: 2px;
+    width: 17px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 17px;
+  }
+}
+
+.shistory {
+    float: right;
+    font-size: 24px;
+    position: relative;
+    color: #c3f3f8;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+}
+*/
+/*EMO*/
+
+
+/*----------------------------------------------*/
+
+/*
+* Chat WMS
+*/
+.open-wms .chat-inner{
+  opacity:.2;
+}
+
+.chat-wms-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    background: url("http://game-tournaments.com/html/img/spoiler.png");
+    opacity: 0;
+    transition: all .3s ease;
+    z-index: -1000;
+}
+.open-wms .chat-wms-over {
+    opacity: 1;
+    z-index: 1000;
+}
+.chat-wms{
+    position:relative;
+    top:60px;
+    margin:30px 10% 0;
+    background:#0e82b8;
+    color: #fff;
+    opacity:0;
+    transition:all .3s ease;
+    transform:scale(1.2);
+}
+.open-wms .chat-wms{
+    opacity:1;
+    top:0;
+    transform:scale(1);
+}
+.chat-wms .close{
+    position: absolute;
+    top: 1px;
+    right: 0px;
+}
+.chat-wms-head{
+    color: #eee;
+    display: block;
+    padding: 10px 25px 0px 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.chat-wms-body{
+    padding:15px;
+}
+.chat-wms .form-control {
+    background-color: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.33);
+    color: #fff;
+}
+.chat-wms .form-control::-webkit-input-placeholder{color:#fff;opacity:.7;}
+.chat-wms .form-control::-moz-placeholder{color:#fff;opacity:.7;}
+.chat-wms .form-control:-moz-placeholder{color:#fff;opacity:.7;}
+.chat-wms .form-control:-ms-input-placeholder{color:#fff;opacity:.7;}
+.pagebg .chat-wms hr {
+    border-color: rgba(252, 252, 252, 0.53);
+}
+.ch_close{
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    height: 39px;
+    line-height: 37px;
+    min-width: 40px;
+    padding: 0;
+    text-align: center;
+    height: 40px;
+}
+.chat-wms-body .cuh {
+    margin-top: -20px;
+    text-align: center;
+}
+.chat-wms-body .cuva {
+    position: relative;
+    top: 0;
+    left:0;
+}
+.chat-wms-body .cuact {
+    margin: 10px 0;
+    text-align: center;
+}
+.chat-wms .cuact > a {
+    font-size: 17px;
+    height: 35px;
+    line-height: 35px;
+    width: 35px;
+}
+.toroom {
+    padding-right: 45px;
+    position: relative;
+}
+.toroom .btn {
+    border-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.chat-wms .userpop {
+    padding: 0;
+    position: relative;
+}
+.chsearch{
+    padding:20px 20px 0 20px;
+}
+.chat-wms .form-control option {
+    background: #0e82b8;
+    padding: 5px 10px;
+}
+.btn-st u {
+    background: #c91a1a;
+    border-radius: 15px;
+    color: #f5bde8;
+    content: "new";
+    display: block;
+    font-size: 11px;
+    line-height: 13px;
+    padding: 0 4px;
+    position: absolute;
+    right: 3px;
+    text-align: center;
+    text-decoration: none;
+    top: 4px;
+    vertical-align: baseline;
+    white-space: nowrap;
+} /*.chat-wms*/
+
+.r_act{
+    float: right;
+    padding: 3px 10px;
+}
+.loading:after{
+    content:'';
+    background:url("http://game-tournaments.com/html/ring.svg") 50% 50% no-repeat;
+    display:block;
+    width:50px;
+    height:50px;
+    z-index:100;
+    margin:-25px 0 0 -25px;
+    position:absolute;
+    top:50%;
+    left:50%;
+}
+
+.chat-action {
+  background: $bg-sub;
+  background-image: inline(../img/tile.png);
+  background-repeat: repeat;
+  background-position: center;
+  bottom: 0;
+  height: 60px;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+
+  .chat-text{
+    position:relative;
+  
+    textarea {
+      background-color: #252A2C;
+      border: 1px solid rgba(255, 255, 255, 0);
+      color: #71b6e7;
+      font-size:13px;
+      display: block;
+      height: 40px;
+      line-height: 14px;
+      width: 100%!important;
+      padding: 5px 88px 5px 10px;
+      resize: none;
+      width: auto;
+    }
+    .btn-chat {
+      background-color: $button-blue;
+      color: $button-blue-text;
+      transition: $tease;
+      font-size: 16px;
+      font-weight: 300;
+      border: 0 none;
+      border-radius: 0;
+      box-shadow: none;
+      height: 40px;
+      line-height: 1.85;
+      position: absolute 0 0 * *;
+      text-shadow: none;
+      width: 50px;
+      &:hover {
+        background-color: #1188B7;
+        color: #fff;
+      }
+    }
+  }
+}
+  
+.mmore {
+  background: rgba(34, 68, 81, 0.91);
+  color: #438b9f;
+  cursor: pointer;
+  left: 0;
+  opacity: 0;
+  padding: 5px 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: -27px;
+  transition: all 0.2s ease-in-out 0s;
+  z-index: 1;
+  cursor:pointer;
+  &:hover{
+    background-color: rgba(34, 68, 81, 1);
+    color: #6BBCD2;
+  }
+  &.visible{
+    opacity: 1;
+  }
+}
+
+
+.tse-list {
+  > div {
+    padding: 3px 10px;
+    position: relative;
+    word-wrap: break-word;
+    color: #8c8c9c;
+    line-height:20px;
+    font-size:13px;
+    
+    span {
+      color: #85a5b2;
+    }
+    time {
+      float: left;
+      color: #8c8c9c;
+      margin-right:5px;
+    }
+    em {
+      font-style: normal;
+      font-weight: bold;
+      margin-right: 4px;
+    }
+  }
+  .msg-admin {
+    background: #0b1f27;
+    color: #82b6da;
+    margin: 0;
+    padding: 15px 10px;
+    text-align: center;
+    
+    i{
+      margin: 0 5px;
+      position: relative;
+      top: 1px;
+    }
+  }
+  .msg-stream{
+    color: #7EA9BA;
+    text-align: center;
+    margin: 5px 0;
+    padding: 10px;
+    background: #0E1E23;
+    i{
+      margin: 0 5px;
+      position: relative;
+      top: 1px;
+    }
+  }
+  .emoticon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: -10px 0;
+    vertical-align: middle;
+    max-height: 40px;
+  }
+  
+}
+.tse-list > div > b,
+.ulist li > b {
+    color: #ddd;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 105px;
+    font-weight: 700;
+    vertical-align: bottom;
+    font-size: 13px;
+}
+.tse-list > div > b:hover,
+.ulist li > b:hover {
+    cursor:pointer;
+    text-decoration:underline;
+}
+.tse-list > div > u i.moderator,
+.ulist u i.moderator{
+    background: #34ae0a url("http://web-cdn.ttvnw.net/images/xarth/badge_mod.svg") repeat scroll 0 0 / 100% auto;
+}
+.tse-list > div > u i,
+.ulist u i {
+    display: inline-block;
+    float: left;
+    height: 18px;
+    margin: 1px 3px 1px 0;
+    min-width: 18px;
+    vertical-align: middle;
+}
+
+
+
+
+/*chatpopover*/
+.user-popover .popover-content {
+    height: 85px;
+    padding: 0;
+    width: 255px;
+}
+.popover.user-popover {
+    background: #00adee;
+    border-radius: 1px;
+    border: 0 none;
+}
+.popover.left.user-popover > .arrow::after {
+    border-left-color: #00adee;
+}
+.popover.right.user-popover > .arrow::after {
+    border-right-color: #00adee;
+}
+.popover.top.user-popover > .arrow::after {
+    border-top-color: #00adee;
+}
+.popover.bottom.user-popover > .arrow::after {
+    border-bottom-color: #00adee;
+}
+.userpop .gti-times {
+    color: #05101e;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0;
+    opacity: 0.3;
+    position: absolute;
+    right: 4px;
+    text-shadow: none;
+    top: 2px;
+}
+.userpop .gti-times:hover {
+    
+}
+.userpop {
+    padding: 0 0 0 70px;
+    position: relative;
+}
+
+.cuva > img {
+    border-radius: 40px;
+    width: 100%;
+}
+.cuva {
+    display: inline-block;
+    left: 10px;
+    position: absolute;
+    top: 17px;
+    vertical-align: bottom;
+    width: 50px;
+}
+.cunick {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    padding: 10px 0 0;
+    max-width: 165px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+.cuact {
+    font-size: 17px;
+    margin: 2px 0 0 -3px;
+}
+.cuact a {
+    background:rgba(27, 82, 108, 0.44);
+    border-radius: 41px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    height: 24px;
+    line-height: 23px;
+    margin: 0 3px;
+    text-align: center;
+    width: 24px;
+    transition:all .1s linear;
+}
+.cuact a:hover{
+     background: #72CD07;
+     color: #fff;
+}
+.curole {
+    color: #fff;
+    display: block;
+    font-size: 10px;
+}
+
+
+
+
+
+
+.chat-wrap {
+    bottom: 0;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    overflow: hidden;
+  
+  .chatter {
+    bottom: 60px;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow-y: auto;
+  }
+}
+
+
+
+/**
+ * CHAT
+ * TrackpadScrollEmulator
+ * Author: Jonathan Nicol @f6design
+ * https://github.com/jnicol/trackpad-scroll-emulator
+ */
+ 
+ .tse-scrollable {
+  position: relative;
+  width: 100%; /* Default value. Overwite this if you want. */
+  height: 300px; /* Default value. Overwite this if you want. */
+  overflow: hidden;
+  }
+  .tse-scrollable .tse-scroll-content {
+    overflow: hidden;
+    overflow-y: scroll;
+    }
+    /* No longer using ::scrollbar too, since it breaks Chrome 25 */
+    .tse-scrollable .tse-scroll-content::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      }
+.tse-scrollbar {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 11px;
+  }
+  .tse-scrollbar .drag-handle {
+    position: absolute;
+    right: 2px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    min-height: 10px;
+    width: 7px;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+    -ms-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    background: #6c6e71;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    }
+  .tse-scrollbar:hover .drag-handle {
+    /* When hovered, remove all transitions from drag handle */
+    opacity: 0.7;
+    -webkit-transition: opacity 0 linear;
+    -moz-transition: opacity 0 linear;
+    -o-transition: opacity 0 linear;
+    -ms-transition: opacity 0 linear;
+    transition: opacity 0 linear;
+    }
+    .tse-scrollbar .drag-handle.visible {
+      opacity: 0.7;
+      }
+/* Used when testing the scrollbar width */
+/* No longer using ::scrollbar too, since it breaks Chrome 25 */
+.scrollbar-width-tester::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+/* Horizontal scroller */
+.tse-scrollable.horizontal .tse-scroll-content {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  }
+  .tse-scrollable.horizontal .tse-scroll-content::-webkit-scrollbar,
+  .tse-scrollable.horizontal .tse-scroll-content::scrollbar {
+    width: auto;
+    height: 0;
+    }
+.tse-scrollable.horizontal .tse-scrollbar {
+  top: auto;
+  left: 0;
+  width: auto;
+  height: 11px;
+  }
+  .tse-scrollable.horizontal .tse-scrollbar .drag-handle {
+    right: auto;
+    top: 2px;
+    height: 7px;
+    min-height: 0;
+    min-width: 10px;
+    width: auto;
+    }
+    
+/*----------------------------------------------*/

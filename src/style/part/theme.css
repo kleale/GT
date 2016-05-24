@@ -3,13 +3,23 @@
 */
 a{
   transition: $tease;
+  color: $link-blue;
+  
+  &:active,
+  &:focus,
+  &:hover{
+    color: $link-blue-active;
+    text-decoration: underline;
+  } 
 }
-
 
 /*
 * Bootstrap Theme
 */
 
+/*
+* dropdown
+*/
 .dropdown.open{
   > a{
     background: $bg-dropdown;
@@ -20,16 +30,17 @@ a{
 
 .dropdown-menu {
   background: $bg-dropdown;
+  box-shadow: 7px 7px 10px rgba(0,0,0,.4);
   padding: 0;
-  margin: 0;
+  margin: -1px 0;
   border: 0;
-  border-radius: 0;
+  border-radius: 0 0 $br $br;
   width: 100%;
   
   li{
     
     &.active a{
-      background: $$button-blue;
+      background: $button-blue;
       color: $button-blue-text;
     }
     
@@ -48,9 +59,129 @@ a{
   }
 }
 
+/*
+* Buttons
+*/
+.btn{
+  border-radius: $br;
+  box-shadow: $bsh;
+  text-transform: uppercase;
+  border: 0;
+  line-height: 1.5;
+  cursor: pointer;
+}
+/*
+{
+  padding: 4px 12px 3px;
+  border: 0;
+  line-height: 1.5;
+}
+*/
+.btn-success {
+  color: #fff;
+  background-color: $green;
+  border-color: transparent;
+}
+.btn-xs{
+  padding: 4px 8px 3px;
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+} 
+.btn-sm{
+  
+}
+.btn-default{
+  background: $button-gray;
+  color: $button-gray-text;
+  
+  &:active,
+  &:focus,
+  &:hover{
+    background: $button-blue;
+    color: $button-blue-text;
+  } 
+}
+.btn-default.active, .btn-default:active{
+    color: $link-gray;
+    background-color: $bg-dropdown;
+}
+.open>.dropdown-toggle.btn{
+  background-color: $bg-dropdown;
+  color: $link-gray;
+  border-radius: $br $br 0 0;
+  position: relative;
+  z-index: 1002;
+}
+body .open>.dropdown-toggle.btn-default:focus{
+  background-color: $bg-dropdown;
+  color: $link-gray;
+}
+
+/*
+* Popover
+*/
+.popover {
+    background-color: $bg-dropdown;
+    color: $link-gray;
+    border: 0;
+    border-radius: $br;
+    box-shadow: $bsh2;
+    font-size: 12px;
+}
+.popover-title {
+    background-color: $bg-dropdown;
+    border-bottom: 1px solid color($bg-dropdown l(30%));
+    border-radius: $br $br 0 0;
+    font-size: 14px;
+    margin: 0;
+    padding: 10px 15px;
+}
+.popover.bottom > .arrow:after {
+    border-bottom-color: $bg-dropdown;
+}
+
+/*
+* Forms
+*/
+.form-control{
+  border-radius: $br;
+  background: $bg-form;
+  border: 0;
+  color: $text-main;
+  
+  &:active,
+  &:focus,
+  &:hover{
+    box-shadow: inset 0 0 0px 1px rgb(29, 123, 197);
+  }
+}
+.input-sm {
+    height: 28px;
+}
+
+
+
+
 
 .breadcrumb{
   background-color: transparent;
   border-radius: 0;
 }
+
+
+::-webkit-input-placeholder {
+  opacity: 1 !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  opacity: 1 !important;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+  opacity: 1 !important;
+}
+:-ms-input-placeholder {  
+  opacity: 1 !important;
+}
+
+
 

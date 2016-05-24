@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'gticons';
-    src:    url('../fonts/gticons.eot?6mrj25');
-    src:    url('../fonts/gticons.eot?6mrj25#iefix') format('embedded-opentype'),
-        url('../fonts/gticons.ttf?6mrj25') format('truetype'),
-        url('../fonts/gticons.woff?6mrj25') format('woff'),
-        url('../fonts/gticons.svg?6mrj25#gticons') format('svg');
+    src:    url('../fonts/gticons.eot?wk2uc1');
+    src:    url('../fonts/gticons.eot?wk2uc1#iefix') format('embedded-opentype'),
+        url('../fonts/gticons.ttf?wk2uc1') format('truetype'),
+        url('../fonts/gticons.woff?wk2uc1') format('woff'),
+        url('../fonts/gticons.svg?wk2uc1#gticons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,6 +24,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.gti-gtlogo:before {
+    content: "\e902";
+}
 .gti-vs:before {
     content: "\e901";
 }
@@ -105,6 +108,12 @@
 .gti-play:before {
     content: "\f04b";
 }
+.gti-chevron-left:before {
+    content: "\f053";
+}
+.gti-chevron-right:before {
+    content: "\f054";
+}
 .gti-times-circle:before {
     content: "\f057";
 }
@@ -126,8 +135,17 @@
 .gti-share:before {
     content: "\f064";
 }
+.gti-expand:before {
+    content: "\f065";
+}
+.gti-compress:before {
+    content: "\f066";
+}
 .gti-plus:before {
     content: "\f067";
+}
+.gti-minus:before {
+    content: "\f068";
 }
 .gti-exclamation-circle:before {
     content: "\f06a";
@@ -180,6 +198,9 @@
 .gti-sign-out:before {
     content: "\f08b";
 }
+.gti-external-link:before {
+    content: "\f08e";
+}
 .gti-sign-in:before {
     content: "\f090";
 }
@@ -197,6 +218,9 @@
 }
 .gti-facebook-f:before {
     content: "\f09a";
+}
+.gti-unlock:before {
+    content: "\f09c";
 }
 .gti-credit-card:before {
     content: "\f09d";
@@ -261,6 +285,12 @@
 .gti-undo:before {
     content: "\f0e2";
 }
+.gti-gavel:before {
+    content: "\f0e3";
+}
+.gti-legal:before {
+    content: "\f0e3";
+}
 .gti-comment-o:before {
     content: "\f0e5";
 }
@@ -278,6 +308,15 @@
 }
 .gti-plus-square:before {
     content: "\f0fe";
+}
+.gti-smile-o:before {
+    content: "\f118";
+}
+.gti-frown-o:before {
+    content: "\f119";
+}
+.gti-meh-o:before {
+    content: "\f11a";
 }
 .gti-gamepad:before {
     content: "\f11b";
@@ -305,6 +344,27 @@
 }
 .gti-play-circle:before {
     content: "\f144";
+}
+.gti-compass:before {
+    content: "\f14e";
+}
+.gti-sort-alpha-asc:before {
+    content: "\f15d";
+}
+.gti-sort-alpha-desc:before {
+    content: "\f15e";
+}
+.gti-sort-amount-asc:before {
+    content: "\f160";
+}
+.gti-sort-amount-desc:before {
+    content: "\f161";
+}
+.gti-sort-numeric-asc:before {
+    content: "\f162";
+}
+.gti-sort-numeric-desc:before {
+    content: "\f163";
 }
 .gti-thumbs-up:before {
     content: "\f164";
@@ -360,14 +420,29 @@
 .gti-newspaper-o:before {
     content: "\f1ea";
 }
+.gti-area-chart:before {
+    content: "\f1fe";
+}
 .gti-pie-chart:before {
     content: "\f200";
+}
+.gti-line-chart:before {
+    content: "\f201";
 }
 .gti-user-plus:before {
     content: "\f234";
 }
 .gti-user-times:before {
     content: "\f235";
+}
+.gti-balance-scale:before {
+    content: "\f24e";
+}
+.gti-television:before {
+    content: "\f26c";
+}
+.gti-tv:before {
+    content: "\f26c";
 }
 .gti-calendar-times-o:before {
     content: "\f273";
