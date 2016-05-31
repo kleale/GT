@@ -1,0 +1,10 @@
+/*
+* Section koeffitzienti
+*/
+
+.m-odd{
+  background: $bg-sub;
+  background-image: inline(../img/tile.png);
+  background-repeat: repeat;
+  background-position: center;
+}

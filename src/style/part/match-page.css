@@ -5,11 +5,12 @@
 .m-head{
   background: $bg-main url(../img/$section_bg_1) repeat 50% 50%;
   position: relative;
-  padding: 50px 40px 10px;
+  padding: 50px 40px 15px;
   border-top: 1px solid color($button-blue b(50%));
   
   @media (max-width: $XM){
     text-align: center;
+    padding-bottom: 15px;
   }
 }
 
@@ -202,6 +203,9 @@ Headline
       margin-right: 0px;
     }
   }
+}
+.mtt{
+  text-align: center;
 }
 .m-time{
   text-align: center;
@@ -451,46 +455,7 @@ Headline
   color: $text-gray-2;
 }
 
-
 /*
 .Headline
 */
-
-.block{
-}
-.bh{
-  
-  .ih{
-    font-size: 24px;
-    margin-right: 10px;
-  }
-  h3{
-    font-size: 21px;
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
-  }
-  .gti-info-circle{
-    font-size: 16px;
-    
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

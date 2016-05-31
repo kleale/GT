@@ -1,15 +1,15 @@
-<div rel="stream" class="stmblock" style="display:none;">
+<div id="player-streams" rel="stream" class="stmblock active">
   <div class="subm">
     <div class="dropdown">
-      <button aria-expanded="true" class="btn btn-default btn-xs dropdown-toggle" type="button" id="droplang" data-toggle="dropdown"><span id="current_stream_lang">Языки</span> <span class="caret"></span></button>
-      <ul class="dropdown-menu new_langs" id="langs" aria-labelledby="droplang">
+      <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="droplang" data-toggle="dropdown"><span id="current_stream_lang">Языки</span> <span class="caret"></span></button>
+      <ul class="dropdown-menu new_langs" id="langs">
           <li><span rel="RU" onclick="stream_lang_new('RU','Русский')"><input type="checkbox" name="RU" id="RU"> Русский</span></li>
           <li><span rel="EN" onclick="stream_lang_new('EN','English')"><input type="checkbox" name="EN" id="EN"> English</span></li>
       </ul>
     </div>
     
-    <em id=""><i class="gti-video-camera"></i></em>
-    <em id=""><i class="gti-youtube-play"></i></em>
+    <em class="active"><i class="gti-video-camera"></i></em>
+    <em><i class="gti-youtube-play"></i></em>
   </div>
   <ul id="index_stream" class="slist">
     <li class="active">

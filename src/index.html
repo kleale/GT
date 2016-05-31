@@ -34,7 +34,7 @@
     <div class="otstup" style="height:100px;"></div>
     
     <section class="m-head">
-       <div class="m-fast">
+       <div class="m-fast" id="m-fast">
          <a href=""><i class="gti-video-camera"></i></a>
          <a href=""><i class="gti-dice"></i></a>
          <a href=""><i class="gti-bullhorn"></i></a>
@@ -81,7 +81,7 @@
           </span>
           <div class="m-r-ozh">Рейтинг ожидания <b>4.121</b></div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mtt">
           <h1 class="m-title"><span>Матч London Conspiracy Dota2 vs SuperCloud7</span></h1>
           <div class="m-time">29 ЯНВ 2016 15:30 МСК</div>
           <div class="m-icons">
@@ -155,63 +155,48 @@
     
     <section class="player">
       <div id="srteamslider" class="toggled_stream branded" rel="29880">
+        <div class="sview clearfix" id="mainstream">
+            //= template/match-page/player-html5.html
+        </div>
         <div class="srteamtoggle">
           <div class="st_inner">
             <div class="stream_action">
               <!--<span class="st-btn active" id="stream-toggle"><i class="gti-bars"></i></span>
               <span class="st-btn odtip" id="stream-expand" title="Развернуть на весь экран"><i class="gti-expand"></i></a>-->
-              <ul id="stream_menu" class="stm nav">
-                <li rel="stream" onclick="stream_menu('stream')" class="current">
-                  <i class="gti-video-camera"></i>
-                  Трансляции
+              <ul id="stream_menu" class="player-menu" role="tablist">
+                <li rel="stream"  class="active">
+                  <a role="tab" data-toggle="tab" href="#player-streams"><i class="gti-video-camera"></i>
+                  Трансляции</a>
                 </li>
-                <li rel="stat" onclick="stream_menu('stat')" title="Статистика">
-                  <i class="gti-pie-chart"></i>
-                  Статистика
+                <li rel="stat" title="Статистика">
+                 <a role="tab" data-toggle="tab" href="#player-stat"><i class="gti-pie-chart"></i>
+                  Статистика</a>
                 </li>
-                <li id="achat" rel="log" onclick="stream_menu('log')">
-                  <i class="gti-th-list"></i>
-                  Лог матча
+                <li id="achat" rel="log">
+                  <a role="tab" data-toggle="tab" href="#player-log"><i class="gti-list-ul"></i>
+                  Лог матча</a>
                 </li>
-                <li id="achat" rel="chat" onclick="stream_menu('chat')">
-                  <i class="gti-comments-o"></i>
-                  Чат матча
+                <li id="achat" rel="chat">
+                  <a role="tab" data-toggle="tab" href="#player-chat"><i class="gti-comments-o"></i>
+                    Чат матча</a>
                 </li>
               </ul>
             </div>
 
-            <div id="stmblocks" class="stmblocks">
+            <div id="stmblocks" class="stmblocks tab-content">
                 //= template/match-page/player-streams.html
                 //= template/match-page/player-stat.html
                 //= template/match-page/player-chat.html
+                //= template/match-page/player-log.html
             </div>
           </div>
-        </div>
-        <div class="sview clearfix" id="mainstream">
-            //= template/match-page/player-html5.html
         </div>
       </div>
     </section><!-- m-player" -->
     
+    //= template/match-page/section-koef.html
     
-    <section class="koef">
-      <div class="row">
-        <div class="col-sm-8">
-          <div class="block">
-            <div class="bh clearfix">
-              <h3>
-                <i class="ih gti-dice"></i>
-                Коэффициенты
-                <i data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Popover title" data-content="О площадке + дополнительные сведения о матче" class="gti-info-circle"></i>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          
-        </div>
-      </div>
-    </section>
+    //= template/match-page/section-sravnenie.html
     
     //= template/footer.html
   </div>
@@ -224,6 +209,8 @@
   -->
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- CHARTs --> 
+  <script src="https://code.highcharts.com/highcharts.js"></script>
   <!-- Site Sripts -->
   <script src="/js/main.js"></script>
 

@@ -12,20 +12,22 @@
   /*background: $bg-sub;*/
   background: #0B0C0C;
   
-  & .srteamtoggle {
+  .srteamtoggle {
     transition: $tease;
-    /*background: $bg-sub;*/
-    background: #0B0C0C;
+    background: $bg-sub;
     background-image: inline(../img/tile.png);
     background-repeat: repeat;
     background-position: center;
-    
     width: 450px;
-    bottom: 0;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
+    position: absolute 0 0 0 *;
+    
+    @media (max-width: $XM){
+      width: 100%;
+      position: relative * * * *;
+      width: 100%;
+      height: 460px;
+      overflow: hidden;
+    }
   }
 }
 
@@ -37,10 +39,12 @@
   bottom: 0;
   z-index: 2;
 }
+
 .stream_action {
     overflow: hidden;
 }
-.stm{
+
+.player-menu{
   display: table;
   width: 100%;
   text-align: center;
@@ -51,34 +55,39 @@
   background-position: 0 100%;
   
   li{
-    transition: $tease;
     display: table-cell;
-    color: $link-gray-1;
-    font-size: 12px;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 15px 5px;
-    
-    &.current{
+    a{
+      transition: $tease;
+      display: block;
+      color: $link-gray-1;
+      font-size: 12px;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 15px 5px;
+      background-position: 50% 30px;
+
+      &:hover,
+      &:active,
+      &:focus{
+        color: $link-gray-active;
+        text-decoration: none;
+        background-color: transparent;
+      }
+      i{
+        display: block;
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+    }
+    &.active a{
       color: $link-gray-active;
       cursor: default;
       background-image: inline(../img/nav-cur.png);
       background-repeat: no-repeat;
       background-position: 50% 100%;
     }
-    &:hover,
-    &:active,
-    &:focus{
-      color: $link-gray-active;
-      text-decoration: none;
-    }
-    i{
-      display: block;
-      font-size: 16px;
-      margin-bottom: 4px;
-    }
   }
-}
+}/*player-menu*/
 
 .stmblocks{
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1b3540+0,1b3540+100&1+0,0+100 */
@@ -87,6 +96,11 @@
 }
 .stmblock{
   position: absolute 0 0 0 0;
+  display: none;
+  
+  &.active{
+    display: block!important;
+  }
 }
 
 /*
@@ -104,6 +118,7 @@
     display: inline-block;
   }
   .dropdown-menu {
+    padding: 3px 0;
     input{
       margin: -3px 5px -3px 0;
       line-height: 1;
@@ -112,12 +127,12 @@
     }
     li span {
       padding: 5px 10px;
+      display: block;
       font-size: 11px;
       text-transform: uppercase;
       cursor: pointer;
     }
   }
-  
   
   .btn{
     margin-right: 5px;
@@ -136,15 +151,13 @@
     
     &:hover,
     &:active,
-    &:focus{
+    &:focus,
+    &.active{
       text-decoration: none;
-      color: $link-gray-active;
+      color: $link-blue-active;
     }
   }
-}
-
-
-
+}/*subm*/
 
 
 .sview {
@@ -152,6 +165,10 @@
   height: 460px;
   background: #292828;
   position: relative;
+  
+  @media (max-width: $XM){
+    margin-right: 0;
+  }
 }
   
 .subs{
@@ -159,6 +176,13 @@
   z-index: 2;
   padding: 5px 5px 1px 5px;
   background: rgba(0, 0, 0, 0.48);
+  
+  @media (max-width: $XM){
+    position: relative 0 0 0 0;
+    padding: 15px;
+    background-image: inline(../img/tile.png);
+    background-color: transparent;
+  }
   
   > span{
     text-transform: uppercase;
@@ -220,6 +244,7 @@
     padding: 10px 15px;
     opacity: .5;
     position: relative;
+    overflow: hidden;
     
     &:hover{
       opacity: 1;
@@ -343,7 +368,7 @@
       }
     }
   }
-}
+}/*slist*/
 /* .Stream list*/
 
 

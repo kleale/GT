@@ -37,14 +37,16 @@ module.exports = {
     "$button-gray": "#444950",
     "$button-gray-text": "#8f8f8f",  
     
-    "$bg-dropdown": "#31373a",
+    "$bg-dropdown": "#305c7b",
     "$bg-form": "#444950",
   
     // bg images
     "$section_bg_1": "section_bg_1.jpg",
   
     "$green": "#44930a",
+    "$red": "#ea6465",
     "$subgreen": "#e8f39a",
+    "$blue": "#037db5",
     "$overlay-blue": "rgba(3, 125, 181, 0.13)",
   
     //transitions
@@ -55,4 +57,6 @@ module.exports = {
     //box-shadow
     "$bsh": "1px 1px 2px rgba(0, 0, 0, 0.3)",
     "$bsh2": "4px 4px 10px rgba(0, 0, 0, 0.4)"
+  
+    // choosen
 };

@@ -2,343 +2,178 @@
   Module
 */
 /*
-  Left Bar
+* Match Icons
 */
-.bar{
-  transition: $tease;
-  position: fixed 0 * 0 0;
-  background: rgba(55, 55, 62, 0.9);
-  background-image: inline(../img/tile.png);
-  background-repeat: repeat;
+[class^="m-i-"], [class*=" m-i-"] {
   background-position: center;
-  width:220px;
-  z-index: 10;
-  
-  @media (max-width: 1585px) {
-    margin-left: -220px;
-  }
-  .barc{
-    position: absolute 0 0 0 0;
-    overflow-x: auto;
-  }
-  .opener{
-    color: $link-light-blue;
-    position: absolute 2px -50px * *;
-    padding: 10px;
-    font-size: 28px;
-    line-height: 1;
-    text-decoration: none;
-    z-index: 10;
-    cursor: pointer;
-    
-    &:hover,
-    &:active,
-    &:focus{
-      color: $link-light-blue-active;
-      text-decoration: none;
-    }
-  }
-  
-  .dropdown-menu{
-    @media (max-height: $MH) {
-      position:absolute auto 0 100% 0;
-    }
-    a{
-      padding: 5px 10px;
-    }
-  }
-  .gt-logo {
-    display: block;
-    padding: 25px 0 15px;
-    text-align: center;
-    
-    @media (max-height: $MH) {
-      display:none;
-    }
-  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width:32px;
+  height:32px;
 }
-
-.bar-menu{
-  position: relative;
-
-  &:before{
-    display: block;
-    content: "";
-    position:absolute 0 * 0 0;
-    background: #000;
-    z-index: 0;
-    width: 50px;
-  }
+.m-i-1{
+  background-image: url(../img/mi1.svg);
 }
-
-.bar-nav-games{
-  width: 50px;
-  float: left;
-  padding: 0;
-  margin: 0;
-
-  li{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: block;
-    
-    &.active a{
-      opacity: 1;
-      filter: grayscale(0);
-    }
-    a{
-      transition: $tease;
-      filter: grayscale(1);
-      display: block;
-      width: 36px;
-      margin: 8px 5px;
-      opacity: .5;
-      img{
-        max-width: 100%;
-      }
-    }
-    &:active a,
-    &:focus a,
-    &:hover a{
-      opacity: 1;
-      filter: grayscale(0);
-    }
-  }
+.m-i-2{
+  background-image: url(../img/mi2.svg);
 }
-
-.bar-block{
-  background: rgba(0, 0, 0, 0.18);
-  display: block;
-  padding: 5px;
-  position: relative;
-
-  .bar-ava{
-    display: inline-block;
-    float: left;
-    margin: -5px;
-    width: 50px;
-    padding: 5px;
-    background: #000;
-
-      img{
-        max-width: 100%;
-        border-radius: 50%;
-      }
-  }
+.m-i-3{
+  background-image: url(../img/mi3.svg);
 }
-
-.bar-username{
-  padding-left: 60px;
-  padding-right: 10px;
-  
-  .bar-name{
-    color: $link-white;
-    font-size: 14px;
-    font-weight: 300;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-
-    &:hover,
-    &:active,
-    &:focus{
-      color: $link-white-active;
-    }
-  }
+.m-i-4{
+  background-image: url(../img/mi4.svg);
 }
-
-.bar-links{
-
+.m-i-5{
+  background-image: url(../img/mi5.svg);
 }
-
-.bar-label{
-  background-color: $green;
-  color: $subgreen;
-  padding: 0 6px;
-  text-transform: uppercase;
-  line-height: 1;
-  font-size: 11px;
-  border-radius: 10px;
+.m-i-6{
+  background-image: url(../img/mi6.svg);
 }
-
-.u-opt, 
-.u-off{
-    float: right;
-    color: $link-light-blue;
-    font-size: 14px;
-    margin: 3px 5px;
-
-    &:hover,
-    &:active,
-    &:focus{
-      color: $link-light-blue-active;
-      text-decoration: none;
-    }
+.m-i-7{
+  background-image: url(../img/mi7.svg);
 }
-
-.bar-nav{
-  padding-left: 50px;
-
-  li{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    
-    a{
-      display: block;
-      padding: 10px 10px;
-      color: $link-light-blue;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 1;
-      text-transform: uppercase;
-
-      &:active,
-      &:focus,
-      &:hover{
-        text-decoration: none;
-        color: $link-light-blue-active;
-      }
-      @media (max-height: $MH) {
-        padding: 8px 10px;
-        font-size: 12px;
-      }
-    }
-    i{
-      margin-right: 2px;
-      font-size: 17px;
-      position: relative;
-      top: 2px;
-      width: 30px;
-      display: inline-block;
-      text-align: center;
-      @media (max-height: $MH) {
-        font-size: 12px;
-      }
-    }
-  }
+.m-i-8{
+  background-image: url(../img/mi8.svg);
 }
-
-.dropers{
-
+.m-i-9{
+  background-image: url(../img/mi9.svg);
 }
-.s-lang{
-  float:left;
-  width: 50px;
-    
-  .dla{
-    color: $link-light-blue;
-    display: block;
-    padding: 15px 8px;
-    font-size: 20px;
-    font-size: 14px;
-    line-height: 1;
-    font-weight: 300;
-    cursor: pointer;
-    opacity: .7;
-    
-    &:active,
-    &:focus,
-    &:hover{
-      text-decoration: none;
-      color: $link-light-blue-active;
-    }
-  }
+.m-i-10{
+  background-image: url(../img/mi10.svg);
 }
-.s-time{
-  margin-left: 50px;
-  background: rgba(0, 0, 0, 0.18);
-  .sub{
-    padding: 15px 15px;
-    color: $link-light-blue;
-    font-size: 14px;
-    line-height: 1;
-    font-weight: 300;
-    display: block;
-    cursor: pointer;
-    opacity: .7;
-    
-    &:active,
-    &:focus,
-    &:hover{
-      text-decoration: none;
-      color: $link-light-blue-active;
-    }
-  }
-  .caret{
-    float: right;
-    margin: 5px 0px;
-  }
-}
-
-.sercher {
-  margin: 15px;
-  position: relative;
-  
-  input{
-    background: rgba(0, 0, 0, 0.18);
-    border: 0;
-    border-radius: 0;
-    padding: 10px;
-  }
-  a{
-    display: block;
-    color: $link-light-blue;
-    position: absolute 0 0 0 *;
-    padding:5px;
-    line-height: 1;
-    padding: 10px;
-    opacity: .7;
-    
-    &:active,
-    &:focus,
-    &:hover{
-      text-decoration: none;
-      color: $link-light-blue-active;
-    }
-  }
+.m-i-11{
+  background-image: url(../img/mi11.svg);
 }
 
 /*
-  Breadcrums Bar
+* Predictors Icons
 */
-.bread{
-  max-width: 1200px;
-  margin: 0 auto;
-  
-  ol{
-    display: block;
-    overflow: hidden;
-    color: #fff;
-    display: block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding: 15px;
-    
-    li {
-      display: inline-block;
-    
-      a {
-        font-size: 12px;
-        color: $link-light-blue;
-        text-decoration: none;
-        
-        &:active,
-        &:focus,
-        &:hover{
-          text-decoration: none;
-          color: $link-light-blue-active;
-        }
-      }
-    }
-  }
+[class^="p-i-"], [class*=" p-i-"] {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width:32px;
+  height:32px;
+  vertical-align: text-bottom;
+}
+.p-i-1{
+  background-image: url(../img/p1.svg);
+}
+.p-i-2{
+  background-image: url(../img/p2.svg);
+}
+.p-i-3{
+  background-image: url(../img/p3.svg);
+}
+.p-i-4{
+  background-image: url(../img/p4.svg);
+}
+.p-i-5{
+  background-image: url(../img/p5.svg);
+}
 
+.close {
+  color: #99fffd;
+  font-size: 31px;
+  margin-right: 10px;
+  opacity: 0.6;
+  text-shadow: 0 1px 0 #000000;
 }
 
 
-
+/**
+ * TrackpadScrollEmulator
+ * Author: Jonathan Nicol @f6design
+ * https://github.com/jnicol/trackpad-scroll-emulator
+ */
+ 
+ .tse-sc {
+  position: relative;
+  width: 100%; /* Default value. Overwite this if you want. */
+  /*height: 300px;*/ /* Default value. Overwite this if you want. */
+  overflow: hidden;
+  }
+  .tse-sc .tse-scroll-content {
+    overflow: hidden;
+    overflow-y: scroll;
+    }
+    /* No longer using ::scrollbar too, since it breaks Chrome 25 */
+    .tse-sc .tse-scroll-content::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      }
+.tse-scrollbar {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 11px;
+  }
+  .tse-scrollbar .drag-handle {
+    position: absolute;
+    right: 2px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    min-height: 10px;
+    width: 7px;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+    -ms-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    background: #6c6e71;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    }
+  .tse-scrollbar:hover .drag-handle {
+    /* When hovered, remove all transitions from drag handle */
+    opacity: 0.7;
+    -webkit-transition: opacity 0 linear;
+    -moz-transition: opacity 0 linear;
+    -o-transition: opacity 0 linear;
+    -ms-transition: opacity 0 linear;
+    transition: opacity 0 linear;
+    }
+    .tse-scrollbar .drag-handle.visible {
+      opacity: 0.7;
+      }
+/* Used when testing the scrollbar width */
+/* No longer using ::scrollbar too, since it breaks Chrome 25 */
+.scrollbar-width-tester::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+/* Horizontal scroller */
+.tse-sc.horizontal .tse-scroll-content {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  }
+  .tse-sc.horizontal .tse-scroll-content::-webkit-scrollbar,
+  .tse-sc.horizontal .tse-scroll-content::scrollbar {
+    width: auto;
+    height: 0;
+    }
+.tse-sc.horizontal .tse-scrollbar {
+  top: auto;
+  left: 0;
+  width: auto;
+  height: 11px;
+  }
+  .tse-sc.horizontal .tse-scrollbar .drag-handle {
+    right: auto;
+    top: 2px;
+    height: 7px;
+    min-height: 0;
+    min-width: 10px;
+    width: auto;
+    }
+    
+/*----------------------------------------------*/
 
 
 

@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'gticons';
-    src:    url('../fonts/gticons.eot?wk2uc1');
-    src:    url('../fonts/gticons.eot?wk2uc1#iefix') format('embedded-opentype'),
-        url('../fonts/gticons.ttf?wk2uc1') format('truetype'),
-        url('../fonts/gticons.woff?wk2uc1') format('woff'),
-        url('../fonts/gticons.svg?wk2uc1#gticons') format('svg');
+    src:    url('../fonts/gticons.eot?uafui1');
+    src:    url('../fonts/gticons.eot?uafui1#iefix') format('embedded-opentype'),
+        url('../fonts/gticons.ttf?uafui1') format('truetype'),
+        url('../fonts/gticons.woff?uafui1') format('woff'),
+        url('../fonts/gticons.svg?uafui1#gticons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -419,6 +419,9 @@
 }
 .gti-newspaper-o:before {
     content: "\f1ea";
+}
+.gti-calculator:before {
+    content: "\f1ec";
 }
 .gti-area-chart:before {
     content: "\f1fe";

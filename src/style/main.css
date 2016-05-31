@@ -2,6 +2,7 @@
 * Third Party
 */
 @import "../../bower_components/normalize.css/normalize.css";
+@import "../assets/css/bootstrap-chosen.css";
 
 /*
 * Custom
@@ -21,3 +22,5 @@
 @import "part/match-player-chat.css";
 @import "part/match-player-stat.css";
 @import "part/match-player-log.css";
+@import "part/match-section-koef.css";
+@import "part/match-section-sravni.css";
