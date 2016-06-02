@@ -109,7 +109,7 @@
   color: $link-gray;
   border-radius: $br $br 0 0;
   position: relative;
-  z-index: 1002;
+  /*z-index: 1002;*/
 }
 body .open>.dropdown-toggle.btn-default:focus{
   background-color: $bg-dropdown;

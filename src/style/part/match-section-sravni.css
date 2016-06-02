@@ -1,5 +1,5 @@
 /*
-* Section koeffitzienti
+* Section team compare
 */
 
 .m-odd{
@@ -8,3 +8,226 @@
   background-repeat: repeat;
   background-position: center;
 }
+
+.rigter{
+  float: right;
+  text-transform: uppercase;
+  
+  .dropdown{
+    display: inline-block;
+    
+    .dropdown-menu{
+      right:0;
+      left:auto;
+      width:inherit;
+    }
+  }
+  b{
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 10px;
+    font-weight: 300;
+  }
+}
+
+.sr_t{
+  margin-top: 50px;
+  
+  .sr_pic{
+    display: block;
+    height: 100px;
+    width: 100px;
+    line-height: 75px;
+    padding: 7px;
+    position: relative;
+    background-color: rgba(3, 125, 181, 0.13);
+    border-radius: 50%;
+    
+    img{
+      width: 100%;
+    }
+  }
+  
+  > div{
+    
+    h3{
+      margin: 0;
+      font-size: 24px;
+      color:#fff;
+    }
+    u{
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #6c6c6c;
+      text-decoration: none;
+      display: block;
+      margin: 10px 0;
+    }
+  }
+  
+  &.sr_t1{
+    text-align: right;
+    > div{
+      margin-right: 100px;
+    }
+    .sr_pic{
+      float: right;
+      margin-left: 20px;
+    }
+  }
+  
+  &.sr_t2{
+    text-align: left;
+    > div{
+      margin-left: 100px;
+    }
+     &.sr_t2 .sr_pic{
+      float: left;
+      margin-right: 20px;
+    }
+  }
+  
+  .thumb{
+    margin: 0;
+    border-color: #203C50;
+  }
+  
+}
+
+#spider_chart{
+  height: 180px;
+}
+.spider{
+  margin: 0 0 30px 0;
+}
+.teams_stats{
+  position: relative;
+  min-height: 110px;
+  overflow: hidden;
+    
+  .teams_bars{
+    margin:0 200px;
+    height: 100px;
+    
+    @media (max-width: $XM){
+        margin: 20px 0;
+    }
+    .tbs1, .tbs2{
+      width:100px;
+      font-size: 12px;
+      table{
+        width:100%;
+        
+        th{
+          color:$text-gray-2;
+          font-weight: 300;
+          padding: 0px 5px;
+        }
+        td{
+          text-align: right;
+          color:$text-gray-3;
+          padding: 0px 5px;
+
+          &.red{
+            color:$red;
+          }
+          &.green{
+            color:$green;
+          }
+        }
+      }
+    }
+    .tbs1{
+      float: left;
+      
+      th{
+        text-align: right;
+      }
+    }
+    .tbs2{
+      float: right;
+    }
+    
+    .tbsb{
+      float: left;
+      width: calc(100% - 200px);
+    }
+  }
+    
+  .team_s_t{
+    position: absolute 0 * * 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    width:160px;
+    
+    @media (max-width: $XM){
+      position: relative auto auto auto auto;
+      margin: 20px 2%;
+      float: left;
+      width: 46%;
+    }
+    
+    table{
+      width:100%;
+      th{
+        color:$text-gray-2;
+        font-weight: 300;
+        padding: 0px 5px;
+        text-align: right;
+      }
+      td{
+        text-align: right;
+        color:$text-gray-3;
+        padding: 0px 5px;
+        text-align: left;
+        
+        &.red{
+          color:$red;
+        }
+        &.green{
+          color:$green;
+        }
+      }
+      tr{
+        &:nth-child(odd){
+          background: color($bg-main l(21%));
+        }
+      }
+    }
+
+    &.tst2{
+      position: absolute 0 0 auto auto;
+      
+      td{
+        text-align: right;
+      }
+      th{
+        text-align: left;
+      }
+      
+      @media (max-width: $XM){
+        position: relative auto auto auto auto;
+        margin: 20px 0;
+      }
+    }
+    
+    
+  }
+  
+}
+
+#teams_compare{
+  height:95px;
+  margin: -5px 30px;
+}
+
+
+
+
+
+
+
+
+
+
+

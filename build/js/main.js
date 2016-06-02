@@ -1639,6 +1639,7 @@ Highcharts.setOptions(Highcharts.theme);
 // ALL GANDI
 $(function () {
     $('#st-all-chart').highcharts({
+        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
         chart: {
             type: 'bar'
         },
@@ -1690,10 +1691,10 @@ $(function () {
         },
         series: [{
             name: 'London Conspiracy Dota2',
-            data: [1.5, 2.5, 1.6, 1.7, 2.1]
-        }, {
-            name: 'Secret',
             data: [2.2, 1.4, 1.9, 2.5, 1.6]
+        },{
+            name: 'Secret',
+            data: [1.5, 2.5, 1.6, 1.7, 2.1]
         }]
     });
 });
@@ -1702,6 +1703,7 @@ $(function () {
 
 $(function () {
     $('#st-gand-chart-t1').highcharts({
+        colors: ["#47c54a", "#2b832d", "#c450bb", "#8b1a7e"],
         chart: {
           type: 'column',
           spacingBottom: 1,
@@ -1728,11 +1730,12 @@ $(function () {
             }
         },
         legend: {
+            enabled: false/*,
             layout: 'horizontal',
             verticalAlign: "top",
             borderWidth: 1,
             backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || 'rgba(0,0,0,0)'),
-            shadow: false
+            shadow: false*/
         },
         plotOptions: {
             borderWidth: 0,
@@ -1764,6 +1767,7 @@ $(function () {
 // вторая команда
   
     $('#st-gand-chart-t2').highcharts({
+        colors: ["#47c54a", "#2b832d", "#c450bb", "#8b1a7e"],
         chart: {
           type: 'column',
           spacingBottom: 1,
@@ -1830,7 +1834,7 @@ $(function () {
         chart: {
             type: 'area',
             spacingBottom: -5,
-            spacingTop: 1
+            spacingTop: 30
         },
         title: {
             text: ''
@@ -1861,12 +1865,16 @@ $(function () {
                 }
             }
         },
+        credits: {
+          enabled: false
+        },
         legend: {
+            enabled: false/*,
             layout: 'horizontal',
             verticalAlign: "top",
             borderWidth: 1,
             backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || 'rgba(0,0,0,0)'),
-            shadow: false
+            shadow: false*/
         },
         series: [{
             name: 'EGB',
@@ -1913,12 +1921,16 @@ $(function () {
                 }
             }
         },
+        credits: {
+          enabled: false
+        },
         legend: {
+             enabled: false/*,
             layout: 'horizontal',
             verticalAlign: "bottom",
             borderWidth: 1,
             backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || 'rgba(0,0,0,0)'),
-            shadow: false
+            shadow: false*/
         },
         series: [{
             name: 'EGB',
@@ -1964,6 +1976,9 @@ $(function () {
                     enabled: true
                 }
             }
+        },
+        credits: {
+          enabled: false
         },
         series: [{
             name: 'Коэффициент',
@@ -2087,6 +2102,9 @@ $(function () {
         tooltip: {
             valueSuffix: '%'
         },
+        credits: {
+          enabled: false
+        },
         series: [{
             name: 'Эксперты',
             data: [
@@ -2180,13 +2198,658 @@ $(function () {
             data: [279],
             index: 3
         }, {
-            name: 'Cloud7 (Б)',
+            name: 'Secret (Б)',
             data: [8],
             index: 2
         }, {
-            name: 'Cloud7 (Э)',
+            name: 'Secret (Э)',
             data: [4],
             index: 1
+        }]
+    });
+});
+
+/* Spider sravnenie*/
+
+$(function () {
+
+    $('#spider_chart').highcharts({
+        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
+        chart: {
+            polar: true,
+            type: 'line',
+            backgroundColor: 'none',
+            spacingBottom: 5,
+            spacingTop: 5,
+            spacingLeft: 0,
+            spacingRight: 0
+        },
+        title: {
+            text: '',
+            x: -80
+        },
+        pane: {
+            size: '80%'
+        },
+        plotOptions: {
+            series: {
+              title:''
+            }
+        },
+        credits: {
+          enabled: false
+        },
+        xAxis: {
+            categories: ['Aggression', 'Strength', 'Carry', 'Form', 'Laning', 'Stability', 'Support', 'Team Play'],
+            tickmarkPlacement: 'on',
+            lineWidth: 0,
+            labels: {
+                style: {
+                  textTransform: 'uppercase',
+                  color: '#c7c7c7'
+                }
+            }
+        },
+        yAxis: {
+            gridLineInterpolation: 'polygon',
+            //lineWidth: 0,
+            tickInterval: 2,
+            min: 0,
+            max: 10,
+            title: {
+              enabled: false
+            },
+            labels: {
+               enabled: false
+            },
+            plotBands: [{ // visualize
+                from: 0,
+                to: 2,
+                color: 'rgba(68, 118, 213, 0.1)'
+            },
+            {
+                from: 2,
+                to: 4,
+                color: 'rgba(68, 118, 213, 0.05)'
+            },
+            {
+                from: 4,
+                to: 6,
+                color: 'rgba(68, 118, 213, 0.1)'
+            },
+            {
+                from: 6,
+                to: 8,
+                color: 'rgba(68, 118, 213, 0.05)'
+            },
+            {
+                from: 8,
+                to: 10,
+                color: 'rgba(68, 118, 213, 0.1)'
+            },
+            {
+                from: 10,
+                to: 12,
+                color: 'rgba(68, 118, 213, 0.05)'
+            }
+            ]
+        },
+        plotOptions: {
+            series: {
+                fillOpacity: 0.5
+            }
+        },
+        tooltip: {
+            shared: true,
+            pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+        },
+        legend: {
+            enabled: false
+        },
+        series: [{
+            name: 'London',
+            type: 'area',
+            data: [6, 10, 4, 8, 9, 4, 6, 10],
+            pointPlacement: 'on'
+        }, {
+            name: 'Secret',
+            type: 'area',
+            data: [8, 5, 4, 8, 7, 5, 9, 5],
+            pointPlacement: 'on'
+        }]
+
+    });
+});
+
+
+/* Teams compare*/
+$(function () {
+    $('#teams_compare').highcharts({
+        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
+        chart: {
+          type: 'bar',
+          backgroundColor: 'none',
+          spacingBottom: 5,
+          spacingTop: 5,
+          spacingLeft: 0,
+          spacingRight: 0
+        },
+        credits: {
+          enabled: false
+        },
+        xAxis: {
+           categories: ['RANK', 'APR', 'MATCHES', 'WINS', 'KDA'],
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+         minorTickLength: 0,
+         tickLength: 0,
+          
+        },
+        yAxis: {
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+           minorTickLength: 0,
+           tickLength: 0
+        },
+        title: {
+            enabled: false,
+            text:''
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+              stacking: 'percent',
+              crop: false,
+              title:'',
+              pointPadding: 0.01,
+              groupPadding: 0.1
+            }
+        },
+        tooltip: {
+            headerFormat: '',
+            useHTML: true,
+            pointFormat: '{series.name}<br>{point.name}: {point.y}'
+        },
+        series: [{
+            name: 'London',
+            data: [
+                  ['RANK', 53],
+                  ['APR', 46],
+                  ['MATCHES', 53],
+                  ['WINS', 46],
+                  ['KDA', 53]
+            ],
+            index: 4
+        }, {
+            name: 'Secret',
+            data: [
+                  ['RANK', 5],
+                  ['APR', 4],
+                  ['MATCHES', 55],
+                  ['WINS', 44],
+                  ['KDA', 55]
+            ],
+            index: 3
+        }]
+    });
+});
+
+
+// player compare bars
+
+//Player1
+$(function () {
+    $('#ptc_bar1').highcharts({
+        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
+        chart: {
+          type: 'bar',
+          backgroundColor: 'none',
+          spacingBottom: 5,
+          spacingTop: 5,
+          spacingLeft: 0,
+          spacingRight: 0
+        },
+        credits: {
+          enabled: false
+        },
+        xAxis: {
+           categories: ['KILLS', 'DEATHS', 'ASSISTS', 'LH', 'GPM'],
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+         minorTickLength: 0,
+         tickLength: 0,
+          
+        },
+        yAxis: {
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+           minorTickLength: 0,
+           tickLength: 0
+        },
+        title: {
+            enabled: false,
+            text:''
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+              stacking: 'percent',
+              crop: false,
+              title:'',
+              pointPadding: 0.01,
+              groupPadding: 0.1
+            }
+        },
+        tooltip: {
+            headerFormat: '',
+            useHTML: true,
+            pointFormat: '{series.name}<br>{point.name}: {point.y}'
+        },
+        series: [{
+            name: 'Lacky8',
+            data: [
+                  ['RANK', 53],
+                  ['APR', 46],
+                  ['MATCHES', 53],
+                  ['WINS', 46],
+                  ['KDA', 53]
+            ],
+            index: 4
+        }, {
+            name: 'Boss',
+            data: [
+                  ['RANK', 5],
+                  ['APR', 4],
+                  ['MATCHES', 55],
+                  ['WINS', 44],
+                  ['KDA', 55]
+            ],
+            index: 3
+        }]
+    });
+});
+
+//Player2
+$(function () {
+    $('#ptc_bar2').highcharts({
+        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
+        chart: {
+          type: 'bar',
+          backgroundColor: 'none',
+          spacingBottom: 5,
+          spacingTop: 5,
+          spacingLeft: 0,
+          spacingRight: 0
+        },
+        credits: {
+          enabled: false
+        },
+        xAxis: {
+           categories: ['KILLS', 'DEATHS', 'ASSISTS', 'LH', 'GPM'],
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+         minorTickLength: 0,
+         tickLength: 0,
+          
+        },
+        yAxis: {
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+           minorTickLength: 0,
+           tickLength: 0
+        },
+        title: {
+            enabled: false,
+            text:''
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+              stacking: 'percent',
+              crop: false,
+              title:'',
+              pointPadding: 0.01,
+              groupPadding: 0.1
+            }
+        },
+        tooltip: {
+            headerFormat: '',
+            useHTML: true,
+            pointFormat: '{series.name}<br>{point.name}: {point.y}'
+        },
+        series: [{
+            name: 'Lacky8',
+            data: [
+                  ['RANK', 53],
+                  ['APR', 46],
+                  ['MATCHES', 53],
+                  ['WINS', 46],
+                  ['KDA', 53]
+            ],
+            index: 4
+        }, {
+            name: 'Boss',
+            data: [
+                  ['RANK', 5],
+                  ['APR', 4],
+                  ['MATCHES', 55],
+                  ['WINS', 44],
+                  ['KDA', 55]
+            ],
+            index: 3
+        }]
+    });
+});
+
+//Player3
+$(function () {
+    $('#ptc_bar3').highcharts({
+        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
+        chart: {
+          type: 'bar',
+          backgroundColor: 'none',
+          spacingBottom: 5,
+          spacingTop: 5,
+          spacingLeft: 0,
+          spacingRight: 0
+        },
+        credits: {
+          enabled: false
+        },
+        xAxis: {
+           categories: ['KILLS', 'DEATHS', 'ASSISTS', 'LH', 'GPM'],
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+         minorTickLength: 0,
+         tickLength: 0,
+          
+        },
+        yAxis: {
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+           minorTickLength: 0,
+           tickLength: 0
+        },
+        title: {
+            enabled: false,
+            text:''
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+              stacking: 'percent',
+              crop: false,
+              title:'',
+              pointPadding: 0.01,
+              groupPadding: 0.1
+            }
+        },
+        tooltip: {
+            headerFormat: '',
+            useHTML: true,
+            pointFormat: '{series.name}<br>{point.name}: {point.y}'
+        },
+        series: [{
+            name: 'Lacky8',
+            data: [
+                  ['RANK', 53],
+                  ['APR', 46],
+                  ['MATCHES', 53],
+                  ['WINS', 46],
+                  ['KDA', 53]
+            ],
+            index: 4
+        }, {
+            name: 'Boss',
+            data: [
+                  ['RANK', 5],
+                  ['APR', 4],
+                  ['MATCHES', 55],
+                  ['WINS', 44],
+                  ['KDA', 55]
+            ],
+            index: 3
+        }]
+    });
+});
+
+//Player4
+$(function () {
+    $('#ptc_bar4').highcharts({
+        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
+        chart: {
+          type: 'bar',
+          backgroundColor: 'none',
+          spacingBottom: 5,
+          spacingTop: 5,
+          spacingLeft: 0,
+          spacingRight: 0
+        },
+        credits: {
+          enabled: false
+        },
+        xAxis: {
+           categories: ['KILLS', 'DEATHS', 'ASSISTS', 'LH', 'GPM'],
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+         minorTickLength: 0,
+         tickLength: 0,
+          
+        },
+        yAxis: {
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+           minorTickLength: 0,
+           tickLength: 0
+        },
+        title: {
+            enabled: false,
+            text:''
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+              stacking: 'percent',
+              crop: false,
+              title:'',
+              pointPadding: 0.01,
+              groupPadding: 0.1
+            }
+        },
+        tooltip: {
+            headerFormat: '',
+            useHTML: true,
+            pointFormat: '{series.name}<br>{point.name}: {point.y}'
+        },
+        series: [{
+            name: 'Lacky8',
+            data: [
+                  ['RANK', 53],
+                  ['APR', 46],
+                  ['MATCHES', 53],
+                  ['WINS', 46],
+                  ['KDA', 53]
+            ],
+            index: 4
+        }, {
+            name: 'Boss',
+            data: [
+                  ['RANK', 5],
+                  ['APR', 4],
+                  ['MATCHES', 55],
+                  ['WINS', 44],
+                  ['KDA', 55]
+            ],
+            index: 3
+        }]
+    });
+});
+
+
+//Player5
+$(function () {
+    $('#ptc_bar5').highcharts({
+        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
+        chart: {
+          type: 'bar',
+          backgroundColor: 'none',
+          spacingBottom: 5,
+          spacingTop: 5,
+          spacingLeft: 0,
+          spacingRight: 0
+        },
+        credits: {
+          enabled: false
+        },
+        xAxis: {
+           categories: ['KILLS', 'DEATHS', 'ASSISTS', 'LH', 'GPM'],
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+         minorTickLength: 0,
+         tickLength: 0,
+          
+        },
+        yAxis: {
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+           minorTickLength: 0,
+           tickLength: 0
+        },
+        title: {
+            enabled: false,
+            text:''
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+              stacking: 'percent',
+              crop: false,
+              title:'',
+              pointPadding: 0.01,
+              groupPadding: 0.1
+            }
+        },
+        tooltip: {
+            headerFormat: '',
+            useHTML: true,
+            pointFormat: '{series.name}<br>{point.name}: {point.y}'
+        },
+        series: [{
+            name: 'Lacky8',
+            data: [
+                  ['RANK', 53],
+                  ['APR', 46],
+                  ['MATCHES', 53],
+                  ['WINS', 46],
+                  ['KDA', 53]
+            ],
+            index: 4
+        }, {
+            name: 'Boss',
+            data: [
+                  ['RANK', 5],
+                  ['APR', 4],
+                  ['MATCHES', 55],
+                  ['WINS', 44],
+                  ['KDA', 55]
+            ],
+            index: 3
         }]
     });
 });

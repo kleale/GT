@@ -193,7 +193,7 @@
         <div class="col-lg-5 col-sm-4">
           <div class="m-team mt1">
             <a href="" class="mtp"><img src="http://game-tournaments.com/media/logo/_60/pic-20160415-256x187-3994387532.png"><b>11</b></a>
-            <a href="" class="mtn">London Conspiracy Dota2</a>
+            <a href="" class="mtn">Secret</a>
             <div class="mpl">
               <a href="" title="игрок">Семён</a>
               <a href="" title="игрок">Стрелок</a>
@@ -260,8 +260,12 @@
               </div>
               <a href="" class="btn-input btn btn-sm btn-primary">OK</a>
             </div>
-            
-            <iframe rel="stream" site="twitch" title="starladder1" allowfullscreen="" frameborder="0" width="100%" height="100%" src="http://player.twitch.tv/?autoplay=false&amp;channel=starladder1"></iframe>
+            <div class="iframer">
+              <iframe rel="stream" site="twitch" title="starladder1" allowfullscreen="" frameborder="0" width="100%" height="100%" src="http://player.twitch.tv/?autoplay=false&amp;channel=starladder1"></iframe>
+            </div>
+            <div class="bn">
+              <img src="img/ad_player.jpg" alt="">
+            </div>
             
             <!-- NO -->
             <!--
@@ -1075,8 +1079,8 @@
                                     <th>Команда</th>
                                     <th>Букмкер</th>
                                     <th align="right">Коэфф.</th>
-                                    <th align="right">Ставка, $</th>
-                                    <th align="right">Выигрыш, $</th>
+                                    <th align="right">Ставка,$</th>
+                                    <th align="right">Выигрыш,$</th>
                                   </tr>
                                   <tr>
                                     <td><span class="tn2">London Conspiracy Dota2</span></td>
@@ -1316,8 +1320,8 @@
                               <th>Команда</th>
                               <th>Букмкер</th>
                               <th class="text-right">Коэфф.</th>
-                              <th class="text-right">Ставка, $</th>
-                              <th class="text-right">Выигрыш, $</th>
+                              <th class="text-right">Ставка,$</th>
+                              <th class="text-right">Выигрыш,$</th>
                             </tr>
                             <tr>
                               <td rowspan="2"><input class="form-control cal-graf-st" type="text" name="" id="" value="2.13"></td>
@@ -1900,7 +1904,7 @@
                               </td>
                               <td class="stc"><span>287</span>СТАВОК</td>
                               <td class="str">
-                                <span>Cloud7 </span>
+                                <span>Secret</span>
                                 <u></u> 8 <i></i> Э 4
                               </td>
                             </tr>
@@ -1958,29 +1962,806 @@
       </div>
     </div>
     
+    <!-- Teams compare -->
+    
     <section id="m-sravni" class="m-sec m-odd">
       <div class="block">
         <div class="bh clearfix">
           <h3>
-            <i class="ih gti-dice"></i>
-            Коэффициенты
-            <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О площадке + дополнительные сведения о матче" class="inf gti-info-circle"></i>
+            <i class="ih gti-exchange"></i>
+            Сравнение команд
+            <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О сравнении" class="inf gti-info-circle"></i>
           </h3>
-          <ul class="block-menu" role="tablist">
-            <li id="k_tab" class="active"><a href="#tzn" role="tab" data-toggle="tab">Значения</a>
-            <li><a id="k_graf" href="#tgraf" role="tab" data-toggle="tab">График</a>
-            <li><a id="k_hist" role="tab" data-toggle="tab" href="thist">История</a>
-          </ul>
+          <div class="rigter">
+            <b>Этот матч</b>
+            <div class="dropdown">
+              <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                 Команда
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                 Игрок
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </div>
         </div><!-- bh -->
         
         <div class="block-content">
+          <div class="spider">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="sr_t sr_t1">
+                  <a class="sr_pic" href="">
+                    <img src="http://game-tournaments.com/media/logo/_60/pic-20160415-256x187-3994387532.png">
+                  </a>
+                  <div>
+                    <h3>London</h3>
+                    <u>Лучше в 14 показателях</u>
+                    <span class="thumb"><i class="gti-thumbs-o-up"></i><b>123</b><!--<i class="gti-thumbs-o-down"></i>--></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div id="spider_chart">
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="sr_t sr_t2">
+                  <a class="sr_pic" href="">
+                    <img src="http://game-tournaments.com/media/logo/_60/pic-20160415-256x187-3994387532.png">
+                  </a>
+                  <div>
+                    <h3>Secret</h3>
+                    <u>Лучше в 14 показателях</u>
+                    <span class="thumb">
+                    <b>123</b><!--<i class="gti-thumbs-o-down"></i>-->
+                    <i class="gti-thumbs-up active"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           
-          
+          <div class="teams_stats">
+            <div class="teams_bars">
+              <div class="tbs1">
+                <table>
+                  <tr>
+                    <th>RANK</th>
+                    <td>53</td>
+                  </tr>
+                  <tr>
+                    <th>APR</th>
+                    <td>46</td>
+                  </tr>
+                  <tr>
+                    <th>MATCHES</th>
+                    <td class="red">53</td>
+                  </tr>
+                  <tr>
+                    <th>WINS</th>
+                    <td>46</td>
+                  </tr>
+                  <tr>
+                    <th>KDA</th>
+                    <td class="green">53</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="tbsb">
+                <div id="teams_compare"></div>
+              </div>
+              <div class="tbs2">
+                <table>
+                  <tr>
+                    <td>5</td>
+                    <th>RANK</th>
+                  </tr>
+                  <tr>
+                    <td class="red">4</td>
+                    <th>APR</th>
+                  </tr>
+                  <tr>
+                    <td>55</td>
+                    <th>MATCHES</th>
+                  </tr>
+                  <tr>
+                    <td>44</td>
+                    <th>WINS</th>
+                  </tr>
+                  <tr>
+                    <td class="green">55</td>
+                    <th>KDA</th>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="team_s_t tst1">
+              <table>
+                <tr>
+                  <th>Форма</th>
+                  <td class="red">34</td>
+                </tr>
+                <tr>
+                  <th>Побед</th>
+                  <td class="green">10</td>
+                </tr>
+                <tr>
+                  <th>Поражений</th>
+                  <td>11</td>
+                </tr>
+                <tr>
+                  <th>Игр в мес.</th>
+                  <td>60</td>
+                </tr>
+                <tr>
+                  <th>П-П</th>
+                  <td>890</td>
+                </tr>
+              </table>
+            </div>
+            <div class="team_s_t tst2">
+              <table>
+                <tr>
+                  <td class="red">34</td>
+                  <th>Форма</th>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <th>Побед</th>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <th>Поражений</th>
+                </tr>
+                <tr>
+                  <td>60</td>
+                  <th>Игр в мес.</th>
+                </tr>
+                <tr>
+                  <td>890</td>
+                  <th>П-П</th>
+                </tr>
+              </table>
+            </div>
+          </div>
           
         </div><!-- block-content -->
       </div><!-- block -->
     
-      
+    </section>
+    <!-- /Teams compare -->
+    
+    <!-- Players compare -->
+     
+    
+    <section id="m-players" class="m-sec m-even">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="block">
+            <div class="bh clearfix">
+              <h3>
+                <i class="ih gti-male"></i>
+                Сравнение игроков
+                <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О сравнении" class="inf gti-info-circle"></i>
+              </h3>
+            </div><!-- bh -->
+    
+            <div class="block-content">
+              
+              <div class="pl-c">
+                <div class="pthead">
+                  <div class="pth pt1">
+                    <h4><a href="">Lucky8</a></h4>
+                    <span><u>Captain</u>Alex Shmidt</span>
+                  </div>
+                  <div class="pt_rate">
+                    <span class="thumb th1">
+                      <i class="gti-thumbs-o-up"></i>
+                      <b>13</b>
+                    </span>
+                    <em>VS</em>
+                    <span class="thumb th2">
+                      <b>1</b>
+                      <i class="gti-thumbs-o-up"></i>
+                    </span>
+                  </div>
+                  <div class="pth pt2">
+                    <h4><a href="">Boss super player long name</a></h4>
+                    <span>Alex Shmidt<u>Captain</u></span>
+                  </div>
+                </div><!-- pthead -->
+                  
+                <div class="ptc">
+                  <div class="ptcs ptcs1">
+                    <table>
+                      <tr>
+                        <th>kills</th>
+                        <td class="green">100</td>
+                      </tr>
+                      <tr>
+                        <th>deaths</th>
+                        <td class="green">14</td>
+                      </tr>
+                      <tr>
+                        <th>Assists</th>
+                        <td class="green">11</td>
+                      </tr>
+                      <tr>
+                        <th>LH</th>
+                        <td class="red">2</td>
+                      </tr>
+                      <tr>
+                        <th>GPM</th>
+                        <td>10</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="ptc_bar">
+                    <div id="ptc_bar1"></div>
+                  </div>
+                  <div class="ptcs ptcs2">
+                    <table>
+                      <tr>
+                        <td class="green">100</td>
+                        <th>kills</th>
+                      </tr>
+                      <tr>
+                        <td class="green">14</td>
+                        <th>deaths</th>
+                      </tr>
+                      <tr>
+                        <td class="green">11</td>
+                        <th>Assists</th>
+                      </tr>
+                      <tr>
+                        <td class="red">2</td>
+                        <th>LH</th>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <th>GPM</th>
+                      </tr>
+                    </table>
+                  </div>
+                </div><!-- ptc -->
+                  
+              </div><!-- pl-c -->
+              <div class="pl-c">
+                <div class="pthead">
+                  <div class="pth pt1">
+                    <h4><a href="">Lucky8</a></h4>
+                    <span><u>Captain</u>Alex Shmidt</span>
+                  </div>
+                  <div class="pt_rate">
+                    <span class="thumb th1">
+                      <i class="gti-thumbs-o-up"></i>
+                      <b>13</b>
+                    </span>
+                    <em>VS</em>
+                    <span class="thumb th2">
+                      <b>1</b>
+                      <i class="gti-thumbs-o-up"></i>
+                    </span>
+                  </div>
+                  <div class="pth pt2">
+                    <h4><a href="">Boss super player long name</a></h4>
+                    <span>Alex Shmidt<u>Captain</u></span>
+                  </div>
+                </div><!-- pthead -->
+                  
+                <div class="ptc">
+                  <div class="ptcs ptcs1">
+                    <table>
+                      <tr>
+                        <th>kills</th>
+                        <td class="green">100</td>
+                      </tr>
+                      <tr>
+                        <th>deaths</th>
+                        <td class="green">14</td>
+                      </tr>
+                      <tr>
+                        <th>Assists</th>
+                        <td class="green">11</td>
+                      </tr>
+                      <tr>
+                        <th>LH</th>
+                        <td class="red">2</td>
+                      </tr>
+                      <tr>
+                        <th>GPM</th>
+                        <td>10</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="ptc_bar">
+                    <div id="ptc_bar2"></div>
+                  </div>
+                  <div class="ptcs ptcs2">
+                    <table>
+                      <tr>
+                        <td class="green">100</td>
+                        <th>kills</th>
+                      </tr>
+                      <tr>
+                        <td class="green">14</td>
+                        <th>deaths</th>
+                      </tr>
+                      <tr>
+                        <td class="green">11</td>
+                        <th>Assists</th>
+                      </tr>
+                      <tr>
+                        <td class="red">2</td>
+                        <th>LH</th>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <th>GPM</th>
+                      </tr>
+                    </table>
+                  </div>
+                </div><!-- ptc -->
+                  
+              </div><!-- pl-c -->
+              <div class="pl-c">
+                <div class="pthead">
+                  <div class="pth pt1">
+                    <h4><a href="">Lucky8</a></h4>
+                    <span><u>Captain</u>Alex Shmidt</span>
+                  </div>
+                  <div class="pt_rate">
+                    <span class="thumb th1">
+                      <i class="gti-thumbs-o-up"></i>
+                      <b>13</b>
+                    </span>
+                    <em>VS</em>
+                    <span class="thumb th2">
+                      <b>1</b>
+                      <i class="gti-thumbs-o-up"></i>
+                    </span>
+                  </div>
+                  <div class="pth pt2">
+                    <h4><a href="">Boss super player long name</a></h4>
+                    <span>Alex Shmidt<u>Captain</u></span>
+                  </div>
+                </div><!-- pthead -->
+                  
+                <div class="ptc">
+                  <div class="ptcs ptcs1">
+                    <table>
+                      <tr>
+                        <th>kills</th>
+                        <td class="green">100</td>
+                      </tr>
+                      <tr>
+                        <th>deaths</th>
+                        <td class="green">14</td>
+                      </tr>
+                      <tr>
+                        <th>Assists</th>
+                        <td class="green">11</td>
+                      </tr>
+                      <tr>
+                        <th>LH</th>
+                        <td class="red">2</td>
+                      </tr>
+                      <tr>
+                        <th>GPM</th>
+                        <td>10</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="ptc_bar">
+                    <div id="ptc_bar3"></div>
+                  </div>
+                  <div class="ptcs ptcs2">
+                    <table>
+                      <tr>
+                        <td class="green">100</td>
+                        <th>kills</th>
+                      </tr>
+                      <tr>
+                        <td class="green">14</td>
+                        <th>deaths</th>
+                      </tr>
+                      <tr>
+                        <td class="green">11</td>
+                        <th>Assists</th>
+                      </tr>
+                      <tr>
+                        <td class="red">2</td>
+                        <th>LH</th>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <th>GPM</th>
+                      </tr>
+                    </table>
+                  </div>
+                </div><!-- ptc -->
+                  
+              </div><!-- pl-c -->
+              <div class="pl-c">
+                <div class="pthead">
+                  <div class="pth pt1">
+                    <h4><a href="">Lucky8</a></h4>
+                    <span><u>Captain</u>Alex Shmidt</span>
+                  </div>
+                  <div class="pt_rate">
+                    <span class="thumb th1">
+                      <i class="gti-thumbs-o-up"></i>
+                      <b>13</b>
+                    </span>
+                    <em>VS</em>
+                    <span class="thumb th2">
+                      <b>1</b>
+                      <i class="gti-thumbs-o-up"></i>
+                    </span>
+                  </div>
+                  <div class="pth pt2">
+                    <h4><a href="">Boss super player long name</a></h4>
+                    <span>Alex Shmidt<u>Captain</u></span>
+                  </div>
+                </div><!-- pthead -->
+                  
+                <div class="ptc">
+                  <div class="ptcs ptcs1">
+                    <table>
+                      <tr>
+                        <th>kills</th>
+                        <td class="green">100</td>
+                      </tr>
+                      <tr>
+                        <th>deaths</th>
+                        <td class="green">14</td>
+                      </tr>
+                      <tr>
+                        <th>Assists</th>
+                        <td class="green">11</td>
+                      </tr>
+                      <tr>
+                        <th>LH</th>
+                        <td class="red">2</td>
+                      </tr>
+                      <tr>
+                        <th>GPM</th>
+                        <td>10</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="ptc_bar">
+                    <div id="ptc_bar4"></div>
+                  </div>
+                  <div class="ptcs ptcs2">
+                    <table>
+                      <tr>
+                        <td class="green">100</td>
+                        <th>kills</th>
+                      </tr>
+                      <tr>
+                        <td class="green">14</td>
+                        <th>deaths</th>
+                      </tr>
+                      <tr>
+                        <td class="green">11</td>
+                        <th>Assists</th>
+                      </tr>
+                      <tr>
+                        <td class="red">2</td>
+                        <th>LH</th>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <th>GPM</th>
+                      </tr>
+                    </table>
+                  </div>
+                </div><!-- ptc -->
+                  
+              </div><!-- pl-c -->
+              <div class="pl-c">
+                <div class="pthead">
+                  <div class="pth pt1">
+                    <h4><a href="">Lucky8</a></h4>
+                    <span><u>Captain</u>Alex Shmidt</span>
+                  </div>
+                  <div class="pt_rate">
+                    <span class="thumb th1">
+                      <i class="gti-thumbs-o-up"></i>
+                      <b>13</b>
+                    </span>
+                    <em>VS</em>
+                    <span class="thumb th2">
+                      <b>1</b>
+                      <i class="gti-thumbs-o-up"></i>
+                    </span>
+                  </div>
+                  <div class="pth pt2">
+                    <h4><a href="">Boss super player long name</a></h4>
+                    <span>Alex Shmidt<u>Captain</u></span>
+                  </div>
+                </div><!-- pthead -->
+                  
+                <div class="ptc">
+                  <div class="ptcs ptcs1">
+                    <table>
+                      <tr>
+                        <th>kills</th>
+                        <td class="green">100</td>
+                      </tr>
+                      <tr>
+                        <th>deaths</th>
+                        <td class="green">14</td>
+                      </tr>
+                      <tr>
+                        <th>Assists</th>
+                        <td class="green">11</td>
+                      </tr>
+                      <tr>
+                        <th>LH</th>
+                        <td class="red">2</td>
+                      </tr>
+                      <tr>
+                        <th>GPM</th>
+                        <td>10</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="ptc_bar">
+                    <div id="ptc_bar5"></div>
+                  </div>
+                  <div class="ptcs ptcs2">
+                    <table>
+                      <tr>
+                        <td class="green">100</td>
+                        <th>kills</th>
+                      </tr>
+                      <tr>
+                        <td class="green">14</td>
+                        <th>deaths</th>
+                      </tr>
+                      <tr>
+                        <td class="green">11</td>
+                        <th>Assists</th>
+                      </tr>
+                      <tr>
+                        <td class="red">2</td>
+                        <th>LH</th>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <th>GPM</th>
+                      </tr>
+                    </table>
+                  </div>
+                </div><!-- ptc -->
+                  
+              </div><!-- pl-c -->
+              
+            </div><!-- block-content -->
+          </div><!-- block -->
+        </div><!-- col-sm-7 -->
+        
+        <div class="col-md-5">
+          <div class="block">
+            <div class="bh clearfix">
+              <h3>
+                <i class="ih gti-history"></i>
+                История матчей
+                <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О сравнении" class="inf gti-info-circle"></i>
+              </h3>
+            </div><!-- bh -->
+    
+            <div class="block-content">
+              <div class="histb">
+                <h3>
+                История личных встреч:
+                </h3>
+                <table>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="red"><u>Secret</u></td>
+                    <td class="hisc">43 : 67</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="green"><u>Secret</u></td>
+                    <td class="hisc">3 : 7</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="red"><u>Secret</u></td>
+                    <td class="hisc">43 : 67</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="green"><u>Secret</u></td>
+                    <td class="hisc">3 : 7</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="red"><u>Secret</u></td>
+                    <td class="hisc">43 : 67</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="green"><u>Secret</u></td>
+                    <td class="hisc">3 : 7</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                </table>
+              </div><!-- histb -->
+              <div class="histb">
+                <h3 class="blue">
+                История личных встреч:
+                </h3>
+                <table>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="red"><u>Secret</u></td>
+                    <td class="hisc">43 : 67</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="green"><u>Secret</u></td>
+                    <td class="hisc">3 : 7</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="red"><u>Secret</u></td>
+                    <td class="hisc">43 : 67</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="green"><u>Secret</u></td>
+                    <td class="hisc">3 : 7</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="red"><u>Secret</u></td>
+                    <td class="hisc">43 : 67</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="green"><u>Secret</u></td>
+                    <td class="hisc">3 : 7</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                </table>
+              </div><!-- histb -->
+              <div class="histb">
+                <h3 class="red">
+                История личных встреч:
+                </h3>
+                <table>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="red"><u>Secret</u></td>
+                    <td class="hisc">43 : 67</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="green"><u>Secret</u></td>
+                    <td class="hisc">3 : 7</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="red"><u>Secret</u></td>
+                    <td class="hisc">43 : 67</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="green"><u>Secret</u></td>
+                    <td class="hisc">3 : 7</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="red"><u>Secret</u></td>
+                    <td class="hisc">43 : 67</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                  <tr>
+                    <th>2016-02-24</th>
+                    <td><u class="tip" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
+                    <td class="green"><u>Secret</u></td>
+                    <td class="hisc">3 : 7</td>
+                    <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
+                  </tr>
+                </table>
+              </div><!-- histb -->
+            </div><!-- block-content -->
+          </div><!-- block -->
+        </div><!-- col-sm-5 -->
+      </div><!-- row -->
+    </section>
+    
+    
+    <!-- /Players compare -->
+    
+    <div class="bn">
+      <img src="img/ad.jpg" alt="">
+    </div>
+    
+    <section id="m-picks-com" class="m-sec">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Picks -->
+          
+          
+          
+          
+          <!-- /Picks -->
+        </div>
+        <div class="col-md-6">
+          <!-- Comments -->
+          
+          
+          <!-- /Comments -->
+        </div>
+      </div>
+    </section>
+    
+    <section id="m-news" class="m-sec">
+      <div class="row">
+          <!-- NEWS & social -->
+          <div class="col-md-6">
+              
+          </div>
+          <div class="col-md-6">
+              
+          </div>
+      </div>
     </section>
     
     <section class="header">
@@ -1998,6 +2779,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!-- CHARTs --> 
   <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <!--<script src="https://code.highcharts.com/modules/exporting.js"></script>-->
   <!-- Site Sripts -->
   <script src="/js/main.js"></script>
 

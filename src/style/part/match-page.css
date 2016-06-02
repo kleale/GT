@@ -459,3 +459,12 @@ Headline
 .Headline
 */
 
+/*
+Banners
+*/
+
+.bn{
+  img{
+    width: 100%;
+  }
+}

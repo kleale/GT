@@ -15,7 +15,7 @@
 .block .tse-sc .tse-content{
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: 450px;
+  height: 450px;
 }
 
 .htip{

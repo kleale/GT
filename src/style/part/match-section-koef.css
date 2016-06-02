@@ -59,6 +59,8 @@
       float: left;
       margin: 0;
       padding: 0 0 10px 0;
+      text-transform: uppercase;
+      
       @media (max-width: $M){
         text-align: center;
         float: none;
@@ -72,9 +74,9 @@
         color: $link-gray-1;
         cursor: pointer;
         font-size: 16px;
-        margin: 2px;
+        margin: 0 3px;
         position: relative;
-        top: 1px;
+        top: -1px;
         
         &:hover,
         &:active,
@@ -482,7 +484,7 @@
 .graf{
   background: #2D3C48;
   padding: 20px;
-  min-height: 450px;
+  min-height: 480px;
 }
 .srs{
   padding: 8px 0;
@@ -494,7 +496,7 @@
 .cal-graf{
   color: #fff;
   width: auto;
-  margin: -20px -20px 20px -20px;
+  margin: 0px 0px 20px 0px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.54);
   table td:first-child {
     padding-left: 5px!important;
@@ -517,7 +519,7 @@
   text-align: right;
 }
 .bc_filter.bc_filter_hot-graf{
-  margin: -10px -10px 20px -10px;
+  
 }
 /*Graf*/
 
@@ -532,9 +534,9 @@
     font-weight: 300;
     margin: 0 5px;
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     color: #2faee7;
-    padding: 0 10px;
+    padding: 0 5px;
   }
   i{
     cursor: pointer;

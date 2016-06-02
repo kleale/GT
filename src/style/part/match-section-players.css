@@ -1,0 +1,226 @@
+/*
+* Section players compare
+*/
+
+.histb{
+  font-size: 12px;
+  
+  h3{
+    margin: 30px 0 15px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    
+    &.red{
+      color: $red;
+    }
+    &.blue{
+      color: color($blue l(45%));
+    }
+  }
+  table{
+    width: 100%;
+    font-weight: 300;
+    
+    th{
+      color: #b1b5ba;
+      padding: 5px;
+      font-size: 11px;
+      font-weight: 300;
+      width: 70px;
+    }
+    td{
+      padding: 5px;
+      
+      u{
+        display: inline-block;
+        text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 110px;
+      }
+      
+      &.hisc{
+        width:50px;
+        text-align: center;
+      }
+    }
+    .red{
+      color: $red;
+    }
+    .green{
+      color: color($green l(45%)); 
+    }
+    tr:nth-child(odd){
+      background: color($bg-main l(25%));      
+    }
+    tr:nth-child(even){
+      background: color($bg-main l(20%));
+    }
+  }
+}
+
+.pl-c{
+  height: 120px;
+  margin-top: 30px;
+  
+  .pthead{
+    overflow: hidden;
+    
+    .pth{
+      text-align: right;
+      width:30%;
+      float: left;
+
+      h4{
+        margin: 0;
+        font-size: 21px;
+        font-weight: 300;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        
+        a{
+          color: #fff;
+          
+          &:hover,
+          &:active,
+          &:focus {
+            color: $link-light-blue;
+            text-decoration: none;
+          }
+        }
+      }
+      span{
+        color: color($text-gray-2 l(45%));
+        font-size: 12px;
+        text-transform: uppercase;
+        u{
+          border-radius: &br;
+          background: color($body-bg l(35%));
+          text-decoration: none;
+          padding: 2px 5px;
+          color: #BBBBBB;
+          margin: 0 10px;
+          font-size: 10px;
+        }
+      }
+      &.pt2{
+        text-align: left;
+      }
+    }
+    
+    .pt_rate{
+      width: 40%;
+      float: left;
+      text-align: center;
+      
+      .thumb{
+        display: inline-block;
+        margin: 0;
+        border-color: #4C4C4C;
+        
+        &.th1 b{
+          margin-right: 25px;
+          padding: 0;
+        }
+        &.th2 b{
+          margin-left: 25px;
+          padding: 0;
+        }
+        i{
+          color: #79848e;
+          
+          &:hover,
+          &:active,
+          &:focus {
+            color: $link-blue-active;
+            text-decoration: none;
+          }
+        }
+      }
+      
+      em{
+        display: inline-block;
+        background: $bg-main;
+        border: 1px solid #6c6c6c;
+        font-style: normal;
+        width: 35px;
+        line-height: 33px;
+        margin: 0 -30px;
+        height: 35px;
+        border-radius: 40px;
+        font-weight: 300;
+        position: relative;
+        color: #BDBDBD;
+      }
+      
+    }
+  }
+  
+  .ptc{
+    height: 70px;
+    margin-top: 5px;
+    
+    .ptcs{
+      width: 30%;
+      float: left;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 300;
+      margin-left: 10%;
+      
+      table{
+        width: 100%;
+      }
+      th{
+        color: $text-gray-2;
+        font-weight: 300;
+        text-align: right;
+        padding-right: 20px;
+      }
+      td{
+        color: $text-gray-3;
+      }
+      .red{
+        color: $red;
+      }
+      .green{
+        color: color($green l(45%)); 
+      }
+      
+      &.ptcs2{
+        margin: 0 10% 0 0;
+        
+        th{
+          text-align: left;
+          padding: 0 0 0 20px;
+        }
+        td{
+          text-align: right;
+        }
+      }
+    }/*ptcs*/
+    
+    .ptc_bar{
+      width: 20%;
+      float: left;
+      
+      height: 70px;
+      margin: -5px 0;
+    }
+    
+  }/*ptc*/
+}/*pt-c*/
+
+
+.ptc_bar > div{
+  height: 80px;
+}
+
+
+
+
+
+
+

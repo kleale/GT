@@ -58,7 +58,7 @@
     overflow-x: auto;
   }
   .opener{
-    color: $link-light-blue;
+    color: $link-blue;
     position: absolute 2px -50px * *;
     padding: 10px;
     font-size: 28px;
