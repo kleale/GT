@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'gticons';
-    src:    url('../fonts/gticons.eot?uafui1');
-    src:    url('../fonts/gticons.eot?uafui1#iefix') format('embedded-opentype'),
-        url('../fonts/gticons.ttf?uafui1') format('truetype'),
-        url('../fonts/gticons.woff?uafui1') format('woff'),
-        url('../fonts/gticons.svg?uafui1#gticons') format('svg');
+    src:    url('../fonts/gticons.eot?w5h476');
+    src:    url('../fonts/gticons.eot?w5h476#iefix') format('embedded-opentype'),
+        url('../fonts/gticons.ttf?w5h476') format('truetype'),
+        url('../fonts/gticons.woff?w5h476') format('woff'),
+        url('../fonts/gticons.svg?w5h476#gticons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -440,6 +440,9 @@
 }
 .gti-balance-scale:before {
     content: "\f24e";
+}
+.gti-hand-peace-o:before {
+    content: "\f25b";
 }
 .gti-television:before {
     content: "\f26c";

@@ -1,3 +1,106 @@
+
 /**
 * Comments
 */
+
+.bh{
+  .stm_nav_block{
+    
+    a{
+      i{
+        font-size: 24px;
+      }
+      span{
+        font-size: 21px;
+        padding: 0 0 0 10px;
+        font-weight: 300;
+        vertical-align: top;
+      }
+    }
+  }
+}
+.comblock{
+  position: relative;
+  height: 550px;
+  
+  .chat-action{
+    position: absolute * 0 0 0;
+  }
+  
+  .tse-com{
+    position: absolute 0 0 60px 0;
+    
+    /*tse*/
+    /*
+    overflow-x: hidden;
+    overflow-y: auto;
+    */
+    /* /tse*/
+  }
+  
+  .m-com-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li{
+      margin: 15px 0 0 0;
+
+      a{
+        float: left;
+        width:35px;
+
+        img{
+          width: 100%;
+          border-radius: 50px;
+        }
+      }
+      div{
+        margin-left: 50px;
+        font-size: 13px;
+
+        b{
+          color: #fff;
+          font-weight: 400;
+        }
+        span{
+          color: color($text-gray-3 l(60%));
+        }
+        p{
+          color: $text-gray-3;
+          margin-top:5px;
+          line-height: 1.2;
+          font-weight: 400;
+          transition: $tease;
+        }
+      }
+      &:hover,
+      &:active,
+      &:focus{
+
+        p{
+          color: #e8e8e8;
+        }
+      }
+    }
+  }
+}
+
+.c_inf {
+    color: #2faee7;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 11px;
+    opacity: .6;
+    margin-top: 10px;
+  a{
+    text-decoration: none;
+    
+    &:hover,
+    &:active,
+    &:focus{
+      color: $link-light-blue-active;
+      text-decoration: none;
+    }
+  }
+}

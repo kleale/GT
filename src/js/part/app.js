@@ -58,6 +58,12 @@
         }
     });
     
+    // TSE scrollbar
+    
+    $('.tse-sc').TrackpadScrollEmulator({ 
+      wrapContent: false,
+      autoHide: false
+    });
     
   }); //end ready
 

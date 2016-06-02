@@ -31,18 +31,19 @@
   <div class="container">
     //= template/breadcrumbs.html
     
-    <div class="otstup" style="height:100px;"></div>
+    <div class="otstup" style="height:60px;"></div>
     
     <section class="m-head">
        <div class="m-fast" id="m-fast">
-         <a href=""><i class="gti-video-camera"></i></a>
-         <a href=""><i class="gti-dice"></i></a>
-         <a href=""><i class="gti-bullhorn"></i></a>
-         <a href=""><i class="gti-exchange"></i></a>
-         <a href=""><i class="gti-male"></i></a>
-         <a href=""><i class="gti-history"></i></a>
-         <a href=""><i class="gti-bomb"></i></a>
-         <a href=""><i class="gti-comments-o"></i></a>
+         <a href="#player" title="Стрим"><i class="gti-video-camera"></i></a>
+         <a href="#m-koef" title="Ставки"><i class="gti-dice"></i></a>
+         <a href="#m-prognoz" title="Прогнозы"><i class="gti-bullhorn"></i></a>
+         <a href="#m-teams" title="Сравнение команд"><i class="gti-exchange"></i></a>
+         <a href="#m-teams" title="Сравнение игроков"><i class="gti-male"></i></a>
+         <a href="#m-players" title=""><i class="gti-history"></i></a>
+         <a href="#m-picks" title=""><i class="gti-hand-o-up"></i></a>
+         <a href="#m-com" title="Комментарии"><i class="gti-comments-o"></i></a>
+         <a href="#m-news" title="Новости"><i class="gti-newspaper-o"></i></a>
        </div>
       <div class="stage">
         <ul>
@@ -125,7 +126,7 @@
         </div>
         <div class="col-lg-2 col-sm-4">
           <div class="m-act">
-            <a href="#" class="btn btn-sm btn-success">Сделать ставку</a>
+            <a href="#stavka" data-toggle="modal" class="btn btn-sm btn-success">Сделать ставку</a>
             <!-- 
               <i class="gti-vs"></i>
             -->
@@ -151,7 +152,7 @@
         </div>
       </div>
       
-    </section><!-- m-head" -->
+    </section><!-- /m-head" -->
     
     <section class="player">
       <div id="srteamslider" class="toggled_stream branded" rel="29880">
@@ -192,37 +193,88 @@
           </div>
         </div>
       </div>
-    </section><!-- m-player" -->
+    </section><!-- /m-player" -->
     
-    //= template/match-page/section-koef.html
+    <section id="m-koef" class="m-sec m-even">
+      <div class="row">
+        <div class="col-lg-7">
+          //= template/match-page/section-koef.html
+        </div>
+        <div class="col-lg-5">
+          //= template/match-page/section-prognoz.html
+        </div>
+      </div>
+    </section>
     
-    //= template/match-page/section-teams.html
+    <section id="m-teams" class="m-sec m-odd">
+      //= template/match-page/section-teams.html
+    </section>
     
-    //= template/match-page/section-players.html
+    <section id="m-players" class="m-sec m-even">
+      //= template/match-page/section-players.html
+    </section>
     
     <div class="bn">
       <img src="img/ad.jpg" alt="">
     </div>
     
-    <section id="m-picks-com" class="m-sec">
+    <section id="m-picks" class="m-sec m-odd">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-7">
           //= template/match-page/section-picks.html
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5">
           //= template/match-page/section-comments.html
         </div>
       </div>
     </section>
     
-    <section id="m-news" class="m-sec">
+    <section id="m-news" class="m-sec m-even">
       <div class="row">
+        <div class="col-md-7">
           //= template/match-page/section-news.html
+        </div>
+        <div class="col-md-5">
+          //= template/match-page/section-soc.html
+        </div>
       </div>
     </section>
     
+    <div class="bn">
+      <img src="img/ad.jpg" alt="">
+    </div>
+    
     //= template/footer.html
   </div>
+
+  
+<!-- Modal STAVKA -->
+<div class="modal prwms st-wms fade" id="stavka" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span >&times;</span></button>
+        
+        <div class="prwms_ico"><b class="gti-dice"></b></div>
+        <h4>
+          Сделать ставку на матч 
+        </h4>
+      </div>
+      <div class="modal-body">
+          
+        Табличка букмекеров
+        <hr>
+        стата?
+        
+      </div>
+      <div class="modal-footer">
+        <i class="gti-info-circle"></i> Текстик о ставках
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
   
   <!--Import jQuery-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

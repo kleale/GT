@@ -15,6 +15,11 @@
 * Bootstrap Theme
 */
 
+@media (min-width: 1200px){
+  .container {
+      width: 1230px;
+  }
+}
 /*
 * dropdown
 */
@@ -85,13 +90,17 @@
   font-size: 11px;
   line-height: 1;
   text-transform: uppercase;
+  
+  &.btn-default{
+  color: #acacac;
+  }
 } 
 .btn-sm{
   
 }
 .btn-default{
   background: $button-gray;
-  color: $button-gray-text;
+  color: #fff;
   
   &:active,
   &:focus,
@@ -130,7 +139,12 @@ body .open>.dropdown-toggle.btn-default:focus{
   &.btn-primary{
     color: $link-blue;
     &.active{
-      color: $link-light-blue;
+      color: #fff;
+    }
+    &:active,
+    &:focus,
+    &:hover{
+      color: #fff;
     }
   }
   &.btn-success{

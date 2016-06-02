@@ -23,5 +23,10 @@
 @import "part/match-player-stat.css";
 @import "part/match-player-log.css";
 @import "part/match-section-koef.css";
+@import "part/match-section-prognoz.css";
 @import "part/match-section-sravni.css";
 @import "part/match-section-players.css";
+@import "part/match-section-picks.css";
+@import "part/match-section-comments.css";
+@import "part/match-section-news.css";
+@import "part/match-section-soc.css";

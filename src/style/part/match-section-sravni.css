@@ -3,7 +3,7 @@
 */
 
 .m-odd{
-  background: $bg-sub;
+  background: color($bg-sub l(14%));
   background-image: inline(../img/tile.png);
   background-repeat: repeat;
   background-position: center;
@@ -43,6 +43,17 @@
     background-color: rgba(3, 125, 181, 0.13);
     border-radius: 50%;
     
+    &:after{
+      content: '';
+      display: block;
+      position: absolute * * -10px 50%;
+      width: 21px;
+      height: 21px;
+      margin-left: -10px;
+      background: #eee;
+      border-radius: 50px;
+    }
+    
     img{
       width: 100%;
     }
@@ -58,7 +69,7 @@
     u{
       text-transform: uppercase;
       font-size: 12px;
-      color: #6c6c6c;
+      color: #8f8f8f;
       text-decoration: none;
       display: block;
       margin: 10px 0;
@@ -73,6 +84,10 @@
     .sr_pic{
       float: right;
       margin-left: 20px;
+      
+      &:after{
+        background: $blue;
+      }
     }
   }
   
@@ -84,6 +99,10 @@
      &.sr_t2 .sr_pic{
       float: left;
       margin-right: 20px;
+      
+      &:after{
+        background: $red;
+      }
     }
   }
   
@@ -119,8 +138,8 @@
         width:100%;
         
         th{
-          color:$text-gray-2;
-          font-weight: 300;
+          color:$text-gray-3;
+          font-weight: 400;
           padding: 0px 5px;
         }
         td{
@@ -170,8 +189,8 @@
     table{
       width:100%;
       th{
-        color:$text-gray-2;
-        font-weight: 300;
+        color:$text-gray-3;
+        font-weight: 400;
         padding: 0px 5px;
         text-align: right;
       }

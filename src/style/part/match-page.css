@@ -18,7 +18,7 @@
   text-align: center;
   overflow: hidden;
   position: relative;
-  margin: -65px -40px 40px;
+  margin: -65px -40px 25px;
   
   ul{
     list-style: none;
@@ -26,6 +26,7 @@
     padding: 0;
     display: table;
     width: 100%;
+    table-layout: fixed;
     
     li{
       display: table-cell;
@@ -180,7 +181,7 @@ Headline
   font-size: 19px;
   font-weight: 300;
   text-align: center;
-  margin: 4px 0 15px;
+  margin: 4px 0 10px;
   line-height: 1;
   
   @media (max-width: $XM){
@@ -294,7 +295,7 @@ Headline
   font-size: 18px;
   color: $button-gray-text;
   padding: 2px 0;
-  background-color: $bg-main;
+  background-color: #292D2F;
   background-image: inline(../img/tile.png);
   text-align: center;
   width: 40px;
@@ -440,7 +441,11 @@ Headline
 
 .m-act{
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0 0 0;
+  
+  @media (max-width: $XM){
+    margin: 20px 0;
+  }
   
   .gti-vs{
     font-size: 20px;
@@ -456,7 +461,7 @@ Headline
 }
 
 /*
-.Headline
+/Headline
 */
 
 /*
@@ -468,3 +473,52 @@ Banners
     width: 100%;
   }
 }
+
+
+/*Голосовалка*/
+.thumb{
+  margin: 0 5px 0 0;
+  display: inline-block;
+  border: 1px solid color($button-blue b(30%));
+  padding: 5px 10px;
+  border-radius: 20px;
+  b{
+    font-weight: 300;
+    margin: 0 5px;
+    display: inline-block;
+    font-size: 16px;
+    color: #2faee7;
+    padding: 0 5px;
+  }
+  i{
+    cursor: pointer;
+    font-size: 18px;
+    position: relative 2px * * *;
+    color: $link-blue;
+    
+    &:hover,
+    &:active,
+    &:focus,
+    &.active{
+      color: $link-white-active;
+    }
+  }
+}
+/* /Голосовалка*/
+
+
+/*Окно ставок*/
+
+.st-wms{
+  .prwms_ico{
+    b{
+      font-size: 30px;
+    }
+    &:before,
+    &:after{
+      top: 17%!important;
+    }
+  }
+}
+
+/* /Окно ставок*/

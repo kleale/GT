@@ -29,7 +29,8 @@
       width: 70px;
     }
     td{
-      padding: 5px;
+      padding: 8px 5px;
+      color: #8fa0b1;
       
       u{
         display: inline-block;
@@ -38,12 +39,20 @@
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 110px;
+        line-height: 1;
+        vertical-align: middle;
+        
+        &.lg{
+          color: #fff;
+        }
       }
       
       &.hisc{
         width:50px;
         text-align: center;
       }
+      
+      
     }
     .red{
       color: $red;
@@ -52,7 +61,7 @@
       color: color($green l(45%)); 
     }
     tr:nth-child(odd){
-      background: color($bg-main l(25%));      
+      background: color($bg-main l(22%));      
     }
     tr:nth-child(even){
       background: color($bg-main l(20%));
@@ -73,7 +82,7 @@
       float: left;
 
       h4{
-        margin: 0;
+        margin: 0 0 2px 0;
         font-size: 21px;
         font-weight: 300;
         overflow: hidden;
@@ -92,7 +101,7 @@
         }
       }
       span{
-        color: color($text-gray-2 l(45%));
+        color: $text-gray-3;
         font-size: 12px;
         text-transform: uppercase;
         u{
@@ -167,20 +176,21 @@
       float: left;
       font-size: 10px;
       text-transform: uppercase;
-      font-weight: 300;
+      font-weight: 500;
       margin-left: 10%;
       
       table{
         width: 100%;
       }
       th{
-        color: $text-gray-2;
-        font-weight: 300;
+        color: $text-gray-3;
+        font-weight: 500;
         text-align: right;
         padding-right: 20px;
       }
       td{
         color: $text-gray-3;
+        width: 47px;
       }
       .red{
         color: $red;
@@ -198,6 +208,7 @@
         }
         td{
           text-align: right;
+          width: 47px;
         }
       }
     }/*ptcs*/

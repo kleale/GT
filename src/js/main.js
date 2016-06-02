@@ -2,7 +2,7 @@
  * Third party
  */
 //= ../assets/js/chosen.jquery.js
-
+//= ../assets/js/jquery.trackpad-scroll-emulator.min.js
 
 
 
