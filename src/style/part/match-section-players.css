@@ -129,6 +129,18 @@
         margin: 0;
         border-color: #4C4C4C;
         
+        &:hover,
+        &:active,
+        &:focus{
+          cursor: pointer;
+          background: color($button-blue l(21%));
+          border-color: color($button-blue l(30%));
+          
+          i{
+            color: color($button-blue l(50%));
+          }
+        }
+        
         &.th1 b{
           margin-right: 25px;
           padding: 0;
@@ -139,13 +151,6 @@
         }
         i{
           color: #79848e;
-          
-          &:hover,
-          &:active,
-          &:focus {
-            color: $link-blue-active;
-            text-decoration: none;
-          }
         }
       }
       

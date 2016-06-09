@@ -8,9 +8,12 @@
   padding: 50px 40px 15px;
   border-top: 1px solid color($button-blue b(50%));
   
-  @media (max-width: $XM){
+  @media (max-width: $L){
     text-align: center;
     padding-bottom: 15px;
+  }
+  @media (max-width: $M){
+    overflow: hidden;
   }
 }
 
@@ -19,6 +22,36 @@
   overflow: hidden;
   position: relative;
   margin: -65px -40px 25px;
+  position: relative;
+  cursor: pointer;
+  
+  @media (max-width: $M){
+    margin: -30px -20px 20px -20px;
+    overflow: inherit;
+  }
+  
+  em{
+    display:none;
+    font-style: normal;
+    padding: 10px;
+    font-size: 13px;
+    color: #8f8f8f;
+    background-color: #444950;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    
+    &:hover,
+    &:active,
+    &:focus{
+      background-color: $button-blue;
+      color: $button-blue-text;
+      text-decoration: none;
+    }
+    
+    @media (max-width: $M){
+      display:block;
+    }
+  }
   
   ul{
     list-style: none;
@@ -28,22 +61,16 @@
     width: 100%;
     table-layout: fixed;
     
+    @media (max-width: $M){
+      display:none;
+    }
+    
     li{
       display: table-cell;
       vertical-align: top;
       width: auto;
       padding: 0 5px;
       position: relative;
-      
-      @media (max-width: $M){
-        display:none;
-      }
-      
-      &.active{
-        @media (max-width: $M){
-          display:block;
-        }
-      }
       
       a{
         display: inline-block;
@@ -65,6 +92,7 @@
           margin-bottom: 5px;
           position: relative;
           z-index: 1;
+          text-align: center;
         }
         span{
           display: block;
@@ -118,6 +146,68 @@
     }
   }
   
+  &.stage-open ul{
+    display: block!important;
+    background: #305c7b;
+    box-shadow: 7px 7px 10px rgba(0,0,0,.4);
+    padding: 0;
+    margin: -1px 0;
+    border: 0;
+    border-radius: 0 0 2px 2px;
+    width: 100%;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 160px;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    
+    li{
+      display: block;
+      padding: 0;
+      
+      &.s-pass:before,
+      &.active:before{
+        display: none;
+      }
+      
+      &.s-pass span,
+      &.active span{
+        color:#fff;
+      }
+      
+      &:last-item a{
+        border-bottom: 0;
+      }
+      
+      a{
+        color: #b7b7b7;
+        padding: 10px 15px;
+        display: block;
+        clear: both;
+        font-weight: 400;
+        line-height: 1.42857143;
+        white-space: nowrap;
+        border-bottom: 1px solid #3E3E3E;
+        
+        &:hover,
+        &:active,
+        &:focus{
+          background-color: color($button-blue l(30%));
+          color: #fff;
+        }
+        
+        span{
+          display: inline-block;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
 }/** STAGE **/
 
 /*
@@ -280,44 +370,78 @@ Headline
   font-size: 11px;
   float: right;
   
-  @media (max-width: $XM){
+  @media (max-width: $L){
     text-align: center;
     float: none;
     max-width: 100%;
     margin-bottom: 20px;
   }
-  a{
-    
-  }
 }
-.m-fast{
+
+.m-f{
   position: absolute -1px 0 * 100%;
-  font-size: 18px;
-  color: $button-gray-text;
-  padding: 2px 0;
-  background-color: #292D2F;
-  background-image: inline(../img/tile.png);
-  text-align: center;
-  width: 40px;
   
-  a{
+  .m-fast{
+    font-size: 18px;
     color: $button-gray-text;
-    padding: 0px 2px;
-    display: block;
+    background-color: #292D2F;
+    background-image: inline(../img/tile.png);
+    text-align: center;
     width: 40px;
-    height: 37px;
-    line-height: 37px;
-    
-    &:hover,
-    &:active,
-    &:focus{
-      color: $link-gray-active;
-      text-decoration: none;
+    z-index: 3;
+
+    @media (max-width: $M){
+      position: fixed 0 0 auto 50px;
+      display: table;
+      width:calc(100% - 50px);
+    }
+
+    ul{
+      @media (max-width: $M){
+        display: table;
+        width: 100%;
+      }
+
+      li{
+
+        @media (max-width: $M){
+          display: table-cell;
+        }
+
+        a{
+          color: $button-gray-text;
+          padding: 5px 2px;
+          display: block;
+          height: 40px;
+          line-height: 27px;
+
+          @media (max-width: $M){
+            height: 50px;
+            line-height: 37px;
+          }
+
+          &:hover,
+          &:active,
+          &:focus{
+            color: $link-gray-active;
+            text-decoration: none;
+            background: $button-blue;
+          }
+
+          i{
+            vertical-align: middle;
+          }
+        }
+
+        &.active a{
+          color: color($button-blue l(50%));
+          background: color($button-blue l(20%));
+        }
+      }
     }
   }
-
 }
-
+  
 .m-team{
   @media (max-width: $L){
     text-align: center;
@@ -522,3 +646,110 @@ Banners
 }
 
 /* /Окно ставок*/
+
+.m-sec{
+  @media (max-width: $XM){
+    padding-top: 30px!important;
+  }
+}
+
+#head-toggle{
+    position: relative;
+    font-family: 'gticons' !important;
+    font-size: 14px;
+    line-height: 28px;
+    font-style: normal;
+    display: block;
+    margin: 10px auto -25px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 6;
+    text-align: center;
+    background: #444950;
+    border-radius: 40px;
+    color: color($button-blue l(50%));
+  
+  &:before {
+    content: "\f077";
+    z-index: 20;
+    position: relative;
+    top: -1px;
+  }
+  
+  &:hover,
+  &:active,
+  &:focus{
+    color: color($button-blue l(50%));
+    background-color: color($button-blue l(30%));
+  }
+}
+
+.m-head_compact{
+  padding: 10px 40px;
+  
+  
+  .mr{
+    display: none;
+  }
+  .ms{
+    display: none;
+  }
+  .stage,
+  .m-r-ozh,
+  .m-title,
+  .m-icons,
+  .m-tags,
+  .m-links,
+  .btn-xs{
+    display: none;
+  }
+  .stage{
+    margin-bottom: 15px;
+  }
+  .m-team {
+    .mtn {
+      
+    }
+    .mtp{
+      height: 50px;
+      width: 50px;
+      line-height: 35px;
+      padding: 5px;
+      margin-top: -12px;
+      margin-bottom: 10px;
+    }
+  }
+  .m-time {
+    font-size: 11px;
+    font-weight: normal;
+    margin: 0px 0 5px 0;
+  }
+  .m-team.mt1 .mpl{
+    display: none;
+  }
+  .m-team.mt2 .mpl{
+    display: none;
+  }
+  .m-act {
+    margin: 5px 0 10px 0;
+  }
+  
+  #head-toggle{
+    margin: 7px auto -30px;
+    
+    
+    &:before{
+      content: "\f078";
+    }
+  }
+} /*.m-head_compact*/
+
+
+
+
+
+
+
+
+

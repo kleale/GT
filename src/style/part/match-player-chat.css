@@ -850,6 +850,11 @@
     width: 100%;
     overflow: hidden;
   
+  .tse-scroll-content{
+    min-width: 100%;
+    min-height: 400px;
+  }
+  
   .chatter {
     bottom: 60px;
     height: auto;
@@ -857,7 +862,6 @@
     position: absolute;
     right: 0;
     top: 0;
-    overflow-y: auto;
   }
 }
 

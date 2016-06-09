@@ -10,6 +10,7 @@
     $("#menu-toggle").click(function() {
       $("body").toggleClass("menu-open");
       $(this).toggleClass("active");
+      $(".bar").toggleClass("hiddenbar");
 	});
     
     //$('#pop').popover();
@@ -42,7 +43,7 @@
     
     //piks popover
     
-        $('.hpop').popover({
+    $('.hpop').popover({
         'html': true,
         'trigger': 'hover',
         'placement': 'auto bottom',
@@ -61,9 +62,21 @@
     // TSE scrollbar
     
     $('.tse-sc').TrackpadScrollEmulator({ 
-      wrapContent: false,
-      autoHide: false
+      wrapContent: false
+      //autoHide: false
     });
+    
+    $("#stream_menu a").click(function() {
+      $('.tse-sc').TrackpadScrollEmulator('recalculate');
+    });
+    
+    // bar toggle on mobile
+    $(".stage em").click(function() {
+      $(".stage").toggleClass("stage-open");
+	});
+    
+    //tip
+    $('.tip').tooltip();
     
   }); //end ready
 

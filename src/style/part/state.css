@@ -3,9 +3,8 @@
 */
 
 .menu-open {
-  
   .bar{
-    margin-left: 0
+    margin-left: 0;
   }
   .menu-toggle{
     color: $link-white-active;

@@ -5,6 +5,7 @@ body{
   color:$text-main;
   font-family: 'Roboto', Arial, sans-serif;
   background: $body-bg;
+  position: relative;
 }
 .csgo{
   background-image: url(../img/bg.jpg);

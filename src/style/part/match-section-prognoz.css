@@ -239,7 +239,8 @@
       &.p_pik:after,
       &.p_ban:after{
         content:'\f00c';
-        position: absolute * * -5px 10px;
+        position: absolute * * -5px 50%;
+        margin-left: -7px;
         font-family: 'gticons';
         font-size: 10px;
         color:#00ff00;
@@ -281,9 +282,10 @@
     th{
       background: color($bg-main l(25%));
       text-transform: uppercase;
-      font-size: 9px;
+      font-size: 14px;
       font-weight: 300;
-      padding: 10px 2px;
+      padding: 15px 2px;
+      text-align: center;
     }
     td{
       padding: 5px 2px;

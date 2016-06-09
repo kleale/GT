@@ -78,8 +78,18 @@
   
   &.sr_t1{
     text-align: right;
+    
+    @media (max-width: $XM){
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
     > div{
       margin-right: 100px;
+      
+      @media (max-width: $XM){
+        margin-right: 0px;
+      }
     }
     .sr_pic{
       float: right;
@@ -88,17 +98,39 @@
       &:after{
         background: $blue;
       }
+      
+      @media (max-width: $XM){
+        float: none;
+        margin: 0 0 20px 0;
+        display: inline-block;
+      }
+      
     }
   }
   
   &.sr_t2{
     text-align: left;
+    
+    @media (max-width: $XM){
+      text-align: center;
+    }
+    
     > div{
       margin-left: 100px;
+      
+      @media (max-width: $XM){
+        margin:0;
+      }
     }
-     &.sr_t2 .sr_pic{
+    &.sr_t2 .sr_pic{
       float: left;
       margin-right: 20px;
+      
+      @media (max-width: $XM){
+        float: none;
+        margin: 0 0 20px 0;
+        display: inline-block;
+      }
       
       &:after{
         background: $red;
@@ -109,12 +141,29 @@
   .thumb{
     margin: 0;
     border-color: #203C50;
+    
+    &:hover,
+    &:active,
+    &:focus{
+      cursor: pointer;
+      background: color($button-blue l(21%));
+      border-color: color($button-blue l(50%));
+      i{
+        color: color($button-blue l(50%));
+      }
+    }
   }
   
 }
 
 #spider_chart{
   height: 180px;
+  
+  @media (max-width: $XM){
+    background: color($bg-main l(21%));
+    padding:20px 0;
+    height: 220px;
+  }
 }
 .spider{
   margin: 0 0 30px 0;

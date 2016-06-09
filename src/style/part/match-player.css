@@ -101,6 +101,18 @@
   &.active{
     display: block!important;
   }
+  
+  .tse-scroll-content{
+    min-width: 100%;
+    min-height: 400px;
+  }
+  
+  .tse_slist{
+    height: 445px;
+    position: absolute 40px 0 0 0;
+    overflow-x: hidden;
+  }
+  
 }
 
 /*
@@ -185,6 +197,11 @@
   z-index: 2;
   padding: 5px 5px 1px 5px;
   background: rgba(0, 0, 0, 0.48);
+  display: table;
+  
+  @media (max-width: $XM){
+    width:100%;
+  }
   
   @media (max-width: $XM){
     position: relative 0 0 0 0;
@@ -204,9 +221,23 @@
     line-height: 1.5;
   }
   > div{
-    display: inline-block;
+    display: table-cell;
     position: relative;
+    vertical-align: top;
+    
+    button,
+    input{
+      display: block;
+      width:97%;
+    }
+    
+    > div{
+      @media (max-width: $XM){
+        width:100%;
+      }
+    }
   }
+  
   input{
     width:140px;
     padding-left: 30px;
@@ -242,8 +273,6 @@
 .slist{
   list-style: none;
   margin: 0;
-  position: absolute 40px 0 0 0;
-  overflow-x: auto;
   padding: 0;
   
   li{

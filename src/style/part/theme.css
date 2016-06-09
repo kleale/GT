@@ -15,9 +15,13 @@
 * Bootstrap Theme
 */
 
-@media (min-width: 1200px){
-  .container {
-      width: 1230px;
+.container {
+  @media (max-width: $M){
+    padding-right: 0;
+    padding-left: 0;
+  }
+  @media (min-width: 1200px){
+    width: 1230px;
   }
 }
 /*
@@ -367,36 +371,37 @@ Tabs mobile
   }
 }
 @media screen and (max-width: $M) {
-    .mtb {
-      display: block;
-      border-bottom-right-radius: 0;
-      background: #335D80;
-      border-bottom-left-radius: 0;
-      border-color:transparent;
-      &.open{
-        background: color($button-blue l(35%));
-        color: #fff;
-      }
+  .mtb {
+    display: block;
+    border-bottom-right-radius: 0;
+    background: #335D80;
+    border-bottom-left-radius: 0;
+    border-color:transparent;
+    &.open{
+      background: color($button-blue l(35%));
+      color: #fff;
     }
-    body .block .stm_nav_block {
-      display: none;
-      text-align: center;
-      background: #335D80;
-      padding: 0;
-      li{
-        float:none;
+  }
+  body .block .stm_nav_block {
+    display: none;
+    text-align: center;
+    background: #335D80;
+    padding: 0;
+    border-top:1px solid #313131;
+    li{
+      float:none;
+      text-align: left;
+      border-color: color($button-blue l(60%));
+      margin-bottom: 0;
+      a{
+        float: none;
+        color: $link-light-blue;
+        display: block;
         text-align: left;
-        border-color: color($button-blue l(60%));
-        margin-bottom: 0;
-        a{
-          float: none;
-          color: $link-light-blue;
-          display: block;
-          text-align: left;
-          padding: 10px 15px;
-        }
+        padding: 10px 15px;
       }
     }
+  }
 }
 
 .pbvert {

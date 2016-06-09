@@ -26,7 +26,7 @@
   <![endif]-->
 </head>
 <body class="csgo">
-  <div class="bar">
+  <div class="bar hiddenbar">
      <span id="menu-toggle" class="opener"><i class="gti-bars"></i></span>
     <div class="barc">
       <a href="#!" class="gt-logo"><img src="img/gt-logo.png" alt="Game-tournaments.com"></a>
@@ -50,16 +50,16 @@
           <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-755.png" alt="HearthStone"></a></li>
         </ul>
         <ul class="bar-nav">
-          <li class="active"><a href="#!"><i class="gti-vs"></i> Матчи</a></li>
-          <li><a href="#!"><i class="gti-trophy"></i>Турниры</a></li>
-          <li><a href="#!"><i class="gti-newspaper-o"></i>Новости</a></li>
-          <li><a href="#!"><i class="gti-users"></i>Команды</a></li>
-          <li><a href="#!"><i class="gti-user"></i>Игроки</a></li>
-          <li><a href="#!"><i class="gti-bullhorn"></i>Ставки</a></li>
-          <li><a href="#!"><i class="gti-bell"></i>Прогнозы</a></li>
-          <li><a href="#!"><i class="gti-star"></i>Рейтинг</a></li>
-          <li><a href="#!" ><i class="gti-play-circle-o"></i>Медиа</a></li>
-          <li><a href="#!"><i class="gti-comments"></i>Форум</a></li>
+          <li class="active"><a href="#!"><i class="gti-vs"></i> <span>Матчи</span></a></li>
+          <li><a href="#!"><i class="gti-trophy"></i><span>Турниры</span></a></li>
+          <li><a href="#!"><i class="gti-newspaper-o"></i><span>Новости</span></a></li>
+          <li><a href="#!"><i class="gti-users"></i><span>Команды</span></a></li>
+          <li><a href="#!"><i class="gti-user"></i><span>Игроки</span></a></li>
+          <li><a href="#!"><i class="gti-bullhorn"></i><span>Ставки</span></a></li>
+          <li><a href="#!"><i class="gti-bell"></i><span>Прогнозы</span></a></li>
+          <li><a href="#!"><i class="gti-star"></i><span>Рейтинг</span></a></li>
+          <li><a href="#!" ><i class="gti-play-circle-o"></i><span>Медиа</span></a></li>
+          <li><a href="#!"><i class="gti-comments"></i><span>Форум</span></a></li>
         </ul>
         <div class="dropers">
           <div class="s-lang">
@@ -114,18 +114,23 @@
     <div class="otstup" style="height:60px;"></div>
     
     <section class="m-head">
-       <div class="m-fast" id="m-fast">
-         <a href="#player" title="Стрим"><i class="gti-video-camera"></i></a>
-         <a href="#m-koef" title="Ставки"><i class="gti-dice"></i></a>
-         <a href="#m-prognoz" title="Прогнозы"><i class="gti-bullhorn"></i></a>
-         <a href="#m-teams" title="Сравнение команд"><i class="gti-exchange"></i></a>
-         <a href="#m-teams" title="Сравнение игроков"><i class="gti-male"></i></a>
-         <a href="#m-players" title=""><i class="gti-history"></i></a>
-         <a href="#m-picks" title=""><i class="gti-hand-o-up"></i></a>
-         <a href="#m-com" title="Комментарии"><i class="gti-comments-o"></i></a>
-         <a href="#m-news" title="Новости"><i class="gti-newspaper-o"></i></a>
-       </div>
+      <div class="m-f">
+        <div class="m-fast" id="m-fast">
+          <ul class="nav">
+             <li><a href="#player" title="Стрим"><i class="gti-video-camera"></i></a></li>
+             <li><a href="#m-koef" title="Ставки"><i class="gti-dice"></i></a></li>
+             <li><a href="#m-prognoz" title="Прогнозы"><i class="gti-bullhorn"></i></a></li>
+             <li><a href="#m-teams" title="Сравнение команд"><i class="gti-exchange"></i></a></li>
+             <li><a href="#m-players" title="Сравнение игроков"><i class="gti-male"></i></a></li>
+             <li><a href="#m-history" title="История встреч"><i class="gti-history"></i></a></li>
+             <li><a href="#m-picks" title="Пики и баны"><i class="gti-hand-o-up"></i></a></li>
+             <li><a href="#m-com" title="Комментарии"><i class="gti-comments-o"></i></a>
+             <li><a href="#m-news" title="Новости"><i class="gti-newspaper-o"></i></a></li>
+          </ul>
+        </div>
+      </div>
       <div class="stage">
+        <em><b>3</b>China <span class="caret"></span></em>
         <ul>
           <li class="s-pass"><a href=""><b>1</b><span>Квалификация</span></a></li>
           <li class="s-pass"><a href=""><b>2</b><span>Групповой раунд</span></a></li>
@@ -141,28 +146,30 @@
         </ul>
       </div>
       <div class="row">
-        <div class="col-md-3">
-          <span id="rates" class="m-rate">
-            <span class="gti-star" rel="10" onclick="rate(10)"></span>
-            <span class="gti-star-o" rel="9" onclick="rate(9)"></span>
-            <span class="gti-star-o" rel="8" onclick="rate(8)"></span>
-            <span class="gti-star-o" rel="7" onclick="rate(7)"></span>
-            <span class="gti-star-o" rel="6" onclick="rate(6)"></span>
-            <span class="gti-star-o" rel="5" onclick="rate(5)"></span>
-            <span class="gti-star-half-o starred-half" rel="4" onclick="rate(4)"></span>
-            <span class="gti-star starred" rel="3" onclick="rate(3)"></span>
-            <span class="gti-star starred" rel="2" onclick="rate(2)"></span>
-            <span class="gti-star starred" rel="1" onclick="rate(1)"></span>
-          </span>
-          <span class="rgg" id="r_my" itemtype="http://schema.org/AggregateRating" itemscope="" itemprop="aggregateRating">
-            <span itemprop="ratingValue">7.56</span>
-            <meta content="184" itemprop="reviewCount">
-            <meta content="5" itemprop="bestRating">
-            <meta content="184" itemprop="ratingCount">
-          </span>
-          <div class="m-r-ozh">Рейтинг ожидания <b>4.121</b></div>
+        <div class="col-lg-3">
+          <div class="mr">
+            <span id="rates" class="m-rate">
+              <span class="gti-star" rel="10" onclick="rate(10)"></span>
+              <span class="gti-star-o" rel="9" onclick="rate(9)"></span>
+              <span class="gti-star-o" rel="8" onclick="rate(8)"></span>
+              <span class="gti-star-o" rel="7" onclick="rate(7)"></span>
+              <span class="gti-star-o" rel="6" onclick="rate(6)"></span>
+              <span class="gti-star-o" rel="5" onclick="rate(5)"></span>
+              <span class="gti-star-half-o starred-half" rel="4" onclick="rate(4)"></span>
+              <span class="gti-star starred" rel="3" onclick="rate(3)"></span>
+              <span class="gti-star starred" rel="2" onclick="rate(2)"></span>
+              <span class="gti-star starred" rel="1" onclick="rate(1)"></span>
+            </span>
+            <span class="rgg" id="r_my" itemtype="http://schema.org/AggregateRating" itemscope="" itemprop="aggregateRating">
+              <span itemprop="ratingValue">7.56</span>
+              <meta content="184" itemprop="reviewCount">
+              <meta content="5" itemprop="bestRating">
+              <meta content="184" itemprop="ratingCount">
+            </span>
+            <div class="m-r-ozh">Рейтинг ожидания <b>4.121</b></div>
+          </div>
         </div>
-        <div class="col-md-6 mtt">
+        <div class="col-lg-6 mtt">
           <h1 class="m-title"><span>Матч London Conspiracy Dota2 vs SuperCloud7</span></h1>
           <div class="m-time">29 ЯНВ 2016 15:30 МСК</div>
           <div class="m-icons">
@@ -174,19 +181,21 @@
             <span class="m-i-6"></span>-->
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="m-shr">
-            <span class="m-v"><i class="gti-eye"></i>2123</span>
-            <a href="" class="shr"><i class="gti-vk"></i>993</a>
-            <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-            <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-            <a href="" class="shr"><i class="gti-google-plus"></i>13</a>
-          </div>
-          <div class="m-tags">
-            <a href="">#NavivsAlliance</a>
-            <a href="">#NavivsAlliance</a>
-            <a href="">#NavivsAlliance</a>
-            <a href="">#NavivsAlliance</a>
+        <div class="col-lg-3">
+          <div class="ms">
+            <div class="m-shr">
+              <span class="m-v"><i class="gti-eye"></i>2123</span>
+              <a href="" class="shr"><i class="gti-vk"></i>993</a>
+              <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+              <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+              <a href="" class="shr"><i class="gti-google-plus"></i>13</a>
+            </div>
+            <div class="m-tags">
+              <a href="">#NavivsAlliance</a>
+              <a href="">#NavivsAlliance</a>
+              <a href="">#NavivsAlliance</a>
+              <a href="">#NavivsAlliance</a>
+            </div>
           </div>
         </div>
       </div>
@@ -215,6 +224,7 @@
             </div>
             <!-- или попап по клику на кнопку: -->
             <a href="#" class="btn btn-xs btn-default" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Popover title" data-content="О площадке + дополнительные сведения о матче">Подробнее</a>
+            <em id="head-toggle" class="tip" title="Свернуть\развернуть шапку"></em>
           </div>
         </div>
         <div class="col-lg-5 col-sm-4">
@@ -234,7 +244,7 @@
       
     </section><!-- /m-head" -->
     
-    <section class="player">
+    <section class="player" id="player">
       <div id="srteamslider" class="toggled_stream branded" rel="29880">
         <div class="sview clearfix" id="mainstream">
             <div class="subs">
@@ -259,7 +269,9 @@
                 <i class="gti-envelope-o"></i>
                 <input class="form-control input-sm" type="text" placeholder="Email адрес">
               </div>
-              <a href="" class="btn-input btn btn-sm btn-primary">OK</a>
+              <div>
+                <a href="" class="btn-input btn btn-sm btn-primary">OK</a>
+              </div>
             </div>
             <div class="iframer">
               <iframe rel="stream" site="twitch" title="starladder1" allowfullscreen="" frameborder="0" width="100%" height="100%" src="http://player.twitch.tv/?autoplay=false&amp;channel=starladder1"></iframe>
@@ -316,59 +328,65 @@
                     <em class="active"><i class="gti-video-camera"></i></em>
                     <em><i class="gti-youtube-play"></i></em>
                   </div>
-                  <ul id="index_stream" class="slist">
-                    <li class="active">
-                      <span>
-                        <img src="https://i.ytimg.com/vi/D5JTmOpJ8_8/mqdefault.jpg" alt="Stream">
-                        <time>Скоро</time>
-                      </span>
-                      <div>
-                        <strong>Prime Time Legaue 2016 Season Prime Time Legaue 2016 Season</strong>
-                        <u>Dota2 Esports</u>
-                        5 дней назад &bull; 345 зрителей
+                  <div class="tse-sc tse_slist">
+                    <div class="tse-scroll-content">
+                      <div class="tse-content">
+                        <ul id="index_stream" class="slist">
+                        <li class="active">
+                          <span>
+                            <img src="https://i.ytimg.com/vi/D5JTmOpJ8_8/mqdefault.jpg" alt="Stream">
+                            <time>Скоро</time>
+                          </span>
+                          <div>
+                            <strong>Prime Time Legaue 2016 Season Prime Time Legaue 2016 Season</strong>
+                            <u>Dota2 Esports</u>
+                            5 дней назад &bull; 345 зрителей
+                          </div>
+                          <em></em>
+                        </li>
+                        <li>
+                          <span>
+                            <img src="https://i.ytimg.com/vi/D5JTmOpJ8_8/mqdefault.jpg" alt="Stream">
+                            <time>5:12:34</time>
+                          </span>
+                          <div>
+                            <strong>Prime Time Legaue 2016 Season Prime Time Legaue 2016 Season</strong>
+                            <u>Dota2 Esports</u>
+                            5 дней назад &bull; 345 зрителей
+                          </div>
+                          <em></em>
+                        </li>
+                        <li class="devide">
+                          <figure><i class="gti-youtube-play"></i>  записи</figure>
+                        </li>
+                        <li class="vod">
+                          <span>
+                            <img src="https://i.ytimg.com/vi/D5JTmOpJ8_8/mqdefault.jpg" alt="Stream">
+                            <time>5:12:34</time>
+                          </span>
+                          <div>
+                            <strong>Prime Time Legaue 2016 Season Prime Time Legaue 2016 Season</strong>
+                            <u>Dota2 Esports</u>
+                            5 дней назад &bull; 345 зрителей
+                          </div>
+                          <em></em>
+                        </li>
+                        <li class="vod">
+                          <span>
+                            <img src="https://i.ytimg.com/vi/D5JTmOpJ8_8/mqdefault.jpg" alt="Stream">
+                            <time>5:12:34</time>
+                          </span>
+                          <div>
+                            <strong>Prime Time Legaue 2016 Season Prime Time Legaue 2016 Season</strong>
+                            <u>Dota2 Esports</u>
+                            5 дней назад &bull; 345 зрителей
+                          </div>
+                          <em></em>
+                        </li>
+                      </ul>
                       </div>
-                      <em></em>
-                    </li>
-                    <li>
-                      <span>
-                        <img src="https://i.ytimg.com/vi/D5JTmOpJ8_8/mqdefault.jpg" alt="Stream">
-                        <time>5:12:34</time>
-                      </span>
-                      <div>
-                        <strong>Prime Time Legaue 2016 Season Prime Time Legaue 2016 Season</strong>
-                        <u>Dota2 Esports</u>
-                        5 дней назад &bull; 345 зрителей
-                      </div>
-                      <em></em>
-                    </li>
-                    <li class="devide">
-                      <figure><i class="gti-youtube-play"></i>  записи</figure>
-                    </li>
-                    <li class="vod">
-                      <span>
-                        <img src="https://i.ytimg.com/vi/D5JTmOpJ8_8/mqdefault.jpg" alt="Stream">
-                        <time>5:12:34</time>
-                      </span>
-                      <div>
-                        <strong>Prime Time Legaue 2016 Season Prime Time Legaue 2016 Season</strong>
-                        <u>Dota2 Esports</u>
-                        5 дней назад &bull; 345 зрителей
-                      </div>
-                      <em></em>
-                    </li>
-                    <li class="vod">
-                      <span>
-                        <img src="https://i.ytimg.com/vi/D5JTmOpJ8_8/mqdefault.jpg" alt="Stream">
-                        <time>5:12:34</time>
-                      </span>
-                      <div>
-                        <strong>Prime Time Legaue 2016 Season Prime Time Legaue 2016 Season</strong>
-                        <u>Dota2 Esports</u>
-                        5 дней назад &bull; 345 зрителей
-                      </div>
-                      <em></em>
-                    </li>
-                  </ul>
+                    </div>
+                  </div>
                 </div>
                 <div id="player-stat" rel="stat" class="stmblock fade" style="display:none;">
                   <div class="stf">
@@ -587,6 +605,7 @@
                     
                     <div class="chat-wrap">
                       <div class="tse-sc chatter" id="chatter">
+                        <div class="tse-scroll-content">
                           <div class="tse-content">
                             <div class="tse-list">
                               <div class="msg-admin"><i class="gti-info-circle"></i> Привет! Добро пожаловать в комнату.</div>
@@ -610,6 +629,7 @@
                               <div><time>5:54</time><b>ramennudderz</b><em>:</em><span>Ты будешь стримить</span></div>
                             </div>
                           </div>
+                        </div>
                       </div>
                       <div class="chat-action">
                         <div class="chat-text">
@@ -2106,12 +2126,12 @@
                       <table>
                         <tr>
                           <th></th>
-                          <th></th>
-                          <th>Коэфф</th>
-                          <th>Вероятность букмекеров</th>
-                          <th>Вероятность "экспертов"</th>
-                          <th>Относительная разница вероятностей</th>
-                          <th>Ставки (эксперты)</th>
+                          <th width="70"></th>
+                          <th><span title="Коэфф" class="tip">К</span></th>
+                          <th><span title="Вероятность букмекеров" class="tip">ВБ</span></th>
+                          <th><span title="Вероятность экспертов" class="tip">ВЭ</span></th>
+                          <th><span title="Относительная разница вероятностей" class="tip">ОРВ</span></th>
+                          <th><span title="Ставки (эксперты)" class="tip">СЭ</span></th> 
                         </tr>
                         <tr>
                           <td><b></b></td>
@@ -2210,7 +2230,7 @@
     <section id="m-teams" class="m-sec m-odd">
       <!-- Teams compare -->
       
-        <div class="block">
+        <div class="block" id="m-teams">
           <div class="bh clearfix">
             <h3>
               <i class="ih gti-exchange"></i>
@@ -2259,7 +2279,7 @@
                     <div>
                       <h3>London</h3>
                       <u>Лучше в 14 показателях</u>
-                      <span class="thumb"><i class="gti-thumbs-o-up"></i><b>123</b><!--<i class="gti-thumbs-o-down"></i>--></span>
+                      <span class="thumb" onclick=""><i class="gti-thumbs-o-up"></i><b>123</b><!--<i class="gti-thumbs-o-down"></i>--></span>
                     </div>
                   </div>
                 </div>
@@ -2275,7 +2295,7 @@
                     <div>
                       <h3>Secret</h3>
                       <u>Лучше в 14 показателях</u>
-                      <span class="thumb">
+                      <span class="thumb" onclick="">
                       <b>123</b><!--<i class="gti-thumbs-o-down"></i>-->
                       <i class="gti-thumbs-up active"></i>
                       </span>
@@ -2398,7 +2418,7 @@
     <section id="m-players" class="m-sec m-even">
       <!-- Players compare -->
        
-        <div class="row">
+        <div class="row" id="m-players">
           <div class="col-md-7">
             <div class="block">
               <div class="bh clearfix">
@@ -2807,7 +2827,7 @@
           </div><!-- col-sm-7 -->
           
           <div class="col-md-5">
-            <div class="block">
+            <div class="block" id="m-history">
               <div class="bh clearfix">
                 <h3>
                   <i class="ih gti-history"></i>
@@ -3103,7 +3123,7 @@
         </div>
         <div class="col-md-5">
           <!-- Comments -->
-          <div class="block" id="m-kom">
+          <div class="block" id="m-com">
             <div class="bh clearfix">
               <ul class="stm_nav_block" role="tablist">
                 <li class="active"><a href="#c-com" role="tab" data-toggle="tab"><i class="gti-comments-o"></i><span>123</span></a>
