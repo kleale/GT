@@ -43,7 +43,8 @@
 .bar{
   transition: $tease;
   position: fixed 0 * 0 0;
-  background: rgba(44, 44, 44, 0.9);
+  /*background: rgba(44, 44, 44, 0.9);*/
+  background-color: #191E21;
   background-image: inline(../img/tile.png);
   background-repeat: repeat;
   background-position: center;

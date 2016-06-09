@@ -107,7 +107,7 @@
   position: relative;  
   /*width: 200px;  Default value. Overwite this if you want. */
   /*height: 300px;  Default value. Overwite this if you want. */
-  max-height:460px;
+  min-height: 300px;
   overflow: hidden;
   }
   .tse-sc .tse-scroll-content {

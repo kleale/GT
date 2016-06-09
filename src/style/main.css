@@ -10,7 +10,6 @@
 @import "part/base.css";
 @import "part/layout.css";
 @import "part/module.css";
-@import "part/state.css";
 @import "part/theme.css";
 @import "gticons.css";
 
@@ -30,3 +29,5 @@
 @import "part/match-section-comments.css";
 @import "part/match-section-news.css";
 @import "part/match-section-soc.css";
+
+@import "part/state.css";

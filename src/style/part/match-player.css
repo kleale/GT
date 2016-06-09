@@ -6,7 +6,7 @@
   
 }
 
-.toggled_stream{
+.srteamslider{
   position: relative;
   background-image: url(../img/section_bg_1.jpg);
   /*background: $bg-sub;*/
@@ -14,7 +14,8 @@
   
   .srteamtoggle {
     transition: $tease;
-    background: $bg-sub;
+    /*background: $bg-sub;*/
+    background: #191E21;
     background-image: inline(../img/tile.png);
     background-repeat: repeat;
     background-position: center;
@@ -108,7 +109,7 @@
   }
   
   .tse_slist{
-    height: 445px;
+    height: 100%;
     position: absolute 40px 0 0 0;
     overflow-x: hidden;
   }
@@ -172,7 +173,7 @@
 }/*subm*/
 
 
-.sview {
+.srteamview {
   margin-right: 450px;
   background: #292828;
   position: relative;
@@ -191,11 +192,87 @@
     }
   }
 }
-  
-.subs{
-  position: absolute 10px 10px * *;
+
+.fullscreener{
+  position: absolute 20px 15px * *;
   z-index: 2;
-  padding: 5px 5px 1px 5px;
+  color: $link-blue;
+  
+  i{
+    padding: 5px;
+    background: #444950;
+    display: inline-block;
+    border-radius: 50%;
+    width: 28px;
+    text-align: center;
+    font-size: 15px;
+    height: 28px;
+    margin: 0 0 0 10px;
+    line-height: 20px;
+    cursor: pointer;
+    
+    &:hover,
+    &:active,
+    &:focus,
+    &.active{
+      color: #fff;
+      background: $button-blue;
+    }
+  }
+}
+
+#player-menu {
+    position: absolute 0 0 0 *;
+    z-index: 10;
+    padding: 0 0 0 5px;
+    border-right: 1px solid #444950;
+    display: block;
+    width: 10px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 26px;
+    cursor: pointer;
+    
+    &:hover,
+    &:active,
+    &:focus{
+      border-right: 1px solid $button-blue;
+      &:after{
+      color: #fff;
+      background: $button-blue;
+      }
+    }
+  
+  &:before{
+    position: absolute 50% -1px * *;
+    z-index: 1;
+    margin-top: -10px;
+  }
+  &:after{
+    border-top: 1px solid #444950;
+    border-left: 1px solid #444950;
+    border-bottom: 1px solid #444950;
+    position: absolute 50% 50% * *;
+    background: #191E21;
+    background-image: inline(../img/tile.png);
+    background-repeat: repeat;
+    background-position: center;
+    width: 14px;
+    height: 25px;
+    border-radius: 40% 0 0 40%;
+    content: '';
+    margin: -10px -5px 0 0;
+  }
+}
+.toggled_stream #player-menu:before{
+  content: '\f053'
+}
+
+
+.subs{
+  position: absolute 10px 50px * *;
+  z-index: 2;
+  padding: 10px 10px 6px 10px;
   background: rgba(0, 0, 0, 0.48);
   display: table;
   
@@ -406,6 +483,5 @@
   }
 }/*slist*/
 /* .Stream list*/
-
 
 

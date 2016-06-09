@@ -68,9 +68,60 @@
       $(".m-head").toggleClass("m-head_compact");
 	});
     
+    // player menu toggle
+    $("#player-menu").click(function() {
+      $("#srteamslider").toggleClass("toggled_stream");
+      $(this).toggleClass("active");
+	});
+    $("#stream_menu a").click(function() {
+      $("#srteamslider").removeClass("toggled_stream");
+      $("#player-menu").removeClass("active");
+    });
     
+/*fullscreen https://github.com/sindresorhus/screenfull.js*/
+    var target = $('#srteamslider')[0]; // Get DOM element from jQuery collection
+    $('#stream-expand').click(function () {
+        if (screenfull.enabled) {
+            screenfull.request(target);
+        }
+    });
     
+    $('#stream-compress').click(function() {
+        if (screenfull.enabled) {
+            screenfull.exit(target);
+        }
+    });
     
+    if (screenfull.enabled) {
+        document.addEventListener(screenfull.raw.fullscreenchange, function () {
+            //console.log('Am I fullscreen? ' + (screenfull.isFullscreen ? 'Yes' : 'No'));
+            if (screenfull.isFullscreen) {
+                $('#stream-compress').css( 'display' , 'block' );
+                $('#stream-expand').hide();
+                    var srteamtoggle = $('.srteamtoggle').outerHeight();
+                    var currentHeight = $('.stm_koef').outerHeight();
+                    var upcurrentHeight = $('.st_inner').outerHeight();
+                    var st_brand_top = 100 + upcurrentHeight;
+                    var st_brand_bottom = 35 + currentHeight;
+                    $('.st_brand').css( 'top' , st_brand_top );
+                    $('.st_brand').css( 'bottom' , st_brand_bottom );
+                    var st_brand = $('.st_brand').outerHeight();
+                    if ( st_brand < 80) { 
+                        $('.st_brand').hide(); 
+                    }
+                    else {
+                        $('.st_brand').show(); 
+                    }
+            }
+            else{
+                $('#stream-expand').show();
+                $('#stream-compress').hide();
+                //$('.srteamtoggle #kof').remove();
+            }
+            $(target).toggleClass('expanded');
+        });
+    }
+  // end fullscreen
     
   }); //end ready
 

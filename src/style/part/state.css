@@ -56,12 +56,12 @@
     z-index: 2;
   }
 
-u {
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    padding: 3px;
-}
+  u {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      padding: 3px;
+  }
 
   b.gren {
     color: #01FF01;
@@ -83,4 +83,222 @@ u {
     width: 100%;
   }
   
+} /*htip*/
+
+
+.toggled_stream{
+  
+  .srteamview{
+    margin-right: 60px;
+    
+    .iframer{
+      height: 630px;
+    }
+  }
+  .srteamtoggle{
+    width:60px;
+    
+    .player-menu{
+      display: block;
+      background: none;
+      margin-top: 5px;
+      
+      li{
+        display: block;
+        
+        &.active{
+          a{
+            background: none;
+          }
+        }
+        a{
+          padding: 20px 0;
+          
+          i{
+            font-size: 21px;
+            margin-bottom: 0;
+          }
+          span{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .stmblocks{
+    display: none;
+  }
 }
+
+#stream-compress{
+  display: none;
+}
+
+
+/*EXPAND*/
+.expanded{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1000;
+  
+  
+  .srteamview {
+    bottom: 0;
+    height: 100%;
+    position: fixed;
+    margin-right: 0 !important;
+    top:0;
+    left:0;
+    right: 50px;
+  }
+  
+  .srteamtoggle{
+    bottom: 0;
+    height: 100% !important;
+    position: fixed;
+    right: 0;
+    top:0;
+  }
+  .stmblock{
+    height: auto;
+    max-height:none;
+    padding-bottom:15px;
+  }
+  
+  &.toggled_stream{
+    
+    .srteamview {
+      right:328px;
+    }
+    #kof {
+      bottom: -4px;
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 10px;
+    }
+  }
+  #kof{
+    display:none;
+  }
+}
+
+.expanded .srteamview .iframer{
+  position: absolute 0 0 90px 0;
+  height: auto;
+}
+.expanded .srteamview .bn{
+  position: absolute * 0 0 0;
+  height: 90px;
+}
+
+
+#srteamslider.expanded.branded.toggled_stream .srteamtoggle{
+    width:60px;
+}
+#srteamslider.expanded.toggled_stream.branded .srteamview {
+    right: 60px;
+}
+#srteamslider.expanded.branded .srteamtoggle{
+  width:368px;
+}
+#srteamslider.expanded.branded .srteamview {
+    right: 368px;
+}
+
+
+
+
+
+
+
+
+
+.expanded.toggled_stream .stm_koef {
+    background: #3c3c3c;
+    display: block;
+    margin: 5px 0 0 0;
+    padding: 15px 5px;
+    text-align: center;
+    z-index: 10;
+    
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+}
+/*BRAND*/
+.expanded.toggled_stream.branded .st_brand {
+    background-position: 50% 50%;
+    background-repeat:no-repeat;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    height:60px;
+}
+
+.expanded.branded .srteamtoggle .stat_m_select .dropdown .btn {
+    background: #333;
+}
+.expanded.branded .srteamtoggle .stmblock {
+    background: rgba(0, 0, 0, 0.5) ;
+}
+.expanded.toggled_stream.branded .srteambrand{
+    opacity:.2;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:block!important;
+    z-index:1;
+}
+.expanded.toggled_stream.branded .srteambrandhead{
+    display:block!important;
+    height:100px;
+}
+.expanded.branded.toggled_stream .stm_koef {
+    background:rgba(0, 0, 0, 0.54);
+    box-shadow:none;
+}
+.expanded.branded.toggled_stream .stm_koef::after {
+    display:none;
+}
+
+
+
+/*
+      BRANDS --------------------------------
+*/
+.st_brand{
+    transition:all .2s linear;
+}
+/* .b_head */
+#srteamslider.expanded.branded.toggled_stream.b_headshot .srteamtoggle{
+    background: url("/html/imgbrand/st_bg_head.jpg") no-repeat scroll 50% 0;
+}
+.b_headshot .st_brand{
+    background-image: url(/html/imgbrand/sbrand_head.png);
+}
+
+/* .b_egb */
+#srteamslider.expanded.branded.toggled_stream.b_egb .srteamtoggle{
+    background: url("/html/imgbrand/st_bg_egb.jpg") no-repeat scroll 50% 0;
+}
+.b_egb .st_brand{
+    background-image: url(/html/imgbrand/sbrand_egb.png);
+}
+
+/* .b_vital */
+#srteamslider.expanded.branded.toggled_stream.b_vital .srteamtoggle{
+    background: url("/html/imgbrand/st_bg_vital.jpg") no-repeat scroll 50% 0;
+}
+.b_vital .st_brand{
+    background-image: url(/html/imgbrand/sbrand_vital.png);
+}
+/* ------------------------------------------ */

@@ -245,8 +245,8 @@
     </section><!-- /m-head" -->
     
     <section class="player" id="player">
-      <div id="srteamslider" class="toggled_stream branded" rel="29880">
-        <div class="sview clearfix" id="mainstream">
+      <div id="srteamslider" class="toggled_stream srteamslider branded" rel="XXX">
+        <div class="srteamview clearfix" id="mainstream">
             <div class="subs">
               <span>
                 напомнить мне<br>
@@ -273,6 +273,14 @@
                 <a href="" class="btn-input btn btn-sm btn-primary">OK</a>
               </div>
             </div>
+            
+            <div class="fullscreener">
+              <i id="stream-expand" class="gti-expand active tip" title="На весь экран"></i>
+              <i id="stream-compress" class="gti-compress tip" title="Свернуть"></i>
+            </div>
+            
+            <i id="player-menu" class="gti-chevron-right"></i>
+            
             <div class="iframer">
               <iframe rel="stream" site="twitch" title="starladder1" allowfullscreen="" frameborder="0" width="100%" height="100%" src="http://player.twitch.tv/?autoplay=false&amp;channel=starladder1"></iframe>
             </div>
@@ -297,19 +305,19 @@
               <ul id="stream_menu" class="player-menu" role="tablist">
                 <li rel="stream"  class="active">
                   <a role="tab" data-toggle="tab" href="#player-streams"><i class="gti-video-camera"></i>
-                  Трансляции</a>
+                  <span>Трансляции</span></a>
                 </li>
                 <li rel="stat" title="Статистика">
                  <a role="tab" data-toggle="tab" href="#player-stat"><i class="gti-pie-chart"></i>
-                  Статистика</a>
+                  <span>Статистика</span></a>
                 </li>
                 <li id="achat" rel="log">
                   <a role="tab" data-toggle="tab" href="#player-log"><i class="gti-list-ul"></i>
-                  Лог матча</a>
+                  <span>Лог матча</span></a>
                 </li>
                 <li id="achat" rel="chat">
                   <a role="tab" data-toggle="tab" href="#player-chat"><i class="gti-comments-o"></i>
-                    Чат матча</a>
+                    <span>Чат матча</span></a>
                 </li>
               </ul>
             </div>
