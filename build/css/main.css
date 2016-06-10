@@ -1152,6 +1152,15 @@ footer .f-soc a:active,
 .hiddenbar .sercher {
   display: none;
 }
+/**
+Banners
+**/
+.bn{
+  text-align: center;
+}
+.bn img{
+  max-width: 100%;
+}
 /*
   Module
 */
@@ -2772,8 +2781,12 @@ Headline
 /*
 Banners
 */
+.bn{
+  text-align: center;
+  background: #111;
+}
 .bn img{
-  width: 100%;
+  max-width: 100%;
 }
 /*Голосовалка*/
 .thumb{
@@ -3087,9 +3100,6 @@ Banners
 .srteamview .iframer{
   position: relative;
   height:460px;
-}
-.srteamview .bn img{
-  width: 100%;
 }
 .fullscreener{
   top: 20px;
@@ -6606,6 +6616,9 @@ Banners
   height: auto;
   max-height:none;
   padding-bottom:15px;
+}
+.expanded .tse-sc .tse-scroll-content{
+  height:100%!important;
 }
 .expanded.toggled_stream .srteamview {
   right:328px;

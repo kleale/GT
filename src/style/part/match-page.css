@@ -593,8 +593,10 @@ Banners
 */
 
 .bn{
+  text-align: center;
+  background: #111;
   img{
-    width: 100%;
+    max-width: 100%;
   }
 }
 

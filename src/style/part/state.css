@@ -168,6 +168,9 @@
     max-height:none;
     padding-bottom:15px;
   }
+  .tse-sc .tse-scroll-content{
+    height:100%!important;
+  }
   
   &.toggled_stream{
     
