@@ -27,7 +27,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  overflow-y: auto;
+  overflow-x: hidden;
   
   .tse-list > div time {
     color: #CBCBD8;

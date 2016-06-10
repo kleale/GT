@@ -82,20 +82,6 @@
   text-shadow: 0 1px 0 #000000;
 }
 
-.tse-sc .tse-content{
-  padding: 0 10px 0 0;
-  
-  @media (max-width: $M){
-    padding: 0;
-  }
-  
-  /*
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 450px;
-  */
-}
-
 /**
  * TrackpadScrollEmulator
  * Version: 1.0.6
@@ -103,17 +89,24 @@
  * https://github.com/jnicol/trackpad-scroll-emulator
  */
  
+.bc .tab-pane.active .tse-scroll-content{
+  height:450px;
+}
+
+
+
+
  .tse-sc {
   position: relative;  
   /*width: 200px;  Default value. Overwite this if you want. */
   /*height: 300px;  Default value. Overwite this if you want. */
-  min-height: 300px;
+  height: 100%;
   overflow: hidden;
   }
   .tse-sc .tse-scroll-content {
     overflow: hidden;
     overflow-y: auto;
-    margin-right: -16px;
+    height: 100%;
     
       &:after {
         content: '';

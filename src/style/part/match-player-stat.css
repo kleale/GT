@@ -10,7 +10,7 @@
   span{
     transition: $tease;
     color:#3f79a2;
-    padding: 10px;
+    padding: 10px 0;
     display: table-cell;
     text-transform: uppercase;
     cursor: pointer;

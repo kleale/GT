@@ -648,6 +648,30 @@ textarea {
     background-image: url("../img/chosen-sprite@2x.png") !important;
     background-size: 52px 37px !important;
     background-repeat: no-repeat !important; } }
+/* perfect-scrollbar v0.6.11 */
+.ps-container{-ms-touch-action:none;touch-action:none;overflow:hidden !important;-ms-overflow-style:none}
+@supports (-ms-overflow-style: none){.ps-container{overflow:auto !important}}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){.ps-container{overflow:auto !important}}
+.ps-container.ps-active-x>.ps-scrollbar-x-rail,.ps-container.ps-active-y>.ps-scrollbar-y-rail{display:block;background-color:transparent}
+.ps-container.ps-in-scrolling{pointer-events:none}
+.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:0.9}
+.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999}
+.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:0.9}
+.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999}
+.ps-container>.ps-scrollbar-x-rail{display:none;position:absolute;border-radius:4px;opacity:0;transition:background-color .2s linear, opacity .2s linear;bottom:3px;height:8px}
+.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x{position:absolute;background-color:#aaa;border-radius:4px;transition:background-color .2s linear;bottom:0;height:8px}
+.ps-container>.ps-scrollbar-y-rail{display:none;position:absolute;border-radius:4px;opacity:0;transition:background-color .2s linear, opacity .2s linear;right:3px;width:8px}
+.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y{position:absolute;background-color:#aaa;border-radius:4px;transition:background-color .2s linear;right:0;width:8px}
+.ps-container:hover.ps-in-scrolling{pointer-events:none}
+.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:0.9}
+.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999}
+.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:0.9}
+.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999}
+.ps-container:hover>.ps-scrollbar-x-rail,.ps-container:hover>.ps-scrollbar-y-rail{opacity:0.6}
+.ps-container:hover>.ps-scrollbar-x-rail:hover{background-color:#eee;opacity:0.9}
+.ps-container:hover>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x{background-color:#999}
+.ps-container:hover>.ps-scrollbar-y-rail:hover{background-color:#eee;opacity:0.9}
+.ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y{background-color:#999}
 /*
 * Custom
 */
@@ -1242,37 +1266,26 @@ Banners
   opacity: 0.6;
   text-shadow: 0 1px 0 #000000;
 }
-.tse-sc .tse-content{
-  padding: 0 10px 0 0;
-  
-  /*
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 450px;
-  */
-}
-@media (max-width: 768px){
-  .tse-sc .tse-content {
-    padding: 0;
-  }
-}
 /**
  * TrackpadScrollEmulator
  * Version: 1.0.6
  * Author: Jonathan Nicol @f6design
  * https://github.com/jnicol/trackpad-scroll-emulator
  */
+.bc .tab-pane.active .tse-scroll-content{
+  height:450px;
+}
 .tse-sc {
   position: relative;  
   /*width: 200px;  Default value. Overwite this if you want. */
   /*height: 300px;  Default value. Overwite this if you want. */
-  min-height: 300px;
+  height: 100%;
   overflow: hidden;
   }
 .tse-sc .tse-scroll-content {
     overflow: hidden;
     overflow-y: auto;
-    margin-right: -16px;
+    height: 100%;
     
     }
 .tse-sc .tse-scroll-content:after {
@@ -3022,12 +3035,8 @@ Banners
 .stmblock.active{
   display: block!important;
 }
-.stmblock .tse-scroll-content{
-  min-width: 100%;
-  min-height: 400px;
-}
 .stmblock .tse_slist{
-  height: 100%;
+  height: auto;
   top: 40px;
   right: 0;
   bottom: 0;
@@ -4188,10 +4197,6 @@ Banners
     width: 100%;
     overflow: hidden;
 }
-.chat-wrap .tse-scroll-content{
-  min-width: 100%;
-  min-height: 400px;
-}
 .chat-wrap .chatter {
   bottom: 60px;
   height: auto;
@@ -4211,7 +4216,7 @@ Banners
 .stf span{
   transition: all .2s ease;
   color:#3f79a2;
-  padding: 10px;
+  padding: 10px 0;
   display: table-cell;
   text-transform: uppercase;
   cursor: pointer;
@@ -4593,7 +4598,7 @@ Banners
   position: absolute;
   right: 0;
   top: 0;
-  overflow-y: auto;
+  overflow-x: hidden;
 }
 .logger .tse-list > div time {
   color: #CBCBD8;
@@ -4826,7 +4831,7 @@ Banners
 }
 /*.block*/
 .bc .tab-pane{
-  transition: all .3s linear;
+  transition: opacity .3s linear;
 }
 .bc .tab-pane.active{
   opacity: 1;
@@ -6367,6 +6372,7 @@ Banners
 }
 .tse-news{
   padding: 15px 0 0 0;
+  max-height: 450px;
 }
 .tse-news ul{
   list-style: none;

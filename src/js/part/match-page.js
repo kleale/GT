@@ -47,13 +47,13 @@
     $('.stm_nav_block a').click(function (e) {
       e.preventDefault()
       $(this).tab('show');
-      $('.tse-sc').TrackpadScrollEmulator('recalculate');
+      //$('.tse-sc').TrackpadScrollEmulator('recalculate');
     })
     
     $('.stream_menu li').click(function (e) {
       e.preventDefault()
       $(this).tab('show');
-      $('.tse-sc').TrackpadScrollEmulator('recalculate');
+      //$('.tse-sc').TrackpadScrollEmulator('recalculate');
     })
     
     //Мобильное меню матча с иконками

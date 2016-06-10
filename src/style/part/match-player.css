@@ -103,13 +103,8 @@
     display: block!important;
   }
   
-  .tse-scroll-content{
-    min-width: 100%;
-    min-height: 400px;
-  }
-  
   .tse_slist{
-    height: 100%;
+    height: auto;
     position: absolute 40px 0 0 0;
     overflow-x: hidden;
   }
