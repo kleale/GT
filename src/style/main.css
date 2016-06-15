@@ -7,7 +7,7 @@
 @import "../assets/css/perfect-scrollbar.min.css";
 
 /*
-* Custom
+* Base css 
 */
 @import "part/base.css";
 @import "part/layout.css";
@@ -18,6 +18,8 @@
 /*
 * Pages
 */
+
+/*match-page*/
 @import "part/match-page.css";
 @import "part/match-player.css";
 @import "part/match-player-chat.css";
@@ -32,4 +34,8 @@
 @import "part/match-section-news.css";
 @import "part/match-section-soc.css";
 
+/*match-list-page*/
+@import "part/page-match-list.css";
+
+/*states*/
 @import "part/state.css";

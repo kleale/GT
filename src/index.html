@@ -1,3 +1,5 @@
+{% set title = "Match Stream Page" %}
+
 <!DOCTYPE html>
 <html>
 <head lang="en"><!-- ADD -->
@@ -5,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>GT</title>  
+  <title>{{ title }}</title>  
   <!-- Import fonts -->
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   
@@ -26,10 +28,11 @@
   <![endif]-->
 </head>
 <body class="csgo">
-  //= template/bar.html
+  
+  {% include "template/bar.html" %}
   
   <div class="container">
-    //= template/breadcrumbs.html
+    {% include "template/breadcrumbs.html" %}
     
     <div class="otstup" style="height:60px;"></div>
     
@@ -167,7 +170,7 @@
     <section class="player" id="player">
       <div id="srteamslider" class="toggled_stream srteamslider branded" rel="XXX">
         <div class="srteamview clearfix" id="mainstream">
-            //= template/match-page/player-html5.html
+          {% include "template/match-page/player-html5.html" %}
         </div>
         <div class="srteamtoggle">
           <div class="st_inner">
@@ -195,10 +198,10 @@
             </div>
 
             <div id="stmblocks" class="stmblocks tab-content">
-                //= template/match-page/player-streams.html
-                //= template/match-page/player-stat.html
-                //= template/match-page/player-chat.html
-                //= template/match-page/player-log.html
+              {% include "template/match-page/player-streams.html" %}
+              {% include "template/match-page/player-stat.html" %}
+              {% include "template/match-page/player-chat.html" %}
+              {% include "template/match-page/player-log.html" %}
             </div>
           </div>
         </div>
@@ -208,20 +211,20 @@
     <section id="m-koef" class="m-sec m-even">
       <div class="row">
         <div class="col-lg-7">
-          //= template/match-page/section-koef.html
+         {% include "template/match-page/section-koef.html" %}
         </div>
         <div class="col-lg-5">
-          //= template/match-page/section-prognoz.html
+         {% include "template/match-page/section-prognoz.html" %}
         </div>
       </div>
     </section>
     
     <section id="m-teams" class="m-sec m-odd">
-      //= template/match-page/section-teams.html
+      {% include "template/match-page/section-teams.html" %}
     </section>
     
     <section id="m-players" class="m-sec m-even">
-      //= template/match-page/section-players.html
+      {% include "template/match-page/section-players.html" %}
     </section>
     
     <div class="bn">
@@ -231,10 +234,10 @@
     <section id="m-picks" class="m-sec m-odd">
       <div class="row">
         <div class="col-md-7">
-          //= template/match-page/section-picks.html
+          {% include "template/match-page/section-picks.html" %}
         </div>
         <div class="col-md-5">
-          //= template/match-page/section-comments.html
+          {% include "template/match-page/section-comments.html" %}
         </div>
       </div>
     </section>
@@ -242,10 +245,10 @@
     <section id="m-news" class="m-sec m-even">
       <div class="row">
         <div class="col-md-7">
-          //= template/match-page/section-news.html
+          {% include "template/match-page/section-news.html" %}
         </div>
         <div class="col-md-5">
-          //= template/match-page/section-soc.html
+          {% include "template/match-page/section-soc.html" %}
         </div>
       </div>
     </section>
@@ -253,8 +256,7 @@
     <div class="bn">
       <img src="img/ad.jpg" alt="">
     </div>
-    
-    //= template/footer.html
+    {% include "template/footer.html" %}
   </div>
 
   
@@ -285,7 +287,6 @@
 </div>
     
   
-  
   <!--Import jQuery-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <!-- jQuery for older IE -->
@@ -295,8 +296,10 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!-- CHARTs --> 
+  <!--
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  -->
   <!--<script src="https://code.highcharts.com/modules/exporting.js"></script>-->
   <!-- Site Sripts -->
   <script src="/js/main.js"></script>

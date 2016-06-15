@@ -6,7 +6,31 @@
   'use strict';
 
   $(document).ready(function () {
-    // Log search
+    // Stream list search fast live filter
+    $(function() {
+      $("#strm-filter").keyup(function(){
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(), count = 0;
+        // Loop through the comment list
+        $("#index_stream li").each(function(){
+            // If the list item does not contain the text phrase fade it out
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut();
+            // Show the list item if the phrase matches and increase the count by 1
+            } else {
+                $(this).show();
+                count++;
+            }
+        });
+        // Update the count
+        /*
+        var numberItems = count;
+          $("#filter-count").text("Number of Comments = "+count);
+        */
+      });
+    });
+    
+    // Log search fast live filter
     $(function() {
       $("#logfilter").keyup(function(){
         // Retrieve the input field text and reset the count to zero
@@ -79,11 +103,13 @@
     });
     
 /*fullscreen https://github.com/sindresorhus/screenfull.js*/
-    var target = $('#srteamslider')[0]; // Get DOM element from jQuery collection
+    var target = $('#srteamslider')[0];
+    /*
     $('#stream-expand').click(function () {
         if (screenfull.enabled) {
             screenfull.request(target);
         }
+        else{}
     });
     
     $('#stream-compress').click(function() {
@@ -98,6 +124,8 @@
             if (screenfull.isFullscreen) {
                 $('#stream-compress').css( 'display' , 'block' );
                 $('#stream-expand').hide();
+                $(target).addClass('expanded');
+                  
                     var srteamtoggle = $('.srteamtoggle').outerHeight();
                     var currentHeight = $('.stm_koef').outerHeight();
                     var upcurrentHeight = $('.st_inner').outerHeight();
@@ -112,16 +140,34 @@
                     else {
                         $('.st_brand').show(); 
                     }
+                  
             }
             else{
                 $('#stream-expand').show();
                 $('#stream-compress').hide();
-                //$('.srteamtoggle #kof').remove();
+                $(target).removeClass('expanded');
             }
-            $(target).toggleClass('expanded');
         });
     }
+  */
   // end fullscreen
+    
+  
+  $('#stream-expand').click(function () {
+    $('#stream-compress').css( 'display' , 'block' );
+    $('#stream-expand').hide();
+    $(target).addClass('expanded');
+    $('body').addClass('noscroll');
+  });
+  $('#stream-compress').click(function() {
+    $('#stream-expand').show();
+    $('#stream-compress').hide();
+    $(target).removeClass('expanded');
+    $('body').removeClass('noscroll');
+  });
+  
+    
+    
     
   }); //end ready
 

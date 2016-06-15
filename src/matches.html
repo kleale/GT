@@ -1,0 +1,137 @@
+{% set title = "Matches Page" %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en"><!-- ADD -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>{{ title }}</title>   
+  <!-- Import fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+   <!-- Import bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  <!-- Import main styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+    <!--[if lt IE 10]>
+  <link rel="stylesheet" href="assets/css/ie.css">
+  <![endif]-->
+</head>
+<body class="csgo">
+  {% include "template/bar.html" %}
+  
+  <div class="container">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup" style="height:60px;"></div>
+    
+    <section class="player" id="player">
+      <div id="srteamslider" class="toggled_stream srteamslider branded" rel="XXX">
+        <div class="srteamview clearfix" id="mainstream">
+          {% include "template/match-page/player-html5.html" %}
+        </div>
+        <div class="srteamtoggle">
+          <div class="st_inner">
+            <div class="stream_action">
+              <!--<span class="st-btn active" id="stream-toggle"><i class="gti-bars"></i></span>
+              <span class="st-btn odtip" id="stream-expand" title="Развернуть на весь экран"><i class="gti-expand"></i></a>-->
+              <ul id="stream_menu" class="player-menu" role="tablist">
+                <li rel="stream"  class="active">
+                  <a role="tab" data-toggle="tab" href="#player-streams"><i class="gti-video-camera"></i>
+                  <span>Трансляции</span></a>
+                </li>
+                <li rel="stat" title="Статистика">
+                 <a role="tab" data-toggle="tab" href="#player-stat"><i class="gti-pie-chart"></i>
+                  <span>Статистика</span></a>
+                </li>
+                <li id="achat" rel="log">
+                  <a role="tab" data-toggle="tab" href="#player-log"><i class="gti-list-ul"></i>
+                  <span>Лог матча</span></a>
+                </li>
+                <li id="achat" rel="chat">
+                  <a role="tab" data-toggle="tab" href="#player-chat"><i class="gti-comments-o"></i>
+                    <span>Чат матча</span></a>
+                </li>
+              </ul>
+            </div>
+
+            <div id="stmblocks" class="stmblocks tab-content">
+                {% include "template/match-list/player-streams-by-teams.html" %}
+                {% include "template/match-page/player-stat.html" %}
+                {% include "template/match-page/player-chat.html" %}
+                {% include "template/match-page/player-log.html" %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /m-player" -->
+    
+    
+    
+    <section id="m-koef" class="m-sec m-even">
+      <div class="row">
+        <div class="col-lg-9">
+          {% include "template/match-list/match-list.html" %}
+          {% include "template/pager.html" %}
+          
+          {% include "template/match-list/match-list-future.html" %}
+          {% include "template/pager.html" %}
+          
+          {% include "template/match-list/match-list-past.html" %}
+          {% include "template/pager.html" %}
+        </div>
+        <div class="col-lg-3">
+          {% include "template/match-list/match-top.html" %}
+        </div>
+      </div>
+    </section>
+    
+    <section id="m-news" class="m-sec m-even">
+      <div class="row">
+        <div class="col-md-7">
+          {% include "template/match-page/section-news.html" %}
+        </div>
+        <div class="col-md-5">
+          {% include "template/match-page/section-soc.html" %}
+        </div>
+      </div>
+    </section>
+    
+    <div class="bn">
+      <img src="img/ad.jpg" alt="">
+    </div>
+    {% include "template/footer.html" %}
+  </div>
+
+  
+  
+  
+  
+  <!--Import jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- jQuery for older IE -->
+  <!--
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  -->
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- CHARTs --> 
+  <!--
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  -->
+  <!--<script src="https://code.highcharts.com/modules/exporting.js"></script>-->
+  <!-- Site Sripts -->
+  <script src="/js/main.js"></script>
+
+</body>
+</html>

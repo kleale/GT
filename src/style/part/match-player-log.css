@@ -29,9 +29,13 @@
   top: 0;
   overflow-x: hidden;
   
-  .tse-list > div time {
-    color: #CBCBD8;
-    margin-right: 15px;
+  .tse-list {
+    padding-bottom: 20px;
+    
+    > div time {
+      color: #CBCBD8;
+      margin-right: 15px;
+    }
   }
   .inline-icon{
     height: 17px;

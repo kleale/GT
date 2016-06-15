@@ -1,5 +1,4 @@
-<!-- section social news -->
-<!-- section NEWS -->
+<!-- /match-page/section-soc.html -->
 <div class="block m-soc">
   <div class="bh clearfix">
     <h3>
@@ -15,9 +14,9 @@
   </div><!-- bh -->
   <div class="tab-content">
     <div class="tse-sc tse-soc">
-      <div class="tse-scroll-content">
-        <div class="tse-content">
+      <div class="tse-content">
         <ul>
+          {% for i in 0..6 %}
           <li>
             <i class="gti-twitter"></i>
             <div>
@@ -40,31 +39,9 @@
               </p>
             </div>
           </li>
-          <li>
-            <i class="gti-vk"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          <li>
-            <i class="gti-vk"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
+          {% endfor %}
         </ul>
         <div class="no100"><i class="gti-info-circle"></i> Ничего нет</div>
-      </div>
       </div>
     </div>
   </div>

@@ -19,7 +19,7 @@
     background-image: inline(../img/tile.png);
     background-repeat: repeat;
     background-position: center;
-    width: 450px;
+    width: 468px;
     position: absolute 0 0 0 *;
     
     @media (max-width: $XM){
@@ -165,11 +165,29 @@
       color: $link-blue-active;
     }
   }
+  
+  .strm-filter{
+    position: absolute 10px 15px * *;
+    width: 150px;
+    
+    input{
+      background-color: #0b242e;
+      color: #3f79a2;
+      font-size: 12px;
+      display: block;
+      height: 26px;
+      line-height: 14px;
+      padding: 5px 10px;
+      border: 0;
+      border-bottom: 1px solid #284b5e;
+      width: 100%;
+    }
+  }
 }/*subm*/
 
 
 .srteamview {
-  margin-right: 450px;
+  margin-right: 468px;
   background: #292828;
   position: relative;
   
@@ -344,7 +362,7 @@
   
   li{
     transition: $tease;
-    padding: 10px 15px;
+    padding: 5px 15px;
     opacity: .5;
     position: relative;
     overflow: hidden;
@@ -378,6 +396,17 @@
       background: $button-blue;
       color: $button-blue-text;
     }
+    &.hot span:after{
+      content: 'hot';
+      display: block;
+      padding: 3px 5px;
+      font-size: 11px;
+      font-weight: 300;
+      line-height: 1;
+      position: absolute 0 * * 0;
+      background: $red;
+      color: #fff;
+    }
     &.devide{
       text-align: center;
       background-image: inline(../img/devider.png);
@@ -389,13 +418,18 @@
       figure{
         border-radius: 20px;
         background: rgba(2, 2, 2, 0.9);
-        padding: 5px 15px;
+        padding: 3px 15px;
         color: rgba(255, 255, 255, 0.8);
         border: 1px solid rgba(255, 255, 255, 0.46);
-        font-size: 12px;
+        font-size: 11px;
         line-height: 1;
         text-transform: uppercase;
         display: inline-block;
+        
+        i{
+          position: relative 1px * * *;
+          margin: 0 5px;
+        }
       }
     }
     span{

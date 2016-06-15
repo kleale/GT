@@ -13,6 +13,7 @@ var gulp         = require('gulp'),
     autoprefixer = require('autoprefixer'),
     watch        = require('gulp-watch'),
     rigger       = require('gulp-rigger'),               // html и css вставки
+    twig         = require('gulp-twig'), 
     //sourcemaps   = require('gulp-sourcemaps'),
     //uncss        = require('gulp-uncss'),              // удаление неиспользуемых стилей
     postcss      = require('gulp-postcss'),
@@ -84,7 +85,18 @@ var config = {
 //  Сборка HTML
 gulp.task('html:build', function () {
     gulp.src(path.src.html) //Выберем файлы по нужному пути
-        .pipe(rigger()) //Прогоним через rigger
+        //.pipe(rigger()) //Прогоним через rigger
+        .pipe(twig({
+            data: {
+                // some data
+                titleDemo: 'Gulp and Twig',
+                benefitsDemo: [
+                    'Fast',
+                    'Flexible',
+                    'Secure'
+                ]
+            }
+        }))
         .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
         .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });

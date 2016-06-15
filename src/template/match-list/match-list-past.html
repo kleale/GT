@@ -1,0 +1,43 @@
+<!-- match-list/match-past.html -->
+
+<div class="block mlt">
+  <div class="block-content">
+    <h3 class="mh"><span>Прошедшие матчи</span></h3>
+    <table class="mtable">
+      <thead>
+        <th></th>
+        <th width="70"><span>Дата <i class="gti-chevron-down sorter active"></i></span></th>
+        <th><span>Матч <i class="gti-chevron-up sorter"></i></span></th>
+        <th colspan="2"><span>Турнир <i class="gti-chevron-up sorter"></i></span></th>
+        <th></th>
+      </thead>
+
+      {% for i in 0..10 %}
+        <tr data-id="i">
+          <td class="ticon">
+            
+          </td>
+          <td class="tdate">12 авг в 10:15</td>
+          <td class="td-m">
+            <a class="tn1" href="">Secret</a>
+            <a href="" class="mp1"><sup>11</sup><img src="http://game-tournaments.com/media/logo/_60/582-no.png"></a>
+            <span class="mscore">VS</span>
+            <a href="" class="mp2"><sup>2</sup><img src="http://game-tournaments.com/media/logo/_60/582-no.png"></a>
+            <a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a>
+          </td>
+          <td class="tpic">
+            <a title="H-Cup Season 7" href="" class="ta odtip">
+              <img src="http://game-tournaments.com/media/tournament/_60/pic-20160615-264x150-3615944418.jpeg">
+            </a>
+          </td>
+          <td class="tname">
+            <a href="">Esports Championship League - Америка <em>Регулярный сезон</em></a>
+          </td>
+          <td>
+            <i class="gti-dice dice-win"></i>
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>

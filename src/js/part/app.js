@@ -59,18 +59,8 @@
         }
     });
     
-    // TSE scrollbar
-    /*
-    $('.tse-sc').TrackpadScrollEmulator({ 
-      wrapContent: false,
-      autoHide: false
-    });
-    */
-    /*
-    $("#stream_menu a").click(function() {
-      $('.tse-sc').TrackpadScrollEmulator('recalculate');
-    });
-    */
+    // scrolls in tabs and blocks
+    $('.tse-sc').perfectScrollbar(); 
     
     // bar toggle on mobile
     $(".stage em").click(function() {
