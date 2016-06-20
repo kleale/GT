@@ -1291,11 +1291,11 @@ Banners
   background: #2C4A58;
   color:#a6c6cb;
   border-radius: 50px;
-  margin: 0 2px;
+  margin: 0 4px;
   border: 1px solid rgba(3, 105, 153, 0.1);
-  padding: 9px 0 0;
-  width: 32px;
-  height: 32px;
+  padding: 8px 0 0;
+  width: 30px;
+  height: 30px;
   line-height: 1;
 }
 .nav-pager .pagination li a:active,
@@ -6540,7 +6540,7 @@ opacity: .5
   background-color: #0b242e;
   color: #3f79a2;
   font-size: 12px;
-  display: block;
+  display: inline-block;
   height: 29px;
   line-height: 14px;
   padding: 5px 10px;
@@ -6579,16 +6579,26 @@ opacity: .5
   font-weight: 300;
 }
 .mtable tr:nth-of-type(2n+1) {
-  border-bottom: 1px solid #233E4A;
+  border-bottom: 1px solid #2D4E5D;
 }
 .mtable tr:nth-of-type(2n) {
-  background: linear-gradient(to right, rgb(40, 47, 53) 0%, rgba(46, 51, 55, 0) 70%, rgba(46, 51, 55, 0) 100%);
+  background: linear-gradient(to right, rgb(56, 66, 74) 0%, rgba(46, 51, 55, 0) 70%, rgba(46, 51, 55, 0) 100%);
   background-attachment: fixed;
-  border-bottom: 1px solid #233E4A;
+  border-bottom: 1px solid #2D4E5D;
+}
+.mtable tr:hover{
+  background: rgb(64, 75, 84);
+}
+.mtable tr:hover sup{
+  display: block!important;
+  opacity: 1!important;
+}
+.mtable .m-item{
+  cursor: pointer;
 }
 .mtable td{
   border-top:0;
-  padding: 5px 5px;
+  padding: 7px 5px;
   vertical-align: middle!important;
   line-height: 1!important;
 }
@@ -6609,7 +6619,7 @@ opacity: .5
   display: inline-block;
 }
 .mtable .td-m .mp1 sup,.mtable .td-m .mp2 sup{
-  display: block;
+  display: none;
   left: 50%;
   position: absolute;
   margin-left: -8px;
@@ -6621,9 +6631,11 @@ opacity: .5
   color: #fff;
   line-height: 17px;
   text-align: center;
+  opacity: 0;
+  transition: all .2s ease;
 }
 .mtable .td-m .mp1 img,.mtable .td-m .mp2 img{
-  width: 30px;
+  width: 25px;
 }
 .mtable .tn1{
   text-align: right;
@@ -6659,6 +6671,8 @@ opacity: .5
 .mtable .tname{
   font-size: 13px;
   width: 200px;
+  padding: 5px 0;
+  font-size: 11px;
 }
 .mtable .tname a{
   color:#a6c6cb;
@@ -6670,9 +6684,14 @@ opacity: .5
   text-decoration: none;
 }
 .mtable .tname em{
-  display: block;
-  color:#3f79a2;
+  display: inline-block;
+  font-style: normal;
+  color: #7D8D9A;
   font-weight: 400;
+  margin: 0 5px;
+  background: #37424C;
+  font-size: 10px;
+  padding: 0px 5px;
 }
 .mtable .ticon{
   width: 30px;
@@ -6683,11 +6702,9 @@ opacity: .5
   height: 25px;
 }
 .mtable .tdate{
-  text-transform: uppercase;
-  color:#2faee7;
-  font-weight: 300;
   width: 100px;
   text-align: center;
+  font-size: 12px;
 }
 .mtable .mscore{
   font-size: 14px;
@@ -6736,6 +6753,160 @@ opacity: .5
   .dice-win:active,
   .dice-win:focus{
   color: #2faee7;
+  text-decoration: none;
+}
+.mlist-wr{
+  position: relative;
+}
+.mlist-wr .mlist{
+  margin-right: 330px;
+  position: relative;
+}
+.mlist-wr .m-hot{
+  width: 340px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-right: -30px;
+}
+.m-top-block{
+    text-align: center;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(68, 93, 115, 0.43) 100%);
+    margin-bottom: 25px;
+    padding: 20px 0;
+}
+.m-top-block:hover,
+  .m-top-block:active,
+  .m-top-block:focus{
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(68, 93, 115, 0.8) 100%);
+}
+.m-top-block table{
+  width: 100%;
+}
+.m-top-block table td{
+  padding: 10px 0 15px;
+}
+.m-top-block .mt1 {
+  text-align: left;
+  padding-left: 15px;
+}
+.m-top-block .mt2 {
+  text-align: right;
+  padding-right: 15px;
+}
+.m-top-block .mtp {
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  line-height: 41px;
+  padding: 0;
+  position: relative;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.m-top-block .mtp img {
+  max-width: 100%;
+}
+.m-top-block .mtp b {
+  display: block;
+  left: 50%;
+  position: absolute;
+  margin-left: -8px;
+  background: rgba(0, 0, 0, 0.33);
+  border-radius: 20px;
+  width: 18px;
+  height: 18px;
+  color: #fff;
+  line-height: 20px;
+  bottom: -9px;
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
+}
+/*mtp*/
+.m-top-block .time{
+  display: block;
+  font-size: 11px;
+  margin-top: 5px;
+  color: #eee;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.mh-top {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    font-weight: 300;
+    padding: 10px 0px 0px;
+    margin-bottom: -10px;
+}
+.mh-top span{
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+}
+.mh-top span:after{
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKYAAAABCAYAAABUkdUhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFVJREFUeNpiPHfuXA4DA8MfIH7GAAGMUPo/EkYG6GKE+NjE/qHJMeCx8z8ec9HFqeE2Qv7G5TZSwgefHlzhxEBC2Pwn0nxKzcIWNtjkCPkbQw9AgAEA+HtQbeDgfWQAAAAASUVORK5CYII=');
+  top: -6px;
+  left: 100%;
+  position: absolute;
+  margin-left: 0px;
+}
+.mh-top span:before{
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKYAAAABCAYAAABUkdUhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE9JREFUeNpiPHfuHCMDAwMIIwNGJIwsho3GpgeXHDF8bHai20uuWejuYiLSfAYS7CSkh9iwpjQM0fUTEza4wp6Jim7DZed/KC0FxCwAAQYAvF4D2A1GCIQAAAAASUVORK5CYII=');
+  top: -6px;
+  right: 100%;
+  position: absolute;
+  margin-right: 0px;
+}
+.m-top-link{
+  text-decoration: none;
+  line-height: 1;
+  display: table;
+  table-layout: fixed;
+  margin: 15px 0 0;
+  width: 100%;
+}
+.m-top-link span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.m-top-link span i{
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-style: normal;
+  color:#a6c6cb;
+}
+.m-top-link span:first-child{
+  text-align: right;
+  width: 40%;
+  padding-left:10px;
+}
+.m-top-link span:last-child{
+  text-align: left;
+  width: 40%;
+  padding-right:10px;
+}
+.m-top-link em{
+  font-style: normal;
+  color: #fff;
+  font-weight: 300;
+  display: inline-block;
+  padding: 0 5px;
+}
+.m-top-link:hover,
+  .m-top-link:active,
+  .m-top-link:focus{
+  color: #fff;
   text-decoration: none;
 }
 /*states*/

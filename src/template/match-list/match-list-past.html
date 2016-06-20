@@ -12,8 +12,8 @@
         <th></th>
       </thead>
 
-      {% for i in 0..10 %}
-        <tr data-id="i">
+      {% for i in 0..4 %}
+        <tr class="m-item tip" data-href="/ссылка на страницу матча" data-placement="top" data-container="body" title="Esports Championship League - Америка | Регулярный сезон" itemscope="itemscope" itemtype="https://schema.org/Event">
           <td class="ticon">
             
           </td>
@@ -21,7 +21,9 @@
           <td class="td-m">
             <a class="tn1" href="">Secret</a>
             <a href="" class="mp1"><sup>11</sup><img src="http://game-tournaments.com/media/logo/_60/582-no.png"></a>
-            <span class="mscore">VS</span>
+            <span class="mscore">
+              <span onclick="return show_score(this,1);" title="Показать счет матча" data-time="" data-score="1 : 0" data-txt="счет" data-mid="31564" class="mbutton tresult rshow">1 : 0</span>
+            </span>
             <a href="" class="mp2"><sup>2</sup><img src="http://game-tournaments.com/media/logo/_60/582-no.png"></a>
             <a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a>
           </td>

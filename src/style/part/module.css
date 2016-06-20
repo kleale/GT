@@ -110,11 +110,11 @@
         background: #2C4A58;
         color:$link-light-blue;
         border-radius: 50px;
-        margin: 0 2px;
+        margin: 0 4px;
         border: 1px solid rgba(3, 105, 153, 0.1);
-        padding: 9px 0 0;
-        width: 32px;
-        height: 32px;
+        padding: 8px 0 0;
+        width: 30px;
+        height: 30px;
         line-height: 1;
         
         &:active,

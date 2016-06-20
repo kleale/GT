@@ -70,6 +70,32 @@
     //tip
     $('.tip').tooltip();
     
+    // Match list links on tr
+    /*
+    $('.m-item').click(function(e) {
+        e.preventDefault(); e.stopPropagation();
+        window.location.href = $(e.currentTarget).data().href;
+    });
+    */
+    $('.m-item').on('click', 'tr', function (e) {
+        var $this = $(e.currentTarget);
+
+        if ($this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
+            if (e.ctrlKey == true) {
+                window.open($this.attr('data-href'));
+            } else {
+                window.location.href = $this.attr('data-href');
+            }
+        }
+    }).on('mousedown', 'tr', function (e) {
+        var $this = $(e.currentTarget);
+
+        if (e.which === 2 && $this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
+            window.open($this.attr('data-href'));
+        }
+    });
+    
+    
   }); //end ready
 
 }(jQuery));
