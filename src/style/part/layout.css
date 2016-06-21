@@ -2,6 +2,12 @@
   Layout
 */
 
+body{
+  @media (max-width: $XM) {
+    padding-left: 50px;
+  }
+}
+
 /*
   Breadcrums Bar
 */

@@ -162,6 +162,10 @@
       margin: 0 10px;
       position: relative;
       display: inline-block;
+      
+      @media (max-width: $SM) {
+        display: none
+      }
       sup{
         display: none;
         left: 50%;
@@ -219,6 +223,10 @@
     padding: 5px 0;
     font-size: 11px;
     
+    @media (max-width: $XM) {
+      display: none;
+    }
+    
     a{
       color:$link-light-blue;
       
@@ -252,6 +260,15 @@
     width: 100px;
     text-align: center;
     font-size: 12px;
+    
+    @media (max-width: $XM) {
+      width: auto;
+    }
+  }
+  .tpic{
+    @media (max-width: 600px) {
+      display: none
+    }
   }
   .mscore{
     font-size: 14px;
@@ -308,9 +325,14 @@
 
 .mlist-wr{
   position: relative;
+  
   .mlist{
     margin-right: 330px;
     position: relative;
+    
+    @media (max-width: $XM) {
+      margin-right: 0;
+    }
   }
   .m-hot{
     width: 340px;
@@ -321,6 +343,12 @@
     overflow-x: hidden;
     overflow-y: auto;
     margin-right: -30px;
+    
+    @media (max-width: $XM) {
+      width: auto;
+      margin-right: 0px;
+      position: relative auto auto auto auto;
+    }
   }
 }
 

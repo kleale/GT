@@ -240,6 +240,10 @@
     font-size: 12px;
     line-height: 26px;
     cursor: pointer;
+  
+    @media (max-width: $XM) {
+      display:none;
+    }
     
     &:hover,
     &:active,

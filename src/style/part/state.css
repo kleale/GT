@@ -86,6 +86,7 @@
 } /*htip*/
 
 
+@media (min-width: $XM) {
 .toggled_stream{
   
   .srteamview{
@@ -96,7 +97,7 @@
     }
   }
   .srteamtoggle{
-    width:60px;
+      width:60px;
     
     .player-menu{
       display: block;
@@ -129,6 +130,7 @@
   .stmblocks{
     display: none;
   }
+}
 }
 
 #stream-compress{

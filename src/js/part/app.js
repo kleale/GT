@@ -75,26 +75,27 @@
     $('.m-item').click(function(e) {
         e.preventDefault(); e.stopPropagation();
         window.location.href = $(e.currentTarget).data().href;
-    });
+    });http://shahinalborz.se/2014/04/solution-make-an-entire-table-row-clickable/
     */
+    // на локале не срабатывает, но должен.
+    // вот еще пример http://shahinalborz.se/2014/04/solution-make-an-entire-table-row-clickable/
     $('.m-item').on('click', 'tr', function (e) {
-        var $this = $(e.currentTarget);
+            var $this = $(e.currentTarget);
 
-        if ($this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
-            if (e.ctrlKey == true) {
-                window.open($this.attr('data-href'));
-            } else {
-                window.location.href = $this.attr('data-href');
+            if ($this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
+                if (e.ctrlKey == true) {
+                    window.open($this.attr('data-href'));
+                } else {
+                    window.location.href = $this.attr('data-href');
+                }
             }
-        }
-    }).on('mousedown', 'tr', function (e) {
-        var $this = $(e.currentTarget);
+        }).on('mousedown', 'tr', function (e) {
+            var $this = $(e.currentTarget);
 
-        if (e.which === 2 && $this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
-            window.open($this.attr('data-href'));
-        }
-    });
-    
+            if (e.which === 2 && $this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
+                window.open($this.attr('data-href'));
+            }
+        });
     
   }); //end ready
 
