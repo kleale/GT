@@ -7,7 +7,7 @@
 //= ../assets/js/perfect-scrollbar.jquery.min.js
 //= ../assets/js/highcharts.js
 //= ../assets/js/highcharts-more.js
-
+//= ../assets/js/jquery.countdown.min.js
 
 /*
  * Custom

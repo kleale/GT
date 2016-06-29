@@ -121,12 +121,12 @@
   }
     
   tr:nth-of-type(2n+1) {
-    border-bottom: 1px solid #2D4E5D;
+    border-bottom: 1px solid #4c4c4c;
   }
   tr:nth-of-type(2n) {
     background: linear-gradient(to right, rgb(56, 66, 74) 0%, rgba(46, 51, 55, 0) 70%, rgba(46, 51, 55, 0) 100%);
     background-attachment: fixed;
-    border-bottom: 1px solid #2D4E5D;
+    border-bottom: 1px solid #4c4c4c;
   }
   
   tr:hover{
@@ -242,10 +242,10 @@
       font-style: normal;
       color: #7D8D9A;
       font-weight: 400;
-      margin: 0 5px;
       background: #37424C;
       font-size: 10px;
-      padding: 0px 5px;
+      padding: 1px 3px;
+      border-radius: 2px;
     }
   }
   .ticon{
@@ -311,7 +311,7 @@
 .dice-win{
   font-size: 22px;
   cursor: pointer;
-  color: $link-white-active;
+  color: $green;
   
   &:hover,
   &:active,
@@ -327,17 +327,21 @@
   position: relative;
   
   .mlist{
-    margin-right: 330px;
+    margin-right: 350px;
     position: relative;
+    
+    .nav-pager{
+      margin-left: -30px;
+    }
     
     @media (max-width: $XM) {
       margin-right: 0;
     }
   }
   .m-hot{
-    width: 340px;
+    width: 320px;
     top: 0;
-    right: 0;
+    right: 30px;
     bottom: 0;
     position: absolute;
     overflow-x: hidden;
@@ -353,43 +357,66 @@
 }
 
 .m-top-block{
-    text-align: center;
-    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(68, 93, 115, 0.43) 100%);
-    margin-bottom: 25px;
-    padding: 20px 0;
+  text-align: center;
+  /*background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(68, 93, 115, 0.43) 100%);
+*/
+  margin: 0;
+  padding: 0 0 10px 0;
+  overflow: hidden;
 
   &:hover,
   &:active,
   &:focus{
+    /*
     background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(68, 93, 115, 0.8) 100%);
+    */
   }
+  
+  &.live .m-top-cont:after{
+    position: absolute 0 -11px * *;
+    content: 'LIVE';
+    background: #ea6465;
+    padding: 2px 20px 0 10px;
+    color: #fff;
+    font-size: 12px;
+    transform: skewX(15deg);
+    font-style: italic;
+  }
+  
   
   table{
     width: 100%;
+    
     td{
-      padding: 10px 0 15px;
+      padding: 0;
+      
+      &:first-child{
+        width:42%;
+      }
+      &:last-child{
+        width:42%;
+      }
     }
   }
   
-    .mt1 {
-      text-align: left;
-      padding-left: 15px;
-    }
-    .mt2 {
-      text-align: right;
-      padding-right: 15px;
-    }
-    .mtp {
-        display: inline-block;
-        height: 45px;
-        width: 45px;
-        line-height: 41px;
-        padding: 0;
-        position: relative;
-        border-radius: 50%;
-        margin-bottom: 10px;
+  .mt1 {
+    padding-left: 10px;
+  }
+  .mt2 {
+    padding-right: 10px;
+  }
+
+  figure {
+      display: inline-block;
+      width: 100%;
+      line-height: 40px;
+      padding: 0;
+      position: relative;
+      border-radius: 50%;
+      margin: 0 0 15px 0;
+
       img {
-        max-width: 100%;
+        max-width: 35px;
       }
       b {
         display: block;
@@ -407,7 +434,8 @@
         font-weight: normal;
         text-align: center;
       }
-    }/*mtp*/
+    } /*figure*/
+  
     .time{
       display: block;
       font-size: 11px;
@@ -417,93 +445,168 @@
       text-decoration: none;
     }
 }
-.mh-top {
-    font-size: 16px;
+.m-top-cont{
+  border-left: 1px solid rgba(238,238,238,0.2);
+  border-bottom: 1px solid rgba(238,238,238,0.2);
+  border-right: 1px solid rgba(238,238,238,0.2);
+  margin-top: -10px;
+  padding: 20px 0 10px 0;
+  position: relative;
+  
+  &:hover{
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  u {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: #fff;
+    font-style: normal;
+    line-height: 14px;
     text-decoration: none;
-    position: relative;
-    text-align: center;
-    margin: 0;
+  }
+  em{
+    font-style: normal;
+    color: #f4b83b;
     font-weight: 300;
-    padding: 10px 0px 0px;
-    margin-bottom: -10px;
+    display: inline-block;
+    padding: 0 5px;
+    width: 60px;
+    line-height: 31px;
+    border-radius: 40px;
+    border: 1px solid rgb(84, 88, 91);
+    font-size: 19px;
+    position: relative;
+    margin: -10px 5px;
+  }
+  
+}
+.mh-top {
+  font-size: 13px;
+  color: $green;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  font-weight: 300;
+  padding: 5px 0px 0px;
+  margin: 0px;
   
   span{
     position: relative;
     display: inline-block;
     padding: 0 10px;
+    text-transform: uppercase;
+    font-weight: 500;
     
+    i{
+      width:40px;
+      height: 40px;
+      display: block;
+      margin: 0 auto;
+    }
   
     &:after{
       content: inline(../img/hline1.png);
-      position: absolute -6px * * 100%;
+      position: absolute 34px * * 100%;
       margin-left: 0px;
+      
     }
     &:before{
       content: inline(../img/hline.png);
-      position: absolute -6px 100% * *;
+      position: absolute 34px 100% * *;
       margin-right: 0px;
     }
   }
 }
 .m-top-link{
   text-decoration: none;
-  line-height: 1;
-  display: table;
-  table-layout: fixed;
-  margin: 15px 0 0;
-  width: 100%;
+  position: absolute 0 0 0 0;
+  display: block;
+  z-index: 1;
+}
+
+.bet-wms {
+  .prwms_ico b{
+    font-size: 30px;
+  }
+  .modal-title{
+    margin: 10px 0
+  }
+  .modal-dialog{
+    @media (min-width: 768px){
+      width: 780px;
+      margin: 50px auto;
+    }
+  }
+  h2{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+.betheader{
+  margin: -15px -15px 0 -15px;
+  padding: 30px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  position: relative;
+
+  &:after{
+    content:'';
+    display: block;
+    width:1px;
+    height: 100%;
+    background: #fff;
+    opacity: .2;
+    position: absolute 0 50% * *;
+  }
   
-  span {
-    display: table-cell;
-    vertical-align: middle;
+  .mop1,
+  .mop2{
+    text-align: center;
+  }
+    .teamlogo{
+      position: relative;
+      margin-bottom: 30px;
+
+      .country{
+        position: absolute * * -20px 50%;
+        margin-left: -12px;
+      }
+    }
+    .mteamname{
+      a{
+        color:#fff;
+      }
+    }
+  .maction{
+    text-align: center;
     
-    i{
+    span{
+      background: #2B526E;
       display: inline-block;
-      max-width: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      color: #fff;
       font-style: normal;
-      color:$link-light-blue;
+      color: #A6C6CB;
+      font-weight: 600;
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      line-height: 51px;
+      border-radius: 50px;
+      border: 1px solid rgba(166, 198, 203, 0.42);
+      font-size: 22px;
+      position: relative;
+      margin: 35px 5px;
     }
-    
-    &:first-child{
-      text-align: right;
-      width: 40%;
-      padding-left:10px;
-    }
-    &:last-child{
-      text-align: left;
-      width: 40%;
-      padding-right:10px;
-    }
-  }
-  em{
-    font-style: normal;
-    color: #fff;
-    font-weight: 300;
-    display: inline-block;
-    padding: 0 5px;
-  }
-  
-  &:hover,
-  &:active,
-  &:focus{
-    color: $link-light-blue-active;
-    text-decoration: none;
   }
 }
-
-.pr-wms{
-  
+.bets-block {
+    padding: 10px 30px;
+    background: #3B4145;
+    margin: 0 -15px;
 }
-
-
-
-
-
-
 
 
 

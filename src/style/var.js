@@ -43,7 +43,7 @@ module.exports = {
     // bg images
     "$section_bg_1": "section_bg_1.jpg",
   
-    "$green": "#44930a",
+    "$green": "#82ac4e",
     "$red": "#ea6465",
     "$subgreen": "#e8f39a",
     "$blue": "#037db5",

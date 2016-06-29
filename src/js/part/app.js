@@ -97,6 +97,15 @@
             }
         });
     
+    
+    // countdown on top match list
+    $('[data-countdown]').each(function() {
+      var $this = $(this), finalDate = $(this).data('countdown');
+      $this.countdown(finalDate, function(event) {
+        $this.html(event.strftime('%D дней %H:%M:%S'));
+      });
+    });
+    
   }); //end ready
 
 }(jQuery));
