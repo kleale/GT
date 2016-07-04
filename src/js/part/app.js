@@ -59,6 +59,24 @@
         }
     });
     
+    //icon-pop
+    $('.icon-pop').popover({
+        'html': true,
+        'trigger': 'hover',
+        'placement': 'auto bottom',
+        'container': 'body',
+        'template':'<div class="popover htip i-pop"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"></div></div></div>'
+    });
+    
+    //tour-name-pop
+    $('.tour-pop').popover({
+        'html': true,
+        'trigger': 'hover',
+        'placement': 'auto bottom',
+        'container': 'body',
+        'template':'<div class="popover htip t-pop"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"></div></div></div>'
+    });
+    
     // scrolls in tabs and blocks
     $('.tse-sc').perfectScrollbar(); 
     
@@ -97,12 +115,15 @@
             }
         });
     
+    // checkbox to switch
+    $("[name='switch']").bootstrapSwitch();
+    
     
     // countdown on top match list
     $('[data-countdown]').each(function() {
       var $this = $(this), finalDate = $(this).data('countdown');
       $this.countdown(finalDate, function(event) {
-        $this.html(event.strftime('%D дней %H:%M:%S'));
+        $this.html(event.strftime('До начала %H:%M:%S'));
       });
     });
     
