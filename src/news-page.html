@@ -1,0 +1,158 @@
+{% set title = "NEWS Page" %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en"><!-- ADD -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>{{ title }}</title>   
+  <!-- Import fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+   <!-- Import bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  <!-- Import main styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+    <!--[if lt IE 10]>
+  <link rel="stylesheet" href="assets/css/ie.css">
+  <![endif]-->
+</head>
+<body class="csgo">
+  {% include "template/bar.html" %}
+  
+  <div class="container">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup" style="height:60px;"></div>
+    
+    <section class="newstop newstop_page" style="background-image:url(http://game-tournaments.com/media/news/pic-20160705-1260x863-5619517471.jpeg)">
+      <div>
+        <ul class="news-games">
+          <li class="active"><a href="#!"><img src="http://game-tournaments.com/html/img/logo-582.png" alt="Dota 2">#Dota 2</a></li>
+        </ul>
+        <h2>Новости киберспорта: <strong>#Dota 2</strong></h2>
+        <div class="mlt-filter mlt-filter_nl">
+            <input id="mlt-filter" type="text" placeholder="Введите Команду, игрока, турнир, хештег для поиска">
+          </div>
+      </div>
+    </section>
+    
+    <section class="news-text m-even">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="time"><i>20 апреля 2016</i></div>
+          <h1>В Юго-Восточной Азии запущен киберспортивный телеканал</h1>
+          <div class="news-desc">
+            <p>Компания Astro Malaysia Holdings запустила в Юго-Восточной Азии киберспортивный телеканал под названием&nbsp;eGG (Every Good Game). Канал будет работать в режиме 24/7, на нем будут освещаться дисциплины&nbsp;Dota 2,&nbsp;CS:GO,&nbsp;League of&nbsp;Legends,&nbsp;Hearthstone,&nbsp;Heroes of&nbsp;the Storm и&nbsp;StarCraft II.&nbsp;</p>
+            <p>Комментарий главы спортивного направления Astro, Ли Чунг Хая:&nbsp;"В 2015 году&nbsp;Astro первым в Юго-Восточной Азии транслировал в прямом эфире чемпионат мира по Dota 2.&nbsp;TI5 тогда был чрезвычайно популярен среди молодежи, что стимулировало нас на трансляцию большего количества киберспортивных турниров, что позволит охватить несколько миллионов зрителей. Мы считаем, что киберспорт лучше всего подходит для трансляции на больших экранах, так что теперь поклонники смогут наслаждаться любимыми чемпионатами в HD-качестве, также, как любители футбола. В отличие от традиционных видов спорта, где люди болеют за конкретную команду или игроков, &nbsp;поклонники киберспорта привязаны к самой игре. Создание подобного сообщества может внести элемент социальной активности и движения".</p>
+            <p>Первыми турнирами, которые будут показаны по новому телеканалу, станут&nbsp;<a href="http://game-tournaments.com/csgo/esports-championship-series-season-1">Esports Championship Series</a>, <a href="http://game-tournaments.com/csgo/eleague-season-1">ELEAGUE</a> и&nbsp;<a href="http://game-tournaments.com/dota-2/international-2016">The International 2016</a>.</p>
+            <p>Astro Malaysia Holdings являются ведущей кабельным оператором в Малайзии и Юго-Восточной Азии. Клиентская база&nbsp;Astro насчитывает 4,8 млн. человек. Компания предлагает своим абонентам 183 канала, из которых 54 транслируют в качестве HD.&nbsp;</p>
+
+            <div class="tags">
+              <i class="gti gti-tags"></i>
+              <a href="/dota-2/international">international</a>
+            </div>
+          </div>
+          <div class="news-com">
+            <div class="block" id="m-com">
+              <div class="bh clearfix">
+                <ul class="stm_nav_block" role="tablist" style="display: table;">
+                  <li class="active"><a href="#c-com" role="tab" data-toggle="tab"><i class="gti-comments-o"></i> <span>GT 123</span></a>
+                  </li><li><a href="#c-vk" role="tab" data-toggle="tab"><i class="gti-vk"></i><span>123</span></a>
+                  </li><li><a href="#c-fb" role="tab" data-toggle="tab"><i class="gti-facebook"></i>  <span>23</span></a>
+                </li></ul>
+              </div><!-- bh -->
+
+              <div class="tab-content">
+                <div class="tab-pane active" role="tabpanel" id="c-com">
+                  <div class="comblock">
+                    <div class="tse-sc tse-com ps-container ps-theme-default" data-ps-id="0c97b002-cc78-9e6a-4c7d-3fcd02fac2a3">
+                        <div class="tse-content">
+                          <ul class="m-com-list">
+                            {% for i in 0..4 %}
+                            <li>
+                              <a href=""><img src="img/uava.png" alt=""></a>
+                              <div>
+                                <b>BorodachBets</b> • 
+                                <span>27 февраля, 23:49</span>
+                                <p>
+                                  ВП плохо отыгрывали свои последние игры, проиграли даже МБ которые казалось бы должны были отлететь 2-0, но всё произошло наоборот:) Ликвиды тоже играли очень слабо, поэтому матч спорный. СТавлю 500$ на один из матчей мажора, скрины в группе
+                                </p>
+                              </div>
+                            </li>
+                            {% endfor %}
+                          </ul>
+
+                        </div>
+                    <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+
+                    <!-- текстарея их чата -->
+
+                    <div class="chat-action">
+                      <div class="chat-text">
+                        <form method="POST" action="chat" name="msg">
+                          <textarea name="txt" id="chat_txt" placeholder="Комментировать" onkeypress="if (event.keyCode==10 || (event.ctrlKey &amp;&amp; event.keyCode==13)) {chat_msg(); return false;}"></textarea>
+                          <a onclick="chat_msg();" class="btn btn-chat">OK</a>
+                          <a id="emotic-btn" class="emotic-btn"><i class="gti-smile-o"></i></a>
+                          <div class="emo_block" id="emo_block">
+                            <div class="tse-sc stickerer ps-container ps-theme-default" id="stickerer" data-ps-id="da3f24bc-3608-5b3d-ec2c-4c866ba45514">
+                              <div class="tse-content">
+                                <div class="stickers-list">
+                                  <a onclick="insert_smile('angry');">
+                                    <img src="http://game-tournaments.com/media/smile/angry.png" title="angry">
+                                  </a>
+                                </div>
+                              </div>
+                            <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>    
+                          </div>
+                        </form>
+                      </div>
+                      <div class="mmore visible" id="mmore" onclick="chat_scroll_down()">Новые сообщения</div>
+                    </div>
+                    <!-- //текстарея их чата -->
+                  </div>
+                </div><!-- #c-com -->
+                <div class="tab-pane" role="tabpanel" id="c-vk">
+
+                </div><!-- #c-vk -->
+                <div class="tab-pane" role="tabpanel" id="c-fb">
+
+                </div><!-- #c-fb -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="m-hot">
+            {% include "template/match-list/match-top.html" %}
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="bn">
+      <img src="img/ad.jpg" alt="">
+    </div>
+    {% include "template/footer.html" %}
+  </div>
+  
+  <!--Import jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Site Sripts -->
+  <script src="/js/main.js"></script>
+
+</body>
+</html>

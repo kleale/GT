@@ -37,5 +37,9 @@
 /*match-list-page*/
 @import "part/page-match-list.css";
 
+/*news and news-page*/
+@import "part/news.css";
+@import "part/vod-slider.css";
+
 /*states*/
 @import "part/state.css";

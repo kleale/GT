@@ -1,0 +1,85 @@
+{% set title = "NEWS LIST Page" %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en"><!-- ADD -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>{{ title }}</title>   
+  <!-- Import fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+   <!-- Import bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  <!-- Import main styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+    <!--[if lt IE 10]>
+  <link rel="stylesheet" href="assets/css/ie.css">
+  <![endif]-->
+</head>
+<body class="csgo">
+  {% include "template/bar.html" %}
+  
+  <div class="container">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup" style="height:60px;"></div>
+    
+    <section class="newstop" style="background-image:url(http://game-tournaments.com/media/news/no.jpg)">
+      <div>
+        <ul class="news-games">
+          <li class="active"><a href="#!"><img src="http://game-tournaments.com/html/img/logo-582.png" alt="Dota 2">#Dota 2</a></li>
+          <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-704.png" alt="CS:GO">#CS:GO</a></li>
+          <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-313.png" alt="League of Legends">#LoL</a></li>
+          <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-758.png" alt="Heroes of the Storm">#HOTS</a></li>
+          <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-755.png" alt="HearthStone">#HS</a></li>
+        </ul>
+        <h2>Новости киберспорта: <strong>#Dota 2</strong></h2>
+        <div class="mlt-filter mlt-filter_nl">
+            <input id="mlt-filter" type="text" placeholder="Введите Команду, игрока, турнир, хештег для поиска">
+          </div>
+      </div>
+    </section>
+    
+    {% include "template/vod-slider.html" %}
+    
+    <section class="newslist m-even">
+      <div class="row">
+        <div class="col-md-7">
+          {% include "template/match-page/section-news.html" %}
+          {% include "template/pager.html" %}
+        </div>
+        <div class="col-md-5">
+          {% include "template/match-page/section-soc.html" %}
+          {% include "template/pager.html" %}
+        </div>
+      </div>
+    </section>
+
+   
+    <div class="bn">
+      <img src="img/ad.jpg" alt="">
+    </div>
+    {% include "template/footer.html" %}
+  </div>
+  
+  <!--Import jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Site Sripts -->
+  <script src="/js/main.js"></script>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 */
 
 .block-menu{
-  
+  padding-right:15px; 
   i{
     vertical-align: middle;
   }
@@ -29,7 +29,7 @@
     padding: 0 20px 0 0;
     
     li{
-      margin: 15px 0 0 0;
+      margin: 30px 0 0 0;
     
       div{
         margin-left: 110px;

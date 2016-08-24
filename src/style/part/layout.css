@@ -410,7 +410,6 @@ footer{
   
   .f-soc{
     float: right;
-    margin-top: 20px;
     
     @media (max-width: $XM) {
       text-align:center;

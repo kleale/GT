@@ -50,8 +50,10 @@
         opacity: 1;
       }
     }
+  }
+}
 
-    .mlt-filter{
+.mlt-filter{
       display: inline-block;
       margin-left: 5px;
       position: relative;
@@ -85,8 +87,6 @@
           border-radius: 2px;
           box-shadow: $bsh;
       }
-    }
-  }
 }
 
 .sorter{
@@ -256,7 +256,7 @@
     height: 25px;
   }
   .tdate{
-    width: 100px;
+    width: 120px;
     text-align: center;
     font-size: 12px;
     

@@ -1,0 +1,749 @@
+
+
+<!DOCTYPE html>
+<html>
+<head lang="en"><!-- ADD -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>NEWS LIST Page</title>   
+  <!-- Import fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+   <!-- Import bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  <!-- Import main styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+    <!--[if lt IE 10]>
+  <link rel="stylesheet" href="assets/css/ie.css">
+  <![endif]-->
+</head>
+<body class="csgo">
+  <!-- bar.html -->
+<div class="bar hiddenbar">
+   <span id="menu-toggle" class="opener"><i class="gti-bars"></i></span>
+  <div class="barc">
+    <a href="#!" class="gt-logo"><img src="img/gt-logo.png" alt="Game-tournaments.com"></a>
+    <div class="bar-menu">
+      <div class="bar-block">
+        <a href="#!" class="bar-ava"><img src="img/uava.png" alt="User"></a>
+        <div class="bar-username">
+          <a href="#!" class="bar-name">Алексей Kleale Алексей Kleale</a>
+          <div class="bar-links">
+            <span class="bar-label">pro</span>
+            <a href="#!" class="u-off"><i class="gti-sign-out"></i></a>
+            <a href="#!" class="u-opt"><i class="gti-wrench"></i></a>
+          </div>
+        </div>
+      </div>
+      <ul class="bar-nav-games">
+        <li class="active"><a href="#!"><img src="http://game-tournaments.com/html/img/logo-582.png" alt="Dota 2"></a></li>
+        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-704.png" alt="CS:GO"></a></li>
+        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-313.png" alt="League of Legends"></a></li>
+        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-758.png" alt="Heroes of the Storm"></a></li>
+        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-755.png" alt="HearthStone"></a></li>
+      </ul>
+      <ul class="bar-nav">
+        <li class="active"><a href="#!"><i class="gti-vs"></i> <span>Матчи</span></a></li>
+        <li><a href="#!"><i class="gti-trophy"></i><span>Турниры</span></a></li>
+        <li><a href="#!"><i class="gti-newspaper-o"></i><span>Новости</span></a></li>
+        <li><a href="#!"><i class="gti-users"></i><span>Команды</span></a></li>
+        <li><a href="#!"><i class="gti-user"></i><span>Игроки</span></a></li>
+        <li><a href="#!"><i class="gti-bullhorn"></i><span>Ставки</span></a></li>
+        <li><a href="#!"><i class="gti-bell"></i><span>Прогнозы</span></a></li>
+        <li><a href="#!"><i class="gti-star"></i><span>Рейтинг</span></a></li>
+        <li><a href="#!" ><i class="gti-play-circle-o"></i><span>Медиа</span></a></li>
+        <li><a href="#!"><i class="gti-comments"></i><span>Форум</span></a></li>
+      </ul>
+      <div class="dropers">
+        <div class="s-lang">
+          <div class="dropdown">
+            <a class="dla" id="ddlang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              RU
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ddlang">
+              <li class="active"><a href="#">Русский</a></li>
+              <li><a href="#">English</a></li>
+              <li><a href="#">Italiano</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="s-time">
+          <div class="dropdown">
+            <a class="sub" id="ddtime" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              15:08 (GMT +3:00)
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ddtime">
+              <li><a href="#">12:08 (GMT 0:00)</a></li>
+              <li><a href="#">13:08 (GMT +1:00)</a></li>
+              <li><a href="#">14:08 (GMT +2:00)</a></li>
+              <li class="active"><a href="#">15:08 (GMT +2:00)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sercher">
+      <input type="text" name="" id="" class="form-control" placeholder="Поиск">
+      <a href=""><i class="gti-search"></i></a>
+    </div>
+  </div> 
+</div>
+
+  
+  <div class="container">
+    <!-- breadcrumb.html -->
+<div class="bread">
+  <ol id="breadcumbs" class="breadcrumb hidden-xs">
+    <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+      <a itemprop="url" href="/"><span itemprop="title">Турниры</span></a>
+    </li>
+    <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+      <a title="Dota 2" itemprop="url" href="/dota-2"><span itemprop="title">Dota 2</span></a>
+    </li>
+  </ol>
+</div>
+    <div class="otstup" style="height:60px;"></div>
+    
+    <section class="newstop" style="background-image:url(http://game-tournaments.com/media/news/no.jpg)">
+      <div>
+        <ul class="news-games">
+          <li class="active"><a href="#!"><img src="http://game-tournaments.com/html/img/logo-582.png" alt="Dota 2">#Dota 2</a></li>
+          <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-704.png" alt="CS:GO">#CS:GO</a></li>
+          <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-313.png" alt="League of Legends">#LoL</a></li>
+          <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-758.png" alt="Heroes of the Storm">#HOTS</a></li>
+          <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-755.png" alt="HearthStone">#HS</a></li>
+        </ul>
+        <h2>Новости киберспорта: <strong>#Dota 2</strong></h2>
+        <div class="mlt-filter mlt-filter_nl">
+            <input id="mlt-filter" type="text" placeholder="Введите Команду, игрока, турнир, хештег для поиска">
+          </div>
+      </div>
+    </section>
+    
+    <section class="vod-slider m-odd">
+  <h3>Свежие видео-записи игр</h3>
+  
+  <ul class="clearfix">
+    
+      <li class="col-md-3"><a href=""><img src="https://i.ytimg.com/vi/D5JTmOpJ8_8/mqdefault.jpg" alt="Vod игра такая-то">
+        <span><b>#DOTA2</b> DC vs VoidBoys @ Canada Cup 7, GRAND FINAL</span>
+      </a></li>
+    
+      <li class="col-md-3"><a href=""><img src="https://i.ytimg.com/vi/D5JTmOpJ8_8/mqdefault.jpg" alt="Vod игра такая-то">
+        <span><b>#DOTA2</b> DC vs VoidBoys @ Canada Cup 7, GRAND FINAL</span>
+      </a></li>
+    
+      <li class="col-md-3"><a href=""><img src="https://i.ytimg.com/vi/D5JTmOpJ8_8/mqdefault.jpg" alt="Vod игра такая-то">
+        <span><b>#DOTA2</b> DC vs VoidBoys @ Canada Cup 7, GRAND FINAL</span>
+      </a></li>
+    
+      <li class="col-md-3"><a href=""><img src="https://i.ytimg.com/vi/D5JTmOpJ8_8/mqdefault.jpg" alt="Vod игра такая-то">
+        <span><b>#DOTA2</b> DC vs VoidBoys @ Canada Cup 7, GRAND FINAL</span>
+      </a></li>
+    
+  </ul>
+  
+</section>
+    
+    <section class="newslist m-even">
+      <div class="row">
+        <div class="col-md-7">
+          <!-- /match-page/section-news.html -->
+<div class="block m-news">
+  <div class="bh clearfix">
+    <h3>
+      <i class="ih gti-newspaper-o"></i>
+      Новости
+    </h3>
+    <ul class="block-menu" role="tablist">
+      <li class="active"><a id="k_tab" href="#tzn" role="tab" data-toggle="tab">ВСЕ</a></li>
+      <li><a id="k_graf" href="#tgraf" role="tab" data-toggle="tab"><i class="gti-gtlogo"></i></a></li>
+      <li><a id="k_hist" role="tab" data-toggle="tab" href="#thist"><i class="gti-rss"></i></a></li>
+    </ul>
+  </div><!-- bh -->
+  <div class="tab-content">
+    <div class="tse-sc tse-news">
+        <div class="tse-content">
+          <ul>
+            
+            <li>
+              <a class="npic" href="">
+                <img src="img/news.jpg" alt="">
+              </a>
+              <div>
+                <h4><a href="">
+                  IEM Katowice — дебют обновленного RuHub!
+                </a></h4>
+                <p>
+                  Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+                </p>
+                <u>
+                  <i class="gti-gtlogo"></i> &nbsp; 
+                  29.02.2016   21:21  &nbsp; &nbsp;
+                  
+                  <i class="gti-comments-o"></i> &nbsp; 12
+                </u>
+                <span>
+                  <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                  <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                  <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                  <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+                </span>
+              </div>
+            </li>
+            
+            <li>
+              <a class="npic" href="">
+                <img src="img/news.jpg" alt="">
+              </a>
+              <div>
+                <h4><a href="">
+                  IEM Katowice — дебют обновленного RuHub!
+                </a></h4>
+                <p>
+                  Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+                </p>
+                <u>
+                  <i class="gti-gtlogo"></i> &nbsp; 
+                  29.02.2016   21:21  &nbsp; &nbsp;
+                  
+                  <i class="gti-comments-o"></i> &nbsp; 12
+                </u>
+                <span>
+                  <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                  <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                  <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                  <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+                </span>
+              </div>
+            </li>
+            
+            <li>
+              <a class="npic" href="">
+                <img src="img/news.jpg" alt="">
+              </a>
+              <div>
+                <h4><a href="">
+                  IEM Katowice — дебют обновленного RuHub!
+                </a></h4>
+                <p>
+                  Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+                </p>
+                <u>
+                  <i class="gti-gtlogo"></i> &nbsp; 
+                  29.02.2016   21:21  &nbsp; &nbsp;
+                  
+                  <i class="gti-comments-o"></i> &nbsp; 12
+                </u>
+                <span>
+                  <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                  <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                  <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                  <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+                </span>
+              </div>
+            </li>
+            
+            <li>
+              <a class="npic" href="">
+                <img src="img/news.jpg" alt="">
+              </a>
+              <div>
+                <h4><a href="">
+                  IEM Katowice — дебют обновленного RuHub!
+                </a></h4>
+                <p>
+                  Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+                </p>
+                <u>
+                  <i class="gti-gtlogo"></i> &nbsp; 
+                  29.02.2016   21:21  &nbsp; &nbsp;
+                  
+                  <i class="gti-comments-o"></i> &nbsp; 12
+                </u>
+                <span>
+                  <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                  <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                  <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                  <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+                </span>
+              </div>
+            </li>
+            
+            <li>
+              <a class="npic" href="">
+                <img src="img/news.jpg" alt="">
+              </a>
+              <div>
+                <h4><a href="">
+                  IEM Katowice — дебют обновленного RuHub!
+                </a></h4>
+                <p>
+                  Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+                </p>
+                <u>
+                  <i class="gti-gtlogo"></i> &nbsp; 
+                  29.02.2016   21:21  &nbsp; &nbsp;
+                  
+                  <i class="gti-comments-o"></i> &nbsp; 12
+                </u>
+                <span>
+                  <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                  <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                  <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                  <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+                </span>
+              </div>
+            </li>
+            
+            <li>
+              <a class="npic" href="">
+                <img src="img/news.jpg" alt="">
+              </a>
+              <div>
+                <h4><a href="">
+                  IEM Katowice — дебют обновленного RuHub!
+                </a></h4>
+                <p>
+                  Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+                </p>
+                <u>
+                  <i class="gti-gtlogo"></i> &nbsp; 
+                  29.02.2016   21:21  &nbsp; &nbsp;
+                  
+                  <i class="gti-comments-o"></i> &nbsp; 12
+                </u>
+                <span>
+                  <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                  <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                  <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                  <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+                </span>
+              </div>
+            </li>
+            
+            <li>
+              <a class="npic" href="">
+                <img src="img/news.jpg" alt="">
+              </a>
+              <div>
+                <h4><a href="">
+                  IEM Katowice — дебют обновленного RuHub!
+                </a></h4>
+                <p>
+                  Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+                </p>
+                <u>
+                  <i class="gti-gtlogo"></i> &nbsp; 
+                  29.02.2016   21:21  &nbsp; &nbsp;
+                  
+                  <i class="gti-comments-o"></i> &nbsp; 12
+                </u>
+                <span>
+                  <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                  <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                  <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                  <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+                </span>
+              </div>
+            </li>
+            
+            <li>
+              <a class="npic" href="">
+                <img src="img/news.jpg" alt="">
+              </a>
+              <div>
+                <h4><a href="">
+                  IEM Katowice — дебют обновленного RuHub!
+                </a></h4>
+                <p>
+                  Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+                </p>
+                <u>
+                  <i class="gti-gtlogo"></i> &nbsp; 
+                  29.02.2016   21:21  &nbsp; &nbsp;
+                  
+                  <i class="gti-comments-o"></i> &nbsp; 12
+                </u>
+                <span>
+                  <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                  <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                  <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                  <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+                </span>
+              </div>
+            </li>
+            
+            <li>
+              <a class="npic" href="">
+                <img src="img/news.jpg" alt="">
+              </a>
+              <div>
+                <h4><a href="">
+                  IEM Katowice — дебют обновленного RuHub!
+                </a></h4>
+                <p>
+                  Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+                </p>
+                <u>
+                  <i class="gti-gtlogo"></i> &nbsp; 
+                  29.02.2016   21:21  &nbsp; &nbsp;
+                  
+                  <i class="gti-comments-o"></i> &nbsp; 12
+                </u>
+                <span>
+                  <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                  <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                  <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                  <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+                </span>
+              </div>
+            </li>
+            
+            <li>
+              <a class="npic" href="">
+                <img src="img/news.jpg" alt="">
+              </a>
+              <div>
+                <h4><a href="">
+                  IEM Katowice — дебют обновленного RuHub!
+                </a></h4>
+                <p>
+                  Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+                </p>
+                <u>
+                  <i class="gti-gtlogo"></i> &nbsp; 
+                  29.02.2016   21:21  &nbsp; &nbsp;
+                  
+                  <i class="gti-comments-o"></i> &nbsp; 12
+                </u>
+                <span>
+                  <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                  <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                  <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                  <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+                </span>
+              </div>
+            </li>
+            
+            <li>
+              <a class="npic" href="">
+                <img src="img/news.jpg" alt="">
+              </a>
+              <div>
+                <h4><a href="">
+                  IEM Katowice — дебют обновленного RuHub!
+                </a></h4>
+                <p>
+                  Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+                </p>
+                <u>
+                  <i class="gti-gtlogo"></i> &nbsp; 
+                  29.02.2016   21:21  &nbsp; &nbsp;
+                  
+                  <i class="gti-comments-o"></i> &nbsp; 12
+                </u>
+                <span>
+                  <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                  <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                  <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                  <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+                </span>
+              </div>
+            </li>
+            
+          </ul>
+          <div class="no100"><i class="gti-info-circle"></i> Ничего нет</div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- /section NEWS -->
+          <!-- pager.html -->
+<nav class="nav-pager">
+  <ul class="pagination">
+    <li class="active"><a href="javascript:;">1</a></li>
+    <li><a href="javascript:;">2</a></li>
+    <li><a href="javascript:;">3</a></li>
+    <li><a href="javascript:;">4</a></li>
+    <li><a href="javascript:;">5</a></li>
+    <li class="prr"><a href="javascript:;"><span aria-hidden="true">»</span></a></li>
+  </ul>
+</nav>
+        </div>
+        <div class="col-md-5">
+          <!-- /match-page/section-soc.html -->
+<div class="block m-soc">
+  <div class="bh clearfix">
+    <h3>
+      <i class="ih gti-hand-peace-o"></i>
+      Социальные сети
+    </h3>
+    <ul class="block-menu" role="tablist">
+      <li class="active"><a id="k_tab" href="#tzn" role="tab" data-toggle="tab">ВСЕ</a></li>
+      <li><a id="k_graf" href="#tgraf" role="tab" data-toggle="tab"><i class="gti-vk"></i></a></li>
+      <li><a id="k_hist" role="tab" data-toggle="tab" href="#thist"><i class="gti-facebook"></i></a></li>
+      <li><a id="k_hist" role="tab" data-toggle="tab" href="#thist"><i class="gti-twitter"></i></a></li>
+    </ul>
+  </div><!-- bh -->
+  <div class="tab-content">
+    <div class="tse-sc tse-soc">
+      <div class="tse-content">
+        <ul>
+          
+          <li>
+            <i class="gti-twitter"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="gti-facebook"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="gti-twitter"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="gti-facebook"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="gti-twitter"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="gti-facebook"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="gti-twitter"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="gti-facebook"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="gti-twitter"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="gti-facebook"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="gti-twitter"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="gti-facebook"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="gti-twitter"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="gti-facebook"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="gti-twitter"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          <li>
+            <i class="gti-facebook"></i>
+            <div>
+              <span>
+                Денди
+              </span>
+              <p>
+                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+              </p>
+            </div>
+          </li>
+          
+        </ul>
+        <div class="no100"><i class="gti-info-circle"></i> Ничего нет</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- /section social news -->
+          <!-- pager.html -->
+<nav class="nav-pager">
+  <ul class="pagination">
+    <li class="active"><a href="javascript:;">1</a></li>
+    <li><a href="javascript:;">2</a></li>
+    <li><a href="javascript:;">3</a></li>
+    <li><a href="javascript:;">4</a></li>
+    <li><a href="javascript:;">5</a></li>
+    <li class="prr"><a href="javascript:;"><span aria-hidden="true">»</span></a></li>
+  </ul>
+</nav>
+        </div>
+      </div>
+    </section>
+
+   
+    <div class="bn">
+      <img src="img/ad.jpg" alt="">
+    </div>
+    <!-- footer.html -->
+<footer class="footer">
+  <div class="f-coppy">
+    <copy>© 2015 GT</copy> &bull; 
+    <ul>
+      <li><a href="">О проекте</a></li>
+      <li><a href="">Правила</a></li>
+      <li><a href="">Реклама</a></li>
+      <li><a href="">Партнеры</a></li>
+    </ul>
+  </div>
+  <div class="f-soc">
+    Мы в соцсетях
+    <a href=""><i class="gti-vk"></i></a>
+    <a href=""><i class="gti-facebook"></i></a>
+    <a href=""><i class="gti-twitter"></i></a>
+  </div>
+</footer>
+  </div>
+  
+  <!--Import jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Site Sripts -->
+  <script src="/js/main.js"></script>
+
+</body>
+</html>
