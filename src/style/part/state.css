@@ -311,3 +311,40 @@
     background-image: url(/html/imgbrand/sbrand_vital.png);
 }
 /* ------------------------------------------ */
+
+
+/*HOVERS*/
+.hi-1::after {
+    border-radius: 50px;
+    box-sizing: content-box;
+    content: "";
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+}
+.hi-1 {
+    /*background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;*/
+    transition: background 0.2s ease 0s, color 0.2s ease 0s;
+    position: relative;
+}
+.hi-1::after {
+    box-shadow: 0 0 0 2px #fff;
+    left: -3px;
+    opacity: 0;
+    padding: 3px;
+    top: -3px;
+    transform: scale(0.8);
+    transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+}
+.hi-1a:hover {
+    background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
+    color: #303539;
+}
+.hi-1a:hover *{
+    color: #303539 !important;
+}
+.hi-1a:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}

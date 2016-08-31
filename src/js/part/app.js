@@ -127,6 +127,79 @@
       });
     });
     
+    // news read more slider
+    
+    $('.ns1 ul').owlCarousel({
+      loop:true,
+      navigation: true,
+      navigationText: ["назад","вперед"],
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+              nav:true
+          },
+          600:{
+              items:3,
+              nav:false
+          },
+          1000:{
+              items:5,
+              nav:true,
+              loop:false
+          }
+      },
+      afterInit : function(){
+        //el.find(".owl-item").eq(0).addClass("synced");
+        $(".mlh").width($('.owl-item').width());
+        $(".mlh").height($('.owl-item').height());
+      }
+    });
+    
+    $('.ns2 ul').owlCarousel({
+      loop:true,
+      navigation: true,
+      navigationText: ["назад","вперед"],
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+              nav:true
+          },
+          600:{
+              items:3,
+              nav:false
+          },
+          1000:{
+              items:5,
+              nav:true,
+              loop:false
+          }
+      }
+    });
+    
+    $('.ns3 ul').owlCarousel({
+      loop:true,
+      navigation: true,
+      navigationText: ["назад","вперед"],
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+              nav:true
+          },
+          600:{
+              items:3,
+              nav:false
+          },
+          1000:{
+              items:5,
+              nav:true,
+              loop:false
+          }
+      }
+    });
+    
   }); //end ready
 
 }(jQuery));

@@ -414,13 +414,13 @@
 
       &:after{
         content: inline(../img/hline1.png);
-        position: absolute 34px * * 100%;
+        position: absolute * * 6px 100%;
         margin-left: 0px;
 
       }
       &:before{
         content: inline(../img/hline.png);
-        position: absolute 34px 100% * *;
+        position: absolute * 100% 6px *;
         margin-right: 0px;
       }
     }
@@ -488,16 +488,12 @@
     }
 }
 .m-top-cont{
-  border-left: 1px solid rgba(238,238,238,0.2);
-  border-bottom: 1px solid rgba(238,238,238,0.2);
-  border-right: 1px solid rgba(238,238,238,0.2);
+  border-left: 1px solid rgba(238,238,238,0.1);
+  border-bottom: 1px solid rgba(238,238,238,0.1);
+  border-right: 1px solid rgba(238,238,238,0.1);
   margin-top: -10px;
   padding: 25px 0 16px;
   position: relative;
-  
-  &:hover{
-    background: rgba(255, 255, 255, 0.1);
-  }
   
   sup{
     padding: 6px 5px;
@@ -540,6 +536,11 @@
   position: absolute 0 0 0 0;
   display: block;
   z-index: 1;
+  transition: $tease;
+  
+  &:hover{
+    background:rgba(145, 205, 215, 0.16) url(../img/tile.png) 0 0 repeat;
+  }
 }
 
 .bet-wms {

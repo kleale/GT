@@ -143,7 +143,19 @@
   
 }
 
+/*newsicons*/
 
+[class^="n-i-"], [class*=" n-i-"] {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width:100px;
+  height:100px;
+}
+.n-i-hot{
+  background-image: url(../img/hotnews.svg);
+}
 
 
 

@@ -9,6 +9,7 @@
 //= ../assets/js/highcharts-more.js
 //= ../assets/js/jquery.countdown.min.js
 //= ../assets/js/bootstrap-switch.min.js
+//= ../assets/js/owl.carousel.min.js
 
 /*
  * Custom

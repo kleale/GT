@@ -104,7 +104,7 @@
 }
 .btn-default{
   background: $button-gray;
-  color: #fff;
+  color: #b5b5b5;
   
   &:active,
   &:focus,
