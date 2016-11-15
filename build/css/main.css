@@ -3358,7 +3358,7 @@ Banners
     line-height: 28px;
     font-style: normal;
     display: block;
-    margin: 10px auto -25px;
+    margin: 10px auto -27px;
     width: 26px;
     height: 26px;
     cursor: pointer;
@@ -3633,6 +3633,89 @@ Banners
 .srteamview .iframer{
   position: relative;
   height:460px;
+}
+.srteamview .iframerClicker{
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.srteamview .iframerClicker:before{
+  content:'';
+  display: block;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  height:200px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0) 100%);
+}
+.srteamview .iframerClicker:after{
+  font-family: 'gticons';
+  content: '\f01d';
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  font-size: 100px;
+  margin: -50px 0 0 -20px;
+  line-height: 1;
+  transition: all .2s ease;
+  opacity: .8;
+}
+.srteamview .iframerClicker:hover:after{
+  transform: scale(1.3);
+  opacity: 1;
+}
+.srteamview .iframerClicker .iframerChannel{
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  padding: 15px;
+  max-width: 50%;
+}
+.srteamview .iframerClicker .iframerChannel div{
+  padding-left: 85px;
+}
+.srteamview .iframerClicker .iframerChannel div h4{
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+.srteamview .iframerClicker .iframerChannel div h5{
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.srteamview .iframerClicker .iframerChannel div span{
+  font-size: 14px;
+  display: block;
+}
+.srteamview .iframerClicker .iframerChannel img{
+  width: 70px;
+  float: left;
+}
+.srteamview .iframerClicker img{
+  width:100%;
+}
+.srteamview .iframeBanner{
+  text-align: center;
+  margin-top: -100px;
+  position: relative;
+  padding-bottom: 10px;
+  background: transparent;
+  height: 100px;
+  transition: all .2s ease;
+}
+.srteamview .iframeBanner.active{
+  background: #000;
+  margin-top: 0;
+  padding-bottom: 0;
 }
 .fullscreener{
   top: 20px;
