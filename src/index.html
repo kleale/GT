@@ -2,31 +2,7 @@
 
 <!DOCTYPE html>
 <html>
-<head lang="en"><!-- ADD -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>{{ title }}</title>  
-  <!-- Import fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  
-   <!-- Import bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  
-  <!-- Import main styles -->
-  <link rel="stylesheet" href="/css/main.css">
-  
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-    <!--[if lt IE 10]>
-  <link rel="stylesheet" href="assets/css/ie.css">
-  <![endif]-->
-</head>
+{% include "template/head.html" %}
 <body class="csgo">
   
   {% include "template/bar.html" %}
@@ -259,50 +235,9 @@
     {% include "template/footer.html" %}
   </div>
 
-  
-<!-- Modal STAVKA -->
-<div class="modal prwms st-wms fade" id="stavka" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span >&times;</span></button>
-        
-        <div class="prwms_ico"><b class="gti-dice"></b></div>
-        <h4>
-          Сделать ставку на матч 
-        </h4>
-      </div>
-      <div class="modal-body">
-          
-        Табличка букмекеров
-        <hr>
-        стата?
-        
-      </div>
-      <div class="modal-footer">
-        <i class="gti-info-circle"></i> Текстик о ставках
-      </div>
-    </div>
-  </div>
-</div>
-    
-  
-  <!--Import jQuery-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <!-- jQuery for older IE -->
-  <!--
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  -->
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!-- CHARTs --> 
-  <!--
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/highcharts-more.js"></script>
-  -->
-  <!--<script src="https://code.highcharts.com/modules/exporting.js"></script>-->
-  <!-- Site Sripts -->
-  <script src="/js/main.js"></script>
+
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
 
 </body>
 </html>

@@ -317,39 +317,6 @@ Choosen
 Choosen end
 */
 
-/*
-Modal
-*/
-
-.modal-content {
-  background: color($bg-dropdown l(30%));
-  border-radius: $br;
-  border-width: 0;
-  
-  .modal-header{
-    border-color:color($bg-dropdown l(40%));
-    position: relative;
-    .close{
-      position: absolute 5px 5px * *;
-    }
-  }
-  .modal-footer{
-    border-color:color($bg-dropdown l(40%));
-  }
-}
-
-
-/*
-Modal end
-*/
-
-.label{
-  font-weight: 400;
-}
-.label-dash{
-  background: transparent;
-  border: 1px dashed;
-}
 
 /*
 Tabs mobile

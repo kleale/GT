@@ -282,21 +282,23 @@ Headline
   span{
     position: relative;
     display: inline-block;
+    padding: 0 5px;
   
     &:after{
       content: inline(../img/hline1.png);
-      position: absolute -4px * * 100%;
+      position: absolute -6px * * 100%;
       margin-left: 0px;
     }
     &:before{
       content: inline(../img/hline.png);
-      position: absolute -4px 100% * *;
+      position: absolute -6px 100% * *;
       margin-right: 0px;
     }
   }
 }
 .mtt{
   text-align: center;
+  overflow: hidden;
 }
 .m-time{
   text-align: center;
@@ -384,27 +386,27 @@ Headline
   .m-fast{
     font-size: 18px;
     color: $button-gray-text;
-    background-color: #191E21;
+    background-color: #32373b;
     background-image: inline(../img/tile.png);
     text-align: center;
     width: 40px;
     z-index: 3;
 
-    @media (max-width: $M){
+    @media (max-width: $XM){
       position: fixed 0 0 auto 50px;
       display: table;
       width:calc(100% - 50px);
     }
 
     ul{
-      @media (max-width: $M){
+      @media (max-width: $XM){
         display: table;
         width: 100%;
       }
 
       li{
 
-        @media (max-width: $M){
+        @media (max-width: $XM){
           display: table-cell;
         }
 
@@ -415,7 +417,7 @@ Headline
           height: 40px;
           line-height: 27px;
 
-          @media (max-width: $M){
+          @media (max-width: $XM){
             height: 50px;
             line-height: 37px;
           }

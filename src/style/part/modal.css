@@ -1,0 +1,95 @@
+/*
+Modal general
+*/
+
+.modal-content {
+  background: color($bg-dropdown l(20%));
+  border-radius: $br;
+  border-width: 0;
+  
+  .modal-header{
+    border-color:color($bg-dropdown l(40%));
+    position: relative;
+    .close{
+      position: absolute 5px 5px * *;
+    }
+  }
+  .modal-footer{
+    border-color:color($bg-dropdown l(20%));
+  }
+}
+
+
+/*
+Modal end
+*/
+
+.label{
+  font-weight: 400;
+}
+.label-dash{
+  background: transparent;
+  border: 1px dashed;
+}
+
+/*Прогнозы окно*/
+.prwms{
+  .modal-header{
+    text-align: center;
+    background: color($bg-dropdown l(20%)) inline(../img/tile.png) repeat 50% 50%;
+    .prwms_ico{
+      position: relative;
+      display: inline-block;
+
+      &:after{
+        content: inline(../img/hline1.png);
+        position: absolute 37% * * 120%;
+        margin-left: 0px;
+      }
+      &:before{
+        content: inline(../img/hline.png);
+        position: absolute 37% 120% * *;
+        margin-right: 0px;
+      }
+      b{
+        width: 60px;
+        height: 60px;
+      }
+    }
+    .thumb{
+      margin: 15px 0 5px 0;
+    }
+  }
+  
+  .bc{
+    .table{
+      margin-bottom: 0;
+      .tkf{
+        
+      }
+      td{
+        padding: 5px 2px;
+      }
+      .tn1, .tn2{
+        font-size: 13px;
+      }
+    }
+  }
+  
+  .pr_sind{
+    overflow: hidden;
+    
+    #sind_donut {
+      height: 330px;
+    }
+  }
+  
+  .modal-footer{
+    text-align: center;
+    
+    .label{
+      color: $link-light-blue;
+      margin: 0 5px;
+    }
+  }
+}/*prwms*/

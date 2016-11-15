@@ -1,0 +1,162 @@
+  <!--Import jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Site Sripts -->
+  <script src="/js/main.js"></script>
+
+
+<!--PAGES select-->
+<div style="position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    right: 0px;
+    left:0;
+    text-align:center;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 5px;
+    border-radius: 5px 0px 0px 0px;">
+  <div class="btn-group" role="group" id="hpages">
+    <a href="/index.html" class="m1 btn btn-sm btn-success">Match Page</a>
+    <a href="/matches.html" class="m2 btn btn-sm btn-success">Mathes list</a>
+    <a href="/news-page.html" class="m2 btn btn-sm btn-success">News Page</a>
+    <a href="/news.html" class="m2 btn btn-sm btn-success">News List</a>
+    <a href="/home.html" class="m1 btn btn-sm btn-warning">Home</a>
+    <a href="/404.html" class="m2 btn btn-sm btn-primary">404</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-primary">stickers</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Tournir</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">User</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">User Options</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Team</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Team list</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Player</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Player List</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Bets</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Predict</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Media</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Forum</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Search</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Text</a>
+  </div>
+</div>
+
+
+<!--PAGES navi-->
+<!--STYLE CHANGE-->
+
+{#
+<div style="position: fixed;
+    z-index: 10;
+    bottom: 55px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    border-radius: 3px;">
+  
+  <!-- Some changers -->
+  <!-- 
+  <div class="btn-group" role="group">
+    <a class="bg1 btn btn-sm btn-default active">HEAD BG 1</a>
+    <a class="bg3 btn btn-sm btn-default">BG 3</a>
+    <a class="bg4 btn btn-sm btn-default">BG 4</a>
+  </div>
+  <div class="btn-group" role="group">
+    <a class="p1 btn btn-sm active btn-default">pageBG1</a>
+    <a class="p2 btn btn-sm btn-default">pageBG2</a>
+    <a class="p3 btn btn-sm btn-default">pageBG3</a>
+    <a class="p4 btn btn-sm btn-default">pageBG4</a>
+  </div>
+  <div class="btn-group" role="group">
+    <a class="hd1 btn btn-sm btn-default">Head blue</a>
+    <a class="hd2 btn btn-sm active btn-default">Head light</a>
+  </div>
+  -->
+</div>
+#}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script>
+(function ($) {
+  'use strict';
+
+  $(document).ready(function () {
+    
+    $(function () {
+        setNavigation();
+    });
+
+    function setNavigation() {
+        var path = window.location.pathname;
+        path = path.replace(/\/$/, "");
+        path = decodeURIComponent(path);
+
+        $("#hpages a").each(function () {
+            var href = $(this).attr('href');
+            if (path.substring(0, href.length) === href) {
+                $(this).addClass('active');
+            }
+        });
+    }
+    
+    // style toggle
+    /*
+    $('.m1').click(function (){
+      $('#stylesheet').attr('href','/css/main.css');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.m2').click(function (){
+      $('#stylesheet').attr('href','/css/main1.css');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    */
+    // bg toggle
+    /*
+    $('.bg1').click(function (){
+      $('.cat-header').css('backgroundImage','url(/img/cat-header1.jpg)');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.bg3').click(function (){
+      $('.cat-header').css('backgroundImage','url(http://thelaneorg.com/wp-content/uploads/2013/09/bigstock-Businesswoman-Working-At-Her-O-54866588-copy.jpg)');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    */
+    
+    //page color
+    /*
+    $('.p1').click(function (){
+      $('.page-cat, .page-doc').css('backgroundColor','#f3f9f9');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.p2').click(function (){
+      $('.page-cat, .page-doc').css('backgroundColor','#ffffff');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    */
+    
+    //header color
+    /*
+    $('.hd1').click(function (){
+      $('.subheader').removeClass('subheaderlight');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.hd2').click(function (){
+      $('.subheader').addClass('subheaderlight');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    */
+  }); //end ready
+
+}(jQuery));
+</script>
+<!--.STYLE CHANGE-->
+<!--.PAGES navi-->

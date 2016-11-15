@@ -80,6 +80,7 @@ Highcharts.theme = {
          }
       }
    },
+   exporting: { enabled: false },
    tooltip: {
       backgroundColor: 'rgba(0, 0, 0, 0.85)',
       style: {
@@ -654,13 +655,11 @@ $(function () {
 
 
 /* синдикат Donut */
-
 $(function () {
 
-    //var colors = Highcharts.getOptions().colors;
-  
     // Create the chart
-    $('#sind_donut').highcharts({
+    //var sind_donut = $('#sind_donut').highcharts({
+    var sind_donut = Highcharts.chart('sind_donut', {
         //categories : ['Эксперты', 'Secret'],
         colors: ["#037db5", "#ea6465"],
         chart: {
@@ -692,6 +691,7 @@ $(function () {
           enabled: false
         },
         series: [{
+            animation: false,
             name: 'Эксперты',
             data: [
                     ['London', 84.76],
@@ -703,6 +703,7 @@ $(function () {
               inside: true
             }
         }, {
+            animation: false,
             name: 'Букмекеры',
             data: [
                     ['London', 53.5],
@@ -711,14 +712,14 @@ $(function () {
             size: '40%',
             innerSize: '75%'
         }]
-        
     });
-});
+  
 
-
-/* Sindicat line*/
-$(function () {
-    $('#sind_line').highcharts({
+// Sind Line
+    //var sind_line = $('#sind_line').highcharts({
+      
+    var sind_line = Highcharts.chart('sind_line', {
+      
         colors: ["#2d6185", "#3f79a2", "#d94c4c", "#b63b3b"],
         chart: {
           type: 'bar',
@@ -776,23 +777,42 @@ $(function () {
             headerFormat: ''
         },
         series: [{
+            animation: false,
             name: 'London (Э)',
             data: [62],
             index: 4
         }, {
+            animation: false,
             name: 'London (Б)',
             data: [279],
             index: 3
         }, {
+            animation: false,
             name: 'Secret (Б)',
             data: [8],
             index: 2
         }, {
+            animation: false,
             name: 'Secret (Э)',
             data: [4],
             index: 1
         }]
     });
+  
+  
+/**/
+  
+  $('#prognoz').on('show.bs.modal', function() {
+    $('#sind_donut').css('visibility', 'hidden');
+    $('#sind_line').css('visibility', 'hidden');
+  });
+  $('#prognoz').on('shown.bs.modal', function() {
+    $('#sind_donut').css('visibility', 'initial');
+    $('#sind_line').css('visibility', 'initial');
+    sind_donut.reflow();
+    sind_line.reflow();
+  });
+  
 });
 
 /* Spider sravnenie*/
