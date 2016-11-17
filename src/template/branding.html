@@ -1,0 +1,93 @@
+{# TWIG vars from GT #}
+{#
+<link rel="stylesheet" type="text/css" href="/html/css/alivebg.css" media="screen" />	
+<a class="abg" href="/go?to={{banner.top.id}}&br&m={{banner.site[game.id].gt_id}}" target="_blank">
+	<u class="abg_wrap">
+		<span class="abg_top">
+			<span class="abg_md"><i>{{'match_day'|i18n}}</i></span>
+			<u class="abg_i1"><img src="{% if banner.site[game.id].team1.logo %}{{banner.site[game.id].team1.logo}}{% else %}/media/logo/_60/{{game.id}}-no.png{% endif %}"/></u>
+			<u class="abg_i2"><img src="{% if banner.site[game.id].team2.logo %}{{banner.site[game.id].team2.logo}}{% else %}/media/logo/_60/{{game.id}}-no.png{% endif %}"/></u>
+			<u class="kmob">
+				{{banner.site[game.id].result.win1|number_format(2, '.', ',')}} {% if banner.site[game.id].result.diff1 > 0 %} &uarr; {% elseif banner.site[game.id].result.diff1 < 0 %} &darr;{% endif %} - 
+				{{banner.site[game.id].result.win2|number_format(2, '.', ',')}} {% if banner.site[game.id].result.diff2 > 0 %} &uarr; {% elseif banner.site[game.id].result.diff2 < 0 %} &darr;{% endif %}
+			</u>
+		</span>
+		<span class="abg_left">
+            <u>
+				<span class="abg_mp"><img src="{{banner.site[game.id].event.l}}"/></span>
+				<span class="abg_mt">{{banner.site[game.id].event.t}}<br>{{banner.site[game.id].event.s}}</span>
+            </u>
+			<span class="abg_kf{% if banner.site[game.id].result.diff1 > 0 %} kf_up{% elseif banner.site[game.id].result.diff1 < 0 %} kf_down{% endif %}">{{banner.site[game.id].result.win1|number_format(2, '.', ',')}}<b>{{'koef'|i18n}}</b></span>
+			<span class="abg_t1">
+				<img src="{% if banner.site[game.id].team1.logo %}{{banner.site[game.id].team1.logo}}{% else %}/media/logo/_60/{{game.id}}-no.png{% endif %}"/>
+				<b>{{banner.site[game.id].team1.name}}</b>
+			</span>
+			<span class="abg_btn">{{'bet'|i18n}}</span>
+			<span class="ggbet"></span>
+			<span class="ggbetT"></span>
+			<span class="ggbetT">{{'banner_ads'|i18n|raw}}</span>
+		</span>
+		<span class="abg_right">
+			<u class="abg_game">
+				<span><img src="/html/img/logo-{{game.id}}.png"/></span>
+				<b>{{game.title}}</b>
+			</u>
+			<span class="abg_day"><b>{{banner.site[game.id].date.t|date('j')}}</b>{{banner.site[game.id].date.m}}<br>{{banner.site[game.id].date.t|date('Y')}}<br>{{banner.site[game.id].date.t|date('H:i')}} {{tz_name}}</span>
+			<span class="abg_kf{% if banner.site[game.id].result.diff2 > 0 %} kf_up{% elseif banner.site[game.id].result.diff2 < 0 %} kf_down{% endif %}">{{banner.site[game.id].result.win2|number_format(2, '.', ',')}}<b>{{'koef'|i18n}}</b></span>
+			<span class="abg_t2">
+				<img src="{% if banner.site[game.id].team2.logo %}{{banner.site[game.id].team2.logo}}{% else %}/media/logo/_60/{{game.id}}-no.png{% endif %}"/>
+				<b>{{banner.site[game.id].team2.name}}</b>
+			</span>
+			<span class="abg_btn">{{'bet'|i18n}}</span>
+			<span class="ggbet"></span>
+			<span class="ggbetT">{{'banner_ads'|i18n|raw}}</span>
+		</span>
+	</u>
+</a>
+#}
+
+{# HTML #}
+
+<a class="abg" href="/go?to={{banner.top.id}}&br&m={{banner.site[game.id].gt_id}}" target="_blank">
+	<u class="abg_wrap">
+		<span class="abg_top">
+			<span class="abg_md"><i>Матч дня</i></span>
+			<u class="abg_i1"><img src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/></u>
+			<u class="abg_i2"><img src="http://game-tournaments.com/media/logo/pic-20161110-300x300-2206743285.png"/></u>
+			<u class="kmob">
+				1.1 &uarr;  - 
+				2.1 &darr;
+			</u>
+		</span>
+		<span class="abg_left">
+            <u>
+				<span class="abg_mp"><img src="http://game-tournaments.com/media/tournament/pic-20160309-280x80-3427731343.png"/></span>
+				<span class="abg_mt">The Summit 6<br>Playoff, Upper Bracket, Round 1</span>
+            </u>
+			<span class="abg_kf kf_up">1.73<b>коэффициент</b></span>
+			<span class="abg_t1">
+				<img src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png">
+				<b>Virtus.Pro</b>
+			</span>
+			<span class="abg_btn">Сделать ставку</span>
+			<span class="ggbet"></span>
+			<span class="ggbetT"></span>
+			<span class="ggbetT">ставки на<br>киберспорт<br>на лучших<br>условиях</span>
+		</span>
+        <span class="abg_right">
+			<u class="abg_game">
+				<span><img src="http://game-tournaments.com/html/img/logo-582.png"></span>
+				<b>Dota 2</b>
+			</u>
+			<span class="abg_day"><b>16</b>ноября<br>2016<br>21:00 MSK</span>
+			<span class="abg_kf">2.39<b>коэффициент</b></span>
+			<span class="abg_t2">
+				<img src="http://game-tournaments.com/media/logo/pic-20161110-300x300-2206743285.png">
+				<b>EHOME</b>
+			</span>
+			<span class="abg_btn">Сделать ставку</span>
+			<span class="ggbet"></span>
+			<span class="ggbetT">ставки на<br>киберспорт<br>на лучших<br>условиях</span>
+		</span>
+	</u>
+</a>

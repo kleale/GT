@@ -7,22 +7,26 @@ body{
     padding-left: 50px;
   }
 }
-
+.mainwrap{
+  position: relative;
+  z-index: 1;
+}
 /*
   Breadcrums Bar
 */
 .bread{
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
   
   ol{
-    display: block;
+    display: inline-block;
     overflow: hidden;
     color: #fff;
-    display: block;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding: 15px 30px;
+    padding: 5px 10px;
+    background: #035880;
     
     li {
       display: inline-block;
