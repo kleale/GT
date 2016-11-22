@@ -127,8 +127,7 @@
       });
     });
     
-    // news read more slider
-    
+// news read more slider
     $('.ns1 ul').owlCarousel({
       loop:true,
       navigation: true,
@@ -155,7 +154,7 @@
         $(".mlh").height($('.owl-item').height());
       }
     });
-    
+ // слайдер новостей 2
     $('.ns2 ul').owlCarousel({
       loop:true,
       navigation: true,
@@ -177,7 +176,7 @@
           }
       }
     });
-    
+ // слайдер новостей 3
     $('.ns3 ul').owlCarousel({
       loop:true,
       navigation: true,
@@ -198,6 +197,40 @@
               loop:false
           }
       }
+    });
+
+ // слайдер замеса горизонт
+    $('.ns4 ul').owlCarousel({
+      loop:true,
+      navigation: true,
+      navigationText: ["назад","вперед"],
+      responsiveClass:true,
+      items : 4, //10 items above 1000px browser width
+      itemsDesktop : [1000,4], //5 items between 1000px and 901px
+      itemsDesktopSmall : [900,3], // betweem 900px and 601px
+      itemsTablet: [600,2] //2 items between 600 and 0
+      /*
+      responsive:{
+          0:{
+              items:1,
+              nav:true
+          },
+          600:{
+              items:3,
+              nav:false
+          },
+          1000:{
+              items:4,
+              nav:true,
+              loop:false
+          },
+          1900:{
+              items:4,
+              nav:true,
+              loop:false
+          }
+      }
+      */
     });
     
   }); //end ready

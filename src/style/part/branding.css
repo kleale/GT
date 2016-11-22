@@ -636,107 +636,265 @@ Branding - Match of the day
 /* END Live banner*/
 
 
-/* LIVE BLOCK */
 .abliveVertical {
-    height: auto;
-	background-size: cover;
+  height: auto;
+  background-size: cover;
+
+  &:hover{
+    text-decoration:none;
+    color:#fff;
+  }
+  .abl_md {
+      top: 16px;
+      width: 80px;
+      height: 57px;
+      margin-left: -40px;
+  }
+  .abl_md i{
+      font-size: 7px;
+      bottom: 2px;
+  }
+  .abl_day1 {
+      width: 150px;
+      font-size: 10px;
+      position: absolute;
+      top: 85px;
+  }
+  .abl_k1,
+  .abl_k2{
+      top: 105px;
+      font-size: 16px;
+      padding-top: 0;
+  }
+  .abl_tms {
+      height: 149px;
+      margin: 25px 0;
+  }
+  .abl_t2 {
+      left: auto;
+      right: 0;
+      text-align: left;
+      top: 60px;
+      text-align: center;
+      padding: 0 10px;
+      width: 110px;
+  }
+  .abl_t1 {
+      left: 0;
+      right: auto;
+      top: 60px;
+      text-align: center;
+      padding: 0 10px;
+      width: 110px;
+  }
+  .abl_mtr{
+      width: 100%;
+      z-index: 2;
+      height: auto;
+  }
+  .abl_mp {
+      padding: 0;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      background-image: none!important;
+  }
+  .abl_mt {
+      padding: 10px 15px;
+      display: block;
+      font-size: 10px;
+      line-height: 1;
+      text-decoration: none;
+      background: none;
+      height: auto;
+  }
+  .abl_k1{
+      left:110px;
+  }
+  .abl_k2{
+      right:110px;
+  }
+  .lk_up:before, 
+  .lk_down:before {
+      display: inline;
+      position: relative;
+      font-size: 16px;
+      margin: 0 3px;
+  }
+  .abl_btn {
+      right: 50%;
+      margin-right: -70px;
+      top: auto;
+      bottom: -30px;
+      transform: scale(.8);
+  }
+  .ggbetL{
+      display: none;
+  }
+  .abl_i1:before,
+  .abl_i2:before {
+      margin: -70px -146px;
+  }
+  .abl_i1:before{
+      left:0;
+  }
+  .abl_i2:before{
+      left:100%;
+  }
 }
-.abliveVertical:hover{
-	text-decoration:none;
-}
-.abliveVertical .abl_md {
-    top: 16px;
-	width: 80px;
-    height: 57px;
-    margin-left: -40px;
-}
-.abliveVertical .abl_md i{
-	font-size: 7px;
-	bottom: 2px;
-}
-.abliveVertical .abl_day1 {
-    width: 150px;
-    font-size: 10px;
-    position: absolute;
-    top: 85px;
-}
-.abliveVertical .abl_k1,
-.abliveVertical .abl_k2{
-    top: 105px;
-    font-size: 16px;
-    padding-top: 0;
-}
-.abliveVertical .abl_tms {
-	height: 149px;
-    margin: 25px 0;
-}
-.abliveVertical .abl_t2 {
-    left: auto;
-    right: 0;
-    text-align: left;
-    top: 60px;
-    text-align: center;
-    padding: 0 10px;
-    width: 110px;
-}
-.abliveVertical .abl_t1 {
-    left: 0;
-    right: auto;
-    top: 60px;
-    text-align: center;
-    padding: 0 10px;
-    width: 110px;
-}
-.abliveVertical .abl_mtr{
-    width: 100%;
-    z-index: 2;
-    height: auto;
-}
-.abliveVertical .abl_mp {
-    padding: 0;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    background-image: none!important;
-}
-.abliveVertical .abl_mt {
-    padding: 10px 15px;
+
+/* 
+============================== 
+LIVE BLOCK
+=================================
+*/
+.livebet{
+  font-size: .9em;
+  background: #37424c url("http://game-tournaments.com/html/img/spoiler.png") repeat scroll 0 0;
+  margin-bottom: 15px;
+  
+  h3 {
+    text-align: right;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 17px 10px;
+    font-weight: 300;
+    font-size: 14px;
+    color: #d2d2d2;
+  }
+  .ggbhead {
     display: block;
-    font-size: 10px;
-    line-height: 1;
-    text-decoration: none;
-    background: none;
-    height: auto;
+    background: url(/img/bets_gg.png) no-repeat 50% 50%;
+    background-size: cover;
+    width: 94px;
+    height: 35px;
+    float: left;
+    margin: 7px;
+  }
+  .livebetpin {
+    background-color: #f03a3a;
+    border: 1px solid #f03a3a;
+    border-radius: 12px;
+    box-shadow: 0 0 30px 4px #f03a3a;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1px 5px 0 -5px;
+    top: 12px;
+    width: 10px;
+    height: 10px;
+    left:auto;
+	right:15px;
+	position:absolute;
+  }
+  .soon-t{
+	left:auto;
+	right:15px;
+	position:absolute;
+  }
+  
+  .table{
+    background: #337ab7 url("http://game-tournaments.com/html/img/spoiler.png") repeat scroll 0 0;
+  
+	border-bottom: 1px solid rgba(71, 71, 71, 0.39);
+    margin-bottom: 0;
+    & > tbody > tr:nth-of-type(2n+1){
+      background:rgba(0, 0, 0, 0.15);
+    }
+    td{
+      vertical-align: middle!important;
+      padding: 8px 2px!important;
+      border-top: 1px solid rgba(0, 0, 0, 0.39)!important;
+      
+      &.livetd{
+        color: #fbeb8f;
+      }
+    }
+    .livetop {
+      text-align: left;
+      font-weight: bold;
+      position:relative;
+    }
+    .livetop a {
+        position: relative;
+        padding: 10px 0px 0px 10px;
+        line-height: 1.6;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: -10px 0 0 0;
+        max-width: 280px;
+    }
+    .livetop a:hover {
+        text-decoration:none;
+        color: #dbfdff;
+    }
+    .livetop span{
+        text-transform:uppercase;
+    }
+    .livetop i{
+        margin-right:10px;
+    }
+    
+    tr:hover .btn {
+      display: block;
+      opacity: 1;
+    }
+    .livebet_do{
+      div{
+        text-align:left;
+        padding: 0 0 0 8px;
+        position: relative;
+        width: 90px;
+        color: #edd33f;
+        text-transform: uppercase;
+        font-size: 10px;
+        line-height: 11px;
+        .btn {
+          position: absolute;
+          left: 50%;
+          opacity: 0;
+          top: 50%;
+          font-size: 9px;
+          margin-left: -44px;
+          margin-top: -9px;
+        }
+      }
+    }
+    .teamname {
+      display: inline-block;
+      margin: -4px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 70px;
+      white-space: nowrap;
+      line-height: 1.3;
+      &.c1 {
+        text-align: right;
+      }
+      b {
+        font-weight: normal;
+      }
+    }
+    
+  }
+  
+  .livetext {
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #f4feff;
+    border: 1px solid #0c3f4d;
+    text-shadow: 0 0 15px #10c7f9;
+    background: #337ab7 url("http://game-tournaments.com/html/img/spoiler.png") repeat scroll 0 0;
+  }
 }
-.abliveVertical .abl_k1{
-	left:110px;
-}
-.abliveVertical .abl_k2{
-	right:110px;
-}
-.abliveVertical .lk_up:before, 
-.abliveVertical .lk_down:before {
-    display: inline;
-    position: relative;
-    font-size: 16px;
-    margin: 0 3px;
-}
-.abliveVertical .abl_btn {
-    right: 50%;
-    margin-right: -70px;
-    top: auto;
-    bottom: -30px;
-    transform: scale(.8);
-}
-.abliveVertical .ggbetL{
-	display: none;
-}
-.abliveVertical  .abl_i1:before, .abliveVertical .abl_i2:before {
-    margin: -70px -146px;
-}
-.abliveVertical .abl_i1:before{
-	left:0;
-}
-.abliveVertical .abl_i2:before{
-	left:100%;
-}
+
+
+
+

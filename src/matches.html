@@ -12,7 +12,8 @@
     <div class="otstup" style="height:80px;"></div>
     
     <section class="player" id="player">
-      <div id="srteamslider" class="toggled_stream srteamslider branded" rel="XXX">
+      <!--<div id="srteamslider" class="toggled_stream srteamslider branded" rel="XXX">-->
+      <div id="srteamslider" class="srteamslider branded" rel="XXX">
         <div class="srteamview clearfix" id="mainstream">
           {% include "template/match-page/player-html5.html" %}
         </div>
@@ -57,8 +58,7 @@
     <section id="m-koef" class="m-sec m-even">
       <div class="mlist-wr">
         <div class="mlist">
-          {% include "template/match-list/match-list.html" %}
-          {% include "template/pager.html" %}
+          {% include "template/match-list/match-list2.html" %}
           
           {% include "template/match-list/match-list-future.html" %}
           {% include "template/pager.html" %}
@@ -67,11 +67,14 @@
           {% include "template/pager.html" %}
         </div>
         <div class="m-hot">
+          {% include "template/liveblock.html" %}
           {% include "template/match-list/match-top.html" %}
+          {% include "template/blockzames-vertical.html" %}
         </div>
       </div>
     </section>
     
+    {#
     <section id="m-news" class="m-sec m-even">
       <div class="row">
         <div class="col-md-7">
@@ -82,14 +85,18 @@
         </div>
       </div>
     </section>
+    #}
     
+    <section id="m-zames" class="m-sec m-even m-zames">
+      {% include "template/blockzames.html" %}
+    </section>
+        
     <div class="bn">
       <img src="img/ad.jpg" alt="">
     </div>
     {% include "template/footer.html" %}
   </div>
 
-  
 {% include "template/modal.html" %}
 {% include "template/scripts.html" %}
 
