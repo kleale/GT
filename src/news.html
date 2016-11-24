@@ -3,51 +3,51 @@
 <!DOCTYPE html>
 <html>
 {% include "template/head.html" %}
-<body class="csgo">
-  {% include "template/bar.html" %}
+<body class="">
   
   <div class="container mainwrap">
     {% include "template/breadcrumbs.html" %}
-    <div class="otstup" style="height:80px;"></div>
+    <div class="otstup">
     
-    <section class="newstop" style="background-image:url(http://game-tournaments.com/media/news/no.jpg)">
-      <div>
-        <ul class="news-games">
-          <li class="active"><a href="#!"><img src="http://game-tournaments.com/html/img/logo-582.png" alt="Dota 2">#Dota 2</a></li>
-          <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-704.png" alt="CS:GO">#CS:GO</a></li>
-          <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-313.png" alt="League of Legends">#LoL</a></li>
-          <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-758.png" alt="Heroes of the Storm">#HOTS</a></li>
-          <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-755.png" alt="HearthStone">#HS</a></li>
-        </ul>
-        <h2>Новости киберспорта: <strong>#Dota 2</strong></h2>
-        <div class="mlt-filter mlt-filter_nl">
-            <input id="mlt-filter" type="text" placeholder="Введите Команду, игрока, турнир, хештег для поиска">
-          </div>
-      </div>
-    </section>
-    
-    {% include "template/vod-slider.html" %}
-    
-    <section class="newslist m-even">
-      <div class="row">
-        <div class="col-md-7">
-          {% include "template/match-page/section-news.html" %}
-          {% include "template/pager.html" %}
+      <section class="newstop" style="background-image:url(http://game-tournaments.com/media/news/no.jpg)">
+        <div>
+          <ul class="news-games">
+            <li class="active"><a href="#!"><img src="http://game-tournaments.com/html/img/logo-582.png" alt="Dota 2">#Dota 2</a></li>
+            <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-704.png" alt="CS:GO">#CS:GO</a></li>
+            <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-313.png" alt="League of Legends">#LoL</a></li>
+            <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-758.png" alt="Heroes of the Storm">#HOTS</a></li>
+            <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-755.png" alt="HearthStone">#HS</a></li>
+          </ul>
+          <h2>Новости киберспорта: <strong>#Dota 2</strong></h2>
+          <div class="mlt-filter mlt-filter_nl">
+              <input id="mlt-filter" type="text" placeholder="Введите Команду, игрока, турнир, хештег для поиска">
+            </div>
         </div>
-        <div class="col-md-5">
-          {% include "template/match-page/section-soc.html" %}
-          {% include "template/pager.html" %}
-        </div>
-      </div>
-    </section>
+      </section>
 
-   
-    <div class="bn">
-      <img src="img/ad.jpg" alt="">
+      {% include "template/vod-slider.html" %}
+
+      <section class="newslist m-even">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/match-page/section-news.html" %}
+            {% include "template/pager.html" %}
+          </div>
+          <div class="col-md-5">
+            {% include "template/match-page/section-soc.html" %}
+            {% include "template/pager.html" %}
+          </div>
+        </div>
+      </section>
+
+
+      <div class="bn">
+        <img src="img/ad.jpg" alt="">
+      </div>
+      {% include "template/footer.html" %}
     </div>
-    {% include "template/footer.html" %}
-  </div>
-  
+</div>
+{% include "template/bar.html" %}
 {% include "template/modal.html" %}
 {% include "template/scripts.html" %}
 

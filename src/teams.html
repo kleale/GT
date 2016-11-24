@@ -1,0 +1,62 @@
+{% set title = "Команды дота 2. Рейтинг команд Dota 2" %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  <div class="container mainwrap">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup">
+    
+      <section class="m-sec m-even">
+        <div class="row">
+          <div class="col-sm-8">
+            <div style="text-align:center;padding: 30px;border: 1px dashed #3f4b56;color: #5e7488;text-transform: uppercase;font-weight: bold;">
+              Фильтр тут
+            </div>
+            {% include "template/teams/teams-list.html" %}
+            {% include "template/pager.html" %}
+
+          </div>
+          <div class="col-sm-4">
+            {% include "template/liveblock.html" %}
+            {% include "template/blockzames-vertical.html" %}
+
+            <div class="mltText">
+              В данном разделе представлены все профессиональные команды дота 2. Рейтинг команд составлен по результатам их матчей
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {#
+      <section id="m-news" class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/match-page/section-news.html" %}
+          </div>
+          <div class="col-md-5">
+            {% include "template/match-page/section-soc.html" %}
+          </div>
+        </div>
+      </section>
+      #}
+
+      <section id="m-zames" class="m-sec m-even m-zames">
+        {% include "template/blockzames.html" %}
+      </section>
+
+      <div class="bn">
+        <img src="img/ad.jpg" alt="">
+      </div>
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

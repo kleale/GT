@@ -97,8 +97,10 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   */
-  border-top: 2px solid #424f5a;
+  border-top: 1px solid #424f5a;
+  /*
   background-image: linear-gradient(to bottom, rgb(55, 66, 76) 0%, rgba(46, 51, 55, 0) 100%);
+  */
   margin-bottom: 10px;
   
   .pagination{
@@ -182,11 +184,15 @@
       box-shadow: 0 2px 30px 3px #f91414;
     }
     .mlh {
+      overflow: hidden;
       span{
         text-align: right;
         font-size: 24px;
         line-height: 1;
         text-shadow: 0 0 5px #000;
+        a{
+          color: #7fa2ba;
+        }
       }
       i {
         color: #f33;
@@ -200,6 +206,8 @@
 
 
 .fights{
+  margin-bottom: 15px;
+  
   .iconFights{
     width: 40px;
     height: 40px;
@@ -218,7 +226,8 @@
     position: relative;
     text-align: center;
     margin: 0;
-    padding: 10px 0px 10px;
+    padding: 10px 0px 15px;
+    overflow: hidden;
     
     span {
       position: relative;
@@ -240,6 +249,12 @@
         position: absolute;
         margin-left: 0px;
         margin-top: -19px;
+      }
+      a{
+        color: #7fa2ba;
+      }
+      .btn{
+        color: #fff;
       }
     }
   }
@@ -295,6 +310,7 @@
           position: absolute 5px 5px * *;
           color: #fff;
           text-shadow: 1px 1px 2px #000;
+          font-size: 11px;
         }
         
         &:after{
@@ -311,13 +327,13 @@
     a{
       > span{
         color:#fff;
-        margin-top: -30px;
+        margin-top: -26px;
         display: block;
         position: relative;
         
         .heroava{
           border: 2px solid #424f5a;
-          width: 90px;
+          width: 80px;
           float: left;
           margin: 0 15px 0 15px;
           
@@ -329,7 +345,7 @@
           color: #ff0000;
           display: block;
           margin-bottom: 10px;
-          font-size: 18px;
+          font-size: 16px;
           font-style: normal;
           text-transform: uppercase;
           font-weight: bold;
@@ -355,7 +371,7 @@
         position: relative;
         
         .teamLogo{
-          width: 90px;
+          width: 80px;
           float: left;
           margin: 0 15px 10px 15px;
           text-align: center;
@@ -369,7 +385,7 @@
           color: #ff0000;
           display: block;
           margin-bottom: 10px;
-          font-size: 18px;
+          font-size: 16px;
           font-style: normal;
           text-transform: uppercase;
           font-weight: bold;
@@ -448,7 +464,7 @@
           color: #ff0000;
           display: block;
           margin-bottom: 10px;
-          font-size: 18px;
+          font-size: 16px;
           font-style: normal;
           text-transform: uppercase;
           font-weight: bold;

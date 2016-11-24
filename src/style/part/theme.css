@@ -53,7 +53,8 @@
     
     a{
       color: $link-gray;
-      padding: 10px 15px;
+      padding: 5px 15px;
+      border-top: 1px solid #414e5a;
       
       &:active,
       &:focus,
@@ -64,6 +65,13 @@
       }
     }
   }
+}
+
+.dropdown-header{
+  text-transform: uppercase;
+  color:#fff;
+  padding: 10px 16px;
+  background: #414e5a;
 }
 
 /*
@@ -383,5 +391,27 @@ Tabs mobile
     width: 100%;
     height: 0;
     transition: height 0.6s ease;
+  }
+}
+.owl-theme {
+  .owl-controls{
+    .owl-buttons{
+      .owl-prev,
+      .owl-next{
+        background: #5b6d7b;
+        opacity: 0.6;
+        
+        &:hover,
+        &:focus,
+        &:active{
+          opacity: 1;
+        }
+      }
+    }
+    .owl-page{
+      span{
+        background: #5b6d7b;
+      }
+    }
   }
 }

@@ -1,41 +1,16 @@
-<!-- /match-list/match-list2.html -->
- 
-<script>
+<!-- /home/match-list-live-home.html -->
+
   
-// команда-турнир фильтр
-  $(document).ready(function() {
-    $('#mlt-filter').on('keyup', function(){
-      $('.mlt-filter').addClass('open');
-    });
-    
-    $(document).click(function(){
-      $('.mlt-filter').removeClass('open');
-    });
-    $("#dropdown").click(function(e){
-      e.stopPropagation();
-      $('.mlt-filter').removeClass('open');
-    });
-  });
-</script>
-
-
+{% set game = ['logo-582.png', 'logo-704.png', 'logo-313.png', 'logo-758.png', 'logo-755.png'] %}
+   
   <div class="block mlt">
     <div class="bh clearfix">
       <div class="rigter">
         <i class="gti-undo" id="refresher"></i>
           <label class="checkbox-inline score-on">
             <input type="checkbox" name="switch" data-on-text="ДА" data-off-text="НЕТ" data-label-text="счет"></input>
-          </label>
-        <div class="dropdown">
-          <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-            <i class="gti-clock-o"></i> CET
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#"><i class="gti-clock-o"></i> CET</a></li>
-            <li><a href="#"><i class="gti-clock-o"></i> MSK</a></li>
-          </ul>
-        </div>
+          </label> 
+        <!--
         <div class="dropdown">
           <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown">
              Dota2Lounge.com
@@ -49,28 +24,17 @@
             <li><a href="#">Separated link</a></li>
           </ul>
         </div>
+        -->
       </div>
-      <h1 class="mH1">Расписание матчей Dota 2</h1>
-      <div class="mlt-filter" title="скрипт скопируешь с GT">
-        <input id="mlt-filter" type="text" value="" placeholder="Команда или турнир..." class="form-control team" autocomplete="off">
-        <a href="" class="sicon"></a>
-        <ul class="dropdown-menu" id="#t1">
-          <li class="dropdown-header">Выбери команду</li>
-          <li><a href="javascript:;" onclick="mfilter('team',5806);">4manDOTA+Dnarek / 4manDOTA+Dnarek</a></li>
-          <li><a href="javascript:;" onclick="mfilter('team',6537);">4ChertaiSatana / 4ChertaiSatana</a></li>
-          <li><a href="javascript:;" onclick="mfilter('team',7034);">4 Classmates + Konama / 4 Classmates + Konama</a></li>
-          <li><a href="javascript:;" onclick="mfilter('team',8223);">4 Dragons and Snake / 4 Dragons and Snake</a></li>
-          <li><a href="javascript:;" onclick="mfilter('team',8288);">"NO"NAME" / "NO"NAME"</a></li>
-          <li><a href="javascript:;" onclick="mfilter('team',8430);">#DeaD!DyNasTy# / #DeaD!DyNasTy#</a></li><li><a href="javascript:;" onclick="mfilter('team',10033);">2K Ownage / 2K Ownage</a></li>
-          <li><a href="javascript:;" onclick="mfilter('team',11925);">#PINASmile / #PINASmile</a></li><li><a href="javascript:;" onclick="mfilter('team',12549);">-Banana Esports- / -Banana Esports-</a></li>
-          <li><a href="javascript:;" onclick="mfilter('team',12692);">4 DAUNA I GRISHKA / 4 DAUNA I GRISHKA</a></li>
-        </ul>
+      <h1 class="mH1">Расписание матчей по киберспорту</h1>
+      <div class="mlt-filter">
+        <input id="mlt-filter" type="text" placeholder="Команда или турнир...">
+        <a href=""></a>
       </div>
     </div><!-- bh -->
     <div class="block-content">
       <h3 class="mh"><span>Live матчи</span></h3>
       <table class="mtable">
-       {#
         <thead>
           <th></th>
           <th width="70"><span>Дата &nbsp;<i class="gti-clock-o"></i>&nbsp;&nbsp;<a href="">CET</a><!--<i class="gti-chevron-down sorter active"></i>--></span></th>
@@ -78,13 +42,13 @@
           <th><span>Турнир <!--<i class="gti-chevron-up sorter"></i>--></span></th>
           <th></th>
         </thead>
-        #}
+         
           <!-- progress 2 -->
           
           <tr class="m-item" data-href="http://game-tournaments.com/link" itemscope="itemscope" itemtype="https://schema.org/Event">
             <td class="ticon">
-              <a class="icon-pop" title="Атрибуты матча" data-content="<span class='m-i-1'></span><span class='m-i-2'></span>">
-                <span class='m-i-1' title="Самый ожидаемый"></span>
+              <a href="" class="gameico">
+                <img src="http://game-tournaments.com/html/img/{{random(game)}}">
               </a>
             </td>
             <td class="tdate"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time><i class="gti-youtube-play" title="Имеется стрим или видео"></i></td>
@@ -113,8 +77,8 @@
           
           <tr class="m-item" data-href="http://game-tournaments.com/link" itemscope="itemscope" itemtype="https://schema.org/Event">
             <td class="ticon">
-              <a class="icon-pop" title="Атрибуты матча" data-content="<span class='m-i-1'></span><span class='m-i-2'></span>">
-                <span class='m-i-1' title="Самый ожидаемый"></span>
+              <a href="" class="gameico">
+                <img src="http://game-tournaments.com/html/img/{{random(game)}}">
               </a>
             </td>
             <td class="tdate"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time><i class="gti-youtube-play" title="Имеется стрим или видео"></i></td>
@@ -143,8 +107,8 @@
           
           <tr class="m-item" data-href="http://game-tournaments.com/link" itemscope="itemscope" itemtype="https://schema.org/Event">
             <td class="ticon">
-              <a class="icon-pop" title="Атрибуты матча" data-content="<span class='m-i-1'></span><span class='m-i-2'></span>">
-                <span class='m-i-1' title="Самый ожидаемый"></span>
+              <a href="" class="gameico">
+                <img src="http://game-tournaments.com/html/img/{{random(game)}}">
               </a>
             </td>
             <td class="tdate"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time><i class="gti-youtube-play" title="Имеется стрим или видео"></i></td>
@@ -171,10 +135,12 @@
             </td>
           </tr>
           
-        {% for i in 0..4 %}
+        {% for i in 0..20 %}
           <tr class="m-item" data-href="http://game-tournaments.com/link" itemscope="itemscope" itemtype="https://schema.org/Event">
             <td class="ticon">
-              <span class="m-i-2" title="Самый ожидаемый"></span>
+              <a href="" class="gameico">
+                <img src="http://game-tournaments.com/html/img/{{random(game)}}">
+              </a>
             </td>
             <td class="tdate"><time title="17 июн 2016, 11:00" datetime="2016-06-17T11:00:00+03:00" itemprop="startDate">12 авг в 10:15</time></td>
             <td class="td-m">
@@ -199,3 +165,5 @@
       </table>
     </div>
   </div>
+
+

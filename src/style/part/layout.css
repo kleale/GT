@@ -3,21 +3,25 @@
 */
 
 body{
+  background: #333 url(/img/bg_news.jpg) 50% 50% repeat;
   @media (max-width: $XM) {
     padding-left: 50px;
   }
 }
 .mainwrap{
+  padding-top: 120px;
   position: relative;
-  z-index: 1;
+}
+.otstup{
+  position: relative;
+  z-index: 2;
 }
 /*
   Breadcrums Bar
 */
 .bread{
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
+  position: absolute 0 * * *;
+  z-index: 2;
   
   ol{
     display: inline-block;
@@ -377,6 +381,9 @@ footer{
   @media (max-width: $XM) {
     text-align: center;
   }
+  @media (max-width: 1599px) {
+    font-size: 11px;
+  }
   
   .f-coppy{
     float: left;
@@ -423,6 +430,9 @@ footer{
       text-align:center;
       float: none;
     }
+    @media (max-width: 1599px) {
+      margin: 4px 0;
+    }
     
     a{
       color: $text-gray-3;
@@ -434,6 +444,10 @@ footer{
       &:hover{
         text-decoration: none;
         color: #fff;
+      }
+      @media (max-width: 1599px) {
+        margin: 0 5px;
+        font-size: 12px;
       }
     }
   }

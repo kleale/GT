@@ -12,9 +12,6 @@
 }
 .block{
   position: relative;
-  @media (max-width: $L){
-    margin-bottom: 30px;
-  }
   
   .bh{
     

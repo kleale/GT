@@ -197,6 +197,23 @@
   .iframer{
     position: relative;
     height:460px;
+    @media (max-width: $XM){
+      height: 400px;
+    }
+    @media (max-width: 650px){
+      height: 300px;
+    }
+    @media (max-width: 450px){
+      height: 250px;
+    }
+    &.active{
+      .subs{
+        display:none;
+      }
+      .iframeBanner{
+        display:none;
+      }
+    }
   }
   
   .iframerClicker{
@@ -245,7 +262,7 @@
     .iframerChannel{
       position: absolute 0px * * 0px;
       padding: 15px;
-      max-width: 50%;
+      max-width: 95%;
       
       div{
         padding-left: 85px;
@@ -284,6 +301,12 @@
     background: transparent;
     height: 100px;
     transition: $tease;
+    
+    @media (max-width: 1599px) {
+      height: auto;
+      margin-top: 0;
+      padding: 0;
+    }
     
     &.active{
       background: #000;
@@ -376,60 +399,70 @@
 
 
 .subs{
-  position: absolute 10px 50px * *;
+  position: absolute * 43px 110px 43px;
   z-index: 2;
-  padding: 10px 10px 6px 10px;
-  background: rgba(0, 0, 0, 0.48);
-  display: table;
+  padding: 10px 25px;
+  background: rgba(0, 0, 0, 0.8);
   
-  @media (max-width: $XM){
-    width:100%;
+  @media (max-width: 1599px) {
+    position: absolute * 0px 0 0px;
+    
   }
   
   @media (max-width: $XM){
-    position: relative 0 0 0 0;
+    position: absolute * 0px 0 0px;
     padding: 15px;
     background-image: inline(../img/tile.png);
-    background-color: transparent;
+    background-color: #000;
+    width:100%;
   }
-  
-  > span{
-    text-transform: uppercase;
-    font-size: 11px;
-    color: $text-main;
-    display: block;
-    padding: 0px;
-    float: left;
-    margin-right: 15px;
-    line-height: 1.5;
-  }
-  > div{
-    display: table-cell;
-    position: relative;
-    vertical-align: top;
+  .subsc{
+    display: table;
+    width: 100%;
     
-    button,
-    input{
+    .nap{
+      text-transform: uppercase;
+      font-size: 11px;
+      color: $text-main;
       display: block;
-      width:97%;
+      padding: 0px;
+      float: left;
+      margin-right: 15px;
+      line-height: 1.5;
+      @media (max-width: 599px) {
+        display: none;
+      }
     }
-    
     > div{
-      @media (max-width: $XM){
-        width:100%;
+      display: table-cell;
+      position: relative;
+      vertical-align: top;
+
+      .btn-group{
+        display: block;
+      }
+
+      button,
+      input{
+        display: block;
+        width:97%;
+      }
+
+      > div{
+        @media (max-width: $XM){
+          width:100%;
+        }
       }
     }
   }
-  
   input{
     width:140px;
     padding-left: 30px;
     text-transform: uppercase;
   }
   .btn-input{
-    display: inline-block;
-    margin-left: -5px;
-    border-radius: 0;
+    display: block;
+    border-radius: 3px;
     position: relative;
   }
   i.gti-envelope-o{
@@ -540,13 +573,12 @@
         width:100%;
       }
       time{
-        position: absolute * 3px 3px *;
-        background: rgba(2, 2, 2, 0.6);
-        padding: 3px 5px;
-        color: rgba(255, 255, 255, 0.8);
+        position: absolute * 2px 2px *;
+        background: rgba(2, 2, 2, 1);
+        padding: 1px 3px;
+        color: rgba(255, 255, 255, 1);
         border-radius: $br;
-        border: 1px solid rgba(255, 255, 255, 0.46);
-        font-size: 12px;
+        font-size: 10px;
         line-height: 1;
       }
     }

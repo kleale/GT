@@ -994,7 +994,7 @@ body{
   font-family: 'Roboto', Arial, sans-serif;
   background: #2b2b2b;
   position: relative;
-  padding-left: 40px;
+  padding-left: 50px;
 }
 .csgo{
   background-image: url(../img/bg.jpg);
@@ -1014,22 +1014,29 @@ a:active,
 /*
   Layout
 */
+body{
+  background: #333 url(/img/bg_news.jpg) 50% 50% repeat;
+}
 @media (max-width: 991px) {
   body {
     padding-left: 50px;
   }
 }
 .mainwrap{
+  padding-top: 120px;
   position: relative;
-  z-index: 1;
+}
+.otstup{
+  position: relative;
+  z-index: 2;
 }
 /*
   Breadcrums Bar
 */
 .bread{
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
+  top: 0;
+  position: absolute;
+  z-index: 2;
 }
 .bread ol{
   display: inline-block;
@@ -1383,6 +1390,11 @@ footer{
     text-align: center;
   }
 }
+@media (max-width: 1599px) {
+  footer {
+    font-size: 11px;
+  }
+}
 footer .f-coppy{
   float: left;
   padding: 5px 0;
@@ -1427,6 +1439,11 @@ footer .f-soc{
     float: none;
   }
 }
+@media (max-width: 1599px) {
+  footer .f-soc {
+    margin: 4px 0;
+  }
+}
 footer .f-soc a{
   color: #8f8f8f;
   margin: 0 10px;
@@ -1437,6 +1454,12 @@ footer .f-soc a:active,
       footer .f-soc a:hover{
   text-decoration: none;
   color: #fff;
+}
+@media (max-width: 1599px) {
+  footer .f-soc a {
+    margin: 0 5px;
+    font-size: 12px;
+  }
 }
 .hiddenbar{
   
@@ -1605,8 +1628,10 @@ Banners
   background-position: 50% 50%;
   background-repeat: no-repeat;
   */
-  border-top: 2px solid #424f5a;
+  border-top: 1px solid #424f5a;
+  /*
   background-image: linear-gradient(to bottom, rgb(55, 66, 76) 0%, rgba(46, 51, 55, 0) 100%);
+  */
   margin-bottom: 10px;
   
 }
@@ -1676,18 +1701,25 @@ Banners
 .m-zames .nrm-slider ul li:after{
   box-shadow: 0 2px 30px 3px #f91414;
 }
+.m-zames .nrm-slider .mlh {
+  overflow: hidden;
+}
 .m-zames .nrm-slider .mlh span{
   text-align: right;
   font-size: 24px;
   line-height: 1;
   text-shadow: 0 0 5px #000;
 }
+.m-zames .nrm-slider .mlh span a{
+  color: #7fa2ba;
+}
 .m-zames .nrm-slider .mlh i {
   color: #f33;
   font-size: 50px;
   text-shadow: 0 0 10px #73170c;
 }
-.fights{/*multideath*/
+.fights{
+  margin-bottom: 15px;/*multideath*/
 
 }
 .fights .iconFights{
@@ -1708,7 +1740,8 @@ Banners
   position: relative;
   text-align: center;
   margin: 0;
-  padding: 10px 0px 10px;
+  padding: 10px 0px 15px;
+  overflow: hidden;
 }
 .fights .mlh span {
   position: relative;
@@ -1730,6 +1763,12 @@ Banners
   position: absolute;
   margin-left: 0px;
   margin-top: -19px;
+}
+.fights .mlh span a{
+  color: #7fa2ba;
+}
+.fights .mlh span .btn{
+  color: #fff;
 }
 .fights .bestEvent{
   margin-bottom: 20px;/*a*/
@@ -1786,6 +1825,7 @@ Banners
   position: absolute;
   color: #fff;
   text-shadow: 1px 1px 2px #000;
+  font-size: 11px;
 }
 .fights .bestEvent a > b:after{
   content:'';
@@ -1801,13 +1841,13 @@ Banners
 }
 .fights .bestKill a > span{
   color:#fff;
-  margin-top: -30px;
+  margin-top: -26px;
   display: block;
   position: relative;
 }
 .fights .bestKill a > span .heroava{
   border: 2px solid #424f5a;
-  width: 90px;
+  width: 80px;
   float: left;
   margin: 0 15px 0 15px;
 }
@@ -1818,7 +1858,7 @@ Banners
   color: #ff0000;
   display: block;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   text-transform: uppercase;
   font-weight: 700;
@@ -1841,7 +1881,7 @@ Banners
   position: relative;
 }
 .fights .comeBack a > span .teamLogo{
-  width: 90px;
+  width: 80px;
   float: left;
   margin: 0 15px 10px 15px;
   text-align: center;
@@ -1854,7 +1894,7 @@ Banners
   color: #ff0000;
   display: block;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   text-transform: uppercase;
   font-weight: 700;
@@ -1927,7 +1967,7 @@ Banners
   color: #ff0000;
   display: block;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   text-transform: uppercase;
   font-weight: 700;
@@ -2004,7 +2044,8 @@ Banners
 }
 .dropdown-menu li a{
   color: #b7b7b7;
-  padding: 10px 15px;
+  padding: 5px 15px;
+  border-top: 1px solid #414e5a;
 }
 .dropdown-menu li a:active,
       .dropdown-menu li a:focus,
@@ -2012,6 +2053,12 @@ Banners
   text-decoration: none;
   color: #fff;
   background: #037db5;
+}
+.dropdown-header{
+  text-transform: uppercase;
+  color:#fff;
+  padding: 10px 16px;
+  background: #414e5a;
 }
 /*
 * Buttons
@@ -2305,6 +2352,22 @@ Tabs mobile
   height: 0;
   transition: height 0.6s ease;
 }
+.owl-theme .owl-controls .owl-buttons .owl-prev,
+      .owl-theme .owl-controls .owl-buttons .owl-next{
+  background: #5b6d7b;
+  opacity: 0.6;
+}
+.owl-theme .owl-controls .owl-buttons .owl-prev:hover,
+        .owl-theme .owl-controls .owl-buttons .owl-prev:focus,
+        .owl-theme .owl-controls .owl-buttons .owl-prev:active,
+        .owl-theme .owl-controls .owl-buttons .owl-next:hover,
+        .owl-theme .owl-controls .owl-buttons .owl-next:focus,
+        .owl-theme .owl-controls .owl-buttons .owl-next:active{
+  opacity: 1;
+}
+.owl-theme .owl-controls .owl-page span{
+  background: #5b6d7b;
+}
 /*
 Modal general
 */
@@ -2424,7 +2487,7 @@ Branding - Match of the day
   color: #fff;
   line-height: 1;
   overflow:hidden;
-  z-index: 0;
+  z-index: 1;
 }
 .abg:hover{
   color: #fff;
@@ -2434,7 +2497,7 @@ Branding - Match of the day
 }
 .abg_wrap{
   position: relative;
-  max-width: 1240px;
+  max-width: 1200px;
   display: block;
   margin: 0 auto;
 }
@@ -2517,14 +2580,14 @@ Branding - Match of the day
     display: block;
     position: absolute;
     right: 100%;
-    width: 160px;
+    width: 170px;
     top: 0;
 }
 .abg_right{
     display: block;
     position: absolute;
     left: 100%;
-    width: 160px;
+    width: 170px;
     top: 0;
 }
 .abg_left u{
@@ -2561,7 +2624,7 @@ Branding - Match of the day
 .abg_t1,
 .abg_t2 {
 	position: absolute;
-    right: 10px;
+    right: 12px;
     top: 88px;
     display: block;
     background: url(/img/v.png) no-repeat 50% 50%;
@@ -2754,22 +2817,72 @@ Branding - Match of the day
     right: auto;
 }
 .kmob{
-	display:none;
-	position:absolute;
-	left:50%;
-	bottom:0;
-	width:100px;
-	text-align:center;
-	margin-left:-50px;
-	text-decoration:none;
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 140px;
+    text-align: center;
+    margin-left: -70px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px; 
 }
 @media (max-width : 1599px) {
-	.abg_top{
-		max-width: 400px;
-	}
-	.kmob{
-		display:block;
-	}
+  .mainwrap {
+    max-width: 1030px;
+  }
+  .abg_wrap{
+    max-width: 980px;
+  }
+  .abg_top{
+    max-width: 400px;
+  }
+  .abg_left u {
+    top: 28px;
+  }
+}
+@media (max-width: 1400px){
+  .abg_kf,
+  .abg_t2,
+  .abg_t1,
+  .abg_btn,
+  .ggbet,
+  .ggbetT,
+  .abg_mp{
+    display: none !important;
+  }
+  .abg_md{
+    top: -15px;
+  }
+  .kmob{
+    display:block;
+  }
+  .abg_game{
+    top: -27px;
+    left: -140px;
+  }
+  .abg_game span{
+    width: 20px;
+    padding: 19px 10px 5px 0;
+  }
+  .abg_game span img{
+    width: 20px;
+  }
+  .abg_game b{
+    height: 62px;
+  }
+  .abg_left u {
+    top: 28px;
+    left: 150px;
+    width: 270px;
+  }
+  .abg_md {
+    top: -1px;
+    width: 80px;
+    height: 57px;
+    margin-left: -40px;
+  }
 }
 @media (max-width : 800px) {
 	.abg_left u {
@@ -3188,7 +3301,7 @@ LIVE BLOCK
   position:absolute;
 }
 .livebet .table{
-  background: #337ab7 url("http://game-tournaments.com/html/img/spoiler.png") repeat scroll 0 0;
+  background: #424f5a url("http://game-tournaments.com/html/img/spoiler.png") repeat scroll 0 0;
   border-bottom: 1px solid rgba(71, 71, 71, 0.39);
   margin-bottom: 0;
 }
@@ -3198,7 +3311,7 @@ LIVE BLOCK
 .livebet .table td{
   vertical-align: middle!important;
   padding: 8px 2px!important;
-  border-top: 1px solid rgba(0, 0, 0, 0.39)!important;
+  border-top: 1px solid rgba(0, 0, 0, 0.1)!important;
 }
 .livebet .table td.livetd{
   color: #fbeb8f;
@@ -3239,7 +3352,7 @@ LIVE BLOCK
   text-align:left;
   padding: 0 0 0 8px;
   position: relative;
-  width: 90px;
+  width: 80px;
   color: #edd33f;
   text-transform: uppercase;
   font-size: 10px;
@@ -3276,10 +3389,7 @@ LIVE BLOCK
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
-  color: #f4feff;
-  border: 1px solid #0c3f4d;
-  text-shadow: 0 0 15px #10c7f9;
-  background: #337ab7 url("http://game-tournaments.com/html/img/spoiler.png") repeat scroll 0 0;
+  color: #7faec3;
 }
 @font-face {
     font-family: 'gticons';
@@ -4815,6 +4925,27 @@ Banners
   position: relative;
   height:460px;
 }
+@media (max-width: 991px){
+  .srteamview .iframer {
+    height: 400px;
+  }
+}
+@media (max-width: 650px){
+  .srteamview .iframer {
+    height: 300px;
+  }
+}
+@media (max-width: 450px){
+  .srteamview .iframer {
+    height: 250px;
+  }
+}
+.srteamview .iframer.active .subs{
+  display:none;
+}
+.srteamview .iframer.active .iframeBanner{
+  display:none;
+}
 .srteamview .iframerClicker{
   top: 0;
   right: 0;
@@ -4867,7 +4998,7 @@ Banners
   left: 0px;
   position: absolute;
   padding: 15px;
-  max-width: 50%;
+  max-width: 95%;
 }
 .srteamview .iframerClicker .iframerChannel div{
   padding-left: 85px;
@@ -4902,6 +5033,13 @@ Banners
   background: transparent;
   height: 100px;
   transition: all .2s ease;
+}
+@media (max-width: 1599px) {
+  .srteamview .iframeBanner {
+    height: auto;
+    margin-top: 0;
+    padding: 0;
+  }
 }
 .srteamview .iframeBanner.active{
   background: #000;
@@ -4994,32 +5132,39 @@ Banners
   content: '\f053'
 }
 .subs{
-  top: 10px;
-  right: 50px;
+  right: 43px;
+  bottom: 110px;
+  left: 43px;
   position: absolute;
   z-index: 2;
-  padding: 10px 10px 6px 10px;
-  background: rgba(0, 0, 0, 0.48);
-  display: table;
+  padding: 10px 25px;
+  background: rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 1599px) {
+  .subs {
+    right: 0px;
+    bottom: 0;
+    left: 0px;
+    position: absolute;
+  }
 }
 @media (max-width: 991px){
   .subs {
+    right: 0px;
+    bottom: 0;
+    left: 0px;
+    position: absolute;
+    padding: 15px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAChJREFUeNpi+P//PwMQy0JpMMYQAGFGsAwqkGVAUyUL086Abi5AgAEANCs/VAxOWCIAAAAASUVORK5CYII=');
+    background-color: #000;
     width: 100%;
   }
 }
-@media (max-width: 991px){
-  .subs {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: relative;
-    padding: 15px;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAChJREFUeNpi+P//PwMQy0JpMMYQAGFGsAwqkGVAUyUL086Abi5AgAEANCs/VAxOWCIAAAAASUVORK5CYII=');
-    background-color: transparent;
-  }
+.subs .subsc{
+  display: table;
+  width: 100%;
 }
-.subs > span{
+.subs .subsc .nap{
   text-transform: uppercase;
   font-size: 11px;
   color: #fff;
@@ -5029,18 +5174,26 @@ Banners
   margin-right: 15px;
   line-height: 1.5;
 }
-.subs > div{
+@media (max-width: 599px) {
+  .subs .subsc .nap {
+    display: none;
+  }
+}
+.subs .subsc > div{
   display: table-cell;
   position: relative;
   vertical-align: top;
 }
-.subs > div button,
-    .subs > div input{
+.subs .subsc > div .btn-group{
+  display: block;
+}
+.subs .subsc > div button,
+      .subs .subsc > div input{
   display: block;
   width:97%;
 }
 @media (max-width: 991px){
-  .subs > div > div {
+  .subs .subsc > div > div {
     width: 100%;
   }
 }
@@ -5050,9 +5203,8 @@ Banners
   text-transform: uppercase;
 }
 .subs .btn-input{
-  display: inline-block;
-  margin-left: -5px;
-  border-radius: 0;
+  display: block;
+  border-radius: 3px;
   position: relative;
 }
 .subs i.gti-envelope-o{
@@ -5166,15 +5318,14 @@ Banners
   width:100%;
 }
 .slist li span time{
-  right: 3px;
-  bottom: 3px;
+  right: 2px;
+  bottom: 2px;
   position: absolute;
-  background: rgba(2, 2, 2, 0.6);
-  padding: 3px 5px;
-  color: rgba(255, 255, 255, 0.8);
+  background: rgba(2, 2, 2, 1);
+  padding: 1px 3px;
+  color: rgba(255, 255, 255, 1);
   border-radius: 2px;
-  border: 1px solid rgba(255, 255, 255, 0.46);
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1;
 }
 .slist li div{
@@ -6644,11 +6795,6 @@ Banners
 }
 .block{
   position: relative;/*.stm_nav_block*/
-}
-@media (max-width: 1200px){
-  .block {
-    margin-bottom: 30px;
-  }
 }
 .block .bh .block-menu{
   float: right;
@@ -8413,11 +8559,15 @@ Banners
 .mlt{
   margin-left: -30px;
 }
+@media (max-width: 991px){
+  .mlt {
+    margin: 0 -30px;
+  }
+}
 .mlt .block-content{
   overflow-x: hidden;
 }
-.mlt .bh{
-  border-bottom: 2px solid #424f5a;
+.mlt .bh{/*border-bottom: 2px solid #424f5a;*/
   margin-bottom: -1px;
   position: relative;
   z-index: 10;
@@ -8437,12 +8587,18 @@ Banners
   border-color: rgb(127, 174, 195);
 }
 .mlt .bh .mH1{
-  margin: .4em 0 .9em 0;
+  margin: .3em 0 .9em 0;
   font-size: 1.5em;
   text-transform: uppercase;
 }
+@media (max-width: 1599px){
+  .mlt .bh .mH1 {
+    margin: .5em 0 .9em 0;
+    font-size: 1.2em;
+  }
+}
 .mlt .bh .rigter{
-  margin-top: 5px;
+  margin-top: 0px;
 }
 .mlt .bh #refresher{
   font-size: 20px;
@@ -8456,42 +8612,50 @@ Banners
       .mlt .bh #refresher:active{
   opacity: 1;
 }
-.mlt .bh .mltText{
-  text-align: center;/* background: #37424c; */
-  margin-left: -15px;
+.mltText{
+  text-align: center;
+  /* background: #37424c; */
+  margin-bottom: 15px;
   padding:15px 0px 0px;
   line-height: 1.5;
   color: #9ca6af;
   font-size: .9em;
+  border: 2px solid #424f5a;
+  padding: 15px;
 }
 .mlt-filter{
   display: block;
+  position: relative;
+  
+}
+/*
   margin-left: -15px;
   position: relative;
   padding: 15px;
   background: #37424c;
-}
-.mlt-filter a{
+  border-radius: 0 3px 3px 0;
+  */
+.mlt-filter .sicon{
   font-family: 'gticons' !important;
-  top: 16px;
-  right: 23px;
+  top: 1px;
+  right: 7px;
   position: absolute;
   font-size: 18px;
   color: #7f8789;
   opacity: .5;
 }
-.mlt-filter a:after{
+.mlt-filter .sicon:after{
   content: '\f002';
 }
-.mlt-filter a:hover,
-    .mlt-filter a:focus,
-    .mlt-filter a:active{
+.mlt-filter .sicon:hover,
+    .mlt-filter .sicon:focus,
+    .mlt-filter .sicon:active{
   opacity: 1;
   text-decoration: none;
 }
 .mlt-filter input {
-  background-color: #424f5a;
-  color: #7faec3;
+  background-color: #444950;
+  color: #a2a2a2;
   font-size: 12px;
   display: inline-block;
   height: 29px;
@@ -8500,6 +8664,9 @@ Banners
   border: 0;
   width: 100%;
   border-radius: 2px;
+}
+.mlt-filter.open .dropdown-menu{
+  background: #37424c;
 }
 .sorter{
   padding: 0 5px;
@@ -8522,12 +8689,13 @@ Banners
   border-collapse: collapse;
   border-spacing: 0;
   vertical-align: middle;
+  border-top: 2px solid #3f4b56;
 }
 .mtable th{
   text-align: center;
   border-bottom:0;
   padding: 10px 0;
-  background-image: linear-gradient(to bottom, rgb(55, 66, 76) 0%, rgba(46, 51, 55, 0) 100%);
+  background: ;
   text-transform: uppercase;
   font-weight: 300;
 }
@@ -8615,6 +8783,12 @@ Banners
   vertical-align: middle;
   position: relative;
 }
+@media (max-width : 1599px) {
+  .mtable .tn1, .mtable .tn2 {
+    width: 80px;
+    font-size: 12px;
+  }
+}
 .mtable .tn1:hover,
     .mtable .tn1:active,
     .mtable .tn1:focus,
@@ -8662,24 +8836,36 @@ Banners
   padding-left: 15px!important;
   padding-right: 0;
 }
+.mtable .ticon .gameico{
+  width:50px;
+}
+.mtable .ticon .gameico img{
+  width:100%;
+}
 .mtable [class^="m-i-"],
   .mtable [class*=" m-i-"]{
   width: 25px;
   height: 25px;
 }
 .mtable .tdate{
-  width: 120px;
+  width: 125px;
   text-align: center;
   font-size: 12px;
 }
 .mtable .tdate i{
-  margin: -6px 0 0 10px;
+  margin: -2px 0 0 6px;
   font-size: 1.5em;
   vertical-align: text-bottom;
   color: #7faec3;
-  opacity: .5
+  opacity: .5;
+  position: absolute;
 }
-@media (max-width: 991px) {
+@media (max-width: 1599px) {
+  .mtable .tdate {
+    font-size: 10px;
+  }
+}
+@media (max-width: 1200px) {
   .mtable .tdate {
     width: auto;
   }
@@ -8738,10 +8924,10 @@ Banners
     position: relative;
     text-align: center;
     margin: 0;
-    padding: 40px 0px 15px;
-    background-color: #37424C;
-    border-top: 1px solid #424f5a;
+    padding: 20px 0;
 }
+/*background-color: #37424C;
+    border-top: 1px solid #424f5a;*/
 .mh span{
   position: relative;
   display: inline-block;
@@ -8813,7 +8999,7 @@ Banners
   /*background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(68, 93, 115, 0.43) 100%);
 */
   margin: 0;
-  padding: 0 0 10px 0;
+  padding: 0 0 5px 0;
   overflow: hidden;
 }
 .m-top-block:hover,
@@ -8943,7 +9129,7 @@ Banners
   border-bottom: 1px solid rgba(238,238,238,0.1);
   border-right: 1px solid rgba(238,238,238,0.1);
   margin-top: -10px;
-  padding: 25px 0 16px;
+  padding: 24px 0 11px;
   position: relative;
   
 }
@@ -9299,7 +9485,7 @@ Banners
 }
 /* NEWS PAGE */
 .newstop_page{
-  
+  background: #4c5b67;
 }
 .news-text{
   padding: 70px 50px;
@@ -9983,6 +10169,49 @@ Block ramka
   background: rgba(0, 0, 0, 0.9);
   color: #fff;
   opacity: .8;
+}
+/*home page*/
+.gametopsel{
+  display: table;
+  table-layout: fixed;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+  width: 100%;
+  border: 1px solid rgba(238,238,238,0.1);
+}
+.gametopsel li{
+  display: table-cell;
+  opacity: .3;
+  padding: 8px 0;
+  transition: all .2s ease;
+}
+.gametopsel li.active,
+    .gametopsel li:hover{
+  opacity: 1;
+}
+.gametopsel li a{
+  display: block;
+}
+.gametopsel li a img{
+  max-width: 37px;
+  width: 100%;
+}
+/*home page*/
+/*
+  teams.html
+*/
+.temsList thead th{
+  text-align: left;
+  font-size: 10px;
+  background: #424f5a url(http://game-tournaments.com/html/img/spoiler.png) repeat scroll 0 0;
+}
+.temsList .mtable .t-item td{
+  padding: 0;
+}
+.temsList .mtable .t-item td h4{
+  font-size: 13px;
 }
 /*states*/
 /*

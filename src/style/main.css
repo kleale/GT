@@ -46,5 +46,11 @@
 @import "part/news.css";
 @import "part/vod-slider.css";
 
+/*home page*/
+@import "part/home.css";
+
+/*home page*/
+@import "part/teams-page.css";
+
 /*states*/
 @import "part/state.css";

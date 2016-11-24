@@ -1,8 +1,9 @@
-<!-- match-list/match-list-future.html -->
+<!-- /match-list/match-list-future.html -->
 <div class="block mlt">
   <div class="block-content">
     <h2 class="mh"><span>Будущие матчи</span></h2>
     <table class="mtable">
+     {#
       <thead>
         <th></th>
         <th width="70"><span>Дата &nbsp;<i class="gti-clock-o"></i>&nbsp;&nbsp;<a href="">CET</a><!--<i class="gti-chevron-down sorter active"></i>--></span></th>
@@ -10,7 +11,8 @@
         <th><span>Турнир <!--<i class="gti-chevron-up sorter"></i>--></span></th>
         <th></th>
       </thead>
-
+      #}
+      
       {% for i in 0..20 %}
         <tr class="m-item" data-href="/ссылка на страницу матча"  itemscope="itemscope" itemtype="https://schema.org/Event">
           <td class="ticon">

@@ -3,13 +3,15 @@
 
 .mlt{
   margin-left: -30px;
-  
+  @media (max-width: $XM){
+    margin: 0 -30px;
+  }
   .block-content{
     overflow-x: hidden;
   }
   
   .bh{
-    border-bottom: 2px solid #424f5a;
+    /*border-bottom: 2px solid #424f5a;*/
     margin-bottom: -1px;
     position: relative;
     z-index: 10;
@@ -38,13 +40,17 @@
     }
     
     .mH1{
-      margin: .4em 0 .9em 0;
+      margin: .3em 0 .9em 0;
       font-size: 1.5em;
       text-transform: uppercase;
+      @media (max-width: 1599px){
+        margin: .5em 0 .9em 0;
+        font-size: 1.2em;
+      }
     }
    
     .rigter{
-      margin-top: 5px;
+      margin-top: 0px;
     }
     
     #refresher{
@@ -60,28 +66,32 @@
         opacity: 1;
       }
     }
-    .mltText{
-      text-align: center;
-      /* background: #37424c; */
-      margin-left: -15px;
-      padding:15px 0px 0px;
-      line-height: 1.5;
-      color: #9ca6af;
-      font-size: .9em;
-    }
   }
 }
-
+.mltText{
+  text-align: center;
+  /* background: #37424c; */
+  margin-bottom: 15px;
+  padding:15px 0px 0px;
+  line-height: 1.5;
+  color: #9ca6af;
+  font-size: .9em;
+  border: 2px solid #424f5a;
+  padding: 15px;
+}
 .mlt-filter{
   display: block;
+  position: relative;
+  /*
   margin-left: -15px;
   position: relative;
   padding: 15px;
   background: #37424c;
-  
-  a{
+  border-radius: 0 3px 3px 0;
+  */
+  .sicon{
     font-family: 'gticons' !important;
-    position: absolute 16px 23px * *;
+    position: absolute 1px 7px * *;
     font-size: 18px;
     color: #7f8789;
     opacity: .5;
@@ -97,8 +107,8 @@
   }
 
   input {
-    background-color: #424f5a;
-    color: #7faec3;
+    background-color: #444950;
+    color: #a2a2a2;
     font-size: 12px;
     display: inline-block;
     height: 29px;
@@ -108,6 +118,14 @@
     width: 100%;
     border-radius: 2px;
   }
+  
+  &.open{
+    .dropdown-menu{
+      background: #37424c;
+      
+    }
+  }
+  
 }
 
 .sorter{
@@ -133,12 +151,13 @@
   border-collapse: collapse;
   border-spacing: 0;
   vertical-align: middle;
+  border-top: 2px solid #3f4b56;
   
   th{
     text-align: center;
     border-bottom:0;
     padding: 10px 0;
-    background-image: linear-gradient(to bottom, rgb(55, 66, 76) 0%, rgba(46, 51, 55, 0) 100%);
+    background: ;
     text-transform: uppercase;
     font-weight: 300;
   }
@@ -230,7 +249,12 @@
     color: $link-white;
     vertical-align: middle;
     position: relative;
-
+    
+    @media (max-width : 1599px) {
+      width:80px;
+      font-size: 12px;
+    }
+    
     &:hover,
     &:active,
     &:focus{
@@ -275,6 +299,13 @@
     width: 40px;
     padding-left: 15px!important;
     padding-right: 0;
+    
+    .gameico{
+      width:50px;
+      img{
+        width:100%;
+      }
+    }
   }
   [class^="m-i-"],
   [class*=" m-i-"]{
@@ -282,18 +313,22 @@
     height: 25px;
   }
   .tdate{
-    width: 120px;
+    width: 125px;
     text-align: center;
     font-size: 12px;
     i{
-      margin: -6px 0 0 10px;
+      margin: -2px 0 0 6px;
       font-size: 1.5em;
       vertical-align: text-bottom;
       color: #7faec3;
-      opacity: .5
+      opacity: .5;
+      position: absolute;
     }
     
-    @media (max-width: $XM) {
+    @media (max-width: 1599px) {
+      font-size: 10px;
+    }
+    @media (max-width: 1200px) {
       width: auto;
     }
   }
@@ -360,9 +395,9 @@
     position: relative;
     text-align: center;
     margin: 0;
-    padding: 40px 0px 15px;
-    background-color: #37424C;
-    border-top: 1px solid #424f5a;
+    padding: 20px 0;
+    /*background-color: #37424C;
+    border-top: 1px solid #424f5a;*/
   
   span{
     position: relative;
@@ -434,7 +469,7 @@
   /*background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(68, 93, 115, 0.43) 100%);
 */
   margin: 0;
-  padding: 0 0 10px 0;
+  padding: 0 0 5px 0;
   overflow: hidden;
 
   &:hover,
@@ -571,7 +606,7 @@
   border-bottom: 1px solid rgba(238,238,238,0.1);
   border-right: 1px solid rgba(238,238,238,0.1);
   margin-top: -10px;
-  padding: 25px 0 16px;
+  padding: 24px 0 11px;
   position: relative;
   
   sup{

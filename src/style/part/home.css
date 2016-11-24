@@ -1,0 +1,29 @@
+.gametopsel{
+  display: table;
+  table-layout: fixed;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+  width: 100%;
+  border: 1px solid rgba(238,238,238,0.1);
+  
+  li{
+    display: table-cell;
+    opacity: .3;
+    padding: 8px 0;
+    transition: $tease;
+    
+    &.active,
+    &:hover{
+      opacity: 1;
+    }
+    a{
+      display: block;
+      img{
+        max-width: 37px;
+        width: 100%;
+      }
+    }
+  }
+}
