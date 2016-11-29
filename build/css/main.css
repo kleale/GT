@@ -10523,34 +10523,40 @@ section.hero h1{
 .lastTour .mtable tr td{
   height: 55px;
 }
-.lastTour .mtable tr td:nth-child(1){
-  position: relative;
-  font-size: 16px;
+.lastTour .mtable tr td u{
+  text-decoration: none;
+  display: block;
+  padding-left: 27px;
+  font-size: 11px;
+  font-weight: 300;
 }
-.lastTour .mtable tr td:nth-child(1) b{
-  position: relative
+.lastTour .mtable tr td .flag img{
+  vertical-align: text-bottom;
+  margin-right: 3px;
+  opacity: .8;
 }
 .lastTour .mtable tr td:nth-child(1) span{
-  display: block;
-  height: 55px;
-  opacity: .2;
-  top: 0;
-  left: 0;
-  position: absolute;
-  overflow: hidden;
-  width: 170px;
-}
-.lastTour .mtable tr td:nth-child(1) span:after{
-  content: '';
-  top: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  width: 40px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(52, 57, 61) 100%);
+  display: inline-block;
+  width: 80px;
 }
 .lastTour .mtable tr td:nth-child(1) span img{
   width:100%;
+}
+.lastTour .mtable tr td:nth-child(2){
+  font-size: 14px;
+}
+.lastTour .mtable tr td:nth-child(2) b{
+  position: relative
+}
+.lastTour .mtable tr td:nth-child(3) u{
+  color: #ffb848;
+}
+.lastTour .mtable tr td:nth-child(4) u{
+  color: #eee;
+}
+.lastTour .mtable tr td:nth-child(5) u{
+  color: #bd8732;
+  margin: 3px 0;
 }
 /*states*/
 /*

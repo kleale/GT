@@ -9,16 +9,19 @@
 
 <table class="mtable">
   <thead>
+    <th></th>
     <th>Турнир</th>
-    <th width="">1 место</th>
-    <th width="">2 место</th>
-    <th width="">3 место</th>
+    <th width="130">1 место</th>
+    <th width="130">2 место</th>
+    <th width="130">3 место</th>
   </thead>
   <tbody>
     {% for i in 0..9 %}
       <tr>
         <td>
           <span><img src="http://game-tournaments.com/media/tournament/{{random(tourlogo)}}"></span>
+        </td>
+        <td>
           <b>{{random(tour)}}</b>
         </td>
         {% for d in 0..1 %}
@@ -26,7 +29,7 @@
             <span class="flag">
               <img width="20px" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" alt="Европа" title="Европа">
             </span>
-            <a href="">{{random(team)}}</a>
+            <a href="">{{random(team)}}</a><u>$1,3 млн.</u>  
           </td>
         {% endfor %}
         <td>
@@ -35,7 +38,7 @@
                 <span class="flag">
                   <img width="20px" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" alt="Европа" title="Европа">
                 </span>
-                <a href="">{{random(team)}}</a>
+                <a href="">{{random(team)}}</a> <u>$400 тыс.</u> 
               </div>
           {% endfor %}
         </td>
