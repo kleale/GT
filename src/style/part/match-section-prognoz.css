@@ -7,7 +7,7 @@
   padding: 5px 15px 5px;
   position: relative;
   
-  &:nth-child(odd){
+  &:nth-child(even){
     background: color($bg-main l(25%));
     .prm{
       background: color($bg-main l(20%));
@@ -16,7 +16,7 @@
       }
     }
   }
-  &:nth-child(even){
+  &:nth-child(odd){
     background: color($bg-main l(20%));
   }
   

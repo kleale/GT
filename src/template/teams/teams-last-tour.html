@@ -1,0 +1,45 @@
+<!-- /teams/teams-last-tour.html -->
+
+{% set tour = ['The Boston Major', 'International 2016', 'WESG', 'Dota2 Professional League Season 2', 'ESL One Genting 2017', 'DreamLeague Season 6'] %}
+
+{% set tourlogo = ['pic-20160926-280x80-6342360083.jpeg', 'pic-20160831-478x178-7586446600.jpeg', 'pic-20160912-600x267-6676783403.png', 'pic-20160909-378x119-9085315335.jpeg'] %}
+
+
+<h1 class="mh"><span>Последние турниры <a href="/dota-2">DOTA 2</a></span></h1>
+
+<table class="mtable">
+  <thead>
+    <th>Турнир</th>
+    <th width="">1 место</th>
+    <th width="">2 место</th>
+    <th width="">3 место</th>
+  </thead>
+  <tbody>
+    {% for i in 0..9 %}
+      <tr>
+        <td>
+          <span><img src="http://game-tournaments.com/media/tournament/{{random(tourlogo)}}"></span>
+          <b>{{random(tour)}}</b>
+        </td>
+        {% for d in 0..1 %}
+          <td>
+            <span class="flag">
+              <img width="20px" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" alt="Европа" title="Европа">
+            </span>
+            <a href="">{{random(team)}}</a>
+          </td>
+        {% endfor %}
+        <td>
+            {% for c in 0..1 %}
+              <div>
+                <span class="flag">
+                  <img width="20px" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" alt="Европа" title="Европа">
+                </span>
+                <a href="">{{random(team)}}</a>
+              </div>
+          {% endfor %}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

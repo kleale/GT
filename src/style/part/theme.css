@@ -36,25 +36,29 @@
 }
 
 .dropdown-menu {
-  background: $bg-dropdown;
+  background: #035880;
   box-shadow: 7px 7px 10px rgba(0,0,0,.4);
   padding: 0;
   margin: -1px 0;
-  border: 0;
+  border: 1px solid #0b75a7;
   border-radius: 0 0 $br $br;
   width: 100%;
   
   li{
-    
+    &:nth-child(2n+1){
+      background: rgba(255, 255, 255, 0.04);
+    }
     &.active a{
       background: $button-blue;
       color: $button-blue-text;
     }
     
     a{
-      color: $link-gray;
-      padding: 5px 15px;
-      border-top: 1px solid #414e5a;
+      color: #7faec3;
+      padding: 4px 12px;
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
       
       &:active,
       &:focus,
@@ -70,8 +74,8 @@
 .dropdown-header{
   text-transform: uppercase;
   color:#fff;
-  padding: 10px 16px;
-  background: #414e5a;
+  padding: 7px 12px;
+  background: #414e5a!important;
 }
 
 /*
@@ -80,9 +84,8 @@
 .btn{
   border-radius: $br;
   box-shadow: $bsh;
-  text-transform: uppercase;
-  border: 0;
-  line-height: 1.5;
+  border: 1px solid transparent;
+  line-height: 1.42857143;
   cursor: pointer;
 }
 /*
@@ -108,10 +111,18 @@
   }
 } 
 .btn-sm{
-  
+  height: 28px;
+  .caret {
+    margin: 7px 0 7px 5px;
+  }
+}
+.btn-xs{
+  .caret {
+    margin: 3px 0 3px 5px !important;
+  }
 }
 .btn-default{
-  background: $button-gray;
+  background: #454a4e;
   color: #b5b5b5;
   
   &:active,
@@ -119,7 +130,23 @@
   &:hover{
     background: $button-blue;
     color: $button-blue-text;
+    border-color: $button-blue;
   } 
+}
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+    color: #7faec3;
+    background-color: #035880;
+    border-color: #0b75a7;
+}
+.dropdown-toggle{
+  text-align: left;
+  .caret{
+    float: right;
+    margin: 8px 0 8px 5px;
+  }
+}
+.input-group-btn .dropdown-toggle .caret{
+  margin-left: 0px;
 }
 .btn-default.active, .btn-default:active{
     color: $link-gray;
@@ -163,6 +190,16 @@ body .open>.dropdown-toggle.btn-default:focus{
     color: $green;
   }
 }
+
+.btn-default.active, 
+.btn-default:active, 
+.open>.dropdown-toggle.btn-default {
+    color: #7faec3;
+    background-color: #035880;
+    border-color: #0b75a7;
+}
+
+
 /*
 * Popover
 */
@@ -192,9 +229,10 @@ body .open>.dropdown-toggle.btn-default:focus{
 */
 .form-control{
   border-radius: $br;
-  background: $bg-form;
+  background: #454a4e;
   border: 0;
   color: $text-main;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   
   &:active,
   &:focus,
@@ -206,12 +244,16 @@ body .open>.dropdown-toggle.btn-default:focus{
     height: 28px;
 }
 
-
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+    margin-left: 0px;
+}
 
 .breadcrumb{
   background-color: transparent;
   border-radius: 0;
 }
+
+
 
 
 ::-webkit-input-placeholder {

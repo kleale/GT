@@ -91,43 +91,44 @@
 }
 
 .nav-pager{
-  text-align: center;
+  text-align: right;
+  border-top: 1px solid #4d5963;
   /*
   background-image: inline(../img/match-tr-bg-line.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  */
   border-top: 1px solid #424f5a;
-  /*
   background-image: linear-gradient(to bottom, rgb(55, 66, 76) 0%, rgba(46, 51, 55, 0) 100%);
   */
   margin-bottom: 10px;
   
   .pagination{
-    margin: 0px;
+    margin: 0 2px 0 0;
+    text-align: center;
     
     li{
       &.active{
         a{
           background: #424f5a;
           border-color: #424f5a;
-          transform: skew(-5deg);
           box-shadow: 3px 2px 0 2px rgba(0, 0, 0, 0.18);
+          height: 35px;
+          padding: 10px 0 0;
         }
       }
       a{
-        background: transparent;
+        background: #454a4e;
         color:$link-light-blue;
         border-radius: 0px;
-        margin: 0 4px;
         border: 1px solid rgba(3, 105, 153, 0);
         padding: 8px 0 0;
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 32px;
         line-height: 1;
         display: inline-block;
         position: relative;
         transition: $tease;
+        transform: skew(-5deg);
         
         &:active,
         &:hover,
@@ -142,6 +143,7 @@
         color:$link-light-blue;
         border-radius: 50px;
       }
+      /*
       &.prr{
         a{
           padding: 4px 0;
@@ -151,6 +153,7 @@
           height: 24px;
         }
       }
+      */
     }
   }
   
@@ -203,7 +206,46 @@
   }
 }
 
+.mlh{
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0px 15px;
+  overflow: hidden;
 
+  span {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+
+    &:before {
+      content: inline(../img/hline.png);
+      top: 50%;
+      right: 100%;
+      position: absolute;
+      margin-right: 0px;
+      margin-top: -19px;
+    }
+    &:after {
+      content: inline(../img/hline1.png);
+      top: 50%;
+      left: 100%;
+      position: absolute;
+      margin-left: 0px;
+      margin-top: -19px;
+    }
+    a{
+      color: #7fa2ba;
+    }
+    .btn{
+      color: #fff;
+    }
+  }
+}
 
 .fights{
   margin-bottom: 15px;
@@ -217,46 +259,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  .mlh{
-    text-transform: uppercase;
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    position: relative;
-    text-align: center;
-    margin: 0;
-    padding: 10px 0px 15px;
-    overflow: hidden;
-    
-    span {
-      position: relative;
-      display: inline-block;
-      padding: 0 10px;
-      
-      &:before {
-        content: inline(../img/hline.png);
-        top: 50%;
-        right: 100%;
-        position: absolute;
-        margin-right: 0px;
-        margin-top: -19px;
-      }
-      &:after {
-        content: inline(../img/hline1.png);
-        top: 50%;
-        left: 100%;
-        position: absolute;
-        margin-left: 0px;
-        margin-top: -19px;
-      }
-      a{
-        color: #7fa2ba;
-      }
-      .btn{
-        color: #fff;
-      }
-    }
   }
   .bestEvent{
     margin-bottom: 20px;

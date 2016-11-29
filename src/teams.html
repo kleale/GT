@@ -1,5 +1,10 @@
 {% set title = "Команды дота 2. Рейтинг команд Dota 2" %}
 
+{% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro'] %}
+{% set logo = ['pic-20161110-600x600-7320131375.png', 'pic-20161110-300x300-2206743285.png', 'pic-20161110-600x600-5478339632.png', 'pic-20161110-500x500-918003572.png', 'pic-20161110-600x450-6323255579.png'] %}
+{% set flag = ['1', '2', '3', '4', '5', '6'] %}
+{% set rate = ['1,744', '1,622', '1,511', '1,497', '1,496', '1,469', '—'] %}
+
 <!DOCTYPE html>
 <html>
 {% include "template/head.html" %}
@@ -7,24 +12,109 @@
   <div class="container mainwrap">
     {% include "template/breadcrumbs.html" %}
     <div class="otstup">
-    
+      <section class="hero" data-orig-offset="0" style="background-image:url(http://i14.kanobu.ru/r/5d11085f868efa534316ebe19e4d3515/1040x-/u.kanobu.ru/editor/images/35/319b477e-c671-4459-88e2-1f628c4a661b.jpg);">
+        <h1 class="mh"><span>Рейтинг команд <a href="/dota-2">DOTA 2</a></span></h1>
+        <p>В данном разделе представлены все профессиональные команды дота 2. Рейтинг команд составлен по результатам их матчей</p>
+      </section>
       <section class="m-sec m-even">
         <div class="row">
           <div class="col-sm-8">
-            <div style="text-align:center;padding: 30px;border: 1px dashed #3f4b56;color: #5e7488;text-transform: uppercase;font-weight: bold;">
-              Фильтр тут
-            </div>
-            {% include "template/teams/teams-list.html" %}
-            {% include "template/pager.html" %}
+            <div class="filter">
+              
+              <script>
+              // команда-турнир фильтр
+                $(document).ready(function() {
+                  $('#mlt-filter').on('keyup', function(){
+                    $('.mlt-filter').addClass('open');
+                  });
 
+                  $(document).click(function(){
+                    $('.mlt-filter').removeClass('open');
+                  });
+                  $("#dropdown").click(function(e){
+                    e.stopPropagation();
+                    $('.mlt-filter').removeClass('open');
+                  });
+                });
+              </script>
+              
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Регион
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#">Европа</a></li>
+                      <li><a href="#">Америка</a></li>
+                      <li><a href="#">Азия</a></li>
+                      <li><a href="#">Тихоокеантский регион</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Страна
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#">Россия</a></li>
+                      <li><a href="#">Китай</a></li>
+                      <li><a href="#">Франция</a></li>
+                      <li><a href="#">Германия</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Турнир">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
+                      <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">Мажор 1</a></li>
+                        <li><a href="#">Мажор 2</a></li>
+                        <li><a href="#">Мажор 3</a></li>
+                        <li><a href="#">Мажор 4</a></li>
+                      </ul>
+                    </div><!-- /btn-group -->
+                  </div><!-- /input-group -->
+                </div>
+                <div class="col-sm-3">
+                  <div class="mlt-filter">
+                    <input id="mlt-filter" type="text" value="" placeholder="Команда..." class="form-control team" autocomplete="off">
+                    <a href="" class="sicon"></a>
+                    <ul class="dropdown-menu" id="#t1">
+                      <li class="dropdown-header">Команда</li>
+                      <li><a href="javascript:;" onclick="mfilter('team',5806);">4manDOTA+Dnarek / 4manDOTA+Dnarek</a></li>
+                      <li><a href="javascript:;" onclick="mfilter('team',6537);">4ChertaiSatana / 4ChertaiSatana</a></li>
+                      <li><a href="javascript:;" onclick="mfilter('team',7034);">4 Classmates + Konama / 4 Classmates + Konama</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block mlt temsList">
+              {% include "template/teams/teams-list.html" %}
+              {% include "template/pager.html" %}
+            </div>
+            <div class="block mlt lastTour">
+              {% include "template/teams/teams-last-tour.html" %}
+              {% include "template/pager.html" %}
+            </div>
           </div>
           <div class="col-sm-4">
+            <a href="" class="historyBlock">
+              <div>
+                <div class="ibg"></div> 
+                <i class="mi-history"></i>
+                <h3 class="miHlink">История встреч между командами</h3>
+              </div>
+            </a>
+            
             {% include "template/liveblock.html" %}
             {% include "template/blockzames-vertical.html" %}
-
-            <div class="mltText">
-              В данном разделе представлены все профессиональные команды дота 2. Рейтинг команд составлен по результатам их матчей
-            </div>
 
           </div>
         </div>

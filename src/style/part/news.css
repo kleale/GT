@@ -9,12 +9,12 @@
     position: absolute 0 0 0 0;
     content: '';
     display: block;
-    background: url(/img/bgtop.png) no-repeat center / cover;
+    background: url(/img/bgtop.png) no-repeat center;
     opacity: .7;
   }
   
   > div{
-    padding: 30px 40px;
+    padding: 40px 40px;
     position: relative;
     z-index: 2;
     
@@ -164,7 +164,7 @@
   background: #4c5b67;
 }
 .news-text{
-  padding: 70px 50px;
+  padding: 50px 30px;
   @media (max-width: $XM) {
     padding: 30px;
   }
@@ -336,7 +336,6 @@
     font-size: 16px;
     line-height: 1.6;
     font-weight: lighter;
-    padding: 0 30px;
     color: #d6d6d6;
   }
 }
@@ -407,8 +406,10 @@ Block ramka
   
   .btn{
     text-transform: none;
-    color:#fff;
-    margin: 0 9px;
+    color: #fff;
+    margin: 0 0.5%;
+    width: 18.4%;
+    font-size: 12px;
   }
   .btn-vk{
     background: #4b729b;
@@ -436,6 +437,7 @@ Block ramka
   .tr_img{
     display: block;
     margin-bottom: 20px;
+    border-bottom:1px solid #425e63;
   }
   
   h4{
@@ -499,7 +501,7 @@ Block ramka
     background-clip: content-box;
     top: 20px;
     margin: 0;
-    width: 70%;
+    width: 60%;
     position: absolute;
     right: 120%;
   }
@@ -514,7 +516,7 @@ Block ramka
     background-clip: content-box;
     top: 20px;
     margin: 0;
-    width: 70%;
+    width: 60%;
     position: absolute;
     left: 120%;
   }
@@ -532,9 +534,7 @@ Block ramka
 
 .nw{
   margin-bottom: 35px;
-  
   .m-top-cont{
-    padding-bottom: 0;
   }
   .tse-sc{
     font-size: 12px;
@@ -594,7 +594,22 @@ Block ramka
     position: relative auto auto auto auto;
     width: 100%;
     background: transparent;
-    padding: 0 20px 20px;
+    padding: 0 20px 5px;
+    >div{
+      position: relative;
+      
+      margin: 0 0 5px 0;
+      .btn-group{
+        display: block;
+        .btn{
+          float:none;
+          width: 100%;
+        }
+      }
+      input{
+        width:100%;
+      }
+    }
   }
 
 } /*nw*/

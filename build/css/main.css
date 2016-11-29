@@ -984,6 +984,9 @@ textarea {
 	background: url(AjaxLoader.gif) no-repeat center center
 }
 /*
+@import "../assets/css/perspectiveRules.css";
+*/
+/*
 * Base css 
 */
 /*
@@ -1003,7 +1006,7 @@ body{
 }
 a{
   transition: all .2s ease;
-  color: #2faee7; 
+  color: #a6c6cb; 
 }
 a:active,
   a:focus,
@@ -1622,41 +1625,54 @@ Banners
   padding-right: 15px;
 }
 .nav-pager{
-  text-align: center;
+  text-align: right;
+  border-top: 1px solid #4d5963;
   /*
   background-image: inline(../img/match-tr-bg-line.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  */
   border-top: 1px solid #424f5a;
-  /*
   background-image: linear-gradient(to bottom, rgb(55, 66, 76) 0%, rgba(46, 51, 55, 0) 100%);
   */
   margin-bottom: 10px;
   
 }
 .nav-pager .pagination{
-  margin: 0px;
+  margin: 0 2px 0 0;
+  text-align: center;
+}
+.nav-pager .pagination li{/*
+      &.prr{
+        a{
+          padding: 4px 0;
+          width: 24px;
+          margin: 4px 2px;
+          display: inline-block;
+          height: 24px;
+        }
+      }
+      */
 }
 .nav-pager .pagination li.active a{
   background: #424f5a;
   border-color: #424f5a;
-  transform: skew(-5deg);
   box-shadow: 3px 2px 0 2px rgba(0, 0, 0, 0.18);
+  height: 35px;
+  padding: 10px 0 0;
 }
 .nav-pager .pagination li a{
-  background: transparent;
+  background: #454a4e;
   color:#a6c6cb;
   border-radius: 0px;
-  margin: 0 4px;
   border: 1px solid rgba(3, 105, 153, 0);
   padding: 8px 0 0;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 32px;
   line-height: 1;
   display: inline-block;
   position: relative;
   transition: all .2s ease;
+  transform: skew(-5deg);
 }
 .nav-pager .pagination li a:active,
         .nav-pager .pagination li a:hover,
@@ -1669,13 +1685,6 @@ Banners
   background: transparent;
   color:#a6c6cb;
   border-radius: 50px;
-}
-.nav-pager .pagination li.prr a{
-  padding: 4px 0;
-  width: 24px;
-  margin: 4px 2px;
-  display: inline-block;
-  height: 24px;
 }
 /*newsicons*/
 [class^="n-i-"], [class*=" n-i-"] {
@@ -1718,6 +1727,44 @@ Banners
   font-size: 50px;
   text-shadow: 0 0 10px #73170c;
 }
+.mlh{
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0px 15px;
+  overflow: hidden;
+}
+.mlh span {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+}
+.mlh span:before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKYAAAABCAYAAABUkdUhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE9JREFUeNpiPHfuHCMDAwMIIwNGJIwsho3GpgeXHDF8bHai20uuWejuYiLSfAYS7CSkh9iwpjQM0fUTEza4wp6Jim7DZed/KC0FxCwAAQYAvF4D2A1GCIQAAAAASUVORK5CYII=');
+  top: 50%;
+  right: 100%;
+  position: absolute;
+  margin-right: 0px;
+  margin-top: -19px;
+}
+.mlh span:after {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKYAAAABCAYAAABUkdUhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFVJREFUeNpiPHfuXA4DA8MfIH7GAAGMUPo/EkYG6GKE+NjE/qHJMeCx8z8ec9HFqeE2Qv7G5TZSwgefHlzhxEBC2Pwn0nxKzcIWNtjkCPkbQw9AgAEA+HtQbeDgfWQAAAAASUVORK5CYII=');
+  top: 50%;
+  left: 100%;
+  position: absolute;
+  margin-left: 0px;
+  margin-top: -19px;
+}
+.mlh span a{
+  color: #7fa2ba;
+}
+.mlh span .btn{
+  color: #fff;
+}
 .fights{
   margin-bottom: 15px;/*multideath*/
 
@@ -1731,44 +1778,6 @@ Banners
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.fights .mlh{
-  text-transform: uppercase;
-  font-size: 18px;
-  color: #fff;
-  text-decoration: none;
-  position: relative;
-  text-align: center;
-  margin: 0;
-  padding: 10px 0px 15px;
-  overflow: hidden;
-}
-.fights .mlh span {
-  position: relative;
-  display: inline-block;
-  padding: 0 10px;
-}
-.fights .mlh span:before {
-  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKYAAAABCAYAAABUkdUhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE9JREFUeNpiPHfuHCMDAwMIIwNGJIwsho3GpgeXHDF8bHai20uuWejuYiLSfAYS7CSkh9iwpjQM0fUTEza4wp6Jim7DZed/KC0FxCwAAQYAvF4D2A1GCIQAAAAASUVORK5CYII=');
-  top: 50%;
-  right: 100%;
-  position: absolute;
-  margin-right: 0px;
-  margin-top: -19px;
-}
-.fights .mlh span:after {
-  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKYAAAABCAYAAABUkdUhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFVJREFUeNpiPHfuXA4DA8MfIH7GAAGMUPo/EkYG6GKE+NjE/qHJMeCx8z8ec9HFqeE2Qv7G5TZSwgefHlzhxEBC2Pwn0nxKzcIWNtjkCPkbQw9AgAEA+HtQbeDgfWQAAAAASUVORK5CYII=');
-  top: 50%;
-  left: 100%;
-  position: absolute;
-  margin-left: 0px;
-  margin-top: -19px;
-}
-.fights .mlh span a{
-  color: #7fa2ba;
-}
-.fights .mlh span .btn{
-  color: #fff;
 }
 .fights .bestEvent{
   margin-bottom: 20px;/*a*/
@@ -2030,22 +2039,27 @@ Banners
   box-shadow: 0 6px 12px rgba(0,0,0,.2);
 }
 .dropdown-menu {
-  background: #305c7b;
+  background: #035880;
   box-shadow: 7px 7px 10px rgba(0,0,0,.4);
   padding: 0;
   margin: -1px 0;
-  border: 0;
+  border: 1px solid #0b75a7;
   border-radius: 0 0 2px 2px;
   width: 100%;
+}
+.dropdown-menu li:nth-child(2n+1){
+  background: rgba(255, 255, 255, 0.04);
 }
 .dropdown-menu li.active a{
   background: #037db5;
   color: #fff;
 }
 .dropdown-menu li a{
-  color: #b7b7b7;
-  padding: 5px 15px;
-  border-top: 1px solid #414e5a;
+  color: #7faec3;
+  padding: 4px 12px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .dropdown-menu li a:active,
       .dropdown-menu li a:focus,
@@ -2057,8 +2071,8 @@ Banners
 .dropdown-header{
   text-transform: uppercase;
   color:#fff;
-  padding: 10px 16px;
-  background: #414e5a;
+  padding: 7px 12px;
+  background: #414e5a!important;
 }
 /*
 * Buttons
@@ -2066,9 +2080,8 @@ Banners
 .btn{
   border-radius: 2px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  text-transform: uppercase;
-  border: 0;
-  line-height: 1.5;
+  border: 1px solid transparent;
+  line-height: 1.42857143;
   cursor: pointer;
 }
 /*
@@ -2093,10 +2106,16 @@ Banners
   color: #acacac;
 }
 .btn-sm{
-  
+  height: 28px;
+}
+.btn-sm .caret {
+  margin: 7px 0 7px 5px;
+}
+.btn-xs .caret {
+  margin: 3px 0 3px 5px !important;
 }
 .btn-default{
-  background: #444950;
+  background: #454a4e;
   color: #b5b5b5; 
 }
 .btn-default:active,
@@ -2104,6 +2123,22 @@ Banners
   .btn-default:hover{
   background: #037db5;
   color: #fff;
+  border-color: #037db5;
+}
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+    color: #7faec3;
+    background-color: #035880;
+    border-color: #0b75a7;
+}
+.dropdown-toggle{
+  text-align: left;
+}
+.dropdown-toggle .caret{
+  float: right;
+  margin: 8px 0 8px 5px;
+}
+.input-group-btn .dropdown-toggle .caret{
+  margin-left: 0px;
 }
 .btn-default.active, .btn-default:active{
     color: #b7b7b7;
@@ -2146,6 +2181,13 @@ body .open>.dropdown-toggle.btn-default:focus{
 .btn-border.btn-success{
   color: #82ac4e;
 }
+.btn-default.active, 
+.btn-default:active, 
+.open>.dropdown-toggle.btn-default {
+    color: #7faec3;
+    background-color: #035880;
+    border-color: #0b75a7;
+}
 /*
 * Popover
 */
@@ -2174,9 +2216,10 @@ body .open>.dropdown-toggle.btn-default:focus{
 */
 .form-control{
   border-radius: 2px;
-  background: #444950;
+  background: #454a4e;
   border: 0;
   color: #fff;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 .form-control:active,
   .form-control:focus,
@@ -2185,6 +2228,9 @@ body .open>.dropdown-toggle.btn-default:focus{
 }
 .input-sm {
     height: 28px;
+}
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+    margin-left: 0px;
 }
 .breadcrumb{
   background-color: transparent;
@@ -2874,7 +2920,7 @@ Branding - Match of the day
   }
   .abg_left u {
     top: 28px;
-    left: 150px;
+    left: 160px;
     width: 270px;
   }
   .abg_md {
@@ -3261,6 +3307,7 @@ LIVE BLOCK
   font-size: .9em;
   background: #37424c url("http://game-tournaments.com/html/img/spoiler.png") repeat scroll 0 0;
   margin-bottom: 15px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 .livebet h3 {
   text-align: right;
@@ -7291,16 +7338,16 @@ Banners
   position: relative;
   
 }
-.prp:nth-child(odd){
+.prp:nth-child(even){
   background: rgb(59, 65, 69);
 }
-.prp:nth-child(odd) .prm{
+.prp:nth-child(even) .prm{
   background: rgb(47, 52, 55);
 }
-.prp:nth-child(odd) .prm:before{
+.prp:nth-child(even) .prm:before{
   background: rgb(47, 52, 55);
 }
-.prp:nth-child(even){
+.prp:nth-child(odd){
   background: rgb(47, 52, 55);
 }
 .prp.active{
@@ -8011,7 +8058,7 @@ Banners
 * Section players compare
 */
 .histb{
-  font-size: 12px;
+  font-size: 11px;
 }
 .histb h3{
   margin: 30px 0 15px 0;
@@ -8031,12 +8078,13 @@ Banners
 .histb table th{
   color: #b1b5ba;
   padding: 5px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 300;
-  width: 70px;
+  width: 73px;
+  line-height: 13px;
 }
 .histb table td{
-  padding: 8px 5px;
+  padding: 8px 3px;
   color: #8fa0b1;
 }
 .histb table td u{
@@ -8654,7 +8702,6 @@ Banners
   text-decoration: none;
 }
 .mlt-filter input {
-  background-color: #444950;
   color: #a2a2a2;
   font-size: 12px;
   display: inline-block;
@@ -8689,23 +8736,24 @@ Banners
   border-collapse: collapse;
   border-spacing: 0;
   vertical-align: middle;
-  border-top: 2px solid #3f4b56;
+  border-top: 2px solid #393e40;
 }
 .mtable th{
   text-align: center;
   border-bottom:0;
   padding: 10px 0;
-  background: ;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 500;
 }
 .mtable tr:nth-of-type(2n+1) {
-  border-bottom: 1px solid #424f5a;
+  border-bottom: 1px solid rgba(57, 62, 64, 0.65);
 }
-.mtable tr:nth-of-type(2n) {
-  background: linear-gradient(to right, rgb(56, 66, 74) 0%, rgba(46, 51, 55, 0) 70%, rgba(46, 51, 55, 0) 100%);
-  background-attachment: fixed;
-  border-bottom: 1px solid #424f5a;
+.mtable tr:nth-of-type(2n) {/*background: linear-gradient(to right, rgb(56, 66, 74) 0%, rgba(46, 51, 55, 0) 70%, rgba(46, 51, 55, 0) 100%);
+    *//*background: linear-gradient(to right, rgb(37, 43, 47) 0%, rgba(46, 51, 55, 0) 70%, rgba(46, 51, 55, 0) 100%);
+    background-attachment: fixed;
+    */
+  background: #303539;
+  border-bottom: 1px solid rgba(26, 31, 33, 0.25);
 }
 .mtable tr:hover{
   background: rgb(64, 75, 84);
@@ -8727,7 +8775,7 @@ Banners
   line-height: 1!important;
 }
 .mtable td:first-child{
-  padding-left: 30px;
+  padding-left: 20px;
 }
 .mtable td:last-child{
   padding-right: 10px;
@@ -9341,11 +9389,11 @@ Banners
   position: absolute;
   content: '';
   display: block;
-  background: url(/img/bgtop.png) no-repeat center / cover;
+  background: url(/img/bgtop.png) no-repeat center;
   opacity: .7;
 }
 .newstop > div{
-  padding: 30px 40px;
+  padding: 40px 40px;
   position: relative;
   z-index: 2;
 }
@@ -9488,7 +9536,7 @@ Banners
   background: #4c5b67;
 }
 .news-text{
-  padding: 70px 50px;
+  padding: 50px 30px;
 }
 @media (max-width: 991px) {
   .news-text {
@@ -9650,7 +9698,6 @@ Banners
   font-size: 16px;
   line-height: 1.6;
   font-weight: lighter;
-  padding: 0 30px;
   color: #d6d6d6;
 }
 /**
@@ -9711,8 +9758,10 @@ Block ramka
 }
 .n_share .btn{
   text-transform: none;
-  color:#fff;
-  margin: 0 9px;
+  color: #fff;
+  margin: 0 0.5%;
+  width: 18.4%;
+  font-size: 12px;
 }
 .n_share .btn-vk{
   background: #4b729b;
@@ -9739,6 +9788,7 @@ Block ramka
 .tr_block .tr_img{
   display: block;
   margin-bottom: 20px;
+  border-bottom:1px solid #425e63;
 }
 .tr_block h4{
   text-align: center;
@@ -9793,7 +9843,7 @@ Block ramka
   background-clip: content-box;
   top: 20px;
   margin: 0;
-  width: 70%;
+  width: 60%;
   position: absolute;
   right: 120%;
 }
@@ -9807,7 +9857,7 @@ Block ramka
   background-clip: content-box;
   top: 20px;
   margin: 0;
-  width: 70%;
+  width: 60%;
   position: absolute;
   left: 120%;
 }
@@ -9825,7 +9875,7 @@ Block ramka
 
 }
 .nw .m-top-cont{
-  padding-bottom: 0;
+
 }
 .nw .tse-sc{
   font-size: 12px;
@@ -9886,7 +9936,21 @@ Block ramka
   position: relative;
   width: 100%;
   background: transparent;
-  padding: 0 20px 20px;
+  padding: 0 20px 5px;
+}
+.nw .subs >div{
+  position: relative;
+  margin: 0 0 5px 0;
+}
+.nw .subs >div .btn-group{
+  display: block;
+}
+.nw .subs >div .btn-group .btn{
+  float:none;
+  width: 100%;
+}
+.nw .subs >div input{
+  width:100%;
 }
 /*nw*/
 .n_com{
@@ -10202,16 +10266,291 @@ Block ramka
 /*
   teams.html
 */
+section.hero{
+  text-align: center;
+  position: relative;
+  padding: 40px 20px;
+  /*background: #38434d;
+  */
+  background: rgb(32, 37, 39);
+  background-position: 0 100%;
+  background-size: cover;
+  /*
+  background-image: inline(../img/tile.png);
+  */
+  height: 260px;
+  margin-bottom: -50px;
+}
+section.hero:before {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  content: '';
+  display: block;
+  background: url(/img/bgtop.png) no-repeat center;
+  background-size: auto;
+  opacity: .3;
+}
+section.hero:after {
+  content: '';
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: block;
+  height: 300px;
+  background: linear-gradient(to bottom, rgba(46,51,55,0) 0%,rgba(46,51,55,1) 100%);
+}
+section.hero p{
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+  text-shadow: 1px 1px 7px #000;
+}
+section.hero h1{
+  position: relative;
+  z-index: 2;
+  font-size: 24px;
+}
+.temsList thead{
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.temsList thead tr{
+  border-bottom: 0!important;
+}
 .temsList thead th{
   text-align: left;
   font-size: 10px;
-  background: #424f5a url(http://game-tournaments.com/html/img/spoiler.png) repeat scroll 0 0;
+  background: #37424c url(http://game-tournaments.com/html/img/spoiler.png) repeat scroll 0 0;
+}
+.temsList thead th:first-child{
+  padding-left: 20px;
+}
+.temsList thead th span{
+  cursor: pointer;
+}
+.temsList thead th span:hover{
+  color: #a6c6cb;
+}
+.temsList .mtable{
+  border-top:0;
+}
+.temsList .mtable .t-item{
+  color: #ccc;
+  font-weight: 300;
+}
+.temsList .mtable .t-item:hover{
+  color: #fff;
+}
+.temsList .mtable .t-item:hover .flag{
+  opacity: 1;
+}
+.temsList .mtable .t-item:hover a{
+  color: #fff;
 }
 .temsList .mtable .t-item td{
-  padding: 0;
+  padding: 15px 0;
 }
 .temsList .mtable .t-item td h4{
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+}
+.temsList .mtable .t-item td h4 .logo{
+  width: 30px;
+  margin: -8px 10px -8px 0;
+  float: right;
+}
+.temsList .mtable .t-item td h4 .flag{
+  margin-right: 5px;
+  opacity: .7;
+}
+.temsList .mtable .t-item td h4 .flag img{
+  width: 20px;
+  margin: -5px 0;
+  vertical-align: baseline;
+}
+.temsList .mtable .t-item td h4 a{
+  color: #a6c6cb;
+}
+.temsList .mtable .t-item td h4 u{
+  opacity: .4;
+  text-decoration: none;
+  font-size: .9em;
+  font-weight: 300;
+}
+.temsList .mtable .t-item td:nth-child(1){
+  padding-right: 40px;
+  text-align: right;
+}
+.temsList .mtable .t-item td:nth-child(2){
+
+}
+.temsList .mtable .t-item td:nth-child(3){
+  text-align: right;
+  padding-right: 27px;
+}
+.temsList .mtable .t-item td:nth-child(4){
+  text-align: right;
+  padding-right: 25px;
+}
+.temsList .mtable .t-item td:nth-child(5){
+  text-align: right;
+  padding-right: 27px;
+}
+.temsList .mtable .t-item td:nth-child(6){
+  text-align: right;
+  padding-right: 25px;
+}
+.filter{
+  margin-bottom: 30px;
+}
+.filter >.row{
+  margin-right: -5px;
+}
+.filter >.row >div{
+  padding: 0 5px;
+}
+.filter .btn{
+  display: block;
+  width: 100%;
+}
+.filter .mlt-filter input{
+  height: 34px;
+  padding: 6px 35px 6px 12px;
   font-size: 13px;
+}
+.filter .mlt-filter .sicon{
+  top: 5px;
+}
+.historyBlock{
+  display: block;
+  margin-bottom: 30px;
+  background: #3c4b58;
+  text-align: center;
+  position: relative;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.historyBlock:hover{
+  text-decoration: none;
+  color: #fff;
+}
+.historyBlock:hover .miHlink{
+  color: #fff;
+}
+.historyBlock:hover:before{
+  top: 0px;
+}
+.historyBlock:hover:after{
+  bottom: 5px;
+}
+.historyBlock:before,
+  .historyBlock:after{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  right: 40px;
+  height: 20px;
+  display: block;
+  box-shadow: 0 2px 30px 3px #2196F3;
+  border-radius: 200px /20px;
+  z-index: 0;
+  transition: all .2s ease;
+}
+.historyBlock:after{
+  top: auto;
+  bottom: 15px;
+}
+.historyBlock >div{
+  overflow: hidden;
+  position: relative;
+  padding: 5px 15px 15px 15px;
+  background: #3c4b58;
+  z-index: 1;
+}
+.historyBlock .ibg{
+  top: -30px;
+  right: -30px;
+  bottom: -30px;
+  left: -40px;
+  position: absolute;
+  transform: translate(11.05px, -28.425px);
+  opacity: .2;
+  background-image: url(../img/teams.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.historyBlock i.mi-history {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  background-image: url(../img/mi16.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.historyBlock .miHlink{
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  color: #7fa2ba;
+  margin: 0;
+  position: relative;
+  transition: all .2s ease;
+}
+.lastTour .mtable{
+  border-top: 0;
+}
+.lastTour .mtable thead {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.lastTour .mtable thead th {
+  text-align: left;
+  font-size: 10px;
+  background: #37424c url(http://game-tournaments.com/html/img/spoiler.png) repeat scroll 0 0;
+}
+.lastTour .mtable thead th:first-child {
+  padding-left: 20px;
+}
+.lastTour .mtable tr td{
+  height: 55px;
+}
+.lastTour .mtable tr td:nth-child(1){
+  position: relative;
+  font-size: 16px;
+}
+.lastTour .mtable tr td:nth-child(1) b{
+  position: relative
+}
+.lastTour .mtable tr td:nth-child(1) span{
+  display: block;
+  height: 55px;
+  opacity: .2;
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+  width: 170px;
+}
+.lastTour .mtable tr td:nth-child(1) span:after{
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  width: 40px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(52, 57, 61) 100%);
+}
+.lastTour .mtable tr td:nth-child(1) span img{
+  width:100%;
 }
 /*states*/
 /*

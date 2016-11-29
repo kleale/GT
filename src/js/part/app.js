@@ -6,6 +6,31 @@
 
   $(document).ready(function () {
     
+    $(".ibg").mousemove(function( event ) {
+      $(".ibg").css('transform', 'translate(' + event.pageY /40 + 'px, ' + -event.pageX /40+ 'px)');
+    });
+    
+    // hero parralax
+    /*
+    $('.hero').each(function() {
+      var off = $(this).offset().top;
+      $(this).data('orig-offset', off);
+    });
+    $(window).scroll(function(){
+      var scrollTop = $(window).scrollTop();
+
+       $('.hero').each(function(){
+        var off = $(this).data('orig-offset');
+
+        if (scrollTop >= off) {
+          var translate =  (scrollTop - off) / $(window).height() * 100;
+          //console.log(translate);
+          $(this).css({transform: 'translateY(' + translate +'%)'});
+        }
+       });
+    });
+    */
+    
     /* Anything that gets to the document
      will hide the dropdown */
     $(document).click(function(){

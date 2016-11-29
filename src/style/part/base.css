@@ -15,7 +15,7 @@ body{
 }
 a{
   transition: $tease;
-  color: $link-blue;
+  color: $link-light-blue;
   
   &:active,
   &:focus,

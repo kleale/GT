@@ -14,6 +14,10 @@
 //= ../assets/js/bootstrap-switch.min.js
 //= ../assets/js/owl.carousel.min.js
 
+/* Experimental */
+//= ../assets/js/jquery.logosDistort.js
+//= ../assets/js/jquery.particleground.min.js
+
 /*
  * Custom
  */

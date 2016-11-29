@@ -9,6 +9,10 @@
 @import "../assets/css/owl.theme.css";
 
 /*
+@import "../assets/css/perspectiveRules.css";
+*/
+
+/*
 * Base css 
 */
 @import "part/base.css";
