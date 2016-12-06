@@ -59,5 +59,8 @@
 /*players page*/
 @import "part/page-players.css";
 
+/*tournaments page*/
+@import "part/page-tours.css";
+
 /*states*/
 @import "part/state.css";

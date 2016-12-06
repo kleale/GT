@@ -1,0 +1,47 @@
+/*
+  tours.html
+*/
+
+.tourList{
+  .mtable{
+    thead{
+      th{
+        &:nth-child(1){
+          text-align: left;
+        }
+        &:nth-child(2),
+        &:nth-child(3),
+        &:last-child{
+          text-align: right;
+        }
+      }
+    }
+    tr.t-item{
+      td{
+        &:nth-child(1){
+          text-align: left;
+          padding-left: 20px;
+        }
+        &:nth-child(2),
+        &:nth-child(3),
+        &:last-child{
+          text-align: right;
+        }
+        &:nth-child(2){
+          color: #999;
+        }
+        a{
+          text-decoration: none;
+          
+          &:hover{
+            text-decoration: none;
+          }
+          
+          img{
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+    }
+  }
+}

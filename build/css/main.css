@@ -1960,6 +1960,7 @@ Banners
   opacity: .5;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
+  transition: all .2s ease;
 }
 .fights .multideath a > span .teamHeroes u.dead:after{
   content: '';
@@ -10728,6 +10729,39 @@ section.hero h1{
 .grid >row > div{
   display: inline-block;
   vertical-align: top;
+}
+/*tournaments page*/
+/*
+  tours.html
+*/
+.tourList .mtable thead th:nth-child(1){
+  text-align: left;
+}
+.tourList .mtable thead th:nth-child(2),
+        .tourList .mtable thead th:nth-child(3),
+        .tourList .mtable thead th:last-child{
+  text-align: right;
+}
+.tourList .mtable tr.t-item td:nth-child(1){
+  text-align: left;
+  padding-left: 20px;
+}
+.tourList .mtable tr.t-item td:nth-child(2),
+        .tourList .mtable tr.t-item td:nth-child(3),
+        .tourList .mtable tr.t-item td:last-child{
+  text-align: right;
+}
+.tourList .mtable tr.t-item td:nth-child(2){
+  color: #999;
+}
+.tourList .mtable tr.t-item td a{
+  text-decoration: none;
+}
+.tourList .mtable tr.t-item td a:hover{
+  text-decoration: none;
+}
+.tourList .mtable tr.t-item td a img{
+  margin: 0 10px 0 0;
 }
 /*states*/
 /*
