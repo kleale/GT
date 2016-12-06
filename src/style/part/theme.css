@@ -435,6 +435,8 @@ Tabs mobile
     transition: height 0.6s ease;
   }
 }
+
+/*OWL SLIDER STYLE*/
 .owl-theme {
   .owl-controls{
     .owl-buttons{
@@ -455,5 +457,31 @@ Tabs mobile
         background: #5b6d7b;
       }
     }
+  }
+}
+
+.well{
+  background: #37424c url(http://game-tournaments.com/html/img/spoiler.png) repeat scroll 0 0;
+      color: #a6c6cb;
+    font-size: 12px;
+    border-color: #424f5a;
+    position: relative;
+  ul{
+    padding: 0 0 0 15px;
+    margin: 0;
+  }
+}
+.well-info{
+  &:before{
+    content: 'info';
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: block;
+    padding: 2px 7px;
+    background: #424f5a;
+    color: #a6c6cb;
+    font-size: 11px;
+    border-radius: 0 0 6px 0;
   }
 }

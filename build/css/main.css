@@ -1866,7 +1866,7 @@ Banners
 .fights .bestKill a > span em{
   color: #ff0000;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   font-size: 16px;
   font-style: normal;
   text-transform: uppercase;
@@ -1953,9 +1953,13 @@ Banners
   float: left;
   position: relative;
   overflow: hidden;
+  min-height: 30px;
+  background: #39454e;
 }
 .fights .multideath a > span .teamHeroes u.dead img{
   opacity: .5;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 .fights .multideath a > span .teamHeroes u.dead:after{
   content: '';
@@ -1967,6 +1971,14 @@ Banners
   width: 125%;
   background: #c50c0c;
   transform: rotate(30deg);
+}
+.fights .multideath a > span .teamHeroes u.dead:hover img{
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+.fights .multideath a > span .teamHeroes u.dead:hover:after{
+  opacity: 0;
 }
 .fights .multideath a > span .teamHeroes u img{
   width: 100%;
@@ -2398,6 +2410,7 @@ Tabs mobile
   height: 0;
   transition: height 0.6s ease;
 }
+/*OWL SLIDER STYLE*/
 .owl-theme .owl-controls .owl-buttons .owl-prev,
       .owl-theme .owl-controls .owl-buttons .owl-next{
   background: #5b6d7b;
@@ -2413,6 +2426,29 @@ Tabs mobile
 }
 .owl-theme .owl-controls .owl-page span{
   background: #5b6d7b;
+}
+.well{
+  background: #37424c url(http://game-tournaments.com/html/img/spoiler.png) repeat scroll 0 0;
+      color: #a6c6cb;
+    font-size: 12px;
+    border-color: #424f5a;
+    position: relative;
+}
+.well ul{
+  padding: 0 0 0 15px;
+  margin: 0;
+}
+.well-info:before{
+  content: 'info';
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: block;
+  padding: 2px 7px;
+  background: #424f5a;
+  color: #a6c6cb;
+  font-size: 11px;
+  border-radius: 0 0 6px 0;
 }
 /*
 Modal general
@@ -4423,19 +4459,34 @@ Headline
   }
 }
 .m-f{
+  /*position: absolute -1px 0 * 100%;*/
   top: -1px;
   right: 0;
-  left: 100%;
+  left: 0;
   position: absolute;
+  max-width: 1200px;
+  z-index: 20;
 }
 .m-f .m-fast{
   font-size: 18px;
-  color: #8f8f8f;
-  background-color: #32373b;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAChJREFUeNpi+P//PwMQy0JpMMYQAGFGsAwqkGVAUyUL086Abi5AgAEANCs/VAxOWCIAAAAASUVORK5CYII=');
+  color: #8f8f8f;/*
+    background-color: #32373b;
+    background-image: inline(../img/tile.png);
+    width: 40px;
+    */
   text-align: center;
-  width: 40px;
-  z-index: 3;
+  z-index: 3;/*add*/
+  width: 1000px;
+  background-color: #191e21;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
+  position: fixed;
+  top:-60px;
+  transition: all .2s ease;
+  opacity: 0;
+}
+.m-f .m-fast.fix{
+  top:0px;
+  opacity: 1;
 }
 @media (max-width: 991px){
   .m-f .m-fast {
@@ -4453,6 +4504,10 @@ Headline
     display: table;
     width: 100%;
   }
+}
+.m-f .m-fast ul li{
+  display: inline-block;
+  width: 50px;
 }
 @media (max-width: 991px){
   .m-f .m-fast ul li {
@@ -10262,7 +10317,7 @@ Block ramka
   max-width: 37px;
   width: 100%;
 }
-/*home page*/
+/*teams page*/
 /*
   teams.html
 */
@@ -10336,6 +10391,7 @@ section.hero h1{
 .temsList thead th span:hover{
   color: #a6c6cb;
 }
+/*thead*/
 .temsList .mtable{
   border-top:0;
 }
@@ -10406,6 +10462,11 @@ section.hero h1{
   text-align: right;
   padding-right: 25px;
 }
+/*mtable*/
+.temsList .well{
+  margin-left: 20px;
+}
+/*temsList*/
 .filter{
   margin-bottom: 30px;
 }
@@ -10506,6 +10567,7 @@ section.hero h1{
   position: relative;
   transition: all .2s ease;
 }
+/*historyBlock*/
 .lastTour .mtable{
   border-top: 0;
 }
@@ -10557,6 +10619,115 @@ section.hero h1{
 .lastTour .mtable tr td:nth-child(5) u{
   color: #bd8732;
   margin: 3px 0;
+}
+/*lastTour*/
+/*players page*/
+/*
+  players.html
+*/
+.temsList.playerList .mtable .t-item td:nth-child(1){
+  text-align: left;
+  padding-left: 20px;
+}
+.temsList.playerList .mtable .t-item td:nth-child(3){
+  text-align: left;
+}
+.temsList.playerList .mtable .t-item td:last-child{
+  text-align: right;
+  padding-right: 10px;
+}
+.temsList.playerList .mtable .t-item td h4 {
+  font-size: 12px;
+}
+.temsList.playerList .mtable .t-item td h4 .logo{
+  float: left;
+}
+.fightsPlayers .bestKill a >span u s{
+  text-decoration: none;
+  opacity: .5;
+  font-size: .8em;
+}
+.fightsPlayers .bestKill a >span >s{
+  top: 3px;
+  right: 5px;
+  position: absolute;
+  font-size: 11px;
+  text-decoration: none;
+  display: block;
+  width: 60px;
+  white-space: nowrap;
+}
+.fightsPlayers .bestKill a >span >i{
+  top: -15px;
+  right: 5px;
+  position: absolute;
+  color: yellow;
+  font-size: 11px;
+  font-style: normal;
+  display: block;
+  width: 60px;
+  white-space: nowrap;
+}
+.fightsPlayers .bestKill a >div{
+  padding: 5px 0 0 0;
+  position: relative;
+}
+.fightsPlayers .bestKill a >div .teamHeroes {
+  display: block;
+  margin: 0 15px;
+  background: #424f5a;
+  overflow: hidden;
+  border: 1px solid #424f5a;
+  margin-bottom: -2px;
+}
+.fightsPlayers .bestKill a >div .teamHeroes u {
+  margin: 0;
+  border: 1px solid #424f5a;
+  display: block;
+  width: 20%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  min-height: 30px;
+  background: #39454e;
+}
+.fightsPlayers .bestKill a >div .teamHeroes u img {
+  width: 100%;
+  height: auto;
+}
+.fightsPlayers .bestKill a >div .teamHeroes u.dead img {
+  opacity: .5;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  transition: all .2s ease;
+}
+.fightsPlayers .bestKill a >div .teamHeroes u.dead:after {
+  content: '';
+  top: 50%;
+  right: -10px;
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 125%;
+  background: #c50c0c;
+  transform: rotate(30deg);
+}
+.fightsPlayers .bestKill a >div .teamHeroes u.dead:hover img{
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+.fightsPlayers .bestKill a >div .teamHeroes u.dead:hover:after{
+  opacity: 0;
+}
+.grid {
+  /*background: #33393c url(../img/section_bg_1.jpg) repeat 50% 50%;*/
+  background: #37424c url(http://game-tournaments.com/html/img/spoiler.png) repeat scroll 0 0;
+  padding: 30px 30px;
+}
+.grid >row > div{
+  display: inline-block;
+  vertical-align: top;
 }
 /*states*/
 /*

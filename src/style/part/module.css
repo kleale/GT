@@ -346,7 +346,7 @@
         em{
           color: #ff0000;
           display: block;
-          margin-bottom: 10px;
+          margin-bottom: 7px;
           font-size: 16px;
           font-style: normal;
           text-transform: uppercase;
@@ -439,10 +439,14 @@
             float: left;
             position: relative;
             overflow: hidden;
-
+            min-height: 30px;
+            background: #39454e;
+            
             &.dead{
               img{
                 opacity: .5;
+                filter: grayscale(1);
+                transition: $tease;
               }
               &:after{
                 content: '';
@@ -454,6 +458,15 @@
                 width: 125%;
                 background: #c50c0c;
                 transform: rotate(30deg);
+              }
+              &:hover{
+                img{ 
+                  opacity: 1;
+                  filter: grayscale(0);
+                }
+                &:after{
+                  opacity: 0;
+                }
               }
             }
             img{

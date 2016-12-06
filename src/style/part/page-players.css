@@ -1,0 +1,132 @@
+/*
+  players.html
+*/
+
+.temsList.playerList {
+  .mtable {
+    .t-item {
+      td{
+        &:nth-child(1){
+          text-align: left;
+          padding-left: 20px;
+        }
+        &:nth-child(3){
+          text-align: left;
+        }
+        &:last-child{
+          text-align: right;
+          padding-right: 10px;
+        }
+        h4 {
+          font-size: 12px;
+          .logo{
+            float: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fightsPlayers{
+  .bestKill{
+    a{
+      >span{
+        u{
+          s{
+            text-decoration: none;
+            opacity: .5;
+            font-size: .8em;
+          }
+        }
+        >s{
+          position: absolute 3px 5px * *;
+          font-size: 11px;
+          text-decoration: none;
+          display: block;
+          width: 60px;
+          white-space: nowrap;
+        }
+        >i{
+          position: absolute -15px 5px * *;
+          color: yellow;
+          font-size: 11px;
+          font-style: normal;
+          display: block;
+          width: 60px;
+          white-space: nowrap;
+        }
+      }
+      >div{
+        padding: 5px 0 0 0;
+        position: relative;
+        .teamHeroes {
+          display: block;
+          margin: 0 15px;
+          background: #424f5a;
+          overflow: hidden;
+          border: 1px solid #424f5a;
+          margin-bottom: -2px;
+          
+          u {
+            margin: 0;
+            border: 1px solid #424f5a;
+            display: block;
+            width: 20%;
+            float: left;
+            position: relative;
+            overflow: hidden;
+            min-height: 30px;
+            background: #39454e;
+            
+            img {
+              width: 100%;
+              height: auto;
+            }
+            &.dead {
+              img {
+                opacity: .5;
+                filter: grayscale(1);
+                transition: $tease;
+              }
+              &:after {
+                content: '';
+                top: 50%;
+                right: -10px;
+                position: absolute;
+                display: block;
+                height: 1px;
+                width: 125%;
+                background: #c50c0c;
+                transform: rotate(30deg);
+              }
+              &:hover{
+                img{ 
+                  opacity: 1;
+                  filter: grayscale(0);
+                }
+                &:after{
+                  opacity: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }  
+}
+
+.grid {
+  /*background: #33393c url(../img/section_bg_1.jpg) repeat 50% 50%;*/
+  background: #37424c url(http://game-tournaments.com/html/img/spoiler.png) repeat scroll 0 0;
+  padding: 30px 30px;
+  
+  >row{
+    > div{
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}
+

@@ -29,7 +29,7 @@
 */
 
 /*match-page*/
-@import "part/match-page.css";
+@import "part/page-match.css";
 @import "part/match-player.css";
 @import "part/match-player-chat.css";
 @import "part/match-player-stat.css";
@@ -47,14 +47,17 @@
 @import "part/page-match-list.css";
 
 /*news and news-page*/
-@import "part/news.css";
+@import "part/page-news.css";
 @import "part/vod-slider.css";
 
 /*home page*/
-@import "part/home.css";
+@import "part/page-home.css";
 
-/*home page*/
-@import "part/teams-page.css";
+/*teams page*/
+@import "part/page-teams.css";
+
+/*players page*/
+@import "part/page-players.css";
 
 /*states*/
 @import "part/state.css";

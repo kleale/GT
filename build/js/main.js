@@ -2680,6 +2680,17 @@ function(){for(var a=0,b=["ms","moz","webkit","o"],c=0;c<b.length&&!window.reque
       $(".ibg").css('transform', 'translate(' + event.pageY /40 + 'px, ' + -event.pageX /40+ 'px)');
     });
     
+    // match bar affix
+    $(window).scroll(function() {
+      var wbh = $('.m-head').parent().offset().top - 50;
+      if (wbh-$(window).scrollTop() <= 0) {
+        $('#m-fast').addClass('fix');
+      }
+      else {
+        $('#m-fast').removeClass('fix');
+      }
+    });
+    
     // hero parralax
     /*
     $('.hero').each(function() {

@@ -68,7 +68,7 @@ section.hero{
         }
       }
     }
-  }
+  }/*thead*/
   .mtable{
     border-top:0;
     .t-item{
@@ -140,8 +140,12 @@ section.hero{
         }
       }
     }  
+  }/*mtable*/
+  
+  .well{
+    margin-left: 20px;
   }
-}
+}/*temsList*/
 
 .filter{
   margin-bottom: 30px;
@@ -246,7 +250,7 @@ section.hero{
     position: relative;
     transition: $tease;
   }
-}
+}/*historyBlock*/
 
 .lastTour {
   
@@ -316,4 +320,4 @@ section.hero{
       }
     }
   }
-}
+}/*lastTour*/
