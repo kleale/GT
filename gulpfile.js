@@ -3,10 +3,10 @@
 // переменные ======================
 
 // As we need to reference a single set of mixins across multiple independently processed CSS files, we have created JS version of the mixins
-var cssMixins = require("./src/style/mixins.js");
+var cssMixins = require("./src/css/mixins.js");
 
 //As we need to reference a single set of vars across multiple independently processed CSS files, we have created a JS for the CSS vars
-var cssVariables = require("./src/style/var.js");
+var cssVariables = require("./src/css/var.js");
 
 var gulp         = require('gulp'),
     rename       = require('gulp-rename'),
@@ -49,22 +49,22 @@ var gulp         = require('gulp'),
 var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
         html: 'build/',
-        js: 'build/js/',
+        js: 'build/inc/',
         css: 'build/css/',
         img: 'build/img/',
         fonts: 'build/fonts/'
     },
     src: { //Пути откуда брать исходники
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-        js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
-        style: 'src/style/main.css',
+        js: 'src/inc/main.js',//В стилях и скриптах нам понадобятся только main файлы
+        style: 'src/css/main.css',
         img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/**/*.*'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
-        js: 'src/js/**/*.js',
-        style: 'src/style/**/*.*',
+        js: 'src/inc/**/*.js',
+        style: 'src/css/**/*.*',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -149,7 +149,7 @@ gulp.task('style:build', function () {
 gulp.task('uncssed', function () {
   return gulp.src('build/main.css')  
     .pipe(uncss({
-      html: ['build/index.html'] //сюда добавить все хтмльки
+      html: ['build/html/index.html'] //сюда добавить все хтмльки
     }))
     .pipe(gulp.dest(path.build.css));
 });
