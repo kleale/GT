@@ -48,7 +48,7 @@ var gulp         = require('gulp'),
 
 var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
-        html: 'build/',
+        html: 'build/html/',
         js: 'build/inc/',
         css: 'build/css/',
         img: 'build/img/',

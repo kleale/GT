@@ -141,7 +141,8 @@
 .dropdown-toggle{
   text-align: left;
   .caret{
-    float: right;
+    position: absolute;
+    right: 10px;
     margin: 8px 0 8px 5px;
   }
 }

@@ -76,8 +76,8 @@
         display: inline-block;
         color: $button-gray-text;
         text-transform: uppercase;
-        font-weight: 300;
-        font-size: 11px;
+        font-size: 10px;
+        line-height: 1;
         
         b{
           background: $button-gray;
@@ -217,11 +217,11 @@ Headline
 .m-rate{
   overflow: hidden;
   display: inline-block;
-  font-size: 16px;
-  padding: 1px 3px 1px 0;
+  font-size: 14px;
+  padding: 2px 3px 1px 0;
   position: relative;
   top: 4px;
-  margin: 1px 0 0 -10px;
+  margin: 1px -3px 0 -10px;
   
   @media (max-width: $L){
     margin: 1px;
@@ -331,7 +331,6 @@ Headline
   font-size: 12px;
   padding: 3px;
   display: inline-block;
-  margin-right: 5px;
   
   i {
     font-size: 16px;
@@ -341,8 +340,8 @@ Headline
 }
 .shr{
   display: inline-block;
-  padding: 0 5px;
-  font-size: 12px;
+  padding: 0 3px;
+  font-size: 11px;
   color: $button-gray-text;
   background-color: $button-gray;
   border-radius: $br;
@@ -357,8 +356,8 @@ Headline
     }
   
     i{
-      font-size: 16px;
-      margin-right: 5px;
+      font-size: 12px;
+      margin-right: 3px;
       position: relative 2px * * *;
     }
 }
@@ -367,10 +366,21 @@ Headline
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: $link-blue;
-  max-width: 300px;
-  font-size: 11px;
+  color: #6c6c6c;
+  max-width: 250px;
+  font-size: 10px;
   float: right;
+  margin-right: -10px;
+  
+  a{
+    color: #6c6c6c;
+    
+    &:hover,
+    &:active,
+    &:focus{
+      color: #a6c6cb;
+    }
+  }
   
   @media (max-width: $L){
     text-align: center;
@@ -531,6 +541,7 @@ Headline
     padding-top: 10px;
     margin-right: 90px;
     margin-top: 5px;
+    color: #797979;
     background: inline(../img/hline_l.png) no-repeat 100% 0;
     
     @media (max-width: $L){
@@ -604,6 +615,7 @@ Headline
 .m-r-ozh{
   font-size: 11px;
   color: $text-gray-2;
+  margin-left: -10px;
 }
 
 /*

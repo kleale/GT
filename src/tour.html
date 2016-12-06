@@ -1,4 +1,4 @@
-{% set title = "Игроки дота 2. Рейтинг игроков Dota 2" %}
+{% set title = "Турнир ТАКОЙТО Dota 2" %}
 
 {% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro'] %}
 {% set flag = ['1', '2', '3', '4', '5', '6'] %}
@@ -11,26 +11,29 @@
   <div class="container mainwrap">
     {% include "template/breadcrumbs.html" %}
     <div class="otstup">
-      <section class="hero" data-orig-offset="0" style="background-image:url(http://i14.kanobu.ru/r/5d11085f868efa534316ebe19e4d3515/1040x-/u.kanobu.ru/editor/images/35/319b477e-c671-4459-88e2-1f628c4a661b.jpg);">
-        <h1 class="mh"><span>Рейтинг команд <a href="/dota-2">DOTA 2</a></span></h1>
-        <p>В данном разделе представлены все профессиональные игроки Dota 2. Для некоторых из них так же указан их индивидуальный рейтинг (Solo MMR)</p>
+      <section class="hero" data-orig-offset="0" style="background-image:url(/img/headpic.jpg);">
+        <h1 class="mh"><span>Рейтинг игроков <a href="/dota-2">DOTA 2</a></span></h1>
+        <p>Все турниры по Dota 2. Список всех будущих и прошедших турниров, расписание турниров и матчей</p>
       </section>
       <section class="m-sec m-even">
         <div class="row">
           <div class="col-md-8">
             
-            
+
             
           </div>
           <div class="col-md-4">
             
             {% include "template/liveblock.html" %}
-            {% include "template/blockzames-vertical.html" %}
 
           </div>
         </div>
       </section>
-
+      
+      <section class="grid">
+        {% include "template/players/blockzames-grid.html" %}
+      </section>
+      
       {#
       <section id="m-news" class="m-sec m-even">
         <div class="row">
@@ -43,11 +46,11 @@
         </div>
       </section>
       #}
-
+      {#
       <section id="m-zames" class="m-sec m-even m-zames">
         {% include "template/blockzames.html" %}
       </section>
-
+      #}
       <div class="bn">
         <img src="../img/ad.jpg" alt="">
       </div>
