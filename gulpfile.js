@@ -48,7 +48,7 @@ var gulp         = require('gulp'),
 
 var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
-        html: 'build/html/',
+        html: 'build/',
         js: 'build/inc/',
         css: 'build/css/',
         img: 'build/img/',
@@ -137,7 +137,7 @@ gulp.task('style:build', function () {
       postcssColor,
       postcssAssets,
       autoprefixer({browsers: ['last 2 version']}),
-      //cssnano(),
+      //cssnano(),  // разкомментить для минимайза
     ];
     return gulp.src(path.src.style) //Выберем наш main.scss
         .pipe(postcss(processors))
@@ -146,13 +146,15 @@ gulp.task('style:build', function () {
 });
 
 // Удалить ненужные стили
+/*
 gulp.task('uncssed', function () {
   return gulp.src('build/main.css')  
     .pipe(uncss({
-      html: ['build/html/index.html'] //сюда добавить все хтмльки
+      html: ['build/index.html'] //сюда добавить все хтмльки
     }))
     .pipe(gulp.dest(path.build.css));
 });
+*/
 
 // Сборка картинок
 gulp.task('img:build', function () {
