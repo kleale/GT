@@ -4,7 +4,7 @@ Branding - Match of the day
 .abg{
   position:fixed 0 0 0 50px;
   z-index:1;
-  background:#000 url(/img/bg.jpg) no-repeat 50% -50px;
+  background:#000 url(../img/bg.jpg) no-repeat 50% -50px;
   color: #fff;
   line-height: 1;
   overflow:hidden;
@@ -33,7 +33,7 @@ Branding - Match of the day
 .abg_md{
 	width: 100px;
     height: 73px;
-    background: url(/img/mday.png) no-repeat 50% 50%;
+    background: url(../img/mday.png) no-repeat 50% 50%;
     background-size: cover;
     position: absolute;
     top: 10px;
@@ -82,7 +82,7 @@ Branding - Match of the day
     position: absolute;
     top: 50%;
     left: 50%;
-    background: url(/img/tp1.png) no-repeat 50% 50%;
+    background: url(../img/tp1.png) no-repeat 50% 50%;
     /* background-size: cover; */
     display: block;
     width: 295px;
@@ -96,7 +96,7 @@ Branding - Match of the day
 	opacity: 1;
 }
 .abg_i2:before{
-	background:url(/img/tp2.png) no-repeat 50% 50%;
+	background:url(../img/tp2.png) no-repeat 50% 50%;
 }
 
 .abg_left{
@@ -150,7 +150,7 @@ Branding - Match of the day
     right: 12px;
     top: 88px;
     display: block;
-    background: url(/img/v.png) no-repeat 50% 50%;
+    background: url(../img/v.png) no-repeat 50% 50%;
     background-size: cover;
     width: 170px;
     height: 224px;
@@ -234,7 +234,7 @@ Branding - Match of the day
     right: 30px;
     top: 260px;
     display: block;
-    background: url(/img/k1.png) no-repeat 50% 100%;
+    background: url(../img/k1.png) no-repeat 50% 100%;
     width: 130px;
     height: 130px;
     padding: 50px 0 35px 0;
@@ -276,10 +276,10 @@ Branding - Match of the day
     right: 0;
 }
 .abg_kf.kf_up{
-    background: url(/img/k1_g.png) no-repeat 50% 100%;
+    background: url(../img/k1_g.png) no-repeat 50% 100%;
 }
 .abg_kf.kf_down{
-    background: url(/img/k1_r.png) no-repeat 50% 100%;
+    background: url(../img/k1_r.png) no-repeat 50% 100%;
 }
 
 .abg_btn{
@@ -287,7 +287,7 @@ Branding - Match of the day
     right: 12px;
     top: 395px;
     display: block;
-    background: url(/img/btnbg.png) no-repeat 50% 50%;
+    background: url(../img/btnbg.png) no-repeat 50% 50%;
     background-size: cover;
     width: 160px;
     height: 60px;
@@ -315,7 +315,7 @@ Branding - Match of the day
     right: 10px;
     top: 460px;
     display: block;
-    background: url(/img/bets_gg.png) no-repeat 50% 50%;
+    background: url(../img/bets_gg.png) no-repeat 50% 50%;
     background-size: cover;
     width: 150px;
     height: 60px;
@@ -457,14 +457,14 @@ Branding - Match of the day
 	height:90px;
 	overflow:hidden;
 	position:relative;
-    background: url(/img/ban.jpg) no-repeat 50% 0;
+    background: url(../img/ban.jpg) no-repeat 50% 0;
 	color:#fff;
 	display:block;
 }
 .abl_md{
     width: 66px;
     height: 46px;
-    background: url(/img/mday.png) no-repeat 50% 50%;
+    background: url(../img/mday.png) no-repeat 50% 50%;
     background-size: cover;
     position: absolute;
     top: 10px;
@@ -510,7 +510,7 @@ Branding - Match of the day
     position: absolute;
     top: 50%;
     left: 50%;
-    background: url(/img/tp1.png) no-repeat 50% 50%;
+    background: url(../img/tp1.png) no-repeat 50% 50%;
     display: block;
     width: 295px;
     height: 200px;
@@ -519,7 +519,7 @@ Branding - Match of the day
     transition: all .3s linear;
 }
 .abl_i2:before {
-    background: url(/img/tp2.png) no-repeat 50% 50%;
+    background: url(../img/tp2.png) no-repeat 50% 50%;
 }
 .ablive:hover .abl_i1:before,
 .ablive:hover .abl_i2:before {
@@ -606,7 +606,7 @@ Branding - Match of the day
     right: 7px;
     top: 38px;
     display: block;
-    background: url(/img/btnbg.png) no-repeat 50% 50%;
+    background: url(../img/btnbg.png) no-repeat 50% 50%;
     background-size: cover;
     width: 140px;
     height: 60px;
@@ -630,7 +630,7 @@ Branding - Match of the day
     right: 16px;
     top: 7px;
     display: block;
-    background: url(/img/bets_gg.png) no-repeat 50% 50%;
+    background: url(../img/bets_gg.png) no-repeat 50% 50%;
     background-size: cover;
     width: 120px;
     height: 40px;
@@ -758,10 +758,10 @@ Branding - Match of the day
       height: auto;
   }
   .abl_k1{
-      left:110px;
+      left:90px;
   }
   .abl_k2{
-      right:110px;
+      right:90px;
   }
   .lk_up:before, 
   .lk_down:before {
@@ -799,7 +799,7 @@ LIVE BLOCK
 */
 .livebet{
   font-size: .9em;
-  background: #37424c url("http://game-tournaments.com/html/img/spoiler.png") repeat scroll 0 0;
+  background: #37424c url("../img/spoiler.png") repeat scroll 0 0;
   margin-bottom: 15px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   
@@ -814,7 +814,7 @@ LIVE BLOCK
   }
   .ggbhead {
     display: block;
-    background: url(/img/bets_gg.png) no-repeat 50% 50%;
+    background: url(../img/bets_gg.png) no-repeat 50% 50%;
     background-size: cover;
     width: 94px;
     height: 35px;
@@ -843,7 +843,7 @@ LIVE BLOCK
   }
   
   .table{
-    background: #424f5a url("http://game-tournaments.com/html/img/spoiler.png") repeat scroll 0 0;
+    background: #424f5a url("../img/spoiler.png") repeat scroll 0 0;
   
 	border-bottom: 1px solid rgba(71, 71, 71, 0.39);
     margin-bottom: 0;

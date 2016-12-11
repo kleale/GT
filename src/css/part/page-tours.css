@@ -50,7 +50,7 @@
     }
     tr.trHeader{
       text-align: center;
-      background: #424f5a url(http://game-tournaments.com/html/img/spoiler.png) repeat scroll 0 0;
+      background: #424f5a url(../img/spoiler.png) repeat scroll 0 0;
       h2{
         margin: 3px 0;
         padding: 0;

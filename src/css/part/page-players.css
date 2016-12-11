@@ -1,5 +1,5 @@
 /*
-  players.html
+  players.html LIST
 */
 
 .temsList.playerList {
@@ -118,8 +118,7 @@
 }
 
 .grid {
-  /*background: #33393c url(../img/section_bg_1.jpg) repeat 50% 50%;*/
-  background: #37424c url(http://game-tournaments.com/html/img/spoiler.png) repeat scroll 0 0;
+  background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
   padding: 30px 30px;
   
   >row{
@@ -129,4 +128,93 @@
     }
   }
 }
+
+/*
+player.html
+*/
+
+.pAva{
+    background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  .playerava{
+    text-align: center;
+    
+    img{
+      display: inline-block;
+      max-width: 100%;
+    }
+  }
+  .pInf{
+    padding: 15px;
+    position: relative;
+    .pt{
+      display: block;
+      position: absolute -45px 10px * *;
+      background: #424d56;
+      border-radius: 50%;
+      text-align: center;
+      width: 90px;
+      line-height: 90px;
+      img{
+        width: 60px;
+      }
+    }
+    h2{
+      padding-right: 80px;
+      font-size: 21px;
+      margin: 0 0 5px 0;
+    }
+    h3{
+      
+      font-size: 13px;
+      color: #999;
+      margin: 0 0 5px 0;
+    }
+    p{
+      font-size: 12px;
+      color: #999;
+      
+      img{
+        margin: 0 5px;
+        width: 20px;
+      }
+    }
+  }
+  .niks{
+    font-size: .8em;
+    color: #c8c8c8;
+    
+    b{
+      display: block;
+      color: #fff;
+      margin-bottom: 1px;
+      font-size: 1.2em;
+    }
+  }
+  .pRate{
+    background: #424d56;
+    padding: 15px;
+    
+    table{
+      width: 100%;
+      table-layout: fixed;
+      text-align: center;
+      
+      label{
+        display: block;
+        font-size: 10px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      b{
+        color: #fff;
+        font-size: 30px;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 0 8px #42a6b8;
+      }
+    }
+  }
+}
+
+
 

@@ -12,7 +12,7 @@
   <div class="container mainwrap">
     {% include "template/breadcrumbs.html" %}
     <div class="otstup">
-      <section class="hero" data-orig-offset="0" style="background-image:url(http://i14.kanobu.ru/r/5d11085f868efa534316ebe19e4d3515/1040x-/u.kanobu.ru/editor/images/35/319b477e-c671-4459-88e2-1f628c4a661b.jpg);">
+      <section class="hero" data-orig-offset="0" style="background-image:url(../img/headpic.jpg);">
         <h1 class="mh"><span>Рейтинг команд <a href="/dota-2">DOTA 2</a></span></h1>
         <p>В данном разделе представлены все профессиональные команды дота 2. Рейтинг команд составлен по результатам их матчей</p>
       </section>
@@ -60,10 +60,12 @@
                       <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                      <li><a href="#">Россия</a></li>
-                      <li><a href="#">Китай</a></li>
-                      <li><a href="#">Франция</a></li>
-                      <li><a href="#">Германия</a></li>
+                      {% for i in 0..19 %}
+                        <li><a href="#">Россия</a></li>
+                        <li><a href="#">Китай</a></li>
+                        <li><a href="#">Франция</a></li>
+                        <li><a href="#">Германия</a></li>
+                      {% endfor %}
                     </ul>
                   </div>
                 </div>

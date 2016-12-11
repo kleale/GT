@@ -10,16 +10,6 @@
       $(".ibg").css('transform', 'translate(' + event.pageY /40 + 'px, ' + -event.pageX /40+ 'px)');
     });
     
-    // match bar affix
-    $(window).scroll(function() {
-      var wbh = $('.m-head').parent().offset().top - 50;
-      if (wbh-$(window).scrollTop() <= 0) {
-        $('#m-fast').addClass('fix');
-      }
-      else {
-        $('#m-fast').removeClass('fix');
-      }
-    });
     
     // hero parralax
     /*
@@ -199,7 +189,6 @@
           }
       },
       afterInit : function(){
-        //el.find(".owl-item").eq(0).addClass("synced");
         $(".mlh").width($('.owl-item').width());
         $(".mlh").height($('.owl-item').height());
       }
@@ -255,32 +244,10 @@
       navigation: true,
       navigationText: ["назад","вперед"],
       responsiveClass:true,
-      items : 4, //10 items above 1000px browser width
-      itemsDesktop : [1000,4], //5 items between 1000px and 901px
-      itemsDesktopSmall : [900,3], // betweem 900px and 601px
-      itemsTablet: [600,2] //2 items between 600 and 0
-      /*
-      responsive:{
-          0:{
-              items:1,
-              nav:true
-          },
-          600:{
-              items:3,
-              nav:false
-          },
-          1000:{
-              items:4,
-              nav:true,
-              loop:false
-          },
-          1900:{
-              items:4,
-              nav:true,
-              loop:false
-          }
-      }
-      */
+      items : 4, 
+      itemsDesktop : [1000,4], 
+      itemsDesktopSmall : [900,3],
+      itemsTablet: [600,2] 
     });
     
   }); //end ready

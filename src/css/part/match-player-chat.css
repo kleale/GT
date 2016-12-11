@@ -438,7 +438,7 @@
     right: 0;
     bottom: 0;
     overflow-y: auto;
-    background: url("http://game-tournaments.com/html/img/spoiler.png");
+    background: url("../img/spoiler.png");
     opacity: 0;
     transition: all .3s ease;
     z-index: -1000;
@@ -566,7 +566,7 @@
 }
 .loading:after{
     content:'';
-    background:url("http://game-tournaments.com/html/ring.svg") 50% 50% no-repeat;
+    background:url("../img/ring.svg") 50% 50% no-repeat;
     display:block;
     width:50px;
     height:50px;

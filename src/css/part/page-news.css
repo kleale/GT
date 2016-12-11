@@ -9,7 +9,7 @@
     position: absolute 0 0 0 0;
     content: '';
     display: block;
-    background: url(/img/bgtop.png) no-repeat center;
+    background: url(../img/bgtop.png) no-repeat center;
     opacity: .7;
   }
   

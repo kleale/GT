@@ -3,7 +3,30 @@
 <!DOCTYPE html>
 <html>
 {% include "template/head.html" %}
-<body>  
+
+<script>
+  $(document).ready(function () {
+      // match bar affix
+    $(window).scroll(function() {
+      var wbh = $('.m-head').parent().offset().top - 50;
+      if (wbh-$(window).scrollTop() <= 0) {
+        $('#m-fast').addClass('fix');
+      }
+      else {
+        $('#m-fast').removeClass('fix');
+      }
+    });
+  });
+</script>
+<script src="../inc/assets/js/highcharts.js"></script>
+<script src="../inc/assets/js/highcharts-more.js"></script>
+<script src="../inc/assets/js/highcharts-exporting.js"></script>
+
+<script src="../inc/match-page.js"></script>
+<script src="../inc/match-chart.init.js"></script>
+
+
+ <body>  
   <div class="container mainwrap">
     {% include "template/breadcrumbs.html" %}
     

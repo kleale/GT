@@ -3,7 +3,7 @@
 */
 
 body{
-  background: #333 url(/img/bg_news.jpg) 50% 50% repeat;
+  background: #333 url(../img/bg_news.jpg) 50% 50% repeat;
   @media (max-width: $XM) {
     padding-left: 50px;
   }
