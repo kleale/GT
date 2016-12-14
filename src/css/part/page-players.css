@@ -76,9 +76,17 @@
             float: left;
             position: relative;
             overflow: hidden;
-            min-height: 30px;
+            min-height: 28px;
             background: #39454e;
-            
+            @media (max-width: 1599px) {
+              min-height: 28px;
+            }
+            @media (max-width: 1199px) {
+              min-height: 28px;
+            }
+            @media (max-width: 999px) {
+              min-height: auto;
+            }
             img {
               width: 100%;
               height: auto;
@@ -132,7 +140,10 @@
 /*
 player.html
 */
-
+.pAvaBg{
+  background:  url(../img/pava.png) no-repeat scroll 0 100%;
+  border: 1px solid rgb(27, 43, 56);
+}
 .pAva{
     background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
     margin-bottom: 15px;
@@ -142,7 +153,7 @@ player.html
     
     img{
       display: inline-block;
-      max-width: 100%;
+      width: 100%;
     }
   }
   .pInf{
@@ -192,29 +203,507 @@ player.html
       font-size: 1.2em;
     }
   }
-  .pRate{
-    background: #424d56;
-    padding: 15px;
+  .fans{
+    position: relative;
+    padding: 0 10px 20px;
+    text-align: center;
     
-    table{
-      width: 100%;
-      table-layout: fixed;
-      text-align: center;
-      
-      label{
-        display: block;
-        font-size: 10px;
-        text-transform: uppercase;
-        margin-bottom: 0;
+    .btn{
+      position: relative;
+      i{
+        margin-right: 10px;
       }
-      b{
-        color: #fff;
-        font-size: 30px;
-        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 0 8px #42a6b8;
+    }
+    b{
+      border-radius: 2px;
+      background: #2d3237;
+      padding: 4px 10px;
+      display: inline-block;
+      font-size: 11px;
+      margin-left: 10px;
+      position: relative;
+      
+      &:before{
+        content: '';
+        top: 50%;
+        left: -7px;
+        margin-top: -5px;
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-right: 7px solid #2d3237;
+        border-bottom: 5px solid transparent;
       }
     }
   }
 }
+
+.pRate{
+  /*background: #424d56;*/
+  padding: 15px;
+  margin-bottom: 15px;
+
+  table{
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    td{
+      vertical-align: top;
+    }
+    label{
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      i{
+        opacity: .5;
+        margin: 1px 0 0 5px;
+        &:hover,
+        &:active,
+        &:focus{
+          opacity: 1;
+        }
+      }
+    }
+    b{
+      color: #fff;
+      font-size: 30px;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 0 8px #42a6b8;
+    }
+    .progress{
+      margin: 0 20%;
+    }
+  }
+}
+
+.plCard{
+  background: #232b31 url(../img/pava.png) repeat-x scroll 0 100%;
+  padding-bottom: 0;
+  
+  .maingraph{
+    padding: 0 20px;
+    margin-bottom: 10px;
+    
+    .playerRole{
+      height: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .spider_chart_player{
+      height: 300px
+    }
+    .pRd{
+      position: relative;
+      padding-bottom: 20px;
+
+      >span,b{
+        font-size: 16px;
+        font-weight: 400;
+        position: absolute  * * 0 *;
+      }
+      >span{
+        left: 0;
+      }
+      >b{
+        right: 0;
+      }
+    }
+  }
+}
+
+
+
+.highcharts-container, svg:not(:root) {
+  overflow: visible  !important;
+}
+
+.pTeams{
+  background-color: rgb(19, 29, 38);
+  position: relative;
+  
+  &:before{
+    content: '';
+    position: absolute 0 0 * 0;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(16, 27, 37,1) 0%,rgba(19,29,38,0) 100%);
+  }
+  > div{
+    position: relative;
+  }
+}
+.pTeam{
+  position: relative;
+  padding: 5px 0 5px 0;
+  
+  .teamLogo{
+    float: left;
+    margin: 5px 10px;
+    img{
+      width: 60px;
+    }
+  }
+  div{
+    padding: 0 0 0 90px;
+    font-size: 12px;
+    color: #999;
+    
+    b{
+      display: block;
+      font-size: 16px;
+    }
+    em{
+      display: block;
+      font-style: normal;
+    }
+    u{
+      display: block;
+      text-decoration: none;
+    }
+    s{
+      display: block;
+      text-decoration: none;
+    }
+  }
+  ul{
+    padding: 5px 5px 5px;
+    margin: 0;
+    font-size: 10px;
+    list-style: none;
+    text-align: center;
+    border-top: 1px solid #2b3238;
+    box-shadow: 0 1px 0 0 #435363 inset;
+    li{
+      padding: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
+    }
+  }
+}
+
+.mlhSM{
+  font-size: 12px;
+  line-height: 1;
+  span{
+    &:before,
+    &:after{
+      margin-top: -11px;
+    }
+  }
+}
+
+.temsList.playerGames{
+  .mtable {
+    thead{
+      th:nth-child(3){
+        text-align: right;
+      }
+      th:nth-child(10){
+        text-align: right;
+        padding-right: 10px;
+      }
+    }
+    .t-item{
+      td{
+        padding: 10px 5px;
+      }
+      td:nth-child(1){
+        text-align: left;
+        padding-right: 5px;
+        img{
+          width: 60px;
+        }
+      }
+      td:nth-child(2){
+        text-align: left;
+      }
+      td:nth-child(3){
+        text-align: right;
+        padding-right: 5px;
+        img{
+          margin-right: 0;
+          margin-left: 10PX;
+        }
+      }
+      td:nth-child(4){
+        text-align: center;
+      }
+      td:nth-child(5){
+        text-align: left;
+        h4 .logo{
+          float: left;
+          margin-left: 0;
+          margin-right: 10px;
+        }
+      }
+      td:nth-child(6){
+        text-align: left;
+        img{
+          width: 60px;
+        }
+      }
+      td:nth-child(7){
+        text-align: left;
+      }
+      td:nth-child(8){
+        text-align: center;
+      }
+      td:nth-child(10){
+        text-align: right;
+        padding-right: 10px;
+      }
+    } 
+  }
+}
+
+.pagePlayer, .pageTeam {
+  
+  section.hero{
+    padding: 20px 20px 40px;
+    overflow: hidden;
+    &:after{
+      background: linear-gradient(to bottom, rgba(46,51,55,0) 0%,rgb(35, 43, 49) 100%);
+    }
+
+    h1{
+      text-align: left;
+      padding: 0 10px;
+    }
+    a{
+      position: relative;
+      z-index: 10;
+      margin-top: 10px;
+    }
+  }
+  .m-zames{
+        padding: 20px!important;
+  }
+  .fightsPlayers {
+    margin-bottom: 0px;
+    .row{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.pageTeam{
+  .tLogo{
+    text-align: center;
+    padding: 30px 20% 0;
+    display: block;
+    
+    img{
+      display: inline;
+      max-width: 100%;
+      width: auto;
+    }
+  }
+  .pInf{
+    h2{
+      margin-bottom: 0px;
+      padding-right: 0;
+      text-align: left;
+      span{
+        padding-left: 0;
+        &:before{
+          display: none;
+        }
+        &:after{
+          margin-top: -17px;
+        }
+      }
+    }
+    h3 img{
+      margin: -7px 0;
+    }
+    .subteams{
+      b{
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 5px;
+      }
+      img{
+        width: 30px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .pAvaBg {
+    .pRate{
+      border-top: 1px solid #19222b;
+      box-shadow: 0 1px 0 0 #435363 inset;
+    }
+  }
+  .maingraph{
+    .pRate{
+      border: 1px solid #373b3e;
+      margin: 15px 0;
+    }
+  }
+}
+
+.teamP{
+  >.row{
+    text-align: center;
+    >div{
+      display: inline-block;
+      vertical-align: top;
+      float: none;
+      margin: 0 -3px;
+    }
+  }
+  .pinTeam{
+    margin-bottom: 25px;
+    background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
+    border: 1px solid rgb(74, 88, 101);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    
+    .pSmLogo{
+      text-align: center;
+      margin: 0;
+      a{
+        display: block;
+        overflow: hidden;
+        height: 155px;
+        position: relative;
+        padding: 5px;
+        
+        &:after {
+          content: '';
+          right: 0;
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          display: block;
+          height: 55px;
+          background: linear-gradient(to bottom, rgba(55, 66, 76, 0) 0%,rgba(55, 66, 76, 0.85) 58%,rgb(55, 66, 76) 100%);
+        }
+        b{
+          position: absolute 5px 5px * *;
+          display: inline-block;
+          min-width: 10px;
+          padding: 3px 7px;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 1;
+          color: #fff;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: middle;
+          background-color: #777;
+          border-radius: 10px;
+        }
+        img{
+          width: 100%;
+          min-height: 100%;
+        }
+      }
+    }
+    div {
+      text-align: center;
+      padding: 0 5px 5px;
+      margin-top: -55px;
+      font-size: 11px;
+      color: #fff;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 1px 1px #000;
+      
+      a{
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        img{
+          width: 16px;
+        }
+      }
+    }
+    ul{
+      padding: 5px 5px 5px;
+      margin: 0;
+      font-size: 10px;
+      list-style: none;
+      text-align: center;
+      border-top: 1px solid #2b3238;
+      box-shadow: 0 1px 0 0 #435363 inset;
+      li{
+        padding: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+      }
+    }
+  }
+}
+
+.slPlayers{
+  overflow: hidden;
+  .owl-item > div{
+    width: auto!important;
+  }
+  .slPlayer{
+    .teamLogo{
+      margin: 0 0 5px 0;
+      float: left;
+      overflow: hidden;
+      height: 50px;
+      width: 60px;
+      position: relative;
+      
+      > img{
+        position: absolute * * 0 2px;
+        width:20px;
+      }
+      a img{
+        min-width: 100%;
+        min-height: 100%;
+      }
+    }
+    div{
+      padding-left: 75px;
+      b{
+        font-size: 14px;
+        img{
+          width: 16px;
+        }
+      }
+      >span{
+        display: block;
+        font-size: 11px;
+        color: #eee;
+      }
+    }
+    ul{
+      padding: 5px 0;
+      margin: 0;
+      font-size: 11px;
+      list-style: none;
+      clear: both;
+      li{
+        padding: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 

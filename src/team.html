@@ -1,37 +1,702 @@
 {% set title = "Команды дота 2" %}
 
+{% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro'] %}
+
+{% set logo = ['pic-20161110-600x600-7320131375.png', 'pic-20161110-300x300-2206743285.png', 'pic-20161110-600x600-5478339632.png', 'pic-20161110-500x500-918003572.png', 'pic-20161110-600x450-6323255579.png'] %}
+
+{% set plogo = ['Bulba.jpeg', 'pic-20151127-294x196-3464574203.jpeg', 'pic-20160203-600x400-3985761818.jpeg', 'pic-20160203-600x993-7541395556.jpeg', '582-no-p.png'] %}
+
+{% set player = ['Bulba', 'Miracle', 'MATUMBAMAN ', 'KuroKy', 'MinD_ContRoL'] %}
+
+{% set flag = ['1', '2', '3', '4', '5', '6'] %}
+
+{% set rate = ['1,744', '1,622', '1,511', '1,497', '1,496', '1,469', '—'] %}
+
+{% set vid_type = ['самый массовый замес', 'больше всех убил один герой', 'самый большой камбек'] %}
+
+{% set hero = ['sniper_sb.png', 'sven_hphover.png', 'rattletrap_hphover.png','vengefulspirit_hphover.png','gyrocopter_hphover.png','ember_spirit_hphover.png','medusa_hphover.png'] %}
+
 <!DOCTYPE html>
 <html>
 {% include "template/head.html" %}
-<body class="">
+<body class="pageTeam">
+ 
+<!-- Счетчик циферок -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script>
+/*!
+* jquery.counterup.js 1.0
+*
+* Copyright 2013, Benjamin Intal http://gambit.ph @bfintal
+* Released under the GPL v2 License
+*
+* Date: Nov 26, 2013
+*/(function(e){"use strict";e.fn.counterUp=function(t){var n=e.extend({time:400,delay:10},t);return this.each(function(){var t=e(this),r=n,i=function(){var e=[],n=r.time/r.delay,i=t.text(),s=/[0-9]+,[0-9]+/.test(i);i=i.replace(/,/g,"");var o=/^[0-9]+$/.test(i),u=/^[0-9]+\.[0-9]+$/.test(i),a=u?(i.split(".")[1]||[]).length:0;for(var f=n;f>=1;f--){var l=parseInt(i/n*f);u&&(l=parseFloat(i/n*f).toFixed(a));if(s)while(/(\d+)(\d{3})/.test(l.toString()))l=l.toString().replace(/(\d+)(\d{3})/,"$1,$2");e.unshift(l)}t.data("counterup-nums",e);t.text("0");var c=function(){t.text(t.data("counterup-nums").shift());if(t.data("counterup-nums").length)setTimeout(t.data("counterup-func"),r.delay);else{delete t.data("counterup-nums");t.data("counterup-nums",null);t.data("counterup-func",null)}};t.data("counterup-func",c);setTimeout(t.data("counterup-func"),r.delay)};t.waypoint(i,{offset:"100%",triggerOnce:!0})})}})(jQuery);
+  
+jQuery(document).ready(function($) {
+    $('.counter').counterUp({
+        delay: 10,
+        time: 500
+    });
+});
+</script>
+<!-- end Счетчик циферок -->
+
+<!-- Графики -->
+<script src="../inc/assets/js/highcharts.js"></script>
+<script src="../inc/assets/js/highcharts-more.js"></script>
+<script src="../inc/assets/js/highcharts-exporting.js"></script>
+<script>
+/*
+* Chart start
+*/
+/* 
+Chart.js 
+https://code.highcharts.com/highcharts.js
+*/
+/**
+ * Dark theme for Highcharts JS
+ * @author Torstein Honsi
+ */
+
+// Load the charts ------------------------
+Highcharts.createElement('link', {
+   href: 'https://fonts.googleapis.com/css?family=Roboto',
+   rel: 'stylesheet',
+   type: 'text/css'
+}, null, document.getElementsByTagName('head')[0]);
+
+Highcharts.theme = {
+   colors: ["#47c54a", "#df4b4f", "#16b4d1", "#2c708e", "#d300aa", "#c19400", "#a2110c",
+      "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: {
+         linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
+         stops: [
+            [0, '#2D3C48'],
+            [1, '#2D3C48']
+         ]
+      },
+      style: {
+         fontFamily: "'Roboto', sans-serif"
+      },
+      plotBorderColor: '#606063'
+   },
+   title: {
+      style: {
+         color: '#E0E0E3',
+         textTransform: 'uppercase',
+         fontSize: '20px'
+      }
+   },
+   subtitle: {
+      style: {
+         color: '#E0E0E3',
+         textTransform: 'uppercase'
+      }
+   },
+   xAxis: {
+      gridLineColor: '#364C5D',
+      labels: {
+         style: {
+            color: '#E0E0E3'
+         }
+      },
+      lineColor: '#364C5D',
+      minorGridLineColor: '#505053',
+      tickColor: '#364C5D',
+      title: {
+         style: {
+            color: '#A0A0A3'
+
+         }
+      }
+   },
+   yAxis: {
+      gridLineColor: '#364C5D',
+      labels: {
+         style: {
+            color: '#E0E0E3'
+         }
+      },
+      lineColor: '#364C5D',
+      minorGridLineColor: '#505053',
+      tickColor: '#364C5D',
+      tickWidth: 1,
+      title: {
+         style: {
+            color: '#A0A0A3'
+         }
+      }
+   },
+   exporting: { enabled: false },
+   tooltip: {
+      backgroundColor: 'rgba(0, 0, 0, 0.85)',
+      style: {
+         color: '#F0F0F0'
+      }
+   },
+   plotOptions: {
+      series: {
+         dataLabels: {
+            color: '#B0B0B3'
+         },
+         marker: {
+            lineColor: '#333'
+         }
+      },
+      boxplot: {
+         fillColor: '#505053'
+      },
+      candlestick: {
+         lineColor: 'white'
+      },
+      errorbar: {
+         color: 'white'
+      },
+      bar:{
+          borderWidth: '0'
+      }
+   },
+   legend: {
+      itemStyle: {
+         color: '#E0E0E3'
+      },
+      itemHoverStyle: {
+         color: '#FFF'
+      },
+      itemHiddenStyle: {
+         color: '#606063'
+      }
+   },
+   credits: {
+      style: {
+         color: '#666'
+      }
+   },
+   labels: {
+      style: {
+         color: '#707073'
+      }
+   },
+
+   drilldown: {
+      activeAxisLabelStyle: {
+         color: '#F0F0F3'
+      },
+      activeDataLabelStyle: {
+         color: '#F0F0F3'
+      }
+   },
+
+   navigation: {
+      buttonOptions: {
+         symbolStroke: '#DDDDDD',
+         theme: {
+            fill: '#505053'
+         }
+      }
+   },
+
+   // scroll charts
+   rangeSelector: {
+      buttonTheme: {
+         fill: '#505053',
+         stroke: '#000000',
+         style: {
+            color: '#CCC'
+         },
+         states: {
+            hover: {
+               fill: '#707073',
+               stroke: '#000000',
+               style: {
+                  color: 'white'
+               }
+            },
+            select: {
+               fill: '#000003',
+               stroke: '#000000',
+               style: {
+                  color: 'white'
+               }
+            }
+         }
+      },
+      inputBoxBorderColor: '#505053',
+      inputStyle: {
+         backgroundColor: '#333',
+         color: 'silver'
+      },
+      labelStyle: {
+         color: 'silver'
+      }
+   },
+
+   navigator: {
+      handles: {
+         backgroundColor: '#666',
+         borderColor: '#AAA'
+      },
+      outlineColor: '#CCC',
+      maskFill: 'rgba(255,255,255,0.1)',
+      series: {
+         color: '#7798BF',
+         lineColor: '#A6C7ED'
+      },
+      xAxis: {
+         gridLineColor: '#505053'
+      }
+   },
+
+   scrollbar: {
+      barBackgroundColor: '#808083',
+      barBorderColor: '#808083',
+      buttonArrowColor: '#CCC',
+      buttonBackgroundColor: '#606063',
+      buttonBorderColor: '#606063',
+      rifleColor: '#FFF',
+      trackBackgroundColor: '#404043',
+      trackBorderColor: '#404043'
+   },
+
+   // special colors for some of the
+   legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
+   background2: '#505053',
+   dataLabelsColor: '#B0B0B3',
+   textColor: '#C0C0C0',
+   contrastTextColor: '#F0F0F3',
+   maskColor: 'rgba(255,255,255,0.3)'
+};
+
+// Apply the theme
+Highcharts.setOptions(Highcharts.theme);
+
+/* Team spider graph*/
+$(function () {
+
+    $('#spider_chart_player').highcharts({
+        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
+        chart: {
+            polar: true,
+            type: 'line',
+            backgroundColor: 'none',
+            spacingBottom: 5,
+            spacingTop: 5,
+            spacingLeft: 0,
+            spacingRight: 0
+        },
+        title: {
+            text: '',
+            x: -80
+        },
+        pane: {
+            size: '95%'
+        },
+        plotOptions: {
+            series: {
+              title:''
+            }
+        },
+        credits: {
+          enabled: false
+        },
+        xAxis: {
+            categories: ['Mid', 'Safe', 'Hard', 'Jungle', 'Roaming'],
+            tickmarkPlacement: 'on',
+            lineWidth: 0,
+            labels: {
+                style: {
+                  textTransform: 'uppercase',
+                  color: '#c7c7c7'
+                }
+            }
+        },
+        yAxis: {
+            gridLineInterpolation: 'polygon',
+            //lineWidth: 0,
+            tickInterval: 2,
+            min: 0,
+            max: 100,
+            title: {
+              enabled: true
+            },
+            labels: {
+               enabled: true
+            },
+            plotBands: [{ // visualize
+                from: 0,
+                to: 20,
+                color: 'rgba(68, 118, 213, 0.1)'
+            },
+            {
+                from: 20,
+                to: 40,
+                color: 'rgba(68, 118, 213, 0.05)'
+            },
+            {
+                from: 40,
+                to: 60,
+                color: 'rgba(68, 118, 213, 0.1)'
+            },
+            {
+                from: 60,
+                to: 80,
+                color: 'rgba(68, 118, 213, 0.05)'
+            },
+            {
+                from: 80,
+                to: 100,
+                color: 'rgba(68, 118, 213, 0.1)'
+            },
+            ]
+        },
+        plotOptions: {
+            series: {
+                fillOpacity: 0.5
+            }
+        },
+        tooltip: {
+            shared: true,
+            pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+        },
+        legend: {
+            enabled: false
+        },
+        series: [{
+            name: 'Line',
+            type: 'area',
+            data: [20, 10, 15, 15, 40],
+            pointPlacement: 'on'
+        }]
+
+    });
+});
+
+/* Team line*/
+$(function () {
+    $('#playerRole').highcharts({
+        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
+        chart: {
+          type: 'bar',
+          backgroundColor: 'none',
+          spacingBottom: 5,
+          spacingTop: 5,
+          spacingLeft: 0,
+          spacingRight: 0
+        },
+        credits: {
+          enabled: false
+        },
+        xAxis: {
+           categories: ['Role'],
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+         minorTickLength: 0,
+         tickLength: 0,
+          
+        },
+        yAxis: {
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+           minorTickLength: 0,
+           tickLength: 0
+        },
+        title: {
+            enabled: false,
+            text:''
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+              stacking: 'percent',
+              crop: false,
+              title:'',
+              pointPadding: 0.01,
+              groupPadding: 0.1
+            }
+        },
+        tooltip: {
+            headerFormat: '',
+            useHTML: true,
+            pointFormat: '{series.name}<br>{point.name}: {point.y}'
+        },
+        series: [{
+            name: 'Core',
+            data: [
+                  ['Role', 53]
+            ],
+            index: 4
+        }, {
+            name: 'Support',
+            data: [
+                  ['Role', 5]
+            ],
+            index: 3
+        }]
+    });
+});  
+  
+// END CHARTS
+</script> 
+ 
   <div class="container mainwrap">
     {% include "template/breadcrumbs.html" %}
     <div class="otstup">
-    
+      
+      <section class="hero" style="background-image:url(../img/headpic.jpg); height:auto;">
+        <a href="" class="btn pull-right btn-default">Все команды DOTA 2</a>
+        <h1><span>Карточка команды <a href="/dota-2">DOTA 2</a> Team Liquid</span></h1>
+      </section>
+      
+      <section class="m-sec m-even plCard">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="pAva">
+              <div class="pAvaBg">
+                <span class="tLogo">
+                  <img src="http://game-tournaments.com/media/logo/pic-20161027-600x600-9332827152.png" alt="Liquid">
+                </span>
+                <div class="pInf">
+                  <h2 class="mlh mlhSM"><span>Team Liquid <b class="badge tip" title="Место в рейтинге">#1</b></span></h2>
+                  <h3>Европа <img title="Европа" alt="Европа" src="http://game-tournaments.com/media/flag/25.png"/></h3>
+                  <h3>Организована: 2012-10-21</h3>
+                  <h3>Заработано: $2,135,638</h3>
+                  <p>
+                    <b>Ссылки: </b>
+                    <span>
+                      <a href=""><i class="gti-home"></i></a> / 
+                      <a href=""><i class="gti-facebook"></i></a> / 
+                      <a href=""><i class="gti-twitter"></i></a>
+                    </span>
+                  </p>
+                  <div class="subteams">
+                    <h3 class="mlh mlhSM"><span>Составы</span></h3>
+                    <a href=""><img src="http://game-tournaments.com/media/logo/_60/{{random(logo)}}" alt="Liquid"> Team Liquid Yong</a><br>
+                    <a href=""><img src="http://game-tournaments.com/media/logo/_60/{{random(logo)}}" alt="Liquid"> Team Liquid Yong</a>
+                  </div>
+                </div>
+                <div class="pRate">
+                  <table>
+                    <tr>
+                      <td>
+                        <label>рейтинг<i class="gti-question-circle tip" title="О параметре"></i></label>
+                        <b><span class="counter">2681</span></b>
+                      </td>
+                      <td>
+                        <label>форма <i class="gti-question-circle tip" title="Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)"></i></label>
+                        <b><span class="counter">150</span>%</b>
+                        <div class="progress progress-small">
+                            <div class="progress-bar progress-bar-primary" style="width:50%">
+						    <span class="sr-only">100% форма</span>
+                          </div>
+                          <div class="progress-bar progress-bar-success" style="width:28%">
+                            <span class="sr-only">up 28% форма</span>
+                          </div>
+					    </div>
+                      </td>
+                      <td>
+                        <label>Число матчей</label>
+                        <b><span class="counter">961</span></b>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="fans">
+                  <a href="" class="btn btn-primary"><i class="gti-flag-o"></i>Подписаться</a><b>123 фанов</b>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="maingraph">
+              <!--<h3 class="mlh"><span>Матчи</span></h3>-->
+              <div class="pRd">
+                <div id="playerRole" class="playerRole"></div>
+                <span>Побед 80%</span>
+                <b>Поражений 20%</b>
+              </div>
+              <div class="pRate">
+                <table>
+                  <tr>
+                    <td>
+                      <label>Рошан <i class="gti-question-circle tip" title="Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)"></i></label>
+                      <b><span class="counter">50</span>%</b>
+                      <div class="progress progress-small">
+                          <div class="progress-bar progress-bar-primary" style="width:50%">
+                          <span class="sr-only">100% форма</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <label>Руны <i class="gti-question-circle tip" title="Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)"></i></label>
+                      <b><span class="counter">50</span>%</b>
+                      <div class="progress progress-small">
+                          <div class="progress-bar progress-bar-primary" style="width:50%">
+                          <span class="sr-only">100% форма</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <label>Лейнинг <i class="gti-question-circle tip" title="Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)"></i></label>
+                      <b><span class="counter">50</span>%</b>
+                      <div class="progress progress-small">
+                          <div class="progress-bar progress-bar-primary" style="width:50%">
+                          <span class="sr-only">100% форма</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <label>Варды <i class="gti-question-circle tip" title="Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)"></i></label>
+                      <b><span class="counter">50</span>%</b>
+                      <div class="progress progress-small">
+                          <div class="progress-bar progress-bar-primary" style="width:50%">
+                          <span class="sr-only">100% форма</span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              
+              <h3 class="mlh"><span>Состав</span></h3>
+              <div class="teamP">
+                <div class="row">
+                  {% for i in 0..1 %}
+                    <div class="col-md-4">
+                        <div class="pinTeam">
+                          <figure class="pSmLogo">
+                            <a href="#">
+                              <img src="http://game-tournaments.com/media/logo/{{random(plogo)}}" alt="{{random(player)}}">
+                              <b class="tip" title="Место игрока в рейинге">{{random(flag)}}</b>
+                            </a>
+                          </figure>
+                          <div>
+                            <a href="">{{random(player)}} <img title="Европа" alt="Европа" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png"/></a> 
+                            Матчей: 211 <br>
+                            Роль: core / Позиция: {{random(flag)}}
+                          </div>
+                          <ul>
+                            {% for i in 0..2 %}
+                            <li>
+                              <a href="">{{random(flag)}} дн.н</a>
+                              <span>за <a href="/dota-2/team/liquid">Liquid Liquid</a> vs <a href="/dota-2/team/virtus-pro">{{random(team)}}</a></span>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                    </div>
+                  {% endfor %}
+                  </div>
+                  <div class="row">
+                  {% for i in 0..2 %}
+                    <div class="col-md-4">
+                        <div class="pinTeam">
+                          <figure class="pSmLogo">
+                            <a href="#">
+                              <img src="http://game-tournaments.com/media/logo/{{random(plogo)}}" alt="{{random(player)}}">
+                              <b class="tip" title="Место игрока в рейинге">{{random(flag)}}</b>
+                            </a>
+                          </figure>
+                          <div>
+                            <a href="">{{random(player)}} <img title="Европа" alt="Европа" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png"/></a> 
+                            Матчей: 211 <br>
+                            Роль: core / Позиция: 1
+                          </div>
+                          <ul>
+                            {% for i in 0..2 %}
+                            <li>
+                              <a href="">{{random(flag)}} дн.н</a>
+                              <span>за <a href="/dota-2/team/liquid">Liquid</a> vs <a href="/dota-2/team/virtus-pro">{{random(team)}}</a></span>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </section>
+      <section class="m-sec m-odd pTeams">
+        <h3 class="mlh"><span>Другие игроки</span></h3>
+        <div class="slPlayers" id="slPlayers">
+          {% for i in 0..5 %}
+            <div class="col-md-3">
+                <div class="slPlayer">
+                  <figure class="teamLogo">
+                    <a class="pt" href="#"><img src="http://game-tournaments.com/media/logo/_60/{{random(plogo)}}" alt="{{random(player)}}"></a>
+                    <img title="Европа" alt="Европа" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png"/>
+                  </figure>
+                  <div>
+                    <b><a href="">{{random(player)}}</a></b>
+                    <span>
+                      support <br>
+                      <i class="gti-map-marker tip" title="Позиция"></i>&nbsp;  {{random(flag)}} &nbsp;&nbsp;  
+                      <i class="gti-trophy tip" title="Матчи за команду"></i>&nbsp; 211
+                    </span>
+                  </div>
+                  <ul>
+                    {% for i in 0..2 %}
+                    <li>
+                      <a href="">{{random(flag)}} дн.н</a>
+                      <span>за <a href="/dota-2/team/liquid">Liquid</a> vs <a href="/dota-2/team/virtus-pro">{{random(team)}}</a></span>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+      
       <section class="m-sec m-even">
         <div class="row">
-          <div class="col-md-8">
-            <div style="text-align:center;padding: 30px;border: 1px dashed #3f4b56;color: #5e7488;text-transform: uppercase;font-weight: bold;">
-              Шапка тут
-            </div>
-            
+          <div class="col-sm-8">
+            <h3 class="mlh"><span>Последние матчи</span></h3>
+            {% include "template/players/player-games.html" %}
+            {% include "template/pager.html" %}
           </div>
-          <div class="col-md-4">
-            {% include "template/liveblock.html" %}
-            {% include "template/blockzames-vertical.html" %}
-
-            <div class="mltText">
-              В данном разделе представлены все профессиональные команды дота 2. Рейтинг команд составлен по результатам их матчей
-            </div>
-
+          <div class="col-sm-4">
+            4. Заработок команды по годам
+            5. Достижения: дата, лого турнира, название турнира, место, приз. Постраничный вывод на ajax. 10 на страницу
           </div>
         </div>
       </section>
-
-      <section id="m-zames" class="m-sec m-even m-zames">
-        {% include "template/blockzames.html" %}
+      
+      <section id="m-zames" class="m-sec m-odd m-zames">
+        {% include "template/players/player-blockzames.html" %}
       </section>
-
+      
+      <section id="m-news" class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/match-page/section-news.html" %}
+          </div>
+          <div class="col-md-5">
+            {% include "template/match-page/section-soc.html" %}
+          </div>
+        </div>
+      </section>
+      
       <div class="bn">
         <img src="../img/ad.jpg" alt="">
       </div>

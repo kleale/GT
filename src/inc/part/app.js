@@ -249,6 +249,18 @@
       itemsDesktopSmall : [900,3],
       itemsTablet: [600,2] 
     });
+  
+    
+  // слайдер игроков на странице команды
+  $('#slPlayers').owlCarousel({
+    navigation: true,
+    navigationText: ["назад","вперед"],
+    responsiveClass:true,
+    items : 5, 
+    itemsDesktop : [1000,4], 
+    itemsDesktopSmall : [900,3],
+    itemsTablet: [600,2] 
+  });  
     
   }); //end ready
 

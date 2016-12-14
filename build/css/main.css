@@ -2145,6 +2145,17 @@ Tabs mobile
   font-size: 11px;
   border-radius: 0 0 6px 0;
 }
+.progress.progress-small {
+    height: 5px;
+    margin: 5px 0;
+    border-radius: 1px;
+}
+.progress-bar-danger {
+    background-color: #d62f0c;
+}
+.progress {
+    background-color: #3f464c;
+}
 /*
 Modal general
 */
@@ -10802,8 +10813,23 @@ section.hero h1{
   float: left;
   position: relative;
   overflow: hidden;
-  min-height: 30px;
+  min-height: 28px;
   background: #39454e;
+}
+@media (max-width: 1599px) {
+  .fightsPlayers .bestKill a >div .teamHeroes u {
+    min-height: 28px;
+  }
+}
+@media (max-width: 1199px) {
+  .fightsPlayers .bestKill a >div .teamHeroes u {
+    min-height: 28px;
+  }
+}
+@media (max-width: 999px) {
+  .fightsPlayers .bestKill a >div .teamHeroes u {
+    min-height: auto;
+  }
 }
 .fightsPlayers .bestKill a >div .teamHeroes u img {
   width: 100%;
@@ -10845,6 +10871,10 @@ section.hero h1{
 /*
 player.html
 */
+.pAvaBg{
+  background:  url(../img/pava.png) no-repeat scroll 0 100%;
+  border: 1px solid rgb(27, 43, 56);
+}
 .pAva{
     background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
     margin-bottom: 15px;
@@ -10855,7 +10885,7 @@ player.html
 }
 .pAva .playerava img{
   display: inline-block;
-  max-width: 100%;
+  width: 100%;
 }
 .pAva .pInf{
   padding: 15px;
@@ -10903,25 +10933,450 @@ player.html
   margin-bottom: 1px;
   font-size: 1.2em;
 }
-.pAva .pRate{
-  background: #424d56;
-  padding: 15px;
+.pAva .fans{
+  position: relative;
+  padding: 0 10px 20px;
+  text-align: center;
 }
-.pAva .pRate table{
+.pAva .fans .btn{
+  position: relative;
+}
+.pAva .fans .btn i{
+  margin-right: 10px;
+}
+.pAva .fans b{
+  border-radius: 2px;
+  background: #2d3237;
+  padding: 4px 10px;
+  display: inline-block;
+  font-size: 11px;
+  margin-left: 10px;
+  position: relative;
+}
+.pAva .fans b:before{
+  content: '';
+  top: 50%;
+  left: -7px;
+  margin-top: -5px;
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 7px solid #2d3237;
+  border-bottom: 5px solid transparent;
+}
+.pRate{
+  /*background: #424d56;*/
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.pRate table{
   width: 100%;
   table-layout: fixed;
   text-align: center;
 }
-.pAva .pRate table label{
+.pRate table td{
+  vertical-align: top;
+}
+.pRate table label{
   display: block;
   font-size: 10px;
   text-transform: uppercase;
   margin-bottom: 0;
 }
-.pAva .pRate table b{
+.pRate table label i{
+  opacity: .5;
+  margin: 1px 0 0 5px;
+}
+.pRate table label i:hover,
+        .pRate table label i:active,
+        .pRate table label i:focus{
+  opacity: 1;
+}
+.pRate table b{
   color: #fff;
   font-size: 30px;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 0 8px #42a6b8;
+}
+.pRate table .progress{
+  margin: 0 20%;
+}
+.plCard{
+  background: #232b31 url(../img/pava.png) repeat-x scroll 0 100%;
+  padding-bottom: 0;
+}
+.plCard .maingraph{
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+.plCard .maingraph .playerRole{
+  height: 20px;
+  position: relative;
+  z-index: 2;
+}
+.plCard .maingraph .spider_chart_player{
+  height: 300px
+}
+.plCard .maingraph .pRd{
+  position: relative;
+  padding-bottom: 20px;
+}
+.plCard .maingraph .pRd >span,.plCard .maingraph .pRd b{
+  font-size: 16px;
+  font-weight: 400;
+  bottom: 0;
+  position: absolute;
+}
+.plCard .maingraph .pRd >span{
+  left: 0;
+}
+.plCard .maingraph .pRd >b{
+  right: 0;
+}
+.highcharts-container, svg:not(:root) {
+  overflow: visible  !important;
+}
+.pTeams{
+  background-color: rgb(19, 29, 38);
+  position: relative;
+}
+.pTeams:before{
+  content: '';
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(16, 27, 37,1) 0%,rgba(19,29,38,0) 100%);
+}
+.pTeams > div{
+  position: relative;
+}
+.pTeam{
+  position: relative;
+  padding: 5px 0 5px 0;
+}
+.pTeam .teamLogo{
+  float: left;
+  margin: 5px 10px;
+}
+.pTeam .teamLogo img{
+  width: 60px;
+}
+.pTeam div{
+  padding: 0 0 0 90px;
+  font-size: 12px;
+  color: #999;
+}
+.pTeam div b{
+  display: block;
+  font-size: 16px;
+}
+.pTeam div em{
+  display: block;
+  font-style: normal;
+}
+.pTeam div u{
+  display: block;
+  text-decoration: none;
+}
+.pTeam div s{
+  display: block;
+  text-decoration: none;
+}
+.pTeam ul{
+  padding: 5px 5px 5px;
+  margin: 0;
+  font-size: 10px;
+  list-style: none;
+  text-align: center;
+  border-top: 1px solid #2b3238;
+  box-shadow: 0 1px 0 0 #435363 inset;
+}
+.pTeam ul li{
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+.mlhSM{
+  font-size: 12px;
+  line-height: 1;
+}
+.mlhSM span:before,
+    .mlhSM span:after{
+  margin-top: -11px;
+}
+.temsList.playerGames .mtable thead th:nth-child(3){
+  text-align: right;
+}
+.temsList.playerGames .mtable thead th:nth-child(10){
+  text-align: right;
+  padding-right: 10px;
+}
+.temsList.playerGames .mtable .t-item td{
+  padding: 10px 5px;
+}
+.temsList.playerGames .mtable .t-item td:nth-child(1){
+  text-align: left;
+  padding-right: 5px;
+}
+.temsList.playerGames .mtable .t-item td:nth-child(1) img{
+  width: 60px;
+}
+.temsList.playerGames .mtable .t-item td:nth-child(2){
+  text-align: left;
+}
+.temsList.playerGames .mtable .t-item td:nth-child(3){
+  text-align: right;
+  padding-right: 5px;
+}
+.temsList.playerGames .mtable .t-item td:nth-child(3) img{
+  margin-right: 0;
+  margin-left: 10PX;
+}
+.temsList.playerGames .mtable .t-item td:nth-child(4){
+  text-align: center;
+}
+.temsList.playerGames .mtable .t-item td:nth-child(5){
+  text-align: left;
+}
+.temsList.playerGames .mtable .t-item td:nth-child(5) h4 .logo{
+  float: left;
+  margin-left: 0;
+  margin-right: 10px;
+}
+.temsList.playerGames .mtable .t-item td:nth-child(6){
+  text-align: left;
+}
+.temsList.playerGames .mtable .t-item td:nth-child(6) img{
+  width: 60px;
+}
+.temsList.playerGames .mtable .t-item td:nth-child(7){
+  text-align: left;
+}
+.temsList.playerGames .mtable .t-item td:nth-child(8){
+  text-align: center;
+}
+.temsList.playerGames .mtable .t-item td:nth-child(10){
+  text-align: right;
+  padding-right: 10px;
+}
+.pagePlayer section.hero,.pageTeam section.hero{
+  padding: 20px 20px 40px;
+  overflow: hidden;
+}
+.pagePlayer section.hero:after,.pageTeam section.hero:after{
+  background: linear-gradient(to bottom, rgba(46,51,55,0) 0%,rgb(35, 43, 49) 100%);
+}
+.pagePlayer section.hero h1,.pageTeam section.hero h1{
+  text-align: left;
+  padding: 0 10px;
+}
+.pagePlayer section.hero a,.pageTeam section.hero a{
+  position: relative;
+  z-index: 10;
+  margin-top: 10px;
+}
+.pagePlayer .m-zames,.pageTeam .m-zames{
+  padding: 20px!important;
+}
+.pagePlayer .fightsPlayers, .pageTeam .fightsPlayers {
+  margin-bottom: 0px;
+}
+.pagePlayer .fightsPlayers .row,.pageTeam .fightsPlayers .row{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.pageTeam .tLogo{
+  text-align: center;
+  padding: 30px 20% 0;
+  display: block;
+}
+.pageTeam .tLogo img{
+  display: inline;
+  max-width: 100%;
+  width: auto;
+}
+.pageTeam .pInf h2{
+  margin-bottom: 0px;
+  padding-right: 0;
+  text-align: left;
+}
+.pageTeam .pInf h2 span{
+  padding-left: 0;
+}
+.pageTeam .pInf h2 span:before{
+  display: none;
+}
+.pageTeam .pInf h2 span:after{
+  margin-top: -17px;
+}
+.pageTeam .pInf h3 img{
+  margin: -7px 0;
+}
+.pageTeam .pInf .subteams b{
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+}
+.pageTeam .pInf .subteams img{
+  width: 30px;
+  margin-right: 10px;
+}
+.pageTeam .pAvaBg .pRate{
+  border-top: 1px solid #19222b;
+  box-shadow: 0 1px 0 0 #435363 inset;
+}
+.pageTeam .maingraph .pRate{
+  border: 1px solid #373b3e;
+  margin: 15px 0;
+}
+.teamP >.row{
+  text-align: center;
+}
+.teamP >.row >div{
+  display: inline-block;
+  vertical-align: top;
+  float: none;
+  margin: 0 -3px;
+}
+.teamP .pinTeam{
+  margin-bottom: 25px;
+  background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
+  border: 1px solid rgb(74, 88, 101);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.teamP .pinTeam .pSmLogo{
+  text-align: center;
+  margin: 0;
+}
+.teamP .pinTeam .pSmLogo a{
+  display: block;
+  overflow: hidden;
+  height: 155px;
+  position: relative;
+  padding: 5px;
+}
+.teamP .pinTeam .pSmLogo a:after {
+  content: '';
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: block;
+  height: 55px;
+  background: linear-gradient(to bottom, rgba(55, 66, 76, 0) 0%,rgba(55, 66, 76, 0.85) 58%,rgb(55, 66, 76) 100%);
+}
+.teamP .pinTeam .pSmLogo a b{
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #777;
+  border-radius: 10px;
+}
+.teamP .pinTeam .pSmLogo a img{
+  width: 100%;
+  min-height: 100%;
+}
+.teamP .pinTeam div {
+  text-align: center;
+  padding: 0 5px 5px;
+  margin-top: -55px;
+  font-size: 11px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 1px #000;
+}
+.teamP .pinTeam div a{
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+.teamP .pinTeam div a img{
+  width: 16px;
+}
+.teamP .pinTeam ul{
+  padding: 5px 5px 5px;
+  margin: 0;
+  font-size: 10px;
+  list-style: none;
+  text-align: center;
+  border-top: 1px solid #2b3238;
+  box-shadow: 0 1px 0 0 #435363 inset;
+}
+.teamP .pinTeam ul li{
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+.slPlayers{
+  overflow: hidden;
+}
+.slPlayers .owl-item > div{
+  width: auto!important;
+}
+.slPlayers .slPlayer .teamLogo{
+  margin: 0 0 5px 0;
+  float: left;
+  overflow: hidden;
+  height: 50px;
+  width: 60px;
+  position: relative;
+}
+.slPlayers .slPlayer .teamLogo > img{
+  bottom: 0;
+  left: 2px;
+  position: absolute;
+  width:20px;
+}
+.slPlayers .slPlayer .teamLogo a img{
+  min-width: 100%;
+  min-height: 100%;
+}
+.slPlayers .slPlayer div{
+  padding-left: 75px;
+}
+.slPlayers .slPlayer div b{
+  font-size: 14px;
+}
+.slPlayers .slPlayer div b img{
+  width: 16px;
+}
+.slPlayers .slPlayer div >span{
+  display: block;
+  font-size: 11px;
+  color: #eee;
+}
+.slPlayers .slPlayer ul{
+  padding: 5px 0;
+  margin: 0;
+  font-size: 11px;
+  list-style: none;
+  clear: both;
+}
+.slPlayers .slPlayer ul li{
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
 }
 /*tournaments page*/
 /*

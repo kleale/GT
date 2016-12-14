@@ -490,3 +490,20 @@ Tabs mobile
     border-radius: 0 0 6px 0;
   }
 }
+
+.progress.progress-small {
+    height: 5px;
+    margin: 5px 0;
+    border-radius: 1px;
+}
+.progress-bar-danger {
+    background-color: #d62f0c;
+}
+.progress {
+    background-color: #3f464c;
+}
+
+
+
+
+
