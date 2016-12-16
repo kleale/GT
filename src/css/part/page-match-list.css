@@ -82,19 +82,14 @@
 .mlt-filter{
   display: block;
   position: relative;
-  /*
-  margin-left: -15px;
-  position: relative;
-  padding: 15px;
-  background: #37424c;
-  border-radius: 0 3px 3px 0;
-  */
   .sicon{
     font-family: 'gticons' !important;
     position: absolute 1px 7px * *;
     font-size: 18px;
     color: #7f8789;
     opacity: .5;
+    z-index: 2;
+    
     &:after{
       content: '\f002';
     }
@@ -105,7 +100,7 @@
       text-decoration: none;
     }
   }
-
+/*
   input {
     color: #a2a2a2;
     font-size: 12px;
@@ -117,7 +112,7 @@
     width: 100%;
     border-radius: 2px;
   }
-  
+*/
   &.open{
     .dropdown-menu{
       background: #37424c;
@@ -551,10 +546,10 @@
       padding: 0;
       
       &:first-child{
-        width:42%;
+        width:39%;
       }
       &:last-child{
-        width:42%;
+        width:39%;
       }
     }
   }

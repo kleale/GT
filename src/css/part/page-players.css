@@ -696,11 +696,46 @@ player.html
   }
 }
 
-
-
-
-
-
+.place{
+  text-align: center;
+  b{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 21px;
+    background: #607D8B;
+    border-radius: 50%;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.48), 0 1px 0 rgba(142, 142, 142, 0.41) inset;
+    text-shadow:0 1px rgba(0, 0, 0, 0.5);
+  }
+  &.p1 b{
+    background: #e0cb12;
+    color: #736b29;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+  &.p2 b{
+    background: #e0cb12;
+    color: #736b29;
+    background: #d2d1cf;
+    color: #4a4a4a;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+  &.p3 b{
+    background: #b5720b;
+    color: #ffffff;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+}
+.teamWins{
+  &.table>tbody>tr>td, 
+  &.table>tbody>tr>th, 
+  &.table>tfoot>tr>td, 
+  &.table>tfoot>tr>th, 
+  &.table>thead>tr>td, 
+  &.table>thead>tr>th {
+    vertical-align: middle;
+  }
+}
 
 
 

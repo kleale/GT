@@ -109,8 +109,8 @@
     li{
       &.active{
         a{
-          background: #424f5a;
-          border-color: #424f5a;
+          background: #4d5963;
+          border-color: #4d5963;
           box-shadow: 3px 2px 0 2px rgba(0, 0, 0, 0.18);
           height: 35px;
           padding: 10px 0 0;

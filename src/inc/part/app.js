@@ -10,41 +10,10 @@
       $(".ibg").css('transform', 'translate(' + event.pageY /40 + 'px, ' + -event.pageX /40+ 'px)');
     });
     
-    
-    // hero parralax
-    /*
-    $('.hero').each(function() {
-      var off = $(this).offset().top;
-      $(this).data('orig-offset', off);
-    });
-    $(window).scroll(function(){
-      var scrollTop = $(window).scrollTop();
-
-       $('.hero').each(function(){
-        var off = $(this).data('orig-offset');
-
-        if (scrollTop >= off) {
-          var translate =  (scrollTop - off) / $(window).height() * 100;
-          //console.log(translate);
-          $(this).css({transform: 'translateY(' + translate +'%)'});
-        }
-       });
-    });
-    */
-    
-    /* Anything that gets to the document
-     will hide the dropdown */
+    // dropdown hide
     $(document).click(function(){
       $("#dropdown").hide();
     });
-
-    /* Clicks within the dropdown won't make
-       it past the dropdown itself */
-    /*
-    $("#dropdown").click(function(e){
-      e.stopPropagation();
-    });
-    */
     
     // bar toggle on mobile
     $("#menu-toggle").click(function() {
@@ -52,8 +21,6 @@
       $(this).toggleClass("active");
       $(".bar").toggleClass("hiddenbar");
 	});
-    
-    //$('#pop').popover();
     
     $(function () {
       $('[data-toggle="popover"]').popover();
@@ -82,7 +49,6 @@
     $(window).on("resize", setScale);
     
     //piks popover
-    
     $('.hpop').popover({
         'html': true,
         'trigger': 'hover',
@@ -133,31 +99,30 @@
     $('.m-item').click(function(e) {
         e.preventDefault(); e.stopPropagation();
         window.location.href = $(e.currentTarget).data().href;
-    });http://shahinalborz.se/2014/04/solution-make-an-entire-table-row-clickable/
+    });
     */
     // на локале не срабатывает, но должен.
     // вот еще пример http://shahinalborz.se/2014/04/solution-make-an-entire-table-row-clickable/
+    
     $('.m-item').on('click', 'tr', function (e) {
-            var $this = $(e.currentTarget);
+      var $this = $(e.currentTarget);
+      if ($this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
+          if (e.ctrlKey == true) {
+              window.open($this.attr('data-href'));
+          } else {
+              window.location.href = $this.attr('data-href');
+          }
+      }
+    }).on('mousedown', 'tr', function (e) {
+      var $this = $(e.currentTarget);
 
-            if ($this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
-                if (e.ctrlKey == true) {
-                    window.open($this.attr('data-href'));
-                } else {
-                    window.location.href = $this.attr('data-href');
-                }
-            }
-        }).on('mousedown', 'tr', function (e) {
-            var $this = $(e.currentTarget);
-
-            if (e.which === 2 && $this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
-                window.open($this.attr('data-href'));
-            }
-        });
+      if (e.which === 2 && $this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
+          window.open($this.attr('data-href'));
+      }
+    });
     
     // checkbox to switch
     $("[name='switch']").bootstrapSwitch();
-    
     
     // countdown on top match list
     $('[data-countdown]').each(function() {
@@ -167,7 +132,7 @@
       });
     });
     
-// news read more slider
+    // news read more slider
     $('.ns1 ul').owlCarousel({
       loop:true,
       navigation: true,
@@ -193,7 +158,8 @@
         $(".mlh").height($('.owl-item').height());
       }
     });
- // слайдер новостей 2
+    
+    // слайдер новостей 2
     $('.ns2 ul').owlCarousel({
       loop:true,
       navigation: true,
@@ -215,7 +181,8 @@
           }
       }
     });
- // слайдер новостей 3
+    
+    // слайдер новостей 3
     $('.ns3 ul').owlCarousel({
       loop:true,
       navigation: true,
@@ -238,7 +205,7 @@
       }
     });
 
- // слайдер замеса горизонт
+    // слайдер замеса горизонт
     $('.ns4 ul').owlCarousel({
       loop:true,
       navigation: true,
@@ -250,17 +217,19 @@
       itemsTablet: [600,2] 
     });
   
+    // слайдер игроков на странице команды
+    $('#slPlayers').owlCarousel({
+      navigation: true,
+      navigationText: ["назад","вперед"],
+      responsiveClass:true,
+      items : 5, 
+      itemsDesktop : [1000,4], 
+      itemsDesktopSmall : [900,3],
+      itemsTablet: [600,2] 
+    }); 
     
-  // слайдер игроков на странице команды
-  $('#slPlayers').owlCarousel({
-    navigation: true,
-    navigationText: ["назад","вперед"],
-    responsiveClass:true,
-    items : 5, 
-    itemsDesktop : [1000,4], 
-    itemsDesktopSmall : [900,3],
-    itemsTablet: [600,2] 
-  });  
+    // scrolls match-top-home.html
+    $('.m-hot').perfectScrollbar(); 
     
   }); //end ready
 

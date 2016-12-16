@@ -48,6 +48,8 @@ module.exports = {
     "$subgreen": "#e8f39a",
     "$blue": "#037db5",
     "$overlay-blue": "rgba(3, 125, 181, 0.13)",
+    "orange": "#f58563",
+    "lightblue": "#4396f7",
   
     //transitions
     "$tease": "all .2s ease",

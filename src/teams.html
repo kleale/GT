@@ -25,15 +25,15 @@
               // команда-турнир фильтр
                 $(document).ready(function() {
                   $('#mlt-filter').on('keyup', function(){
-                    $('.mlt-filter').addClass('open');
+                    $('.mlt-dropdown').addClass('open');
                   });
 
                   $(document).click(function(){
-                    $('.mlt-filter').removeClass('open');
+                    $('.mlt-dropdown').removeClass('open');
                   });
                   $("#dropdown").click(function(e){
                     e.stopPropagation();
-                    $('.mlt-filter').removeClass('open');
+                    $('.mlt-dropdown').removeClass('open');
                   });
                 });
               </script>
@@ -72,7 +72,7 @@
                 <div class="col-sm-3">
                   <div class="input-group">
                     <input type="text" class="form-control" placeholder="Турнир">
-                    <div class="input-group-btn">
+                    <div class="input-group-btn mlt-dropdown">
                       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
                       <ul class="dropdown-menu dropdown-menu-right">
                         <li><a href="#">Мажор 1</a></li>
@@ -87,12 +87,14 @@
                   <div class="mlt-filter">
                     <input id="mlt-filter" type="text" value="" placeholder="Команда..." class="form-control team" autocomplete="off">
                     <a href="" class="sicon"></a>
+                    <!--
                     <ul class="dropdown-menu" id="#t1">
                       <li class="dropdown-header">Команда</li>
                       <li><a href="javascript:;" onclick="mfilter('team',5806);">4manDOTA+Dnarek / 4manDOTA+Dnarek</a></li>
                       <li><a href="javascript:;" onclick="mfilter('team',6537);">4ChertaiSatana / 4ChertaiSatana</a></li>
                       <li><a href="javascript:;" onclick="mfilter('team',7034);">4 Classmates + Konama / 4 Classmates + Konama</a></li>
                     </ul>
+                    -->
                   </div>
                 </div>
               </div>

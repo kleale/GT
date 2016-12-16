@@ -53,6 +53,9 @@
 /*home page*/
 @import "part/page-home.css";
 
+/*game home page*/
+@import "part/page-game-home.css";
+
 /*teams page*/
 @import "part/page-teams.css";
 

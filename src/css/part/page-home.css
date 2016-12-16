@@ -1,3 +1,5 @@
+/* page-home.css */
+
 .gametopsel{
   display: table;
   table-layout: fixed;
@@ -25,5 +27,5 @@
         width: 100%;
       }
     }
-  }
+  } 
 }

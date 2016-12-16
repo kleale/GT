@@ -285,14 +285,12 @@ body{
   }
 }
 
-.dropers{
-
-}
 .s-lang{
   float:left;
   width: 50px;
   
   .dla{
+    text-transform: uppercase;
     color: $link-light-blue;
     display: block;
     padding: 15px 8px;
@@ -301,7 +299,6 @@ body{
     line-height: 1;
     font-weight: 300;
     cursor: pointer;
-    opacity: .7;
     
     &:active,
     &:focus,
@@ -318,7 +315,7 @@ body{
   .sub{
     padding: 15px 15px;
     color: $link-light-blue;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1;
     font-weight: 300;
     display: block;
@@ -336,6 +333,19 @@ body{
     float: right;
     margin: 5px 0px;
   }
+}
+
+.times {
+    float: right;
+    display: inline-block;
+    font-family: gticons;
+  &:after {
+    content: '\f00d';
+  }
+}
+
+.timezone b{
+  color: #c8ecff;
 }
 
 .sercher {

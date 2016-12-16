@@ -1,0 +1,49 @@
+{% set title = "Game HOME" %} 
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+
+  <div class="container mainwrap">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup">
+    
+      
+
+      <section class="m-sec m-even">
+        <div class="mlist-wr">
+          <div class="mlist">
+            {% include "template/game-home/match-list-live-home.html" %}
+          </div>
+          <div class="m-hot">
+            {% include "template/game-home/match-top-home.html" %}
+          </div>
+        </div>
+      </section>
+
+
+      <section id="m-news" class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/match-page/section-news.html" %}
+          </div>
+          <div class="col-md-5">
+            {% include "template/match-page/section-soc.html" %}
+          </div>
+        </div>
+      </section>
+
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

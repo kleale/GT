@@ -2,15 +2,26 @@
   Theme
 */
 
-.red{
+.red, .text-danger{
   color: $red;
 }
-.green{
+.green, .text-success{
   color: $green;
 }
-.blue{
+.blue, .text-primary{
   color: $blue;
 }
+.text-info{
+  color: $lightblue;
+}
+.text-muted{
+  color: inherit;
+  opacity: .7
+}
+.text-warning{
+  color: $orange;
+}
+
 /*
 * Bootstrap Theme
 */
@@ -503,7 +514,70 @@ Tabs mobile
     background-color: #3f464c;
 }
 
+/*Panel*/
+.panel {
+    margin-bottom: 20px;
+    background-color: #37424c;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  
+  &.panelWpager{
+    margin-bottom: 0px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 0;
+  }
+  &.panel-default {
+    border-color: #424f5a;
+    >.panel-heading {
+      color: #fff;
+      background-color: #37424c;
+      border-color: #424f5a;
+      .mlh{
+        padding: 0;
+      }
+    }
+  }
+}
+
+.panel>.panel-body+.table, .panel>.panel-body+.table-responsive, .panel>.table+.panel-body, .panel>.table-responsive+.panel-body {
+    border-top: 1px solid #424f5a;
+}
 
 
+/*Table*/
+
+.table>tbody>tr:nth-of-type(2n+1) {
+    border-bottom: 1px solid rgba(57, 62, 64, 0.65);
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background: rgba(66, 79, 90, 0.28);
+    border-bottom: 1px solid rgba(26, 31, 33, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border-top: 0;
+}
+.table-hover>tbody>tr:hover {
+    background-color: rgba(2, 2, 2, 0.14)!important;
+}
+.table-sm{
+  font-size: 11px;  
+}
+
+
+.table > thead {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  >tr{
+    th {
+      font-size: 10px;
+      background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-bottom: 0;
+    }
+  }
+}
 
 
