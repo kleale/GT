@@ -54,7 +54,7 @@
       });
     });
     
-	/* sticky icons */
+	/* Приклеиваем иконочное меню страницы матча */
     
     if (document.getElementById('m-fast')) {
       $('#m-fast').affix({
@@ -67,13 +67,14 @@
       })
     }
     
-    // Переключение вкладок стандартных блоков
+    // Переключение вкладок стандартных блоков на страница матча
     $('.stm_nav_block a').click(function (e) {
       e.preventDefault()
       $(this).tab('show');
       //$('.tse-sc').TrackpadScrollEmulator('recalculate');
     })
     
+    // Переключение вкладок блока стримов
     $('.stream_menu li').click(function (e) {
       e.preventDefault()
       $(this).tab('show');
@@ -88,6 +89,7 @@
         $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
     });
     
+    // Компактный заголовок страницы матча
     $("#head-toggle").click(function() {
       $(".m-head").toggleClass("m-head_compact");
 	});

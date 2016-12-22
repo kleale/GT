@@ -406,9 +406,12 @@ Branding - Match of the day
   }
   .abg_md {
     top: -1px;
-    width: 80px;
-    height: 57px;
-    margin-left: -40px;
+    width: 94px;
+    height: 67px;
+    margin-left: -47px;
+    i{
+      font-size: 9px;
+    }
   }
 }
 
@@ -460,6 +463,7 @@ Branding - Match of the day
     background: url(../img/ban.jpg) no-repeat 50% 0;
 	color:#fff;
 	display:block;
+    transition: initial;
 }
 .abl_md{
     width: 66px;
@@ -517,7 +521,7 @@ Branding - Match of the day
     width: 295px;
     height: 200px;
     margin: -100px -146px;
-    opacity: .4;
+    opacity: .7;
     transition: all .3s linear;
 }
 .abl_i2:before {
@@ -787,12 +791,13 @@ Branding - Match of the day
   }
   .abl_i1:before,
   .abl_i2:before {
-    margin: -80px -154px;
+    margin: -80px -124px;
     width: 305px;
     height: 240px;
   }
   .abl_i1:before{
-      left:0;
+    left:0;
+    margin: -80px -184px;
   }
   .abl_i2:before{
       left:100%;
@@ -851,7 +856,7 @@ LIVE BLOCK
   
   .table{
     background: #424f5a url("../img/spoiler.png") repeat scroll 0 0;
-  
+    font-size: 11px;
 	border-bottom: 1px solid rgba(71, 71, 71, 0.39);
     margin-bottom: 0;
     & > tbody > tr:nth-of-type(2n+1){
@@ -870,10 +875,10 @@ LIVE BLOCK
       text-align: left;
       font-weight: bold;
       position:relative;
-    }
-    .livetop a {
+    
+      a {
         position: relative;
-        padding: 10px 0px 0px 10px;
+        padding: 10px 0px 0px 5px;
         line-height: 1.6;
         display: block;
         color: #fff;
@@ -883,18 +888,25 @@ LIVE BLOCK
         white-space: nowrap;
         margin: -10px 0 0 0;
         max-width: 280px;
+        
+        &:hover {
+          text-decoration:none;
+          color: #dbfdff;
+        }
+      }
+      span{
+        display: inline-block;
+        text-overflow: ellipsis;
+        max-width: 100px;
+        overflow: hidden;
+        line-height: 1;
+        vertical-align: middle;
+        margin: 0 4px;
+      }
+     i{
+        vertical-align: middle;
+      }
     }
-    .livetop a:hover {
-        text-decoration:none;
-        color: #dbfdff;
-    }
-    .livetop span{
-        text-transform:uppercase;
-    }
-    .livetop i{
-        margin-right:10px;
-    }
-    
     tr:hover .btn {
       display: block;
       opacity: 1;
@@ -928,6 +940,7 @@ LIVE BLOCK
       width: 70px;
       white-space: nowrap;
       line-height: 1.3;
+      
       &.c1 {
         text-align: right;
       }

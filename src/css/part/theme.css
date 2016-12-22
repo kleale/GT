@@ -54,7 +54,7 @@
   border: 1px solid #0b75a7;
   border-radius: 0 0 $br $br;
   width: 100%;
-  min-width: 150px;
+  min-width: 170px;
   max-height: 400px;
   overflow-y: auto;
   
@@ -90,6 +90,7 @@
   color:#fff;
   padding: 7px 12px;
   background: #414e5a!important;
+  font-size: 11px;
 }
 
 /*
@@ -155,10 +156,12 @@
 .dropdown{
   .dropdown-toggle{
     text-align: left;
-    .caret{
+    
+    &.caret-abs .caret{
       position: absolute 8px 10px * *;
       margin: 8px 0 8px 5px;
     }
+    
   }
 }
 .input-group-btn .dropdown-toggle .caret{
@@ -171,7 +174,7 @@
 .open>.dropdown-toggle.btn{
   background-color: $bg-dropdown;
   color: $link-gray;
-  border-radius: $br $br 0 0;
+  border-radius: 0 $br 0 0;
   position: relative;
   /*z-index: 1002;*/
 }
@@ -502,6 +505,10 @@ Tabs mobile
   }
 }
 
+.text-up{
+  text-transform: uppercase;
+}
+
 .progress.progress-small {
     height: 5px;
     margin: 5px 0;
@@ -579,5 +586,6 @@ Tabs mobile
     }
   }
 }
+
 
 

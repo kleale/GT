@@ -4,45 +4,64 @@
 
 {% set tourlogo = ['pic-20160926-280x80-6342360083.jpeg', 'pic-20160831-478x178-7586446600.jpeg', 'pic-20160912-600x267-6676783403.png', 'pic-20160909-378x119-9085315335.jpeg'] %}
 
+{% set width = ['10', '20', '30', '40'] %}
 
 <h1 class="mh"><span>Последние турниры <a href="/dota-2">DOTA 2</a></span></h1>
 
-<table class="mtable">
-  <thead>
-    <th></th>
-    <th>Турнир</th>
-    <th width="130">1 место</th>
-    <th width="130">2 место</th>
-    <th width="130">3 место</th>
-  </thead>
-  <tbody>
     {% for i in 0..9 %}
-      <tr>
+<div class="winners">
+  <a href="" class="wtr tip" title="Название турнира">
+    <img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/{{random(tourlogo)}}">
+  </a>
+  <div class="winblock">
+    <div class="progress progress-small">
+      <div class="progress-bar progress-bar-gold" style="width:{{random(width)}}%">
+        <span class="sr-only">{{random(width)}}% призовых</span>
+      </div>
+      <div class="progress-bar progress-bar-silver" style="width:{{random(width)}}%">
+        <span class="sr-only">{{random(width)}}% призовых</span>
+      </div>
+      <div class="progress-bar progress-bar-bronze" style="width:{{random(width)}}%">
+        <span class="sr-only">{{random(width)}}% призовых</span>
+      </div>
+    </div>
+    
+    <ul>
+      <li class="gold">
+        <b>1</b>
+        <a href="">
+          <img class="logo" alt="{{random(team)}}" src="http://game-tournaments.com/media/logo/{{random(logo)}}"/>
+          <span>{{random(team)}}</span> 
+          <img class="flag" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" alt="Европа" title="Европа">
+          <u>$1.3 млн.</u>
+        </a>
+      </li>
+      <li class="silver">
+        <b>2</b>
+        <a href="">
+          <img class="logo" alt="{{random(team)}}" src="http://game-tournaments.com/media/logo/{{random(logo)}}"/>
+          <span>{{random(team)}}</span> 
+          <img class="flag" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" alt="Европа" title="Европа">
+          <u>$1.3 млн.</u>
+        </a>
+      </li>
+      <li class="bronze">
+        <b>3</b>
+        <a href="">
+          <img class="logo" alt="{{random(team)}}" src="http://game-tournaments.com/media/logo/{{random(logo)}}"/>
+          <span>{{random(team)}}</span> 
+          <img class="flag" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" alt="Европа" title="Европа">
+          <u>$1.3 млн.</u>
+        </a>
+      </li>
+    </ul>
+    
+      
+
         <td>
-          <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/{{random(tourlogo)}}"></a>
-        </td>
-        <td>
-          <b>{{random(tour)}}</b>
-        </td>
-        {% for d in 0..1 %}
-          <td>
-            <span class="flag">
-              <img width="20px" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" alt="Европа" title="Европа">
-            </span>
-            <a href="">{{random(team)}}</a><u>$1,3 млн.</u>  
-          </td>
-        {% endfor %}
-        <td>
-            {% for c in 0..1 %}
-              <div>
-                <span class="flag">
-                  <img width="20px" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" alt="Европа" title="Европа">
-                </span>
-                <a href="">{{random(team)}}</a> <u>$400 тыс.</u> 
-              </div>
-          {% endfor %}
+            
         </td>
       </tr>
+  </div>
+</div>
     {% endfor %}
-  </tbody>
-</table>

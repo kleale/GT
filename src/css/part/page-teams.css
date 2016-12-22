@@ -161,7 +161,7 @@ section.hero{
 .filter{
   margin-bottom: 30px;
   
-  >.row{
+  .row{
       margin-right: -5px;
     >div{
       padding: 0 5px;
@@ -265,71 +265,148 @@ section.hero{
 
 .lastTour {
   
-  .mtable{
-    border-top: 0;
-    thead {
-      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-      th {
-        text-align: left;
-        font-size: 10px;
-        background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
 
-        &:first-child {
-          padding-left: 20px;
-        }
-      }
+}/*lastTour*/
+
+.winners{
+  overflow: hidden;
+  margin: 10px 0 0 0;
+  background: #24282c;
+  a.wtr{
+    display: block;
+    overflow: hidden;
+    float: left;
+    width: 150px;
+    height: 80px;
+    margin-right: -20px;
+    position: relative;
+    img{
+      max-height: 100%;
+      min-width: 100%;
     }
-    tr{
-      td{
-        height: 55px;
+  }
+  .winblock{
+    background: #24282c url(../img/kletka.png) repeat 100% 0;
+    position: relative;
+    margin-left: 150px;
+    padding: 10px 10px 5px 10px;
+    height: 80px;
+    
+    &:before{
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: -15px;
+      position: absolute;
+      width: 30px;
+      background: #24282c url(../img/kletka.png) repeat 100% 0;
+      /* background: linear-gradient(to right, rgba(36,40,44,0.5) 0%,rgba(36,40,44,2) 70%); */
+      transform: skewX(20deg);
+    }
+    .progress{
+      margin: 3px 5px 20px 0;
+      opacity: .8;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      display: table;
+      table-layout: fixed;
+      width: 97%;
+      
+      li{
+        list-style: none;
+        display: table-cell;
+        font-size: 11px;
+        position: relative;
+        font-weight: 600;
+        line-height: 11px;
+        min-width: 140px;
         
-        u{
-          text-decoration: none;
-          display: block;
-          padding-left: 27px;
-          font-size: 11px;
-          font-weight: 300;
-          margin-top: 5px;
+        b{
+          display: inline-block;
+          text-align: center;
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          color: #222;
+          border-radius: 50%;
+          /*
+          background: #607D8B;
+          box-shadow: 0 1px 0px rgba(0, 0, 0, 0.48), 0 1px 0 rgba(142, 142, 142, 0.41) inset;
+          text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+          */
+          float: left;
+          border: 1px solid;
+          opacity: .7;
         }
-        .flag img{
-          vertical-align: text-bottom;
-          margin-right: 3px;
-          opacity: .8;
-        }
-        
-        &:nth-child(1){
-          span{
-            display: inline-block;
-            width: 80px;
-            
-            img{
-              width:100%;
-            }
+        a{
+          margin: 0 0 0 10px;
+          display: inline-block;
+          white-space: nowrap;
+          line-height: 11px;
+          color: #fff;
+          
+          &:hover,
+          &:active,
+          &:focus{
+            text-decoration: none;
+          }
+          
+          u{
+            text-decoration: none;
+            display: block;
+            white-space: nowrap;
+            font-weight: 400;
+          }
+          .logo{
+            width: 22px;
+            float: left;
+            margin-right: 7px;
+          }
+          .flag{
+            width: 14px;
+            margin: -3px 1px;
+            vertical-align: baseline;
           }
         }
-        &:nth-child(2){
-          font-size: 14px;
+        
+        &.gold {
           b{
-            position: relative
+            color: #ffb83b;
+          }
+          u{
+            color: #ffb83b;
           }
         }
-        &:nth-child(3){
+        &.silver {
+          b{
+            color: #c0c0c0;
+          }
           u{
-            color: #ffb848;
+            color: #c0c0c0;
           }
         }
-        &:nth-child(4){
-          u{
-            color: #eee;
+        &.bronze {
+          b{
+            color: #ae8d3d;
           }
-        }
-        &:nth-child(5){
           u{
-            color: #bd8732;
-            margin: 3px 0;
+            color: #ae8d3d;
           }
         }
       }
     }
   }
-}/*lastTour*/
+}
+
+.progress-bar-gold{
+  background: #ffb83b;
+}
+.progress-bar-silver{
+  background: #c0c0c0;
+}
+.progress-bar-bronze{
+  background: #ae8d3d;
+}
+

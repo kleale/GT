@@ -15,6 +15,7 @@
   
   .dropdown{
     display: inline-block;
+    margin-left: 2px;
     
     .dropdown-menu{
       right:0;
@@ -22,7 +23,7 @@
       width:inherit;
     }
   }
-  b{
+  > b{
     display: inline-block;
     text-transform: uppercase;
     margin-right: 10px;

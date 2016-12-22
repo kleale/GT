@@ -92,7 +92,9 @@
 	});
     
     //tip
-    $('.tip').tooltip();
+    $('.tip').tooltip({
+      container: 'body'
+    });
     
     // Match list links on tr
     /*
@@ -122,7 +124,7 @@
     });
     
     // checkbox to switch
-    $("[name='switch']").bootstrapSwitch();
+    $("[name='score']").bootstrapSwitch();
     
     // countdown on top match list
     $('[data-countdown]').each(function() {

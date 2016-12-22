@@ -14,10 +14,14 @@
 .htip{
   background-color: #0d1921!important;
   &.bottom>.arrow{
+    top: -8px;
     border-bottom-color: #0d1921!important;
     &:after {
       border-bottom-color: #0d1921!important;
     }
+  }
+  &.bottom {
+    margin-top: 12px!important;
   }
   .popover-content {
     padding: 0;
@@ -151,15 +155,13 @@
     bottom:0;
     z-index:1000;
   
-  
   .srteamview {
     bottom: 0;
     height: 100%;
     position: fixed;
     margin-right: 0 !important;
     top:0;
-    left:0;
-    right: 50px;
+    left:50px;
   }
   
   .srteamtoggle{

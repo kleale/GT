@@ -87,7 +87,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
-  padding-right: 15px;
+  padding-right: 0px;
 }
 
 .nav-pager{

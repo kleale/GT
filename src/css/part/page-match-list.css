@@ -9,13 +9,16 @@
   .block-content{
     overflow-x: hidden;
   }
+  .mltText{
+    margin-left: 25px;
+  }
   
   .bh{
     /*border-bottom: 2px solid #424f5a;*/
     margin-bottom: -1px;
     position: relative;
     z-index: 10;
-    padding-left: 15px;
+    padding-left: 25px;
     
     .block-menu{
       float: left;
@@ -40,11 +43,11 @@
     }
     
     .mH1{
-      margin: .3em 0 .9em 0;
+      margin: 0 0 .9em 0;
       font-size: 1.5em;
       text-transform: uppercase;
       @media (max-width: 1599px){
-        margin: .5em 0 .9em 0;
+        margin: 0 0 .9em 0;
         font-size: 1.2em;
       }
     }
@@ -53,7 +56,7 @@
       margin-top: 0px;
     }
     
-    #refresher{
+    .refresher{
       font-size: 20px;
       margin: 0 10px;
       vertical-align: middle;
@@ -100,26 +103,23 @@
       text-decoration: none;
     }
   }
-/*
-  input {
-    color: #a2a2a2;
-    font-size: 12px;
-    display: inline-block;
-    height: 29px;
-    line-height: 14px;
-    padding: 5px 10px;
-    border: 0;
-    width: 100%;
-    border-radius: 2px;
+  .times{
+    position: absolute 7px 10px * *;
+    z-index: 2;
+    
+    &:hover,
+    &:focus,
+    &:active{
+      opacity: 1;
+      text-decoration: none;
+    }
   }
-*/
   &.open{
     .dropdown-menu{
       background: #37424c;
       
     }
   }
-  
 }
 
 .sorter{
@@ -145,7 +145,8 @@
   border-collapse: collapse;
   border-spacing: 0;
   vertical-align: middle;
-  border-top: 2px solid #393e40;
+  /*border-top: 2px solid #393e40;*/
+  border-top: 0;
   
   th{
     text-align: center;
@@ -159,17 +160,12 @@
     border-bottom: 1px solid rgba(57, 62, 64, 0.65);
   }
   tr:nth-of-type(2n) {
-    /*background: linear-gradient(to right, rgb(56, 66, 74) 0%, rgba(46, 51, 55, 0) 70%, rgba(46, 51, 55, 0) 100%);
-    */
-    /*background: linear-gradient(to right, rgb(37, 43, 47) 0%, rgba(46, 51, 55, 0) 70%, rgba(46, 51, 55, 0) 100%);
-    background-attachment: fixed;
-    */
     background: #303539;
-    
-    
     border-bottom: 1px solid rgba(26, 31, 33, 0.25);
   }
-  
+  tr:last-child {
+    border-bottom: 0!important;
+  }
   tr:hover{
     background: rgb(64, 75, 84);
     
@@ -186,16 +182,23 @@
   }
   td{
     border-top:0;
-    padding: 7px 5px;
+    padding: 10px 5px;
     vertical-align: middle!important;
     line-height: 1!important;
 
     &:first-child{
       padding-left: 20px;
+      width: 90px;
     }
     &:last-child{
       padding-right: 10px;
     }
+  }
+  .gti-youtube-play{
+    font-size: 1.1em;
+    vertical-align: text-top;
+    color: #7faec3;
+    opacity: .3;
   }
   .td-m{
     white-space: nowrap;
@@ -228,7 +231,7 @@
         transition: $tease;
       }
       img{
-        width: 25px;
+        width: 18px;
       }
     }
   }  
@@ -236,7 +239,9 @@
   .tn1{
     text-align: right;
   }
-
+  .tn2{
+    text-align: left;
+  }
   .tn1, .tn2{
     white-space: nowrap;
     display: inline-block;
@@ -252,13 +257,6 @@
     @media (max-width : 1599px) {
       width:80px;
       font-size: 12px;
-    }
-    
-    &:hover,
-    &:active,
-    &:focus{
-      color: $link-white-active;
-      text-decoration: none;
     }
 
     @media (max-width: $M){
@@ -278,6 +276,9 @@
     font-size: 13px;
     padding: 5px 10px;
     font-size: 11px;
+    .tour-pop{
+      display: inline-block;
+    }
     
     @media (max-width: $XM) {
       display: none;
@@ -312,17 +313,10 @@
     height: 25px;
   }
   .tdate{
-    width: 125px;
     text-align: center;
     font-size: 12px;
-    i{
-      margin: -2px 0 0 6px;
-      font-size: 1.5em;
-      vertical-align: text-bottom;
-      color: #7faec3;
-      opacity: .5;
-      position: absolute;
-    }
+    height: 42px;
+    width: 115px;
     
     @media (max-width: 1599px) {
       font-size: 10px;
@@ -332,13 +326,15 @@
     }
   }
   .mscore{
-    font-size: 14px;
+    font-size: 12px;
     width: 40px;
     text-align: center;
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    
+    .tresult{
+      font-size: 12px;
+    }
     .mprogress {
       display: inline-block;
       height: 42px;
@@ -416,15 +412,20 @@
   }
 }
 .dice-win{
-  font-size: 22px;
+  font-size: 16px;
   cursor: pointer;
-  color: $green;
+  opacity: .7;
   
   &:hover,
   &:active,
   &:focus{
     color: $link-blue-active;
     text-decoration: none;
+  }
+  
+  &.diceMday{
+    opacity: 1;
+    color: #82ac4e;
   }
 }
 
@@ -740,11 +741,21 @@
   height: 40px;
   margin: 10px;
 }
+.timezone{
+  li{
+    min-width: 170px;
+  }
+  .elapsed{
+    margin: 8px 5px 10px 10px!important;
+    position: relative;
+    top: 2px;
+  }
+}
 .score-on{
-  padding: 0 5px 0 0;
+  padding: 0;
   
   .bootstrap-switch{
-    border-color: #444950;
+    border-color: transparent;
     border-radius: 2px;
     box-shadow: $bsh;
     
@@ -807,5 +818,17 @@
 }
 
 
+.livebetpin{
+    background-color: #f03a3a;
+    border: 1px solid #f03a3a;
+    border-radius: 12px;
+    box-shadow: 0 0 30px 4px #f03a3a;
+    display: inline-block;
+    height: 11px;
+    margin-right: 5px;
+    margin-top: -2px;
+    vertical-align: middle;
+    width: 11px;
+}
 
 

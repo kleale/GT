@@ -16,7 +16,7 @@ module.exports = {
     "$text-main": "#fff",
     "$text-gray-1": "#5c5f62",
     "$text-gray-2": "#6c6c6c",
-    "$text-gray-3": "#8f8f8f",
+    "$text-gray-3": "#a0a0a0",
 
     "$link-blue": "#2faee7",
     "$link-blue-active": "#2faee7",
@@ -52,7 +52,7 @@ module.exports = {
     "lightblue": "#4396f7",
   
     //transitions
-    "$tease": "all .2s ease",
+    "$tease": "all .2s linear",
   
     //border-radius
     "$br": "2px",
