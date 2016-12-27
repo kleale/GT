@@ -6,16 +6,12 @@ section.hero{
   text-align: center;
   position: relative;
   padding: 40px 20px;
-  /*background: #38434d;
-  */
   background: color($bg-sub l(14%));
   background-position: 0 100%;
   background-size: cover;
-  /*
-  background-image: inline(../img/tile.png);
-  */
   height: 260px;
   margin-bottom: -50px;
+  overflow: hidden;
   
   &:before {
     position: absolute 0 0 0 0;
@@ -44,6 +40,45 @@ section.hero{
     position: relative;
     z-index: 2;
     font-size: 24px;
+  }
+}
+
+.ava-sm{
+  display: inline-block;
+  overflow: hidden;
+  height: 35px;
+  width: 35px;
+  position: relative;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+.pTeamOther{
+  thead{
+    th{
+      padding: 10px 5px;
+    }
+  }
+  td,
+  th{
+    text-align: right;
+    &:nth-child(2),
+    &:nth-child(3){
+      text-align: left;
+    }
+    &:first-child{
+      text-align: left;
+      padding-left: 25px;
+    }
+    &:last-child{
+      padding-right: 25px;
+    }
+  }
+  .ava-sm{
+    margin: -5px 0;
   }
 }
 
@@ -270,27 +305,27 @@ section.hero{
 
 .winners{
   overflow: hidden;
-  margin: 10px 0 0 0;
-  background: #24282c;
+  margin: 3px 0 0 0;
+  background: #2a2f33;
   a.wtr{
     display: block;
     overflow: hidden;
     float: left;
     width: 150px;
-    height: 80px;
+    height: 60px;
     margin-right: -20px;
     position: relative;
     img{
-      max-height: 100%;
-      min-width: 100%;
+      min-height: 100%;
+      width: 100%;
     }
   }
   .winblock{
-    background: #24282c url(../img/kletka.png) repeat 100% 0;
+    background: url(../img/kletka.png) repeat 100% 0;
     position: relative;
     margin-left: 150px;
     padding: 10px 10px 5px 10px;
-    height: 80px;
+    height: 60px;
     
     &:before{
       content: '';
@@ -299,12 +334,11 @@ section.hero{
       left: -15px;
       position: absolute;
       width: 30px;
-      background: #24282c url(../img/kletka.png) repeat 100% 0;
-      /* background: linear-gradient(to right, rgba(36,40,44,0.5) 0%,rgba(36,40,44,2) 70%); */
+      background: #2a2f33 url(../img/kletka.png) repeat 100% 0;
       transform: skewX(20deg);
     }
     .progress{
-      margin: 3px 5px 20px 0;
+      margin: 3px 5px 10px 0;
       opacity: .8;
     }
     ul {
@@ -410,3 +444,43 @@ section.hero{
   background: #ae8d3d;
 }
 
+.spider_chart_team{
+  height: 330px;
+  margin-bottom: 30px;
+}
+.grphilter{
+  margin-bottom: 30px;
+  text-align: center;
+  > div{
+    display: inline-block;
+    .input-group{
+      max-width: 230px;
+    }
+  }
+}
+
+.stattable.mtable{
+  thead{
+    th{
+      text-align: center;
+      font-size: 10px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  }
+  tr{
+    td{
+      text-align: center;
+      b{
+        color: #b2daf7;
+        font-size: 16px;
+      }
+    }
+    &.t2{
+      b{
+        color: #ff9191;
+        font-size: 12px;
+      }
+    }
+  }
+}

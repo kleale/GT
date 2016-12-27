@@ -173,7 +173,11 @@
   position: relative;
   min-height: 110px;
   overflow: hidden;
-    
+  
+  td, th{
+     font-size: 12px;
+  }
+  
   .teams_bars{
     margin:0 200px;
     height: 100px;
@@ -183,7 +187,6 @@
     }
     .tbs1, .tbs2{
       width:100px;
-      font-size: 12px;
       table{
         width:100%;
         

@@ -191,6 +191,22 @@ player.html
         width: 20px;
       }
     }
+    
+    table{
+      width: 100%;
+      tr{
+        border-bottom: 1px solid #424d56;
+        &:last-child{
+          border-bottom: 0;
+        }
+        td{
+          font-size: 12px;
+          width: 50%;
+          padding: 3px 0;
+        }
+      }
+    }
+    
   }
   .niks{
     font-size: .8em;
@@ -283,7 +299,6 @@ player.html
   padding-bottom: 0;
   
   .maingraph{
-    padding: 0 20px;
     margin-bottom: 10px;
     
     .playerRole{
@@ -327,7 +342,7 @@ player.html
     content: '';
     position: absolute 0 0 * 0;
     height: 50px;
-    background: linear-gradient(to bottom, rgba(16, 27, 37,1) 0%,rgba(19,29,38,0) 100%);
+    background: linear-gradient(to bottom, rgb(35, 43, 49) 0%,rgba(19,29,38,0) 100%);
   }
   > div{
     position: relative;
@@ -459,38 +474,30 @@ player.html
   }
 }
 
-.pagePlayer, .pageTeam {
-  
-  section.hero{
-    padding: 20px 20px 40px;
-    overflow: hidden;
-    &:after{
-      background: linear-gradient(to bottom, rgba(46,51,55,0) 0%,rgb(35, 43, 49) 100%);
-    }
 
-    h1{
-      text-align: left;
-      padding: 0 10px;
-    }
-    a{
-      position: relative;
-      z-index: 10;
-      margin-top: 10px;
-    }
+section.hero.pageTeamHero,
+section.hero.pagePlayerHero{
+  padding: 20px 20px 20px;
+  overflow: hidden;
+  &:after{
+    background: linear-gradient(to bottom, rgba(46,51,55,0) 0%,rgb(35, 43, 49) 100%);
   }
-  .m-zames{
-        padding: 20px!important;
+
+  h1{
+    text-align: left;
+    padding: 0 10px;
   }
-  .fightsPlayers {
-    margin-bottom: 0px;
-    .row{
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
+  a{
+    position: relative;
+    z-index: 10;
+    margin-top: 10px;
+    margin-right: 10px;
   }
 }
 
-.pageTeam{
+.pageTeam{ 
+  padding-bottom: 30px;
+  
   .tLogo{
     text-align: center;
     padding: 30px 20% 0;
@@ -547,6 +554,9 @@ player.html
 }
 
 .teamP{
+  background: #232b31;
+  padding-bottom: 0;
+  
   >.row{
     text-align: center;
     >div{
@@ -564,14 +574,17 @@ player.html
     
     .pSmLogo{
       text-align: center;
-      margin: 0;
+      margin: 0 0 5px 0;
+      
       a{
         display: block;
         overflow: hidden;
         height: 155px;
         position: relative;
-        padding: 5px;
-        
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*
         &:after {
           content: '';
           right: 0;
@@ -582,63 +595,85 @@ player.html
           height: 55px;
           background: linear-gradient(to bottom, rgba(55, 66, 76, 0) 0%,rgba(55, 66, 76, 0.85) 58%,rgb(55, 66, 76) 100%);
         }
+        */
         b{
-          position: absolute 5px 5px * *;
-          display: inline-block;
-          min-width: 10px;
-          padding: 3px 7px;
-          font-size: 12px;
-          font-weight: 700;
-          line-height: 1;
+          top: 0;
+          left: 0;
+          position: absolute;
+          display: block;
+          padding: 5px 10px;
+          background: #424f5a;
           color: #fff;
-          text-align: center;
-          white-space: nowrap;
-          vertical-align: middle;
-          background-color: #777;
-          border-radius: 10px;
+          font-size: 14px;
+          
+          &:after {
+            content: '';
+            display: block;
+            background: #424f5a;
+            height: 100%;
+            width: 8px;
+            top: 0;
+            right: -4px;
+            bottom: 0;
+            position: absolute;
+            transform: skew(-15deg);
+          }
         }
         img{
           width: 100%;
-          min-height: 100%;
         }
       }
     }
-    div {
-      text-align: center;
-      padding: 0 5px 5px;
-      margin-top: -55px;
+    ul {
       font-size: 11px;
       color: #fff;
-      position: relative;
-      z-index: 1;
-      text-shadow: 0 1px 1px #000;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+      list-style: none;
       
-      a{
-        display: block;
-        font-size: 14px;
-        font-weight: 600;
-        color: #fff;
-        img{
-          width: 16px;
+      li{
+        padding: 3px 10px;
+        border-bottom: 1px solid #424d56;
+        &:last-child{
+          border-bottom: 0px;
+        }
+        &.plm{
+          font-size: 10px;
+          text-align: center;
+        }
+        &.plmH label{
+          width: 100%;
+          text-align: center;
+        }
+        label{
+          display: inline-block;
+          width: 50px;
+          text-transform: uppercase;
+          font-size: 9px;
+          font-weight: 300;
+          color: #acb1b5;
+          margin: 0;
+        }
+        a.pllink{
+          display: inline-block;
+          font-size: 12px;
+          font-weight: 500;
+          color: #fff;
+          overflow: hidden;
+          line-height: 1;
+          max-width: 60%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          vertical-align: bottom;
+
+          img{
+            width: 16px;
+          }
         }
       }
     }
-    ul{
-      padding: 5px 5px 5px;
-      margin: 0;
-      font-size: 10px;
-      list-style: none;
-      text-align: center;
-      border-top: 1px solid #2b3238;
-      box-shadow: 0 1px 0 0 #435363 inset;
-      li{
-        padding: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        display: block;
-      }
-    }
+   
   }
 }
 

@@ -24,9 +24,7 @@
     
     @media (max-width: $XM){
       width: 100%;
-      position: relative * * * *;
-      width: 100%;
-      height: 460px;
+      position: relative;
       overflow: hidden;
     }
   }
@@ -39,6 +37,9 @@
   top: 0;
   bottom: 0;
   z-index: 2;
+  @media (max-width: $XM){
+    position: relative;
+  }
 }
 
 .stream_action {
@@ -54,6 +55,7 @@
   background-image: inline(../img/nav-line1.png);
   background-repeat: no-repeat;
   background-position: 0 100%;
+  margin: 0;
   
   li{
     display: table-cell;
@@ -92,22 +94,31 @@
 
 .stmblocks{
   background: linear-gradient(to bottom,  rgba(27,53,64,1) 0%,rgba(27,53,64,0) 100%);
-  position: absolute 57px 0 0 0
+  position: absolute 57px 0 0 0;
+  
+  @media (max-width: $XM){
+    position: relative 0 0 0 0;
+  }
 }
 .stmblock{
   position: absolute 0 0 0 0;
   display: none;
   
+  @media (max-width: $XM){
+    position: relative 0 0 0 0;
+  }
   &.active{
     display: block!important;
   }
-  
   .tse_slist{
     height: auto;
     position: absolute 0 0 0 0;
-    overflow-x: hidden;
-  }
-  
+    overflow-x: hidden!important;
+    
+    @media (max-width: $XM){
+      position: relative 0 0 0 0;
+    }
+  } 
 }
 
 /*

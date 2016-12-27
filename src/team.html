@@ -19,7 +19,7 @@
 <!DOCTYPE html>
 <html>
 {% include "template/head.html" %}
-<body class="pageTeam">
+<body class="">
  
 <!-- Счетчик циферок -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
@@ -150,14 +150,14 @@ $(function () {
     {% include "template/breadcrumbs.html" %}
     <div class="otstup">
       
-      <section class="hero" style="background-image:url(../img/headpic.jpg); height:auto;">
+      <section class="hero pageTeamHero" style="background-image:url(../img/headpic.jpg); height:auto;">
         <a href="" class="btn pull-right btn-default">Все команды DOTA 2</a>
         <h1><span>Карточка команды <a href="/dota-2">DOTA 2</a> Team Liquid</span></h1>
       </section>
       
-      <section class="m-sec m-even plCard">
+      <section class="m-sec m-even plCard pageTeam">
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-md-4">
             <div class="pAva">
               <div class="pAvaBg">
                 <span class="tLogo">
@@ -214,7 +214,7 @@ $(function () {
               </div>
             </div>
           </div>
-          <div class="col-sm-8">
+          <div class="col-md-8">
             <div class="maingraph">
               <!--<h3 class="mlh"><span>Матчи</span></h3>-->
               <div class="pRd">
@@ -270,54 +270,58 @@ $(function () {
                 <div class="row">
                   {% for i in 0..1 %}
                     <div class="col-md-4">
-                        <div class="pinTeam">
-                          <figure class="pSmLogo">
-                            <a href="#">
-                              <img src="http://game-tournaments.com/media/logo/{{random(plogo)}}" alt="{{random(player)}}">
-                              <b class="tip" title="Место игрока в рейинге">{{random(flag)}}</b>
-                            </a>
-                          </figure>
-                          <div>
-                            <a href="">{{random(player)}} <img title="Европа" alt="Европа" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png"/></a> 
-                            Матчей: 211 <br>
-                            Роль: core / Позиция: {{random(flag)}}
-                          </div>
-                          <ul>
-                            {% for i in 0..2 %}
-                            <li>
-                              <a href="">{{random(flag)}} дн.н</a>
-                              <span>за <a href="/dota-2/team/liquid">Liquid Liquid</a> vs <a href="/dota-2/team/virtus-pro">{{random(team)}}</a></span>
-                            </li>
-                            {% endfor %}
-                          </ul>
-                        </div>
+                      <div class="pinTeam">
+                        <figure class="pSmLogo">
+                          <a href="#" style="background-image:url(http://game-tournaments.com/media/logo/{{random(plogo)}})">
+                            {#<img src="http://game-tournaments.com/media/logo/{{random(plogo)}}" alt="{{random(player)}}">#}
+                            <b class="tip" title="Место игрока в рейинге">{{random(flag)}}</b>
+                          </a>
+                        </figure>
+                        <ul>
+                          <li>
+                            <label>Ник</label>
+                            <a class="pllink" href="">{{random(player)}} <img title="Европа" alt="Европа" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png"/></a>
+                          </li>
+                          <li><label>Имя</label> Виталий Карпов</li>
+                          <li><label>Возраст</label> 21 год</li>
+                          <li><label>Страна</label> Италия</li>
+                          <li><label>Роль</label>Позиция: core</li>
+                          <li class="plmH"><label>Last match</label></li>
+                          <li class="plm">
+                            <a href="">{{random(flag)}} дн.н</a>
+                            <span>за <a href="/dota-2/team/liquid">Liquid</a> vs <a href="/dota-2/team/virtus-pro">{{random(team)}}</a></span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   {% endfor %}
                   </div>
                   <div class="row">
                   {% for i in 0..2 %}
                     <div class="col-md-4">
-                        <div class="pinTeam">
-                          <figure class="pSmLogo">
-                            <a href="#">
-                              <img src="http://game-tournaments.com/media/logo/{{random(plogo)}}" alt="{{random(player)}}">
-                              <b class="tip" title="Место игрока в рейинге">{{random(flag)}}</b>
-                            </a>
-                          </figure>
-                          <div>
-                            <a href="">{{random(player)}} <img title="Европа" alt="Европа" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png"/></a> 
-                            Матчей: 211 <br>
-                            Роль: core / Позиция: 1
-                          </div>
-                          <ul>
-                            {% for i in 0..2 %}
-                            <li>
-                              <a href="">{{random(flag)}} дн.н</a>
-                              <span>за <a href="/dota-2/team/liquid">Liquid</a> vs <a href="/dota-2/team/virtus-pro">{{random(team)}}</a></span>
-                            </li>
-                            {% endfor %}
-                          </ul>
-                        </div>
+                      <div class="pinTeam">
+                        <figure class="pSmLogo">
+                          <a href="#" style="background-image:url(http://game-tournaments.com/media/logo/{{random(plogo)}})">
+                            {#<img src="http://game-tournaments.com/media/logo/{{random(plogo)}}" alt="{{random(player)}}">#}
+                            <b class="tip" title="Место игрока в рейинге">{{random(flag)}}</b>
+                          </a>
+                        </figure>
+                        <ul>
+                          <li>
+                            <label>Ник</label>
+                            <a class="pllink" href="">{{random(player)}} <img title="Европа" alt="Европа" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png"/></a>
+                          </li>
+                          <li><label>Имя</label> Виталий Карпов</li>
+                          <li><label>Возраст</label> 21 год</li>
+                          <li><label>Страна</label> Италия</li>
+                          <li><label>Роль</label>Позиция: core</li>
+                          <li class="plmH"><label>Last match</label></li>
+                          <li class="plm">
+                            <a href="">{{random(flag)}} дн.н</a>
+                            <span>за <a href="/dota-2/team/liquid">Liquid</a> vs <a href="/dota-2/team/virtus-pro">{{random(team)}}</a></span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   {% endfor %}
                 </div>
@@ -326,8 +330,49 @@ $(function () {
           </div>
         </div> 
       </section>
-      <section class="m-sec m-odd pTeams">
+      <section class="m-sec m-odd pTeams pTeamOther">
         <h3 class="mlh"><span>Другие игроки</span></h3>
+        <div class="table-responsive">
+          <table class="mtable">
+            <thead>
+              <th>аватар</th>
+              <th>ник</th>
+              <th>имя</th>
+              <th>Возраст</th>
+              <th>Страна</th>
+              <th>роль</th>
+              <th>даты когда играл</th>
+            </thead>
+            {% for i in 0..2 %}
+              <tr>
+                <td>
+                  <a href="#" class="ava-sm" style="background-image:url(http://game-tournaments.com/media/logo/{{random(plogo)}})">
+                   </a>
+                </td>
+                <td>
+                  <a href="">{{random(player)}}</a>
+                </td>
+                <td>
+                  <a href="">Виталий Кочергин</a>
+                </td>
+                <td>
+                  21 год
+                </td>
+                <td>
+                  Италия
+                </td>
+                <td>
+                  core
+                </td>
+                <td>
+                  Sep 2014 - Oct 2016
+                </td>
+              </tr>
+            {% endfor %}
+          </table>
+        </div>
+        {% include "template/pager.html" %}
+        {#
         <div class="slPlayers" id="slPlayers">
           {% for i in 0..5 %}
             <div class="col-md-3">
@@ -356,6 +401,7 @@ $(function () {
             </div>
           {% endfor %}
         </div>
+        #}
       </section>
       
       <section class="m-sec m-even">

@@ -48,7 +48,8 @@
       a{
         float: left;
         width:35px;
-
+        height: 35px;
+        
         img{
           width: 100%;
           border-radius: 50px;

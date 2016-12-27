@@ -256,12 +256,12 @@ Branding - Match of the day
 }
 .kf_up:after{
 	content:"\f106";
-	font-family: FontAwesome;
+	font-family: 'gticons';
 	margin: 0 0 0 10px;
 }
 .kf_down:after{
 	content:"\f107";
-	font-family: FontAwesome;
+	font-family: 'gticons';
 	margin: 0 0 0 10px;
 }
 
@@ -661,7 +661,7 @@ Branding - Match of the day
     right: 0;
     left: 0;
     text-align: center;
-    font-family: FontAwesome;
+    font-family: 'gticons';
     font-size: 21px;
 }
 .lk_up:before{
