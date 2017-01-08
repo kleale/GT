@@ -2,7 +2,7 @@
 * Section koeffitzienti
 */
 .m-sec{
-  padding: 30px;
+  padding: 20px;
   @media (max-width: $M){
     padding: 15px;
   }
@@ -19,7 +19,7 @@
       float: right;
       list-style: none;
       margin: 0;
-      padding: 2px 5px 0 0;
+      padding: 2px 15px 0 0;
       
       @media (max-width: $M){
         float: none;
@@ -472,13 +472,14 @@
   }
 }
 .no100{
-  border:1px dashed;
-  color: $link-blue;
+  border: 2px solid;
+  color: #4d5963;
   text-align: center;
   font-size: 12px;
   padding: 30px;
   margin: 15px 0;
   text-transform: uppercase;
+  font-weight: bold;
 }
 .graf{
   background: #2D3C48;

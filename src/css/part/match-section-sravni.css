@@ -32,7 +32,7 @@
 }
 
 .sr_t{
-  margin-top: 50px;
+  margin-top: 70px;
   
   .sr_pic{
     display: block;
@@ -61,7 +61,7 @@
   }
   
   > div{
-    
+    padding-top: 20px;
     h3{
       margin: 0;
       font-size: 24px;
@@ -79,10 +79,12 @@
   
   &.sr_t1{
     text-align: right;
+    margin-right: -50px;
     
     @media (max-width: $XM){
       text-align: center;
       margin-bottom: 50px;
+      margin-right: 0px;
     }
     
     > div{
@@ -111,9 +113,11 @@
   
   &.sr_t2{
     text-align: left;
+    margin-left: -50px;
     
     @media (max-width: $XM){
       text-align: center;
+      margin-left: 0px;
     }
     
     > div{
@@ -157,8 +161,8 @@
   
 }
 
-#spider_chart{
-  height: 180px;
+.spider_chart{
+  height: 270px;
   
   @media (max-width: $XM){
     background: color($bg-main l(21%));

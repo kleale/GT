@@ -19,9 +19,6 @@
             <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-755.png" alt="HearthStone">#HS</a></li>
           </ul>
           <h1>Новости киберспорта: <strong>#Dota 2</strong></h1>
-          <div class="mlt-filter mlt-filter_nl">
-              <input id="mlt-filter" type="text" placeholder="Введите Команду, игрока, турнир, хештег для поиска">
-            </div>
         </div>
       </section>
 
@@ -29,12 +26,8 @@
 
       <section class="newslist m-even">
         <div class="row">
-          <div class="col-md-7">
-            {% include "template/match-page/section-news.html" %}
-            {% include "template/pager.html" %}
-          </div>
-          <div class="col-md-5">
-            {% include "template/match-page/section-soc.html" %}
+          <div class="col-md-12">
+            {% include "template/news/newslist.html" %}
             {% include "template/pager.html" %}
           </div>
         </div>

@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
 
 <!-- Графики -->
 <script src="../inc/assets/js/highcharts.js"></script>
-<!--<script src="../inc/assets/js/highcharts-more.js"></script>-->
+<script src="../inc/assets/js/highcharts-more.js"></script>
 <!--<script src="../inc/assets/js/highcharts-exporting.js"></script>-->
 <script src="../inc/assets/js/highcharts-theme.js"></script>
 
@@ -65,6 +65,105 @@ https://code.highcharts.com/highcharts.js
 
 /* Team line*/
 $(function () {
+  
+    $('#spider_chart_team').highcharts({
+        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
+        chart: {
+            polar: true,
+            type: 'line',
+            backgroundColor: 'none',
+            spacingBottom: 5,
+            spacingTop: 5,
+            spacingLeft: 0,
+            spacingRight: 0
+        },
+        title: {
+            text: '',
+            x: -80
+        },
+        pane: {
+            size: '95%'
+        },
+        plotOptions: {
+            series: {
+              title:''
+            }
+        },
+        credits: {
+          enabled: false
+        },
+        xAxis: {
+            categories: ['Mid', 'Safe', 'Hard', 'Jungle', 'Roaming'],
+            tickmarkPlacement: 'on',
+            lineWidth: 0,
+            labels: {
+                style: {
+                  textTransform: 'uppercase',
+                  color: '#c7c7c7'
+                }
+            }
+        },
+        yAxis: {
+            gridLineInterpolation: 'polygon',
+            //lineWidth: 0,
+            tickInterval: 2,
+            min: 0,
+            max: 100,
+            title: {
+              enabled: true
+            },
+            labels: {
+               enabled: true
+            },
+            plotBands: [{ // visualize
+                from: 0,
+                to: 20,
+                color: 'rgba(68, 118, 213, 0.1)'
+            },
+            {
+                from: 20,
+                to: 40,
+                color: 'rgba(68, 118, 213, 0.05)'
+            },
+            {
+                from: 40,
+                to: 60,
+                color: 'rgba(68, 118, 213, 0.1)'
+            },
+            {
+                from: 60,
+                to: 80,
+                color: 'rgba(68, 118, 213, 0.05)'
+            },
+            {
+                from: 80,
+                to: 100,
+                color: 'rgba(68, 118, 213, 0.1)'
+            },
+            ]
+        },
+        plotOptions: {
+            series: {
+                fillOpacity: 0.5
+            }
+        },
+        tooltip: {
+            shared: true,
+            pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+        },
+        legend: {
+            enabled: false
+        },
+        series: [{
+            name: 'Line',
+            type: 'area',
+            data: [20, 10, 15, 15, 40],
+            pointPlacement: 'on'
+        }]
+
+    });
+  
+  
     $('#playerRole').highcharts({
         colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
         chart: {
@@ -165,17 +264,59 @@ $(function () {
                 </span>
                 <div class="pInf">
                   <h2 class="mlh mlhSM"><span>Team Liquid <b class="badge tip" title="Место в рейтинге">#1</b></span></h2>
-                  <h3>Европа <img title="Европа" alt="Европа" src="http://game-tournaments.com/media/flag/25.png"/></h3>
-                  <h3>Организована: 2012-10-21</h3>
-                  <h3>Заработано: $2,135,638</h3>
-                  <p>
-                    <b>Ссылки: </b>
-                    <span>
-                      <a href=""><i class="gti-home"></i></a> / 
-                      <a href=""><i class="gti-facebook"></i></a> / 
-                      <a href=""><i class="gti-twitter"></i></a>
-                    </span>
-                  </p>
+                  <table>
+                    <tbody><tr>
+                        <td width="250px">Country</td>
+                        <td>USA <img width="16px" src="http://ggscore.com/media/flag/2.png"></td>
+                    </tr>
+                    <tr>
+                        <td>Ranking</td>
+                        <td>#4</td>
+                    </tr>
+                    <tr>
+                        <td>Matches</td>
+                        <td>104 / <span class="gray">649</span> <i class="gti-question-circle tip pull-right" title="" data-original-title="Last Year / All Time"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Win Rate</td>
+                        <td>56% / <span class="gray">51%</span> <i class="gti-question-circle tip pull-right" title="" data-original-title="Last Year / All Time"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Current streak</td>
+                        <td>2 wins in a row</td>
+                    </tr>
+                    <tr>
+                        <td>Record win streak</td>
+                        <td>20 wins <span class="sca" data-time="1397325600">2y ago</span></td>
+                    </tr>
+                    <tr>
+                        <td>Record lose streak</td>
+                        <td>10 lose <span class="sca" data-time="1380672000">3y ago</span></td>
+                    </tr>
+                    <tr>
+                        <td>Earned</td>
+                        <td><span class="scm tip" data-value="3290697" title="" data-original-title="$3,290,697">$3.3M</span> / <span class="scm tip gray" data-value="13539355" title="" data-original-title="$13,539,355">$13.5M</span> <i class="gti-question-circle tip pull-right" title="" data-original-title="Last Year / All Time"></i></td>
+                    </tr>
+                    <tr>
+                        <td>MVP</td>
+                        <td><a href="/en/dota-2/player/sumail">Sumail</a></td>
+                    </tr>
+                    <tr>
+                        <td>Avg placement</td>
+                        <td>1-5 place <i class="gti-question-circle tip pull-right" title="" data-original-title="Last Year"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Ссылки</td>
+                        <td>
+                          <span>
+                            <a href=""><i class="gti-home"></i></a> / 
+                            <a href=""><i class="gti-facebook"></i></a> / 
+                            <a href=""><i class="gti-twitter"></i></a>
+                          </span>
+                        </td>
+                    </tr>
+                </tbody></table>
+                <br>
                   <div class="subteams">
                     <h3 class="mlh mlhSM"><span>Составы</span></h3>
                     <a href=""><img src="http://game-tournaments.com/media/logo/_60/{{random(logo)}}" alt="Liquid"> Team Liquid Yong</a><br>
@@ -216,7 +357,54 @@ $(function () {
           </div>
           <div class="col-md-8">
             <div class="maingraph">
-              <!--<h3 class="mlh"><span>Матчи</span></h3>-->
+                    <h3 class="mlh"><span>Team statistics</span></h3>
+                    <div class="grphilter clearfix">
+                        <div>
+                            <div class="input-group">
+                                <input type="text" class="form-control input-sm fteam" placeholder="Team for comparison" value="">
+                                <div class="input-group-btn mlt-dropdown" id="fteam">
+                                	<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown"><span class="caret"></span></button>
+									<ul class="dropdown-menu dropdown-menu-right"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="spider_chart_team" class="spider_chart_team"></div>
+                    
+					<div class="table-responsive">
+                    <table class="mtable stattable">
+                      <thead>
+                        <tr>
+                          <th>Form</th>
+                          <th>Strength</th>
+                          <th>Stability</th>
+                          <th>Carry</th>
+                          <th>Mid</th>
+                          <th>Offlane</th>
+                          <th>Supports</th>
+                          <th>Aggression</th>
+                          <th>Laining</th>
+                          <th>Runes</th>
+                          <th>Wards</th>
+                          <th>Roshan</th>
+                        </tr>
+                      </thead>
+                      <tbody><tr>
+                        <td><b><span class="counter" id="t1_0">89%</span></b></td>
+                        <td><b><span class="counter" id="t1_1">100%</span></b></td>
+                        <td><b><span class="counter" id="t1_2">73%</span></b></td>
+                        <td><b><span class="counter" id="t1_3">59%</span></b></td>
+                        <td><b><span class="counter" id="t1_4">65%</span></b></td>
+                        <td><b><span class="counter" id="t1_5">40%</span></b></td>
+                        <td><b><span class="counter" id="t1_6">37%</span></b></td>
+                        <td><b><span class="counter" id="t1_7">43%</span></b></td>
+                        <td><b><span class="counter" id="t1_8">72%</span></b></td>
+                        <td><b><span class="counter" id="t1_9">70%</span></b></td>
+                        <td><b><span class="counter" id="t1_10">64%</span></b></td>
+                        <td><b><span class="counter" id="t1_11">34%</span></b></td>
+                      </tr>
+                  </tbody></table>
+		        </div>
               <div class="pRd">
                 <div id="playerRole" class="playerRole"></div>
                 <span>Побед 80%</span>
@@ -263,162 +451,60 @@ $(function () {
                     </td>
                   </tr>
                 </table>
-              </div>
-              
-              <h3 class="mlh"><span>Состав</span></h3>
-              <div class="teamP">
-                <div class="row">
-                  {% for i in 0..1 %}
-                    <div class="col-md-4">
-                      <div class="pinTeam">
-                        <figure class="pSmLogo">
-                          <a href="#" style="background-image:url(http://game-tournaments.com/media/logo/{{random(plogo)}})">
-                            {#<img src="http://game-tournaments.com/media/logo/{{random(plogo)}}" alt="{{random(player)}}">#}
-                            <b class="tip" title="Место игрока в рейинге">{{random(flag)}}</b>
-                          </a>
-                        </figure>
-                        <ul>
-                          <li>
-                            <label>Ник</label>
-                            <a class="pllink" href="">{{random(player)}} <img title="Европа" alt="Европа" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png"/></a>
-                          </li>
-                          <li><label>Имя</label> Виталий Карпов</li>
-                          <li><label>Возраст</label> 21 год</li>
-                          <li><label>Страна</label> Италия</li>
-                          <li><label>Роль</label>Позиция: core</li>
-                          <li class="plmH"><label>Last match</label></li>
-                          <li class="plm">
-                            <a href="">{{random(flag)}} дн.н</a>
-                            <span>за <a href="/dota-2/team/liquid">Liquid</a> vs <a href="/dota-2/team/virtus-pro">{{random(team)}}</a></span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  {% endfor %}
-                  </div>
-                  <div class="row">
-                  {% for i in 0..2 %}
-                    <div class="col-md-4">
-                      <div class="pinTeam">
-                        <figure class="pSmLogo">
-                          <a href="#" style="background-image:url(http://game-tournaments.com/media/logo/{{random(plogo)}})">
-                            {#<img src="http://game-tournaments.com/media/logo/{{random(plogo)}}" alt="{{random(player)}}">#}
-                            <b class="tip" title="Место игрока в рейинге">{{random(flag)}}</b>
-                          </a>
-                        </figure>
-                        <ul>
-                          <li>
-                            <label>Ник</label>
-                            <a class="pllink" href="">{{random(player)}} <img title="Европа" alt="Европа" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png"/></a>
-                          </li>
-                          <li><label>Имя</label> Виталий Карпов</li>
-                          <li><label>Возраст</label> 21 год</li>
-                          <li><label>Страна</label> Италия</li>
-                          <li><label>Роль</label>Позиция: core</li>
-                          <li class="plmH"><label>Last match</label></li>
-                          <li class="plm">
-                            <a href="">{{random(flag)}} дн.н</a>
-                            <span>за <a href="/dota-2/team/liquid">Liquid</a> vs <a href="/dota-2/team/virtus-pro">{{random(team)}}</a></span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  {% endfor %}
-                </div>
-              </div>
+            </div>
             </div>
           </div>
         </div> 
       </section>
-      <section class="m-sec m-odd pTeams pTeamOther">
-        <h3 class="mlh"><span>Другие игроки</span></h3>
-        <div class="table-responsive">
-          <table class="mtable">
-            <thead>
-              <th>аватар</th>
-              <th>ник</th>
-              <th>имя</th>
-              <th>Возраст</th>
-              <th>Страна</th>
-              <th>роль</th>
-              <th>даты когда играл</th>
-            </thead>
-            {% for i in 0..2 %}
-              <tr>
-                <td>
-                  <a href="#" class="ava-sm" style="background-image:url(http://game-tournaments.com/media/logo/{{random(plogo)}})">
-                   </a>
-                </td>
-                <td>
-                  <a href="">{{random(player)}}</a>
-                </td>
-                <td>
-                  <a href="">Виталий Кочергин</a>
-                </td>
-                <td>
-                  21 год
-                </td>
-                <td>
-                  Италия
-                </td>
-                <td>
-                  core
-                </td>
-                <td>
-                  Sep 2014 - Oct 2016
-                </td>
-              </tr>
-            {% endfor %}
-          </table>
-        </div>
-        {% include "template/pager.html" %}
-        {#
-        <div class="slPlayers" id="slPlayers">
-          {% for i in 0..5 %}
-            <div class="col-md-3">
-                <div class="slPlayer">
-                  <figure class="teamLogo">
-                    <a class="pt" href="#"><img src="http://game-tournaments.com/media/logo/_60/{{random(plogo)}}" alt="{{random(player)}}"></a>
-                    <img title="Европа" alt="Европа" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png"/>
-                  </figure>
-                  <div>
-                    <b><a href="">{{random(player)}}</a></b>
-                    <span>
-                      support <br>
-                      <i class="gti-map-marker tip" title="Позиция"></i>&nbsp;  {{random(flag)}} &nbsp;&nbsp;  
-                      <i class="gti-trophy tip" title="Матчи за команду"></i>&nbsp; 211
-                    </span>
+      
+      <section class="m-sec m-even teamP">
+          <h3 class="mlh"><span>Evil Geniuses Roster</span></h3>
+            <div class="row">
+              {% for i in 0..4 %}
+                <div class="col-lg-5ths col-md-4 col-sm-6">
+                  <div class="pinTeam">
+                    <figure class="pSmLogo">
+                      <a href="#" style="background-image:url(http://game-tournaments.com/media/logo/{{random(plogo)}})">
+                        {#<img src="http://game-tournaments.com/media/logo/{{random(plogo)}}" alt="{{random(player)}}">#}
+                        <b class="tip" title="Место игрока в рейинге">{{random(flag)}}</b>
+                      </a>
+                    </figure>
+                    <ul>
+                      <li>
+                        <label>Ник</label>
+                        <a class="pllink" href="">{{random(player)}} <img title="Европа" alt="Европа" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png"/></a>
+                      </li>
+                      <li><label>Имя</label> Виталий Карпов</li>
+                      <li><label>Возраст</label> 21 год</li>
+                      <li><label>Страна</label> Италия</li>
+                      <li><label>Роль</label>Позиция: core</li>
+                      <li class="plmH"><label>Last match</label></li>
+                      <li class="plm">
+                        <a href="">{{random(flag)}} дн.н</a>
+                        <span>за <a href="/dota-2/team/liquid">Liquid</a> vs <a href="/dota-2/team/virtus-pro">{{random(team)}}</a></span>
+                      </li>
+                    </ul>
                   </div>
-                  <ul>
-                    {% for i in 0..2 %}
-                    <li>
-                      <a href="">{{random(flag)}} дн.н</a>
-                      <span>за <a href="/dota-2/team/liquid">Liquid</a> vs <a href="/dota-2/team/virtus-pro">{{random(team)}}</a></span>
-                    </li>
-                    {% endfor %}
-                  </ul>
                 </div>
-            </div>
-          {% endfor %}
-        </div>
-        #}
+              {% endfor %}
+              </div>
       </section>
       
       <section class="m-sec m-even">
         <div class="row">
-          <div class="col-sm-8">
+          <div class="col-sm-7">
             <h3 class="mlh"><span>Последние матчи</span></h3>
-            {% include "template/match-list/match-list2.html" %}
+            {% include "template/game-home/match-list-live.html" %}
             {% include "template/pager.html" %}
             
-            {% include "template/match-list/match-list-future.html" %}
+            {% include "template/game-home/match-list-future.html" %}
             {% include "template/pager.html" %}
 
-            {% include "template/match-list/match-list-past.html" %}
+            {% include "template/game-home/match-list-past.html" %}
             {% include "template/pager.html" %}
             
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-5">
             <h3 class="mlh mlhSM"><span>О Team Liquid</span></h3>
             <div class="well">
               Team Liquid is a professional team, founded in the Netherlands in 2000. Originally a Brood War clan, the team switched to SC2 during the SC2 Beta in 2010, and became one of the most successful foreign teams. On December 6, 2012, it was announced that the team had formed a Dota 2 division.
@@ -453,6 +539,55 @@ $(function () {
                   </tr>
                 </tbody>
               </table>
+            </div>
+            
+            
+            <h3 class="mlh"><span>Другие игроки</span></h3>
+            <div class="block-content temsList playerGames" id="block_players_2">
+              <div class="panel panel-default panelWpager">
+                <div class="table-responsive">
+                  <table class="mtable">
+                    <thead>
+                      <th>аватар</th>
+                      <th>ник</th>
+                      <!--
+                      <th>имя</th>
+                      <th>Возраст</th>
+                      <th>Страна</th>
+                      <th>роль</th>-->
+                      <th>даты когда играл</th>
+                    </thead>
+                    {% for i in 0..2 %}
+                      <tr>
+                        <td>
+                          <a href="#" class="ava-sm" style="background-image:url(http://game-tournaments.com/media/logo/{{random(plogo)}})">
+                           </a>
+                        </td>
+                        <td>
+                          <a href="">{{random(player)}}</a>
+                        </td>
+                        <!--
+                        <td>
+                          <a href="">Виталий Кочергин</a>
+                        </td>
+                        <td>
+                          21 год
+                        </td>
+                        <td>
+                          Италия
+                        </td>
+                        <td>
+                          core
+                        </td>-->
+                        <td>
+                          Sep 2014 - Oct 2016
+                        </td>
+                      </tr>
+                    {% endfor %}
+                  </table>
+                </div>
+              </div>
+              {% include "template/pager.html" %}
             </div>
             
             <div class="panel panel-default panelWpager">
@@ -541,18 +676,15 @@ $(function () {
             </div>
             {% include "template/pager.html" %}
             
-            {% include "template/teams/blockzames-vertical.html" %}
+            {% include "template/players/blockzames-grid.html" %}
+            
           </div>
         </div>
       </section>
-      
       <section id="m-news" class="m-sec m-odd">
         <div class="row">
-          <div class="col-md-7">
-            {% include "template/match-page/section-news.html" %}
-          </div>
-          <div class="col-md-5">
-            {% include "template/match-page/section-soc.html" %}
+          <div class="col-md-8">
+            {% include "template/news/newslist.html" %}
           </div>
         </div>
       </section>

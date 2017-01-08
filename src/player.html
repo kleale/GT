@@ -142,82 +142,94 @@ $(function () {
 
 /* Player role graph line*/
 $(function () {
-    $('#playerRole').highcharts({
-        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
-        chart: {
-          type: 'bar',
-          backgroundColor: 'none',
-          spacingBottom: 5,
-          spacingTop: 5,
-          spacingLeft: 0,
-          spacingRight: 0
-        },
-        credits: {
-          enabled: false
-        },
-        xAxis: {
-           categories: ['Role'],
-           lineWidth: 0,
-           minorGridLineWidth: 0,
-           lineColor: 'transparent',
-           labels: {
-               enabled: false
-           },
-          title: {
-            enabled: false
-          },
-         minorTickLength: 0,
-         tickLength: 0,
-          
-        },
-        yAxis: {
-           lineWidth: 0,
-           minorGridLineWidth: 0,
-           lineColor: 'transparent',
-           labels: {
-               enabled: false
-           },
-          title: {
-            enabled: false
-          },
-           minorTickLength: 0,
-           tickLength: 0
-        },
-        title: {
-            enabled: false,
-            text:''
-        },
-        legend: {
-            enabled: false
-        },
-        plotOptions: {
-            series: {
-              stacking: 'percent',
-              crop: false,
-              title:'',
-              pointPadding: 0.01,
-              groupPadding: 0.1
-            }
-        },
-        tooltip: {
-            headerFormat: '',
-            useHTML: true,
-            pointFormat: '{series.name}<br>{point.name}: {point.y}'
-        },
-        series: [{
-            name: 'Core',
-            data: [
-                  ['Role', 80]
-            ],
-            index: 4
-        }, {
-            name: 'Support',
-            data: [
-                  ['Role', 20]
-            ],
-            index: 3
-        }]
-    });
+        var role = {1:'Carry',2:'Semi-Carry',3:'Hard Lane',4:'Support',5:'Support'};
+        var lane = {'mid':'Mid','safe':'Safe','hard':'Hard','forest':'Jungler','roaming':'Roaming'};
+		
+        $('#playerRole').highcharts({
+            colors: ["#3f79a2", "#5f9fcc", "#80b9e2", "#a1d5fa"],
+            chart: {
+                type: 'bar',
+                backgroundColor: 'none',
+                spacingBottom: 5,
+                spacingTop: 5,
+                spacingLeft: 0,
+                spacingRight: 0
+            },
+            credits: {
+                enabled: false
+            },
+            xAxis: {
+                categories: ['Role'],
+                lineWidth: 0,
+                minorGridLineWidth: 0,
+                lineColor: 'transparent',
+                labels: {
+                    enabled: false
+                },
+                title: {
+                    enabled: false
+                },
+                minorTickLength: 0,
+                tickLength: 0
+            },
+            yAxis: {
+                lineWidth: 0,
+                minorGridLineWidth: 0,
+                lineColor: 'transparent',
+                labels: {
+                    enabled: false
+                },
+                title: {
+                    enabled: false
+                },
+                minorTickLength: 0,
+                tickLength: 0
+            },
+            title: {
+                enabled: false,
+                text: ''
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    stacking: 'percent',
+                    crop: false,
+                    title: '',
+                    pointPadding: 0.01,
+                    groupPadding: 0.1,
+                    dataLabels: {
+	                    enabled: true,
+						style: {
+						  textTransform: 'uppercase',
+						  color: '#c7c7c7'
+						},
+	                    formatter: function () {
+                            return (this.y > 12 ? this.point.name+': '+this.y+'%' : null);
+                        }
+	                }
+                }
+            },
+            tooltip: {
+                formatter: function () {
+                    return this.point.name+': '+this.y+'%';
+                }
+            },
+              series: [{
+                  name: 'Core',
+                  data: [
+                        ['Role', 80]
+                  ],
+                  index: 4
+              }, {
+                  name: 'Support',
+                  data: [
+                        ['Role', 20]
+                  ],
+                  index: 3
+              }]
+        });
 });  
 
 </script>
@@ -290,7 +302,61 @@ $(function () {
                 <b>Support 20%</b>
               </div>
               <h3 class="mlh mlhSM"><span>ЛИНИЯ</span></h3>
-              <div id="spider_chart_player" class="spider_chart_player"></div>
+              <div class="row">
+                <div class="col-md-8">
+                  <div id="spider_chart_player" class="spider_chart_player"></div>
+                </div>
+                <div class="col-md-4">
+                  <div class="spiderInfo">
+                    <label>Form</label>
+                    <p>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</p>
+                    <label>Stat</label>
+                    <p>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</p>
+                    <label>MVP</label>
+                    <p>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</p>
+                    <label>Fights</label>
+                    <p>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</p>
+                    <label>LANING</label>
+                    <p>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</p>
+                    <label>Gold</label>
+                    <p>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</p>
+                    <label>Expirience</label>
+                    <p>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</p>
+                  
+                  {#
+                  <table>
+                    <tr>
+                      <th>Form</th>
+                      <td>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</td>
+                    </tr>
+                    <tr>
+                      <th>Stat</th>
+                      <td>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</td>
+                    </tr>
+                    <tr>
+                      <th>MVP</th>
+                      <td>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</td>
+                    </tr>
+                    <tr>
+                      <th>Fights</th>
+                      <td>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</td>
+                    </tr>
+                    <tr>
+                      <th>LANING</th>
+                      <td>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</td>
+                    </tr>
+                    <tr>
+                      <th>Gold</th>
+                      <td>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</td>
+                    </tr>
+                    <tr>
+                      <th>Expirience</th>
+                      <td>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</td>
+                    </tr>
+                  </table>#}
+                </div>
+                </div>
+              </div>
             </div>
             <div class="pRate">
               <table>

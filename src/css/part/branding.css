@@ -727,7 +727,7 @@ Branding - Match of the day
   }
   .abl_tms {
       height: 190px;
-      margin: 25px 0;
+      margin: 25px auto;
   }
   .abl_t2,
   .abl_t1 {
@@ -875,7 +875,10 @@ LIVE BLOCK
       text-align: left;
       font-weight: bold;
       position:relative;
-    
+      font-size: 13px;
+      @media (max-width: $XM){
+        font-size: 12px;
+      }
       a {
         position: relative;
         padding: 10px 0px 0px 5px;
@@ -886,8 +889,7 @@ LIVE BLOCK
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        margin: -10px 0 0 0;
-        max-width: 280px;
+        margin: -10px 50px 0 0;
         
         &:hover {
           text-decoration:none;

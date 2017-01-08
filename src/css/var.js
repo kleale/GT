@@ -47,7 +47,7 @@ module.exports = {
     "$red": "#ea6465",
     "$subgreen": "#e8f39a",
     "$blue": "#037db5",
-    "$overlay-blue": "rgba(3, 125, 181, 0.13)",
+    "$overlay-blue": "rgba(21, 32, 37, 0.34)",
     "orange": "#f58563",
     "lightblue": "#4396f7",
   

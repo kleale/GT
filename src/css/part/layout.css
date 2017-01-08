@@ -336,9 +336,10 @@ body{
 }
 
 .times {
-    float: right;
-    display: inline-block;
-    font-family: gticons;
+  float: right;
+  display: inline-block;
+  font-family: gticons;
+  font-style: normal;
   &:after {
     content: '\f00d';
   }
@@ -464,11 +465,7 @@ footer{
   
 }
 
-
-
-
 .hiddenbar{
-  
   width:50px;
   
   .barc{

@@ -56,32 +56,6 @@ section.hero{
   border: 1px solid;
 }
 
-.pTeamOther{
-  thead{
-    th{
-      padding: 10px 5px;
-    }
-  }
-  td,
-  th{
-    text-align: right;
-    &:nth-child(2),
-    &:nth-child(3){
-      text-align: left;
-    }
-    &:first-child{
-      text-align: left;
-      padding-left: 25px;
-    }
-    &:last-child{
-      padding-right: 25px;
-    }
-  }
-  .ava-sm{
-    margin: -5px 0;
-  }
-}
-
 .temsList{
   thead{
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -134,20 +108,24 @@ section.hero{
       }
       
       td{
-        padding: 15px 0;
-        
         h4{
           font-weight: 400;
           font-size: 14px;
           margin: 0;
+          position: relative;
+          padding-left: 30px;
           .logo{
             width: 30px;
             margin: -8px 10px -8px 0;
             float: right;
+            @media (max-width: $M){
+              display: none;
+            }
           }
           .flag{
             margin-right: 5px;
             opacity: .7;
+            position: absolute 0 * * 0;
             img{
               width: 20px;
               margin: -5px 0;
@@ -158,9 +136,9 @@ section.hero{
             color: $link-light-blue;
           }
           u{
-            opacity: .4;
+            opacity: .6;
             text-decoration: none;
-            font-size: .9em;
+            font-size: .8em;
             font-weight: 300;
           }
         }
@@ -168,6 +146,7 @@ section.hero{
           padding-left: 10px;
           padding-right: 20px;
           text-align: right;
+          width: 70px;
         }
         &:nth-child(2){
         }
@@ -182,24 +161,27 @@ section.hero{
         }
         &:nth-child(6){
           text-align: right;
+        }
+        &:last-child{
+          text-align: right;
           padding-right: 20px;
         }
       }
     }  
   }/*mtable*/
-  
-  .well{
-    margin-left: 20px;
-  }
 }/*temsList*/
 
 .filter{
-  margin-bottom: 30px;
-  
+  margin-bottom: 0;
   .row{
-      margin-right: -5px;
+    margin-right: -5px;
+    margin-left: -5px;
+    @media (max-width: $XM){
+      margin-left: -5px;
+    }
     >div{
       padding: 0 5px;
+      margin-bottom: 15px;
     }
   }
   .btn{
@@ -304,9 +286,12 @@ section.hero{
 }/*lastTour*/
 
 .winners{
-  overflow: hidden;
-  margin: 3px 0 0 0;
-  background: #2a2f33;
+    overflow: hidden;
+    margin: 3px 0 0 0;
+    background: #2a2f33;
+    border-top: 1px solid #454a4e;
+    border-bottom: 1px solid rgba(24, 27, 29, 0.6);
+    border-right: 1px solid rgba(24, 27, 29, 0.6);
   a.wtr{
     display: block;
     overflow: hidden;
@@ -365,11 +350,6 @@ section.hero{
           line-height: 20px;
           color: #222;
           border-radius: 50%;
-          /*
-          background: #607D8B;
-          box-shadow: 0 1px 0px rgba(0, 0, 0, 0.48), 0 1px 0 rgba(142, 142, 142, 0.41) inset;
-          text-shadow: 0 1px rgba(0, 0, 0, 0.5);
-          */
           float: left;
           border: 1px solid;
           opacity: .7;
@@ -445,27 +425,48 @@ section.hero{
 }
 
 .spider_chart_team{
-  height: 330px;
+  height: 360px;
+  margin-bottom: 50px;
+}
+.pageTeam .spider_chart_team{
+  height: 310px;
   margin-bottom: 30px;
 }
+
 .grphilter{
-  margin-bottom: 30px;
   text-align: center;
   > div{
     display: inline-block;
     .input-group{
       max-width: 230px;
+      .dropdown-menu{
+        min-width: 230px;
+      }
     }
   }
 }
 
-.stattable.mtable{
+.pageTeam .mtable.stattable{
+  width: 100%;
+  @media (max-width: 1600px){
+    width: 100%;
+  }
+}
+
+.mtable.stattable{
+  width: 49%;
+  border: 0!important;
+  float: left;
+  table-layout: fixed;
+  @media (max-width: 1600px){
+    width: 100%;
+    white-space: normal;
+  }
   thead{
     th{
       text-align: center;
       font-size: 10px;
       text-transform: uppercase;
-      white-space: nowrap;
     }
   }
   tr{
@@ -482,5 +483,53 @@ section.hero{
         font-size: 12px;
       }
     }
+    &:hover,
+    &:active,
+    &:focus{
+      background: inherit;
+    }
   }
 }
+.double-table .mtable{
+  width:50%;
+}
+
+.pTeamOther{
+  &.table>tbody>tr>td, 
+  &.table>tbody>tr>th, 
+  &.table>tfoot>tr>td, 
+  &.table>tfoot>tr>th, 
+  &.table>thead>tr>td, 
+  &.table>thead>tr>th {
+    vertical-align: middle;
+  }
+  .ava-sm{
+    margin-left: 5px;
+  }
+  .nick{
+    font-size: 13px;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+    
+    u{
+      text-decoration: none;
+    }
+    &:hover,
+    &:active,
+    &:focus{
+      text-decoration: none;
+      u{
+        text-decoration: underline;
+      }
+    }
+  }
+  thead>tr>th:last-child{
+    text-align: left;
+  }
+}
+
+
+

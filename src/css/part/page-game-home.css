@@ -1,1 +1,226 @@
 /* page-game-home.css */
+
+.game-page-news{
+  padding: 0;
+  margin-top: -25px;
+  .nrm-slider {
+    margin: 0;
+  }
+}
+
+.mlt .mtable td{
+  padding: 9px 5px;
+}
+
+.mlt-sm.mlt {
+  margin-left: 0px;
+  .block-content{
+    margin-top: 15px;
+    margin-bottom: -1px;
+    border: 1px solid #454a4e;
+    border-top: 0;
+    border-radius: 2px;
+    overflow: visible;
+    padding-top: 1px;
+    background: #454a4e;
+  }
+  
+  .mh.mh-sm {
+    margin-top: -28px;
+    overflow: hidden;
+    padding-bottom: 0px;
+    
+    span {
+      padding: 5px 10px;
+      background: #454a4e;
+      border-radius: 13px 13px 0 0;
+    }
+  }
+  
+  .bh{
+    padding-left: 0px;
+  }
+  
+  .mtable{
+    td {
+      padding: 5px 2px;
+      &:first-child{
+        width: 40px;
+        padding-left: 5px;
+      }
+    }
+    .tn1, .tn2 {
+      width: 75px;
+      font-size: 11px;
+    }
+    .td-m{
+      .mp1,
+      .mp2{
+        margin: 0;
+      }
+    }
+    .mscore {
+      font-size: 10px;
+      width: 30px;
+      .tresult {
+        font-size: 10px;
+      }
+    }
+    .bet-p{
+      display: none;
+    }
+    .tdate{
+      height: auto;
+    }
+  }
+  
+  @media (max-width: $XXL){
+    .tname{
+      display: none;
+    }
+  }
+  
+  .livebetpin {
+    box-shadow: 0 0 10px 1px rgba(240, 58, 58, 0.6);
+    height: 7px;
+    margin-top: -2px;
+    width: 7px;
+  }
+}
+
+.main-news-list.tse-news{
+  padding: 0;
+  max-height: none;
+  
+  ul.nlist {
+    padding: 0;
+    
+    li{
+      margin: 2px 0px -1px -19px;
+      padding-left: 30px;
+    }
+  }
+}
+.trtop{
+  background-color: #191E21;
+  background-image: inline(../img/tile.png);
+  background-repeat: repeat;
+  background-position: center;
+  position: relative;
+  
+  /*
+  &:before{
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: #0d0f11;
+    opacity: .8;
+  }
+  */
+  > div {
+    padding: 10px 10px;
+  }
+}
+.trlist{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  li{
+    float: left;
+    width: 23%;
+    margin: 10px 1%;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 40px;
+      right: 40px;
+      height: 20px;
+      display: block;
+      box-shadow: 0 2px 30px 3px #2196F3;
+      border-radius: 200px /20px;
+      z-index: 1;
+    }
+    
+    a{
+      display: block;
+      position: relative;
+      z-index: 2;
+      background: #363b40;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100px;
+      position: relative;
+      border-radius: $br;
+      border: 1px solid #454a4e;
+      box-shadow: 1px 0 0 rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      u{
+        top: 0;
+        right: 0;
+        position: absolute;
+        display: block;
+        padding: 4px 5px 2px;
+        background: #424f5a;
+        color: #fff;
+        font-size: 10px;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:after {
+            content: '';
+            display: block;
+            background: #424f5a;
+            height: 100%;
+            width: 7px;
+            top: 0;
+            left: -4px;
+            bottom: 0;
+            position: absolute;
+            transform: skew(15deg);
+        }
+      }
+      s{
+        font-size: 13px;
+        text-decoration: none;
+        position: absolute;
+        top: 0;
+        left: -2px;
+        padding: 4px 10px;
+        background: #424f5a;
+        font-weight: bold;
+        line-height: 1;
+        color: #fff;
+        transform: skewx(-10deg);
+      }
+      span{
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        padding: 5px;
+        background: rgba(0, 0, 0, 0.9);
+        color: #fff;
+        opacity: 0;
+        font-size: 13px;
+        transition: $tease;
+      }
+      &:hover{
+        span{
+          opacity: 1;
+        }
+      }
+    }
+    &.live u{
+      background: $red;
+      &:after {
+        background: $red;
+      }
+    }
+  }
+}

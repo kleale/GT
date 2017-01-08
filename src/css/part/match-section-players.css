@@ -86,7 +86,7 @@
 
       h4{
         margin: 0 0 2px 0;
-        font-size: 21px;
+        font-size: 17px;
         font-weight: 300;
         overflow: hidden;
         white-space: nowrap;
@@ -145,12 +145,16 @@
         }
         
         &.th1 b{
-          margin-right: 25px;
+          margin-right: 15px;
           padding: 0;
+          width: 40px;
+          margin-left: 0;
         }
         &.th2 b{
-          margin-left: 25px;
+          margin-left: 15px;
           padding: 0;
+          width: 40px;
+          margin-right: 0;
         }
         i{
           color: #79848e;
@@ -176,8 +180,8 @@
   }
   
   .ptc{
-    height: 70px;
-    margin-top: 5px;
+    margin-top: 2px;
+    overflow: hidden;
     
     .ptcs{
       width: 30%;
@@ -226,18 +230,24 @@
     .ptc_bar{
       width: 20%;
       float: left;
-      
-      height: 100px;
-      margin: -5px 0;
+      margin: -7px 0;
+      position: relative;
+      &:after{
+        content: '';
+        display: block;
+        width: 1px;
+        height: 100%;
+        background: rgba(181, 181, 181, 0.53);
+        position: absolute 0 50% * *;
+      }
+      > div{
+        height: 125px;
+      }
     }
     
   }/*ptc*/
 }/*pt-c*/
 
-
-.ptc_bar > div{
-  height: 100px;
-}
 
 
 

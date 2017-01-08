@@ -1,46 +1,116 @@
 {% set title = "Game HOME" %} 
 
+{% set trrr = ['http://game-tournaments.com/media/tournament/pic-20161211-280x80-7531323404.jpeg', 'http://game-tournaments.com/media/tournament/pic-20161227-279x150-1329323807.jpeg', 'http://game-tournaments.com/media/tournament/pic-20160919-265x150-7398845851.jpeg', 'http://game-tournaments.com/media/tournament/pic-20160919-265x150-7398845851.jpeg', 'http://game-tournaments.com/media/tournament/pic-20161213-300x117-3383168368.png','http://game-tournaments.com/media/tournament/pic-20160912-600x267-6676783403.png'] %}
+
+
 <!DOCTYPE html>
 <html>
 {% include "template/head.html" %}
 <body class="">
-
   <div class="container mainwrap">
     {% include "template/breadcrumbs.html" %}
     <div class="otstup">
-    
+    {#
+      <section class="newstop" style="background-image:url(http://game-tournaments.com/media/news/no.jpg)">
+        <div>
+          <ul class="news-games">
+            <li class="active"><a href="#!"><img src="http://game-tournaments.com/html/img/logo-582.png" alt="Dota 2">#Dota 2</a></li>
+            <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-704.png" alt="CS:GO">#CS:GO</a></li>
+            <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-313.png" alt="League of Legends">#LoL</a></li>
+            <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-758.png" alt="Heroes of the Storm">#HOTS</a></li>
+            <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-755.png" alt="HearthStone">#HS</a></li>
+          </ul>
+          <h1>GT: <strong>#Dota 2</strong></h1>
+        </div>
+      </section>
+    #}
+      <section class="trtop">
+        <div>
+          <h1 class="mlh"><span>Dota 2 leagues & matches</span></h1>
+          <ul class="trlist clearfix">
+          {% for i in 0..2 %}
+            <li class="live">
+              <a href="" style="background-image:url({{random(trrr)}})">
+                <span>DC vs VoidBoys @ Canada Cup 7, GRAND FINAL <b>#DOTA2</b></span>
+                <u>Текущий</u>
+                <s>$ 1,700,000</s>
+              </a>
+            </li>
+            {% endfor %}
+            {% for i in 0..0 %}
+            <li>
+              <a href="" style="background-image:url({{random(trrr)}})">
+                <span>DC vs VoidBoys @ Canada Cup 7, GRAND FINAL <b>#DOTA2</b></span>
+                <u>прошедший</u>
+                <s>$ 1,700,000</s>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          <div class="live-row" style="padding:0 10px 10px;">
+            <div class="row" style="position:relative;">
+              <div class="col-md-7">
+                {% include "template/game-home/match-list-live.html" %}
+              </div>
+              <div class="col-md-5" style="position:absolute; bottom:0;top:15px;right: 0;">
+                <iframe rel="stream" site="twitch" title="esl_csgo_fr" allowfullscreen="" frameborder="0" width="100%" height="100%" src="http://player.twitch.tv/?autoplay=false&amp;channel=esl_csgo_fr"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+     
+      <section class="m-sec m-even">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/game-home/news-block.html" %}
+            {% include "template/pager.html" %}
+          </div>
+          <div class="col-md-5">
+            {% include "template/liveblock.html" %}
+            
+            {% include "template/game-home/match-list-future.html" %}
+            {% include "template/pager.html" %}
+            
+            {% include "template/game-home/match-list-past.html" %}
+            {% include "template/pager.html" %}
+            
+          </div>
+        </div>
+      </section>
       
-
+      <section class="m-sec m-odd">
+        <div class="game-page-news">
+          {% include "template/slider-news.html" %}
+        </div>
+      </section>
+      
+      {#
       <section class="m-sec m-even">
         <div class="mlist-wr">
           <div class="mlist">
-            {% include "template/game-home/match-list-live-home.html" %}
+            {% include "template/game-home/match-list-live.html" %}
+            
+            {% include "template/game-home/match-list-future.html" %}
+            {% include "template/pager.html" %}
+            
+            {% include "template/game-home/match-list-past.html" %}
+            {% include "template/pager.html" %}
           </div>
           <div class="m-hot">
-            {% include "template/game-home/match-top-home.html" %}
+            {% include "template/game-home/match-top.html" %}
           </div>
         </div>
       </section>
-
-
-      <section id="m-news" class="m-sec m-even">
-        <div class="row">
-          <div class="col-md-7">
-            {% include "template/match-page/section-news.html" %}
-          </div>
-          <div class="col-md-5">
-            {% include "template/match-page/section-soc.html" %}
-          </div>
-        </div>
-      </section>
-
+      #}
       <div class="bn">
         <img src="../img/ad.jpg" alt="">
       </div>
       {% include "template/footer.html" %}
     </div>
   </div>
-
+  
+{% include "template/branding.html" %}
 {% include "template/bar.html" %}
 {% include "template/modal.html" %}
 {% include "template/scripts.html" %}

@@ -213,9 +213,9 @@
   text-decoration: none;
   position: relative;
   text-align: center;
-  margin: 0;
-  padding: 10px 0px 15px;
+  padding: 0 0px 15px;
   overflow: hidden;
+  margin: 0;
 
   span {
     position: relative;
@@ -228,7 +228,7 @@
       right: 100%;
       position: absolute;
       margin-right: 0px;
-      margin-top: -19px;
+      margin-top: -17px;
     }
     &:after {
       content: inline(../img/hline1.png);
@@ -236,13 +236,25 @@
       left: 100%;
       position: absolute;
       margin-left: 0px;
-      margin-top: -19px;
+      margin-top: -17px;
     }
     a{
       color: #7fa2ba;
     }
     .btn{
       color: #fff;
+    }
+  }
+  &.mlhSM, &.mlh-sm{
+    font-size: 12px;
+    line-height: 1;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    span{
+      &:before,
+      &:after{
+        margin-top: -11px;
+      }
     }
   }
 }
@@ -280,6 +292,9 @@
         font-weight: 400;
         border: 2px solid #424f5a;
         position: relative;
+        background: #37424c url("../img/spoiler.png") repeat scroll 0 0;
+        border-radius: 2px;
+        
         img{
           width:100%;
         }
@@ -290,6 +305,8 @@
           background: #424f5a;
           color:#fff;
           font-size: 11px;
+          max-width: calc(100% - 100px);
+          
           i{
             margin-right: 5px;
             vertical-align: text-bottom;
@@ -299,7 +316,7 @@
             display: block;
             background: #424f5a;
             height: 100%;
-            width: 6px;
+            width: 8px;
             top: 0;
             right: -3px;
             bottom: 0;

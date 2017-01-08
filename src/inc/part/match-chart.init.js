@@ -90,7 +90,9 @@ Highcharts.theme = {
    plotOptions: {
       series: {
          dataLabels: {
-            color: '#B0B0B3'
+            color: '#fff',
+            textTransform: 'uppercase',
+            textOutline: "0px 0px contrast"
          },
          marker: {
             lineColor: '#333'

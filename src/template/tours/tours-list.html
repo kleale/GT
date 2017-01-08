@@ -13,24 +13,24 @@
   <div class="block-content">
     <table class="mtable">
       <thead>
-        <th><span>Турнир</span></th>
+        <th colspan="2"><span>Турнир</span></th>
         <th><span>Время до старта <i class="gti-chevron-down sorter active"></i></span></th>
         <th><span>Дата <i class="gti-chevron-up sorter"></i></span></th>
         <th><span>Призовой фонд <i class="gti-chevron-up sorter"></i></span></th>
       </thead>
       <tr class="trHeader">
-        <td colspan="4"><h2>Текущие турниры</h2></td>
+        <td colspan="5"><h2>Текущие турниры</h2></td>
       </tr>
       <tbody>
       {% for i in 0..3 %}
         <tr class="t-item mlive">
           <td>
-            <h4>
               <a href="" class="tLogo">
                 <img src="http://game-tournaments.com//media/tournament/_60/{{random(logo)}}" alt="Европа" title="Европа">
               </a>
-              <a href="">{{random(tour)}}</a>
-            </h4>
+          </td>
+          <td>
+            <a href="">{{random(tour)}}</a>
           </td>
           <td>
             Текущий
@@ -45,17 +45,17 @@
       {% endfor %}
       </tbody>
       <tr class="trHeader">
-        <td colspan="4"><h2>Будущие и прошедшие турниры</h2></td>
+        <td colspan="5"><h2>Будущие и прошедшие турниры</h2></td>
       </tr>
       {% for i in 0..19 %}
         <tr class="t-item">
           <td>
-            <h4>
               <a href="" class="tLogo">
                 <img src="http://game-tournaments.com//media/tournament/_60/{{random(logo)}}" alt="Европа" title="Европа">
               </a>
-              <a href="">{{random(tour)}}</a>
-            </h4>
+          </td>
+          <td>
+            <a href="">{{random(tour)}}</a>
           </td>
           <td>
             {{random(when)}}

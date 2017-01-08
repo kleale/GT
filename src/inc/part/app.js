@@ -22,10 +22,6 @@
       $(".bar").toggleClass("hiddenbar");
 	});
     
-    $(function () {
-      $('[data-toggle="popover"]').popover();
-    });
-    
     // tabs on mobile
     function setScale(){
       if ($(window).width()  < 768) {
@@ -47,42 +43,7 @@
     } //window
     setScale();
     $(window).on("resize", setScale);
-    
-    //piks popover
-    $('.hpop').popover({
-        'html': true,
-        'trigger': 'hover',
-        'placement': 'auto bottom',
-        'container': 'body',
-        'template':'<div class="popover htip"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"></div></div></div>',
-        'content': function(){
-            var txt = '<figure><img src="../img/heroh.jpg"></figure>';
-            txt += '<h2>Beastmaster</h2>';
-            txt += '<u><b class="gren">81й</b> в рейтинге</u>';
-            txt += '<u><b class="red">21.5%</b> побед</u>';
-            txt += '<em>Melee, Disabler, Durable, Iniciator, Nuker</em>';
-            return txt;
-        }
-    });
-    
-    //icon-pop
-    $('.icon-pop').popover({
-        'html': true,
-        'trigger': 'hover',
-        'placement': 'auto bottom',
-        'container': 'body',
-        'template':'<div class="popover htip i-pop"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"></div></div></div>'
-    });
-    
-    //tour-name-pop
-    $('.tour-pop').popover({
-        'html': true,
-        'trigger': 'hover',
-        'placement': 'auto bottom',
-        'container': 'body',
-        'template':'<div class="popover htip t-pop"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"></div></div></div>'
-    });
-    
+        
     // scrolls in tabs and blocks
     $('.tse-sc').perfectScrollbar(); 
     
@@ -90,38 +51,6 @@
     $(".stage em").click(function() {
       $(".stage").toggleClass("stage-open");
 	});
-    
-    //tip
-    $('.tip').tooltip({
-      container: 'body'
-    });
-    
-    // Match list links on tr
-    /*
-    $('.m-item').click(function(e) {
-        e.preventDefault(); e.stopPropagation();
-        window.location.href = $(e.currentTarget).data().href;
-    });
-    */
-    // на локале не срабатывает, но должен.
-    // вот еще пример http://shahinalborz.se/2014/04/solution-make-an-entire-table-row-clickable/
-    
-    $('.m-item').on('click', 'tr', function (e) {
-      var $this = $(e.currentTarget);
-      if ($this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
-          if (e.ctrlKey == true) {
-              window.open($this.attr('data-href'));
-          } else {
-              window.location.href = $this.attr('data-href');
-          }
-      }
-    }).on('mousedown', 'tr', function (e) {
-      var $this = $(e.currentTarget);
-
-      if (e.which === 2 && $this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
-          window.open($this.attr('data-href'));
-      }
-    });
     
     // checkbox to switch
     $("[name='score']").bootstrapSwitch();
@@ -140,24 +69,13 @@
       navigation: true,
       navigationText: ["назад","вперед"],
       responsiveClass:true,
-      responsive:{
-          0:{
-              items:1,
-              nav:true
-          },
-          600:{
-              items:3,
-              nav:false
-          },
-          1000:{
-              items:5,
-              nav:true,
-              loop:false
-          }
-      },
+      items : 4, 
+      itemsDesktop : [1000,4], 
+      itemsDesktopSmall : [900,3],
+      itemsTablet: [600,2],
       afterInit : function(){
-        $(".mlh").width($('.owl-item').width());
-        $(".mlh").height($('.owl-item').height());
+        //$(".mlh").width($('.owl-item').width());
+        //$(".mlh").height($('.owl-item').height());
       }
     });
     
@@ -232,6 +150,8 @@
     
     // scrolls match-top-home.html
     $('.m-hot').perfectScrollbar(); 
+    //.stattable scroll
+    $('.table-responsive').perfectScrollbar();
     
   }); //end ready
 

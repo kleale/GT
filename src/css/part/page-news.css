@@ -20,7 +20,7 @@
     
     h1{
       text-align: center;
-      margin: 40px 10% 50px 10%;
+      margin: 30px 10% 30px 10%;
       font-weight: 300;
       
       strong{
@@ -53,26 +53,6 @@
       font-size: 24px;
       color:#fff;
       margin-right: 5px;
-    }
-  }
-  .mlt-filter_nl{
-    max-width: 460px;
-    margin: 0 auto;
-    width: auto;
-    display: block;
-    padding: 0;
-    
-    &:after{
-      top: 4px;
-      right: 10px;
-      font-size: 22px;
-    }
-    
-    input{
-      padding: 12px 15px;
-      font-size: 16px;
-      height: 40px;
-      color: #fff;
     }
   }
   .time{
@@ -124,25 +104,32 @@
   padding: 0;
   margin: 0;
   text-align: center;
-  float: right;
-  position: absolute  30px 30px * *;
   
   li {
     list-style: none;
     margin: 10px;
     display: inline-block;
+    filter: grayscale(1);
     
+    &.active{
+      filter: grayscale(0);
+    }
     a{
       display: block;
       width: 50px;
       color: #fff;
       font-size: 12px;
+      opacity: .8;
       
-      &:hover{
+      &:hover,
+      &:active,
+      &:active {
         opacity: 1;
+        text-decoration: none;
+        filter: grayscale(0);
       }
       img{
-        max-width: 100%;
+        width: 30px;
         margin-bottom: 5px;
       }
     }
@@ -752,8 +739,6 @@ Block ramka
   overflow: hidden;
   margin: 0 -50px;
   
-  
-  
   .mlh{
     position: absolute 30px * * 0;
     background: linear-gradient(to right,  rgba(45,50,54,1) 0%,rgba(255,255,255,0) 100%);
@@ -780,33 +765,39 @@ Block ramka
   ul{
     margin: 0;
     padding: 0;
-    
+    .owl-item li{
+      width: 100%;
+      float: none;
+    }
     li{
+      padding: 0 15px;
       position: relative;
       display: block;
-      width: 100%;
+      width: 20%;
+      float: left;
       
       &:after {
-          content: '';
-          position: absolute;
-          top: 0px;
-          left: 40px;
-          right: 40px;
-          height: 20px;
-          display: block;
-          box-shadow: 0 2px 30px 3px #2196F3;
-          border-radius: 200px /20px;
-          z-index: -1;
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 40px;
+        right: 40px;
+        height: 20px;
+        display: block;
+        box-shadow: 0 2px 30px 3px #2196F3;
+        border-radius: 200px /20px;
+        z-index: -1;
       }
       .npl{
         display: block;
-        background: #000;
-        border-top: 4px solid #000;
-        border-left: 2px solid #000;
-        border-right: 2px solid #000;
-        border-bottom: 4px solid #000;
+        background-color: #000;
+        background-position: center;
+        background-size: cover;
         overflow: hidden;
-        height: 180px;
+        height: 130px;
+        position: relative;
+        border-radius: 4px;
+        border: 1px solid;
 
         img{
           max-width:100%;
@@ -820,17 +811,17 @@ Block ramka
           font-size: 12px;
           line-height: 1;
           border-left: 1px solid $red;
-          position: absolute 30px * * 2px;
+          position: absolute * * 30px 2px;
           text-transform: uppercase;
         }
       }
       .nph{
-        color:#fff;
-        font-size: 17px;
-        font-weight: 300;
+        color: #fff;
+        font-size: 15px;
         display: block;
-        padding: 10px 15px 5px 0;
+        padding: 10px 5px 0 0;
         line-height: 20px;
+        font-weight: bold;
       }
       em{
         font-size: 11px;

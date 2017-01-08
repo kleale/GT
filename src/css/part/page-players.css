@@ -4,24 +4,36 @@
 
 .temsList.playerList {
   .mtable {
-    .t-item {
-      td{
-        &:nth-child(1){
-          text-align: left;
-          padding-left: 20px;
+    td,th{
+      &:nth-child(1){
+        text-align: left;
+        padding-left: 20px;
+        width: auto;
+      }
+      &:nth-child(3){
+        text-align: right;
+        width: 15%;
+      }
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7){
+        text-align: right;
+        width: 8%;
+      }
+      &:last-child{
+        text-align: right;
+        padding-right: 10px;
+      }
+      h4{
+        position: relative;
+        padding-left: 30px;
+        font-size: 12px;
+        .logo{
+          float: left;
         }
-        &:nth-child(3){
-          text-align: left;
-        }
-        &:last-child{
-          text-align: right;
-          padding-right: 10px;
-        }
-        h4 {
-          font-size: 12px;
-          .logo{
-            float: left;
-          }
+        .flag{
+          position: absolute 0 * * 0;
         }
       }
     }
@@ -141,8 +153,9 @@
 player.html
 */
 .pAvaBg{
-  background:  url(../img/pava.png) no-repeat scroll 0 100%;
+  background: url(../img/pava.png) no-repeat scroll 0 100%;
   border: 1px solid rgb(27, 43, 56);
+  overflow: hidden;
 }
 .pAva{
     background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
@@ -150,18 +163,29 @@ player.html
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   .playerava{
     text-align: center;
+    display: block;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: top center;
+    overflow: hidden;
+    max-height: 485px;
     
+    @media (max-width: $XM) {
+      max-width: 200px;
+      height: 200px;
+    }
     img{
       display: inline-block;
       width: 100%;
     }
   }
   .pInf{
-    padding: 15px;
+    padding: 20px 15px 15px;
     position: relative;
+    
     .pt{
       display: block;
-      position: absolute -45px 10px * *;
+      position: absolute -45px 15px * *;
       background: #424d56;
       border-radius: 50%;
       text-align: center;
@@ -174,24 +198,8 @@ player.html
     h2{
       padding-right: 80px;
       font-size: 21px;
-      margin: 0 0 5px 0;
+      margin: 0 0 15px 0;
     }
-    h3{
-      
-      font-size: 13px;
-      color: #999;
-      margin: 0 0 5px 0;
-    }
-    p{
-      font-size: 12px;
-      color: #999;
-      
-      img{
-        margin: 0 5px;
-        width: 20px;
-      }
-    }
-    
     table{
       width: 100%;
       tr{
@@ -203,10 +211,16 @@ player.html
           font-size: 12px;
           width: 50%;
           padding: 3px 0;
+          .gray{
+            color: #a1a9b3;
+            font-size: .9em;
+          }
+          .tip{
+            margin-top: 2px;
+          }
         }
       }
     }
-    
   }
   .niks{
     font-size: .8em;
@@ -255,7 +269,15 @@ player.html
     }
   }
 }
-
+.gti-question-circle{
+  opacity: .6;
+  &:hover,
+  &:active,
+  &:focus{
+    opacity: 1;
+    cursor: help;
+  }
+}
 .pRate{
   /*background: #424d56;*/
   padding: 15px;
@@ -295,23 +317,35 @@ player.html
 }
 
 .plCard{
-  background: #232b31 url(../img/pava.png) repeat-x scroll 0 100%;
-  padding-bottom: 0;
+  background: #232b31;
+  padding-bottom: 1px;
   
   .maingraph{
     margin-bottom: 10px;
-    
+    .mlhSM{
+      text-align: left;
+      font-size: 14px;
+      margin: 0 0 5px 0;
+      padding: 0;
+      span{
+        padding: 0 10px 0 0;
+      }
+    }
+    .grphilter{
+      margin-bottom: 10px;
+    }
     .playerRole{
-      height: 20px;
+      height: 30px;
       position: relative;
       z-index: 2;
     }
     .spider_chart_player{
-      height: 300px
+      height: 310px;
+      margin: 20px 20px 30px;
     }
     .pRd{
       position: relative;
-      padding-bottom: 20px;
+      padding-bottom: 10px;
 
       >span,b{
         font-size: 16px;
@@ -326,9 +360,45 @@ player.html
       }
     }
   }
+  
+  .spiderInfo{
+      padding: 10px;
+      font-size: 10px;
+      border: 1px solid #334859;
+      @media (max-width: $XM) {
+        display: none;
+      }
+      table{
+        td,th{
+          vertical-align: top;
+          padding: 3px 10px;
+        }
+        th{
+          text-align: right;
+        }
+      }
+      label {
+        display: block;
+        font-size: 10px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      p{
+        font-size: 10px;
+        line-height: 1.2;
+      }
+    }
+  
 }
 
-
+.maingraph{
+  .mltText{
+    padding: 255px 20px;
+    @media (max-width: $XM) {
+      padding: 25px 20px;
+    }
+  }
+}
 
 .highcharts-container, svg:not(:root) {
   overflow: visible  !important;
@@ -344,8 +414,36 @@ player.html
     height: 50px;
     background: linear-gradient(to bottom, rgb(35, 43, 49) 0%,rgba(19,29,38,0) 100%);
   }
+ 
   > div{
     position: relative;
+  }
+  .mtable{
+    thead th{
+      text-align: left;
+    }
+    td, th{
+      font-size: 12px;
+      &:nth-child(1){
+        text-align: center;
+        width: auto;
+      }
+      &:nth-child(2){
+        text-align: left;
+      }
+      &:nth-child(3){
+        text-align: left;
+      }
+      &:last-child(4){
+        text-align: left;
+      }
+      .pt{
+        img{
+          height: 30px;
+          margin: -5px 0;
+        }
+      }
+    }
   }
 }
 .pTeam{
@@ -399,82 +497,6 @@ player.html
   }
 }
 
-.mlhSM{
-  font-size: 12px;
-  line-height: 1;
-  span{
-    &:before,
-    &:after{
-      margin-top: -11px;
-    }
-  }
-}
-
-.temsList.playerGames{
-  .mtable {
-    thead{
-      th:nth-child(3){
-        text-align: right;
-      }
-      th:nth-child(10){
-        text-align: right;
-        padding-right: 10px;
-      }
-    }
-    .t-item{
-      td{
-        padding: 10px 5px;
-      }
-      td:nth-child(1){
-        text-align: left;
-        padding-right: 5px;
-        img{
-          width: 60px;
-        }
-      }
-      td:nth-child(2){
-        text-align: left;
-      }
-      td:nth-child(3){
-        text-align: right;
-        padding-right: 5px;
-        img{
-          margin-right: 0;
-          margin-left: 10PX;
-        }
-      }
-      td:nth-child(4){
-        text-align: center;
-      }
-      td:nth-child(5){
-        text-align: left;
-        h4 .logo{
-          float: left;
-          margin-left: 0;
-          margin-right: 10px;
-        }
-      }
-      td:nth-child(6){
-        text-align: left;
-        img{
-          width: 60px;
-        }
-      }
-      td:nth-child(7){
-        text-align: left;
-      }
-      td:nth-child(8){
-        text-align: center;
-      }
-      td:nth-child(10){
-        text-align: right;
-        padding-right: 10px;
-      }
-    } 
-  }
-}
-
-
 section.hero.pageTeamHero,
 section.hero.pagePlayerHero{
   padding: 20px 20px 20px;
@@ -497,7 +519,6 @@ section.hero.pagePlayerHero{
 
 .pageTeam{ 
   padding-bottom: 30px;
-  
   .tLogo{
     text-align: center;
     padding: 30px 20% 0;
@@ -546,6 +567,12 @@ section.hero.pagePlayerHero{
     }
   }
   .maingraph{
+    .mlh{
+      text-align: center!important;
+    }
+    .grphilter{
+      margin-bottom: 10px;
+    }
     .pRate{
       border: 1px solid #373b3e;
       margin: 15px 0;
@@ -556,6 +583,8 @@ section.hero.pagePlayerHero{
 .teamP{
   background: #232b31;
   padding-bottom: 0;
+  margin-top: -30px;
+  padding-top: 0;
   
   >.row{
     text-align: center;
@@ -579,23 +608,11 @@ section.hero.pagePlayerHero{
       a{
         display: block;
         overflow: hidden;
-        height: 155px;
+        height: 205px;
         position: relative;
         background-position: top center;
         background-repeat: no-repeat;
         background-size: cover;
-        /*
-        &:after {
-          content: '';
-          right: 0;
-          bottom: 0;
-          left: 0;
-          position: absolute;
-          display: block;
-          height: 55px;
-          background: linear-gradient(to bottom, rgba(55, 66, 76, 0) 0%,rgba(55, 66, 76, 0.85) 58%,rgb(55, 66, 76) 100%);
-        }
-        */
         b{
           top: 0;
           left: 0;
@@ -624,37 +641,29 @@ section.hero.pagePlayerHero{
         }
       }
     }
-    ul {
+    table {
       font-size: 11px;
       color: #fff;
       padding: 0;
       margin: 0;
       text-align: left;
       list-style: none;
+      width: 100%;
       
-      li{
+      tr:last-child td{
+        border-bottom: 0px;
+      }
+      th{
+        width: 50px;
+        text-transform: uppercase;
+        font-size: 9px;
+        font-weight: 300;
+        color: #acb1b5;
+        padding: 3px 10px;
+      }
+      td{
         padding: 3px 10px;
         border-bottom: 1px solid #424d56;
-        &:last-child{
-          border-bottom: 0px;
-        }
-        &.plm{
-          font-size: 10px;
-          text-align: center;
-        }
-        &.plmH label{
-          width: 100%;
-          text-align: center;
-        }
-        label{
-          display: inline-block;
-          width: 50px;
-          text-transform: uppercase;
-          font-size: 9px;
-          font-weight: 300;
-          color: #acb1b5;
-          margin: 0;
-        }
         a.pllink{
           display: inline-block;
           font-size: 12px;
@@ -665,15 +674,16 @@ section.hero.pagePlayerHero{
           max-width: 60%;
           text-overflow: ellipsis;
           white-space: nowrap;
-          vertical-align: bottom;
 
           img{
             width: 16px;
           }
         }
+        &.pmpm{
+          height: 37px;
+        }
       }
     }
-   
   }
 }
 
@@ -771,8 +781,73 @@ section.hero.pagePlayerHero{
     vertical-align: middle;
   }
 }
+.heropic{
+  position: relative;
+  display: inline-block;
+  b{
+    bottom: -3px;
+    right: -6px;
+    position: absolute;
+    display: block;
+    padding: 1px 3px 1px 3px;
+    background: #3f79a2;
+    color: #fff;
+    font-size: 10px;
+    font-weight: normal;
+    
+    &:after {
+      content: '';
+      display: block;
+      background: #3f79a2;
+      height: 100%;
+      width: 6px;
+      top: 0;
+      left: -4px;
+      bottom: 0;
+      position: absolute;
+      transform: skew(-15deg);
+    }
+  }
+  img{
+    border-radius: 2px;
+    max-width: 59px;
+    box-shadow: 0 0 0 1px #424f5a;
+  }
+}
 
-
+.playerGames{
+  .mtable {
+    thead{
+      th{
+        text-align: left;
+      }
+      th:nth-child(1){
+        padding-left: 10px;
+      }
+      th:nth-child(6){
+        text-align: right;
+      }
+      th:last-child{
+        padding-right: 10px;
+      }
+    }
+    .t-item{
+      td{
+        padding: 10px 5px;
+        text-align: left;
+      }
+      td:nth-child(1){
+        padding-left: 10px;
+      }
+      td:nth-child(6){
+        text-align: right;
+      }
+      td:last-child{
+        padding-right: 10px;
+      }
+    } 
+  }
+}
 
 
 
