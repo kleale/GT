@@ -172,7 +172,7 @@ section.hero{
 }/*temsList*/
 
 .filter{
-  margin-bottom: 0;
+  position: relative;
   .row{
     margin-right: -5px;
     margin-left: -5px;
@@ -197,6 +197,14 @@ section.hero{
     .sicon{
       top: 5px;
     }
+  }
+  .notm {
+    font-size: 11px;
+    line-height: 21px;
+    margin-top: 0px;
+    color: #c7cccc;
+    position: absolute;
+    top: -30px;
   }
 }
 

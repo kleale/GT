@@ -20,7 +20,7 @@
     
     h1{
       text-align: center;
-      margin: 30px 10% 30px 10%;
+      margin: 60px 10% 30px 10%;
       font-weight: 300;
       
       strong{
@@ -82,19 +82,20 @@
 
 .news-soc{
   text-align: center;
-  margin: 70px 0 0 0;
+  margin: 60px 0 0 0;
   padding: 0;
   li{
     display: inline-block;
     a{
       color: #fff;
       text-decoration: none;
+      display: inline-block;
+      border-radius: 60px;
+      padding: 5px 10px;
+      margin: 0 10px;
       i{
-        padding: 10px 10px;
-        border-radius: 30px;
-        width: 35px;
-        text-align: center;
         display: inline-block;
+        margin-right: 5px;
       }
     }
   }
@@ -148,7 +149,7 @@
 
 /* NEWS PAGE */
 .newstop_page{
-  background: #4c5b67;
+  background-color: #4c5b67;
 }
 .news-text{
   padding: 50px 30px;
@@ -196,34 +197,34 @@
   }
   
   .sub_ms{
-    background-image: inline(../img/match-tr-bg-line.png);
     background-position: 100% 0;
     background-repeat: no-repeat;
     margin: 30px 0;
     
     .sub_m{
-      padding: 15px 0;
-      background-image: inline(../img/match-tr-bg-line.png);
+      padding: 10px;
       background-position: 100% 100%;
       background-repeat: no-repeat;
-      min-height: 105px;
       @media (max-width: $XM) {
         padding: 5px 0;
       }
-      
+      &:nth-child(even) {
+        background: rgba(67, 75, 78, 0.4);
+      }
       .si{
         border-radius: 50%;
         display: block;
         float: left;
-        margin: 0 20px 0 0;
+        margin: -1px 12px 0 0;
+        box-shadow: 0 0 0 2px #454a4e;
         
         span{
           border-radius: 50%;
           overflow: hidden;
           display: block;
           float: left;
-          width: 65px;
-          height: 65px;
+          width: 30px;
+          height: 30px;
           img{
             min-height: 100%;
             width: 100%;
@@ -235,20 +236,25 @@
         font-size: 14px;
         color: #fff;
         font-weight: 300;
-        margin: 5px 0 5px 0;
+        margin: 6px 0 4px 0;
         
         a{
-          font-size: 24px;
+          font-size: 15px;
           text-decoration: none;
         }
         span{
-          font-size: 14px;
+          font-size: 12px;
           color: $text-gray-3;
-          margin: 0 10px;
+          margin: 0;
         }
         b{
           font-weight: 300;
-          margin: 0 10px;
+          margin: 0 2px;
+          font-size: 11px;
+          opacity: .5;
+        }
+        .flag{
+          width: 18px;
         }
       }
       
@@ -270,7 +276,7 @@
       
       ul{
         list-style: none;
-        margin: 5px 0 5px 0;
+        margin: 0;
         padding: 0;
         
         li{
@@ -331,9 +337,9 @@
 Block ramka
 **/
 .block-br{
-  border-left:1px solid #425e63;
-  border-right:1px solid #425e63;
-  border-bottom:1px solid #425e63;
+  border-left:1px solid #454a4e;
+  border-right:1px solid #454a4e;
+  border-bottom:1px solid #454a4e;
   position: relative;
   padding-top: 1px;
   margin-top: 35px;
@@ -361,7 +367,7 @@ Block ramka
       height: 1px;
 
       vertical-align: middle;
-      background: #425e63;
+      background: #454a4e;
       background-clip: content-box;
     }
     span {
@@ -390,13 +396,17 @@ Block ramka
     position: relative;
     top: 2px;
   }
-  
   .btn{
     text-transform: none;
     color: #fff;
     margin: 0 0.5%;
-    width: 18.4%;
+    width: 23.4%;
     font-size: 12px;
+    @media (max-width: 650px) {
+      width: 48.3%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
   }
   .btn-vk{
     background: #4b729b;
@@ -529,7 +539,7 @@ Block ramka
     padding-right: 0;
     
     table.nkf{
-      margin-bottom: 0;
+      margin-bottom: -10px;
       
       tr:nth-of-type(2n+1) {
         background-color: #373e41;
@@ -537,6 +547,7 @@ Block ramka
       td{
         padding: 8px 3px;
         border-top: 0;
+        vertical-align: middle;
       }
       .tn1{
         display: block;
@@ -552,6 +563,12 @@ Block ramka
       }
       img{
         width:40px;
+      }
+      .td-btn{
+        .btn{
+          padding: 3px 3px 3px;
+          font-size: 9px;
+        }
       }
     }
   }
@@ -584,13 +601,21 @@ Block ramka
     padding: 0 20px 5px;
     >div{
       position: relative;
-      
       margin: 0 0 5px 0;
       .btn-group{
         display: block;
         .btn{
           float:none;
           width: 100%;
+          text-align: left;
+          padding-left: 8px;
+          color: #949494;
+          .caret{
+            float: right;
+          }
+          i{
+            margin-right: 6px;
+          }
         }
       }
       input{

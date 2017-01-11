@@ -36,8 +36,8 @@
   
   .sr_pic{
     display: block;
-    height: 100px;
-    width: 100px;
+    height: 85px;
+    width: 85px;
     line-height: 75px;
     padding: 7px;
     position: relative;
@@ -163,9 +163,7 @@
 
 .spider_chart{
   height: 270px;
-  
   @media (max-width: $XM){
-    background: color($bg-main l(21%));
     padding:20px 0;
     height: 220px;
   }

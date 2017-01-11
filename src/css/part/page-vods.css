@@ -1,0 +1,39 @@
+/*page-vods.css*/
+
+.hero-menu img {
+  border-radius: 3px;
+  margin: 0 10px 0 -3px;
+}
+.vodslist{
+  .videopost{
+    padding: 5px;
+    
+    &:nth-of-type(2n+1) {
+      border-bottom: 1px solid rgba(57, 62, 64, 0.65);
+    }
+    &:nth-of-type(2n) {
+    /* background: #303539; */
+      background: rgba(54, 59, 64, 0.54);
+      border-bottom: 1px solid rgba(26, 31, 33, 0.25);
+    }
+    
+    .video_link{
+      img{
+        
+      }
+    }
+    .vinfo{
+      h3{
+        font-size: 18px;
+        margin: 0 0 5px 0;
+        padding: 0;
+      }
+      p{
+        margin: 0 0 5px 0;
+      }
+      time{
+        
+      }
+    }
+  }
+}
