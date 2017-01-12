@@ -106,12 +106,12 @@ body{
   
   .gt-logo {
     display: block;
-    padding: 0;
+    padding: 20px 0;
     text-align: center;
     color:#999;
     
     img{
-      width:80px;
+      width:100px;
     }
     
     @media (max-height: $MH) {
@@ -476,12 +476,12 @@ footer{
   }
   
   .gt-logo{
-    margin: 10px 0;
-      
+    margin: 2px 0;
+    padding: 0 0;
      &:after{
-      content: "\e902";
+      content: "\e904";
       font-family: 'gticons' !important;
-      font-size: 20px;
+      font-size: 30px;
     }
     
     img{

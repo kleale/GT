@@ -148,6 +148,9 @@
       top: inherit;
     }
   }
+  .input-group {
+    width: 100%;
+  }
 }
 
 .sorter{

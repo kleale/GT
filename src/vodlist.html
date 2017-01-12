@@ -1,10 +1,12 @@
 <!-- vodlist.html -->
-{% set title = "Команды дота 2. Рейтинг команд Dota 2" %}
+{% set title = "Видео дота 2" %}
 
 {% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro'] %}
 {% set logo = ['pic-20161110-600x600-7320131375.png', 'pic-20161110-300x300-2206743285.png', 'pic-20161110-600x600-5478339632.png', 'pic-20161110-500x500-918003572.png', 'pic-20161110-600x450-6323255579.png'] %}
-{% set flag = ['1', '2', '3', '4', '5', '6'] %}
-{% set rate = ['1,744', '1,622', '1,511', '1,497', '1,496', '1,469', '—'] %}
+{% set img = ['https://i.ytimg.com/vi/hmjC4isfJ_E/maxresdefault.jpg', 'https://i.ytimg.com/vi/fgb39dOJ1js/maxresdefault.jpg', 'https://i.ytimg.com/vi/EcRKuy6jqOI/maxresdefault.jpg', 'https://i.ytimg.com/vi/UY0JWskR5zw/maxresdefault.jpg', 'https://i.ytimg.com/vi/n3bDSptN06w/maxresdefault.jpg', 'https://i.ytimg.com/vi/2SWgdXthYcM/maxresdefault.jpg'] %}
+
+{% set gr = ['gr',''] %}
+
 
 <!DOCTYPE html>
 <html>
@@ -117,34 +119,49 @@
                 </div>
               </div>
             </div>
+            
             <div class="vodslist">
-              {% fot i in 0..10 %}
-                <div class="videopost row">
-                  <div class="col-sm-4">
-                    <a class="video_link fancybox" href="http://youtu.be/L-L0XM5E3bc"><img src="https://i.ytimg.com/vi/L-L0XM5E3bc/maxresdefault.jpg" class="img-responsive"></a>
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="vinfo">
-                      <h3>
-                        <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc">.FEAT vs. Sweet Boys bo3 @ Dota 2 Ice Game 2</a>
-                      </h3>
-                      <p>Dota 2 Ice, Playoff, Upper Bracket, Round 1</p>
-                      <time><i class="fa fa-fw fa-clock-o"></i> 9 января</time><br>
-                      <a href="/dota-2/dota-2-ice/playoff/feat-vs-sweet-boys-40322" class="btn btn-xs btn-default pull-right">Смотреть матч</a>
+              {% for i in 0..10 %}
+                <div class="videopost">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
+                        <img src="{{random(img)}}">
+                        <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
+                        <b>
+                          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
+                        </b>
+                      </a>
+                      <u>Dota 2 Watch</u>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="vinfo">
+                        <h3>
+                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> {{random(team)}} vs {{random(team)}} <b class="badge">bo3</b></a>
+                          <div class="vstats">
+                            <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
+                            <i class="gti-comments-o"></i> 123
+                          </div>
+                        </h3>
+                        <p><img src="http://game-tournaments.com/media/tournament/_60/pic-20160831-478x178-7586446600.jpeg" alt="WESG"> WESG, Playoff, Upper Bracket, Round 1</p>
+                        <time>9 января 2010 <i class="gti-clock-o"></i> 10:30</time>
+                        <a href="" class="mlan" title="Logs"><i class="gti-dotaviewer"></i></a>
+                        <a href="" class="mlan">RU</a>
+                        <a href="" class="mlan">EN</a>
+                        <a href="/dota-2/dota-2-ice/playoff/feat-vs-sweet-boys-40322" class="btn btn-xs btn-default ">Смотреть матч</a>
+                        
+                      </div>
                     </div>
                   </div>
                 </div>
               {% endfor %}
               {% include "template/pager.html" %}
-              
-              <div class="well text-center">
-                <h6 class="text-up">Нет видео</h6>
-              </div>
             </div>
-            <div class="block mlt lastTour">
-              {% include "template/teams/teams-last-tour.html" %}
-              {% include "template/pager.html" %}
+            
+            <div class="well text-center">
+              <h6 class="text-up">Нет видео</h6>
             </div>
+          
           </div>
           <div class="col-md-4">
             <a href="" class="historyBlock">
@@ -172,10 +189,6 @@
         </div>
       </section>
       #}
-
-      <section id="m-zames" class="m-sec m-even m-zames">
-        {% include "template/blockzames.html" %}
-      </section>
 
       <div class="bn">
         <img src="../img/ad.jpg" alt="">

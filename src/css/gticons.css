@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'gticons';
-  src:  url('../fonts/gticons.eot?hgg2nf');
-  src:  url('../fonts/gticons.eot?hgg2nf#iefix') format('embedded-opentype'),
-    url('../fonts/gticons.ttf?hgg2nf') format('truetype'),
-    url('../fonts/gticons.woff?hgg2nf') format('woff'),
-    url('../fonts/gticons.svg?hgg2nf#gticons') format('svg');
+  src:  url('../fonts/gticons.eot?hg12nf');
+  src:  url('../fonts/gticons.eot?hg12nf#iefix') format('embedded-opentype'),
+    url('../fonts/gticons.ttf?hg12nf') format('truetype'),
+    url('../fonts/gticons.woff?hg12nf') format('woff'),
+    url('../fonts/gticons.svg?hg12nf#gticons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,9 +23,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.gti-dotaviewer:before {
+  content: "\e905";
+}
+.gti-gg:before {
+  content: "\e903";
+}
+.gti-gg1:before {
+  content: "\e904";
+}
 .gti-gtlogo:before {
-  content: "\e902";
+  /*content: "\e902";*/
+  content: "\e903";
 }
 .gti-vs:before {
   content: "\e901";

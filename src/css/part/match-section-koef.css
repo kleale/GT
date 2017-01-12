@@ -14,12 +14,11 @@
   position: relative;
   
   .bh{
-    
     .block-menu{
       float: right;
       list-style: none;
       margin: 0;
-      padding: 2px 15px 0 0;
+      padding: 7px 0 0 0;
       
       @media (max-width: $M){
         float: none;

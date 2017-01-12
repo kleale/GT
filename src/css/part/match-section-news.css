@@ -11,7 +11,7 @@
 .m-news{
   .bh{
     margin: 20px 0 0 0;
-    padding: 0 0 13px 0;
+    padding: 0;
     background-image: inline(../img/nav-line.png);
     background-position: 100% 100%;
     background-repeat: no-repeat;
@@ -19,7 +19,8 @@
 }
 
 .tse-news{
-  padding: 15px 0 0 0;
+  padding: 0 0 0 0;
+  margin-top: -1px;
   
   ul.nlist{
     list-style: none;

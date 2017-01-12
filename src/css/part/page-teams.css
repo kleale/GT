@@ -106,7 +106,9 @@ section.hero{
           color: #fff;
         }
       }
-      
+      &.active_top{
+        border-top: 2px solid #516677;
+      }
       td{
         h4{
           font-weight: 400;

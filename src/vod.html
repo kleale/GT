@@ -1,0 +1,93 @@
+<!-- vodlist.html -->
+{% set title = "Видео дота 2" %}
+
+{% set team = ['Wings', 'OG', ' Evil Geniuses', 'EHOME', 'NewBee', 'Virtus.Pro'] %}
+{% set logo = ['pic-20161110-600x600-7320131375.png', 'pic-20161110-300x300-2206743285.png', 'pic-20161110-600x600-5478339632.png', 'pic-20161110-500x500-918003572.png', 'pic-20161110-600x450-6323255579.png'] %}
+{% set img = ['https://i.ytimg.com/vi/hmjC4isfJ_E/maxresdefault.jpg', 'https://i.ytimg.com/vi/fgb39dOJ1js/maxresdefault.jpg', 'https://i.ytimg.com/vi/EcRKuy6jqOI/maxresdefault.jpg', 'https://i.ytimg.com/vi/UY0JWskR5zw/maxresdefault.jpg', 'https://i.ytimg.com/vi/n3bDSptN06w/maxresdefault.jpg', 'https://i.ytimg.com/vi/2SWgdXthYcM/maxresdefault.jpg'] %}
+
+{% set gr = ['gr',''] %}
+
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="pageMatch">
+  <div class="matchWrap">
+    {% include "template/breadcrumbs.html" %}
+    
+    <section id="b1" class="frameblock">
+      <div class="frame">
+        <iframe id="ytplayer" frameborder="0" allowfullscreen="1" title="YouTube video player" width="100%" height="100%" src="https://www.youtube.com/embed/ukg49m8fFis?enablejsapi=1&amp;origin=http%3A%2F%2Fteam-hunter.com&amp;widgetid=1"></iframe>
+        <div id="wardmap2"><div id="ward_layer_modal"></div></div>
+      </div>
+      <div class="frameBottom">
+        {% include "template/vod/match-banner.html" %}
+      </div>
+    </section>
+    <section id="b2" class="log">
+      <div class="logheader">
+        Лог матча
+        <div class="mapDrop">
+          <b>Выбрать игру</b>
+          <div class="dropdown pull-right">
+            <button class="btn btn-border btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Карта <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">Карта 1</a></li>
+              <li><a href="#">Карта 2</a></li>
+              <li><a href="#">Карта 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="logTable">
+        {% include "template/vod/log.html" %}
+      </div>
+      <div class="summary">
+        <div class="logheader">
+          Итоги матча
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <td>Navi</td>
+              <td>KDA</td>
+              <td>Gold</td>
+            </tr>
+          </thead>
+          {% for i in 0..5 %}
+          <tr>
+            <th><img src="http://cdn.dota2.com/apps/dota2/images/heroes/dazzle_sb.png"></th>
+            <td>23</td>
+            <td>321</td>
+          </tr>
+          {% endfor %}
+        </table>
+        
+        <table class="table">
+          <thead>
+            <tr>
+              <td>Vega</td>
+              <td>KDA</td>
+              <td>Gold</td>
+            </tr>
+          </thead>
+          {% for i in 0..5 %}
+          <tr>
+            <th><img src="http://cdn.dota2.com/apps/dota2/images/heroes/dazzle_sb.png"></th>
+            <td>23</td>
+            <td>321</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </section>
+  </div>
+  
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>
