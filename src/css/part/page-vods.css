@@ -17,7 +17,6 @@
       border-bottom: 1px solid rgba(57, 62, 64, 0.65);
     }
     &:nth-of-type(2n) {
-    /* background: #303539; */
       background: rgba(54, 59, 64, 0.54);
       border-bottom: 1px solid rgba(26, 31, 33, 0.25);
     }
@@ -163,7 +162,99 @@
   }
 }
 
-/*
+/*vods list tablr style*/
+.mlt.vodstable{
+  thead tr th,
+  tr td{
+    text-align: left;
+    width: auto;
+    
+    &:first-child {
+      width: auto;
+      padding-left: 25px;
+    }
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5){
+      text-align: right;
+    }
+  }
+  .vname{
+    color: inherit;
+    img{
+      margin-right: 3px;
+    }
+    .vtitle{
+      b{
+        font-weight: 400;
+      }
+      span{
+        font-weight: 600;
+        margin: 0 3px;
+        color: #c0e3e8;
+      }
+      &:hover{
+        text-decoration: none;
+        span{
+          color: #2faee7;
+        }
+      }
+    }
+  }
+  .dw{
+    background: url(../img/spoiler.png) repeat scroll 0 0;
+    color: #FF9800;
+    font-size: 16px;
+    margin: -2px 0;
+  }
+  .date{
+    font-size: 11px;
+    color: #c7c7c7;
+    text-align: right;
+  }
+  .chan{
+    color: #c7c7c7;
+  }
+  .vstats{
+    font-size: 11px;
+    text-align: right;
+    color: #82ac4e;
+    span {
+      display: inline-block;
+      padding: 2px 4px;
+      font-size: 10px;
+      border-radius: 2px;
+    }
+  }
+  .dwtd{
+    width: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------
 match-banner.css
 match-banner.html
 */
@@ -173,10 +264,6 @@ match-banner.html
   position: relative;
   display: block;
   z-index: 1;
-  /*
-  background: url(/img/topLight.png) no-repeat 50% 0;
-  */
-  
   &:hover,
   &:active,
   &:focus{
@@ -245,7 +332,7 @@ match-banner.html
             position: absolute;
             top: 50%;
             left: 50%;
-            background: url(../img/tp1.png) no-repeat 50% 50%;
+            background: url(http://game-tournaments.com/html/img/tp1.png) no-repeat 50% 50%;
             display: block;
             width: 295px;
             height: 200px;
@@ -265,9 +352,8 @@ match-banner.html
       }
       .abg_i2 {
         right: 0px;
-        
         &:before {
-            background: url(../img/tp2.png) no-repeat 50% 50%;
+            background: url(http://game-tournaments.com/html/img/tp2.png) no-repeat 50% 50%;
         }
       }
       
@@ -298,8 +384,8 @@ match-banner.html
       border-radius: 3px;
 
     .abg_btn {
-      display: inline-block;
-      background: url(../img/btnbg.png) no-repeat 50% 50%;
+      display: inline-block!important;
+      background: url(http://game-tournaments.com/html/img/autobg/btnbg.png) no-repeat 50% 50%;
       background-size: cover;
       width: 128px;
       height: 40px;
@@ -313,16 +399,22 @@ match-banner.html
       color: #ffffff;
       transition: all .3s linear;
       margin-top: -10px;
+      top: 0;
+      right: 0;
+      position: relative;
     }
     .ggbet {
-      display: inline-block;
-      background: url(../img/bets_gg.png) no-repeat 50% 50%;
+      display: inline-block!important;
+      background: url(http://game-tournaments.com/html/img/bets_gg.png) no-repeat 50% 50%;
       background-size: cover;
       width: 80px;
       height: 34px;
+      top: 0;
+      right: 0;
+      position: relative;
     }
     .ggbetT {
-      display: inline-block;
+      display: inline-block!important;
       font-size: 9px;
       text-transform: uppercase;
       font-style: italic;
@@ -330,6 +422,10 @@ match-banner.html
       color: #f9f7c6;
       text-shadow: 0 3px 5px #333;
       line-height: 1;
+      top: 0;
+      right: 0;
+      position: relative;
+      text-align: center;
     }
   }
 
@@ -350,8 +446,8 @@ match-banner.html
 
   }
 
-} /*mban*/
-  
+} /*mban*/ --------------------------------
+   
 @media (max-width: 1300px) {
   .mban {
     top: -20px;
@@ -410,11 +506,11 @@ match-banner.html
     }
     .abg_mt {
       max-width: 50%;
-      text-align: right;
+      text-align: left;
       top: 10px;
       font-size: 10px;
       left: 20px;
-
+      max-width: 150px;
       b {
         font-size: 9px;
       }
@@ -452,6 +548,9 @@ match-banner.css
 match-banner.html
 */
 
+
+
+
 /*
   Page VOD styles -----------------------------
 */
@@ -467,53 +566,70 @@ match-banner.html
     z-index: 20;
     right: 0;
     left: 50px;
+    background: #33393c;
+    
+    display: table;
+    width: calc(100% - 50px);
+    
     ol{
       padding: 15px;
       float: left;
+      @media (max-width: 990px) {
+        display: none;
+      }
     }
   }
   
   .mheader{
     float: left;
-    margin-left: 10px;
     position: relative;
-
+    width: calc(100% - 673px);
+    color: #a7a7a7;
+    
+    @media (max-width: 1680px) {
+      width: calc(100% - 570px);
+    }
     @media (max-width: 990px) {
       width: calc(100% - 180px);
       margin-left: 0px;
-        h1{
-          font-size: 12px;
-          margin-top: 16px;
-        }
+      h1{
+        font-size: 12px;
+        margin-top: 16px;
+      }
     }
     .bc{
       float: left;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      margin-right: 80px;
 
       @media (max-width: 990px) {
-        width: calc(100% - 65px);
+        width: calc(100% - 85px);
+        margin-right: 85px;
       }
-
       >span{
         margin-left: 5px;
+        color: #a7a7a7;
+        font-size: 12px;
       }
     }
     .mapDrop{
-      position: absolute 13px 0 * *;
-
+      top: 15px;
+      display: inline-block;
+      position: relative;
+      .btn{
+        color: #d4d4d4;
+        background: #59656b;
+      }
       @media (max-width: 990px) {
-        .btn{
-        }
+        position: absolute 15px 0 * *;
       }
     }
     h1{
       display: inline-block;
       font-size: 16px;
       font-weight: 700;
-      margin: 13px 0;
+      margin: 12px 0;
       padding: 5px 10px 5px 15px;
       color: #a6c6cb;
       line-height: 1;
@@ -522,10 +638,12 @@ match-banner.html
         padding: 5px;
         font-size: 13px;
         margin-top: 16px;
+        margin-left: 10px;
+        border: none;
       }
       span{
         padding: 0 5px;
-        color: #fff;
+        font-size: 12px;
         @media (max-width: 990px) {
           padding: 0 3px;
         }
@@ -538,23 +656,24 @@ match-banner.html
   
   .sLang{
     float: right;
-    margin: 9px 3px 9px 0;
+    margin: 11px 10px 6px 0;
+    .btn{
+      color: #d4d4d4;
+      background: #59656b;
+      position: relative;
+    }
     @media (max-width: 990px) {
       .dropdown{
         margin: 2px 3px;
       }
       .btn{
-        padding: 4px 2px;
-        height: 29px;
-        margin-top: 2px;
-        font-size: 13px;
-        width: 41px;
+        
       }
     }
     .gti-youtube-play{
-      color: #7faec3;
+      color: #59656b;
       font-size: 20px;
-      margin: 6px 10px 6px 10px;
+      margin: 3px 10px 6px 10px;
       display: inline-block;
     }
   }
@@ -619,16 +738,16 @@ match-banner.html
 }
 
 .mdrop{
-  width: 150px;
   float: right;
   margin-right: 10px;
   
   @media (max-width: 990px) {
     width: 38px;
+    width: 60px;
   }
   .btn{
-    height: 34px;
-    color: #a6c6cb;
+    color: #d4d4d4;
+    background: #59656b;
     
     &:hover,
     &:focus,
@@ -636,28 +755,33 @@ match-banner.html
       color: #fff;
     }
     .caret {
-      margin: 8px 0 8px 5px;
+      margin: 8px 0px 8px 5px;
       position: absolute;
       right: 8px;
       @media (max-width: 990px) {
         right: 0px;
+        margin: 8px 10px 8px 5px;
       }
     }
     
-  }
-  #vtitle{
-    overflow: hidden;
-    display: inline-block;
-    margin-right: -25px;
-    width: 100%;
-    text-overflow: ellipsis;
-    u{
-      text-decoration: none;
-      font-weight: 600;
-    }
-    @media (max-width: 990px) {
-      b,em{
-        display: none;
+    span{
+      overflow: hidden;
+      display: inline-block;
+      margin-right: 15px;
+      max-width: 380px;
+      text-overflow: ellipsis;
+      u{
+        text-decoration: none;
+        font-weight: 600;
+      }
+      @media (max-width: 1680px) {
+        max-width: 274px;
+      }
+      @media (max-width: 990px) {
+        max-width: 150px;
+        b,em{
+          display: none;
+        }
       }
     }
   }
@@ -680,6 +804,8 @@ match-banner.html
     b{
       font-size: 11px;
       opacity: .5;
+      position: relative;
+      top: -2px;
     }
   }
 }
@@ -690,10 +816,11 @@ match-banner.html
   position: relative;
   background-image: inline(../img/tile.png);
   background-repeat: repeat;
-  background-color: #123140;
+  background-color: #232729;
   background-attachment: fixed;
   position: relative;
   font-size: 12px;
+  color: #eee;
   
   .logTable{
     position: relative;
@@ -750,7 +877,7 @@ match-banner.html
   }
   tr:hover,
   tr.active{
-    background: rgba(33, 150, 243, 0.22);
+    background: rgba(66, 101, 129, 0.22);
   }
   tr:hover .tpop,
   tr:focus .tpop,
@@ -773,14 +900,6 @@ match-banner.html
         height: 22px;
       }
     }
-    .progress{
-      position: absolute;
-      top: 25px;
-      left: 5px;
-      height: 4px;
-      width: 40px;
-      border-radius: 0;
-    }
     .fightTable{
       position:relative;
       margin:2px 0 0 0;
@@ -793,14 +912,14 @@ match-banner.html
         text-align: right;
         vertical-align: middle;
         padding: 3px 5px;
-        
         &:first-child{
           text-align: left;
         }
       }
       &.table>thead>tr>th{
-        color: #d6af94;
+        color: #b7cdd8;
         font-weight: 400;
+        background: #33393c;
       }
       &.table>thead>tr{
         background: rgba(64, 53, 47, 0.38);
@@ -818,7 +937,6 @@ match-banner.html
         text-align: right;
         color: red;
       }
-      
     }
   }
   .log-type {
@@ -834,7 +952,11 @@ match-banner.html
       background: #000;
     }
   }
-} /*log*/
+  abbr{
+    border-bottom: 1px dashed #158aff !important;
+  }
+}/*log*/
+
 
 .summary{
   padding: 5px 0px 15px 0px;

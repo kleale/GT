@@ -6,6 +6,15 @@
 
   $(document).ready(function () {
     
+    //team-pop
+    $('.team-pop').popover({
+        'html': true,
+        'trigger': 'hover',
+        'placement': 'auto bottom',
+        'container': 'body',
+        'template':'<div class="popover htip teamtip"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"></div></div></div>'
+    });
+    
     $(".ibg").mousemove(function( event ) {
       $(".ibg").css('transform', 'translate(' + event.pageY /40 + 'px, ' + -event.pageX /40+ 'px)');
     });

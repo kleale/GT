@@ -70,6 +70,8 @@
         'template':'<div class="popover htip t-pop"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"></div></div></div>'
     });
   
+    
+    
   }); //end ready
   
 }(jQuery));
