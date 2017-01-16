@@ -671,7 +671,6 @@ section.hero.pagePlayerHero{
           color: #fff;
           overflow: hidden;
           line-height: 1;
-          max-width: 60%;
           text-overflow: ellipsis;
           white-space: nowrap;
 

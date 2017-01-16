@@ -84,6 +84,11 @@
         background: $button-blue;
       }
     }
+    
+    &.divider {
+      margin: 0;
+      background-color: #0b75a7;
+    }
   }
 }
 
@@ -104,6 +109,9 @@
   border: 1px solid transparent;
   line-height: 1.42857143;
   cursor: pointer;
+  .caret{
+    margin-left: 4px;
+  }
 }
 /*
 {
@@ -496,6 +504,16 @@ Tabs mobile
   ul{
     padding: 0 0 0 15px;
     margin: 0;
+  }
+  &.well-sm{
+    font-size: 11px;
+    padding: 5px;
+    color: #a1b1bf;
+    background: #3b4146 url(../img/spoiler.png) repeat scroll 0 0;
+    border-color: #424d56;
+    h6{
+      font-size: 10px;
+    }
   }
 }
 .well-info{

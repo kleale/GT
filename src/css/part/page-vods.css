@@ -85,18 +85,29 @@
       padding-top: 5px;
       font-size: 11px;
       text-decoration: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .vinfo{
       @media (max-width: $SM){
         text-align: center;
       }
       h3{
-        font-size: 16px;
-        margin: 5px 0 5px 0;
+        font-size: 18px;
+        margin: 5px 0 15px 0;
         padding: 0;
+        .badge{
+          background: none;
+          border-radius: 2px;
+          border: 1px solid #627a8e;
+          color: #7fa4a4;
+          margin-left: 10px;
+          text-transform: uppercase;
+        }
       }
       p{
-        margin: 10px 0 10px 0;
+        margin: 10px 0 15px 0;
         color: #c7c7c7;
         font-size: 12px;
         img{
@@ -104,7 +115,7 @@
         }
       }
       .vstats{
-        font-size: 12px;
+        font-size: 14px;
         float: right;
         color: rgb(132, 176, 79);
         font-weight: 700;
@@ -122,20 +133,17 @@
         border: 1px solid #454a4e;
         border-radius: 2px;
         
-        &:hover{
+        &:hover, &.dw:hover{
           background: #037db5;
           color: #fff;
           border-color: #037db5;
           text-decoration: none;
         }
-        .dwico{
-          width: 16px;
-          height: 16px;
-          display: block;
-          background-image: url(../img/dotaviewer.svg);
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
+        
+        &.dw{
+          color: #a6c6cb;
+          border: 1px solid #617486;
+          background: url(../img/spoiler.png) repeat scroll 0 0;
         }
       }
       time{
@@ -447,13 +455,112 @@ match-banner.html
 /*
   Page VOD styles -----------------------------
 */
-
+.pageMatch{
+  padding-bottom: 0px!important;
+}
 .matchWrap{
-  padding: 50px 0 120px 0;
+  padding: 50px 0 120px 50px;
   overflow: hidden;
+  .bread {
+    top: 0;
+    position: fixed;
+    z-index: 20;
+    right: 0;
+    left: 50px;
+    ol{
+      padding: 15px;
+      float: left;
+    }
+  }
+  
+  .mheader{
+    float: left;
+    margin-left: 10px;
+    position: relative;
+
+    @media (max-width: 990px) {
+      width: calc(100% - 180px);
+      margin-left: 0px;
+        h1{
+          font-size: 12px;
+          margin-top: 16px;
+        }
+    }
+    .bc{
+      float: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 80px;
+
+      @media (max-width: 990px) {
+        width: calc(100% - 65px);
+      }
+
+      >span{
+        margin-left: 5px;
+      }
+    }
+    .mapDrop{
+      position: absolute 13px 0 * *;
+
+      @media (max-width: 990px) {
+        .btn{
+        }
+      }
+    }
+    h1{
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 13px 0;
+      padding: 5px 10px 5px 15px;
+      color: #a6c6cb;
+      line-height: 1;
+      border-left: 1px solid rgba(255, 255, 255, 0.25);
+      @media (max-width: 990px) {
+        padding: 5px;
+        font-size: 13px;
+        margin-top: 16px;
+      }
+      span{
+        padding: 0 5px;
+        color: #fff;
+        @media (max-width: 990px) {
+          padding: 0 3px;
+        }
+      }
+    }
+    .mMap{
+      text-decoration: none;
+    }
+  } /*.mheader*/
+  
+  .sLang{
+    float: right;
+    margin: 9px 3px 9px 0;
+    @media (max-width: 990px) {
+      .dropdown{
+        margin: 2px 3px;
+      }
+      .btn{
+        padding: 4px 2px;
+        height: 29px;
+        margin-top: 2px;
+        font-size: 13px;
+        width: 41px;
+      }
+    }
+    .gti-youtube-play{
+      color: #7faec3;
+      font-size: 20px;
+      margin: 6px 10px 6px 10px;
+      display: inline-block;
+    }
+  }
   
   .frameblock{
-    position: fixed 0 383px 0 0;
+    position: fixed 0 383px 0 50px;
     height: 100%;
     z-index: 4;
     
@@ -474,7 +581,26 @@ match-banner.html
       overflow: hidden;
     }
   }
-}
+  
+  footer{
+    text-align: center;
+    height: 125px;
+    .f-coppy{
+      float: none;
+      span{
+        display: block;
+      }
+    }
+    .f-soc{
+      float: none;
+      display: block;
+    }
+    ul.f-menu{
+      margin: 11px 0 10px 0;
+    }
+  }
+  
+} /*matchwrap*/
 
 .pageMatch{
   footer{
@@ -502,7 +628,7 @@ match-banner.html
   }
   .btn{
     height: 34px;
-    color: #f05020;
+    color: #a6c6cb;
     
     &:hover,
     &:focus,
@@ -510,7 +636,7 @@ match-banner.html
       color: #fff;
     }
     .caret {
-      margin: 10px 0 8px 5px;
+      margin: 8px 0 8px 5px;
       position: absolute;
       right: 8px;
       @media (max-width: 990px) {
@@ -539,7 +665,10 @@ match-banner.html
 .logheader{
   padding: 10px;
   font-size: 18px;
-  background: #42362d;
+  background: #191e21;
+  background-image: inline(../img/tile.png);
+  background-repeat: repeat;
+  background-position: center;
   
   .mapDrop{
     float: right;
@@ -559,47 +688,48 @@ match-banner.html
   float: right;
   width: 383px;
   position: relative;
-  background-image: url(../img/topgradient.png);
-  background-repeat: repeat-x;
-  background-color: #17100b;
+  background-image: inline(../img/tile.png);
+  background-repeat: repeat;
+  background-color: #123140;
   background-attachment: fixed;
   position: relative;
   font-size: 12px;
   
   .logTable{
     position: relative;
-    
-      &:before {
+    &:before {
       content: '';
       position: absolute;
       display: block;
       width: 1px;
-      background: #4c3c31;
+      background: ##295978;
       top: 30px;
       bottom: -10px;
       margin-left: 71px;
-        
     }
   }
-  
   .table{
     margin-bottom: 10px; 
+  }
+  .table>tbody>tr:nth-of-type(2n+1){
+    border-bottom: 0;
   }
   .table>tbody>tr>td{
     border: 0;
     padding: 8px 5px;
   }
   .table>tbody>tr.active>td, .table>tbody>tr.active>th, .table>tbody>tr>td.active, .table>tbody>tr>th.active, .table>tfoot>tr.active>td, .table>tfoot>tr.active>th, .table>tfoot>tr>td.active, .table>tfoot>tr>th.active, .table>thead>tr.active>td, .table>thead>tr.active>th, .table>thead>tr>td.active, .table>thead>tr>th.active {
-    background: rgba(21, 14, 10, 0.55);
+    background: rgba(21, 14, 10, 0);
   }
-  
+  .table > thead {
+    box-shadow: none;
+  }
   .time{
     padding-top:13px!important;
     text-align:right;
     width:65px;
     position: relative;
     vertical-align: top;
-    
     .tpop{
       position: absolute 3px * * 3px;
       z-index: 2;
@@ -607,31 +737,26 @@ match-banner.html
       text-decoration: none;
       opacity: 0;
     }
-    
     &.timeProgres{
       line-height:12px; 
       padding-top:11px !important;
       text-align:right; 
       width:65px;
       vertical-align: top;
-      
       .text-muted{
         opacity: .7;
       }
     }
   }
-  
   tr:hover,
   tr.active{
-    background: rgba(21, 14, 10, 0.45);
+    background: rgba(33, 150, 243, 0.22);
   }
-  
   tr:hover .tpop,
   tr:focus .tpop,
   tr:active .tpop{
-      opacity: 1;
+    opacity: 1;
   }
-  
   .event{
     position:relative;
     padding-top:8px;
@@ -648,7 +773,6 @@ match-banner.html
         height: 22px;
       }
     }
-    
     .progress{
       position: absolute;
       top: 25px;
@@ -657,7 +781,6 @@ match-banner.html
       width: 40px;
       border-radius: 0;
     }
-    
     .fightTable{
       position:relative;
       margin:2px 0 0 0;
@@ -708,6 +831,7 @@ match-banner.html
       position: relative;
       z-index: 2;
       box-shadow: 0 0 0 1px #211a17;
+      background: #000;
     }
   }
 } /*log*/

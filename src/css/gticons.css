@@ -26,15 +26,12 @@
 .gti-dotaviewer:before {
   content: "\e905";
 }
-.gti-gg:before {
-  content: "\e903";
-}
 .gti-gg1:before {
-  content: "\e904";
-}
-.gti-gtlogo:before {
-  /*content: "\e902";*/
   content: "\e903";
+}
+.gti-gt:before {
+  /*content: "\e902";*/
+  content: "\e904";
 }
 .gti-vs:before {
   content: "\e901";

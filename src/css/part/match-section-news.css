@@ -96,6 +96,11 @@
             position: absolute;
             transform: skew(-5deg);
           }
+          i.gti-gt {
+            font-size: 25px;
+            line-height: 1;
+            display: block;
+          }
         }
       }
       
