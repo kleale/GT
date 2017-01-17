@@ -1,10 +1,11 @@
-<!-- /news/newslist.html -->
+<!-- /tours/newslist.html -->
 
 {% set pic = ['http://www.gosugamers.net/uploads/images/news/42728-1482872435-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42727-1482864622-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42720-1482829305-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42725-1482841447-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42723-1482835201-small.jpeg'] %}
 {% set ntype = ['gti-gt','gti-rss','gti-facebook','gti-twitter'] %}
 {% set ohot = ['hot','','',''] %}
 
 <div class="block m-news">
+  <!--
   <div class="bh clearfix">
     <h3>
       <i class="ih gti-newspaper-o"></i>
@@ -15,10 +16,13 @@
       <li><a href="#"><i class="gti-gtlogo"></i></a></li>
       <li><a href="#"><i class="gti-users"></i></a></li>
     </ul>
-  </div><!-- bh -->
+  </div>
+  -->
+  <!-- bh -->
+  <h3 class="mlh"><span>новости турнира</span></h3>
     <div class="tse-news">
         <ul class="nlist">
-          {% for i in 0..7 %}
+          {% for i in 0..9 %}
               <li class="{{random(ohot)}} {% if i == 2 %} nopic{% endif %}">
                 {% if i == 2 %} 
                 {% elseif i == 3 %} 

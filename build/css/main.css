@@ -9339,7 +9339,7 @@ Banners
 }
 .tse-news ul.nlist li{
   margin: 2px 0 -1px 0;
-  padding: 25px 20px 25px 10px;
+  padding: 15px 20px 15px 15px;
   border-bottom: 1px solid #454a4e;
   background: #363b40;
   position: relative;
@@ -9411,7 +9411,7 @@ Banners
   float:left;
   width: 140px;
   position: relative;
-  padding: 30px 0;
+  padding: 25px 0;
   border: 1px solid #454a4e;
   text-align: center;
   background: #37424c url("../img/spoiler.png") repeat scroll 0 0;
@@ -10079,7 +10079,6 @@ Banners
   text-align: center;
   margin: 0;
   padding: 0 0 5px 0;
-  overflow: hidden;
 }
 .m-top-block.live .m-top-cont:after{
   top: 0;
@@ -10109,6 +10108,7 @@ Banners
   font-size: 13px;
   color: #82ac4e;
   text-decoration: none;
+  overflow: hidden;
   position: relative;
   text-align: center;
   margin: 0;
@@ -10202,8 +10202,9 @@ Banners
   border-bottom: 1px solid rgba(238,238,238,0.1);
   border-right: 1px solid rgba(238,238,238,0.1);
   margin-top: -10px;
-  padding: 24px 0 11px;
+  padding: 15px 0 10px;
   position: relative;
+  background: rgba(145, 205, 215, 0.02) url(../img/spoiler.png) 0 0 repeat;
   
 }
 .m-top-cont sup{
@@ -10225,13 +10226,14 @@ Banners
   font-style: normal;
   line-height: 14px;
   text-decoration: none;
+  font-size: 12px;
 }
 .m-top-cont em{
   font-style: normal;
   color: #7faec3;
   display: inline-block;
   padding: 8px 5px;
-  width: 60px;
+  min-width: 50px;
   line-height: 16px;
   border-radius: 40px;
   font-size: 12px;
@@ -10252,7 +10254,7 @@ Banners
   transition: all .2s linear;
 }
 .m-top-link:hover{
-  background:rgba(145, 205, 215, 0.16) url(../img/tile.png) 0 0 repeat;
+  background:rgba(145, 205, 215, 0.16) url(../img/spoiler.png) 0 0 repeat;
 }
 .bet-wms .prwms_ico b{
   font-size: 30px;
@@ -10510,7 +10512,7 @@ Banners
 /*.news-top*/
 .news-soc{
   text-align: center;
-  margin: 60px 0 0 0;
+  margin: 30px 0 0 0;
   padding: 0;
 }
 .news-soc li{
@@ -10597,26 +10599,24 @@ Banners
 }
 .news-text h5{
   color: #82ac4e;
+  text-transform: uppercase;
 }
 .news-text .tags{
-  padding: 15px 0 35px 0;
-  color:#2faee7;
   position: relative;
-  padding: 0 0 0 80px;
+  padding: 10px 0 0 40px;
 }
 .news-text .tags i{
-  font-size: 24px;
+  font-size: 18px;
   display: block;
-  top: 0;
+  top: 13px;
   left: 0;
   position: absolute;
-  margin: 0px 20px;
+  margin: 0 10px;
 }
 .news-text .tags a{
   display: inline;
   padding: .3em .4em;
   line-height: 1;
-  color: #2faee7;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -10625,7 +10625,8 @@ Banners
 .news-text .sub_ms{
   background-position: 100% 0;
   background-repeat: no-repeat;
-  margin: 30px 0;
+  margin: 20px 0 10px;
+  border-bottom: 1px solid #454a4e;
 }
 .news-text .sub_ms .sub_m{
   padding: 10px;
@@ -10640,11 +10641,23 @@ Banners
 .news-text .sub_ms .sub_m:nth-child(even) {
   background: rgba(67, 75, 78, 0.4);
 }
+.news-text .sub_ms .sub_m .tri{
+  display: block;
+  float: left;
+  margin: 5px 12px 0 0;
+  box-shadow: 0 0 0 2px #454a4e;
+}
+.news-text .sub_ms .sub_m .tri span{
+  display: block;
+}
+.news-text .sub_ms .sub_m .tri span img{
+  display: block;
+}
 .news-text .sub_ms .sub_m .si{
   border-radius: 50%;
   display: block;
   float: left;
-  margin: -1px 12px 0 0;
+  margin: -4px 12px 0 0;
   box-shadow: 0 0 0 2px #454a4e;
 }
 .news-text .sub_ms .sub_m .si span{
@@ -10663,7 +10676,7 @@ Banners
   font-size: 14px;
   color: #fff;
   font-weight: 300;
-  margin: 6px 0 4px 0;
+  margin: 3px 0 2px 0;
 }
 .news-text .sub_ms .sub_m h4 a{
   font-size: 15px;
@@ -10731,7 +10744,7 @@ Banners
   font-size: 21px;
   font-weight: 300;
   margin: 20px 0;
-  background:rgba(145, 205, 215, 0.16) url(../img/tile.png) 0 0 repeat;/*
+  background:rgba(145, 205, 215, 0.02) url(../img/spoiler.png) 0 0 repeat;/*
     background:
     radial-gradient(#243e42 15%, transparent 16%) 0 0,
     radial-gradient(#243e42 15%, transparent 16%) 8px 8px,
@@ -10835,21 +10848,22 @@ Block ramka
 .tr_block{
   border:1px solid #425e63;
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
+  background: rgba(145, 205, 215, 0.1) url(../img/tile.png) 0 0 repeat;
   
 }
 .tr_block .tr_img{
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: -15px;
   border-bottom:1px solid #425e63;
 }
 .tr_block h4{
   text-align: center;
   color:#fff;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 18px;
   line-height: 24px;
-  margin-bottom: 15px;
+  margin: 0 0 10px 0;
 }
 .tr_block h4 span{
   text-transform: uppercase;
@@ -10860,6 +10874,11 @@ Block ramka
 .tr_block h4 a{
   text-decoration: none;
   color:#fff;
+  display: inline-block;
+  background: #2e3337;
+  padding: 4px 14px;
+  border-radius: 20px;
+  box-shadow: 0 -1px #425e63;
 }
 .tr_block h4 a:hover{
   text-decoration: underline;
@@ -10868,7 +10887,7 @@ Block ramka
   width: 100%;
 }
 .tr_block div{
-  padding: 10px 10px 30px 10px;
+  padding: 0px 10px 10px 10px;
 }
 .tr_block div table{
   width: 100%;
@@ -10924,11 +10943,7 @@ Block ramka
   background-image: url(../img/tric-p.svg);
 }
 .nw{
-  margin-bottom: 35px;
-
-}
-.nw .m-top-cont{
-
+  margin-bottom: 15px;
 }
 .nw .tse-sc{
   font-size: 12px;
@@ -10939,7 +10954,9 @@ Block ramka
   margin-bottom: -10px;
 }
 .nw .tse-sc table.nkf tr:nth-of-type(2n+1) {
-  background-color: #373e41;
+  background: rgba(54, 59, 64, 0.54);
+  border-bottom: 1px solid rgba(26, 31, 33, 0.25);
+  border-top: 1px solid rgba(75, 80, 82, 0.65);
 }
 .nw .tse-sc table.nkf td{
   padding: 8px 3px;
@@ -10994,30 +11011,35 @@ Block ramka
   position: relative;
   width: 100%;
   background: transparent;
-  padding: 0 20px 5px;
+  padding: 0 10px;
+  margin-top: 10px;
 }
-.nw .subs >div{
+.nw .subs >.row{
+  margin: 0 -2px;
+}
+.nw .subs >.row >div{
+  padding: 0 2px;
   position: relative;
-  margin: 0 0 5px 0;
 }
-.nw .subs >div .btn-group{
+.nw .subs >.row >div .btn-group{
   display: block;
 }
-.nw .subs >div .btn-group .btn{
+.nw .subs >.row >div .btn-group .btn{
   float:none;
   width: 100%;
   text-align: left;
   padding-left: 8px;
   color: #949494;
 }
-.nw .subs >div .btn-group .btn .caret{
+.nw .subs >.row >div .btn-group .btn .caret{
   float: right;
 }
-.nw .subs >div .btn-group .btn i{
+.nw .subs >.row >div .btn-group .btn i{
   margin-right: 6px;
 }
-.nw .subs >div input{
+.nw .subs >.row >div input{
   width:100%;
+  padding-left: 8px;
 }
 /*nw*/
 .n_com{
@@ -13009,71 +13031,35 @@ section.hero.pageTourHero .stage ul li a span {
 section.hero.pageTourHero .btn-group{
   position: relative;
   margin-top: -3px;
-  z-index: 1;
   float: right;
+  z-index: 3;
 }
 .t-top{
   background: #2e3338;
 }
-.t-top .t-card{
-  background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
-  margin-bottom: 15px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-.t-top .t-card .t-card-bg{
-  background: url(../img/pava.png) no-repeat scroll 0 100%;
-  border: 1px solid rgb(27, 43, 56);
-  overflow: hidden;
-}
-.t-top .t-card .t-card-bg .tLogo {
+.t-block .pAvaBg .tLogo {
   text-align: center;
   padding: 0;
   display: block;
 }
-.t-top .t-card .t-card-bg .tLogo img {
+.t-block .pAvaBg .tLogo img {
   display: inline;
   width: 100%;
 }
-.t-top .t-card .t-card-bg .pInf {
-  padding: 20px 15px 15px;
-  position: relative;
+.t-block .pAvaBg .pInf table {
+  margin-bottom: 15px;
 }
-.t-top .t-card .t-card-bg .pInf .mlh {
-  margin-bottom: 0px;
-  padding-right: 0;
+.t-block .pAvaBg .pInf .mlh {
   text-align: left;
 }
-.t-top .t-card .t-card-bg .pInf .mlh span {
+.t-block .pAvaBg .pInf .mlh span {
   padding-left: 0;
 }
-.t-top .t-card .t-card-bg .pInf .mlh span:after {
+.t-block .pAvaBg .pInf .mlh span:after {
   margin-top: -17px;
 }
-.t-top .t-card .t-card-bg .pInf table {
-  width: 100%;
-  margin-bottom: 20px;
-}
-.t-top .t-card .t-card-bg .pInf table tr {
-  border-bottom: 1px solid #424d56;
-}
-.t-top .t-card .t-card-bg .pInf table tr td {
+.t-block .pAvaBg .pInf p{
   font-size: 12px;
-  width: 50%;
-  padding: 3px 0;
-}
-.t-top .t-card .t-card-bg .pInf p{
-  font-size: 12px;
-}
-.t-top .t-card .t-card-bg .fans {
-  position: relative;
-  padding: 0 10px 20px;
-  text-align: center;
-}
-.t-top .t-card .t-card-bg .fans .btn {
-  position: relative;
-}
-.t-top .t-card .t-card-bg .fans .btn i {
-  margin-right: 10px;
 }
 .teams-block{
   text-align: center;
@@ -13094,18 +13080,22 @@ section.hero.pageTourHero .btn-group{
   display: inline-block;
   text-overflow: ellipsis;
   max-width: 100%;
+  line-height: 1;
+}
+.teams-block .tb span{
+  font-size: 12px;
 }
 .teams-block .tb > div{
   position: relative;
 }
 .teams-block .tb > div figure{
-  height: 90px;
-  line-height: 90px;
+  height: 70px;
+  line-height: 70px;
   margin: 0;
 }
 .teams-block .tb > div figure img{
-  max-width: 70%;
-  max-height: 70%;
+  max-width: 80%;
+  max-height: 80%;
 }
 .teams-block .tb > div .teamcard{
   top: 0;
@@ -13135,7 +13125,7 @@ section.hero.pageTourHero .btn-group{
 .teams-block .tb > div .teamcard table td{
   color: #a6c6cb;
   text-align: left;
-  padding: 3px 1px;
+  padding: 1px 1px;
   font-size: 11px;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -13148,12 +13138,12 @@ section.hero.pageTourHero .btn-group{
   text-align: center;
   list-style: none;
   padding: 0;
-  margin: 0 0 10px 0;
+  margin: 0 0 0 0;
 }
 .teams-block-sm ul li{
   display: inline-block;
-  width: 10%;
-  margin: 5px .8% 12px;
+  width: 11%;
+  margin: 5px .5% 5px;
   padding: 3px 0 0 0;
   text-align: center;
   background: rgba(55, 66, 76, 0.4) url(../img/spoiler.png) repeat scroll 0 0;

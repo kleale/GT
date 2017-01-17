@@ -48,8 +48,8 @@
       <section class="t-top m-sec">
         <div class="row">
           <div class="col-md-4">
-            <div class="t-card">
-              <div class="t-card-bg">
+            <div class="pAva t-block">
+              <div class="pAvaBg">
                 <span class="tLogo">
                   <img src="http://ggscore.com/media/tournament/pic-20160831-478x178-7586446600.jpeg" alt="WESG">
                 </span>
@@ -85,7 +85,7 @@
                   <a href="#" class="btn btn-primary tip" title="Подписаться на новости и уведомления о матчах"><i class="gti-flag-o"></i>Подписаться</a>
                 </div>
               </div>
-              </div>
+            </div>
           </div>
           <div class="col-md-8">
             <h3 class="mlh"><span>Приглашенные команды</span></h3>
@@ -112,18 +112,27 @@
               {% endfor %}
             </div>
             <h3 class="mlh"><span>Прошедшие квалификацию <b class="badge">24</b></span></h3>
-            <div class="teams-block-sm t-b-md">
-              <ul>
+            <div class="teams-block">
                 {% for i in 1..24 %}
-                  <li>
-                    <a href="/en/dota-2/team/wings" class="team-pop" data-content="<table>{% for i in 1..5 %}<tr><th>{{i}}</th><td><img src='http://game-tournaments.com/media/flag/{{random(flag)}}.png' width='16px'>&nbsp;<a href=''>{{random(player)}}</a></td></tr>{% endfor %}</table>">
-                      <span>{{random(team)}}</span>
-                      <img class="logo" style="width:30px" src="http://game-tournaments.com/media/logo/{{random(logo)}}">
-                      <b>Americas Qualifier</b>
-                    </a>
-                  </li>
+                  <div class="tb">
+                  <a href="">{{random(team)}}</a>
+                  <div>
+                    <figure>
+                      <img alt="Evil Geniuses" src="http://game-tournaments.com/media/logo/{{random(logo)}}">
+                    </figure>
+                    <div class="teamcard">
+                       <table>
+                        {% for i in 1..5 %}
+                          <tr>
+                            <th>{{i}}</th><td><a href="" title="Russia"><img alt="Russia" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" width="16"></a>&nbsp;<a href="" title="{{random(player)}}">{{random(player)}}</a></td>
+                          </tr>
+                        {% endfor %}
+                      </table>
+                    </div>
+                  </div>
+                  <span>Americas Qualifier</span>
+                </div>
                 {% endfor %}
-              </ul>
             </div>
           </div>
         </div>
@@ -133,18 +142,36 @@
         <h3 class="mlh"><span>Остальные команды <b class="badge">76</b></span></h3>
         <div class="teams-block-sm">
           <ul>
-            {% for i in 1..16 %}
+            {% for i in 1..32 %}
               <li>
                 <a href="/en/dota-2/team/wings" class="team-pop" data-content="<table>{% for i in 1..5 %}<tr><th>{{i}}</th><td><img src='http://game-tournaments.com/media/flag/{{random(flag)}}.png' width='16px'>&nbsp;<a href=''>{{random(player)}}</a></td></tr>{% endfor %}</table>">
-                  <img class="logo" style="width:30px" src="http://game-tournaments.com/media/logo/{{random(logo)}}">
+                  {#<img class="logo" style="width:30px" src="http://game-tournaments.com/media/logo/{{random(logo)}}">#}
                   <span>{{random(team)}}</span>
                 </a>
               </li>
             {% endfor %}
           </ul>
-          <center>
-            <a href="" class="btn btn-default btn-sm">Показать все</a>
+          <ul class="collapse" id="collapseOther">
+            {% for i in 1..32 %}
+              <li>
+                <a href="/en/dota-2/team/wings" class="team-pop" data-content="<table>{% for i in 1..5 %}<tr><th>{{i}}</th><td><img src='http://game-tournaments.com/media/flag/{{random(flag)}}.png' width='16px'>&nbsp;<a href=''>{{random(player)}}</a></td></tr>{% endfor %}</table>">
+                  {#<img class="logo" style="width:30px" src="http://game-tournaments.com/media/logo/{{random(logo)}}">#}
+                  <span>{{random(team)}}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+          <center style="margin-top:10px;">
+            <a class="btn btn-default btn-sm" id="p_collapser" data-toggle="collapse" href="#collapseOther">Показать все</a>
           </center>
+
+          <script>
+            $(document).ready(function () {
+              $('#p_collapser').click(function(){
+                $(this).html() == "Скрыть" ? $(this).html('Показать все') : $(this).html('Скрыть');
+              });
+            });
+          </script>
         </div>
       </section>
       
@@ -465,10 +492,36 @@
         </div>
       </section>
       
+      <section class="m-sec m-odd">
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="mlh" style="margin-bottom: -14px;"><span>Последние матчи</span></h3>
+            {% include "template/game-home/match-list-live.html" %}
+            {% include "template/pager.html" %}
+
+            {% include "template/game-home/match-list-future.html" %}
+            {% include "template/pager.html" %}
+
+            {% include "template/game-home/match-list-past.html" %}
+            {% include "template/pager.html" %}
+          </div>
+          <div class="col-md-6">
+            {% include "template/tours/newslist.html" %}
+            {% include "template/pager.html" %}
+          </div>
+        </div>
+      </section>
+      
+      {#
       <section class="grid">
         {% include "template/players/blockzames-grid.html" %}
       </section>
-      
+      #}
+      {#
+      <section id="m-zames" class="m-sec m-even m-zames">
+        {% include "template/blockzames.html" %}
+      </section>
+      #}
       {#
       <section id="m-news" class="m-sec m-even">
         <div class="row">
@@ -481,11 +534,7 @@
         </div>
       </section>
       #}
-      {#
-      <section id="m-zames" class="m-sec m-even m-zames">
-        {% include "template/blockzames.html" %}
-      </section>
-      #}
+      
       <div class="bn">
         <img src="../img/ad.jpg" alt="">
       </div>
