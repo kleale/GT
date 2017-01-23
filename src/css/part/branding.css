@@ -812,7 +812,7 @@ LIVE BLOCK
 .livebet{
   font-size: .9em;
   background: #37424c url("../img/spoiler.png") repeat scroll 0 0;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   
   h3 {

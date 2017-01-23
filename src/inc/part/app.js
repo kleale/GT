@@ -55,6 +55,7 @@
         
     // scrolls in tabs and blocks
     $('.tse-sc').perfectScrollbar(); 
+    $('.ps').perfectScrollbar();
     
     // bar toggle on mobile
     $(".stage em").click(function() {

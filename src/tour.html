@@ -13,527 +13,174 @@
   <div class="container mainwrap">
     {% include "template/breadcrumbs.html" %}
     <div class="otstup">
-      <section class="hero pageTourHero" style="background-image:url(http://ggscore.com/media/tournament/pic-20160831-478x178-7586446600.jpeg);">
-      <div class="btn-group">
-        <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Предыдущие сезоны WESG<span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="#">2016</a></li>
-          <li><a href="#">2015</a></li>
-          <li><a href="#">2014</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Что-то другое</a></li>
-        </ul>
-      </div>
-      <h1>Dota 2 турнир WESG </h1>
-      <div class="stage">
-        <em><b>3</b>China <span class="caret"></span></em>
-        <ul>
-          <li class="s-pass"><a href=""><b>1</b><span>Квалификация</span></a></li>
-          <li class="s-pass"><a href=""><b>2</b><span>Групповой раунд</span></a></li>
-          <li class="active"><a href=""><b>3</b><span>China</span></a></li>
-          <li><a href=""><b>4</b><span>China #2</span></a></li>
-          <li><a href=""><b>5</b><span>America</span></a></li>
-          <li><a href=""><b>6</b><span>America #2</span></a></li>
-          <li><a href=""><b>7</b><span>SEA</span></a></li>
-          <li><a href=""><b>8</b><span>SEA #2</span></a></li>
-          <li><a href=""><b>9</b><span>Europe</span></a></li>
-          <li><a href=""><b>10</b><span>Europe #2</span></a></li>
-          <li><a href=""><b>11</b><span>Финал</span></a></li>
-        </ul>
-      </div>
-      <!--<h1><span>WESG</span></h1>-->
-    </section>
-      <section class="t-top m-sec">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="pAva t-block">
-              <div class="pAvaBg">
-                <span class="tLogo">
-                  <img src="http://ggscore.com/media/tournament/pic-20160831-478x178-7586446600.jpeg" alt="WESG">
-                </span>
-                <div class="pInf">
-                  <h1 class="mlh"><span>Dota 2 турнир WESG</span></h1>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td width="200px">Турнир проводится</td>
-                        <td>с 12 января, 2017</td>
-                      </tr>
-                      <tr>
-                        <td>Дата окончания</td>
-                        <td>22 января, 2017</td>
-                      </tr>
-                      <tr>
-                        <td>Призовой фонд</td>
-                        <td><b>$ 1,700,000</b></td>
-                      </tr>
-                      <tr>
-                        <td>Команд участвует</td>
-                        <td>105</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p>
-                    Турнир World Electronic Sports Games проводится китайским интернет-гигантом Alibaba Group. Эта организация решила провести самый масштабный киберспортивный турнир в мире. И это у них получилось.
-                    </p><p>
-                    Призовой фонд региональных отборочных в Европе и СНГ составит $205,000, а 8 лучших команд по Dota 2 и CS:GO и 8 сильнейших игроков по индивидуальным дисциплинам — HearthStone и StarCraft 2 — отправятся на WESG Global Grand Final, который пройдёт с 6-го по 9-ое октября в Киеве, Украина, а призовой фонд которого $3,7 млн.
-                  </p>
-                </div>
-                <div class="fans">
-                  <a href="#" class="btn btn-primary tip" title="Подписаться на новости и уведомления о матчах"><i class="gti-flag-o"></i>Подписаться</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <h3 class="mlh"><span>Приглашенные команды</span></h3>
-            <div class="teams-block">
-              {% for i in 1..5 %}
-                <div class="tb">
-                  <a href="">{{random(team)}}</a>
-                  <div>
-                    <figure>
-                      <img alt="Evil Geniuses" src="http://game-tournaments.com/media/logo/{{random(logo)}}">
-                    </figure>
-                    <div class="teamcard">
-                       <table>
-                        {% for i in 1..5 %}
-                          <tr>
-                            <th>{{i}}</th><td><a href="" title="Russia"><img alt="Russia" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" width="16"></a>&nbsp;<a href="" title="{{random(player)}}">{{random(player)}}</a></td>
-                          </tr>
-                        {% endfor %}
-                      </table>
-                    </div>
-                  </div>
-                  <span>Invited</span>
-                </div>
-              {% endfor %}
-            </div>
-            <h3 class="mlh"><span>Прошедшие квалификацию <b class="badge">24</b></span></h3>
-            <div class="teams-block">
-                {% for i in 1..24 %}
-                  <div class="tb">
-                  <a href="">{{random(team)}}</a>
-                  <div>
-                    <figure>
-                      <img alt="Evil Geniuses" src="http://game-tournaments.com/media/logo/{{random(logo)}}">
-                    </figure>
-                    <div class="teamcard">
-                       <table>
-                        {% for i in 1..5 %}
-                          <tr>
-                            <th>{{i}}</th><td><a href="" title="Russia"><img alt="Russia" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" width="16"></a>&nbsp;<a href="" title="{{random(player)}}">{{random(player)}}</a></td>
-                          </tr>
-                        {% endfor %}
-                      </table>
-                    </div>
-                  </div>
-                  <span>Americas Qualifier</span>
-                </div>
-                {% endfor %}
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="m-sec m-odd">
-        <h3 class="mlh"><span>Остальные команды <b class="badge">76</b></span></h3>
-        <div class="teams-block-sm">
+      <section class="t-top">
+        <div class="heroBg" style="background-image:url(http://ggscore.com/media/tournament/pic-20160831-478x178-7586446600.jpeg);"></div>
+        <h1><a href="/en/dota-2" title="Tournaments">Dota 2</a> турнир WESG </h1>
+        <div class="stage">
+          <em><b>3</b>China <span class="caret"></span></em>
           <ul>
-            {% for i in 1..32 %}
-              <li>
-                <a href="/en/dota-2/team/wings" class="team-pop" data-content="<table>{% for i in 1..5 %}<tr><th>{{i}}</th><td><img src='http://game-tournaments.com/media/flag/{{random(flag)}}.png' width='16px'>&nbsp;<a href=''>{{random(player)}}</a></td></tr>{% endfor %}</table>">
-                  {#<img class="logo" style="width:30px" src="http://game-tournaments.com/media/logo/{{random(logo)}}">#}
-                  <span>{{random(team)}}</span>
-                </a>
-              </li>
-            {% endfor %}
+            <li class="s-pass"><a href=""><b>1</b><span>Квалификация</span></a></li>
+            <li class="s-pass"><a href=""><b>2</b><span>Групповой раунд</span></a></li>
+            <li class="active"><a href=""><b>3</b><span>China</span></a></li>
+            <li><a href=""><b>4</b><span>China #2</span></a></li>
+            <li><a href=""><b>5</b><span>America</span></a></li>
+            <li><a href=""><b>6</b><span>America #2</span></a></li>
+            <li><a href=""><b>7</b><span>SEA</span></a></li>
+            <li><a href=""><b>8</b><span>SEA #2</span></a></li>
+            <li><a href=""><b>9</b><span>Europe</span></a></li>
+            <li><a href=""><b>10</b><span>Europe #2</span></a></li>
+            <li><a href=""><b>11</b><span>Финал</span></a></li>
           </ul>
-          <ul class="collapse" id="collapseOther">
-            {% for i in 1..32 %}
-              <li>
-                <a href="/en/dota-2/team/wings" class="team-pop" data-content="<table>{% for i in 1..5 %}<tr><th>{{i}}</th><td><img src='http://game-tournaments.com/media/flag/{{random(flag)}}.png' width='16px'>&nbsp;<a href=''>{{random(player)}}</a></td></tr>{% endfor %}</table>">
-                  {#<img class="logo" style="width:30px" src="http://game-tournaments.com/media/logo/{{random(logo)}}">#}
-                  <span>{{random(team)}}</span>
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-          <center style="margin-top:10px;">
-            <a class="btn btn-default btn-sm" id="p_collapser" data-toggle="collapse" href="#collapseOther">Показать все</a>
-          </center>
-
-          <script>
-            $(document).ready(function () {
-              $('#p_collapser').click(function(){
-                $(this).html() == "Скрыть" ? $(this).html('Показать все') : $(this).html('Скрыть');
-              });
-            });
-          </script>
+        </div>
+        <div class="thd">
+          <div class="row">
+            <div class="col-md-4">
+              {% include "template/tours/tour-block.html" %}
+            </div>
+            <div class="col-md-8">
+              <h3 class="mlh"><span>Приглашенные команды</span></h3>
+              <div class="teams-block">
+                {% for i in 1..5 %}
+                  <div class="tb">
+                    <a href="">{{random(team)}}</a>
+                    <div>
+                      <figure>
+                        <img alt="Evil Geniuses" src="http://game-tournaments.com/media/logo/{{random(logo)}}">
+                      </figure>
+                      <div class="teamcard">
+                         <table>
+                          {% for i in 1..5 %}
+                            <tr>
+                              <th>{{i}}</th><td><a href="" title="Russia"><img alt="Russia" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" width="16"></a>&nbsp;<a href="" title="{{random(player)}}">{{random(player)}}</a></td>
+                            </tr>
+                          {% endfor %}
+                        </table>
+                      </div>
+                    </div>
+                    <span>Invited</span>
+                  </div>
+                {% endfor %}
+              </div>
+              <h3 class="mlh"><span>Прошедшие квалификацию <b class="badge">24</b></span></h3>
+              <div class="teams-block">
+                  {% for i in 1..24 %}
+                    <div class="tb">
+                    <a href="">{{random(team)}}</a>
+                    <div>
+                      <figure>
+                        <img alt="Evil Geniuses" src="http://game-tournaments.com/media/logo/{{random(logo)}}">
+                      </figure>
+                      <div class="teamcard">
+                         <table>
+                          {% for i in 1..5 %}
+                            <tr>
+                              <th>{{i}}</th><td><a href="" title="Russia"><img alt="Russia" src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" width="16"></a>&nbsp;<a href="" title="{{random(player)}}">{{random(player)}}</a></td>
+                            </tr>
+                          {% endfor %}
+                        </table>
+                      </div>
+                    </div>
+                    <span>Americas Qualifier</span>
+                  </div>
+                  {% endfor %}
+              </div>
+              <center>
+                <a href="http://ggscore.com/ru/dota-2/team?event=1171" class="btn btn-default btn-sm">Остальные команды</a>
+              </center>
+            </div>
+          </div>
         </div>
       </section>
       
       <section class="m-sec m-even">
         <div class="row">
-          <div class="col-sm-8">
+          <div class="col-md-8">
+
             <h3 class="mlh"><span>О турнире WESG</span></h3>
             <div class="ppcontent">
-              <h2>Региональные квалификации</h2>
-              <p>Региональные квалификации WESG пройдут в четырех регионах: SEA, Европа и СНГ, Северная и Южная Америка, Африка и Средний Восток.</p>
-              <p>
-                <a class="fancybox" href="http://starladder.com/content/uploads/2016/08/Europe_infographics_FullHD_rus-6.jpg"><img class="img-responsive" src="http://starladder.com/content/uploads/2016/08/Europe_infographics_FullHD_rus-6.jpg" alt=""></a>
-              </p>
-              <p>Как зарегистрироваться на турнир вы можете узнать перейдя <a href="/go?url=https://wesg.starladder.com/en/dota2/faqs/27">по ссылке</a></p>
-              <h3>Africa &amp; Middle East</h3>
-              <p><span style="text-decoration: underline;">Открытые квалификации</span> (топ 2 команды проходят в региональную квалификацию)&nbsp;</p>
-              <ul>
-                <li>Турция (13 августа) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1345">полная сетка</a>&nbsp;</li>
-                <li>N &amp; W Африка (13 августа) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1346">полная сетка</a>&nbsp;</li>
-                <li>S &amp; E Африка (13 августа) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1347">полная сетка</a>&nbsp;</li>
-                <li>Средний восток (13 августа) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1348">полная сетка</a>&nbsp;</li>
-              </ul>
-              <p><span style="text-decoration: underline;">Региональная квалификация</span> (LAN финал в Дубае)&nbsp;</p>
-              <ul>
-                <li><a href="/dota-2/wesg/mea-group">2 группы</a> по 4 команды, BO1 матчи, Топ 2 команды каждой группы проходят в Плей-офф</li>
-                <li><a href="/dota-2/wesg/mea-group">Плей-офф</a> single elimination сетка&nbsp;на 4 команды</li>
-                <li>Топ 3 команды проходят в Global Grand Finals</li>
-              </ul>
-              <h3>Europe &amp; CIS</h3>
-              <p><span style="text-decoration: underline;">Открытые квалификации</span> (число слотов на региональную квалификацию указано в скобках)&nbsp;</p>
-              <ul>
-                <li>UK, Ireland &amp; Iceland (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1357">полная сетка</a></li>
-                <li>N Europe &amp; Post CIS (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1355">полная сетка</a>&nbsp;</li>
-                <li>South-Eastern Europe (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1350">полная сетка</a></li>
-                <li>Benelux (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1360">полная сетка</a></li>
-                <li>Central Europe (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1353">полная сетка</a></li>
-                <li>Iberia (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1352">полная сетка</a></li>
-                <li>Adriatica (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1349">полная сетка</a></li>
-                <li>France and Monaco (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1351">полная сетка</a>&nbsp;</li>
-                <li>Sweden (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1354">полная сетка</a></li>
-                <li>Germany (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1358">полная сетка</a></li>
-                <li>Poland (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1363">полная сетка</a></li>
-                <li>Russia (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1356">полная сетка</a></li>
-                <li>Ukraine (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1362">полная сетка</a></li>
-                <li>Denmark (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1359">полная сетка</a></li>
-                <li>Norway (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1361">полная сетка</a></li>
-              </ul>
-              <p><span style="text-decoration: underline;">Региональная квалификация</span> (LAN финал в Киеве)&nbsp;</p>
-              <ul>
-                <li>Дата проведения: 2016-10-06</li>
-                <li>20 команд&nbsp;</li>
-                <li>Топ 8 команд проходят в Global Grand Finals</li>
-              </ul>
-              <h3>Group Stage</h3>
-              <ul>
-                <li>4 группы по 6 команд</li>
-                <li>Round-Robin</li>
-                <li>Команды с первого места проходят в 1/4 финала</li>
-                <li>Последние 3 команды каждой группы покидают турнир</li>
-              </ul>
-              <h3>Playoff</h3>
-              <ul>
-                <li>Single-Elimination сетка</li>
-                <li>Best-of-3 матчи</li>
-              </ul>
+                <h2>Региональные квалификации</h2>
+                <p>Региональные квалификации WESG пройдут в четырех регионах: SEA, Европа и СНГ, Северная и Южная Америка, Африка и Средний Восток.</p>
+                <p>
+                  <a class="fancybox" href="http://starladder.com/content/uploads/2016/08/Europe_infographics_FullHD_rus-6.jpg"><img class="img-responsive" src="http://starladder.com/content/uploads/2016/08/Europe_infographics_FullHD_rus-6.jpg" alt=""></a>
+                </p>
+                <p>Как зарегистрироваться на турнир вы можете узнать перейдя <a href="/go?url=https://wesg.starladder.com/en/dota2/faqs/27">по ссылке</a></p>
+                <h3>Africa &amp; Middle East</h3>
+                <p><span style="text-decoration: underline;">Открытые квалификации</span> (топ 2 команды проходят в региональную квалификацию)&nbsp;</p>
+                <ul>
+                  <li>Турция (13 августа) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1345">полная сетка</a>&nbsp;</li>
+                  <li>N &amp; W Африка (13 августа) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1346">полная сетка</a>&nbsp;</li>
+                  <li>S &amp; E Африка (13 августа) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1347">полная сетка</a>&nbsp;</li>
+                  <li>Средний восток (13 августа) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1348">полная сетка</a>&nbsp;</li>
+                </ul>
+                <p><span style="text-decoration: underline;">Региональная квалификация</span> (LAN финал в Дубае)&nbsp;</p>
+                <ul>
+                  <li><a href="/dota-2/wesg/mea-group">2 группы</a> по 4 команды, BO1 матчи, Топ 2 команды каждой группы проходят в Плей-офф</li>
+                  <li><a href="/dota-2/wesg/mea-group">Плей-офф</a> single elimination сетка&nbsp;на 4 команды</li>
+                  <li>Топ 3 команды проходят в Global Grand Finals</li>
+                </ul>
+                <h3>Europe &amp; CIS</h3>
+                <p><span style="text-decoration: underline;">Открытые квалификации</span> (число слотов на региональную квалификацию указано в скобках)&nbsp;</p>
+                <ul>
+                  <li>UK, Ireland &amp; Iceland (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1357">полная сетка</a></li>
+                  <li>N Europe &amp; Post CIS (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1355">полная сетка</a>&nbsp;</li>
+                  <li>South-Eastern Europe (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1350">полная сетка</a></li>
+                  <li>Benelux (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1360">полная сетка</a></li>
+                  <li>Central Europe (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1353">полная сетка</a></li>
+                  <li>Iberia (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1352">полная сетка</a></li>
+                  <li>Adriatica (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1349">полная сетка</a></li>
+                  <li>France and Monaco (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1351">полная сетка</a>&nbsp;</li>
+                  <li>Sweden (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1354">полная сетка</a></li>
+                  <li>Germany (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1358">полная сетка</a></li>
+                  <li>Poland (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1363">полная сетка</a></li>
+                  <li>Russia (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1356">полная сетка</a></li>
+                  <li>Ukraine (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1362">полная сетка</a></li>
+                  <li>Denmark (2) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1359">полная сетка</a></li>
+                  <li>Norway (1) - <a href="/go?url=https://wesg.starladder.com/en/dota2/tournaments/1361">полная сетка</a></li>
+                </ul>
+                <p><span style="text-decoration: underline;">Региональная квалификация</span> (LAN финал в Киеве)&nbsp;</p>
+                <ul>
+                  <li>Дата проведения: 2016-10-06</li>
+                  <li>20 команд&nbsp;</li>
+                  <li>Топ 8 команд проходят в Global Grand Finals</li>
+                </ul>
+                <h3>Group Stage</h3>
+                <ul>
+                  <li>4 группы по 6 команд</li>
+                  <li>Round-Robin</li>
+                  <li>Команды с первого места проходят в 1/4 финала</li>
+                  <li>Последние 3 команды каждой группы покидают турнир</li>
+                </ul>
+                <h3>Playoff</h3>
+                <ul>
+                  <li>Single-Elimination сетка</li>
+                  <li>Best-of-3 матчи</li>
+                </ul>
+              </div>
+
+            <div class="t-m-block">
+               <h3 class="mlh" style="margin-bottom: -14px;"><span>Последние матчи</span></h3>
+
+              {% include "template/match-list/match-list2.html" %}
+
+              {% include "template/match-list/match-list-future.html" %}
+
+              {% include "template/match-list/match-list-past.html" %}
+              {% include "template/pager.html" %}
             </div>
           </div>
-          <div class="col-sm-4">
-            <div class="prizes">
-                <h4 class="mlh"><span>Призовые места</span></h4>
-                <table class="places">
-                  <tbody>
-                    <tr class="first-place">
-                      <td><b>1</b></td>
-                      <td><a href="/dota-2/team/tnc-gaming" class="teamname1 team-pop" data-content="<table>{% for i in 1..5 %}<tr><th>{{i}}</th><td><img src='http://game-tournaments.com/media/flag/{{random(flag)}}.png' width='16px'>&nbsp;<a href=''>{{random(player)}}</a></td></tr>{% endfor %}</table>"><img class="logo" style="width:25px" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"> TnC</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>800,000</span></td>
-                    </tr>
-                    <tr class="second-place">
-                      <td><b>2</b></td>
-                      <td> <a href="/dota-2/team/cloud9" class="teamname1 team-pop" data-content="<table>{% for i in 1..5 %}<tr><th>{{i}}</th><td><img src='http://game-tournaments.com/media/flag/{{random(flag)}}.png' width='16px'>&nbsp;<a href=''>{{random(player)}}</a></td></tr>{% endfor %}</table>"><img class="logo" style="width:25px" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"> Cloud9</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>400,000</span></td>
-                    </tr>
-                    <tr class="third-place">
-                      <td><b>3</b></td>
-                      <td> <a href="/dota-2/team/alliance" class="teamname1 team-pop" data-content="<table>{% for i in 1..5 %}<tr><th>{{i}}</th><td><img src='http://game-tournaments.com/media/flag/{{random(flag)}}.png' width='16px'>&nbsp;<a href=''>{{random(player)}}</a></td></tr>{% endfor %}</table>"><img class="logo" style="width:25px" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"> Alliance</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>200,000</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>4</b></td>
-                      <td> <a href="/dota-2/team/infamous" class="teamname1 team-pop" data-content="<table>{% for i in 1..5 %}<tr><th>{{i}}</th><td><img src='http://game-tournaments.com/media/flag/{{random(flag)}}.png' width='16px'>&nbsp;<a href=''>{{random(player)}}</a></td></tr>{% endfor %}</table>"><img class="logo" style="width:25px" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"> Infamous</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>60,000</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>5</b></td>
-                      <td> <a href="/dota-2/team/dilecom" class="teamname1"><img class="logo" style="width:25px" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"> DileCom</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>10,000</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>5</b></td>
-                      <td> <a href="/dota-2/team/sg-esports" class="teamname1"><img class="logo" style="width:25px" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"> SGe</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>10,000</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>5</b></td>
-                      <td> <a href="/dota-2/team/duobao-young" class="teamname1"><img class="logo" style="width:25px" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"> DUOBAO.Y</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>10,000</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>5</b></td>
-                      <td> <a href="/dota-2/team/tot" class="teamname1"><img class="logo" style="width:25px" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"> T.O.T.</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>10,000</span></td>
-                    </tr>
-                  </tbody>
-                </table>
+          <div class="col-md-4">
 
-                <h4 class="mlh"><span>MEA Playoff, WES</span></h4>
-                <table class="places">
-                  <tbody>
-                    <tr class="first-place">
-                      <td><b>1</b></td>
-                      <td> <a href="/dota-2/team/aboshamalah" class="teamname1">aboshamalah</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>29,965</span></td>
-                    </tr>
-                    <tr class="second-place">
-                      <td><b>2</b></td>
-                      <td> <a href="/dota-2/team/dp" class="teamname1">DP</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>17,979</span></td>
-                    </tr>
-                    <tr class="third-place">
-                      <td><b>3</b></td>
-                      <td> <a href="/dota-2/team/bvd" class="teamname1">bvd</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>8,989</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>4</b></td>
-                      <td> <a href="/dota-2/team/snd" class="teamname1">SnD</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>5,993</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>5</b></td>
-                      <td> <a href="/dota-2/team/white-rabbit" class="teamname1">White Rabbit</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>2,996</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>5</b></td>
-                      <td> <a href="/dota-2/team/psuedo-gaming" class="teamname1">pD</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>2,996</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>7</b></td>
-                      <td> <a href="/dota-2/team/knownfor" class="teamname1">k4</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>2,996</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>7</b></td>
-                      <td> <a href="/dota-2/team/pub-tr" class="teamname1">PUB.TR</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>2,996</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <h4 class="mlh"><span>EU Playoff, WES</span></h4>
-                <table class="places">
-                  <tbody>
-                    <tr class="first-place">
-                      <td><b>1</b></td>
-                      <td> <a href="/dota-2/team/imperial" class="teamname1">Imperial</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>29,970</span></td>
-                    </tr>
-                    <tr class="second-place">
-                      <td><b>2</b></td>
-                      <td> <a href="/dota-2/team/horde-sw" class="teamname1">Horde</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>17,982</span></td>
-                    </tr>
-                    <tr class="third-place">
-                      <td><b>3</b></td>
-                      <td> <a href="/dota-2/team/alliance" class="teamname1">Alliance</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>8,991</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>4</b></td>
-                      <td> <a href="/dota-2/team/ukraine" class="teamname1">Ukraine</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>5,994</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>5</b></td>
-                      <td> <a href="/dota-2/team/comanche" class="teamname1">Comanche</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>2,997</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>5</b></td>
-                      <td> <a href="/dota-2/team/romania" class="teamname1">Romania</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>2,997</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>5</b></td>
-                      <td> <a href="/dota-2/team/fantastic-5" class="teamname1">Fantastic Five</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>2,997</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>5</b></td>
-                      <td> <a href="/dota-2/team/ne-rusb" class="teamname1">Ne RuSb</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>2,997</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <h4 class="mlh"><span>AM Playoff, WES</span></h4>
-                <table class="places">
-                  <tbody>
-                    <tr class="first-place">
-                      <td><b>1</b></td>
-                      <td> <a href="/dota-2/team/infamous" class="teamname1">Infamous</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>30,000</span></td>
-                    </tr>
-                    <tr class="second-place">
-                      <td><b>2</b></td>
-                      <td> <a href="/dota-2/team/kingao-4" class="teamname1">Kingao+4</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>18,000</span></td>
-                    </tr>
-                    <tr class="third-place">
-                      <td><b>3</b></td>
-                      <td> <a href="/dota-2/team/dilecom" class="teamname1">DileCom</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>9,000</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>4</b></td>
-                      <td> <a href="/dota-2/team/t-show" class="teamname1">TShow</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>6,000</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>5</b></td>
-                      <td> <a href="/dota-2/team/team-one" class="teamname1">Team One</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>3,000</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>5</b></td>
-                      <td> <a href="/dota-2/team/vultur" class="teamname1">Vultur</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>3,000</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>7</b></td>
-                      <td> <a href="/dota-2/team/learn2gank" class="teamname1">L2G</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>3,000</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>7</b></td>
-                      <td> <a href="/dota-2/team/rebirth-esports" class="teamname1">RBT</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>3,000</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <h4 class="mlh"><span>China, WES</span></h4>
-                <table class="places">
-                  <tbody>
-                    <tr class="first-place">
-                      <td><b>1</b></td>
-                      <td> <a href="/dota-2/team/duobao-young" class="teamname1">DUOBAO.Y</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>14,985</span></td>
-                    </tr>
-                    <tr class="second-place">
-                      <td><b>2</b></td>
-                      <td> <a href="/dota-2/team/tot" class="teamname1">T.O.T.</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>7,492</span></td>
-                    </tr>
-                    <tr class="third-place">
-                      <td><b>3</b></td>
-                      <td> <a href="/dota-2/team/max-y" class="teamname1">MAX.Y</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>3,746</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <h4 class="mlh"><span>APAC, WES</span></h4>
-                <table class="places">
-                  <tbody>
-                    <tr class="first-place">
-                      <td><b>1</b></td>
-                      <td> <a href="/dota-2/team/tot" class="teamname1">T.O.T.</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>29,340</span></td>
-                    </tr>
-                    <tr class="second-place">
-                      <td><b>2</b></td>
-                      <td> <a href="/dota-2/team/nl5-reborn" class="teamname1">NL5.Reborn</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>17,604</span></td>
-                    </tr>
-                    <tr class="third-place">
-                      <td><b>3</b></td>
-                      <td> <a href="/dota-2/team/s1-lykos" class="teamname1">Lykos</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>8,802</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>4</b></td>
-                      <td> <a href="/dota-2/team/mith" class="teamname1">Signature</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>5,868</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>5</b></td>
-                      <td> <a href="/dota-2/team/max-y" class="teamname1">MAX.Y</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>2,934</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>5</b></td>
-                      <td> <a href="/dota-2/team/tnc-gaming" class="teamname1">TnC</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>2,934</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>7</b></td>
-                      <td> <a href="/dota-2/team/mvp-phoenix" class="teamname1">MVP Phoenix</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>2,934</span></td>
-                    </tr>
-                    <tr>
-                      <td><b>7</b></td>
-                      <td> <a href="/dota-2/team/mvp-aegis" class="teamname1">MVP Aegis</a> </td>
-                      <td><span class="teamraiting"><i class="fa fa-fw fa-usd"></i>2,934</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            {% include "template/liveblock.html" %}
+
+            <h4 class="mlh"><span>Новости турнира</span></h4>
+            {% include "template/news/newslist-block-mini.html" %}
+            {% include "template/pager.html" %}
+
           </div>
         </div>
       </section>
       
-      <section class="m-sec m-odd">
-        <div class="row">
-          <div class="col-md-6">
-            <h3 class="mlh" style="margin-bottom: -14px;"><span>Последние матчи</span></h3>
-            {% include "template/game-home/match-list-live.html" %}
-            {% include "template/pager.html" %}
 
-            {% include "template/game-home/match-list-future.html" %}
-            {% include "template/pager.html" %}
-
-            {% include "template/game-home/match-list-past.html" %}
-            {% include "template/pager.html" %}
-          </div>
-          <div class="col-md-6">
-            {% include "template/tours/newslist.html" %}
-            {% include "template/pager.html" %}
-          </div>
-        </div>
-      </section>
-      
-      {#
-      <section class="grid">
-        {% include "template/players/blockzames-grid.html" %}
-      </section>
-      #}
-      {#
-      <section id="m-zames" class="m-sec m-even m-zames">
-        {% include "template/blockzames.html" %}
-      </section>
-      #}
-      {#
-      <section id="m-news" class="m-sec m-even">
-        <div class="row">
-          <div class="col-md-7">
-            {% include "template/match-page/section-news.html" %}
-          </div>
-          <div class="col-md-5">
-            {% include "template/match-page/section-soc.html" %}
-          </div>
-        </div>
-      </section>
-      #}
       
       <div class="bn">
         <img src="../img/ad.jpg" alt="">

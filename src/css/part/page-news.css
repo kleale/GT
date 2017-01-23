@@ -87,15 +87,16 @@
   li{
     display: inline-block;
     a{
-      color: #fff;
-      text-decoration: none;
-      display: inline-block;
-      border-radius: 60px;
-      padding: 5px 10px;
-      margin: 0 10px;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 60px;
+        margin: 0 10px;
+        width: 30px;
+        height: 30px;
+        line-height: 33px;
       i{
         display: inline-block;
-        margin-right: 5px;
       }
     }
   }
@@ -174,12 +175,17 @@
   }
   .tags{
     position: relative;
-    padding: 10px 0 0 40px;
+    padding: 10px 0 0 20px;
+    font-size: 13px;
+    float: right;
+    color: #82ac4e;
     i{
-      font-size: 18px;
+      font-size: 13px;
       display: block;
-      position: absolute 13px * * 0;
-      margin: 0 10px;
+      top: 13px;
+      left: 0;
+      position: absolute;
+      margin: 0 0px;
     }
     a{
       display: inline;
@@ -195,13 +201,24 @@
     background-position: 100% 0;
     background-repeat: no-repeat;
     margin: 20px 0 10px;
-    border-bottom: 1px solid #454a4e;
+    clear: both;
+    h5{
+      text-align: left;
+      margin-bottom: 0;
+      padding-bottom: 10px;
+      font-size: 14px;
+    }
     .sub_m{
       padding: 10px;
       background-position: 100% 100%;
       background-repeat: no-repeat;
+      border-bottom: 1px solid #454a4e;
+      background: rgba(67, 75, 78, 0.2);
       @media (max-width: $XM) {
         padding: 5px 0;
+      }
+      &:last-child {
+        border-bottom: 0;
       }
       &:nth-child(even) {
         background: rgba(67, 75, 78, 0.4);
@@ -431,115 +448,6 @@ Block ramka
     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
   }
 }
-
-.tr_block{
-  border:1px solid #425e63;
-  text-align: center;
-  margin-bottom: 25px;
-  background: rgba(145, 205, 215, 0.1) url(../img/tile.png) 0 0 repeat;
-  
-  .tr_img{
-    display: block;
-    margin-bottom: -15px;
-    border-bottom:1px solid #425e63;
-  }
-  
-  h4{
-    text-align: center;
-    color:#fff;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
-    margin: 0 0 10px 0;
-    
-    span{
-      text-transform: uppercase;
-      color:#91cdd7;
-      font-size: 14px;
-      display: block;
-    }
-    a{
-      text-decoration: none;
-      color:#fff;
-      display: inline-block;
-      background: #2e3337;
-      padding: 4px 14px;
-      border-radius: 20px;
-      box-shadow: 0 -1px #425e63;
-      
-      &:hover{
-        text-decoration: underline;
-      }
-    }
-  }
-  img{
-    width: 100%;
-  }
-  div{
-    padding: 0px 10px 10px 10px;
-    
-    table{
-      width: 100%;
-      table-layout: fixed;
-    
-      b{
-        color: #d6d6d6;
-      }
-    }
-  }
-  
-}
-
-[class^="tric-"], [class*=" tric-"] {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: inline-block;
-  width:40px;
-  height:40px;
-  position: relative;
-  
-  &:after{
-    content: "";
-    position: relative;
-    display: inline-block;
-    height: 1px;
-
-    vertical-align: middle;
-    background: #425e63;
-    background-clip: content-box;
-    top: 20px;
-    margin: 0;
-    width: 60%;
-    position: absolute;
-    right: 120%;
-  }
-  &:before{
-    content: "";
-    position: relative;
-    display: inline-block;
-    height: 1px;
-
-    vertical-align: middle;
-    background: #425e63;
-    background-clip: content-box;
-    top: 20px;
-    margin: 0;
-    width: 60%;
-    position: absolute;
-    left: 120%;
-  }
-}
-.tric-t{
-  background-image: url(../img/tric-t.svg);
-}
-.tric-d{
-  background-image: url(../img/tric-d.svg);
-}
-.tric-p{
-  background-image: url(../img/tric-p.svg);
-}
-
 
 .nw{
   margin-bottom: 15px;

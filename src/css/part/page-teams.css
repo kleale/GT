@@ -9,7 +9,7 @@ section.hero{
   background: color($bg-sub l(14%));
   background-position: 0 100%;
   background-size: cover;
-  height: 260px;
+  min-height: 260px;
   margin-bottom: -50px;
   overflow: hidden;
   
@@ -19,7 +19,7 @@ section.hero{
     display: block;
     background: url(../img/bgtop.png) no-repeat center;
     background-size: auto;
-    opacity: .3;
+    opacity: .85;
   }
   &:after {
     content: '';
@@ -449,9 +449,19 @@ section.hero{
   > div{
     display: inline-block;
     .input-group{
-      max-width: 230px;
+      width: 230px;
+      .input-group-btn{
+        .btn{
+          height: 28px;
+          padding: 5px 10px;
+          font-size: 12px;
+          .caret {
+            margin: 7px 0 7px 0px;
+          }
+        }
+      }
       .dropdown-menu{
-        min-width: 230px;
+        width: 230px;
       }
     }
   }
@@ -506,6 +516,7 @@ section.hero{
 }
 
 .pTeamOther{
+  table-layout: fixed;
   &.table>tbody>tr>td, 
   &.table>tbody>tr>th, 
   &.table>tfoot>tr>td, 
@@ -516,6 +527,7 @@ section.hero{
   }
   .ava-sm{
     margin-left: 5px;
+    top: 2px;
   }
   .nick{
     font-size: 13px;
@@ -523,7 +535,7 @@ section.hero{
     display: inline-block;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 200px;
+    max-width: 100%;
     
     u{
       text-decoration: none;

@@ -9,9 +9,29 @@
     // checkbox to switch
     $("[name='score']").bootstrapSwitch();
   
-    // match list tr
+ $('.m-item').on('click', function (e) {
+        var $this = $(e.currentTarget);
+        if (e.ctrlKey == true) {
+          window.open($this.attr('data-href'));
+        } else {
+          window.location.href = $this.attr('data-href');
+        }
+    });
+    $(".m-item .tresult").click(function (event) {
+        event.stopPropagation();
+        alert("boo tresult");
+    });
+    $(".m-item .dice-win").click(function (event) {
+        event.stopPropagation();
+        alert("boo dice");
+    });
+    
+    /*
     $('.m-item').on('click', function (e) {
       var $this = $(e.currentTarget);
+      
+      //alert($this[0].nodeName.toLowerCase());
+      
       if ($this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
         if (e.ctrlKey == true) {
           window.open($this.attr('data-href'));
@@ -21,10 +41,15 @@
       }
     }).on('mousedown', function (e) {
       var $this = $(e.currentTarget);
+      
+      alert($this[0].nodeName.toLowerCase());
+      
       if (e.which === 2 && $this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
         window.open($this.attr('data-href'));
       }
     }); 
+
+    */
 
     //tip
     $('.tip').tooltip({

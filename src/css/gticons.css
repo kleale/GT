@@ -23,15 +23,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.gti-gt1:before {
+  content: "\e904";
+}
+.gti-gt:before {
+  content: "\e906";
+}
 .gti-dotaviewer:before {
   content: "\e905";
 }
-.gti-gg1:before {
+.gti-gt2:before {
   content: "\e903";
-}
-.gti-gt:before {
-  /*content: "\e902";*/
-  content: "\e904";
 }
 .gti-vs:before {
   content: "\e901";
@@ -495,6 +498,9 @@
 .gti-google-plus:before {
   content: "\f0d5";
 }
+.gti-gg:before {
+  content: "\f0d5";
+}
 .gti-money:before {
   content: "\f0d6";
 }
@@ -551,6 +557,9 @@
 }
 .gti-coffee:before {
   content: "\f0f4";
+}
+.gti-beer:before {
+  content: "\f0fc";
 }
 .gti-plus-square:before {
   content: "\f0fe";
@@ -687,6 +696,9 @@
 .gti-rocket:before {
   content: "\f135";
 }
+.gti-anchor:before {
+  content: "\f13d";
+}
 .gti-unlock-alt:before {
   content: "\f13e";
 }
@@ -716,6 +728,12 @@
 }
 .gti-level-down:before {
   content: "\f149";
+}
+.gti-check-square:before {
+  content: "\f14a";
+}
+.gti-pencil-square:before {
+  content: "\f14b";
 }
 .gti-compass:before {
   content: "\f14e";

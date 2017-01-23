@@ -24,6 +24,9 @@
 .gray{
   color: #ccc;
 }
+.g{
+  color: #ccc;
+}
 /*
 * Bootstrap Theme
 */
@@ -219,7 +222,6 @@ body .open>.dropdown-toggle.btn-default:focus{
     color: $green;
   }
 }
-
 .btn-default.active, 
 .btn-default:active, 
 .open>.dropdown-toggle.btn-default {
@@ -227,7 +229,18 @@ body .open>.dropdown-toggle.btn-default:focus{
     background-color: #035880;
     border-color: #0b75a7;
 }
-
+.input-group{
+  width: 100%;
+}
+.input-group.btn-hide{
+  width: 100%;
+  .form-control{
+    border-radius: $br;
+  }
+  .mlt-dropdown{
+    display: none;
+  }
+}
 
 /*
 * Popover
@@ -610,7 +623,6 @@ Tabs mobile
     line-height: 1.5;
   }
 }
-
 .table > thead {
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   >tr{
@@ -623,7 +635,11 @@ Tabs mobile
     }
   }
 }
-
+@media (max-width: 767px) {
+  .table-responsive {
+      border: 1px solid #5e6165;
+  }
+}
 /*5 column*/
 
 .col-xs-5ths,

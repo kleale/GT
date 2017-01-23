@@ -153,13 +153,13 @@
 player.html
 */
 .pAvaBg{
-  background: url(../img/pava.png) no-repeat scroll 0 100%;
+  background: url(../img/pava.png) repeat-x scroll 0 100%;
   border: 1px solid rgb(27, 43, 56);
   overflow: hidden;
 }
 .pAva{
     background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   .playerava{
     text-align: center;
@@ -197,8 +197,8 @@ player.html
     }
     h2{
       padding-right: 80px;
-      font-size: 21px;
-      margin: 0 0 15px 0;
+      font-size: 18px;
+      margin: 0;
     }
     table{
       width: 100%;
@@ -501,6 +501,7 @@ section.hero.pageTeamHero,
 section.hero.pagePlayerHero{
   padding: 20px 20px 20px;
   overflow: hidden;
+  min-height: 120px;
   &:after{
     background: linear-gradient(to bottom, rgba(46,51,55,0) 0%,rgb(35, 43, 49) 100%);
   }
@@ -649,6 +650,7 @@ section.hero.pagePlayerHero{
       text-align: left;
       list-style: none;
       width: 100%;
+      table-layout: fixed;
       
       tr:last-child td{
         border-bottom: 0px;
@@ -673,7 +675,7 @@ section.hero.pagePlayerHero{
           line-height: 1;
           text-overflow: ellipsis;
           white-space: nowrap;
-
+          max-width: 100%;
           img{
             width: 16px;
           }

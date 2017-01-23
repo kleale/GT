@@ -1,0 +1,40 @@
+<!-- /match-page/player-vid.html -->
+
+<section class="player-video">
+  <div class="nav-wr">
+    <span class="mobmenu"><i class="gti-bars"></i> Игра 1</span>
+    <ul id="videos" class="nav nav-tabs">
+      <li class="active"><a href="#">Игра 1</a></li>
+      {% for i in 2..11 %}
+          <li><a href="#">Игра {{i}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="video_block" id="video">
+    <figure><img src="http://game-tournaments.com/media/export/start/41085-1.jpg"></figure>
+    <div class="gamevid" style="top: 285px;">
+      <div id="gvlist" class="tse">
+          <div class="tse-content">
+            <a class="g-rezults fancybox" href="/media/export/result/41085-1.jpg">
+              <u><i class="gti-bar-chart"></i></u> 
+              <span><b>Показать результаты игры</b><em>Статистика и результаты матча</em></span> 
+              <sup><i class="gti-arrow-right"></i> Смотреть</sup>
+            </a>
+            <a class="g-rezults g-d2m" style="background-color: rgba(240, 80, 32, 0.2)" target="_blank" href="http://dotaviewer.com/ru/2916500234"> <u><i class="gti-dotaviewer"></i></u> <span><b>DotaViewer</b><em>Смотреть все важные моменты игры</em></span> <sup><i class="gti-arrow-right"></i> Смотреть</sup> </a>
+            <a class="video" href="#"> <u style="background-image:url(http://game-tournaments.com/media/flag/3.png)"><i class="gti-play"></i></u> <span><b>[RU] Cloud 9 vs TNC Pro Team, Game 1, Final, 2016 WESG Dota 2 Grand Final presented by Alipay</b><em>WESG</em><s><i class="gti-eye"></i> 3056</s></span> <sup><i class="gti-youtube-play"></i> Смотреть</sup><i class="gti-times close"></i></a>
+            <a class="video" href="#"> <u style="background-image:url(http://game-tournaments.com/media/flag/3.png)"><i class="gti-play"></i></u> <span><b>[EN] Cloud 9 vs TNC Pro Team, Game 1, Final, 2016 WESG Dota 2 Grand Final presented by Alipay</b><em>WESG</em><s><i class="gti-eye"></i> 29918</s></span> <sup><i class="gti-youtube-play"></i> Смотреть</sup><i class="gti-times close"></i></a>
+          </div>
+      </div>
+    </div>
+</div>
+</section>
+
+
+<script>
+$(document).ready(function () {
+  $("#gvlist a.video").click(function() {
+    $(".gamevid").toggleClass("vid-played");
+    $(this).toggleClass("active");
+  });
+});
+</script>

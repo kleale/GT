@@ -1,8 +1,9 @@
 /*page-vods.css*/
 
 .hero-menu img {
-  border-radius: 3px;
-  margin: 0 10px 0 -3px;
+  border-radius: 2px;
+  margin: -3px 10px -2px -11px;
+  width: 40px;
 }
 .vodslist{
   .videopost{
@@ -206,6 +207,12 @@
     color: #FF9800;
     font-size: 16px;
     margin: -2px 0;
+    &:hover,
+    &:active,
+    &:focus{
+      text-decoration: none;
+      color: #FF5722;
+    }
   }
   .date{
     font-size: 11px;
@@ -230,27 +237,6 @@
     width: 30px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -583,11 +569,14 @@ match-banner.html
   .mheader{
     float: left;
     position: relative;
-    width: calc(100% - 673px);
+    width: calc(100% - 730px);
     color: #a7a7a7;
     
     @media (max-width: 1680px) {
-      width: calc(100% - 570px);
+      width: calc(100% - 600px);
+    }
+    @media (max-width: 1200px) {
+      width: calc(100% - 460px);
     }
     @media (max-width: 990px) {
       width: calc(100% - 180px);
@@ -768,14 +757,17 @@ match-banner.html
       overflow: hidden;
       display: inline-block;
       margin-right: 15px;
-      max-width: 380px;
+      max-width: 430px;
       text-overflow: ellipsis;
       u{
         text-decoration: none;
         font-weight: 600;
       }
       @media (max-width: 1680px) {
-        max-width: 274px;
+        max-width: 324px;
+      }
+      @media (max-width: 1200px) {
+        max-width: 190px;
       }
       @media (max-width: 990px) {
         max-width: 150px;
@@ -783,6 +775,11 @@ match-banner.html
           display: none;
         }
       }
+    }
+  }
+  .dropdown-menu{
+    u{
+      text-decoration: none;
     }
   }
 }

@@ -92,57 +92,68 @@
 Page TOURNIR
 =======================================
 */
-section.hero.pageTourHero{
-  overflow: visible;
-  height: 380px;
-  margin-bottom: -200px;
+section.t-top{
+  border-bottom: 1px Solid #37424c;
+  .pAva{
+    margin-bottom: 0;
+    @media (max-width: $XM) {
+      margin-bottom: 25px;
+    }
+  }
+}
+section.t-top, section.hero.pageTourHero{
   background-position: 0 0;
+  overflow: visible;
+  min-height: 140px;
+  height: auto;
+  background-color: #2e3338;
+  padding: 20px 20px 30px;
+  box-shadow: 0px -15px 10px 0px rgba(0, 0, 0, 0.05) inset;
   
   &:before{
     opacity: .9;
   }
+  
+  .heroBg{
+    position: absolute 0 0 * 0;
+    height: 350px;
+    background-color: rgb(32, 37, 39);
+    background-position: center 0;
+    background-size: cover;
+    
+    &:before {
+      position: absolute 0 0 0 0;
+      content: "";
+      display: block;
+      opacity: 0.8;
+      background: url(../img/bgtop.png) center center / auto no-repeat;
+    }
+    &:after {
+      content: '';
+      position: absolute 0 0 0;
+      display: block;
+      background: linear-gradient(to bottom, rgba(46,51,55,0) 0%,rgba(46,51,55,1) 100%);
+    }
+  }
+  
+  
   h1{
-    margin: 0px 10px 40px;
+    margin: 10px 10px 0px;
     text-align: left;
+    position: relative;
+    z-index: 2;
+    font-size: 1.8em;
+    span{
+      font-size: .7em;
+    }
   }
   .stage{
     text-align: center;
     overflow: hidden;
     position: relative 0 0 0 0;
-    margin: 0 -20px;
+    margin: 30px -20px 30px;
     text-shadow: 0 1px #000;
     ul li {
-      &:before {
-        content: '';
-        display: block;
-        width: 100%;
-        top: 14px;
-        right: 0;
-        left: 0;
-        position: absolute;
-        height: 2px;
-        background: rgb(67, 67, 67);
-        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
-      }
-      &.s-pass:before, 
-      &.active:before{
-        background: rgb(3, 88, 128);
-      }
-      &.active:before {
-        width: 50%;
-      }
-      &.active:after {
-        content: '';
-        display: block;
-        width: 100%;
-        top: 14px;
-        right: 0;
-        left: 50%;
-        position: absolute;
-        height: 2px;
-        background: rgb(67, 67, 67);
-        box-shadow: 0 1px 0 #000;
-      }
       a span {
         display: block;
         font-weight: 500;
@@ -151,17 +162,19 @@ section.hero.pageTourHero{
       }
     }
   }
-  .btn-group{
-    position: relative;
-    margin-top: -3px;
-    float: right;
-    z-index: 3;
+}
+/*
+section.hero.pageTourHero{
+  margin-bottom: -140px;
+  min-height: 290px;
+  h1{
+    text-align: left;
+  }
+  .stage {
+    z-index: 2;
   }
 }
-.t-top{
-  background: #2e3338;
-}
-
+*/
 .t-block{
   .pAvaBg{
     .tLogo {
@@ -179,6 +192,7 @@ section.hero.pageTourHero{
       }
       .mlh {
         text-align: left;
+        padding-right: 0px;
         span {
           padding-left: 0;
           &:after {
@@ -204,6 +218,8 @@ section.hero.pageTourHero{
     text-align: center;
     background: rgba(55, 66, 76, 0.4) url(../img/spoiler.png) repeat scroll 0 0;
     border: 1px solid #37424c;
+    min-height: 125px;
+    vertical-align: top;
     > a{
       white-space: nowrap;
       overflow: hidden;
@@ -214,6 +230,11 @@ section.hero.pageTourHero{
     }
     span{
       font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      text-overflow: ellipsis;
+      max-width: 100%;
     }
     > div{
       position: relative;
@@ -260,48 +281,7 @@ section.hero.pageTourHero{
     }
   }
 }
-.teams-block-sm{
-  margin-bottom: 20px;
-  ul{
-    text-align: center;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 0 0;
-    li{
-      display: inline-block;
-      width: 11%;
-      margin: 5px .5% 5px;
-      padding: 3px 0 0 0;
-      text-align: center;
-      background: rgba(55, 66, 76, 0.4) url(../img/spoiler.png) repeat scroll 0 0;
-      border: 1px solid #37424c;
-      a{ 
-        height: 35px;
-        line-height: 30px;
-        margin: 0;
-        text-decoration: none;
-        img{
-          max-width: 80%;
-          max-height: 80%;
-        }
-        span,
-        b{
-          display: block;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          max-width: 100%;
-          font-size: 11px;
-          line-height: 1.5;
-        }
-        b{
-          font-size: 11px;
-          font-weight: 300;
-        }
-      }
-    }
-  }
-}
+
 .t-b-md{
   ul{
     li{
@@ -310,6 +290,7 @@ section.hero.pageTourHero{
     }
   }
 }
+
 .teamtip {
   .popover-inner{
     padding: 5px;
@@ -321,6 +302,9 @@ section.hero.pageTourHero{
     }
   }
 }
+
+/*places*/
+
 table.places{
   width: 100%;
   table-layout: fixed;
@@ -353,7 +337,7 @@ table.places{
       padding: 5px 2px;
       
       &:first-child{
-      width: 10%;
+      width: 13%;
       text-align: right;
       padding-right: 20px;
       }
@@ -366,20 +350,423 @@ table.places{
   }
 }
 
+.noplaces{
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  margin-bottom: 15px;
+  > b{
+    text-align: center;
+    display: block;
+    padding: 20px;
+    font-weight: 400;
+    background: rgba(248, 255, 0, 0.08) none repeat scroll 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  }
+  .noplaces-t{
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+    &:after{
+      content: '';
+      position: absolute 50px 0 0 0;
+      background: linear-gradient(to bottom, rgba(32,37,39,0) 0%, rgba(32,37,39,.7) 50%, rgba(32,37,39,1) 100%);
+    }
+    .teamname1{
+      filter: blur(1.5px) grayscale(20%);
+    }
+  }
+}
+
+/*ABOUT*/
+
 .ppcontent{
-  padding: 0 20px;
+  padding: 0 10px;
+  margin-bottom: 40px;
   color: #d0d0d0;
   > h2{
     border-bottom: 1px solid #555555;
-    font-size: 24px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 400;
     padding-bottom: 10px;
+    color: #fff;
   }
   > h3 {
     border-bottom: 1px solid #555555;
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 400;
     padding-bottom: 10px;
+    color: #fff;
   }
 }
+
+/*GROUP STAGE PAGE*/
+
+.ggrid{
+  text-align: center;
+  .gdiv{
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    width: 21%;
+    margin: 0 1.8% 35px;
+    text-align: left;
+    vertical-align: top;
+    
+    @media (max-width: 1600px) {
+      width: 29%;
+      margin: 0 1.8% 35px;
+    }
+    @media (max-width: $XM) {
+      width: 43%;
+      margin: 0 1.8% 15px;
+    }
+    @media (max-width: 700px) {
+      width: 100%;
+      margin: 0;
+    }
+    .gtable{
+      background-image: inline(../img/spoiler.png);
+      background-repeat: repeat;
+      background-position: center;
+      background: rgb(46, 51, 56);
+      table{
+        margin-bottom: 0;
+        font-size: 12px;
+        color: #c4ccd2;
+        tr{
+          &:nth-of-type(odd) {
+            background: rgba(66, 79, 90, 0.1);
+            border-bottom: 1px solid rgba(26, 31, 33, 0.15);
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+          }
+          th{
+            padding: 3px 2px;
+            text-align: center;
+          }
+          td{
+            padding: 4px 2px;
+            &.tpo{
+              width: 20px;
+              text-align: center;
+            }
+            &:first-child{
+              text-align: right;
+              width: 25px;
+              padding-right: 10px;
+            }
+            span{
+              font-size: 11px;
+              opacity: .7;
+              position: relative;
+              bottom: -1px;
+            }
+          }
+        }
+        a{
+          white-space: nowrap;
+          display: inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 130px;
+          vertical-align: middle;
+        }
+      }
+    }
+    &:hover{
+      .shr-sm{
+        display: block;
+      }
+    }
+  }
+  &.r1{
+    .gdiv{
+      width: 80%;
+      max-width: 460px;
+      @media (max-width: $SM) {
+        width: 100%;
+      }
+      table{
+        font-size: 13px;
+        tr td {
+            padding: 5px 2px;
+        }
+      }
+    }
+  }
+}
+
+
+.share-it{
+  transition: $tease;
+  .news-soc{
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    a{
+      color: #2e3338;
+      background: rgb(55, 60, 66);
+    }
+  }
+  &:hover{
+    .news-soc{
+      a{
+        background: rgb(95, 113, 128);
+      }
+    }
+  }
+}
+
+.shr-sm{
+  display: none;
+  position: absolute 34px * * 3px;
+  .shr{
+    color: #a6c6cb;
+    border: 1px solid #4d5963;
+  }
+}
+
+/*
+animate border - to share
+*/
+.aborder {
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 2px transparent;
+  position: relative;
+  padding: 15px 0;
+  margin: -10px 0 0;
+  
+  &::before,
+  &::after {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+.draw {
+  &:hover{
+    background-color: rgba(46, 51, 56, 0.33);
+  }
+  
+  &::before,
+  &::after {
+    border: 2px solid transparent; /*// Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts*/
+    width: 0;
+    height: 0;
+  }
+
+/*  This covers the top & right borders (expands right, then down)*/
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+/*  // And this the bottom & left borders (expands left, then up)*/
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+
+/*  // Hover styles*/
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover::before {
+    border-top-color: cyan; /*// Make borders visible*/
+    border-right-color: cyan;
+    transition:
+      width 0.25s ease-out, /*// Width expands first*/
+      height 0.25s ease-out 0.25s; /*// And then height*/
+  }
+
+  &:hover::after {
+    border-bottom-color: cyan; /*// Make borders visible*/
+    border-left-color: cyan;
+    transition:
+      border-color 0s ease-out 0.5s,/* // Wait for ::before to finish before showing border*/
+      width 0.25s ease-out 0.5s, /*// And then exanding width*/
+      height 0.25s ease-out 0.75s; /*// And finally height*/
+  }
+}
+
+/*// Inherits from .draw*/
+.meet {
+/*  // Start ::after in same position as ::before*/
+  &::after {
+    top: 0;
+    left: 0;
+  }
+
+/*  // Change colors*/
+  &:hover::before {
+    border-top-color: #424d56;
+    border-right-color: #424d56;
+  }
+
+  &:hover::after {
+    border-bottom-color: #424d56;
+    border-left-color: #424d56;
+    transition: /*// Animate height first, then width*/
+      height 0.25s ease-out,
+      width 0.25s ease-out 0.25s;
+  }
+
+}
+
+
+/*PLAYOFF STAGE PAGE*/
+.fa-info-circle {
+  font-family: 'gticons' !important;
+  &:before {
+    content: "\f05a";
+  }
+}
+.torgrid {
+    border: 20px none;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    font-size: 12px;
+    line-height: 1.5;
+  > div {
+    overflow: auto;
+    padding: 50px 30px 0;
+  }
+  .match_round {
+    color: #d9d9d9;
+    font-size: 10px;
+    line-height: 1;
+    text-align: center;
+    text-shadow: 0 1px 1px #222222;
+    text-transform: uppercase;
+    width: 170px;
+    position: absolute;
+    top: -12px;
+    left: 0px;
+  }
+  .match_date {
+    color: #d9d9d9;
+    font: 9px/10px Arial,sans-serif;
+    text-align: center;
+    text-shadow: 0 1px 1px #222222;
+    width: 170px;
+    position: absolute;
+    bottom: -12px;
+    left: 0px;
+  }
+  .match_qtip {
+    ul {
+      margin: 0;
+      padding: 0;
+      width: 170px;
+      
+      li {
+        background: #626262;
+        list-style: outside none none;
+        overflow: hidden;
+        padding: 0 0 0 4px;
+        &.active,
+        &:active,
+        &:focus,
+        &:hover{
+          background: #00A0DE;
+        }
+        &:first-child {
+          border-radius: 4px 4px 0 0;
+          margin-bottom: 1px;
+        }
+        &:last-child {
+          border-radius: 0 0 4px 4px;
+        }
+        &.match_info {
+          background: rgba(0, 0, 0, 0);
+          font-size: 16px;
+          position: absolute;
+          right: 20px;
+          top: 18px;
+          a {
+            display: block;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            text-shadow: none;
+            background: #444444;
+            border-radius: 50%;
+            color: #888888;
+                line-height: 1;
+            &:hover {
+              color: #f68800;
+            }
+          }
+        }
+        a.mteamlogo {
+          color: #d9d9d9;
+          display: block;
+          height: 26px !important;
+          line-height: 28px;
+          width: 137px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          float: left;
+          
+          &:hover{
+            text-decoration: none;
+            color: #fff;
+          }
+          
+          img {
+            margin-left: 1px;
+            margin-right: 3px;
+            position: relative;
+            top: -1px;
+            width: 17px;
+          }
+        }
+        b {
+          background: #888888;
+          color: #000;
+          display: block;
+          float: right;
+          padding: 5px 10px 4px;
+          &.mwin {
+            background: #00afff none repeat scroll 0 0;
+          }
+        }
+      }
+      
+    }
+  } /*match_qtip*/
+  .po1 {
+    border: 1px solid gray;
+    height: 1px;
+    position: absolute;
+  }
+  .po2 {
+    border: 1px solid gray;
+    position: absolute;
+    width: 1px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

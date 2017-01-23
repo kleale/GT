@@ -257,6 +257,10 @@
       }
     }
   }
+  &.mlh-first{
+    text-align: left;
+    font-size: 21px;
+  }
 }
 
 .fights{

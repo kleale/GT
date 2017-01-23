@@ -212,12 +212,136 @@
   }
 }
 
-
 .tse-sc{
   ul.nlist{
     padding: 0 20px 0 0;
     li{
       padding: 25px 20px 25px 10px;
+    }
+  }
+}
+
+.tnb{
+  .nlist{
+    margin: 0;
+    padding: 0;
+    li{
+      margin: 0;
+      padding: 10px 15px;
+      border-bottom: 1px solid #2d3133;
+      background: #363b40;
+      position: relative;
+      overflow: hidden;
+      .com{
+        color: rgb(132, 176, 79);
+        margin-left: 10px;
+        float: right;
+        font-size: 11px;
+        padding: 3px 0 0 0;
+        i{
+          margin-right: 2px;
+          font-size: 12px;
+        }
+      }
+      div{
+        line-height: 1.4;
+        font-size: 13px;
+        font-weight: 300;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+        time{
+          text-decoration: none;
+          color: rgb(204, 204, 204);
+          font-size: 11px;
+        }
+      
+        a {
+          color: #ececec;
+          text-decoration: none;
+
+          &:hover{
+            color: #9bb0c5;
+          }
+        }
+        > i{
+          margin: 0 7px;
+          position: relative;
+          top: 2px;
+          width: 12px;
+          display: inline-block;
+          text-align: center;
+          opacity: .7;
+          color: #9bb0c5;
+        }
+        .share{
+          font-size: 12px;
+          line-height: 16px;
+          float: right;
+          i {
+            font-size: 13px;
+          }
+        }
+        .tags{
+          padding: 0;
+          margin: 4px -3px;
+          font-size: 11px;
+          color: #999;
+          a{
+            margin: 0 3px;
+            opacity: .6;
+            &:hover{
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tnb-mini{
+  .nlist{
+    margin: 0;
+    padding: 0;
+    li{
+      margin: 0;
+      padding: 10px 15px;
+      border-bottom: 1px solid #2d3133;
+      background: #363b40;
+      position: relative;
+      overflow: hidden;
+      line-height: 1.6;
+      font-size: 13px;
+      time {
+        text-decoration: none;
+        color: #a2a2a2;
+        font-size: 11px;
+      }
+      > i {
+        margin: 0 7px;
+        position: relative;
+        top: 2px;
+        width: 12px;
+        display: inline-block;
+        text-align: center;
+        opacity: .7;
+        color: #9bb0c5;
+      }
+      a{
+        color: #ececec;
+        text-decoration: none;
+        &:hover{
+          color: #a6c6cb;
+        }
+      }
+      .com {
+        color: rgb(132, 176, 79);
+        margin: 0 0 0 5px;
+        font-size: 11px;
+        padding: 3px 0 0 0;
+      }
     }
   }
 }

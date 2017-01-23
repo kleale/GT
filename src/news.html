@@ -21,14 +21,22 @@
           <h1>Новости киберспорта: <strong>#Dota 2</strong></h1>
         </div>
       </section>
-
-      {% include "template/vod-slider.html" %}
-
+      
+      {#
+        {% include "template/vod-slider.html" %}
+      #}
+      
       <section class="newslist m-even">
         <div class="row">
-          <div class="col-md-12">
-            {% include "template/news/newslist.html" %}
+          <div class="col-md-8">
+            {% include "template/news/newslist-block.html" %}
             {% include "template/pager.html" %}
+            
+            {% include "template/news/newslist.html" %}
+            
+          </div>
+          <div class="col-md-4">
+            {% include "template/blockzames-vertical.html" %}
           </div>
         </div>
       </section>

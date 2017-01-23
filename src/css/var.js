@@ -9,7 +9,7 @@ module.exports = {
     "$XM": "991px", 
     "$L": "1200px", 
     "$XL": "1328px",
-    "$XXL": "1328px",
+    "$XXL": "1600px",
     "$MH": "600px",
   
     // Colors

@@ -10,7 +10,10 @@
 
 <!DOCTYPE html>
 <html>
-<head lang="en"><!-- ADD -->
+
+ 
+
+ <head lang="en"><!-- ADD -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,11 +22,13 @@
   <!-- Import fonts -->
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   
+  <link rel="icon" type="image/png" href="/favicon32.png">
+  
    <!-- Import bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   
   <!-- Import main styles -->
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/main.css?51">
   
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -76,83 +81,123 @@
                 });
               </script>
               
+              
+              <form method="get" action="/ru/dota-2/video" id="filter">
+                <input type="hidden" name="event" value="">
+                <input type="hidden" name="stage" value="">
+                <input type="hidden" name="round" value="">
+                <input type="hidden" name="team" value="6291">
+                <input type="hidden" name="player" value="">
+                <input type="hidden" name="hero" value="">
+                <input type="hidden" name="lang" value="ru">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <input type="text" value="" placeholder="Турнир" class="form-control tournament" autocomplete="off">
+                            <div class="input-group-btn mlt-dropdown" id="tournament">
+              <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown"><span class="caret"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a href="javascript:;" onclick="mfilter('event','1029');">Dotapit Season 5</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1173');">OMEN Dota 2 Cup</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1179');">AEF Dota 2 League Season 1</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1171');">DAC 2017</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1172');">ProDotA Cup Europe #14</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1169');">ProDotA Cup SEA #4</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1163');">KOD League Season 4</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1144');">Dota 2 Ice</a></li>
+                <li><a href="javascript:;" onclick="mfilter('event','1137');">SL i-League StarSeries Season 3</a></li>
+              </ul>
+              </div>
+              </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="dropdown">
+                  <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown">Стадия <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-header">Выбери турнир</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="dropdown">
+                  <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown">Раунд <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-header">Выбери стадию</li>
+                  </ul>
+                </div>
+              </div>
+              </div>
               <div class="row">
-                <div class="col-md-7">
-                  <div class="row">
-                    <div class="col-sm-4">
-                      <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                          Турнир
-                          <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                          <li><a href="#">Европа</a></li>
-                          <li><a href="#">Америка</a></li>
-                          <li><a href="#">Азия</a></li>
-                          <li><a href="#">Тихоокеантский регион</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                          Стадия
-                          <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                          <li><a href="#">Россия</a></li>
-                          <li><a href="#">Китай</a></li>
-                          <li><a href="#">Франция</a></li>
-                          <li><a href="#">Германия</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Игрок">
-                        <div class="input-group-btn mlt-dropdown">
-                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-                          <ul class="dropdown-menu dropdown-menu-right">
-                            <li><a href="#">Мажор 1</a></li>
-                            <li><a href="#">Мажор 2</a></li>
-                            <li><a href="#">Мажор 3</a></li>
-                            <li><a href="#">Мажор 4</a></li>
-                          </ul>
-                        </div><!-- /btn-group -->
-                      </div><!-- /input-group -->
+                <div class="col-sm-2">
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown">RU<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li class="active"><a href="javascript:;" onclick="mfilter('lang','ru');">RU</a></li>
+                      <li><a href="javascript:;" onclick="mfilter('lang','en');">EN</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="input-group">
+                    <input type="text" value="WGU" placeholder="Команда" class="form-control fteam" autocomplete="off">
+                    <div class="input-group-btn mlt-dropdown" id="fteam">
+                      <a href="javascript:;" onclick="mfilter('team','');" class="times btn btn-default"></a>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-5">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="mlt-filter">
-                        <input id="mlt-filter" type="text" value="" placeholder="Команда..." class="form-control team" autocomplete="off">
-                        <a href="" class="sicon"></a>
-                        <ul class="dropdown-menu" id="#t1">
-                          <li class="dropdown-header">Выбери команду</li>
-                          <li><a href="javascript:;" onclick="">123</a></li>
-                        </ul>
-                      </div>
+                <div class="col-sm-3">
+                  <div class="input-group btn-hide">
+                    <input type="text" value="" placeholder="Игрок" class="form-control fplayer" autocomplete="off">
+                    <div class="input-group-btn mlt-dropdown" id="fplayer">
+                      <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown"><span class="caret"></span></button>
+                      <ul class="dropdown-menu dropdown-menu-right"></ul>
                     </div>
-                    <div class="col-sm-6">
-                      <div class="mlt-filter">
-                        <input id="mlt-filter" type="text" value="" placeholder="Герой..." class="form-control team" autocomplete="off">
-                        <a href="" class="sicon"></a>
-                        <ul class="dropdown-menu hero-menu" id="#t1">
-                          <li class="dropdown-header">Выбери героя</li>
-                          <li>
-                            <a href="javascript:;" onclick="">
-                              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/faceless_void_sb.png">
-                              Faceless Void
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="input-group">
+                    <input type="text" value="" placeholder="Герой" class="form-control fhero" autocomplete="off">
+                    <div class="input-group-btn mlt-dropdown fhero" id="fhero">
+                      <button type="button" class="btn btn-default dropdown-toggle caret-abs" data-toggle="dropdown"><span class="caret"></span></button>
+                      <ul class="dropdown-menu dropdown-menu-right hero-menu">
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','102');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/abaddon_sb.png">Abaddon</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','73');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/alchemist_sb.png">Alchemist</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','68');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ancient_apparition_sb.png">Ancient Apparition</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','1');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/antimage_sb.png">Anti-Mage</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','113');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/arc_warden_sb.png">Arc Warden</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','2');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/axe_sb.png">Axe</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','3');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/bane_sb.png">Bane</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','65');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/batrider_sb.png">Batrider</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','38');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/beastmaster_sb.png">Beastmaster</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" onclick="mfilter('hero','4');"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/bloodseeker_sb.png">Bloodseeker</a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
+              </form>
+              
+              
             </div>
             
             <div class="vodslist">
@@ -161,7 +206,7 @@
                   <div class="row">
                     <div class="col-sm-3">
                       <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
-                        <img src="https://i.ytimg.com/vi/EcRKuy6jqOI/maxresdefault.jpg">
+                        <img src="https://i.ytimg.com/vi/hmjC4isfJ_E/maxresdefault.jpg">
                         <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
                         <b>
                           <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
@@ -172,40 +217,7 @@
                     <div class="col-sm-9">
                       <div class="vinfo">
                         <h3>
-                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> Wings vs Wings <b class="badge">bo3</b></a>
-                          <div class="vstats">
-                            <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
-                            <i class="gti-comments-o"></i> 123
-                          </div>
-                        </h3>
-                        <p><img src="http://game-tournaments.com/media/tournament/_60/pic-20160831-478x178-7586446600.jpeg" alt="WESG"> WESG, Playoff, Upper Bracket, Round 1</p>
-                        <time>9 января 2010 <i class="gti-clock-o"></i> 10:30</time>
-                        <a href="" class="mlan dw tip" title="Logs"><i class="gti-dotaviewer"></i></a>
-                        <a href="" class="mlan">RU</a>
-                        <a href="" class="mlan">EN</a>
-                        <a href="/dota-2/dota-2-ice/playoff/feat-vs-sweet-boys-40322" class="btn btn-xs btn-default ">Смотреть матч</a>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="videopost">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
-                        <img src="https://i.ytimg.com/vi/n3bDSptN06w/maxresdefault.jpg">
-                        <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
-                        <b>
-                          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
-                        </b>
-                      </a>
-                      <u>Dota 2 Watch</u>
-                    </div>
-                    <div class="col-sm-9">
-                      <div class="vinfo">
-                        <h3>
-                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> EHOME vs OG <b class="badge">bo3</b></a>
+                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> EHOME vs Virtus.Pro <b class="badge">bo3</b></a>
                           <div class="vstats">
                             <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
                             <i class="gti-comments-o"></i> 123
@@ -238,7 +250,7 @@
                     <div class="col-sm-9">
                       <div class="vinfo">
                         <h3>
-                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> Wings vs EHOME <b class="badge">bo3</b></a>
+                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> Virtus.Pro vs OG <b class="badge">bo3</b></a>
                           <div class="vstats">
                             <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
                             <i class="gti-comments-o"></i> 123
@@ -271,7 +283,7 @@
                     <div class="col-sm-9">
                       <div class="vinfo">
                         <h3>
-                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> Virtus.Pro vs OG <b class="badge">bo3</b></a>
+                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> Virtus.Pro vs  Evil Geniuses <b class="badge">bo3</b></a>
                           <div class="vstats">
                             <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
                             <i class="gti-comments-o"></i> 123
@@ -293,106 +305,7 @@
                   <div class="row">
                     <div class="col-sm-3">
                       <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
-                        <img src="https://i.ytimg.com/vi/n3bDSptN06w/maxresdefault.jpg">
-                        <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
-                        <b>
-                          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
-                        </b>
-                      </a>
-                      <u>Dota 2 Watch</u>
-                    </div>
-                    <div class="col-sm-9">
-                      <div class="vinfo">
-                        <h3>
-                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> NewBee vs NewBee <b class="badge">bo3</b></a>
-                          <div class="vstats">
-                            <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
-                            <i class="gti-comments-o"></i> 123
-                          </div>
-                        </h3>
-                        <p><img src="http://game-tournaments.com/media/tournament/_60/pic-20160831-478x178-7586446600.jpeg" alt="WESG"> WESG, Playoff, Upper Bracket, Round 1</p>
-                        <time>9 января 2010 <i class="gti-clock-o"></i> 10:30</time>
-                        <a href="" class="mlan dw tip" title="Logs"><i class="gti-dotaviewer"></i></a>
-                        <a href="" class="mlan">RU</a>
-                        <a href="" class="mlan">EN</a>
-                        <a href="/dota-2/dota-2-ice/playoff/feat-vs-sweet-boys-40322" class="btn btn-xs btn-default ">Смотреть матч</a>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="videopost">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
-                        <img src="https://i.ytimg.com/vi/hmjC4isfJ_E/maxresdefault.jpg">
-                        <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
-                        <b>
-                          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
-                        </b>
-                      </a>
-                      <u>Dota 2 Watch</u>
-                    </div>
-                    <div class="col-sm-9">
-                      <div class="vinfo">
-                        <h3>
-                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> EHOME vs  Evil Geniuses <b class="badge">bo3</b></a>
-                          <div class="vstats">
-                            <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
-                            <i class="gti-comments-o"></i> 123
-                          </div>
-                        </h3>
-                        <p><img src="http://game-tournaments.com/media/tournament/_60/pic-20160831-478x178-7586446600.jpeg" alt="WESG"> WESG, Playoff, Upper Bracket, Round 1</p>
-                        <time>9 января 2010 <i class="gti-clock-o"></i> 10:30</time>
-                        <a href="" class="mlan dw tip" title="Logs"><i class="gti-dotaviewer"></i></a>
-                        <a href="" class="mlan">RU</a>
-                        <a href="" class="mlan">EN</a>
-                        <a href="/dota-2/dota-2-ice/playoff/feat-vs-sweet-boys-40322" class="btn btn-xs btn-default ">Смотреть матч</a>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="videopost">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
-                        <img src="https://i.ytimg.com/vi/hmjC4isfJ_E/maxresdefault.jpg">
-                        <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
-                        <b>
-                          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
-                        </b>
-                      </a>
-                      <u>Dota 2 Watch</u>
-                    </div>
-                    <div class="col-sm-9">
-                      <div class="vinfo">
-                        <h3>
-                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> Virtus.Pro vs NewBee <b class="badge">bo3</b></a>
-                          <div class="vstats">
-                            <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
-                            <i class="gti-comments-o"></i> 123
-                          </div>
-                        </h3>
-                        <p><img src="http://game-tournaments.com/media/tournament/_60/pic-20160831-478x178-7586446600.jpeg" alt="WESG"> WESG, Playoff, Upper Bracket, Round 1</p>
-                        <time>9 января 2010 <i class="gti-clock-o"></i> 10:30</time>
-                        <a href="" class="mlan dw tip" title="Logs"><i class="gti-dotaviewer"></i></a>
-                        <a href="" class="mlan">RU</a>
-                        <a href="" class="mlan">EN</a>
-                        <a href="/dota-2/dota-2-ice/playoff/feat-vs-sweet-boys-40322" class="btn btn-xs btn-default ">Смотреть матч</a>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="videopost">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
-                        <img src="https://i.ytimg.com/vi/hmjC4isfJ_E/maxresdefault.jpg">
+                        <img src="https://i.ytimg.com/vi/fgb39dOJ1js/maxresdefault.jpg">
                         <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
                         <b>
                           <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
@@ -425,7 +338,7 @@
                   <div class="row">
                     <div class="col-sm-3">
                       <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
-                        <img src="https://i.ytimg.com/vi/hmjC4isfJ_E/maxresdefault.jpg">
+                        <img src="https://i.ytimg.com/vi/2SWgdXthYcM/maxresdefault.jpg">
                         <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
                         <b>
                           <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
@@ -436,7 +349,106 @@
                     <div class="col-sm-9">
                       <div class="vinfo">
                         <h3>
-                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> Virtus.Pro vs OG <b class="badge">bo3</b></a>
+                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc">  Evil Geniuses vs EHOME <b class="badge">bo3</b></a>
+                          <div class="vstats">
+                            <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
+                            <i class="gti-comments-o"></i> 123
+                          </div>
+                        </h3>
+                        <p><img src="http://game-tournaments.com/media/tournament/_60/pic-20160831-478x178-7586446600.jpeg" alt="WESG"> WESG, Playoff, Upper Bracket, Round 1</p>
+                        <time>9 января 2010 <i class="gti-clock-o"></i> 10:30</time>
+                        <a href="" class="mlan dw tip" title="Logs"><i class="gti-dotaviewer"></i></a>
+                        <a href="" class="mlan">RU</a>
+                        <a href="" class="mlan">EN</a>
+                        <a href="/dota-2/dota-2-ice/playoff/feat-vs-sweet-boys-40322" class="btn btn-xs btn-default ">Смотреть матч</a>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="videopost">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
+                        <img src="https://i.ytimg.com/vi/UY0JWskR5zw/maxresdefault.jpg">
+                        <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
+                        <b>
+                          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
+                        </b>
+                      </a>
+                      <u>Dota 2 Watch</u>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="vinfo">
+                        <h3>
+                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> EHOME vs Wings <b class="badge">bo3</b></a>
+                          <div class="vstats">
+                            <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
+                            <i class="gti-comments-o"></i> 123
+                          </div>
+                        </h3>
+                        <p><img src="http://game-tournaments.com/media/tournament/_60/pic-20160831-478x178-7586446600.jpeg" alt="WESG"> WESG, Playoff, Upper Bracket, Round 1</p>
+                        <time>9 января 2010 <i class="gti-clock-o"></i> 10:30</time>
+                        <a href="" class="mlan dw tip" title="Logs"><i class="gti-dotaviewer"></i></a>
+                        <a href="" class="mlan">RU</a>
+                        <a href="" class="mlan">EN</a>
+                        <a href="/dota-2/dota-2-ice/playoff/feat-vs-sweet-boys-40322" class="btn btn-xs btn-default ">Смотреть матч</a>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="videopost">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
+                        <img src="https://i.ytimg.com/vi/UY0JWskR5zw/maxresdefault.jpg">
+                        <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
+                        <b>
+                          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
+                        </b>
+                      </a>
+                      <u>Dota 2 Watch</u>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="vinfo">
+                        <h3>
+                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc">  Evil Geniuses vs Virtus.Pro <b class="badge">bo3</b></a>
+                          <div class="vstats">
+                            <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
+                            <i class="gti-comments-o"></i> 123
+                          </div>
+                        </h3>
+                        <p><img src="http://game-tournaments.com/media/tournament/_60/pic-20160831-478x178-7586446600.jpeg" alt="WESG"> WESG, Playoff, Upper Bracket, Round 1</p>
+                        <time>9 января 2010 <i class="gti-clock-o"></i> 10:30</time>
+                        <a href="" class="mlan dw tip" title="Logs"><i class="gti-dotaviewer"></i></a>
+                        <a href="" class="mlan">RU</a>
+                        <a href="" class="mlan">EN</a>
+                        <a href="/dota-2/dota-2-ice/playoff/feat-vs-sweet-boys-40322" class="btn btn-xs btn-default ">Смотреть матч</a>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="videopost">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
+                        <img src="https://i.ytimg.com/vi/fgb39dOJ1js/maxresdefault.jpg">
+                        <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
+                        <b>
+                          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
+                        </b>
+                      </a>
+                      <u>Dota 2 Watch</u>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="vinfo">
+                        <h3>
+                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> EHOME vs EHOME <b class="badge">bo3</b></a>
                           <div class="vstats">
                             <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
                             <i class="gti-comments-o"></i> 123
@@ -469,7 +481,7 @@
                     <div class="col-sm-9">
                       <div class="vinfo">
                         <h3>
-                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> Wings vs  Evil Geniuses <b class="badge">bo3</b></a>
+                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc">  Evil Geniuses vs OG <b class="badge">bo3</b></a>
                           <div class="vstats">
                             <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
                             <i class="gti-comments-o"></i> 123
@@ -491,7 +503,7 @@
                   <div class="row">
                     <div class="col-sm-3">
                       <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
-                        <img src="https://i.ytimg.com/vi/n3bDSptN06w/maxresdefault.jpg">
+                        <img src="https://i.ytimg.com/vi/UY0JWskR5zw/maxresdefault.jpg">
                         <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
                         <b>
                           <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
@@ -502,7 +514,40 @@
                     <div class="col-sm-9">
                       <div class="vinfo">
                         <h3>
-                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> EHOME vs Virtus.Pro <b class="badge">bo3</b></a>
+                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc"> OG vs  Evil Geniuses <b class="badge">bo3</b></a>
+                          <div class="vstats">
+                            <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
+                            <i class="gti-comments-o"></i> 123
+                          </div>
+                        </h3>
+                        <p><img src="http://game-tournaments.com/media/tournament/_60/pic-20160831-478x178-7586446600.jpeg" alt="WESG"> WESG, Playoff, Upper Bracket, Round 1</p>
+                        <time>9 января 2010 <i class="gti-clock-o"></i> 10:30</time>
+                        <a href="" class="mlan dw tip" title="Logs"><i class="gti-dotaviewer"></i></a>
+                        <a href="" class="mlan">RU</a>
+                        <a href="" class="mlan">EN</a>
+                        <a href="/dota-2/dota-2-ice/playoff/feat-vs-sweet-boys-40322" class="btn btn-xs btn-default ">Смотреть матч</a>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="videopost">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <a class="video_link" href="http://youtu.be/L-L0XM5E3bc">
+                        <img src="https://i.ytimg.com/vi/fgb39dOJ1js/maxresdefault.jpg">
+                        <!--<time><i class="gti-clock-o"></i> 9 января</time>-->
+                        <b>
+                          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder4-profile_image-793e69df11adc8ce-300x300.jpeg" alt="">
+                        </b>
+                      </a>
+                      <u>Dota 2 Watch</u>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="vinfo">
+                        <h3>
+                          <a class="video fancybox" href="http://youtu.be/L-L0XM5E3bc">  Evil Geniuses vs NewBee <b class="badge">bo3</b></a>
                           <div class="vstats">
                             <i class="gti-eye"></i> 123 &nbsp;&nbsp;&nbsp;
                             <i class="gti-comments-o"></i> 123
@@ -628,7 +673,7 @@
       </b>
       <span>
         <figure class="heroava">
-          <img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png">
+          <img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png">
         </figure>
         <em>Multi kill</em>
         <u>Potroshitel9000</u>
@@ -663,26 +708,26 @@
       <span>
         <em>multideath</em>
         <figure class="teamHeroes">
-            <u class="heroava dead"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
-            <u class="heroava dead"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
-          
-            <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
-          
-            <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
-          
-            <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"/></u>
-          
-        </figure>
-        <figure class="teamHeroes">
-          <u class="heroava dead"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
-          
-            <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
+            <u class="heroava dead"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
+            <u class="heroava dead"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"/></u>
           
             <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
           
             <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
           
-            <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
+            <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
+          
+        </figure>
+        <figure class="teamHeroes">
+          <u class="heroava dead"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
+          
+            <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
+          
+            <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"/></u>
+          
+            <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
+          
+            <u class="heroava"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
           
         </figure>
       </span>
@@ -1196,9 +1241,10 @@
     </div>
   </div>
 </div>
+
 <!-- Site Sripts -->
 <script src="../inc/main.js"></script>
-<script src="../inc/func_init.js"></script>
+<script src="../inc/func_init.js?35"></script>
 
 <!--PAGES select only dev-->
 <style>
@@ -1224,6 +1270,8 @@
     <a href="/home.html" class="m1 btn btn-sm btn-primary">Home</a>
     <a href="/game-home.html" class="m1 btn btn-sm btn-warning">Game Home</a>
     <a href="/index.html" class="m1 btn btn-sm btn-success">Match</a>
+    <a href="/match_end.html" class="m1 btn btn-sm btn-warning">Match Vid</a>
+    <!--<a href="/match_end2.html" class="m1 btn btn-sm btn-warning">Match Vid 2</a>-->
     <a href="/matches.html" class="m2 btn btn-sm btn-success">Mathes</a>
     <a href="/teams.html" class="m2 btn btn-sm btn-success">Teams list</a>
     <a href="/team.html" class="m2 btn btn-sm btn-success">Team</a>
@@ -1232,9 +1280,13 @@
     <a href="/players.html" class="m2 btn btn-sm btn-success">Players</a>
     <a href="/player.html" class="m2 btn btn-sm btn-success">Player</a>
     <a href="/tours.html" class="m2 btn btn-sm btn-success">Tours</a>
-    <a href="/tour.html" class="m2 btn btn-sm btn-warning">Tournament</a>
+    <a href="/tour.html" class="m2 btn btn-sm btn-success">Tour</a>
+    <a href="/tour2.html" class="m2 btn btn-sm btn-success" style="opacity.5">Tour2</a>
+    <a href="/tour_group.html" class="m2 btn btn-sm btn-success">Tour Group</a>
+    <a href="/tour_poff.html" class="m2 btn btn-sm btn-success">Tour Playoff</a>
     <a href="/404.html" class="m2 btn btn-sm btn-success">404</a>
     <a href="/vodlist.html" class="m2 btn btn-sm btn-success">Vod List</a>
+    <a href="/vodlist2.html" class="m2 btn btn-sm btn-success" style="opacity.5">Vod List2</a>
     <a href="/vod.html" class="m2 btn btn-sm btn-success">Vod</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-primary">stickers</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">User</a>

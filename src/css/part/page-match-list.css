@@ -65,6 +65,7 @@
     .mH1{
       margin: 0 0 .9em 0;
       font-size: 1.5em;
+      line-height: 1.4;
       text-transform: uppercase;
       @media (max-width: 1599px){
         margin: 0 0 .9em 0;
@@ -502,39 +503,34 @@
 
 .mlist-wr{
   position: relative;
-  
+  /*
   .mlist{
-    margin-right: 350px;
+    margin-right: 396px;
     position: relative;
     
     .nav-pager{
       margin-left: -30px;
     }
-    
+    @media (max-width: 1600px) {
+      margin-right: 330px;
+    }
     @media (max-width: $XM) {
       margin-right: 0;
     }
-    
   }
   .m-hot{
-    width: 320px;
-    /*
-    top: 0;
-    right: 30px;
-    bottom: 0;
-    position: absolute;
-    overflow-x: hidden;
-    overflow-y: auto;
-    margin-right: -30px;
-    */
+    width: 366px;
     float: right;
-    
+    @media (max-width: 1600px) {
+      width: 300px;
+    }
     @media (max-width: $XM) {
       width: auto;
       margin-right: 0px;
       position: relative auto auto auto auto;
     }
   }
+  */
 }
 
 .m-top-block{
@@ -893,8 +889,7 @@
     box-shadow: 0 0 30px 4px #f03a3a;
     display: inline-block;
     height: 11px;
-    margin-right: 5px;
-    margin-top: -2px;
+    margin: -2px 0 3px 0;
     vertical-align: middle;
     width: 11px;
 }
