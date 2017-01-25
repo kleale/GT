@@ -1,0 +1,214 @@
+<!-- /match-page/section-prognoz2.html -->
+
+{% set txt = ['Комментарий: последние 4 встречи закончились победой OG. Хотя все они были в прошлой мете и это нельзя отбрасывать. После мажора, у EG была','Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.']%}
+
+
+<div class="block" id="m-prognoz">
+  <div class="bh clearfix">
+    <h3>
+      <i class="ih gti-bullhorn"></i>
+      Прогнозы
+      <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О площадке + дополнительные сведения о матче" class="inf gti-info-circle"></i>
+    </h3>
+    <ul class="block-menu" role="tablist">
+      <li class="active"><a href="#p-all" role="tab" data-toggle="tab">Все</a></li>
+      <li><a role="tab" data-toggle="tab" href="#p-pay">Платные</a></li>
+    </ul>
+  </div><!-- bh -->
+
+  <div class="pr_block">
+    {#
+    <a href="#" class="mtb mtb btn btn-border">Tabs</a>
+    <ul class="stm_nav_block" role="tablist">
+      <li class="active"><a href="#st-pik" role="tab" data-toggle="tab">Прогнозы</a></li>
+      <li><a href="#st-ishod" role="tab" data-toggle="tab">Платные прогнозы</a></li>
+    </ul>
+    #}
+    <div class="bc tab-content">
+      <div class="sumpr clearfix">
+        <table class="win">
+          <tr>
+            <td>
+              <a href="">
+               <span>Team Liquid</span>
+               <img src="http://game-tournaments.com/media/logo/pic-20161027-600x600-9332827152.png" alt="">
+              </a>
+            </td>
+            <td>
+              <b>54%</b>
+            </td>
+          </tr>
+        </table>
+        <table class="lose">
+          <tr>
+           <td>
+              <b>46%</b>
+            </td>
+            <td>
+              <a href="">
+                <img src="http://game-tournaments.com/media/logo/pic-20161009-256x256-7743742014.png" alt="">
+                <span>Secret Secret Secret Secret</span>
+              </a>
+            </td>
+          </tr>
+        </table>
+
+        <a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#prognozList">Подробнее</a>
+      </div>
+              
+      <div id="p-all" role="tabpanel" class="tab-pane active">
+          <div class="block_prognoz">
+              {% for i in 1..5%}
+                <div class="prp">
+                  <div class="prh">
+                    <a href="">entryAd</a>&nbsp;&bull;&nbsp;
+                    <b>{{random(["Secret","Liquid"])}}</b>
+                  </div>
+                  <div class="prt">
+                    Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик...<em>...</em>
+                    <span style="display:none;">
+                        практика в новой мете на китайском турнире, где они обыграв Wings и Newbee заняли 1 место, но это довольно мало. На этот турнир команда приехала не с одной заготовкой, коры показывают пикабельность 6/6 и 5/6. Причём вчера в решающей карте против Secret они отважились взять героев, которыми ранее на про сцене не играли, взять такую заготовку в 1 карте можно было бы понять, но брать в решающей это говорит уже о другом. Так же Вилат поведал что команда OG в сборе менее недели, после праздников они только съехались и особо не тренили и будут использовать этот турнир как тренировочный плацдарм. Исходя из выше изложенного в этом матче я не рекомендую ставить на фаворита, если вы так в нём уверены лучше пропустите, разумная будет ставка на фору EG либо пару % на чистую победу.
+                        <hr><a href="" class="btn btn-default btn-xs">Подробнее</a>
+                    </span>
+                  </div>
+                  <a class="prm prMore" href="javascript:;">еще</a>
+                </div>
+              {% endfor %}
+              
+              <hr>
+              
+              <ul class="prList">
+                {% for i in 1..5%}
+                  
+                  <li>
+                    <a href="">Nikname {{i}}</a> 
+                    &nbsp;&bull;&nbsp;
+                    <b>{{random(["Secret","Liquid"])}}</b>
+                    <div>
+                      Комментарий: последние 4 встречи закончились победой OG. Хотя все они были в прошлой мете и это нельзя отбрасывать. После мажора, у EG была практика в новой мете на китайском турнире<em>...</em>
+                      <span style="display:none;">
+                        , где они обыграв Wings и Newbee заняли 1 место, но это довольно мало. На этот турнир команда приехала не с одной заготовкой, коры показывают пикабельность 6/6 и 5/6. Причём вчера в решающей карте против Secret они отважились взять героев, которыми ранее на про сцене не играли, взять такую заготовку в 1 карте можно было бы понять, но брать в решающей это говорит уже о другом. Так же Вилат поведал что команда OG в сборе менее недели, после праздников они только съехались и особо не тренили и будут использовать этот турнир как тренировочный плацдарм. Исходя из выше изложенного в этом матче я не рекомендую ставить на фаворита, если вы так в нём уверены лучше пропустите, разумная будет ставка на фору EG либо пару % на чистую победу.
+                      </span>
+                    </div>
+                    <u>
+                      <a href="" class="btn btn-default showbtnmore">Подробнее</a>
+                      <a href="javascript:;" class="btn btn-default showbtn">еще</a>
+                    </u>
+                  </li>
+                  
+                {% endfor %}
+              </ul>
+              
+          </div>
+      </div>
+      
+      <div id="p-pay" role="tabpanel" class="tab-pane">
+        <div class="block_pay_prognoz">
+          <div class="prp active prPay">
+                <div class="prh">
+                  <table>
+                    <tbody><tr>
+                      <td>
+                        <a href="">entryAd</a> &nbsp;&bull;&nbsp;
+                    <b>{{random(["Secret","Liquid"])}}</b>
+                      </td>
+                      <td class="nwr">
+                        <u>
+                          <em>123 <i class="gti-user tip" title="число подписчиков"></i></em>
+                          <button class="btn btn-xs btn-primary">подписка оформлена</button>
+                        </u>
+                      </td>
+                    </tr>
+                  </tbody></table>
+                </div>
+                <div class="prt">
+                  Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик...
+                </div>
+                <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
+              </div>
+              
+              <div class="prp active prPay">
+                <div class="prh">
+                  <table>
+                    <tbody><tr>
+                      <td>
+                        <a href="">entryAd</a> &nbsp;&bull;&nbsp;
+                    <b>{{random(["Secret","Liquid"])}}</b>
+                      </td>
+                      <td class="nwr">
+                        <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
+                      </td>
+                    </tr>
+                  </tbody></table>
+                </div>
+                <div class="pr_st">
+                  <table>
+                    <tbody><tr>
+                      <th>Прогнозы</th>
+                      <th>Проходимость</th>
+                      <th>ROI</th>
+                      <th>Ставки</th>
+                      <th>Подписки</th>
+                    </tr>
+                    <tr>
+                      <td>32</td>
+                      <td>76.6%</td>
+                      <td>76.6%</td>
+                      <td>23</td>
+                      <td>239</td>
+                    </tr>
+                  </tbody></table>
+                </div>
+              </div>
+              {% for i in 1..2%}
+                <div class="prp prPay">
+                  <div class="prh">
+                    <table>
+                      <tbody><tr>
+                        <td>
+                          <a href="">entryAd</a>&nbsp;&bull;&nbsp;
+                    <b>{{random(["Secret","Liquid"])}}</b>
+                        </td>
+                        <td class="nwr">
+                          <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button>
+                          </u>
+                        </td>
+                      </tr>
+                    </tbody></table>
+                  </div>
+                  <div class="prt">
+                    Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик...
+                  </div>
+                  <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
+                </div>
+              {% endfor %}
+            
+        </div>
+      </div>
+    </div><!--bc-->
+  </div><!--#hist-->
+
+</div><!-- block -->
+      
+<!-- /Prognozi -->
+
+
+<script>
+$(document).ready(function(){
+  $(".showbtn").click(function(){
+    $(this).parent('u').prev('div').find('span').slideToggle();
+    $(this).parent('u').prev('div').find('em').toggle();
+    $(this).html($(this).text() == 'скрыть' ? 'еще' : 'скрыть');
+    $(this).siblings('a').toggle();
+  });
+  
+  // v2
+  
+  $(".prMore").click(function(){
+    $(this).prev('div').find('span').slideToggle();
+    $(this).prev('div').find('em').toggle();
+    $(this).html($(this).text() == 'скрыть' ? 'еще' : 'скрыть');
+  });
+  
+})
+</script>

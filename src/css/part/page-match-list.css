@@ -80,15 +80,18 @@
     
     .refresher{
       font-size: 20px;
-      margin: 0 10px;
+      margin: 0 5px;
       vertical-align: middle;
       opacity: .5;
       cursor: pointer;
+      transition: $tease;
+      display: inline-block;
       
       &:hover,
       &:focus,
       &:active{
         opacity: 1;
+        transform: scale(1.1);
       }
     }
   } /*bh*/
@@ -880,8 +883,6 @@
     color: #7faec3;
   }
 }
-
-
 .livebetpin{
     background-color: #f03a3a;
     border: 1px solid #f03a3a;
@@ -893,5 +894,53 @@
     vertical-align: middle;
     width: 11px;
 }
+.bootstrap-switch-handle-off,
+.bootstrap-switch-handle-on{
+  transition: $tease;
+}
+
+.bootstrap-switch-off{
+  .bootstrap-switch-container{
+    .bootstrap-switch-label{
+      //background: #542e2e;
+    }
+    .bootstrap-switch-handle-off{
+      background: #643030;
+    }
+    &:hover{
+      //transform: translateX(3px);
+      .bootstrap-switch-handle-off{
+        opacity: .5;
+      }
+    }
+  }
+}
+.bootstrap-switch-on{
+  .bootstrap-switch-container{
+    .bootstrap-switch-label{
+      //background: #739d40;
+    }
+    &:hover{
+      //transform: translateX(-3px);
+      .bootstrap-switch-handle-on{
+        opacity: .5;
+      }
+    }
+  }
+}
+.tresult {
+  &:hover{
+    color: #c1f187;
+  }
+}
+
+
+
+
+
+
+
+
+
 
 

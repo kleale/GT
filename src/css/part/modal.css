@@ -35,7 +35,6 @@ Modal end
 /*Прогнозы окно*/
 .prwms{
   .modal-header{
-    text-align: center;
     background: color($bg-dropdown l(20%)) inline(../img/tile.png) repeat 50% 50%;
     .prwms_ico{
       position: relative;

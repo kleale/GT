@@ -1,7 +1,7 @@
 <!-- /match-page/player-vid.html -->
 
 <section class="player-video">
-  <div class="nav-wr">
+  <div class="nav-wr mobmenu-open">
     <span class="mobmenu"><i class="gti-bars"></i> Игра 1</span>
     <ul id="videos" class="nav nav-tabs">
       <li class="active"><a href="#">Игра 1</a></li>
@@ -35,6 +35,10 @@ $(document).ready(function () {
   $("#gvlist a.video").click(function() {
     $(".gamevid").toggleClass("vid-played");
     $(this).toggleClass("active");
+  });
+  $(".mobmenu").click(function() {
+    $(".nav-wr").toggleClass("mobmenu-open");
+    $(this).find("i").toggleClass("gti-bars").toggleClass("gti-times");
   });
 });
 </script>
