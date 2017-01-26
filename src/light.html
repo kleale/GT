@@ -1,0 +1,76 @@
+{% set title = "Match ended 2 Page" %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+
+<body>  
+  <div class="container mainwrap">
+    {% include "template/breadcrumbs.html" %}
+    
+    <div class="otstup">
+      <section class="light-head t-top">
+        <div class="heroBg" style="background-image:url(/html/img/headpic_582.jpg);"></div>
+        <h1><a href="/en/dota-2" title="Tournaments">Dota 2</a> Название момента</h1>
+        <div class="thd">
+          Команда 1 vs Команда 2 название турнира, может лого турнира
+          
+          ник игрока, лого героя, нанесенный урон, время, еще что-то
+        </div>
+      </section>
+      <section class="player" id="player">
+        <div id="srteamslider" class="srteamslider branded toggled_stream">
+          <div class="srteamview clearfix">
+            {% include "template/match-page/player-light.html" %}
+          </div>
+          <div class="srteamtoggle">
+            <div class="st_inner">
+              <div class="stream_action">
+                <ul id="stream_menu" class="player-menu">
+                  <li class="active">
+                    <a role="tab" data-toggle="tab" href="#">
+                      <i class="gti-flash"></i>
+                      <span>Лучшие моменты Dandy</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div id="stmblocks" class="stmblocks tab-content">
+                {% include "template/match-page/player-light-list.html" %}
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <section id="m-picks" class="m-sec m-odd">
+        <div class="row">
+          <div class="col-md-7">
+            {% include "template/match-page/section-comments.html" %}
+          </div>
+          <div class="col-md-5">
+            <h3 class="mlh"><span>Новости</span></h3>
+            {% include "template/news/newslist-block-mini.html" %}
+          </div>
+        </div>
+      </section>
+      
+      <section id="m-picks" class="m-sec m-even m-zames">
+        {% include "template/blockzames.html" %}
+      </section>
+
+      <div class="bn">
+        <img src="../img/ad.jpg" alt="">
+      </div>
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+
+{% include "template/branding.html" %}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>

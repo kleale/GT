@@ -5910,6 +5910,7 @@ Banners
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
+  background-color: #111;
 }
 .srteamview .iframerClicker:before{
   content:'';
@@ -8545,11 +8546,9 @@ Video after stream
 /*
 * Section prognoz
 */
-/*Прогнозы*/
 .prp{
-  padding: 8px 12px;
+  padding: 10px 12px;
   position: relative;
-  
 }
 .prp:nth-child(even){
   background: rgb(59, 65, 69);
@@ -8566,16 +8565,25 @@ Video after stream
 .prp.prPay .prh a{
   color: rgb(218, 212, 136);
 }
+.prp.active,
+  .prp:hover{
+  cursor: pointer;
+  box-shadow: inset 0 0 1px rgb(108, 160, 198);
+}
+.prp.active .prm,.prp:hover .prm{
+  background: rgb(57, 109, 147);
+  color: #a6c6cb;
+}
+.prp.active .prm:before,.prp:hover .prm:before{
+  background: rgb(57, 109, 147);
+}
 .prp.active{
   box-shadow: inset 0 0 0 1px rgb(71, 137, 184);
   margin-top: -1px;
 }
-.prp.active .prm{
-  background: rgb(57, 109, 147);
-  color: #a6c6cb;
-}
-.prp.active .prm:before{
-  background: rgb(57, 109, 147);
+.prp.open .prt .hh{
+  height: auto;
+  display: inline;
 }
 .prp .prh{
   font-size: 12px;
@@ -8588,8 +8596,6 @@ Video after stream
 .prp .prh table td{
   vertical-align: middle;
 }
-.prp .prh table td:first-child{/*width: 40px;*/
-}
 .prp .prh table td:last-child{
   text-align: right;
 }
@@ -8601,6 +8607,9 @@ Video after stream
   text-decoration: none;
   white-space: nowrap;
   margin-left: 5px;
+}
+.prp .prh > b{
+  font-weight: 400;
 }
 .prp .prh button{
   color: #fff;
@@ -8641,9 +8650,6 @@ Video after stream
   width: 25px;
   text-align: center;
 }
-.prp .prh a{
-
-}
 .prp .prh .pris{
   margin: -1px 1px;
   width:20px;
@@ -8656,17 +8662,17 @@ Video after stream
   vertical-align: middle;
 }
 .prp .prt{
-  color: #d6d6d6;
+  color: #cccccc;
   font-weight: 400;
-  margin-top: 2px;
-  font-size: 12px;
+  margin-top: 4px;
+  font-size: 11px;
   line-height: 1.2;
 }
-.prp .prt hr{
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: 0;
-  border-top: 1px solid #4d585f;
+.prp .prt .hh{
+  overflow: hidden;
+  height: 0;
+  transition: all .2s linear;
+  display: block;
 }
 .prp .pr_st{
   margin: 4px -10px -10px -10px;
@@ -8687,14 +8693,16 @@ Video after stream
   font-size: 13px;
   color: #a6c6cb;
 }
-.prp .wl span{
-  color: #a6c6cb;
-  margin: 0 5px;
-}
-.prp .wl .gti-dice{
-  color: #a6c6cb;
-  margin-right: 10px;
-}
+/*.wl{
+    span{
+      color: #a6c6cb;
+      margin: 0 5px;
+    }
+    .gti-dice{
+      color: #a6c6cb;
+      margin-right: 10px;
+    }
+  }*/
 .prp .prm{
   right: 0;
   bottom: 0;
@@ -8728,13 +8736,26 @@ Video after stream
 .prp .prm:hover:before,.prp .prm:active:before,.prp .prm:focus:before{
   background: rgb(71, 137, 184);
 }
-*/
+.prp.prp-free{
+  line-height: 1.2;
+  font-size: 12px;
+}
+.prp.prp-free a.nick{
+  font-size: 13px;
+}
+.prp.prp-free b{
+  font-size: 13px;
+  font-weight: 400;
+}
+.prp.prp-free .prt{
+  display: inline;
+}
 /*prp*/
 /*
 .prpf{
   padding: 5px 5px 7px 5px;
   font-size: 12px;
-  color: $link-light-blue;
+  color: #a6c6cb;
   text-transform: uppercase;
   span{
     width:20%;
@@ -8803,7 +8824,7 @@ Video after stream
       }
       img{
         width:100%;
-        transition: $tease;
+        transition: all .2s linear;
         cursor: pointer;
         
         &:hover{
@@ -8819,10 +8840,10 @@ Video after stream
     width: 100%;
     line-height: 1;
     font-size: 12px;
-    color: $link-light-blue;
+    color: #a6c6cb;
     text-align: center;
     th{
-      background: color($bg-main l(25%));
+      background: color(#33393c l(25%));
       text-transform: uppercase;
       font-size: 14px;
       font-weight: 300;
@@ -8843,10 +8864,10 @@ Video after stream
         border-radius: 50%;
         margin: 0 3px;
         vertical-align: initial;
-        background: $blue;
+        background: #037db5;
       }
       u{
-        background: $red!important;
+        background: #ea6465!important;
       }
     }
   }
@@ -8890,12 +8911,12 @@ Video after stream
   
   .pb1{
     .progress-bar{
-      background: $blue;
+      background: #037db5;
     }
   }
   .pb2{
     .progress-bar{
-      background: $red;
+      background: #ea6465;
     }
   }
   #sind_donut{
@@ -8909,173 +8930,92 @@ Video after stream
     background-position: 50% -5px;
     background-repeat: no-repeat;
   }
-}/*pr_sind*/
-
+}
+*/
+/*pr_sind*/
+/*
 .pr_sind_graf_line{
   color: #a6c6cb;  
   margin-top: -50px;
-}
-*/
-
-
-
-.pr_sind_graf_line table{
-  width: 100%;
-  line-height: 1.4;
-}
-*/
-
-
-
-.pr_sind_graf_line table td{
-  background: transparent;
-  text-align: left;
-  width:33.33%;
-}
-*/
-
-
-
-.pr_sind_graf_line table td.stl{
-  text-align: left;
-}
-*/
-
-
-
-.pr_sind_graf_line table td.str{
-  text-align: right;
-}
-*/
-
-
-
-.pr_sind_graf_line table td.stc{
-  text-align: center;
-}
-*/
-
-
-
-.pr_sind_graf_line table b,*/
-
-
-
-.pr_sind_graf_line table u,*/
-
-
-
-.pr_sind_graf_line table em,*/
-
-
-
-.pr_sind_graf_line table i{
-  font-weight: 300;
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin: 0 3px;
-  vertical-align: initial;
-  background: #2d6185;
-}
-*/
-
-
-
-.pr_sind_graf_line table em{
-  background: #3f79a2;
-}
-*/
-
-
-
-.pr_sind_graf_line table u{
-  background: #d94c4c;
-}
-*/
-
-
-
-.pr_sind_graf_line table i{
-  background: #b63b3b;
-}
-*/
-
-
-
-.pr_sind_graf_line table span{
-  display: block;
-  font-size: 16px;
-}
-*/
-
-
-
-.pr_sind_graf_line .sind_line{
-  margin-top: -11px;
-}
-*/
-
-
-
-.pr_sind_graf_line #sind_line{
-  height:30px;
-}
-*/
-
-
-
-.pr_sind_graf_line #sind_line .highcharts-container {
-  overflow: visible !important;
-}
-*/
-
-
-
-.pr_sind_graf_line .sind_share{
-  height: 22px;
-  color: #a6c6cb;
-  text-transform: uppercase;
-}
-*/
-
-
-
-.pr_sind_graf_line .sind_share b{
-  font-size: 11px;
-  display: inline-block;
-  float: left;
-  padding-top: 4px;
-  font-weight: 400;
-}
-*/
-
-
-
-.pr_sind_graf_line .sind_share span{
-  float:right;
-}
-*/
-
-
-
-.pr_sind_graf_line .s_inf{
-  color: #2faee7;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 11px;
-  opacity: .6;
-  margin-top: 10px;
-}
+  table{
+    width: 100%;
+    line-height: 1.4;
+    td{
+      background: transparent;
+      text-align: left;
+      width:33.33%;
+      &.stl{
+        text-align: left;
+      }
+      &.str{
+        text-align: right;
+      }
+      &.stc{
+        text-align: center;
+      }
+    }
+    b,u,em,i{
+      font-weight: 300;
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 3px;
+      vertical-align: initial;
+      background: #2d6185;
+    }
+    em{
+      background: #3f79a2;
+    }
+    u{
+      background: #d94c4c;
+    }
+    i{
+      background: #b63b3b;
+    }
+    span{display: block;font-size: 16px;}
+  }
+  .sind_line{
+    margin-top: -11px;
+  }
+  #sind_line{
+    height:30px;
+    .highcharts-container {
+      overflow: visible !important;
+    }
+  }
+  .sind_share{
+    height: 22px;
+    color: #a6c6cb;
+    text-transform: uppercase;
+    b{
+      font-size: 11px;
+      display: inline-block;
+      float: left;
+      padding-top: 4px;
+      font-weight: 400;
+    }
+    span{
+      float:right;
+    }
+  }
+  .s_inf{
+    color: #2faee7;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 11px;
+    opacity: .6;
+    margin-top: 10px;
+  }
+}*/
 .sumpr{
   background: #37424c url("../img/spoiler.png") repeat scroll 0 0;
   border: 1px dashed #58646f;
   position: relative;
   z-index: 3;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 .sumpr table{
   width: 50%;
@@ -9137,53 +9077,55 @@ Video after stream
   margin-left: -45px;
 }
 /*sumpr*/
-.block_prognoz .prList{
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/*
+.block_prognoz{
+  .prList{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+      background: #363b40;
+      font-size: 12px;
+      line-height: 1.2;
+      padding: 7px 10px;
+      margin-top: 1px;
+      color: #d6d6d6;
+      position: relative;
+      b{
+        font-weight: normal;
+        color: #d6d6d6;
+      }
+      div{
+        padding-top: 2px;
+        span{
+          display: none;
+          margin-bottom: 10px;
+        } 
+      }
+      u{
+        text-align: right;
+        position: absolute * 4px 4px *;
+        text-decoration: none;
+      }
+      .btn{
+        padding: 0 2px;
+        font-size: 10px;
+        line-height: 1;
+        text-transform: none;
+        background: #5e6468;
+        box-shadow: none;
+        display: inline;
+        &:hover{
+          background: #037db5;
+        }
+      }
+      .showbtnmore{
+        display: none;
+      }
+    }
+  }
 }
-.block_prognoz .prList li{
-  background: #363b40;
-  font-size: 12px;
-  line-height: 1.2;
-  padding: 7px 10px;
-  margin-top: 1px;
-  color: #d6d6d6;
-  position: relative;
-}
-.block_prognoz .prList li b{
-  font-weight: 400;
-  color: #d6d6d6;
-}
-.block_prognoz .prList li div{
-  padding-top: 2px;
-}
-.block_prognoz .prList li div span{
-  display: none;
-  margin-bottom: 10px;
-}
-.block_prognoz .prList li u{
-  text-align: right;
-  right: 4px;
-  bottom: 4px;
-  position: absolute;
-  text-decoration: none;
-}
-.block_prognoz .prList li .btn{
-  padding: 0 2px;
-  font-size: 10px;
-  line-height: 1;
-  text-transform: none;
-  background: #5e6468;
-  box-shadow: none;
-  display: inline;
-}
-.block_prognoz .prList li .btn:hover{
-  background: #037db5;
-}
-.block_prognoz .prList li .showbtnmore{
-  display: none;
-}
+*/
 .st-body .table-st{
   font-size: 12px;
   margin: 0;
@@ -9208,6 +9150,20 @@ Video after stream
 }
 .modal-body .mtable tr:nth-of-type(2n+1) {
   border-bottom: 1px solid rgba(57, 62, 64, 0.25);
+}
+.topay{
+    display: block;
+    text-align: center;
+    border: 1px solid;
+    padding: 5px;
+    font-size: 12px;
+    margin: 5px 0 0 0;
+    background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
+    border: 1px dashed #58646f;
+}
+.topay:hover{
+  text-decoration: none;
+  background-color: #3f4c58;
 }
 /*
 * Section team compare
