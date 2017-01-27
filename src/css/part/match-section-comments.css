@@ -20,15 +20,18 @@
 }
 .comblock{
   position: relative;
+  /*
   height: 550px;
-  
+  */
   .chat-action{
     position: absolute * 0 0 0;
   }
   
   .tse-com{
+    padding-bottom: 90px;
+    /*
     position: absolute 0 0 60px 0;
-    
+    */
     /*tse*/
     /*
     overflow-x: hidden;

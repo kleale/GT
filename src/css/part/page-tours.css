@@ -101,10 +101,9 @@ section.t-top{
     }
   }
 }
-section.t-top, section.hero.pageTourHero{
+section.t-top{
   background-position: 0 0;
   overflow: visible;
-  min-height: 140px;
   height: auto;
   background-color: #2e3338;
   padding: 20px 30px 30px;
@@ -168,15 +167,6 @@ section.t-top, section.hero.pageTourHero{
 }
 .t-block{
   .pAvaBg{
-    .tLogo {
-      text-align: center;
-      padding: 0;
-      display: block;
-      img {
-        display: inline;
-        width: 100%;
-      }
-    }
     .pInf {
       table {
         margin-bottom: 15px;
@@ -187,7 +177,7 @@ section.t-top, section.hero.pageTourHero{
         span {
           padding-left: 0;
           &:after {
-            margin-top: -17px;
+            margin-top: -15px;
           }
         }
       }

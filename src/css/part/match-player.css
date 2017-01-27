@@ -271,41 +271,35 @@
     }
     
     &:after{
-    font-family: 'gticons';
-    content: '\f04b';
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    font-size: 40px;
-    margin: -50px 0 0 -40px;
-    line-height: 80px;
-    transition: all .2s ease;
-    opacity: 1;
-    background-color: rgba(51, 122, 183, 0.7);
-    height: 80px;
-    width: 80px;
-    text-align: center;
-    color: #ffffff;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFW…pi+P//PwMQy0JpMMYQAGFGsAwqkGVAUyUL086Abi5AgAEANCs/VAxOWCIAAAAASUVORK5CYII=);
-    background-repeat: repeat;
-    background-position: 50%;
-    border-radius: 70px;
-    padding-left: 10px;
+      font-family: 'gticons';
+      content: '\f04b';
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      font-size: 40px;
+      margin: -50px 0 0 -40px;
+      line-height: 80px;
+      transition: all .2s ease;
+      opacity: 1;
+      background-color: rgba(51, 122, 183, 0.7);
+      height: 80px;
+      width: 80px;
+      text-align: center;
+      color: #ffffff;
+      border-radius: 70px;
+      padding-left: 10px;
     }
     
     &:hover:after{
-      transform: scale(1.2);
+      transform: scale(1.1);
       opacity: 1;
     }
-    
     .iframerChannel{
       position: absolute 0px * * 0px;
       padding: 15px;
       max-width: 95%;
-      
       div{
         padding-left: 85px;
-        
         h4{
           font-size: 24px;
           font-weight: 800;
@@ -322,7 +316,6 @@
           display: block;
         }
       }
-      
       img{
         width: 70px;
         float: left;
@@ -916,7 +909,7 @@ Video after stream
       position: absolute;
       top: 50%;
       margin-top: -97px;
-      transition: $tease;
+      /*transition: $tease;*/
       @media (max-width: $XM){
         left: 20px;
         right: 20px;

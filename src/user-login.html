@@ -1,0 +1,96 @@
+{% set title = "Войти" %}
+
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  <div class="container mainwrap">
+    <div class="otstup">
+      <section class="t-top login">
+        {#
+        <div class="heroBg" style="background-image:url(http://ggscore.com/media/tournament/pic-20160831-478x178-7586446600.jpeg);"></div>
+        #}
+        <!--<h1>Вход</h1>-->
+        
+        <form name="login" method="POST" action="login" class="login-form">
+          <div class="panel panel-default panel-login">
+            <div class="panel-heading">
+              <h3 class="panel-title mlh"><span>Вход</span></h3>
+            </div>
+            <div class="panel-body">
+             <img class="profile-img-card" src="../img/enter.svg">
+              <div class="form-group" rel="email">
+                <div class="input-group">
+                  <input type="text" class="form-control input" name="email" placeholder="Email" value=""> 
+                  <span class="input-group-btn">
+                    <a class="btn btn-default odtip" href="/soc?vk" title="" data-original-title="Через Вконтакте"><i class="gti-vk"></i></a>
+                    <a class="btn btn-default odtip" href="/soc?fb" title="" data-original-title="Через Facebook"><i class="gti-facebook"></i></a>
+                  </span>
+                </div>
+              </div>
+              <div class="form-group" rel="pwd">
+                <div class="input-group">
+                  <input type="password" class="form-control input" name="pwd" placeholder="Пароль" value="">
+                    <span class="input-group-addon checkbox" style="border-left:0px">&nbsp;<input type="checkbox" class="input odtip" name="once" value="1" title="" checked="" data-original-title="Запомнить меня">&nbsp;</span> <span class="input-group-btn"><a class="btn btn-default odtip" href="/pwd" title="" data-original-title="Забыл пароль"><i class="gti-question-circle"></i></a></span> </div>
+              </div>
+              <button type="button" onclick="sform('login')" class="btn btn-primary btn-block btn-lg">Войти</button>
+            </div>
+          </div>
+        </form>
+        
+        <div class="sponsors">
+         <img src="http://game-tournaments.com/html/img/logo_gg.png" alt="">
+         <img src="http://game-tournaments.com/html/img/logo_egb.png" alt="">
+         <img src="http://game-tournaments.com/html/img/logo_home.png" alt="">
+         <img src="http://game-tournaments.com/html/img/logo_tipbet.png" alt="">
+       </div>
+        
+      </section>
+      
+      {#
+      <section class="m-sec m-even">
+       
+      </section>
+      #}
+      {#
+        {% include "template/footer.html" %}
+      #}
+    </div>
+  </div>
+{#
+{% include "template/branding.html" %}
+#}
+{% include "template/bar.html" %}
+{% include "template/modal.html" %}
+{% include "template/scripts.html" %}
+
+</body>
+</html>
+ 
+
+ 
+ 
+ 
+{#
+ <div class="card card-container">
+  <h2>Войти</h2> <img id="profile-img" class="profile-img-card" src="../img/enter.svg">
+  <form class="form-signin">
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="" autofocus="">
+    <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required="">
+    <div id="remember" class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me"> Запомнить меня </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Войти в кабинет</button>
+  </form>
+  <!-- /form --><a href="#" class="forgot-password">
+    Забыли пароль?
+  </a> <a href="#" class="reg-link">
+    Регистрация
+  </a> </div>
+ 
+ #}
+ 
+
+ 

@@ -163,23 +163,28 @@
 
 .spider_chart{
   height: 270px;
+  margin-top: -20px;
   @media (max-width: $XM){
+    margin-top: 0px;
     padding:20px 0;
     height: 220px;
   }
 }
 .spider{
-  margin: 0 0 30px 0;
+  margin: 0 0 20px 0;
+}
+#m-teams {
+  .block-content{
+    margin-bottom: 0px;
+  }
 }
 .teams_stats{
   position: relative;
-  min-height: 110px;
+  min-height: 90px;
   overflow: hidden;
-  
   td, th{
      font-size: 12px;
   }
-  
   .teams_bars{
     margin:0 200px;
     height: 100px;
@@ -196,18 +201,12 @@
           color:$text-gray-3;
           font-weight: 400;
           padding: 0px 5px;
+          text-transform: uppercase;
         }
         td{
           text-align: right;
           color:$text-gray-3;
           padding: 0px 5px;
-
-          &.red{
-            color:$red;
-          }
-          &.green{
-            color:$green;
-          }
         }
       }
     }
@@ -254,13 +253,6 @@
         color:$text-gray-3;
         padding: 0px 5px;
         text-align: left;
-        
-        &.red{
-          color:$red;
-        }
-        &.green{
-          color:$green;
-        }
       }
       tr{
         &:nth-child(odd){

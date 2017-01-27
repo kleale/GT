@@ -1,39 +1,30 @@
 <!-- player-light.html -->
 
-
+{#
 <div class="fullscreener">
   <i id="stream-expand" class="gti-expand active tip" data-placement="left" title="На весь экран"></i>
   <i id="stream-compress" class="gti-compress tip" data-placement="left" title="Свернуть"></i>
 </div>
-
 <i id="player-menu" class="gti-chevron-right"></i>
+#}
 
-  <div class="iframer">
-    
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ypradOPtkhQ?t=3m38s" frameborder="0" allowfullscreen></iframe>
+<div class="iframer">
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ypradOPtkhQ?t=3m38s" frameborder="0" allowfullscreen></iframe>
 
-    <div id="clickMe" class="iframerClicker" style="background-image:url(http://ggscore.com/media/highlights/6632.jpg);">
-      <div class="iframerChannel">
-        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder1-profile_image-f29cbdd38a9c2c5e-300x300.jpeg"/>
-        <div>
-          <h4>Starladder1</h4>
-          <h5>[RU] T.O.T. vs NL5.Reborn | Grand Final | WESG 2016 Asia-Pacific</h5>
-          <span class="pviews"><i class="gti-eye"></i> 2345 зрителя</span>
-        </div>
-      </div>
-    </div>
-    <script>
-    $(document).ready(function () {
-        $('#clickMe').click(function (){
-          $('.iframer').show();
-          $(this).hide();
-          $('.iframeBanner').addClass('active');
-          $('.iframer').addClass('active');
-        });
-    });
-    </script>
+  <div id="clickMe" class="iframerClicker" style="background-image:url(http://ggscore.com/media/highlights/6632.jpg);">
+    <img src="http://ggscore.com/media/highlights/6632.jpg" alt="">
   </div>
-
+  <script>
+  $(document).ready(function () {
+      $('#clickMe').click(function (){
+        $('.iframer').show();
+        $(this).hide();
+        $('.iframeBanner').addClass('active');
+        $('.iframer').addClass('active');
+      });
+  });
+  </script>
+</div>
 
 <!-- NO -->
 <!--
@@ -45,24 +36,8 @@
   </div>
 </div>
 -->
+{#
 <div class="bn iframeBanner">
   <img src="../img/ad_player.jpg" alt="">
 </div>
-
-
-
-
-<script>
-  $(document).ready(function () {
-    
-    // player menu toggle
-    $("#player-menu").click(function() {
-      $("#srteamslider").toggleClass("toggled_stream");
-      $(this).toggleClass("active");
-	});
-    $("#stream_menu a").click(function() {
-      $("#srteamslider").removeClass("toggled_stream");
-      $("#player-menu").removeClass("active");
-    });
-  });
-</script>
+#}

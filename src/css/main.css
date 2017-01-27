@@ -46,28 +46,15 @@
 
 /*match-list-page*/
 @import "part/page-match-list.css";
-
-/*news and news-page*/
 @import "part/page-news.css";
 @import "part/vod-slider.css";
-
-/*home page*/
 @import "part/page-home.css";
-
-/*game home page*/
 @import "part/page-game-home.css";
-
-/*teams page*/
 @import "part/page-teams.css";
-
-/*players page*/
 @import "part/page-players.css";
-
-/*tournaments page*/
 @import "part/page-tours.css";
-
-/*page-vods.css*/
 @import "part/page-vods.css";
-
+@import "part/page-light.css";
+@import "part/page-user.css";
 /*states*/
 @import "part/state.css";

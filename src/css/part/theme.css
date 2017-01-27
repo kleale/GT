@@ -3,29 +3,27 @@
 */
 
 .red, .text-danger{
-  color: $red;
+  color: $red !important;
 }
 .green, .text-success{
-  color: $green;
+  color: $green !important;
 }
 .blue, .text-primary{
-  color: $blue;
+  color: $blue !important;
 }
 .text-info{
-  color: $lightblue;
+  color: $lightblue !important;
 }
 .text-muted{
   color: inherit;
   opacity: .7
 }
 .text-warning{
-  color: $orange;
+  color: $orange !important;
 }
-.gray{
-  color: #ccc;
-}
+.gray,
 .g{
-  color: #ccc;
+  color: #ccc !important;
 }
 /*
 * Bootstrap Theme
@@ -709,4 +707,26 @@ Tabs mobile
 .ps-container > .ps-scrollbar-x-rail,
 .ps-container > .ps-scrollbar-y-rail {
   opacity: 0.6;
+}
+
+.input-group-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  border: 1px solid transparent;
+  background: #454a4e;
+  color: #b5b5b5;
+}
+.input-group .form-control{
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.input-group-addon.checkbox input[type="checkbox"],
+.input-group-addon.checkbox input[type="checkbox"] {
+  margin-left: 0px;
+  position: relative;
+  top: 2px;
 }

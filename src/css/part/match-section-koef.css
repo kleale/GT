@@ -199,20 +199,13 @@
     .tn1, .tn2{
       white-space: nowrap;
       display: inline-block;
-      width:110px;
+      max-width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
       font-size: 13px;
       font-weight: 300;
       color: $link-white;
       vertical-align: middle;
-      
-      &:hover,
-      &:active,
-      &:focus{
-        color: $link-white-active;
-        text-decoration: none;
-      }
       
       @media (max-width: $M){
         width:auto;
