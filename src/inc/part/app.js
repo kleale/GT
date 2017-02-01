@@ -31,6 +31,24 @@
       $(".bar").toggleClass("hiddenbar");
 	});
     
+    // swappable left bar
+    $(".swipe-area").swipe({
+      swipeStatus: function (event, phase, direction, distance, duration, fingers) {
+        if (phase == "move" && direction == "right") {
+          $(".navbar-collapse").addClass("in");
+          $(".navbar-toggle").addClass("active");
+          $(".swipe-area").addClass("active");
+          return false;
+        }
+        if (phase == "move" && direction == "left") {
+          $(".navbar-collapse").removeClass("in");
+          $(".navbar-toggle").removeClass("active");
+          $(".swipe-area").removeClass("active");
+          return false;
+        }
+      }
+    });
+    
     // tabs on mobile
     function setScale(){
       if ($(window).width()  < 768) {
@@ -56,6 +74,9 @@
     // scrolls in tabs and blocks
     $('.tse-sc').perfectScrollbar(); 
     $('.ps').perfectScrollbar();
+    // scrolls match-top-home.html
+    $('.m-hot').perfectScrollbar(); 
+    //$('.table-responsive').perfectScrollbar();
     
     // bar toggle on mobile
     $(".stage em").click(function() {
@@ -64,6 +85,8 @@
     
     // checkbox to switch
     $("[name='score']").bootstrapSwitch();
+    
+    $("input[type='text']").jvFloat();
     
     // countdown on top match list
     $('[data-countdown]').each(function() {
@@ -157,11 +180,6 @@
       itemsDesktopSmall : [900,3],
       itemsTablet: [600,2] 
     }); 
-    
-    // scrolls match-top-home.html
-    $('.m-hot').perfectScrollbar(); 
-    //.stattable scroll
-    $('.table-responsive').perfectScrollbar();
     
   }); //end ready
 

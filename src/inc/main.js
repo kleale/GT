@@ -8,7 +8,8 @@
 //= ../assets/js/bootstrap-switch.min.js
 //= ../assets/js/owl.carousel.min.js
 //= ../assets/js/jquery.countdown.min.js
-
+//= ../assets/js/jvfloat.js
+//= ../assets/js/jquery.touchSwipe.min.js
 
 /*
  * Custom

@@ -13,6 +13,9 @@ Branding - Match of the day
   &:hover{
     color: #fff;
   }
+  @media (max-width: $XM) {
+    right: 0;
+  }
 }
 .menu-open .abg{
   /*left: 170px;*/
@@ -75,6 +78,10 @@ Branding - Match of the day
     max-width: 110px;
     position: relative;
     z-index: 2;
+    @media (max-width: $XM) {
+      height: 50px;
+      max-width: 80px;
+    }
 }
 .abg_i1:before,
 .abg_i2:before{
@@ -105,6 +112,9 @@ Branding - Match of the day
     right: 100%;
     width: 170px;
     top: 0;
+  @media (max-width: $XM) {
+    
+  }
 }
 .abg_right{
     display: block;
@@ -416,39 +426,54 @@ Branding - Match of the day
 }
 
 @media (max-width : 800px) {
-	.abg_left u {
-		top: 83px;
-	}
-	.abg_day {
-		top: 92px;
-	}
-	.kmob{
-		display: block;
-		bottom: -24px;
-		font-weight: bold;
-		font-size: 16px;
-	}
-	.abg_left u {
-		width: 350px;
-	}
+  .abg_i1, .abg_i2{
+    top: 20px;
+  }
+  .abg_game{
+    left: -90px;
+    width: 89px;
+  }
+  .mainwrap {
+    padding-top: 160px;
+  }
+  .abg_left u {
+    top: 43px;
+  }
+  .abg_day {
+    top: 43px;
+  }
+  .kmob{
+    display: block;
+    bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .abg_left u {
+    width: 250px;
+  }
 }
 @media (max-width : 767px) {
-	.abg{
-		left: 0px;
-	}
+  .abg{
+    left: 0px;
+  }
 }
 @media (max-width : 442px) {
-	.abg_left u {
-		width: 270px;
-	}
-	.abg_day b {
-		font-size: 30px;
-		top: 6px;
-		left: 40px;
-	}
-	.abg_mt {
-		font-size: 9px;
-	}
+  .abg_left u {
+    width: 150px;
+    left: 180px;
+    top: 92px;
+  }
+  .abg_day b {
+    font-size: 30px;
+    top: 1px;
+    left: 40px;
+  }
+  .abg_day {
+    top: 92px;
+  }
+  .abg_mt {
+      font-size: 10px;
+  }
 }
 
 

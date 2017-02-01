@@ -52,7 +52,7 @@ module.exports = {
     "lightblue": "#4396f7",
   
     //transitions
-    "$tease": "all .2s linear",
+    "$tease": "all .1s linear",
   
     //border-radius
     "$br": "2px",

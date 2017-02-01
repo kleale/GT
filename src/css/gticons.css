@@ -18,12 +18,54 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  vertical-align: middle;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.gti-death2:before {
+  content: "\e915";
+}
+.gti-cs2:before {
+  content: "\e902";
+}
+.gti-coins:before {
+  content: "\e907";
+}
+.gti-coins2:before {
+  content: "\e908";
+}
+.gti-coins3:before {
+  content: "\e909";
+}
+.gti-cs:before {
+  content: "\e90a";
+}
+.gti-death:before {
+  content: "\e90b";
+}
+.gti-dota:before {
+  content: "\e90c";
+}
+.gti-hots:before {
+  content: "\e90d";
+}
+.gti-hs:before {
+  content: "\e90e";
+}
+.gti-ow:before {
+  content: "\e90f";
+}
+.gti-sword:before {
+  content: "\e910";
+}
+.gti-sword1:before {
+  content: "\e911";
+}
+.gti-swords:before {
+  content: "\e912";
+}
 .gti-gt1:before {
   content: "\e904";
 }

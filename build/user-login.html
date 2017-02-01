@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   
   <!-- Import main styles -->
-  <link rel="stylesheet" href="../css/main.css?13">
+  <link rel="stylesheet" href="../css/main.css?35">
   
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -42,25 +42,28 @@
         <!--<h1>Вход</h1>-->
         
         <form name="login" method="POST" action="login" class="login-form">
-          <div class="panel panel-default panel-login">
+          <div class="panel panel-light panel-login">
             <div class="panel-heading">
               <h3 class="panel-title mlh"><span>Вход</span></h3>
             </div>
             <div class="panel-body">
-             <img class="profile-img-card" src="../img/enter.svg">
-              <div class="form-group" rel="email">
+              <img class="profile-img-card" src="../img/enter.svg">
+              <div class="form-group has-error" rel="email">
                 <div class="input-group">
                   <input type="text" class="form-control input" name="email" placeholder="Email" value=""> 
                   <span class="input-group-btn">
-                    <a class="btn btn-default odtip" href="/soc?vk" title="" data-original-title="Через Вконтакте"><i class="gti-vk"></i></a>
-                    <a class="btn btn-default odtip" href="/soc?fb" title="" data-original-title="Через Facebook"><i class="gti-facebook"></i></a>
+                    <a class="btn btn-default tip" href="/soc?vk" title="Через Вконтакте"><i class="gti-vk"></i></a>
+                    <a class="btn btn-default tip" href="/soc?fb" title="Через Facebook"><i class="gti-facebook"></i></a>
                   </span>
                 </div>
+                <p id="ferr" class="help-block">Неверный формат Email</p>
               </div>
               <div class="form-group" rel="pwd">
                 <div class="input-group">
                   <input type="password" class="form-control input" name="pwd" placeholder="Пароль" value="">
-                    <span class="input-group-addon checkbox" style="border-left:0px">&nbsp;<input type="checkbox" class="input odtip" name="once" value="1" title="" checked="" data-original-title="Запомнить меня">&nbsp;</span> <span class="input-group-btn"><a class="btn btn-default odtip" href="/pwd" title="" data-original-title="Забыл пароль"><i class="gti-question-circle"></i></a></span> </div>
+                    <span class="input-group-addon checkbox"><input type="checkbox" class="input tip" name="once" value="1" title="Запомнить меня"></span> <span class="input-group-btn"><a class="btn btn-default tip" href="/pwd" title="Забыл пароль"><i class="gti-question-circle"></i></a></span> </div>
+                    <!--
+                    <p id="ferr" class="help-block">Неверный логин или пароль</p>-->
               </div>
               <button type="button" onclick="sform('login')" class="btn btn-primary btn-block btn-lg">Войти</button>
             </div>
@@ -73,7 +76,6 @@
          <img src="http://game-tournaments.com/html/img/logo_home.png" alt="">
          <img src="http://game-tournaments.com/html/img/logo_tipbet.png" alt="">
        </div>
-        
       </section>
       
       
@@ -156,6 +158,8 @@
     </div>
   </div> 
 </div>
+<span class="swipe-area"></span>
+
 
 <!-- Modal STAVKA -->
 <div class="modal prwms st-wms fade" id="stavka" tabindex="-1" role="dialog">
@@ -575,7 +579,7 @@
                 <a href="">Nikname 2</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -584,7 +588,7 @@
                 <a href="">Nikname 3</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -647,7 +651,7 @@
                 <a href="">Nikname 10</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -697,7 +701,7 @@
 
 <!-- Site Sripts -->
 <script src="../inc/main.js"></script>
-<script src="../inc/func_init.js?51"></script>
+<script src="../inc/func_init.js?24"></script>
 
 <!--PAGES select only dev-->
 <style>
@@ -740,8 +744,8 @@
     <a href="/404.html" class="m2 btn btn-sm btn-success">404</a>
     <a href="/vodlist.html" class="m2 btn btn-sm btn-success">Vod List</a>
     <a href="/vodlist2.html" class="m2 btn btn-sm btn-success" style="opacity.5">Vod List2</a>
-    <a href="/vod.html" class="m2 btn btn-sm btn-default">Vod</a>
-    <a href="/light.html" class="m2 btn btn-sm btn-default">HighLight</a>
+    <a href="/vod.html" class="m2 btn btn-sm btn-success">Vod</a>
+    <a href="/light.html" class="m2 btn btn-sm btn-success">HighLight</a>
     <a href="/user-login.html" class="m2 btn btn-sm btn-warning">U login</a>
     <a href="/user-reg.html" class="m2 btn btn-sm btn-warning">U reg</a>
     <a href="/user-pass.html" class="m2 btn btn-sm btn-warning">U pass</a>
@@ -795,11 +799,4 @@
 </body>
 </html>
  
-
- 
- 
- 
-
- 
-
  

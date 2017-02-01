@@ -11,7 +11,7 @@ Modal general
     border-color:color($bg-dropdown l(40%));
     position: relative;
     .close{
-      position: absolute 5px 5px * *;
+      position: absolute 14px 5px * *;
     }
   }
   .modal-footer{

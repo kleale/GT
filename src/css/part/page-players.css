@@ -204,6 +204,12 @@ player.html
         width: 60px;
       }
     }
+    h2{ /*in player block*/
+      text-align: left;
+      font-size: 18px;
+      font-size: 21px;
+      margin: 0 80px 15px 0;
+    }
     .mlh {
       text-align: left;
       font-size: 18px;

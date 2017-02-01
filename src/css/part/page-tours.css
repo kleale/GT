@@ -102,12 +102,12 @@ section.t-top{
   }
 }
 section.t-top{
-  background-position: 0 0;
+  background-position: 50% 0;
   overflow: visible;
   height: auto;
   background-color: #2e3338;
   padding: 20px 30px 30px;
-  box-shadow: 0px -15px 10px 0px rgba(0, 0, 0, 0.05) inset;
+  box-shadow: 0px -15px 20px 0px rgba(0, 0, 0, 0.15) inset;
   @media (max-width: $XM) {
     padding: 20px;
   }
@@ -127,7 +127,7 @@ section.t-top{
       content: "";
       display: block;
       opacity: 0.8;
-      background: url(../img/bgtop.png) center center / auto no-repeat;
+      background: url(../img/bg_news.jpg) 0 center / auto no-repeat;
     }
     &:after {
       content: '';

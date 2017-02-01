@@ -9,6 +9,9 @@
   }
   .block-content{
     overflow-x: hidden;
+    @media (max-width: $XM){
+      overflow-x: visible;
+    }
   }
   .mltText{
     margin-left: 25px;
@@ -37,7 +40,7 @@
     z-index: 10;
     padding-left: 25px;
     @media (max-width: $XM){
-      padding: 0 25px;
+      padding: 0 0;
     }
     
     .block-menu{
@@ -72,12 +75,18 @@
         font-size: 1.2em;
         padding-top: 5px;
       }
+      @media (max-width: $XM){
+        text-align: center;
+        margin-top: .9em;
+      }
     }
-   
     .rigter{
       margin-top: 0px;
+      @media (max-width: $XM){
+        float: none;
+        text-align: center;
+      }
     }
-    
     .refresher{
       font-size: 20px;
       margin: 0 5px;
@@ -171,7 +180,15 @@
     opacity: 1;
   }
 }
-
+.mlt #block_matches_current{
+  @media (max-width: $XM) {
+    margin: 0 -15px;
+    .mtable td:first-child {
+      width: 20px;
+      padding-left: 10px;
+    }
+  }
+}
 /*Match list*/
 .mtable{
   font-size: 12px;
@@ -318,17 +335,18 @@
     color: $link-white;
     vertical-align: middle;
     position: relative;
-    
     @media (max-width : 1599px) {
       width:80px;
       font-size: 12px;
     }
-
     @media (max-width: $M){
       width:auto;
       font-size: 12px;
       white-space: normal;
       line-height: 1;
+    }
+    @media (max-width: $SM){
+      width: 50px;
     }
   }
   .bet-p {
@@ -484,6 +502,11 @@
     color: #edeeef;
     text-transform: none;
     font-size: 14px;
+  }
+  @media (max-width: $XM) {
+    padding-bottom: 5px;
+    font-size: 13px;
+    overflow: hidden;
   }
 }
 .dice-win{

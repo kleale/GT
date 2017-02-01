@@ -742,12 +742,6 @@ Banners
 
 /* /Окно ставок*/
 
-.m-sec{
-  @media (max-width: $XM){
-    padding-top: 30px!important;
-  }
-}
-
 #head-toggle{
     position: relative;
     font-family: 'gticons' !important;

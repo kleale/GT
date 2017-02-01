@@ -105,7 +105,7 @@ section.light-head{
     }
     
     img{
-      opacity: 0;
+      /*opacity: 0;*/
       width: 100%;
     }
   }
@@ -119,16 +119,43 @@ section.light-head{
     font-size: 11px;
     color: #ccc;
     width: 140px;
+    vertical-align: middle;
   }
   td{
     padding: 3px;
     .heropic{
       width: 50px;
-      padding-right: 10px;
+      padding-right: 0px;
       margin: 5px 15px 5px 0;
       img{
         width: 100%;
       }
+    }
+    .flag{
+      vertical-align: text-bottom;
+    }
+    ul{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li{
+        padding: 4px 0;
+      }
+    }
+    .gti-coins{
+      font-size: 14px;
+      vertical-align: text-bottom;
+    }
+    .scd{
+      color: #bfbfbf;
+      font-size: 10px;
+      margin: 0 5px 0 0;
+    }
+    s{
+      margin-right: 5px;
+    }
+    em{
+      color: #eae6b4;
     }
   }
 }
