@@ -1,0 +1,466 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+ 
+
+ <head lang="en"><!-- ADD -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Аккаунт: Настройки</title>  
+  <!-- Import fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+  <link rel="icon" type="image/png" href="/favicon32.png">
+  
+   <!-- Import bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  <!-- Import main styles -->
+  <link rel="stylesheet" href="../css/main.css?13">
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  
+  <!--Import jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+</head>
+<body class="">
+  <div class="container mainwrap" style="padding-top:60px;">
+    <!-- breadcrumb.html -->
+<div class="bread">
+  <ol id="breadcumbs" class="breadcrumb hidden-xs">
+    <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+      <a itemprop="url" href="/"><span itemprop="title">Турниры</span></a>
+    </li>
+    <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+      <a title="Dota 2" itemprop="url" href="/dota-2"><span itemprop="title">Dota 2</span></a>
+    </li>
+  </ol>
+</div>
+    <div class="otstup">
+      <section class="t-top user-ac">
+        <div class="heroBg" style="background-image:url(../img/noplayers.png)"></div>
+        <h1 class="mlh">Username #1323</h1>
+        <div class="user-body2">
+          <div class="row">
+            <div class="col-md-3">
+              <ul class="nav nav-pills nav-stacked nav-user">
+                <li><a href="/account"><i class="gti-user-circle"></i><u>Мой профиль</u></a></li>
+                <li class="active"><a href="/account"><i class="gti-cog"></i><u>Настройки</u></a></li>
+                <li><a href="/account"><i class="gti-bullhorn"></i><u>Мои прогнозы</u></a></li>
+                <li><a href="/account"><i class="gti-bell-o"></i><u>Подписки</u></a></li>
+                <li><a href="/account"><i class="gti-money"></i><u>Платежи</u></a></li>
+                <li><a href="/account/logout"><i class="gti-power-off"></i><u>Выход</u></a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="panel panel-light block-ava">
+                <div class="panel-heading">
+                  <h3 class="panel-title mlh mlhSM"><span>Аватар</span></h3>
+                </div>
+                <div class="panel-body">
+                  <a class="uava">
+                    <img src="http://game-tournaments.com/media/user/pic-20150909-800x847-4949833890.png" alt="">
+                  </a>
+                  <div class="uavaload">
+                    <div style="width:125px" data-count="1" data-rel="1" data-input="logo" data-title="ulogo" class="loader"></div>
+                    <div class="uava-btns">
+                      <a class="button-ulogo1 btn-primary btn btn-sm" href="javascript:;" style="overflow: hidden; direction: ltr;">Загрузить<input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 18px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"></a> 
+                      <!--<a onclick="sform('update')" class="btn btn-default btn-xs">Сохранить</a>-->
+                      <a onclick="if (confirm('Вы уверены?')) delete_logo(this)" href="javascript:;" class="btn btn-default btn-sm"> Удалить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-light">
+                <div class="panel-heading">
+                  <h3 class="panel-title mlh mlhSM"><span>Сменить пароль</span></h3>
+                </div>
+                <div class="panel-body" style="padding: 10px 30px">
+                  <div class="form-group" rel="pwd_new">
+                    <input type="password" rel="1" name="pwd_new" value="" class="form-control" placeholder="Новый пароль">
+                  </div>
+                  <div class="form-group" rel="repwd">
+                    <input type="password" rel="1" name="repwd" value="" class="form-control" placeholder="Повторить пароль">
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-light withJsLabel">
+                <div class="panel-heading">
+                  <h3 class="mlh mlhSM">
+                    <span>твой ID – 18</span>
+                  </h3>
+                </div>
+                <div class="panel-body">
+                  <div rel="email" class="form-group" >
+                    <div class="input-group">
+                      <input type="text" rel="1" name="email" value="kleale@kleale.ru" class="form-control" placeholder="Email">
+                      <span class="input-group-btn"> <a href="/soc?vk"  class="btn btn-default tip" title="Привязать профиль к Вконтакте"><i class="gti-vk"></i></a> <a href="/soc?fb" class="btn btn-default tip" title="Привязать профиль к Facebook"><i class="gti-facebook"></i></a> </span>
+                    </div>
+                    <p class="help-block checkbox">
+                      <label>
+                        <input type="checkbox" rel="1" value="1" name="email_mail" checked=""> Получать уведомления от GG
+                      </label>
+                    </p>
+                  </div>
+                  <div class="form-group" rel="nick">
+                    <input type="text" rel="1" name="nick" class="form-control" maxlength="20" placeholder="Твой ник">
+                  </div>
+                  <div class="form-group" rel="timezone">
+                    <select rel="1" name="timezone" class="form-control">
+                      <option value="0">Часовой пояс</option>
+                      <option value="-720">18:45 (UTC -12:00)</option>
+                      <option value="-660">19:45 (UTC -11:00)</option>
+                      <option value="-600">20:45 (UTC -10:00)</option>
+                      <option value="-540">21:45 (UTC -9:00)</option>
+                      <option value="-480">22:45 PST (UTC -8:00)</option>
+                      <option value="-420">23:45 PDT (UTC -7:00)</option>
+                      <option value="-360">00:45 CST (UTC -6:00)</option>
+                      <option value="-300">01:45 EST (UTC -5:00)</option>
+                      <option value="-240">02:45 EDT (UTC -4:00)</option>
+                      <option value="-210">03:15 (UTC -3:30)</option>
+                      <option value="-180">03:45 CLST (UTC -3:00)</option>
+                      <option value="-120">04:45 (UTC -2:00)</option>
+                      <option value="-60">05:45 (UTC -1:00)</option>
+                      <option value="0">06:45 (UTC +0:00)</option>
+                      <option value="60">07:45 CET (UTC +1:00)</option>
+                      <option value="120">08:45 CEST (UTC +2:00)</option>
+                      <option value="180" selected="">09:45 MSK (UTC +3:00)</option>
+                      <option value="210">10:15 (UTC +3:30)</option>
+                      <option value="240">10:45 (UTC +4:00)</option>
+                      <option value="270">11:15 (UTC +4:30)</option>
+                      <option value="300">11:45 (UTC +5:00)</option>
+                      <option value="330">12:15 (UTC +5:30)</option>
+                      <option value="360">12:45 (UTC +6:00)</option>
+                      <option value="420">13:45 (UTC +7:00)</option>
+                      <option value="480">14:45 SGT (UTC +8:00)</option>
+                      <option value="540">15:45 (UTC +9:00)</option>
+                      <option value="570">16:15 (UTC +9:30)</option>
+                      <option value="600">16:45 (UTC +10:00)</option>
+                      <option value="660">17:45 (UTC +11:00)</option>
+                      <option value="720">18:45 (UTC +12:00)</option>
+                    </select>
+                </div>
+                  <h3 class="mlh mlhSM">
+                    <span>Привязка к соцсетям</span>
+                  </h3>
+                  <div class="soc-enter">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <a class="btn btn-vk tip" href="/soc?vk" title="Через Вконтакте"><i class="gti-vk"></i> <span>Вконтакте</span></a>
+                      </div>
+                      <div class="col-sm-3">
+                        <a class="notActive btn btn-fb tip" href="/soc?fb" title="Через Facebook"><i class="gti-facebook"></i><span>Facebook</span></a>
+                      </div>
+                      <div class="col-sm-3">
+                        <a class="notActive btn btn-gp tip" href="/soc?gp" title="Через Google"><i class="gti-google-plus"></i><span>Google</span></a>
+                      </div>
+                      <div class="col-sm-3">
+                        <a class="notActive btn btn-steam tip" href="/soc?steam" title="Через Steam"><i class="gti-steam"></i><span>Steam</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="" class="btn btn-primary btn-lg">Сохранить настройки</a>
+            </div>
+            <div class="col-md-3">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      <!-- footer.html -->
+<footer class="footer">
+  <div class="f-coppy">
+    <copy>© 2013-2016 GGscore</copy> &bull;
+    <span>ALL RIGHTS RESERVED. GAMEAGEVENTURES LLP</span>
+  </div>
+  <ul class="f-menu">
+    <li><a href="">О проекте</a></li>
+    <li><a href="">Правила</a></li>
+    <li><a href="">Реклама</a></li>
+    <li><a href="">Партнеры</a></li>
+  </ul>
+  <div class="f-soc">
+    Мы в соцсетях &nbsp;&nbsp;
+    <a href=""><i class="gti-vk"></i></a>
+    <a href=""><i class="gti-facebook"></i></a>
+    <a href=""><i class="gti-twitter"></i></a>
+  </div>
+</footer>
+    </div>
+  </div>
+
+<!-- bar.html -->
+
+<!-- bar.html -->
+<div class="bar hiddenbar">
+   <span id="menu-toggle" class="opener"><i class="gti-bars"></i></span>
+  <div class="barc">
+    <a href="#!" class="gt-logo"><img src="../img/gt-logo.png" alt="Game-tournaments.com"></a>
+    <div class="bar-menu">
+      <!--
+      <div class="bar-block">
+        <a href="#!" class="bar-ava"><img src="../img/uava.png" alt="User"></a>
+        <div class="bar-username">
+          <a href="#!" class="bar-name">Алексей Kleale Алексей Kleale</a>
+          <div class="bar-links">
+            <span class="bar-label">pro</span>
+            <a href="#!" class="u-off"><i class="gti-sign-out"></i></a>
+            <a href="#!" class="u-opt"><i class="gti-wrench"></i></a>
+          </div>
+        </div>
+      </div>
+      -->
+      <div class="bar-block lh">
+        <a href="/log" title="Вход в свой профиль"><i class="gti-user-o"></i><span>Войти</span></a>
+        <a href="/reg" title="Регистрация"><i class="gti-user-plus"></i><span>Регистрация</span></a>
+      </div>
+      <ul class="bar-nav-games bng2">
+        <li class="active">
+          <a href="#!"><i class="gti-582"></i></a>
+          
+          <ul class="bar-nav">
+              <li class="active"><a href="/ru/dota-2/matches" title="Матчи"><i class="gti-vs"></i> <span>Матчи</span></a></li>
+              <li><a href="/ru/dota-2/tournaments" title="Турниры"><i class="gti-trophy"></i><span>Турниры</span></a></li>
+              <li><a href="/ru/dota-2/news" title="Новости"><i class="gti-newspaper-o"></i><span>Новости</span></a></li>
+              <li><a href="/ru/dota-2/team" title="Команды"><i class="gti-users"></i><span>Команды</span></a></li>
+              <li><a href="/ru/dota-2/player" title="Игроки"><i class="gti-user"></i><span>Игроки</span></a></li>
+              <li><a href="/ru/dota-2/highlights" title="Хайлайты"><i class="gti-swords"></i><span>Хайлайты</span></a></li>
+              <li><a href="/ru/dota-2/video" title="Записи игр / Видео матчей"><i class="gti-play-circle-o"></i><span>Видео</span></a></li>
+          </ul>
+          
+        </li>
+        <li><a href="#!"><i class="gti-582"></i></a></li>
+        <li><a href="#!"><i class="gti-704"></i></a></li>
+        <li><a href="#!"><i class="gti-313"></i></a></li>
+        <li><a href="#!"><i class="gti-800"></i></a></li>
+        <li><a href="#!"><i class="gti-755"></i></a></li>
+        <!--<li><a href="#!"><i class="gti-hots"></i></a></li>-->
+      </ul>
+      <div class="dropers">
+        <div class="s-lang">
+          <div class="dropdown">
+            <a class="dla" id="ddlang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              RU
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ddlang">
+              <li class="active"><a href="#">Русский</a></li>
+              <li><a href="#">English</a></li>
+              <li><a href="#">Italiano</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="s-time">
+          <div class="dropdown">
+            <a class="sub" id="ddtime" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              15:08 (GMT +3:00)
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ddtime">
+              <li><a href="#">12:08 (GMT 0:00)</a></li>
+              <li><a href="#">13:08 (GMT +1:00)</a></li>
+              <li><a href="#">14:08 (GMT +2:00)</a></li>
+              <li class="active"><a href="#">15:08 (GMT +2:00)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sercher">
+      <input type="text" name="" id="" class="form-control" placeholder="Поиск">
+      <a href=""><i class="gti-search"></i></a>
+    </div>
+  </div> 
+</div>
+<span class="swipe-area"></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Site Sripts -->
+<script src="../inc/main.js"></script>
+<script src="../inc/func_init.js?46"></script>
+
+<!--PAGES select only dev-->
+<style>
+  body{padding-bottom: 60px!important}
+  .project-menu{
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    right: 0px;
+    left:0;
+    text-align:center;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 5px;
+    border-radius: 5px 0px 0px 0px;
+  }
+  .project-menu a{
+    font-size: 10px;
+  }
+</style>
+<div class="project-menu">
+  <div class="btn-group" role="group" id="hpages">
+    <a href="/logo.html" class="m2 btn btn-sm btn-success">Logo</a>
+    <a href="/home.html" class="m1 btn btn-sm btn-default">Home</a>
+    <a href="/game-home.html" class="m1 btn btn-sm btn-warning">Game Home</a>
+    <a href="/index.html" class="m1 btn btn-sm btn-success">Match</a>
+    <a href="/match_end.html" class="m1 btn btn-sm btn-success">Match Vid</a>
+    <!--<a href="/match_end2.html" class="m1 btn btn-sm btn-warning">Match Vid 2</a>-->
+    <a href="/matches.html" class="m2 btn btn-sm btn-success">Mathes</a>
+    <a href="/teams.html" class="m2 btn btn-sm btn-success">Teams list</a>
+    <a href="/team.html" class="m2 btn btn-sm btn-success">Team</a>
+    <a href="/news-page.html" class="m2 btn btn-sm btn-success">News Page</a>
+    <a href="/news.html" class="m2 btn btn-sm btn-success">News List</a>
+    <a href="/players.html" class="m2 btn btn-sm btn-success">Players</a>
+    <a href="/player.html" class="m2 btn btn-sm btn-success">Player</a>
+    <a href="/tours.html" class="m2 btn btn-sm btn-success">Tours</a>
+    <a href="/tour.html" class="m2 btn btn-sm btn-success">Tour</a>
+    <a href="/tour2.html" class="m2 btn btn-sm btn-success" style="opacity.5">Tour2</a>
+    <a href="/tour_group.html" class="m2 btn btn-sm btn-success">Tour Group</a>
+    <a href="/tour_poff.html" class="m2 btn btn-sm btn-success">Tour Playoff</a>
+    <a href="/404.html" class="m2 btn btn-sm btn-success">404</a>
+    <a href="/vodlist.html" class="m2 btn btn-sm btn-success">Vod List</a>
+    <a href="/vodlist2.html" class="m2 btn btn-sm btn-success" style="opacity.5">Vod List2</a>
+    <a href="/vod.html" class="m2 btn btn-sm btn-success">Vod</a>
+    <a href="/light.html" class="m2 btn btn-sm btn-success">HighLight</a>
+    <a href="/user-login.html" class="m2 btn btn-sm btn-success">U login</a>
+    <a href="/user-reg.html" class="m2 btn btn-sm btn-success">U reg</a>
+    <a href="/user-pass.html" class="m2 btn btn-sm btn-success">U pass</a>
+    <a href="/user-acc.html" class="m2 btn btn-sm btn-success">U acc</a>
+    <a href="/user-page.html" class="m2 btn btn-sm btn-warning">U page</a>
+    <a href="/user-pay.html" class="m2 btn btn-sm btn-warning">U pay</a>
+    <!--
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Bets</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Predict</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Media</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Forum</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Search</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">Text</a>
+    <a href="/stickers.html" class="m2 btn btn-sm btn-default">stickers</a>
+    -->
+    <a href="/fonts.html" class="m2 btn btn-sm btn-success">Ico</a>
+    <a href="/mail-pwd_ru.html" class="m2 btn btn-sm btn-warning">m1</a>
+    <a href="/mail-pwd_count_ru.html" class="m2 btn btn-sm btn-warning">m2</a>
+    <a href="/mail-reg.html" class="m2 btn btn-sm btn-warning">m3</a>
+  </div>
+</div>
+
+
+<!--PAGES js navi only dev-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script>
+(function ($) {
+  'use strict';
+
+  $(document).ready(function () {
+    
+    $(function () {
+        setNavigation();
+    });
+
+    function setNavigation() {
+        var path = window.location.pathname;
+        path = path.replace(/\/$/, "");
+        path = decodeURIComponent(path);
+
+        $("#hpages a").each(function () {
+            var href = $(this).attr('href');
+            if (path.substring(0, href.length) === href) {
+                $(this).addClass('active');
+            }
+        });
+    }
+    
+  }); //end ready
+
+}(jQuery));
+</script>
+<!--.STYLE CHANGE dev-->
+<!--.PAGES navi dev-->
+
+<div class="modal fade in" id="wms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog" style="max-width:320px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Пополнить свой счет</h4></div>
+      <div class="modal-body" style="padding:30px;">
+        <form action="account" method="POST" name="pay" class="form-horizontal">
+          <input type="hidden" class="input" name="method" value="robo">
+          <div class="form-group">
+            <div rel="insum" class="col-sm-12">
+              <div class="input-group">
+                <input type="text" name="insum" value="" placeholder="Сумма для перевода, $" class="form-control input">
+                <div class="input-group-addon"><i class="gti-usd"></i></div>
+              </div>
+              <p id="ferr" class="help-block"></p>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-primary btn" onclick="sform('pay')" type="button"><i class="gti-check"></i> Подтвердить оплату</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade in" id="wms2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog" style="max-width:320px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Заказать выплату</h4></div>
+      <div class="modal-body" style="padding:30px;">
+        <form name="payout" action="account" method="POST">
+          <div class="form-group" rel="insum">
+            <input type="text" name="insum" value="" placeholder="Сколько, $ (комиссия на вывод 10%)" class="form-control">
+          </div>
+          <div class="form-group" rel="payoutmethod">
+            <select name="payoutmethod" class="form-control">
+              <option value="">Платежная система</option>
+              <option value="qiwi">QIWI</option>
+              <option value="webmoney">Webmoney</option>
+              <option value="yandex_money">Yandex</option>
+            </select>
+          </div>
+          <div class="form-group" rel="incaccount">
+            <input type="text" name="incaccount" value="" placeholder="Кошелек (WMR, Yandex, Qiwi)" class="form-control">
+          </div>
+          <center>
+            <button type="button" onclick="sform('payout')" class="btn btn-primary"><i class="gti-check"></i> Подтвердить выплату</button>
+          </center>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

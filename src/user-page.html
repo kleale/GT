@@ -1,0 +1,173 @@
+{% set title = "Аккаунт: Профиль" %}
+
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  <div class="container mainwrap" style="padding-top:60px;">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup">
+      <section class="t-top user-ac">
+        <div class="heroBg" style="background-image:url(../img/noplayers.png)"></div>
+        <h1 class="mlh">Username #1323</h1>
+        <div class="user-menu">
+          <ul class="nav nav-pills nav-stacked nav-user">
+            <li class="active"><a href="/account"><i class="gti-user-circle"></i><u>Мой профиль</u></a></li>
+            <li><a href="/account"><i class="gti-cog"></i><u>Настройки</u></a></li>
+            <li><a href="/account"><i class="gti-bullhorn"></i><u>Мои прогнозы</u></a></li>
+            <li><a href="/account"><i class="gti-bell-o"></i><u>Подписки</u></a></li>
+            <li><a href="/account"><i class="gti-money"></i><u>Платежи</u></a></li>
+            <li><a href="/account/logout"><i class="gti-power-off"></i><u>Выход</u></a></li>
+          </ul>
+        </div>
+        <div class="user-body">
+          <div class="row">
+            <div class="col-md-7">
+            <div class="panel panel-light poverf">
+              <div class="panel-heading">
+                <h3 class="panel-title mlh mlhSM"><span><i class="gti-id-card"></i> Данные</span></h3>
+              </div>
+              <div class="table-body">
+                <table class="table table-hover table-condensed">
+                  <tbody>
+                    <tr>
+                      <td class="ctd"><i class="tip gti-universal-access" title="Пол"></i></td>
+                      <td>Мальчик <i class="tip gti-male" title="Мальчик"></i></td>
+                    </tr>
+                    <tr>
+                      <td class="ctd"><i class="tip gti-location"  title="Город"></i></td>
+                      <td>Санкт-Петербург</td>
+                    </tr>
+                    <tr>
+                      <td class="ctd"><i class="tip gti-home" title="Сайт"></i></td>
+                      <td><a href="/go?to=http://kleale.ru" target="_blank">http://kleale.ru</a></td>
+                    </tr>
+                    <tr>
+                      <td class="ctd"><i class="tip gti-coins2"  title="Заработано"></i></td>
+                      <td>56 руб.</td>
+                    </tr>
+                    <tr>
+                      <td class="ctd"><i class="gti-power-off odtip"  title="Дата регистрации"></i></td>
+                      <td>01 апреля 2011</td>
+                    </tr>
+                    <tr>
+                      <td class="ctd"><i class="tip gti-pencil"></i></td>
+                      <td><small><a href="/account">Добавить информацию о себе</a></small></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-5">
+              <div class="panel panel-light poverf">
+                <div class="panel-heading">
+                  <h3 class="panel-title mlh mlhSM"><span><i class="gti-comments-o"></i> Комментарии USERNAME #1323</span></h3>
+                </div>
+                <div class="panel-body">
+                  <ul class="logsm">
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/news/novaya-igra-ot-russkih-razrabotchikov-471743#478728">Новая игра от русских...</a> <span class="time">2 мес. назад</span> <span class="loginf">Мда...</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/ongab/redizayn-spustya-god-471777#478703">Редизайн спустя...</a> <span class="time">3 мес. назад</span> <span class="loginf">принято. Уточню: - Выбор игры в верхней панельке, тоже нужен?...</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/karos/ongab-umiraet-471741#478692">Онгаб умирает?</a> <span class="time">3 мес. назад</span> <span class="loginf">Да, дизайн не прижился. Но на старый откатываться ооочень...</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/ongab/forum/pub/umolyayu-podskajite-godnuyu-mmorpg-gde-donat-eshche-ne-vse-reshaet-471507#478122">Умоляю подскажите...</a> <span class="time">5 мес. назад</span> <span class="loginf">Нет такой 100%</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/bless/kak-nachat-igrat-v-bless-online-na-obt-koreyskogo-servera-471633#478121">Как начать играть...</a> <span class="time">5 мес. назад</span> <span class="loginf">Спасибо</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/dota2/rasskaju-chto-da-kak-gayd-na-weaver-471563#477960">Расскажу что да...</a> <span class="time">6 мес. назад</span> <span class="loginf">Спасибо!</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/titansiege/klassy-471520#477775">Классы</a> <span class="time">7 мес. назад</span> <span class="loginf">+</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/karos/optimizatsiya-interfeysa-471500#477654">Оптимизация интерфейса.</a> <span class="time">7 мес. назад</span> <span class="loginf">+++</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/mass-effect/final-mass-effect-3-nikak-ne-povliyaet-na-sobytiya-mass-effect-andromeda-471492#477653">Финал Mass Effect 3 никак...</a> <span class="time">7 мес. назад</span> <span class="loginf">Да слышал эту новость. Решили забить на оригинальную трилогию.</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/news/otkryta-registratsiya-na-betu-v-revelation-online-471460#477542">ОТКРЫТА РЕГИСТРАЦИЯ...</a> <span class="time">7 мес. назад</span> <span class="loginf">Спасибо за мнение. Интересно стало</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/karos/shla-2-aya-nedelya-vozvrashcheniya-v-karos-471462#477541">Шла 2-ая неделя...</a> <span class="time">7 мес. назад</span> <span class="loginf">Свежачок =)</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/overwatch/rokovaya-vdova-layf-obzor-geympleya-za-samogo-yarkogo-snaypera-v-igre-471467#477539">РОКОВАЯ ВДОВА...</a> <span class="time">7 мес. назад</span> <span class="loginf">Ну как канал на ютубе растет? =)</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/karos/forum/general/opyat-loho-koshelek-471440#477445">Опять лохо-кошелек.</a> <span class="time">8 мес. назад</span> <span class="loginf">Да все из-за проблем яндесмани и робокассы - народ стал резко...</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/id80168?review=6170#477441">Titan Siege</a> <span class="time">8 мес. назад</span> <span class="loginf">Да, спасибо. Поправил - теперь таргет система.</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/cs-go/stavki-cs-go-471410#477207">Ставки CS GO</a> <span class="time">8 мес. назад</span> <span class="loginf">Да, оно понятно. Рулеток масса и больше для школьников.</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/dota2/dota-2-6-87-update-471367#476974">Dota 2 6.87 update</a> <span class="time">9 мес. назад</span> <span class="loginf">жаль копипаста</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/minecraft/kak-sdelat-mobofermu-fermu-kriperov-skeletov-zombi-i-vedm-za-15-shagov-471365#476952">КАК СДЕЛАТЬ МОБОФЕРМУ...</a> <span class="time">9 мес. назад</span> <span class="loginf">Перенес в спец Лигу по майнкрафту</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/bns/gayd-po-premium-statusu-i-ego-urovnyah-471362#476894">Гайд по премиум...</a> <span class="time">9 мес. назад</span> <span class="loginf">Спасибо, большое! Материалов стало совсем мало, я один пару...</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/id76880?review=5584#476856">Lineage 3</a> <span class="time">9 мес. назад</span> <span class="loginf">Она еще не вышла =)</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/id83716?review=6121#476822">Blade and Soul</a> <span class="time">9 мес. назад</span> <span class="loginf">Да игра не плоха, есть свои плюсы и минусы. Кто-то писал нонтаргет...</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/bns/gayd-po-bystroy-prokachke-1-45-471338#476810">Гайд по быстрой...</a> <span class="time">9 мес. назад</span> <span class="loginf">Жалко что не свое. А так бы деньгу забросил.</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/id83424?review=6103#476611">Blade &amp; Soul</a> <span class="time">9 мес. назад</span> <span class="loginf">Да, заметил похожую штуку. Думал мне показалось. Ан нет.</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/news/kak-nami-manipuliruyut-v-igrah-psihologiya-v-igrah-nova-471219#476581">Как нами манипулируют...</a> <span class="time">9 мес. назад</span> <span class="loginf">sdfdsf</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/destiny/titan-klass-personaja-v-destiny-388821#476402">Titan - класс персонажа...</a> <span class="time">9 мес. назад</span> <span class="loginf">Толково.</span> </li>
+                    <li class="logi"> <i class="icon-chat-alt"></i> <a href="/tera/gayd-po-krushitelyu-brawler-pve-471270#476399">Гайд по Крушителю(Brawler)...</a> <span class="time">9 мес. назад</span> <span class="loginf">Благодарю за гайд!!</span> </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{#
+{% include "template/branding.html" %}
+#}
+{% include "template/bar.html" %}
+
+{% include "template/scripts.html" %}
+
+<div class="modal fade in" id="wms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog" style="max-width:320px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Пополнить свой счет</h4></div>
+      <div class="modal-body" style="padding:30px;">
+        <form action="account" method="POST" name="pay" class="form-horizontal">
+          <input type="hidden" class="input" name="method" value="robo">
+          <div class="form-group">
+            <div rel="insum" class="col-sm-12">
+              <div class="input-group">
+                <input type="text" name="insum" value="" placeholder="Сумма для перевода, $" class="form-control input">
+                <div class="input-group-addon"><i class="gti-usd"></i></div>
+              </div>
+              <p id="ferr" class="help-block"></p>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-primary btn" onclick="sform('pay')" type="button"><i class="gti-check"></i> Подтвердить оплату</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade in" id="wms2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog" style="max-width:320px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Заказать выплату</h4></div>
+      <div class="modal-body" style="padding:30px;">
+        <form name="payout" action="account" method="POST">
+          <div class="form-group" rel="insum">
+            <input type="text" name="insum" value="" placeholder="Сколько, $ (комиссия на вывод 10%)" class="form-control">
+          </div>
+          <div class="form-group" rel="payoutmethod">
+            <select name="payoutmethod" class="form-control">
+              <option value="">Платежная система</option>
+              <option value="qiwi">QIWI</option>
+              <option value="webmoney">Webmoney</option>
+              <option value="yandex_money">Yandex</option>
+            </select>
+          </div>
+          <div class="form-group" rel="incaccount">
+            <input type="text" name="incaccount" value="" placeholder="Кошелек (WMR, Yandex, Qiwi)" class="form-control">
+          </div>
+          <center>
+            <button type="button" onclick="sform('payout')" class="btn btn-primary"><i class="gti-check"></i> Подтвердить выплату</button>
+          </center>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -7,10 +7,9 @@
 @import "../assets/css/bootstrap-switch.css";
 @import "../assets/css/owl.carousel.css";
 @import "../assets/css/owl.theme.css";
-@import "../assets/css/jvfloat.css";
-/*
-@import "../assets/css/perspectiveRules.css";
-*/
+@import "../assets/js/fancy/jquery.fancybox.css";
+@import "../assets/js/fancy/helpers/jquery.fancybox-thumbs.css";
+
 
 /*
 * Base css 
@@ -43,6 +42,7 @@
 @import "part/match-section-comments.css";
 @import "part/match-section-news.css";
 @import "part/match-section-soc.css";
+@import "part/match-vid.css";
 
 /*match-list-page*/
 @import "part/page-match-list.css";

@@ -1,0 +1,108 @@
+/*
+match-vid.css
+*/
+.vid-stat{
+  .nav-wr{
+    
+  }
+  .block-content{
+    
+  }
+  .barr{
+    position: relative;
+    .ptc_bar_chart,
+    .ptc_bar_chart0{
+      position: absolute -5px 10px -5px 10px;
+      margin: 0 20%;
+      z-index: 0;
+    }
+  }
+  .mtable-c{
+    th{
+      text-align: center;
+      width: 33%;
+      font-size: 13px;
+      img{
+        height: 30px;
+        margin: 0 10px; 
+      }
+    }
+    >tbody>tr{
+      &:hover {
+        background: rgba(73, 89, 103, 0.42);
+      }
+      > td{
+        text-align: center;
+        padding: 3px 10px;
+        &:nth-child(1){
+          padding-left: 40px;
+        }
+        &:last-child{
+          text-align: center;
+          padding-right: 40px;
+        }
+        .ava-sm{
+          vertical-align: middle;
+        }
+        .heropic{
+          margin:0  15px;
+        }
+        .name{
+          display: inline-block;
+          a{
+            font-size: 14px;
+          }
+          span{
+            font-size: 10px;
+            color: #ccc;
+          }
+          &.tn1{
+            text-align: left;
+          }
+          &.tn2{
+            text-align: right;
+          }
+        }
+        table.intable{
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          tr{
+            background:transparent;
+            &:nth-of-type(2n+1),
+            &:nth-of-type(2n){
+              border-bottom: 0px solid rgb(57, 63, 66);
+            }
+            &:hover{
+              td:nth-child(2){
+                opacity: 1;
+              }
+            }
+          }
+          td{
+            font-size: 11px;
+            padding: 3px 5px;
+            &:first-child{
+              text-align: right;
+              color: #fff;
+              width: 20%;
+            }
+            &:nth-child(2){
+              text-transform: uppercase;
+              font-size: 9px;
+              color: #fff;
+              text-shadow: 0 1px 1px #000;
+              opacity: .5;
+              transition: $tease;
+            }
+            &:last-child{
+              text-align: left;
+              color: #fff;
+              width: 20%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

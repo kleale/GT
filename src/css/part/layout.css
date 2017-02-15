@@ -23,6 +23,9 @@ body{
   position: absolute 0 * * *;
   z-index: 2;
   background: #035880;
+    @media (max-width: $XM) {
+      left: 31px;
+    }
   
   ol{
     display: block;
@@ -30,8 +33,11 @@ body{
     color: #fff;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding: 5px 10px;
+    padding: 4px 8px 4px;
     margin: 0;
+    @media (max-width: $XM) {
+      padding: 10px 10px 9px;
+    }
     
     li {
       display: inline-block;
@@ -91,7 +97,7 @@ body{
     display: block;
     @media (max-width: $XM) {
       font-size: 20px;
-      line-height: 37px;
+      line-height: 41px;
       padding: 0 3px 0 0;
       height: 40px;
       width: 40px;
@@ -116,12 +122,17 @@ body{
   
   .gt-logo {
     display: block;
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
     color:#999;
-    
+    @media (max-height: $XM) {
+        padding: 10px 0;
+    }
     img{
       width:100px;
+      @media (max-height: $XM) {
+        width: 70px;
+      }
     }
     
     @media (max-height: $MH) {
@@ -145,42 +156,66 @@ body{
 
 .bar-nav-games{
   width: 50px;
-  float: left;
   padding: 0;
   margin: 0;
 
-  li{
+  > li{
     list-style: none;
     padding: 0;
     margin: 0;
     display: block;
     
-    &.active a{
+    &.active>a, >a:hover{
       opacity: 1;
-      filter: grayscale(0);
       background: rgba(14, 130, 184, 0.24);
+      i{
+        &.gti-582{
+          color: rgb(164, 39, 16);
+        }
+        &.gti-704{
+          color: #dbd4c8;
+        }
+        &.gti-313{
+          color: #d4be58;
+        }
+        &.gti-800{
+          color: #fa9c1e;
+        }
+        &.gti-755{
+          color: #0091d3;
+        }
+        &.gti-hots{
+          color: #77bbcb;
+        }
+      }
     }
-    a{
+    > a{
       transition: $tease;
-      filter: grayscale(1);
       display: block;
       width: 50px;
-      padding: 5px;
-      opacity: .4;
+      text-align: center;
+      padding: 10px;
+      opacity: .5;
+      font-size: 25px;
+      line-height: 1;
+      text-decoration: none;
+      &:active,
+      &:focus,
+      &:hover{
+        opacity: 1;
+        text-decoration: none;
+      }
       img{
         max-width: 100%;
       }
-    }
-    &:active a,
-    &:focus a,
-    &:hover a{
-      opacity: 1;
-      filter: grayscale(0);
+      i{
+        display: block;
+      }
     }
   }
 }
 
-.bar-block{
+.bar-block{ 
   background: rgba(0, 0, 0, 0.18);
   display: block;
   padding: 5px;
@@ -199,7 +234,54 @@ body{
       border-radius: 50%;
     }
   }
+  &.lh{
+    text-align: center;
+    background: #191e21 url(../img/tile.png) repeat 2px 0;
+    border-top: 1px solid #484848;
+/*    background: #163645;
+    border-bottom: 1px solid #2a4958;
+    border-top: 1px solid #2a4958;*/
+    a{
+      display: inline-block;
+      margin: 0;
+      padding: 5px;
+      color: #7faec3;
+      &:hover,
+      &:focus,
+      &:active{
+        text-decoration: none;
+        color: #2faee7;
+      }
+      &:nth-child(1){
+        border-bottom: 1px solid #484848;
+      }
+      i{
+        font-size: 18px;
+      }
+      span{
+        display: none;
+      }
+    }
+  }
 }
+.menu-open{
+  .lh{
+    a{
+      margin: 5px 10px;
+      font-size: 12px;
+      &:nth-child(1){
+        border-bottom:0;
+      }
+      i{
+        
+      }
+      span{
+        display: block;
+      }
+    }
+  }
+}
+
 
 .bar-username{
   padding-left: 58px;
@@ -247,7 +329,9 @@ body{
 }
 
 .bar-nav{
-  padding: 10px 0 10px 50px;
+  padding: 5px 0 5px 50px;
+  background: rgba(14, 130, 184, 0.24);
+  margin: 0;
 
   li{
     list-style: none;
@@ -257,24 +341,30 @@ body{
     a{
       display: block;
       padding: 8px 10px;
-      color: $link-light-blue;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 300;
       line-height: 1;
       text-transform: uppercase;
-
+      opacity: .6;
+      
       &:active,
       &:focus,
       &:hover{
         text-decoration: none;
         color: $link-light-blue-active;
+        opacity: 1;
       }
       @media (max-height: $MH) {
         padding: 8px 10px;
         font-size: 12px;
       }
     }
-    
+    &.active{
+      a{
+        color: #fff;
+        opacity: 1;
+      }
+    }
     i{
       margin-right: 5px;
       font-size: 17px;
@@ -288,8 +378,33 @@ body{
         font-size: 12px;
       }
     }
+  }  
+}
+
+
+.hiddenbar .bng2 .bar-nav{
+  background: rgba(22, 53, 69, 0.34);
+  padding: 0 0 5px 0;
+  position: relative auto auto auto auto;
+  width: auto;
+  border-bottom: 1px solid #293f4c;
+}
+.bng2 {
+  position: relative;
+  width: auto;
+  background: rgba(25, 30, 33, 0.52);
+  .bar-nav{
+    padding: 0;
+    background: rgba(0, 0, 0, 0);
+    position: absolute 0 * * 50px;
+    width: 150px;
+    a{
+      color: #a6c6cb;
+    }
   }
 }
+
+
 
 .s-lang{
   float:left;
@@ -420,6 +535,8 @@ footer{
     
   @media (max-width: $XM) {
     text-align: center;
+    padding: 10px;
+    font-size: 9px;
   }
   @media (max-width: 1599px) {
     font-size: 11px;
@@ -428,11 +545,9 @@ footer{
   .f-coppy{
     float: left;
     padding: 5px 0;
-    
     @media (max-width: $XM) {
       float: none;
     }
-  
     copy{
       margin-right: 10px;
       display: inline-block;
@@ -446,7 +561,9 @@ footer{
     margin: 5px 0 0 20px;
     padding: 0;
     display: inline-block;
-
+    @media (max-width: $XM) {
+      margin: 10px 0 5px;
+    }
     li{
       display: inline-block;
       padding: 0 10px;
@@ -515,7 +632,12 @@ footer{
       font-family: 'gticons' !important;
       font-size: 30px;
     }
-    
+    &:hover,
+    &:focus,
+    &:active{
+      text-decoration: none;
+      color: #2faee7;
+    }
     img{
       display: none;
     }
@@ -545,7 +667,7 @@ footer{
     background: rgba(14, 130, 184, 0.24);
     
     a{
-      color: #7FAEC3;
+      color: #7faec3;
       
       span{
         display: none;

@@ -12,18 +12,8 @@
         <div class="heroBg" style="background-image:url(../img/noplayers.png)"></div>
         <h1 class="mlh">Username #1323</h1>
         <div class="user-menu">
-          <div class="al">
-            <a class="uava">
-              <img src="http://game-tournaments.com/media/user/pic-20150909-800x847-4949833890.png" alt="">
-            </a>
-            <div style="width:125px" data-count="1" data-rel="1" data-input="logo" data-title="ulogo" class="loader"></div>
-            <div class="uava-btns">
-                <a class="button-ulogo1 btn-primary btn btn-xs" href="javascript:;" style="overflow: hidden; direction: ltr;"><i class="gti-picture-o"></i> Загрузить<input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 18px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"></a> 
-                <!--<a onclick="sform('update')" class="btn btn-default btn-xs">Сохранить</a>-->
-                <a onclick="if (confirm('Вы уверены?')) delete_logo(this)" href="javascript:;" class="btn btn-default btn-xs"><i class="gti-times"></i> удалить</a>
-            </div>
-          </div>
           <ul class="nav nav-pills nav-stacked nav-user">
+            <li><a href="/account"><i class="gti-user-circle"></i><u>Мой профиль</u></a></li>
             <li class="active"><a href="/account"><i class="gti-cog"></i><u>Настройки</u></a></li>
             <li><a href="/account"><i class="gti-bullhorn"></i><u>Мои прогнозы</u></a></li>
             <li><a href="/account"><i class="gti-bell-o"></i><u>Подписки</u></a></li>
@@ -33,8 +23,46 @@
         </div>
         <div class="user-body">
           <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-4 makefirstonmobile">
+             {#
+              <div class="al">
+                <a class="uava">
+                  <img src="http://game-tournaments.com/media/user/pic-20150909-800x847-4949833890.png" alt="">
+                </a>
+              </div>
+              <div style="width:125px" data-count="1" data-rel="1" data-input="logo" data-title="ulogo" class="loader"></div>
+              <div class="uava-btns">
+                <a class="button-ulogo1 btn-primary btn btn-sm" href="javascript:;" style="overflow: hidden; direction: ltr;">Загрузить<input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 18px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"></a> 
+                <!--<a onclick="sform('update')" class="btn btn-default btn-xs">Сохранить</a>-->
+                <a onclick="if (confirm('Вы уверены?')) delete_logo(this)" href="javascript:;" class="btn btn-default btn-sm"> Удалить</a>
+              </div>
+              #}
+              
               <div class="panel panel-light">
+                  <div class="panel-heading">
+                    <h3 class="panel-title mlh mlhSM"><span>Аватар</span></h3>
+                  </div>
+                  <div class="panel-body" style="padding: 10px 30px">
+
+                    <div class="al">
+                      <a class="uava">
+                        <img src="http://game-tournaments.com/media/user/pic-20150909-800x847-4949833890.png" alt="">
+                      </a>
+                    </div>
+                    <div style="width:125px" data-count="1" data-rel="1" data-input="logo" data-title="ulogo" class="loader"></div>
+                    <div class="uava-btns">
+                      <a class="button-ulogo1 btn-primary btn btn-sm" href="javascript:;" style="overflow: hidden; direction: ltr;">Загрузить<input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 18px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"></a> 
+                      <!--<a onclick="sform('update')" class="btn btn-default btn-xs">Сохранить</a>-->
+                      <a onclick="if (confirm('Вы уверены?')) delete_logo(this)" href="javascript:;" class="btn btn-default btn-sm"> Удалить</a>
+                    </div>
+                  
+                </div>
+              </div>
+              
+            </div>
+          
+            <div class="col-md-8">
+              <div class="panel panel-light withJsLabel">
                 <div class="panel-heading">
                   <h3 class="mlh mlhSM">
                     <span>твой ID – 18</span>
@@ -63,12 +91,7 @@
                     </p>
                   </div>
                   <div class="form-group" rel="nick">
-                    <div class="input-group">
-                      <input type="text" rel="1" name="nick" class="form-control" maxlength="20" placeholder="Твой ник">
-                      <span class="input-group-btn">
-                      <a href="" target="_blank"  class="btn btn-default tip" title="Генератор ников"><i class="gti-wrench"></i></a>
-                      </span>
-                    </div>
+                    <input type="text" rel="1" name="nick" class="form-control" maxlength="20" placeholder="Твой ник">
                   </div>
                   <div class="form-group" rel="timezone">
                     <select rel="1" name="timezone" class="form-control">
@@ -140,35 +163,7 @@
                   </div>
                 </div>
               </div>
-              
-            </div>
-            <div class="col-md-5">
-              <div class="panel panel-light payment">
-                <div class="panel-heading">
-                  <h3 class="panel-title mlh mlhSM"><span>Счет</span></h3>
-                </div>
-                <div class="panel-body">
-                  <div class="umoney"><i class="gti-coins3"></i> 1.09 $</div>
-                  <div class="umoney-btn"> <a href="javascript:;" class="btn btn-sm btn-default" data-toggle="modal" data-target="#wms" ><i class="gti-plus"></i> Пополнить</a> <a href="javascript:;" class="btn btn-sm btn-default" data-toggle="modal" data-target="#wms2"><i class="gti-money"></i> Заказать выплату</a>
-                  </div>
-                </div>
-                <div id="block_pay">
-                  <table class="table table-striped" style="margin-bottom:0;">
-                    <tbody>
-                     {% for i in 1..10 %}
-                      <tr class="{{random(['text-danger','text-success'])}}">
-                        <td width="20">
-                          <i class="gti-{{random(['times','check'])}}"></i>
-                        </td>
-                        <td>2016-11-0{{i}} {{random(['Пополнение','Снятие'])}}</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">{{random(['-1.5','+1.2'])}} <i class="gti-usd"></i></abbr> </td>
-                      </tr>
-                      {% endfor %}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              {% include "template/pager.html" %}
+              <a href="" class="btn btn-primary btn-lg">Сохранить настройки</a>
             </div>
           </div>
         </div>

@@ -43,6 +43,7 @@
       border-radius: 20px;
       display: inline-block;
       font-style: normal;
+      min-width: 180px;
     }
   }
   .badges{
@@ -94,12 +95,20 @@
         display: inline-block;
         border-radius: 60px;
         margin: 0 10px;
-        width: 30px;
+        min-width: 30px;
         height: 30px;
         line-height: 33px;
+        padding: 0 8px;
       i{
         display: inline-block;
         padding: 7px 0;
+      }
+      span{
+        margin: 0 0 0 9px;
+        /*&.share-vk{}
+        &.share-fb{}
+        &.share-tw{}
+        &.share-gg{}*/
       }
     }
   }
@@ -422,12 +431,19 @@ Block ramka
     text-transform: none;
     color: #fff;
     margin: 0 0.5%;
-    width: 23.4%;
+    width: 23.2%;
     font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
     @media (max-width: 650px) {
       width: 48.3%;
       margin-top: 5px;
       margin-bottom: 5px;
+    }
+    span{
+      margin-left: 5px;
+      font-weight: 600;
     }
   }
   .btn-vk{

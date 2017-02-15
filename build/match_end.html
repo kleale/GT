@@ -54,7 +54,96 @@
 
 <script src="../inc/match-page.js"></script>
 <script src="../inc/match-chart.init.js"></script>
+<script>
+  //bar
+$(document).ready(function() {
+  $('.ptc_bar_chart0').each(function(){
+    $(this).highcharts({
+        colors: ["#3f79a2", "#d94c4c"],
+        chart: {
+            type: 'bar',
+            backgroundColor: 'none',
+            spacingBottom: 5,
+            spacingTop: 5,
+            spacingLeft: 0,
+            spacingRight: 0
+        },
+        credits: {
+            enabled: false
+        },
+        xAxis: {
+          //categories: ['FORM', 'STR', 'STAT', 'MVP', 'LANE', 'GOLD', 'FIGHTS', 'EXP'],
+          categories: ['MVP', 'FIGHTS', 'GOLD', 'LH'],
+          lineWidth: 0,
+          minorGridLineWidth: 0,
+          lineColor: 'transparent',
+          labels: {
+              enabled: false
+          },
+          title: {
+              enabled: false
+          },
+          minorTickLength: 0,
+          tickLength: 0
+        },
+        yAxis: {
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+           minorTickLength: 0,
+           tickLength: 0
+        },
+        title: {
+            enabled: false,
+            text:''
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+              stacking: 'percent',
+              crop: false,
+              title:'',
+              pointPadding: 0.01,
+              groupPadding: 0.2
+            }
+        },
+        tooltip: {
+            headerFormat: '',
+            useHTML: true,
+            pointFormat: '{series.name}<br>{point.name}: {point.y}'
+        },
+        series: [{
+            name: 'Lacky8',
+            data: [
+                  ['MVP', 53],
+                  ['FIGHTS', 46],
+                  ['GOLD', 53],
+                  ['LH', 46]
+            ],
+            index: 4
+        }, {
+            name: 'Boss',
+            data: [
+                  ['MVP', 5],
+                  ['FIGHTS', 4],
+                  ['GOLD', 55],
+                  ['LH', 44]
+            ],
+            index: 3
+        }]
+    });
+  });
+});
 
+</script>
 
  <body>  
   <div class="container mainwrap">
@@ -226,17 +315,12 @@
       
           <li><a href="#">Игра 8</a></li>
       
-          <li><a href="#">Игра 9</a></li>
-      
-          <li><a href="#">Игра 10</a></li>
-      
-          <li><a href="#">Игра 11</a></li>
-      
     </ul>
   </div>
   <div class="video_block" id="video">
     <figure><img src="http://game-tournaments.com/media/export/start/41085-1.jpg"></figure>
     <div class="gamevid" style="top: 285px;">
+      <h2>Смотреть видео Even Team Secret vs Cloud9</h2>
       <div id="gvlist" class="tse">
           <div class="tse-content">
             <a class="g-rezults fancybox" href="/media/export/result/41085-1.jpg">
@@ -266,3388 +350,673 @@ $(document).ready(function () {
   });
 });
 </script>
-
-
-      <section id="m-koef" class="m-sec m-even">
-        <div class="row">
-          <div class="col-lg-7">
-           <!-- /match-page/section-koef.html -->
-
-<div class="block">
-  <div class="bh clearfix">
-    <h3>
-      <i class="ih gti-dice"></i>
-      Коэффициенты
-      <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О площадке + дополнительные сведения о матче" class="inf gti-info-circle"></i>
-    </h3>
-    <ul class="block-menu" role="tablist">
-      <li class="active"><a id="k_tab" href="#tzn" role="tab" data-toggle="tab">Значения</a></li>
-      <li><a id="k_graf" href="#tgraf" role="tab" data-toggle="tab">График</a></li>
-      <li><a id="k_hist" role="tab" data-toggle="tab" href="#thist">История</a></li>
-    </ul>
-  </div><!-- bh -->
-  <div class="tab-content">
-    <!-- STAT -->
-    <div class="zn_grag_hist tab-pane active" role="tabpanel" id="tzn">
-      <a href="#" class="mtb mtb btn btn-border">Tabs</a>
-      <ul class="stm_nav_block" role="tablist">
-        <li class="active"><a href="#st-all" role="tab" data-toggle="tab">Все ставки</a></li>
-        <li><a href="#st-gand" role="tab" data-toggle="tab">Гандикап ставок</a></li>
-        <li><a href="#st-move" role="tab" data-toggle="tab">Движения гандикапа</a></li>
-        <li><a href="#st-drop" role="tab" data-toggle="tab">Падающие коэффициенты</a></li>
-        <li><a href="#st-din" role="tab" data-toggle="tab">Динамика прибыльности</a></li>
-        <li><a href="#st-hot" role="tab" data-toggle="tab">Горячие ставки</a></li>
-        <li><a href="#st-pr" role="tab" data-toggle="tab">Прибыльные лини</a></li>
-        <li><a href="#st-100" role="tab" data-toggle="tab">100% выигрыш</a></li>
-        <li><a href="#st-ex" role="tab" data-toggle="tab">Экспресс ставки</a></li>
-      </ul>
-      <div class="bc tab-content">
-        <div id="st-all" role="tabpanel" class="tse-sc tab-pane active">
-          <div class="tse-content">
-            <table class="table">
-              
-               <tr>
-                <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
-                <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
-                <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
-                <td class="td-btn"><a class="btn btn-xs btn-primary">Ставка</a></td>
-              </tr>
-              
-               <tr>
-                <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
-                <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
-                <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
-                <td class="td-btn"><a class="btn btn-xs btn-primary">Ставка</a></td>
-              </tr>
-              
-               <tr>
-                <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
-                <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
-                <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
-                <td class="td-btn"><a class="btn btn-xs btn-primary">Ставка</a></td>
-              </tr>
-              
-               <tr>
-                <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
-                <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
-                <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
-                <td class="td-btn"><a class="btn btn-xs btn-primary">Ставка</a></td>
-              </tr>
-              
-            </table>
-          </div>
-        </div><!-- st-all -->
-
-        <div id="st-gand" role="tabpanel" class="tse-sc tab-pane ">
-          <div class="tse-content">
-            <table class="table">
-              <tr>
-                <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                <td class="td-tn1"><a class="tn1" href="">Navi</a></td>
-                <td class="tkf"><span class="kbig"><sup>+1.5</sup> 12.41</span> : <span class="ksm">1.45 <sup>+1.5</sup></span></td>
-                <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
-                <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
-              </tr>
-            </table>
-          </div>
-        </div><!-- st-gand -->
-
-        <div id="st-move" role="tabpanel" class="tse-sc tab-pane ">
-          <div class="tse-content">
-            <table class="table">
-              <tr>
-                <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
-                <td class="tkf"><span class="kbig" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-container="body" data-html="true" data-content="
-                <div class='odd-moves'>
-                18 Mar, 09:33 1.88 <u>+0.01</u><br>
-                18 Mar, 04:13 1.87 <u>+0.01</u><br>
-                18 Mar, 02:32 1.85 <b>-0.01</b><br>
-                18 Mar, 01:21 1.86 <b>-0.02</b><br>
-                <br>
-                Opening odds:<br>
-                13 Mar, 13:36 1.80
-                </div>
-                  ">12.41 <i class="gti-share m-up"></i></span> : <span class="ksm" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-container="body" data-html="true" data-content="
-                <div class='odd-moves'>
-                18 Mar, 09:33 1.88 <u>+0.01</u><br>
-                18 Mar, 04:13 1.87 <u>+0.01</u><br>
-                18 Mar, 02:32 1.85 <b>-0.01</b><br>
-                18 Mar, 01:21 1.86 <b>-0.02</b><br>
-                <br>
-                Opening odds:<br>
-                13 Mar, 13:36 1.80
-                </div>
-                  "><i class="gti-share m-down"></i> 1.45</span></td>
-                <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
-                <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
-              </tr>
-            </table>
-
-            <!-- Вторая таблица -->
-
-            <table class="table">
-              <tr>
-                <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                <td class="td-tn1"><a class="tn1" href="">Navi</a></td>
-                <td class="tkf"><span class="kbig">12.41</span> : <span class="ksm">1.45</span></td>
-                <td class="td-tn2"><a class="tn2" href="">London Conspiracy Dota2 Conspiracy Dota2</a></td>
-                <td>
-                  <span class="k-din">
-                    <i class="gti-share m-down"></i> 
-                    -1.45<br>
-                    -2
-                  </span>
-                </td>
-                <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
-              </tr>
-            </table>
-
-          </div>
-        </div><!-- st-gand -->
-
-        <div id="st-drop" role="tabpanel" class="tse-sc tab-pane ">
-          <div class="tse-content">
-            <div class="bc_filter">
-              <div class="row">
-                <div class="col-sm-4">
-                  <div class="dropdown">
-                    <button class="btn btn-default btn-sm dropdown-toggle" type="button"  data-toggle="dropdown">Последние 12 часов <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a>Последние 3 часа</a></li>
-                        <li><a>Последние 6 часов</a></li>
-                        <li class="active"><a>Последние 12 часов</a></li>
-                        <li><a>Последний день</a></li>
-                        <li><a>Последние 2 дня</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="dropdown">
-                    <button class="btn btn-default btn-sm dropdown-toggle" type="button"  data-toggle="dropdown">Падение от 20%  <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a>Падение от 10%</a></li>
-                        <li class="active"><a>Падение от 20%</a></li>
-                        <li><a>Падение от 30%</a></li>
-                        <li><a>Падение от 40%</a></li>
-                        <li><a>Падение от 50%</a></li>
-                        <li><a>Падение от 60%</a></li>
-                        <li><a>Падение от 70%</a></li>
-                        <li><a>Падение от 80%</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="dropdown">
-                    <button class="btn btn-default btn-sm dropdown-toggle" type="button"  data-toggle="dropdown">Все типы <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a>Тип 1</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div><!-- bc_filter -->
-            <table class="table">
-              <tr>
-                <td><img class="bl" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
-                <td class="tkf">
-                  <span class="kbig">12.41</span>&nbsp;:&nbsp;
-                  <span class="ksm k-drop">
-                    <i class="gti-share m-down"></i>
-                    1.45
-                    <b>12%</b>
-                    1.33
-                  </span></td>
-                <td class="td-tn2"><a class="tn2" href="">Navi</a></td>
-                <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
-              </tr>
-            </table>
-
-            <div class="bc-bottom">
-              <a href="" class="btn btn-border btn-primary btn-sm">Все падающие коэффициенты</a>
-            </div>
-
-          </div>
-        </div><!-- st-drop -->
-
-        <div id="st-din" role="tabpanel" class="tse-sc tab-pane ">
-          <div class="tse-content">
-            <div class="no100"><i class="gti-info-circle"></i> Динамика прибыльности</div>
-          </div>
-        </div><!-- st-din -->
-
-        <div id="st-hot" role="tabpanel" class="tse-sc tab-pane ">
-          <div class="tse-content">
-            <table class="table st-hot_table">
-              <tr>
-                <td class="mtt">29 января<br>15:30 МСК</td>
-                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
-                <td><img class="bl bl_hot pull-right" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                <td class="tkf">
-                  <span class="kbig">12.41</span>&nbsp;:&nbsp;
-                  <span class="ksm">1.45</span>
-                </td>
-                <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                <td class="td-tn2"><a class="tn2" href="">Navi</a></td>
-                <td class="td-btn"><a class="btn btn-sm btn-primary">поставить</a></td>
-              </tr>
-            </table>
-          </div>
-        </div><!-- st-hot -->
-
-        <div id="st-pr" role="tabpanel" class="tse-sc tab-pane ">
-          <div class="tse-content">
-            <div class="no100"><i class="gti-info-circle"></i> Прибыльные линии</div>
-          </div>
-        </div><!-- st-pr -->
-
-        <div id="st-100" role="tabpanel" class="tse-sc tab-pane ">
-          <div class="tse-content">
-            <table class="table st-hot_table">
-              <tr>
-                <td class="mtt">29 января<br>15:30 МСК</td>
-                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
-                <td><img class="bl bl_hot pull-right" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                <td class="tkf">
-                  <span class="kbig">12.41</span>&nbsp;:&nbsp;
-                  <span class="ksm">1.45</span>
-                </td>
-                <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                <td class="td-tn2"><a class="tn2" href="">Navi</a></td>
-                <td class="td-btn">
-                  <div class="dropdown pull-right" style="margin-right:-10px;">
-                    <span class="g-calc" data-toggle="dropdown">
-                      <span class="dohpr">ДОХОД<span>3.9%</span></span>
-                      <i class="gti-calculator"></i>
-                    </span>
-                    <div class="dropdown-menu calc_drop">
-                      <table>
-                        <tr>
-                          <th>Команда</th>
-                          <th>Букмкер</th>
-                          <th align="right">Коэфф.</th>
-                          <th align="right">Ставка,$</th>
-                          <th align="right">Выигрыш,$</th>
-                        </tr>
-                        <tr>
-                          <td><span class="tn2">London Conspiracy Dota2</span></td>
-                          <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                          <td><input class="form-control" type="text" name="" id="" value="2.13"></td>
-                          <td align="right"><b>5.20</b></td>
-                          <td align="right"><b>8.27</b></td>
-                        </tr>
-                        <tr>
-                          <td><span class="tn2">Secret</span></td>
-                          <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_vital.png" alt=""></td>
-                          <td><input class="form-control" type="text" name="" id="" value="2.13"></td>
-                          <td align="right"><b>5.20</b></td>
-                          <td align="right"><b>8.27</b></td>
-                        </tr>
-                        <tr class="t_sum">
-                          <td colspan="3">
-                            Сумма для ставок, $:
-                          </td>
-                          <td>
-                            <input class="form-control" type="text" name="" id="" value="2.13">
-                          </td>
-                          <td>
-                            <button type="button" class="btn btn-success">Рассчет</button>
-                          </td>
-                        </tr>
-                      </table>
-                      <div class="calc_bottom">
-                        <input type="checkbox"> Округлить ставки
-                        <div class="calc_itog"><u>-0.05</u> до <b>0.85</b> (-0.63% до 10.63%)</div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </table>
-
-            <div class="no100"><i class="gti-info-circle"></i> Нет 100% вариантов</div>
-
-            <h4>100% выигрыш для других матчей</h4>
-
-            <table class="table st-hot_table">
-              <tr>
-                <td class="mtt">29 января<br>15:30 МСК</td>
-                <td class="td-tn1"><a class="tn1" href="">London Conspiracy Dota2</a></td>
-                <td><img class="bl bl_hot pull-right" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                <td class="tkf">
-                  <span class="kbig">12.41</span>&nbsp;:&nbsp;
-                  <span class="ksm">1.45</span>
-                </td>
-                <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                <td class="td-tn2"><a class="tn2" href="">Navi</a></td>
-                <td class="td-btn">
-                  <div class="dropdown pull-right" style="margin-right:-10px;">
-                    <span class="g-calc" data-toggle="dropdown">
-                      <span class="dohpr">ДОХОД<span>3.9%</span></span>
-                      <i class="gti-calculator"></i>
-                    </span>
-                    <div class="dropdown-menu calc_drop">
-                      <table>
-                        <tr>
-                          <th>Команда</th>
-                          <th>Букмкер</th>
-                          <th align="right">Коэфф.</th>
-                          <th align="right">Ставка</th>
-                          <th align="right">Выигрыш</th>
-                        </tr>
-                        <tr>
-                          <td><span class="tn2">London Conspiracy Dota2</span></td>
-                          <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                          <td><input class="form-control" type="text" name="" id="" value="2.13"></td>
-                          <td align="right"><b>5.20</b></td>
-                          <td align="right"><b>8.27</b></td>
-                        </tr>
-                        <tr>
-                          <td><span class="tn2">Secret</span></td>
-                          <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_vital.png" alt=""></td>
-                          <td><input class="form-control" type="text" name="" id="" value="2.13"></td>
-                          <td align="right"><b>5.20</b></td>
-                          <td align="right"><b>8.27</b></td>
-                        </tr>
-                        <tr class="t_sum">
-                          <td colspan="3">
-                            Сумма для ставок, $:
-                          </td>
-                          <td>
-                            <input class="form-control" type="text" name="" id="" value="2.13">
-                          </td>
-                          <td>
-                            <button type="button" class="btn btn-success">Рассчет</button>
-                          </td>
-                        </tr>
-                      </table>
-                      <div class="calc_bottom">
-                        <input type="checkbox"> Округлить ставки
-                        <div class="calc_itog"><u>-0.05</u> до <b>0.85</b> (-0.63% до 10.63%)</div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </table>
-            <div class="bc-bottom">
-              <a href="" class="btn btn-border btn-primary btn-sm">Подписка на 100% выигрыш</a>
-            </div>
-          </div>
-        </div><!-- st-100 -->
-
-        <div id="st-ex" role="tabpanel" class="tse-sc tab-pane ">
-          <div class="tse-content">
-            <div class="no100"><i class="gti-info-circle"></i> Экспресс</div>
-          </div>
-        </div><!-- st-ex -->
-      </div><!--bc tab-content-->
-    </div><!--#zn-->
-    <!-- .STAT -->
-
-    <!-- CHARTS -->
-    <div class="zn_grag_hist tab-pane" role="tabpanel" id="tgraf">
-      <a href="#" class="mtb mtb btn btn-border">Tabs</a>
-      <ul class="stm_nav_block" role="tablist">
-        <li class="active"><a href="#st-all-graf" role="tab" data-toggle="tab">Все ставки</a></li>
-        <li><a href="#st-gand-graf" role="tab" data-toggle="tab">Гандикап ставок</a></li>
-        <li><a href="#st-move-graf" role="tab" data-toggle="tab">Движения гандикапа</a></li>
-        <li><a href="#st-drop-graf" role="tab" data-toggle="tab">Падающие коэффициенты</a></li>
-        <li><a href="#st-din-graf" role="tab" data-toggle="tab">Динамика прибыльности</a></li>
-        <li><a href="#st-hot-graf" role="tab" data-toggle="tab">Горячие ставки</a></li>
-        <li><a href="#st-pr-graf" role="tab" data-toggle="tab">Прибыльные лини</a></li>
-        <li><a href="#st-100-graf" role="tab" data-toggle="tab">100% выигрыш</a></li>
-        <li><a href="#st-ex-graf" role="tab" data-toggle="tab">Экспресс ставки</a></li>
-      </ul>
-      <div class="bc tab-content">
-        <div id="st-all-graf" role="tabpanel" class="tse-sc tab-pane active">
-          <div class="tse-content">
-            <div class="graf">
-              <div id="st-all-chart"></div>
-            </div>
-          </div>
-        </div><!-- st-all -->
-
-        <div id="st-gand-graf" role="tabpanel" class="tse-sc tab-pane">
-          <div class="tse-content">
-            <div class="graf">
-              <div id="st-gand-chart-t1" style="height:200px;"></div><!-- Первая -->
-              <div id="st-gand-chart-t2" style="height:200px;"></div><!-- Вторая -->
-            </div>
-          </div>
-        </div><!-- st-gand -->
-
-        <div id="st-move-graf" role="tabpanel" class="tse-sc tab-pane">
-          <div class="tse-content">
-            <div class="graf">
-              <div class="bc_filter">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="dropdown">
-                      <button class="btn btn-primary btn-sm dropdown-toggle" type="button"  data-toggle="dropdown">dota2lounge.com <span class="caret"></span></button>
-                      <ul class="dropdown-menu">
-                          <li><a>Vitalbet</a></li>
-                          <li><a>EGB</a></li>
-                          <li class="active"><a>dota2lounge.com</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="srs">Сравнить с</div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="dropdown">
-                      <button class="btn btn-primary btn-sm dropdown-toggle" type="button"  data-toggle="dropdown">Vitalbet <span class="caret"></span></button>
-                      <ul class="dropdown-menu">
-                          <li class="active"><a>Vitalbet</a></li>
-                          <li><a>EGB</a></li>
-                          <li><a>dota2lounge.com</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- bc_filter -->
-              <div id="st-move-chart-1" style="height:170px;"></div>
-              <div id="st-move-chart-2" style="height:170px;"></div>
-            </div>
-          </div>
-        </div><!-- st-move -->
-
-        <div id="st-drop-graf" role="tabpanel" class="tse-sc tab-pane">
-          <div class="tse-content">
-            <div class="graf">
-              <div class="no100"><i class="gti-info-circle"></i> Падающие</div>
-              <div id="st-drop-chart"></div>
-            </div>
-          </div>
-        </div><!-- st-drop -->
-
-        <div id="st-din-graf" role="tabpanel" class="tse-sc tab-pane">
-          <div class="tse-content">
-            <div class="graf">
-              <div class="no100"><i class="gti-info-circle"></i> Динамика</div>
-              <div id="st-din-chart"></div>
-            </div>
-          </div>
-        </div><!-- st-din -->
-
-        <div id="st-hot-graf" role="tabpanel" class="tse-sc tab-pane">
-          <div class="tse-content">
-            <div class="graf">
-              <div class="bc_filter bc_filter_hot-graf">
-                <select data-placeholder="Выберите букмекера" class="chosen-select" multiple>
-                  <option value=""></option>
-                  <option selected="selected">Secret vs Cloud7</option>
-                  <option selected="selected">Alliance vs NAVI</option>
-                  <option selected="selected">Fanftic vs NAVI</option>
-                  <option>Fanftic vs NAVI</option>
-                </select>
-              </div>
-              <div id="st-hot-chart" style="height:360px;"></div>
-            </div>
-          </div>
-        </div><!-- st-hot -->
-
-        <div id="st-pr-graf" role="tabpanel" class="tse-sc tab-pane">
-          <div class="tse-content">
-            <div class="graf">
-              <div class="no100"><i class="gti-info-circle"></i> Прибыльные линии</div>
-              <div id="st-pr-chart"></div>
-            </div>
-          </div>
-        </div><!-- st-pr -->
-
-        <div id="st-100-graf" role="tabpanel" class="tse-sc tab-pane">
-          <div class="tse-content">
-            <div class="graf">
-              <div class="calc_drop cal-graf">
-                <table>
-                  <tr>
-                    <th>Ставка, $</th>
-                    <th>Команда</th>
-                    <th>Букмкер</th>
-                    <th class="text-right">Коэфф.</th>
-                    <th class="text-right">Ставка,$</th>
-                    <th class="text-right">Выигрыш,$</th>
-                  </tr>
-                  <tr>
-                    <td rowspan="2"><input class="form-control cal-graf-st" type="text" name="" id="" value="2.13"></td>
-                    <td><span class="tn2">London Conspiracy Dota2</span></td>
-                    <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_d2l.png" alt=""></td>
-                    <td><input class="form-control" type="text" name="" id="" value="2.13"></td>
-                    <td align="right"><b>5.20</b></td>
-                    <td align="right"><u>8.27</u></td>
-                  </tr>
-                  <tr>
-                    <td><span class="tn2">Secret</span></td>
-                    <td><img class="bl_hot" src="http://game-tournaments.com/html/img/logo_vital.png" alt=""></td>
-                    <td><input class="form-control" type="text" name="" id="" value="2.13"></td>
-                    <td align="right"><b>5.20</b></td>
-                    <td align="right"><u>8.27</u></td>
-                  </tr>
-                  <!--
-                   <tr class="t_sum">
-                    <td colspan="3">
-                      Сумма для ставок, $:
-                    </td>
-                    <td>
-                      <input class="form-control" type="text" name="" id="" value="2.13">
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-success">Рассчет</button>
-                    </td>
-                  </tr>
-                  -->
-                </table>
-              </div>
-              <div class="g-btns">
-                <div class="btn-group" role="group">
-                  <button type="button" class="btn active btn-border btn-primary">График доходности</button>
-                  <button type="button" class="btn btn-border btn-primary">Букмекеры</button>
-                </div>
-              </div>
-              <div id="st-100-chart" style="height:200px;"></div>
-            </div>
-          </div>
-        </div><!-- st-100 -->
-
-        <div id="st-ex-graf" role="tabpanel" class="tse-sc tab-pane">
-          <div class="tse-content">
-            <div class="graf">
-              <div class="no100"><i class="gti-info-circle"></i> Экспресс ставки</div>
-              <div id="st-ex-chart"></div>
-            </div>
-          </div>
-        </div><!-- st-ex -->
-
-      </div>
-    </div><!--#graf-->
-    <!-- .CHARTS -->
-
-    <!-- HISTORY -->
-    <div class="zn_grag_hist tab-pane" role="tabpanel" id="thist">
-      <a href="#" class="mtb mtb btn btn-border">Tabs</a>
-      <ul class="stm_nav_block" role="tablist">
-        <li class="active"><a href="#st-all-hist" role="tab" data-toggle="tab">Все ставки</a></li>
-        <li><a href="#st-gand-hist" role="tab" data-toggle="tab">Гандикап ставок</a></li>
-        <li><a href="#st-move-hist" role="tab" data-toggle="tab">Движения гандикапа</a></li>
-        <li><a href="#st-drop-hist" role="tab" data-toggle="tab">Падающие коэффициенты</a></li>
-        <li><a href="#st-din-hist" role="tab" data-toggle="tab">Динамика прибыльности</a></li>
-        <li><a href="#st-hot-hist" role="tab" data-toggle="tab">Горячие ставки</a></li>
-        <li><a href="#st-pr-hist" role="tab" data-toggle="tab">Прибыльные лини</a></li>
-        <li><a href="#st-100-hist" role="tab" data-toggle="tab">100% выигрыш</a></li>
-        <li><a href="#st-ex-hist" role="tab" data-toggle="tab">Экспресс ставки</a></li>
-      </ul>
-      <div class="bc tab-content">
-        <div id="st-all-hist" role="tabpanel" class="tse-sc tab-pane active">
-          <div class="tse-content">
-
-          </div>
-        </div><!-- st-all -->
-      </div><!--bc-->
-    </div><!--#hist-->
-    <!-- .HISTORY -->
-  </div><!-- tab-content -->
-</div><!-- block -->
-
-          </div>
-          <div class="col-lg-5">
-           <!-- /match-page/section-prognoz.html -->
-
-<div class="block" id="m-prognoz">
-  <div class="bh clearfix">
-    <h3>
-      <i class="ih gti-bullhorn"></i>
-      Прогнозы
-      <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О площадке + дополнительные сведения о матче" class="inf gti-info-circle"></i>
-    </h3>
-    <ul class="block-menu">
-      <li id="" class="active"><a href="">Все</a></li>
-      <li><a id="" href="">Подписки</a></li>
-    </ul>
-  </div><!-- bh -->
-
-  <div class="pr_block">
-    <a href="#" class="mtb mtb btn btn-border">Tabs</a>
-    <ul class="stm_nav_block" role="tablist">
-      <li class="active"><a href="#st-pik" role="tab" data-toggle="tab">Пики и <br>баны</a></li>
-      <li><a href="#st-ishod" role="tab" data-toggle="tab">Исход <br>матча</a></li>
-      <li><a href="#st-analytics" role="tab" data-toggle="tab">Аналитика <br>по матчу</a></li>
-      <li><a href="#st-sind" role="tab" data-toggle="tab">Синдикат <br>прогнозов</a></li>
-    </ul>
-    <div class="bc tab-content">
-      <div id="st-pik" role="tabpanel" class="tse-sc tab-pane active">
-        
-          <div class="tse-content">
-            <div class="prpf">
-                <span><input type="checkbox"> Игра 1</span>
-                <span><input type="checkbox"> Игра 2</span>
-                <span><input type="checkbox"> Игра 3</span>
-                <span><input type="checkbox"> Игра 4</span>
-                <span><input type="checkbox"> Игра 5</span>
-            </div>
-            <div class="prp active">
-              <div class="prh">
-                <table>
-                  <tr>
-                    <td>
-                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                    </td>
-                    <td>
-                      <a href="">Прогнозы и аналитика от entryAd</a>
-                    </td>
-                    <td class="nwr">
-                      <b class="pris p-i-1"></b>
-                      <u><em>до 30 апр <i class="gti-check"></i></em></u>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    London Conspyracy
-                  </a>
-                </b>
-                <div>
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
-                </div>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    Secret
-                  </a>
-                </b>
-                <div>
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
-                  <u class="p_pik hpop"><img src="../img/heroh.jpg"></u>
-                </div>
-              </div>
-            </div>
-            
-            <div class="prp">
-              <div class="prh">
-                <table>
-                  <tr>
-                    <td>
-                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                    </td>
-                    <td>
-                      <a href="">Прогнозы от entryAd</a>
-                    </td>
-                    <td class="nwr">
-                      <b class="pris p-i-1"></b>
-                      <b class="pris p-i-2"></b>
-                      <u><button class="btn btn-xs btn-default">Free</button></u>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    London Conspyracy
-                  </a>
-                </b>
-                <div>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                </div>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    Secret
-                  </a>
-                </b>
-                <div>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                </div>
-              </div>
-            </div>
-            
-            <div class="prp">
-              <div class="prh">
-                <table>
-                  <tr>
-                    <td>
-                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                    </td>
-                    <td>
-                      <a href="">Прогнозы от entryAd</a>
-                    </td>
-                    <td class="nwr">
-                      <b class="pris p-i-1"></b>
-                      <b class="pris p-i-2"></b>
-                      <u><button class="btn btn-xs btn-default">Free</button></u>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    London Conspyracy
-                  </a>
-                </b>
-                <div>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                </div>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    Secret
-                  </a>
-                </b>
-                <div>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                </div>
-              </div>
-            </div>
-            
-            <div class="prp">
-              <div class="prh">
-                <table>
-                  <tr>
-                    <td>
-                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                    </td>
-                    <td>
-                      <a href="">Прогнозы от entryAd</a>
-                    </td>
-                    <td class="nwr">
-                      <b class="pris p-i-1"></b>
-                      <b class="pris p-i-2"></b>
-                      <u><button class="btn btn-xs btn-default">Free</button></u>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    London Conspyracy
-                  </a>
-                </b>
-                <div>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                </div>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    Secret
-                  </a>
-                </b>
-                <div>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                </div>
-              </div>
-            </div>
-            
-            <div class="prp">
-              <div class="prh">
-                <table>
-                  <tr>
-                    <td>
-                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                    </td>
-                    <td>
-                      <a href="">Прогнозы от entryAd</a>
-                    </td>
-                    <td class="nwr">
-                      <b class="pris p-i-1"></b>
-                      <b class="pris p-i-2"></b>
-                      <u><button class="btn btn-xs btn-default">Free</button></u>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    London Conspyracy
-                  </a>
-                </b>
-                <div>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                </div>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    Secret
-                  </a>
-                </b>
-                <div>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                </div>
-              </div>
-            </div>
-            
-            <div class="prp">
-              <div class="prh">
-                <table>
-                  <tr>
-                    <td>
-                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                    </td>
-                    <td>
-                      <a href="">Прогнозы от entryAd</a>
-                    </td>
-                    <td class="nwr">
-                      <b class="pris p-i-1"></b>
-                      <b class="pris p-i-2"></b>
-                      <u><button class="btn btn-xs btn-default">Free</button></u>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    London Conspyracy
-                  </a>
-                </b>
-                <div>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                </div>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    Secret
-                  </a>
-                </b>
-                <div>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                </div>
-              </div>
-            </div>
-            
-            <div class="prp">
-              <div class="prh">
-                <table>
-                  <tr>
-                    <td>
-                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                    </td>
-                    <td>
-                      <a href="">Прогнозы от entryAd</a>
-                    </td>
-                    <td class="nwr">
-                      <b class="pris p-i-1"></b>
-                      <b class="pris p-i-2"></b>
-                      <u><button class="btn btn-xs btn-default">Free</button></u>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    London Conspyracy
-                  </a>
-                </b>
-                <div>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                </div>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    Secret
-                  </a>
-                </b>
-                <div>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                </div>
-              </div>
-            </div>
-            
-            <div class="prp">
-              <div class="prh">
-                <table>
-                  <tr>
-                    <td>
-                      <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                    </td>
-                    <td>
-                      <a href="">Прогнозы от entryAd</a>
-                    </td>
-                    <td class="nwr">
-                      <b class="pris p-i-1"></b>
-                      <b class="pris p-i-2"></b>
-                      <u><button class="btn btn-xs btn-default">Free</button></u>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    London Conspyracy
-                  </a>
-                </b>
-                <div>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                </div>
-              </div>
-              <div class="pikers">
-                <b>
-                  <a href="">
-                    Secret
-                  </a>
-                </b>
-                <div>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                  <u class="p_ban hpop"><img src="../img/heroh.jpg"></u>
-                  
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        
-      </div><!-- st-pik -->
-
-      <div id="st-ishod" role="tabpanel" class="tse-sc tab-pane">
-        
-        <div class="tse-content">
-          <div class="prp active">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <u><em>до 30 апр <i class="gti-check"></i></em></u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="pr_st wl">
-              <i class="gti-dice"></i> London Conspiracy Dota2 <span>WIN +1.5</span>
-            </div>
-          </div>
-          <div class="prp active">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="pr_st">
-              <table>
-                <tr>
-                  <th>Прогнозы</th>
-                  <th>Проходимость</th>
-                  <th>ROI</th>
-                  <th>Ставки</th>
-                  <th>Подписки</th>
-                </tr>
-                <tr>
-                  <td>32</td>
-                  <td>76.6%</td>
-                  <td>76.6%</td>
-                  <td>23</td>
-                  <td>239</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><button class="btn btn-xs btn-default">Free</button></u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="pr_st wl">
-              London Conspiracy Dota2 <span>WIN 4:2</span>
-            </div>
-          </div>
-          
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="pr_st wl">
-              London Conspiracy Dota2 <span>WIN 4:2</span>
-            </div>
-          </div>
-          
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="pr_st wl">
-              London Conspiracy Dota2 <span>WIN 4:2</span>
-            </div>
-          </div>
-          
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="pr_st wl">
-              London Conspiracy Dota2 <span>WIN 4:2</span>
-            </div>
-          </div>
-          
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="pr_st wl">
-              London Conspiracy Dota2 <span>WIN 4:2</span>
-            </div>
-          </div>
-          
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="pr_st wl">
-              London Conspiracy Dota2 <span>WIN 4:2</span>
-            </div>
-          </div>
-          
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="pr_st wl">
-              London Conspiracy Dota2 <span>WIN 4:2</span>
-            </div>
-          </div>
-          
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="pr_st wl">
-              London Conspiracy Dota2 <span>WIN 4:2</span>
-            </div>
-          </div>
-          
-        </div>
-        
-      </div><!-- st-ishod -->
-
-      <div id="st-analytics" role="tabpanel" class="tse-sc tab-pane">
-        
-          <div class="tse-content">
-          <div class="prp active">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <u><em>до 30 апр <i class="gti-check"></i></em></u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="prt">
-              Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
-            </div>
-            <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
-          </div>
-          <div class="prp active">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="pr_st">
-              <table>
-                <tr>
-                  <th>Прогнозы</th>
-                  <th>Проходимость</th>
-                  <th>ROI</th>
-                  <th>Ставки</th>
-                  <th>Подписки</th>
-                </tr>
-                <tr>
-                  <td>32</td>
-                  <td>76.6%</td>
-                  <td>76.6%</td>
-                  <td>23</td>
-                  <td>239</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><em>до 30 апр</em> <button class="btn btn-xs btn-default">Free</button>
-                    </u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="prt">
-              Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
-            </div>
-            <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
-          </div>
-          
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><em>до 30 апр</em> <button class="btn btn-xs btn-default">Free</button>
-                    </u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="prt">
-              Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
-            </div>
-            <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
-          </div>
-          
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><em>до 30 апр</em> <button class="btn btn-xs btn-default">Free</button>
-                    </u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="prt">
-              Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
-            </div>
-            <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
-          </div>
-          
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><em>до 30 апр</em> <button class="btn btn-xs btn-default">Free</button>
-                    </u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="prt">
-              Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
-            </div>
-            <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
-          </div>
-          
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><em>до 30 апр</em> <button class="btn btn-xs btn-default">Free</button>
-                    </u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="prt">
-              Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
-            </div>
-            <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
-          </div>
-          
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><em>до 30 апр</em> <button class="btn btn-xs btn-default">Free</button>
-                    </u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="prt">
-              Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
-            </div>
-            <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
-          </div>
-          
-          <div class="prp">
-            <div class="prh">
-              <table>
-                <tr>
-                  <td>
-                    <span class="thumb"><i class="gti-thumbs-up active"></i><b>123</b><i class="gti-thumbs-o-down"></i></span>
-                  </td>
-                  <td>
-                    <a href="">Прогнозы и аналитика от entryAd</a>
-                  </td>
-                  <td class="nwr">
-                    <b class="pris p-i-1"></b>
-                    <b class="pris p-i-2"></b>
-                    <u><em>до 30 апр</em> <button class="btn btn-xs btn-default">Free</button>
-                    </u>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="prt">
-              Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же альянс.
-            </div>
-            <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
-          </div>
-          
-        </div>
-        
-      </div><!-- st-analytics -->
-
-      <div id="st-sind" role="tabpanel" class="tse-sc tab-pane">
-          <div class="pr_sind">
-  <table>
-    <tr>
-      <th></th>
-      <th width="70"></th>
-      <th><span title="Коэфф" class="tip">К</span></th>
-      <th><span title="Вероятность букмекеров" class="tip">ВБ</span></th>
-      <th><span title="Вероятность экспертов" class="tip">ВЭ</span></th>
-      <th><span title="Относительная разница вероятностей" class="tip">ОРВ</span></th>
-      <th><span title="Ставки (эксперты)" class="tip">СЭ</span></th> 
-    </tr>
-    <tr>
-      <td><b></b></td>
-      <td>London Conspyracy Dota2</td>
-      <td>1.70</td>
-      <td>53.5%</td>
-      <td>84.76%</td>
-      <td class="red">58.43%</td>
-      <td class="green">279(62)</td>
-    </tr>
-    <tr>
-      <td><u></u></td>
-      <td>Secret</td>
-      <td>1.70</td>
-      <td>53.5%</td>
-      <td>84.76%</td>
-      <td class="blue">-61.16%</td>
-      <td>8(4)</td>
-    </tr>
-  </table>
-  <div class="pr_sind_graf">
-    <div class="pr_sind_graf_vert">
-      <div class="pr_s_g1">
-        <div class="progress pbvert pb1">
-          <div title="Коэффициент London Conspyracy Dota2" class="progress-bar" style="height: 30%;">
-            <span class="sr-only">30%</span>
-          </div>
-        </div>
-        <div title="Коэффициент Secret" class="progress pbvert pb2">
-          <div class="progress-bar" style="height: 60%;">
-            <span class="sr-only">60%</span>
-          </div>
-        </div>
-      </div>
-      <div class="pr_s_g2">
-        <div class="progress pbvert pb1">
-          <div title="Разница вероятностей London Conspyracy Dota2" class="progress-bar" style="height: 30%;">
-            <span class="sr-only">30%</span>
-          </div>
-        </div>
-        <div class="progress pbvert pb2">
-          <div title="Разница вероятностей Secrert" class="progress-bar" style="height: 60%;top:60%;">
-            <span class="sr-only">-60%</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pr_sind_graf_donat">
-      <div id="sind_donut"></div>
-    </div>
-    <div class="pr_sind_graf_line">
-      <table>
-        <tr>
-          <td class="stl">
-            <span>London Co...</span>
-            <b></b> 279 <em></em> Э 62
-          </td>
-          <td class="stc"><span>287</span>СТАВОК</td>
-          <td class="str">
-            <span>Secret</span>
-            <u></u> 8 <i></i> Э 4
-          </td>
-        </tr>
-      </table>
-      <div class="sind_line">
-        <div id="sind_line"></div>
-      </div>
-      <div class="sind_share">
-        <b>Поделиться прогнозом:</b>
-        <span>
-          <a href="" class="shr"><i class="gti-vk"></i>993</a>
-          <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-          <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-          <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-        </span>
-      </div>
-      <div class="s_inf"><i class="gti-info-circle"></i> Без учёта платных прогнозов</div>
-    </div>
-  </div>
-</div>
-      </div><!-- st-ishod -->
-
-    </div><!--bc-->
-  </div><!--#hist-->
-
-</div><!-- block -->
       
-
-<!-- /Prognozi -->
-          </div>
-        </div>
-      </section>
-
-      <section id="m-teams" class="m-sec m-odd">
-        <!-- /match-page/section-teams.html -->
-
-  <div class="block" id="m-teams">
-    <div class="bh clearfix">
-      <h3>
-        <i class="ih gti-exchange"></i>
-        Сравнение команд
-        <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О сравнении" class="inf gti-info-circle"></i>
-      </h3>
-      <div class="rigter">
-        <b>Этот матч</b>
-        <div class="dropdown">
-          <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-             Команда
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div>
-        <div class="dropdown">
-          <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-             Игрок
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div>
-      </div>
-    </div><!-- bh -->
-    
-    <div class="block-content">
-      <div class="spider">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="sr_t sr_t1">
-              <a class="sr_pic" href="">
-                <img src="http://game-tournaments.com/media/logo/_60/pic-20160415-256x187-3994387532.png">
-              </a>
-              <div>
-                <h3>London</h3>
-                <u>Лучше в 14 показателях</u>
-                <span class="thumb" onclick=""><i class="gti-thumbs-o-up"></i><b>123</b><!--<i class="gti-thumbs-o-down"></i>--></span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div id="spider_chart">
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="sr_t sr_t2">
-              <a class="sr_pic" href="">
-                <img src="http://game-tournaments.com/media/logo/_60/pic-20160415-256x187-3994387532.png">
-              </a>
-              <div>
-                <h3>Secret</h3>
-                <u>Лучше в 14 показателях</u>
-                <span class="thumb" onclick="">
-                <b>123</b><!--<i class="gti-thumbs-o-down"></i>-->
-                <i class="gti-thumbs-up active"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="well ifbet">
+        <p>
+          Если бы Вы поставили <b>100$</b> на Freedom на сайте <a href="">ggbet.com</a>, то Ваш выигрыш составил бы <b>225$</b>
+        </p>
+        <div class="mlh"><span><a href="" class="btn btn-default btn-sm">Все коэффициенты</a> <a href="" class="btn btn-default btn-sm">Все прогнозы</a></span></div>
       </div>
       
-      <div class="teams_stats">
-        <div class="teams_bars">
-          <div class="tbs1">
-            <table>
-              <tr>
-                <th>RANK</th>
-                <td>53</td>
-              </tr>
-              <tr>
-                <th>APR</th>
-                <td>46</td>
-              </tr>
-              <tr>
-                <th>MATCHES</th>
-                <td class="red">53</td>
-              </tr>
-              <tr>
-                <th>WINS</th>
-                <td>46</td>
-              </tr>
-              <tr>
-                <th>KDA</th>
-                <td class="green">53</td>
-              </tr>
-            </table>
-          </div>
-          <div class="tbsb">
-            <div id="teams_compare"></div>
-          </div>
-          <div class="tbs2">
-            <table>
-              <tr>
-                <td>5</td>
-                <th>RANK</th>
-              </tr>
-              <tr>
-                <td class="red">4</td>
-                <th>APR</th>
-              </tr>
-              <tr>
-                <td>55</td>
-                <th>MATCHES</th>
-              </tr>
-              <tr>
-                <td>44</td>
-                <th>WINS</th>
-              </tr>
-              <tr>
-                <td class="green">55</td>
-                <th>KDA</th>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div class="team_s_t tst1">
-          <table>
-            <tr>
-              <th>Форма</th>
-              <td class="red">34</td>
-            </tr>
-            <tr>
-              <th>Побед</th>
-              <td class="green">10</td>
-            </tr>
-            <tr>
-              <th>Поражений</th>
-              <td>11</td>
-            </tr>
-            <tr>
-              <th>Игр в мес.</th>
-              <td>60</td>
-            </tr>
-            <tr>
-              <th>П-П</th>
-              <td>890</td>
-            </tr>
-          </table>
-        </div>
-        <div class="team_s_t tst2">
-          <table>
-            <tr>
-              <td class="red">34</td>
-              <th>Форма</th>
-            </tr>
-            <tr>
-              <td>10</td>
-              <th>Побед</th>
-            </tr>
-            <tr>
-              <td>11</td>
-              <th>Поражений</th>
-            </tr>
-            <tr>
-              <td>60</td>
-              <th>Игр в мес.</th>
-            </tr>
-            <tr>
-              <td>890</td>
-              <th>П-П</th>
-            </tr>
-          </table>
-        </div>
+      <div class="well ifbet" style="background:#146489 url(../img/spoiler.png) repeat scroll 0 0;border:0;">
+        <p>
+          Если бы Вы поставили <b>100$</b> на Freedom на сайте <a href="">ggbet.com</a>, то Ваш выигрыш составил бы <b>225$</b>
+        </p>
+        <div class="mlh"><span><a href="" class="btn btn-primary btn-sm">Все коэффициенты</a> <a href="" class="btn btn-primary btn-sm">Все прогнозы</a></span></div>
       </div>
       
-    </div><!-- block-content -->
-  </div><!-- block -->
-
-<!-- /Teams compare -->
-      </section>
-
-      <section id="m-players" class="m-sec m-even">
-        <!-- /match-page/section-players.html -->
- 
-  <div class="row" id="m-players">
-    <div class="col-md-7">
-      <div class="block">
-        <div class="bh clearfix">
-          <h3>
-            <i class="ih gti-male"></i>
-            Сравнение игроков
-            <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О сравнении" class="inf gti-info-circle"></i>
-          </h3>
-        </div><!-- bh -->
-
-        <div class="block-content">
-          
-            <div class="pl-c">
-            <div class="pthead">
-              <div class="pth pt1">
-                <h4><a href="">Lucky8</a></h4>
-                <span><u>Captain</u>Alex Shmidt</span>
-              </div>
-              <div class="pt_rate">
-                <span class="thumb th1">
-                  <i class="gti-thumbs-o-up"></i>
-                  <b>13</b>
-                </span>
-                <em>VS</em>
-                <span class="thumb th2">
-                  <b>1</b>
-                  <i class="gti-thumbs-o-up"></i>
-                </span>
-              </div>
-              <div class="pth pt2">
-                <h4><a href="">Boss super player long name</a></h4>
-                <span>Alex Shmidt<u>Captain</u></span>
-              </div>
-            </div><!-- pthead -->
-              
-            <div class="ptc">
-              <div class="ptcs ptcs1">
-                <table>
-                  <tr>
-                    <th>kills</th>
-                    <td class="green">100</td>
-                  </tr>
-                  <tr>
-                    <th>deaths</th>
-                    <td class="green">14</td>
-                  </tr>
-                  <tr>
-                    <th>Assists</th>
-                    <td class="green">11</td>
-                  </tr>
-                  <tr>
-                    <th>LH</th>
-                    <td class="red">2</td>
-                  </tr>
-                  <tr>
-                    <th>GPM</th>
-                    <td>10</td>
-                  </tr>
-                </table>
-              </div>
-              <div class="ptc_bar">
-                <div id="ptc_bar1"></div>
-              </div>
-              <div class="ptcs ptcs2">
-                <table>
-                  <tr>
-                    <td class="green">100</td>
-                    <th>kills</th>
-                  </tr>
-                  <tr>
-                    <td class="green">14</td>
-                    <th>deaths</th>
-                  </tr>
-                  <tr>
-                    <td class="green">11</td>
-                    <th>Assists</th>
-                  </tr>
-                  <tr>
-                    <td class="red">2</td>
-                    <th>LH</th>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <th>GPM</th>
-                  </tr>
-                </table>
-              </div>
-            </div><!-- ptc -->
-              
-          </div><!-- pl-c -->
-          
-            <div class="pl-c">
-            <div class="pthead">
-              <div class="pth pt1">
-                <h4><a href="">Lucky8</a></h4>
-                <span><u>Captain</u>Alex Shmidt</span>
-              </div>
-              <div class="pt_rate">
-                <span class="thumb th1">
-                  <i class="gti-thumbs-o-up"></i>
-                  <b>13</b>
-                </span>
-                <em>VS</em>
-                <span class="thumb th2">
-                  <b>1</b>
-                  <i class="gti-thumbs-o-up"></i>
-                </span>
-              </div>
-              <div class="pth pt2">
-                <h4><a href="">Boss super player long name</a></h4>
-                <span>Alex Shmidt<u>Captain</u></span>
-              </div>
-            </div><!-- pthead -->
-              
-            <div class="ptc">
-              <div class="ptcs ptcs1">
-                <table>
-                  <tr>
-                    <th>kills</th>
-                    <td class="green">100</td>
-                  </tr>
-                  <tr>
-                    <th>deaths</th>
-                    <td class="green">14</td>
-                  </tr>
-                  <tr>
-                    <th>Assists</th>
-                    <td class="green">11</td>
-                  </tr>
-                  <tr>
-                    <th>LH</th>
-                    <td class="red">2</td>
-                  </tr>
-                  <tr>
-                    <th>GPM</th>
-                    <td>10</td>
-                  </tr>
-                </table>
-              </div>
-              <div class="ptc_bar">
-                <div id="ptc_bar2"></div>
-              </div>
-              <div class="ptcs ptcs2">
-                <table>
-                  <tr>
-                    <td class="green">100</td>
-                    <th>kills</th>
-                  </tr>
-                  <tr>
-                    <td class="green">14</td>
-                    <th>deaths</th>
-                  </tr>
-                  <tr>
-                    <td class="green">11</td>
-                    <th>Assists</th>
-                  </tr>
-                  <tr>
-                    <td class="red">2</td>
-                    <th>LH</th>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <th>GPM</th>
-                  </tr>
-                </table>
-              </div>
-            </div><!-- ptc -->
-              
-          </div><!-- pl-c -->
-          
-            <div class="pl-c">
-            <div class="pthead">
-              <div class="pth pt1">
-                <h4><a href="">Lucky8</a></h4>
-                <span><u>Captain</u>Alex Shmidt</span>
-              </div>
-              <div class="pt_rate">
-                <span class="thumb th1">
-                  <i class="gti-thumbs-o-up"></i>
-                  <b>13</b>
-                </span>
-                <em>VS</em>
-                <span class="thumb th2">
-                  <b>1</b>
-                  <i class="gti-thumbs-o-up"></i>
-                </span>
-              </div>
-              <div class="pth pt2">
-                <h4><a href="">Boss super player long name</a></h4>
-                <span>Alex Shmidt<u>Captain</u></span>
-              </div>
-            </div><!-- pthead -->
-              
-            <div class="ptc">
-              <div class="ptcs ptcs1">
-                <table>
-                  <tr>
-                    <th>kills</th>
-                    <td class="green">100</td>
-                  </tr>
-                  <tr>
-                    <th>deaths</th>
-                    <td class="green">14</td>
-                  </tr>
-                  <tr>
-                    <th>Assists</th>
-                    <td class="green">11</td>
-                  </tr>
-                  <tr>
-                    <th>LH</th>
-                    <td class="red">2</td>
-                  </tr>
-                  <tr>
-                    <th>GPM</th>
-                    <td>10</td>
-                  </tr>
-                </table>
-              </div>
-              <div class="ptc_bar">
-                <div id="ptc_bar3"></div>
-              </div>
-              <div class="ptcs ptcs2">
-                <table>
-                  <tr>
-                    <td class="green">100</td>
-                    <th>kills</th>
-                  </tr>
-                  <tr>
-                    <td class="green">14</td>
-                    <th>deaths</th>
-                  </tr>
-                  <tr>
-                    <td class="green">11</td>
-                    <th>Assists</th>
-                  </tr>
-                  <tr>
-                    <td class="red">2</td>
-                    <th>LH</th>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <th>GPM</th>
-                  </tr>
-                </table>
-              </div>
-            </div><!-- ptc -->
-              
-          </div><!-- pl-c -->
-          
-            <div class="pl-c">
-            <div class="pthead">
-              <div class="pth pt1">
-                <h4><a href="">Lucky8</a></h4>
-                <span><u>Captain</u>Alex Shmidt</span>
-              </div>
-              <div class="pt_rate">
-                <span class="thumb th1">
-                  <i class="gti-thumbs-o-up"></i>
-                  <b>13</b>
-                </span>
-                <em>VS</em>
-                <span class="thumb th2">
-                  <b>1</b>
-                  <i class="gti-thumbs-o-up"></i>
-                </span>
-              </div>
-              <div class="pth pt2">
-                <h4><a href="">Boss super player long name</a></h4>
-                <span>Alex Shmidt<u>Captain</u></span>
-              </div>
-            </div><!-- pthead -->
-              
-            <div class="ptc">
-              <div class="ptcs ptcs1">
-                <table>
-                  <tr>
-                    <th>kills</th>
-                    <td class="green">100</td>
-                  </tr>
-                  <tr>
-                    <th>deaths</th>
-                    <td class="green">14</td>
-                  </tr>
-                  <tr>
-                    <th>Assists</th>
-                    <td class="green">11</td>
-                  </tr>
-                  <tr>
-                    <th>LH</th>
-                    <td class="red">2</td>
-                  </tr>
-                  <tr>
-                    <th>GPM</th>
-                    <td>10</td>
-                  </tr>
-                </table>
-              </div>
-              <div class="ptc_bar">
-                <div id="ptc_bar4"></div>
-              </div>
-              <div class="ptcs ptcs2">
-                <table>
-                  <tr>
-                    <td class="green">100</td>
-                    <th>kills</th>
-                  </tr>
-                  <tr>
-                    <td class="green">14</td>
-                    <th>deaths</th>
-                  </tr>
-                  <tr>
-                    <td class="green">11</td>
-                    <th>Assists</th>
-                  </tr>
-                  <tr>
-                    <td class="red">2</td>
-                    <th>LH</th>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <th>GPM</th>
-                  </tr>
-                </table>
-              </div>
-            </div><!-- ptc -->
-              
-          </div><!-- pl-c -->
-          
-            <div class="pl-c">
-            <div class="pthead">
-              <div class="pth pt1">
-                <h4><a href="">Lucky8</a></h4>
-                <span><u>Captain</u>Alex Shmidt</span>
-              </div>
-              <div class="pt_rate">
-                <span class="thumb th1">
-                  <i class="gti-thumbs-o-up"></i>
-                  <b>13</b>
-                </span>
-                <em>VS</em>
-                <span class="thumb th2">
-                  <b>1</b>
-                  <i class="gti-thumbs-o-up"></i>
-                </span>
-              </div>
-              <div class="pth pt2">
-                <h4><a href="">Boss super player long name</a></h4>
-                <span>Alex Shmidt<u>Captain</u></span>
-              </div>
-            </div><!-- pthead -->
-              
-            <div class="ptc">
-              <div class="ptcs ptcs1">
-                <table>
-                  <tr>
-                    <th>kills</th>
-                    <td class="green">100</td>
-                  </tr>
-                  <tr>
-                    <th>deaths</th>
-                    <td class="green">14</td>
-                  </tr>
-                  <tr>
-                    <th>Assists</th>
-                    <td class="green">11</td>
-                  </tr>
-                  <tr>
-                    <th>LH</th>
-                    <td class="red">2</td>
-                  </tr>
-                  <tr>
-                    <th>GPM</th>
-                    <td>10</td>
-                  </tr>
-                </table>
-              </div>
-              <div class="ptc_bar">
-                <div id="ptc_bar5"></div>
-              </div>
-              <div class="ptcs ptcs2">
-                <table>
-                  <tr>
-                    <td class="green">100</td>
-                    <th>kills</th>
-                  </tr>
-                  <tr>
-                    <td class="green">14</td>
-                    <th>deaths</th>
-                  </tr>
-                  <tr>
-                    <td class="green">11</td>
-                    <th>Assists</th>
-                  </tr>
-                  <tr>
-                    <td class="red">2</td>
-                    <th>LH</th>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <th>GPM</th>
-                  </tr>
-                </table>
-              </div>
-            </div><!-- ptc -->
-              
-          </div><!-- pl-c -->
-          
-          
-        </div><!-- block-content -->
-      </div><!-- block -->
-    </div><!-- col-sm-7 -->
-    
-    <div class="col-md-5">
-      <div class="block" id="m-history">
-        <div class="bh clearfix">
-          <h3>
-            <i class="ih gti-history"></i>
-            История матчей
-            <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О сравнении" class="inf gti-info-circle"></i>
-          </h3>
-        </div><!-- bh -->
-
-        <div class="block-content">
-          <div class="histb">
-            <h3>
-            История личных встреч:
-            </h3>
-            <table>
-               
-                <tr>
-                  <th>2016-02-24</th>
-                  <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                  <td class="red"><u>Secret</u></td>
-                  <td class="hisc"><b class="red">43</b> : 67</td>
-                  <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-                </tr>
-                <tr>
-                  <th>2016-02-24</th>
-                  <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                  <td class="green"><u>Secret</u></td>
-                  <td class="hisc"><b class="green">3</b> : 7</td>
-                  <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-                </tr>
-              
-                <tr>
-                  <th>2016-02-24</th>
-                  <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                  <td class="red"><u>Secret</u></td>
-                  <td class="hisc"><b class="red">43</b> : 67</td>
-                  <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-                </tr>
-                <tr>
-                  <th>2016-02-24</th>
-                  <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                  <td class="green"><u>Secret</u></td>
-                  <td class="hisc"><b class="green">3</b> : 7</td>
-                  <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-                </tr>
-              
-                <tr>
-                  <th>2016-02-24</th>
-                  <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                  <td class="red"><u>Secret</u></td>
-                  <td class="hisc"><b class="red">43</b> : 67</td>
-                  <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-                </tr>
-                <tr>
-                  <th>2016-02-24</th>
-                  <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                  <td class="green"><u>Secret</u></td>
-                  <td class="hisc"><b class="green">3</b> : 7</td>
-                  <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-                </tr>
-              
-            </table>
-          </div><!-- histb -->
-          <div class="histb">
-            <h3 class="blue">
-            История личных встреч:
-            </h3>
-            <table>
-              
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="red"><u>Secret</u></td>
-                <td class="hisc">43 : 67</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="green"><u>Secret</u></td>
-                <td class="hisc">3 : 7</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="red"><u>Secret</u></td>
-                <td class="hisc">43 : 67</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="green"><u>Secret</u></td>
-                <td class="hisc">3 : 7</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="red"><u>Secret</u></td>
-                <td class="hisc">43 : 67</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="green"><u>Secret</u></td>
-                <td class="hisc">3 : 7</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              
-            </table>
-          </div><!-- histb -->
-          <div class="histb">
-            <h3 class="red">
-            История личных встреч:
-            </h3>
-            <table>
-              
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="red"><u>Secret</u></td>
-                <td class="hisc">43 : 67</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="green"><u>Secret</u></td>
-                <td class="hisc">3 : 7</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="red"><u>Secret</u></td>
-                <td class="hisc">43 : 67</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="green"><u>Secret</u></td>
-                <td class="hisc">3 : 7</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="red"><u>Secret</u></td>
-                <td class="hisc">43 : 67</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="green"><u>Secret</u></td>
-                <td class="hisc">3 : 7</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              
-            </table>
-          </div><!-- histb -->
-        </div><!-- block-content -->
-      </div><!-- block -->
-    </div><!-- col-sm-5 -->
-  </div><!-- row -->
-
-
-
-<!-- /Players compare -->
-      </section>
-
-      <div class="bn">
-        <img src="../img/ad.jpg" alt="">
+      <div class="well ifbet m-even" style="border:0;">
+        <p>
+          Если бы Вы поставили <b>100$</b> на Freedom на сайте <a href="">ggbet.com</a>, то Ваш выигрыш составил бы <b>225$</b>
+        </p>
+        <div class="mlh"><span><a href="" class="btn btn-primary btn-sm">Все коэффициенты</a> <a href="" class="btn btn-primary btn-sm">Все прогнозы</a></span></div>
       </div>
-
-      <section id="m-picks" class="m-sec m-odd">
-        <div class="row">
-          <div class="col-md-7">
-            <!-- /match-page/section-piks.html -->
-<div class="block m-picks">
-  <div class="bh clearfix">
-    <h3>
-      <i class="ih gti-hand-o-up"></i>
-      Пики и баны
-      <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О сравнении" class="inf gti-info-circle"></i>
-    </h3>
-  </div><!-- bh -->
-
-  <div class="block-content">
-    
-    <div class="rigter">
-      <u>Выбрать расклад</u>
-      <div class="dropdown">
-        <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-           Начинают: London Conspiracy
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Начинают: Secret</a></li>
-          <li class="active"><a href="#">Начинают: London</a></li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="pik-team">
-      <a href="" class="mtp">
-      <img src="http://game-tournaments.com/media/logo/_60/pic-20160415-256x187-3994387532.png">
-      Secret</a>
-    </div>
-    
-    <ul class="pik-line clearfix">
-      <li class="h-ban">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>2 <u class="tip" title="Процент вероятности">98%</u></span></a>
-      </li>
-      <li class="h-ban">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>4 <u class="tip" title="Процент вероятности">98%</u></span></a>
-      </li>
-      <li class="h-pik">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>6 <u class="tip" title="Процент вероятности">98%</u></span></a>
-         <a href="" class="pn">Вениамин Пупкович Ватарогосян</a>
-      </li>
-      <li class="h-pik">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>7 <u class="tip" title="Процент вероятности">98%</u></span></a>
-        <a href="" class="pn">Вася пупкин</a>
-      </li>
-      <li class="h-ban">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>10 <u class="tip" title="Процент вероятности">98%</u></span></a>
-      </li>
-      <li class="h-ban">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>12 <u class="tip" title="Процент вероятности">98%</u></span></a>
-      </li>
-      <li class="h-pik">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>13 <u class="tip" title="Процент вероятности">98%</u></span></a>
-         <a href="" class="pn">Вениамин Пупкович Ватарогосян</a>
-      </li>
-      <li class="h-pik">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>15 <u class="tip" title="Процент вероятности">98%</u></span></a>
-        <a href="" class="pn">Вася пупкин</a>
-      </li>
-      <li class="h-ban">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>17 <u class="tip" title="Процент вероятности">98%</u></span></a>
-      </li>
-      <li class="h-pik">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>19 <u class="tip" title="Процент вероятности">98%</u></span></a>
-        <a href="" class="pn">Вася пупкин</a>
-      </li>
-    </ul>
-    
-    <div class="vser"><span>VS</span></div>
-    
-    <ul class="pik-line clearfix">
-      <li class="h-ban">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>1 <u class="tip" title="Процент вероятности">98%</u></span></a>
-      </li>
-      <li class="h-ban">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>3 <u class="tip" title="Процент вероятности">98%</u></span></a>
-      </li>
-      <li class="h-pik">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>5 <u class="tip" title="Процент вероятности">98%</u></span></a>
-         <a href="" class="pn">Вениамин Пупкович Ватарогосян</a>
-      </li>
-      <li class="h-pik">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>8 <u class="tip" title="Процент вероятности">98%</u></span></a>
-        <a href="" class="pn">Вася пупкин</a>
-      </li>
-      <li class="h-ban">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>9 <u class="tip" title="Процент вероятности">98%</u></span></a>
-      </li>
-      <li class="h-ban">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>11 <u class="tip" title="Процент вероятности">98%</u></span></a>
-      </li>
-      <li class="h-pik">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>14 <u class="tip" title="Процент вероятности">98%</u></span></a>
-         <a href="" class="pn">Вениамин Пупкович Ватарогосян</a>
-      </li>
-      <li class="h-pik">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>16 <u class="tip" title="Процент вероятности">98%</u></span></a>
-        <a href="" class="pn">Вася пупкин</a>
-      </li>
-      <li class="h-ban">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>18 <u class="tip" title="Процент вероятности">98%</u></span></a>
-      </li>
-      <li class="h-pik">
-        <a href="" class="hvert hpop"><img src="../img/herov.jpg" alt="Имя героя"><span>20 <u class="tip" title="Процент вероятности">98%</u></span></a>
-        <a href="" class="pn">Вася пупкин</a>
-      </li>
-    </ul>
-    
-    <div class="pik-team">
-      <a href="" class="mtp">
-      <img src="http://game-tournaments.com/media/logo/_60/pic-20160415-256x187-3994387532.png">
-      London Conspyracy Dota</a>
-    </div>
-    
-  </div>
-</div>
-<!-- /Picks -->
-          </div>
-          <div class="col-md-5">
-            <!-- /match-page/section-comments.html -->
-<div class="block" id="m-com">
- 
-  
-  <div class="tab-content">
-    <div class="tab-pane active" role="tabpanel" id="c-com">
-      <div class="comblock">
-        <div class="tse-com">
-            <div class="tse-content">
-              <ul class="m-com-list">
-              
-                <li>
-                  <a href=""><img src="../img/uava.png" alt=""></a>
-                  <div>
-                    <b>BorodachBets</b> • 
-                    <span>27 февраля, 23:49</span>
-                    <p>
-                      ВП плохо отыгрывали свои последние игры, проиграли даже МБ которые казалось бы должны были отлететь 2-0, но всё произошло наоборот:) Ликвиды тоже играли очень слабо, поэтому матч спорный. СТавлю 500$ на один из матчей мажора, скрины в группе
-                    </p>
-                  </div>
-                </li>
-              
-                <li>
-                  <a href=""><img src="../img/uava.png" alt=""></a>
-                  <div>
-                    <b>BorodachBets</b> • 
-                    <span>27 февраля, 23:49</span>
-                    <p>
-                      ВП плохо отыгрывали свои последние игры, проиграли даже МБ которые казалось бы должны были отлететь 2-0, но всё произошло наоборот:) Ликвиды тоже играли очень слабо, поэтому матч спорный. СТавлю 500$ на один из матчей мажора, скрины в группе
-                    </p>
-                  </div>
-                </li>
-              
-                <li>
-                  <a href=""><img src="../img/uava.png" alt=""></a>
-                  <div>
-                    <b>BorodachBets</b> • 
-                    <span>27 февраля, 23:49</span>
-                    <p>
-                      ВП плохо отыгрывали свои последние игры, проиграли даже МБ которые казалось бы должны были отлететь 2-0, но всё произошло наоборот:) Ликвиды тоже играли очень слабо, поэтому матч спорный. СТавлю 500$ на один из матчей мажора, скрины в группе
-                    </p>
-                  </div>
-                </li>
-              
-                <li>
-                  <a href=""><img src="../img/uava.png" alt=""></a>
-                  <div>
-                    <b>BorodachBets</b> • 
-                    <span>27 февраля, 23:49</span>
-                    <p>
-                      ВП плохо отыгрывали свои последние игры, проиграли даже МБ которые казалось бы должны были отлететь 2-0, но всё произошло наоборот:) Ликвиды тоже играли очень слабо, поэтому матч спорный. СТавлю 500$ на один из матчей мажора, скрины в группе
-                    </p>
-                  </div>
-                </li>
-              
-                <li>
-                  <a href=""><img src="../img/uava.png" alt=""></a>
-                  <div>
-                    <b>BorodachBets</b> • 
-                    <span>27 февраля, 23:49</span>
-                    <p>
-                      ВП плохо отыгрывали свои последние игры, проиграли даже МБ которые казалось бы должны были отлететь 2-0, но всё произошло наоборот:) Ликвиды тоже играли очень слабо, поэтому матч спорный. СТавлю 500$ на один из матчей мажора, скрины в группе
-                    </p>
-                  </div>
-                </li>
-              
-                <li>
-                  <a href=""><img src="../img/uava.png" alt=""></a>
-                  <div>
-                    <b>BorodachBets</b> • 
-                    <span>27 февраля, 23:49</span>
-                    <p>
-                      ВП плохо отыгрывали свои последние игры, проиграли даже МБ которые казалось бы должны были отлететь 2-0, но всё произошло наоборот:) Ликвиды тоже играли очень слабо, поэтому матч спорный. СТавлю 500$ на один из матчей мажора, скрины в группе
-                    </p>
-                  </div>
-                </li>
-              
-                <li>
-                  <a href=""><img src="../img/uava.png" alt=""></a>
-                  <div>
-                    <b>BorodachBets</b> • 
-                    <span>27 февраля, 23:49</span>
-                    <p>
-                      ВП плохо отыгрывали свои последние игры, проиграли даже МБ которые казалось бы должны были отлететь 2-0, но всё произошло наоборот:) Ликвиды тоже играли очень слабо, поэтому матч спорный. СТавлю 500$ на один из матчей мажора, скрины в группе
-                    </p>
-                  </div>
-                </li>
-              
-                <li>
-                  <a href=""><img src="../img/uava.png" alt=""></a>
-                  <div>
-                    <b>BorodachBets</b> • 
-                    <span>27 февраля, 23:49</span>
-                    <p>
-                      ВП плохо отыгрывали свои последние игры, проиграли даже МБ которые казалось бы должны были отлететь 2-0, но всё произошло наоборот:) Ликвиды тоже играли очень слабо, поэтому матч спорный. СТавлю 500$ на один из матчей мажора, скрины в группе
-                    </p>
-                  </div>
-                </li>
-              
-                <li>
-                  <a href=""><img src="../img/uava.png" alt=""></a>
-                  <div>
-                    <b>BorodachBets</b> • 
-                    <span>27 февраля, 23:49</span>
-                    <p>
-                      ВП плохо отыгрывали свои последние игры, проиграли даже МБ которые казалось бы должны были отлететь 2-0, но всё произошло наоборот:) Ликвиды тоже играли очень слабо, поэтому матч спорный. СТавлю 500$ на один из матчей мажора, скрины в группе
-                    </p>
-                  </div>
-                </li>
-              
-                <li>
-                  <a href=""><img src="../img/uava.png" alt=""></a>
-                  <div>
-                    <b>BorodachBets</b> • 
-                    <span>27 февраля, 23:49</span>
-                    <p>
-                      ВП плохо отыгрывали свои последние игры, проиграли даже МБ которые казалось бы должны были отлететь 2-0, но всё произошло наоборот:) Ликвиды тоже играли очень слабо, поэтому матч спорный. СТавлю 500$ на один из матчей мажора, скрины в группе
-                    </p>
-                  </div>
-                </li>
-              
-                <li>
-                  <a href=""><img src="../img/uava.png" alt=""></a>
-                  <div>
-                    <b>BorodachBets</b> • 
-                    <span>27 февраля, 23:49</span>
-                    <p>
-                      ВП плохо отыгрывали свои последние игры, проиграли даже МБ которые казалось бы должны были отлететь 2-0, но всё произошло наоборот:) Ликвиды тоже играли очень слабо, поэтому матч спорный. СТавлю 500$ на один из матчей мажора, скрины в группе
-                    </p>
-                  </div>
-                </li>
-              
+      
+      <section class="m-odd">
+        <div class="vid-stat player-video">
+          <div class="block">
+            <div class="nav-wr"> <span class="mobmenu" onclick="mobmenu()"><i class="gti-bars"></i> Игра 1</span>
+              <ul id="videos" class="nav nav-tabs">
+                <li rel="1" class="active"> <a href="javascript:;" onclick="mvideo(1)">Игра 1</a> </li>
+                <li rel="2"> <a href="javascript:;" onclick="mvideo(2)">Игра 2</a> </li>
+                <li rel="3"> <a href="javascript:;" onclick="mvideo(3)">Игра 3</a> </li>
               </ul>
-              <div class="no100"><i class="gti-info-circle"></i> Ничего нет</div>
             </div>
-        </div>
-        
-        <!-- текстарея их чата -->
-        
-        <div class="chat-action">
-          <div class="chat-text">
-            <form method="POST" action="chat" name="msg">
-              <textarea name="txt" id="chat_txt" placeholder="Комментировать матч" onkeypress="if (event.keyCode==10 || (event.ctrlKey &amp;&amp; event.keyCode==13)) {chat_msg(); return false;}"></textarea>
-              <a onclick="chat_msg();" class="btn btn-chat">OK</a>
-              <a id="emotic-btn" class="emotic-btn"><i class="gti-smile-o"></i></a>
-              <div class="emo_block" id="emo_block">
-                <div class="tse-sc stickerer" id="stickerer">
-                  <div class="tse-content">
-                    <div class="stickers-list">
-                      <a onclick="insert_smile('angry');">
-                        <img src="http://game-tournaments.com/media/smile/angry.png" title="angry">
-                      </a>
-                      <a onclick="insert_smile('cry');">
-                        <img src="http://game-tournaments.com/media/smile/cry.png" title="cry">
-                      </a>
-                      <a onclick="insert_smile('bigsmile');">
-                        <img src="http://game-tournaments.com/media/smile/bigsmile.png" title="bigsmile">
-                      </a>
-                      <a onclick="insert_smile('eyesdroped');">
-                        <img src="http://game-tournaments.com/media/smile/eyesdroped.png" title="eyesdroped">
-                      </a>
-                      <a onclick="insert_smile('love');">
-                        <img src="http://game-tournaments.com/media/smile/love.png" title="love">
-                      </a>
-                      <a onclick="insert_smile('beaten');">
-                        <img src="http://game-tournaments.com/media/smile/beaten.png" title="beaten">
-                      </a>
-                      <a onclick="insert_smile('unhappy');">
-                        <img src="http://game-tournaments.com/media/smile/unhappy.png" title="unhappy">
-                      </a>
-                      <a onclick="insert_smile('nothing');">
-                        <img src="http://game-tournaments.com/media/smile/nothing.png" title="nothing">
-                      </a>
-                      <a onclick="insert_smile('horror');">
-                        <img src="http://game-tournaments.com/media/smile/horror.png" title="horror">
-                      </a>
-                      <a onclick="insert_smile('shocked');">
-                        <img src="http://game-tournaments.com/media/smile/shocked.png" title="shocked">
-                      </a>
-                      <a onclick="insert_smile('sick');">
-                        <img src="http://game-tournaments.com/media/smile/sick.png" title="sick">
-                      </a>
-                      <a onclick="insert_smile('shockedagain');">
-                        <img src="http://game-tournaments.com/media/smile/shockedagain.png" title="shockedagain">
-                      </a>
-                      <a onclick="insert_smile('brains');">
-                        <img src="http://game-tournaments.com/media/smile/brains.png" title="brains">
-                      </a>
-                      <a onclick="insert_smile('chilling');">
-                        <img src="http://game-tournaments.com/media/smile/chilling.png" title="chilling">
-                      </a>
-                      <a onclick="insert_smile('dizzy');">
-                          <img src="http://game-tournaments.com/media/smile/dizzy.png" title="dizzy">
-                      </a>
-                      <a onclick="insert_smile('enjoying');">
-                          <img src="http://game-tournaments.com/media/smile/enjoying.png" title="enjoying">
-                      </a>
-                      <a onclick="insert_smile('gangs');">
-                          <img src="http://game-tournaments.com/media/smile/gangs.png" title="gangs">
-                      </a>
-                      <a onclick="insert_smile('high');">
-                          <img src="http://game-tournaments.com/media/smile/high.png" title="high">
-                      </a>
-                      <a onclick="insert_smile('kaboom');">
-                          <img src="http://game-tournaments.com/media/smile/kaboom.png" title="kaboom">
-                      </a>
-                      <a onclick="insert_smile('kiddingright');">
-                          <img src="http://game-tournaments.com/media/smile/kiddingright.png" title="kiddingright">
-                      </a>
-                      <a onclick="insert_smile('meaw');">
-                          <img src="http://game-tournaments.com/media/smile/meaw.png" title="meaw">
-                      </a>
-                      <a onclick="insert_smile('ninja');">
-                          <img src="http://game-tournaments.com/media/smile/ninja.png" title="ninja">
-                      </a>
-                      <a onclick="insert_smile('omg');">
-                          <img src="http://game-tournaments.com/media/smile/omg.png" title="omg">
-                      </a>
-                      <a onclick="insert_smile('onfire');">
-                          <img src="http://game-tournaments.com/media/smile/onfire.png" title="onfire">
-                      </a>
-                      <a onclick="insert_smile('seriousbusiness');">
-                          <img src="http://game-tournaments.com/media/smile/seriousbusiness.png" title="seriousbusiness">
-                      </a>
-                      <a onclick="insert_smile('slow');">
-                        <img src="http://game-tournaments.com/media/smile/slow.png" title="slow">
-                      </a>
-                      <a onclick="insert_smile('want');">
-                        <img src="http://game-tournaments.com/media/smile/want.png" title="want">
-                      </a>
-                      <a onclick="insert_smile('xd');">
-                        <img src="http://game-tournaments.com/media/smile/xd.png" title="xd">
-                      </a>
-                      <a onclick="insert_smile('yaehamnotdurnk');">
-                        <img src="http://game-tournaments.com/media/smile/yaehamnotdurnk.png" title="yaehamnotdurnk">
-                      </a>
-                      <a onclick="insert_smile('yo');">
-                        <img src="http://game-tournaments.com/media/smile/yo.png" title="yo">
-                      </a>
-                      <a onclick="insert_smile('psychotic');">
-                        <img src="http://game-tournaments.com/media/smile/psychotic.png" title="psychotic">
-                      </a>
-                      <a onclick="insert_smile('pissedoff');">
-                        <img src="http://game-tournaments.com/media/smile/pissedoff.png" title="pissedoff">
-                      </a>
-                      <a onclick="insert_smile('secretlaugh');">
-                        <img src="http://game-tournaments.com/media/smile/secretlaugh.png" title="secretlaugh">
-                      </a>
-                      <a onclick="insert_smile('snooty');">
-                        <img src="http://game-tournaments.com/media/smile/snooty.png" title="snooty">
-                      </a>
-                      <a onclick="insert_smile('shy');">
-                        <img src="http://game-tournaments.com/media/smile/shy.png" title="shy">
-                      </a>
-                      <a onclick="insert_smile('yuush');">
-                        <img src="http://game-tournaments.com/media/smile/yuush.png" title="yuush">
-                      </a>
-                      <a onclick="insert_smile('yarr');">
-                        <img src="http://game-tournaments.com/media/smile/yarr.png" title="yarr">
-                      </a>
-                      <a onclick="insert_smile('zzz');">
-                        <img src="http://game-tournaments.com/media/smile/zzz.png" title="zzz">
-                      </a>
-                      <a onclick="insert_smile('tastey');">
-                        <img src="http://game-tournaments.com/media/smile/tastey.png" title="tastey">
-                      </a>
-                      <a onclick="insert_smile('evilish');">
-                        <img src="http://game-tournaments.com/media/smile/evilish.png" title="evilish">
-                      </a>
-                      <a onclick="insert_smile('ignoring');">
-                        <img src="http://game-tournaments.com/media/smile/ignoring.png" title="ignoring">
-                      </a>
-                      <a onclick="insert_smile('brzzzzz');">
-                        <img src="http://game-tournaments.com/media/smile/brzzzzz.png" title="brzzzzz">
-                      </a>
-                    </div>
-                  </div>
-                </div>    
-              </div>
-            </form>
-          </div>
-          <div class="mmore visible" id="mmore" onclick="chat_scroll_down()">Новые сообщения</div>
-        </div>
-        <!-- //текстарея их чата -->
-      </div>
-      <div class="c_inf"><a href="/"><i class="gti-comment"></i> &nbsp; Обсудить на форуме</a></div>
-    </div><!-- #c-com -->
-    <div class="tab-pane" role="tabpanel" id="c-vk">
-      
-    </div><!-- #c-vk -->
-    <div class="tab-pane" role="tabpanel" id="c-fb">
-      
-    </div><!-- #c-fb -->
-  </div>
-  
-</div>
-
-<!-- /Comments -->
+            <div class="block-content">
+             
+              <table class="mtable mtable-c">
+                <thead>
+                  <tr>
+                    <th><a href=""><img src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png" alt=""></a> <a href="">Effect</a></th>
+                    <th>Статистика игроков</th>
+                    <th><a href=""><img src="http://game-tournaments.com/media/logo/pic-20161110-300x300-2206743285.png" alt=""></a> <a href="">Empire</a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                   <tr>
+                    <td>
+                      <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170117-1280x853-3825210290.jpeg);"></a>
+                      <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/48.png"></span>
+                      <div class="name tn1">
+                        <a href="">Sedoy</a><br>
+                        <span>Carry</span><br>
+                        <span>safe</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="barr">
+                        <div id="ptc_bar0" class="ptc_bar_chart0"></div>
+                        <table class="intable">
+                          <tr>
+                            <td><span class="red">9%</span></td>
+                            <td align="center">
+                              MVP
+                            </td>
+                            <td><span class="green">13%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">64%</span></td>
+                            <td align="center">Fights</td>
+                            <td><span class="green">71%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">61%</span></td>
+                            <td align="center">Gold</td>
+                            <td><span class="green">78%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">LH</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                    <td>
+                        <div class="name tn2">
+                          <a href="">fn</a><br>
+                          <span>Carry</span><br>
+                          <span>safe</span>
+                        </div>
+                        <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/8.png"></span>
+                        <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com//media/logo/_60/pic-20170117-687x1080-4576283716.jpeg);"></a>
+                    </td>
+                  </tr>
+                  
+                   <tr>
+                    <td>
+                      <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170117-1280x853-3825210290.jpeg);"></a>
+                      <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/48.png"></span>
+                      <div class="name tn1">
+                        <a href="">Sedoy</a><br>
+                        <span>Carry</span><br>
+                        <span>safe</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="barr">
+                        <div id="ptc_bar0" class="ptc_bar_chart0"></div>
+                        <table class="intable">
+                          <tr>
+                            <td><span class="red">9%</span></td>
+                            <td align="center">
+                              MVP
+                            </td>
+                            <td><span class="green">13%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">64%</span></td>
+                            <td align="center">Fights</td>
+                            <td><span class="green">71%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">61%</span></td>
+                            <td align="center">Gold</td>
+                            <td><span class="green">78%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">LH</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                    <td>
+                        <div class="name tn2">
+                          <a href="">fn</a><br>
+                          <span>Carry</span><br>
+                          <span>safe</span>
+                        </div>
+                        <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/8.png"></span>
+                        <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com//media/logo/_60/pic-20170117-687x1080-4576283716.jpeg);"></a>
+                    </td>
+                  </tr>
+                  
+                   <tr>
+                    <td>
+                      <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170117-1280x853-3825210290.jpeg);"></a>
+                      <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/48.png"></span>
+                      <div class="name tn1">
+                        <a href="">Sedoy</a><br>
+                        <span>Carry</span><br>
+                        <span>safe</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="barr">
+                        <div id="ptc_bar0" class="ptc_bar_chart0"></div>
+                        <table class="intable">
+                          <tr>
+                            <td><span class="red">9%</span></td>
+                            <td align="center">
+                              MVP
+                            </td>
+                            <td><span class="green">13%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">64%</span></td>
+                            <td align="center">Fights</td>
+                            <td><span class="green">71%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">61%</span></td>
+                            <td align="center">Gold</td>
+                            <td><span class="green">78%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">LH</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                    <td>
+                        <div class="name tn2">
+                          <a href="">fn</a><br>
+                          <span>Carry</span><br>
+                          <span>safe</span>
+                        </div>
+                        <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/8.png"></span>
+                        <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com//media/logo/_60/pic-20170117-687x1080-4576283716.jpeg);"></a>
+                    </td>
+                  </tr>
+                  
+                   <tr>
+                    <td>
+                      <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170117-1280x853-3825210290.jpeg);"></a>
+                      <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/48.png"></span>
+                      <div class="name tn1">
+                        <a href="">Sedoy</a><br>
+                        <span>Carry</span><br>
+                        <span>safe</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="barr">
+                        <div id="ptc_bar0" class="ptc_bar_chart0"></div>
+                        <table class="intable">
+                          <tr>
+                            <td><span class="red">9%</span></td>
+                            <td align="center">
+                              MVP
+                            </td>
+                            <td><span class="green">13%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">64%</span></td>
+                            <td align="center">Fights</td>
+                            <td><span class="green">71%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">61%</span></td>
+                            <td align="center">Gold</td>
+                            <td><span class="green">78%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">LH</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                    <td>
+                        <div class="name tn2">
+                          <a href="">fn</a><br>
+                          <span>Carry</span><br>
+                          <span>safe</span>
+                        </div>
+                        <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/8.png"></span>
+                        <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com//media/logo/_60/pic-20170117-687x1080-4576283716.jpeg);"></a>
+                    </td>
+                  </tr>
+                  
+                   <tr>
+                    <td>
+                      <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170117-1280x853-3825210290.jpeg);"></a>
+                      <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/48.png"></span>
+                      <div class="name tn1">
+                        <a href="">Sedoy</a><br>
+                        <span>Carry</span><br>
+                        <span>safe</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="barr">
+                        <div id="ptc_bar0" class="ptc_bar_chart0"></div>
+                        <table class="intable">
+                          <tr>
+                            <td><span class="red">9%</span></td>
+                            <td align="center">
+                              MVP
+                            </td>
+                            <td><span class="green">13%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">64%</span></td>
+                            <td align="center">Fights</td>
+                            <td><span class="green">71%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">61%</span></td>
+                            <td align="center">Gold</td>
+                            <td><span class="green">78%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">LH</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                    <td>
+                        <div class="name tn2">
+                          <a href="">fn</a><br>
+                          <span>Carry</span><br>
+                          <span>safe</span>
+                        </div>
+                        <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/8.png"></span>
+                        <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com//media/logo/_60/pic-20170117-687x1080-4576283716.jpeg);"></a>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+              
+              <br>
+              
+               <table class="mtable mtable-c">
+                <thead>
+                  <tr>
+                    <th><a href=""><img src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png" alt=""></a> <a href="">Effect</a></th>
+                    <th>Статистика игроков</th>
+                    <th><a href=""><img src="http://game-tournaments.com/media/logo/pic-20161110-300x300-2206743285.png" alt=""></a> <a href="">Empire</a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                   <tr>
+                    <td>
+                      <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170117-1280x853-3825210290.jpeg);"></a>
+                      <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/48.png"></span>
+                      <div class="name tn1">
+                        <a href="">Sedoy</a><br>
+                        <span>Carry</span><br>
+                        <span>safe</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="barr">
+                        <div id="ptc_bar1" class="ptc_bar_chart"></div>
+                        <table class="intable">
+                          <tr>
+                            <td><span class="red">9%</span></td>
+                            <td align="center">
+                              FORM
+                            </td>
+                            <td><span class="green">13%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">64%</span></td>
+                            <td align="center">STR</td>
+                            <td><span class="green">71%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">61%</span></td>
+                            <td align="center">GOLD</td>
+                            <td><span class="green">78%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">STAT</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">LANE</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">GOLD</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">FIGHTS</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">EXP</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                    <td>
+                        <div class="name tn2">
+                          <a href="">fn</a><br>
+                          <span>Carry</span><br>
+                          <span>safe</span>
+                        </div>
+                        <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/8.png"></span>
+                        <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com//media/logo/_60/pic-20170117-687x1080-4576283716.jpeg);"></a>
+                    </td>
+                  </tr>
+                  
+                   <tr>
+                    <td>
+                      <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170117-1280x853-3825210290.jpeg);"></a>
+                      <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/48.png"></span>
+                      <div class="name tn1">
+                        <a href="">Sedoy</a><br>
+                        <span>Carry</span><br>
+                        <span>safe</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="barr">
+                        <div id="ptc_bar2" class="ptc_bar_chart"></div>
+                        <table class="intable">
+                          <tr>
+                            <td><span class="red">9%</span></td>
+                            <td align="center">
+                              FORM
+                            </td>
+                            <td><span class="green">13%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">64%</span></td>
+                            <td align="center">STR</td>
+                            <td><span class="green">71%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">61%</span></td>
+                            <td align="center">GOLD</td>
+                            <td><span class="green">78%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">STAT</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">LANE</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">GOLD</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">FIGHTS</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">EXP</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                    <td>
+                        <div class="name tn2">
+                          <a href="">fn</a><br>
+                          <span>Carry</span><br>
+                          <span>safe</span>
+                        </div>
+                        <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/8.png"></span>
+                        <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com//media/logo/_60/pic-20170117-687x1080-4576283716.jpeg);"></a>
+                    </td>
+                  </tr>
+                  
+                   <tr>
+                    <td>
+                      <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170117-1280x853-3825210290.jpeg);"></a>
+                      <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/48.png"></span>
+                      <div class="name tn1">
+                        <a href="">Sedoy</a><br>
+                        <span>Carry</span><br>
+                        <span>safe</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="barr">
+                        <div id="ptc_bar3" class="ptc_bar_chart"></div>
+                        <table class="intable">
+                          <tr>
+                            <td><span class="red">9%</span></td>
+                            <td align="center">
+                              FORM
+                            </td>
+                            <td><span class="green">13%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">64%</span></td>
+                            <td align="center">STR</td>
+                            <td><span class="green">71%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">61%</span></td>
+                            <td align="center">GOLD</td>
+                            <td><span class="green">78%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">STAT</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">LANE</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">GOLD</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">FIGHTS</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">EXP</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                    <td>
+                        <div class="name tn2">
+                          <a href="">fn</a><br>
+                          <span>Carry</span><br>
+                          <span>safe</span>
+                        </div>
+                        <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/8.png"></span>
+                        <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com//media/logo/_60/pic-20170117-687x1080-4576283716.jpeg);"></a>
+                    </td>
+                  </tr>
+                  
+                   <tr>
+                    <td>
+                      <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170117-1280x853-3825210290.jpeg);"></a>
+                      <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/48.png"></span>
+                      <div class="name tn1">
+                        <a href="">Sedoy</a><br>
+                        <span>Carry</span><br>
+                        <span>safe</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="barr">
+                        <div id="ptc_bar4" class="ptc_bar_chart"></div>
+                        <table class="intable">
+                          <tr>
+                            <td><span class="red">9%</span></td>
+                            <td align="center">
+                              FORM
+                            </td>
+                            <td><span class="green">13%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">64%</span></td>
+                            <td align="center">STR</td>
+                            <td><span class="green">71%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">61%</span></td>
+                            <td align="center">GOLD</td>
+                            <td><span class="green">78%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">STAT</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">LANE</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">GOLD</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">FIGHTS</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">EXP</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                    <td>
+                        <div class="name tn2">
+                          <a href="">fn</a><br>
+                          <span>Carry</span><br>
+                          <span>safe</span>
+                        </div>
+                        <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/8.png"></span>
+                        <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com//media/logo/_60/pic-20170117-687x1080-4576283716.jpeg);"></a>
+                    </td>
+                  </tr>
+                  
+                   <tr>
+                    <td>
+                      <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170117-1280x853-3825210290.jpeg);"></a>
+                      <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/48.png"></span>
+                      <div class="name tn1">
+                        <a href="">Sedoy</a><br>
+                        <span>Carry</span><br>
+                        <span>safe</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="barr">
+                        <div id="ptc_bar5" class="ptc_bar_chart"></div>
+                        <table class="intable">
+                          <tr>
+                            <td><span class="red">9%</span></td>
+                            <td align="center">
+                              FORM
+                            </td>
+                            <td><span class="green">13%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">64%</span></td>
+                            <td align="center">STR</td>
+                            <td><span class="green">71%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">61%</span></td>
+                            <td align="center">GOLD</td>
+                            <td><span class="green">78%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">STAT</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">LANE</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">GOLD</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">FIGHTS</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">EXP</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                    <td>
+                        <div class="name tn2">
+                          <a href="">fn</a><br>
+                          <span>Carry</span><br>
+                          <span>safe</span>
+                        </div>
+                        <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/8.png"></span>
+                        <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com//media/logo/_60/pic-20170117-687x1080-4576283716.jpeg);"></a>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
-
-      <section id="m-news" class="m-sec m-even">
-        <!-- /match-page/section-news.html -->
-
-
-
-
-
-<div class="block m-news">
-  <div class="bh clearfix">
-    <h3>
-      <i class="ih gti-newspaper-o"></i>
-      Новости
-    </h3>
-    <ul class="block-menu">
-      <li class="nall active"><a href="">ВСЕ</a></li>
-      <li><a href="#"><i class="gti-gtlogo"></i></a></li>
-      <li><a href="#"><i class="gti-users"></i></a></li>
-    </ul>
-  </div><!-- bh -->
-    <div class="tse-sc tse-news">
-      <div class="tse-content">
-        <ul class="nlist">
-          
-              <li class="hot ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42720-1482829305-small.jpeg)">
-                    <b><i class="gti-facebook"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42725-1482841447-small.jpeg)">
-                    <b><i class="gti-facebook"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class="  nopic">
-                 
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                 
-                  <a class="nopic" href="">
-                    <i class="gti-gtlogo"></i>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42727-1482864622-small.jpeg)">
-                    <b><i class="gti-gtlogo"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42720-1482829305-small.jpeg)">
-                    <b><i class="gti-facebook"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42720-1482829305-small.jpeg)">
-                    <b><i class="gti-facebook"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42728-1482872435-small.jpeg)">
-                    <b><i class="gti-facebook"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42727-1482864622-small.jpeg)">
-                    <b><i class="gti-rss"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42723-1482835201-small.jpeg)">
-                    <b><i class="gti-gtlogo"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class="hot ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42723-1482835201-small.jpeg)">
-                    <b><i class="gti-twitter"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-        </ul>
-      </div>
-  </div>
-</div>
-
-<!-- /section NEWS -->
-
-
-
-      </section>
+      
+      
 
       <div class="bn">
         <img src="../img/ad.jpg" alt="">
@@ -3719,11 +1088,14 @@ $(document).ready(function () {
 	</u>
 </a>
 <!-- bar.html -->
+
+<!-- bar.html -->
 <div class="bar hiddenbar">
    <span id="menu-toggle" class="opener"><i class="gti-bars"></i></span>
   <div class="barc">
     <a href="#!" class="gt-logo"><img src="../img/gt-logo.png" alt="Game-tournaments.com"></a>
     <div class="bar-menu">
+      <!--
       <div class="bar-block">
         <a href="#!" class="bar-ava"><img src="../img/uava.png" alt="User"></a>
         <div class="bar-username">
@@ -3735,26 +1107,32 @@ $(document).ready(function () {
           </div>
         </div>
       </div>
-      <ul class="bar-nav-games">
+      -->
+      <div class="bar-block lh">
+        <a href="/log" title="Вход в свой профиль"><i class="gti-user-o"></i><span>Войти</span></a>
+        <a href="/reg" title="Регистрация"><i class="gti-user-plus"></i><span>Регистрация</span></a>
+      </div>
+      <ul class="bar-nav-games bng2">
         <li class="active">
-          <a href="#!"><img src="http://game-tournaments.com/html/img/logo-582.png" alt="Dota 2"></a>
+          <a href="#!"><i class="gti-582"></i></a>
+          
+          <ul class="bar-nav">
+              <li class="active"><a href="/ru/dota-2/matches" title="Матчи"><i class="gti-vs"></i> <span>Матчи</span></a></li>
+              <li><a href="/ru/dota-2/tournaments" title="Турниры"><i class="gti-trophy"></i><span>Турниры</span></a></li>
+              <li><a href="/ru/dota-2/news" title="Новости"><i class="gti-newspaper-o"></i><span>Новости</span></a></li>
+              <li><a href="/ru/dota-2/team" title="Команды"><i class="gti-users"></i><span>Команды</span></a></li>
+              <li><a href="/ru/dota-2/player" title="Игроки"><i class="gti-user"></i><span>Игроки</span></a></li>
+              <li><a href="/ru/dota-2/highlights" title="Хайлайты"><i class="gti-swords"></i><span>Хайлайты</span></a></li>
+              <li><a href="/ru/dota-2/video" title="Записи игр / Видео матчей"><i class="gti-play-circle-o"></i><span>Видео</span></a></li>
+          </ul>
+          
         </li>
-        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-704.png" alt="CS:GO"></a></li>
-        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-313.png" alt="League of Legends"></a></li>
-        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-758.png" alt="Heroes of the Storm"></a></li>
-        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-755.png" alt="HearthStone"></a></li>
-      </ul>
-      <ul class="bar-nav">
-        <li class="active"><a href="#!"><i class="gti-vs"></i> <span>Матчи</span></a></li>
-        <li><a href="#!"><i class="gti-trophy"></i><span>Турниры</span></a></li>
-        <li><a href="#!"><i class="gti-newspaper-o"></i><span>Новости</span></a></li>
-        <li><a href="#!"><i class="gti-users"></i><span>Команды</span></a></li>
-        <li><a href="#!"><i class="gti-user"></i><span>Игроки</span></a></li>
-        <li><a href="#!"><i class="gti-bullhorn"></i><span>Ставки</span></a></li>
-        <li><a href="#!"><i class="gti-bell"></i><span>Прогнозы</span></a></li>
-        <li><a href="#!"><i class="gti-star"></i><span>Рейтинг</span></a></li>
-        <li><a href="#!" ><i class="gti-play-circle-o"></i><span>Медиа</span></a></li>
-        <li><a href="#!"><i class="gti-comments"></i><span>Форум</span></a></li>
+        <li><a href="#!"><i class="gti-582"></i></a></li>
+        <li><a href="#!"><i class="gti-704"></i></a></li>
+        <li><a href="#!"><i class="gti-313"></i></a></li>
+        <li><a href="#!"><i class="gti-800"></i></a></li>
+        <li><a href="#!"><i class="gti-755"></i></a></li>
+        <!--<li><a href="#!"><i class="gti-hots"></i></a></li>-->
       </ul>
       <div class="dropers">
         <div class="s-lang">
@@ -3794,6 +1172,15 @@ $(document).ready(function () {
   </div> 
 </div>
 <span class="swipe-area"></span>
+
+
+
+
+
+
+
+
+
 
 
 <!-- Modal STAVKA -->
@@ -4205,7 +1592,7 @@ $(document).ready(function () {
                 <a href="">Nikname 1</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -4214,7 +1601,7 @@ $(document).ready(function () {
                 <a href="">Nikname 2</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -4223,7 +1610,7 @@ $(document).ready(function () {
                 <a href="">Nikname 3</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -4232,7 +1619,7 @@ $(document).ready(function () {
                 <a href="">Nikname 4</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -4241,7 +1628,7 @@ $(document).ready(function () {
                 <a href="">Nikname 5</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -4268,7 +1655,7 @@ $(document).ready(function () {
                 <a href="">Nikname 8</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -4336,7 +1723,7 @@ $(document).ready(function () {
 
 <!-- Site Sripts -->
 <script src="../inc/main.js"></script>
-<script src="../inc/func_init.js?51"></script>
+<script src="../inc/func_init.js?35"></script>
 
 <!--PAGES select only dev-->
 <style>
@@ -4381,11 +1768,13 @@ $(document).ready(function () {
     <a href="/vodlist2.html" class="m2 btn btn-sm btn-success" style="opacity.5">Vod List2</a>
     <a href="/vod.html" class="m2 btn btn-sm btn-success">Vod</a>
     <a href="/light.html" class="m2 btn btn-sm btn-success">HighLight</a>
-    <a href="/user-login.html" class="m2 btn btn-sm btn-warning">U login</a>
-    <a href="/user-reg.html" class="m2 btn btn-sm btn-warning">U reg</a>
-    <a href="/user-pass.html" class="m2 btn btn-sm btn-warning">U pass</a>
-    <a href="/user-acc.html" class="m2 btn btn-sm btn-warning">U acc</a>
+    <a href="/user-login.html" class="m2 btn btn-sm btn-success">U login</a>
+    <a href="/user-reg.html" class="m2 btn btn-sm btn-success">U reg</a>
+    <a href="/user-pass.html" class="m2 btn btn-sm btn-success">U pass</a>
+    <a href="/user-acc.html" class="m2 btn btn-sm btn-success">U acc</a>
     <a href="/user-page.html" class="m2 btn btn-sm btn-warning">U page</a>
+    <a href="/user-pay.html" class="m2 btn btn-sm btn-warning">U pay</a>
+    <!--
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Bets</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Predict</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Media</a>
@@ -4393,7 +1782,11 @@ $(document).ready(function () {
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Search</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Text</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">stickers</a>
+    -->
     <a href="/fonts.html" class="m2 btn btn-sm btn-success">Ico</a>
+    <a href="/mail-pwd_ru.html" class="m2 btn btn-sm btn-warning">m1</a>
+    <a href="/mail-pwd_count_ru.html" class="m2 btn btn-sm btn-warning">m2</a>
+    <a href="/mail-reg.html" class="m2 btn btn-sm btn-warning">m3</a>
   </div>
 </div>
 

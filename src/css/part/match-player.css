@@ -288,6 +288,14 @@
       color: #ffffff;
       border-radius: 70px;
       padding-left: 10px;
+      @media (max-width: $XM){
+        font-size: 24px;
+        height: 50px;
+        width: 50px;
+        line-height: 52px;
+        margin: -40px 0 0 -30px;
+        padding-left: 5px;
+      }
     }
     
     &:hover:after{
@@ -298,27 +306,48 @@
       position: absolute 0px * * 0px;
       padding: 15px;
       max-width: 95%;
+      @media (max-width: $XM){
+        right:50px;
+        top:30px;
+        padding: 10px;
+      }
       div{
         padding-left: 85px;
+        @media (max-width: $XM){
+          padding-left: 60px;
+        }
         h4{
           font-size: 24px;
           font-weight: 800;
           margin-top: 0px;
           margin-bottom: 5px;
+          @media (max-width: $XM){
+            font-size: 18px;
+          }
         }
         h5{
           font-size: 14px;
           margin-bottom: 5px;
           margin-top: 5px;
+          @media (max-width: $XM){
+            font-size: 12px;
+            margin: 0;
+          }
         }
         span{
           font-size: 14px;
           display: block;
+          @media (max-width: $XM){
+            font-size: 11px;
+          }
         }
       }
       img{
         width: 70px;
         float: left;
+        @media (max-width: $XM){
+         width: 50px;
+        }
       }
     }
     img{
@@ -354,7 +383,10 @@
   position: absolute 15px 15px * *;
   z-index: 2;
   color: $link-blue;
-  
+  @media (max-width: $XM){
+    top:5px;
+    right: 5px;
+  }
   i{
     padding: 5px;
     background: #444950;
@@ -908,7 +940,7 @@ Video after stream
       right: 170px;
       position: absolute;
       top: 50%;
-      margin-top: -97px;
+      margin-top: -77px;
       /*transition: $tease;*/
       @media (max-width: $XM){
         left: 20px;
@@ -916,6 +948,20 @@ Video after stream
       }
       *{
         vertical-align: middle;
+      }
+      h2{
+        background: rgb(20, 100, 137);
+        padding: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 0;
+        vertical-align: bottom;
+        z-index: 3;
+        position: relative;
+        border-bottom: 1px solid #202c35;
+        b{
+          vertical-align: bottom;
+        }
       }
       .ps-container .tse-content {
         width: 100%;
@@ -964,6 +1010,34 @@ Video after stream
             background-position: center;
             background-repeat: no-repeat;
             text-indent: 3px;
+            
+            &.lEN{
+              background-image: url(/media/flag/2.png);
+            }
+            &.lRU {
+              background-image: url(/media/flag/3.png);
+            }
+            &.lCN {
+              background-image: url(/media/flag/4.png);
+            }
+            &.lGR {
+              background-image: url(/media/flag/5.png);
+            }
+            &.lFR {
+              background-image: url(/media/flag/18.png);
+            }
+            &.lKR {
+              background-image: url(/media/flag/1.png);
+            }
+            &.lES {
+              background-image: url(/media/flag/8.png);
+            }
+            &.lJP {
+              background-image: url(/media/flag/9.png);
+            }
+            &.lPH {
+              background-image: url(/media/flag/29.png);
+            }
           }
           &.g-d2m {
             background-color: rgba(240, 80, 32, 0.2);
@@ -1032,7 +1106,10 @@ Video after stream
         position: absolute -40px 0 * auto;
         width: 300px;
         top: -40px  !important;
-        margin-top: 0 !important; 
+        margin-top: 0 !important;
+        h2{
+          display: none;
+        }
         a{
           display: none;
           padding: 7px 60px 7px 40px;
@@ -1054,6 +1131,13 @@ Video after stream
             }
           }
         }
+      }
+      .gamevid-no{
+        text-align: center;
+        box-shadow: none;
+        background: none;
+        color: #1e668a;
+        text-transform: uppercase;
       }
     }
   }

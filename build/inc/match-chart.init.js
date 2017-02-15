@@ -1022,7 +1022,7 @@ $(function () {
 //Player1
 $(function () {
     $('#ptc_bar1').highcharts({
-        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
+        colors: ["#3f79a2", "#d94c4c"],
         chart: {
           type: 'bar',
           backgroundColor: 'none',
@@ -1035,7 +1035,7 @@ $(function () {
           enabled: false
         },
         xAxis: {
-           categories: ['KILLS', 'DEATHS', 'ASSISTS', 'LH', 'GPM'],
+           categories: ['FORM', 'STR', 'STAT', 'MVP', 'LANE', 'GOLD', 'FIGHTS', 'EXP'],
            lineWidth: 0,
            minorGridLineWidth: 0,
            lineColor: 'transparent',
@@ -1075,7 +1075,7 @@ $(function () {
               crop: false,
               title:'',
               pointPadding: 0.01,
-              groupPadding: 0.1
+              groupPadding: 0.2
             }
         },
         tooltip: {
@@ -1086,21 +1086,27 @@ $(function () {
         series: [{
             name: 'Lacky8',
             data: [
-                  ['RANK', 53],
-                  ['APR', 46],
-                  ['MATCHES', 53],
-                  ['WINS', 46],
-                  ['KDA', 53]
+                  ['FORM', 5],
+                  ['STR', 4],
+                  ['GOLD', 55],
+                  ['STAT', 44],
+                  ['LANE', 44],
+                  ['GOLD', 44],
+                  ['FIGHTS', 44],
+                  ['EXP', 44]
             ],
             index: 4
         }, {
             name: 'Boss',
             data: [
-                  ['RANK', 5],
-                  ['APR', 4],
-                  ['MATCHES', 55],
-                  ['WINS', 44],
-                  ['KDA', 55]
+                  ['FORM', 25],
+                  ['STR', 41],
+                  ['GOLD', 65],
+                  ['STAT', 14],
+                  ['LANE', 94],
+                  ['GOLD', 34],
+                  ['FIGHTS', 62],
+                  ['EXP', 14]
             ],
             index: 3
         }]
@@ -1123,7 +1129,7 @@ $(function () {
           enabled: false
         },
         xAxis: {
-           categories: ['KILLS', 'DEATHS', 'ASSISTS', 'LH', 'GPM'],
+           categories: ['FORM', 'STR', 'STAT', 'MVP', 'LANE', 'GOLD', 'FIGHTS', 'EXP'],
            lineWidth: 0,
            minorGridLineWidth: 0,
            lineColor: 'transparent',
@@ -1163,7 +1169,7 @@ $(function () {
               crop: false,
               title:'',
               pointPadding: 0.01,
-              groupPadding: 0.1
+              groupPadding: 0.2
             }
         },
         tooltip: {
@@ -1174,21 +1180,27 @@ $(function () {
         series: [{
             name: 'Lacky8',
             data: [
-                  ['RANK', 53],
-                  ['APR', 46],
-                  ['MATCHES', 53],
-                  ['WINS', 46],
-                  ['KDA', 53]
+                  ['FORM', 5],
+                  ['STR', 4],
+                  ['GOLD', 55],
+                  ['STAT', 44],
+                  ['LANE', 44],
+                  ['GOLD', 44],
+                  ['FIGHTS', 44],
+                  ['EXP', 44]
             ],
             index: 4
         }, {
             name: 'Boss',
             data: [
-                  ['RANK', 5],
-                  ['APR', 4],
-                  ['MATCHES', 55],
-                  ['WINS', 44],
-                  ['KDA', 55]
+                  ['FORM', 25],
+                  ['STR', 41],
+                  ['GOLD', 65],
+                  ['STAT', 14],
+                  ['LANE', 94],
+                  ['GOLD', 34],
+                  ['FIGHTS', 62],
+                  ['EXP', 14]
             ],
             index: 3
         }]
@@ -1211,7 +1223,7 @@ $(function () {
           enabled: false
         },
         xAxis: {
-           categories: ['KILLS', 'DEATHS', 'ASSISTS', 'LH', 'GPM'],
+           categories: ['FORM', 'STR', 'STAT', 'MVP', 'LANE', 'GOLD', 'FIGHTS', 'EXP'],
            lineWidth: 0,
            minorGridLineWidth: 0,
            lineColor: 'transparent',
@@ -1251,7 +1263,7 @@ $(function () {
               crop: false,
               title:'',
               pointPadding: 0.01,
-              groupPadding: 0.1
+              groupPadding: 0.2
             }
         },
         tooltip: {
@@ -1262,21 +1274,27 @@ $(function () {
         series: [{
             name: 'Lacky8',
             data: [
-                  ['RANK', 53],
-                  ['APR', 46],
-                  ['MATCHES', 53],
-                  ['WINS', 46],
-                  ['KDA', 53]
+                  ['FORM', 5],
+                  ['STR', 4],
+                  ['GOLD', 55],
+                  ['STAT', 44],
+                  ['LANE', 44],
+                  ['GOLD', 44],
+                  ['FIGHTS', 44],
+                  ['EXP', 44]
             ],
             index: 4
         }, {
             name: 'Boss',
             data: [
-                  ['RANK', 5],
-                  ['APR', 4],
-                  ['MATCHES', 55],
-                  ['WINS', 44],
-                  ['KDA', 55]
+                  ['FORM', 25],
+                  ['STR', 41],
+                  ['GOLD', 65],
+                  ['STAT', 14],
+                  ['LANE', 94],
+                  ['GOLD', 34],
+                  ['FIGHTS', 62],
+                  ['EXP', 14]
             ],
             index: 3
         }]
@@ -1299,7 +1317,7 @@ $(function () {
           enabled: false
         },
         xAxis: {
-           categories: ['KILLS', 'DEATHS', 'ASSISTS', 'LH', 'GPM'],
+           categories: ['FORM', 'STR', 'STAT', 'MVP', 'LANE', 'GOLD', 'FIGHTS', 'EXP'],
            lineWidth: 0,
            minorGridLineWidth: 0,
            lineColor: 'transparent',
@@ -1339,7 +1357,7 @@ $(function () {
               crop: false,
               title:'',
               pointPadding: 0.01,
-              groupPadding: 0.1
+              groupPadding: 0.2
             }
         },
         tooltip: {
@@ -1350,21 +1368,27 @@ $(function () {
         series: [{
             name: 'Lacky8',
             data: [
-                  ['RANK', 53],
-                  ['APR', 46],
-                  ['MATCHES', 53],
-                  ['WINS', 46],
-                  ['KDA', 53]
+                  ['FORM', 5],
+                  ['STR', 4],
+                  ['GOLD', 55],
+                  ['STAT', 44],
+                  ['LANE', 44],
+                  ['GOLD', 44],
+                  ['FIGHTS', 44],
+                  ['EXP', 44]
             ],
             index: 4
         }, {
             name: 'Boss',
             data: [
-                  ['RANK', 5],
-                  ['APR', 4],
-                  ['MATCHES', 55],
-                  ['WINS', 44],
-                  ['KDA', 55]
+                  ['FORM', 25],
+                  ['STR', 41],
+                  ['GOLD', 65],
+                  ['STAT', 14],
+                  ['LANE', 94],
+                  ['GOLD', 34],
+                  ['FIGHTS', 62],
+                  ['EXP', 14]
             ],
             index: 3
         }]
@@ -1388,7 +1412,7 @@ $(function () {
           enabled: false
         },
         xAxis: {
-           categories: ['KILLS', 'DEATHS', 'ASSISTS', 'LH', 'GPM'],
+           categories: ['FORM', 'STR', 'STAT', 'MVP', 'LANE', 'GOLD', 'FIGHTS', 'EXP'],
            lineWidth: 0,
            minorGridLineWidth: 0,
            lineColor: 'transparent',
@@ -1428,7 +1452,7 @@ $(function () {
               crop: false,
               title:'',
               pointPadding: 0.01,
-              groupPadding: 0.1
+              groupPadding: 0.2
             }
         },
         tooltip: {
@@ -1439,21 +1463,27 @@ $(function () {
         series: [{
             name: 'Lacky8',
             data: [
-                  ['RANK', 53],
-                  ['APR', 46],
-                  ['MATCHES', 53],
-                  ['WINS', 46],
-                  ['KDA', 53]
+                  ['FORM', 5],
+                  ['STR', 4],
+                  ['GOLD', 55],
+                  ['STAT', 44],
+                  ['LANE', 44],
+                  ['GOLD', 44],
+                  ['FIGHTS', 44],
+                  ['EXP', 44]
             ],
             index: 4
         }, {
             name: 'Boss',
             data: [
-                  ['RANK', 5],
-                  ['APR', 4],
-                  ['MATCHES', 55],
-                  ['WINS', 44],
-                  ['KDA', 55]
+                  ['FORM', 25],
+                  ['STR', 41],
+                  ['GOLD', 65],
+                  ['STAT', 14],
+                  ['LANE', 94],
+                  ['GOLD', 34],
+                  ['FIGHTS', 62],
+                  ['EXP', 14]
             ],
             index: 3
         }]

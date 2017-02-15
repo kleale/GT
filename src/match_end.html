@@ -24,7 +24,96 @@
 
 <script src="../inc/match-page.js"></script>
 <script src="../inc/match-chart.init.js"></script>
+<script>
+  //bar
+$(document).ready(function() {
+  $('.ptc_bar_chart0').each(function(){
+    $(this).highcharts({
+        colors: ["#3f79a2", "#d94c4c"],
+        chart: {
+            type: 'bar',
+            backgroundColor: 'none',
+            spacingBottom: 5,
+            spacingTop: 5,
+            spacingLeft: 0,
+            spacingRight: 0
+        },
+        credits: {
+            enabled: false
+        },
+        xAxis: {
+          //categories: ['FORM', 'STR', 'STAT', 'MVP', 'LANE', 'GOLD', 'FIGHTS', 'EXP'],
+          categories: ['MVP', 'FIGHTS', 'GOLD', 'LH'],
+          lineWidth: 0,
+          minorGridLineWidth: 0,
+          lineColor: 'transparent',
+          labels: {
+              enabled: false
+          },
+          title: {
+              enabled: false
+          },
+          minorTickLength: 0,
+          tickLength: 0
+        },
+        yAxis: {
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+           minorTickLength: 0,
+           tickLength: 0
+        },
+        title: {
+            enabled: false,
+            text:''
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+              stacking: 'percent',
+              crop: false,
+              title:'',
+              pointPadding: 0.01,
+              groupPadding: 0.2
+            }
+        },
+        tooltip: {
+            headerFormat: '',
+            useHTML: true,
+            pointFormat: '{series.name}<br>{point.name}: {point.y}'
+        },
+        series: [{
+            name: 'Lacky8',
+            data: [
+                  ['MVP', 53],
+                  ['FIGHTS', 46],
+                  ['GOLD', 53],
+                  ['LH', 46]
+            ],
+            index: 4
+        }, {
+            name: 'Boss',
+            data: [
+                  ['MVP', 5],
+                  ['FIGHTS', 4],
+                  ['GOLD', 55],
+                  ['LH', 44]
+            ],
+            index: 3
+        }]
+    });
+  });
+});
 
+</script>
 
  <body>  
   <div class="container mainwrap">
@@ -165,8 +254,193 @@
 
       
       {% include "template/match-page/player-vid.html" %}
-
-
+      
+      <div class="well ifbet">
+        <p>
+          Если бы Вы поставили <b>100$</b> на Freedom на сайте <a href="">ggbet.com</a>, то Ваш выигрыш составил бы <b>225$</b>
+        </p>
+        <div class="mlh"><span><a href="" class="btn btn-default btn-sm">Все коэффициенты</a> <a href="" class="btn btn-default btn-sm">Все прогнозы</a></span></div>
+      </div>
+      
+      <div class="well ifbet" style="background:#146489 url(../img/spoiler.png) repeat scroll 0 0;border:0;">
+        <p>
+          Если бы Вы поставили <b>100$</b> на Freedom на сайте <a href="">ggbet.com</a>, то Ваш выигрыш составил бы <b>225$</b>
+        </p>
+        <div class="mlh"><span><a href="" class="btn btn-primary btn-sm">Все коэффициенты</a> <a href="" class="btn btn-primary btn-sm">Все прогнозы</a></span></div>
+      </div>
+      
+      <div class="well ifbet m-even" style="border:0;">
+        <p>
+          Если бы Вы поставили <b>100$</b> на Freedom на сайте <a href="">ggbet.com</a>, то Ваш выигрыш составил бы <b>225$</b>
+        </p>
+        <div class="mlh"><span><a href="" class="btn btn-primary btn-sm">Все коэффициенты</a> <a href="" class="btn btn-primary btn-sm">Все прогнозы</a></span></div>
+      </div>
+      
+      <section class="m-odd">
+        <div class="vid-stat player-video">
+          <div class="block">
+            <div class="nav-wr"> <span class="mobmenu" onclick="mobmenu()"><i class="gti-bars"></i> Игра 1</span>
+              <ul id="videos" class="nav nav-tabs">
+                <li rel="1" class="active"> <a href="javascript:;" onclick="mvideo(1)">Игра 1</a> </li>
+                <li rel="2"> <a href="javascript:;" onclick="mvideo(2)">Игра 2</a> </li>
+                <li rel="3"> <a href="javascript:;" onclick="mvideo(3)">Игра 3</a> </li>
+              </ul>
+            </div>
+            <div class="block-content">
+             
+              <table class="mtable mtable-c">
+                <thead>
+                  <tr>
+                    <th><a href=""><img src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png" alt=""></a> <a href="">Effect</a></th>
+                    <th>Статистика игроков</th>
+                    <th><a href=""><img src="http://game-tournaments.com/media/logo/pic-20161110-300x300-2206743285.png" alt=""></a> <a href="">Empire</a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for i in 1..5 %}
+                   <tr>
+                    <td>
+                      <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170117-1280x853-3825210290.jpeg);"></a>
+                      <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/48.png"></span>
+                      <div class="name tn1">
+                        <a href="">Sedoy</a><br>
+                        <span>Carry</span><br>
+                        <span>safe</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="barr">
+                        <div id="ptc_bar0" class="ptc_bar_chart0"></div>
+                        <table class="intable">
+                          <tr>
+                            <td><span class="red">9%</span></td>
+                            <td align="center">
+                              MVP
+                            </td>
+                            <td><span class="green">13%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">64%</span></td>
+                            <td align="center">Fights</td>
+                            <td><span class="green">71%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">61%</span></td>
+                            <td align="center">Gold</td>
+                            <td><span class="green">78%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">LH</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                    <td>
+                        <div class="name tn2">
+                          <a href="">fn</a><br>
+                          <span>Carry</span><br>
+                          <span>safe</span>
+                        </div>
+                        <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/8.png"></span>
+                        <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com//media/logo/_60/pic-20170117-687x1080-4576283716.jpeg);"></a>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              
+              <br>
+              
+               <table class="mtable mtable-c">
+                <thead>
+                  <tr>
+                    <th><a href=""><img src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png" alt=""></a> <a href="">Effect</a></th>
+                    <th>Статистика игроков</th>
+                    <th><a href=""><img src="http://game-tournaments.com/media/logo/pic-20161110-300x300-2206743285.png" alt=""></a> <a href="">Empire</a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for i in 1..5 %}
+                   <tr>
+                    <td>
+                      <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com/media/logo/_60/pic-20170117-1280x853-3825210290.jpeg);"></a>
+                      <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/48.png"></span>
+                      <div class="name tn1">
+                        <a href="">Sedoy</a><br>
+                        <span>Carry</span><br>
+                        <span>safe</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="barr">
+                        <div id="ptc_bar{{i}}" class="ptc_bar_chart"></div>
+                        <table class="intable">
+                          <tr>
+                            <td><span class="red">9%</span></td>
+                            <td align="center">
+                              FORM
+                            </td>
+                            <td><span class="green">13%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">64%</span></td>
+                            <td align="center">STR</td>
+                            <td><span class="green">71%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">61%</span></td>
+                            <td align="center">GOLD</td>
+                            <td><span class="green">78%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">STAT</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">LANE</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">GOLD</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">FIGHTS</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="red">63%</span></td>
+                            <td align="center">EXP</td>
+                            <td><span class="green">91%</span></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                    <td>
+                        <div class="name tn2">
+                          <a href="">fn</a><br>
+                          <span>Carry</span><br>
+                          <span>safe</span>
+                        </div>
+                        <span class="heropic"><img src="http://ggscore.com//media/game/hero/582/_59/8.png"></span>
+                        <a href="#" class="ava-sm" style="background-image:url(http://ggscore.com//media/logo/_60/pic-20170117-687x1080-4576283716.jpeg);"></a>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {#
       <section id="m-koef" class="m-sec m-even">
         <div class="row">
           <div class="col-lg-7">
@@ -185,8 +459,8 @@
       <section id="m-players" class="m-sec m-even">
         {% include "template/match-page/section-players.html" %}
       </section>
-
-      <div class="bn">
+      
+       <div class="bn">
         <img src="../img/ad.jpg" alt="">
       </div>
 
@@ -204,6 +478,8 @@
       <section id="m-news" class="m-sec m-even">
         {% include "template/match-page/section-news.html" %}
       </section>
+      
+#}
 
       <div class="bn">
         <img src="../img/ad.jpg" alt="">

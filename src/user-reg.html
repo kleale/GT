@@ -4,15 +4,10 @@
 <!DOCTYPE html>
 <html>
 {% include "template/head.html" %}
-<body class="">
-  <div class="container mainwrap">
-    <div class="otstup">
-      <section class="t-top login">
-        {#
-        <div class="heroBg" style="background-image:url(http://ggscore.com/media/tournament/pic-20160831-478x178-7586446600.jpeg);"></div>
-        #}
-        
-        <form name="reg" method="POST" action="reg" class="login-form">
+<body class="loginpage">
+
+  <section class="login">
+        <form name="reg" method="POST" action="reg" class="login-form withJsLabel">
           <div class="panel panel-light panel-login">
             <div class="panel-heading">
               <h3 class="panel-title mlh"><span>Регистрация</span></h3>
@@ -47,28 +42,27 @@
                   </div>
                 </div>
               </div>
+              
+              <div class="well well-sm bg-warning" style="margin:15px 0 0 0;">
+                  На ggScore уже есть пользователь, привязанный к этому аккаунту
+              </div>
+              <div class="well well-sm bg-primary" style="margin:15px 0 0 0;">
+                  На ggScore уже есть пользователь, привязанный к этому аккаунту
+              </div>
+              <div class="well well-sm bg-warnsuccessing" style="margin:15px 0 0 0;">
+                  На ggScore уже есть пользователь, привязанный к этому аккаунту
+              </div>
+              <div class="well well-sm bg-info" style="margin:15px 0 0 0;">
+                  На ggScore уже есть пользователь, привязанный к этому аккаунту
+              </div>
+              <div class="well well-sm bg-danger" style="margin:15px 0 0 0;">
+                  На ggScore уже есть пользователь, привязанный к этому аккаунту
+              </div>
             </div>
           </div>
-        </form>
-        
-        <div class="sponsors">
-         <img src="http://game-tournaments.com/html/img/logo_gg.png" alt="">
-         <img src="http://game-tournaments.com/html/img/logo_egb.png" alt="">
-         <img src="http://game-tournaments.com/html/img/logo_home.png" alt="">
-         <img src="http://game-tournaments.com/html/img/logo_tipbet.png" alt="">
-       </div>
-      </section>
-      
-      {#
-      <section class="m-sec m-even">
-       
-      </section>
-      #}
-      {#
-        {% include "template/footer.html" %}
-      #}
-    </div>
-  </div>
+        </form>     
+</section>
+     
 {#
 {% include "template/branding.html" %}
 #}

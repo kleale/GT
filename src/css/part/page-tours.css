@@ -409,6 +409,7 @@ table.places{
       background-repeat: repeat;
       background-position: center;
       background: rgb(46, 51, 56);
+      position: relative;
       table{
         margin-bottom: 0;
         font-size: 12px;
@@ -498,7 +499,7 @@ table.places{
 
 .shr-sm{
   display: none;
-  position: absolute 34px * * 3px;
+  position: absolute 41px * * 2px; 
   .shr{
     color: #a6c6cb;
     border: 1px solid #4d5963;

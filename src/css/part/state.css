@@ -162,6 +162,14 @@
     margin-right: 0 !important;
     top:0;
     left:50px;
+    @media (max-width: $XM){
+      height: auto;
+      margin-right: 0 !important;
+      top: 0;
+      left: 0;
+      right: 0!important;
+      bottom: 300px;
+    }
   }
   
   .srteamtoggle{
@@ -169,7 +177,18 @@
     height: 100% !important;
     position: fixed;
     right: 0;
-    top:0;
+    top: 0;
+    @media (max-width: $XM){
+      height: 300px !important;
+      top: auto;
+      left: 0;
+      width: auto !important;
+    }
+    .st_inner{
+      @media (max-width: $XM){
+        position: relative;
+      }
+    }
   }
   .stmblock{
     height: auto;
@@ -201,10 +220,16 @@
 .expanded .srteamview .iframer{
   position: absolute 0 0 90px 0;
   height: auto;
+  @media (max-width: $XM){
+    bottom: 0;
+  }
 }
 .expanded .srteamview .bn{
   position: absolute * 0 0 0;
   height: 90px;
+  @media (max-width: $XM){
+    height: auto;
+  }
 }
 
 

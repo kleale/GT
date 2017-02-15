@@ -79,7 +79,9 @@ section.light-head{
     background-repeat: no-repeat;
     cursor: pointer;
     background-color: #111;
-
+    overflow: hidden;
+    background-size: cover;
+    
     &:after {
       font-family: 'gticons';
       content: '\f04b';
@@ -156,6 +158,12 @@ section.light-head{
     }
     em{
       color: #eae6b4;
+    }
+  }
+  .dtdt{
+    font-size: 10px;
+    .scd{
+      margin: 0;
     }
   }
 }

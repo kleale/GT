@@ -48,7 +48,6 @@
     }
   }
   
-  
   .prh{
     font-size: 12px;
     padding-bottom: 1px;
@@ -475,8 +474,28 @@
   }
 }*/
 
+.ifbet{
+  padding: 20px;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  border-radius: 0;
+  
+  p{
+    a{
+      color: $green;
+    }
+    b{
+      color: #e8b038;
+      font-weight: 600;
+    }
+  }
+  .mlh{
+    padding: 10px 0 10px 0;
+  }
+}
 
-.sumpr{
+.sumpr{ 
   background: #37424c url("../img/spoiler.png") repeat scroll 0 0;
   border: 1px dashed #58646f;
   position: relative;
@@ -523,7 +542,7 @@
         }
       }
       img{
-        width: 40px;
+        height: 40px;
       }
       b{
         font-size: 18px;
@@ -623,7 +642,6 @@
     }
   }
 }
-
 
 .topay{
     display: block;

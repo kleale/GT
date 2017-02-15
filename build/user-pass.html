@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   
   <!-- Import main styles -->
-  <link rel="stylesheet" href="../css/main.css?24">
+  <link rel="stylesheet" href="../css/main.css?13">
   
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,47 +34,36 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>  
 </head>
-<body class="">
-  <div class="container mainwrap">
-    <div class="otstup">
-      <section class="t-top login">
-        
-        
-        <form action="pwd" method="POST" name="pwd" class="login-form">
-          <div class="panel panel-light panel-login">
-            <div class="panel-heading">
-              <h3 class="panel-title mlh"><span>Изменить пароль</span></h3>
+<body class="loginpage">
+
+  <section class="login">
+      <form action="pwd" method="POST" name="pwd" class="login-form withJsLabel">
+        <div class="panel panel-light panel-login">
+          <div class="panel-heading">
+            <h3 class="panel-title mlh"><span>Изменить пароль</span></h3>
+          </div>
+          <div class="panel-body">
+            <div class="form-group" rel="email">
+              <input type="text" class="form-control" name="email" placeholder="Email">
             </div>
-            <div class="panel-body">
-              <div class="form-group" rel="email">
-                <input type="text" class="form-control" name="email" placeholder="Email">
-              </div>
-              <div class="form-group" rel="pwd">
-                  <input type="password" class="form-control" name="pwd" placeholder="Новый пароль" value="">
-              </div>
-              <div class="form-group" rel="repwd">
-                  <input type="password" class="form-control" name="repwd" placeholder="Новый пароль еще раз" value="">
-              </div>
-              <button type="button" onclick="sform('pwd')" class="btn btn-primary btn-block btn-lg">Изменить пароль</button>
-              <div class="well well-sm" style="margin:15px 0 0 0;">
-                На указанную почту придет письмо с ссылкой для подтверждения. Перейдите по ссылке и ваш новый пароль, введенный в этой форме, станет активным.
-              </div>
+            <div class="form-group" rel="pwd">
+                <input type="password" class="form-control" name="pwd" placeholder="Новый пароль" value="">
+            </div>
+            <div class="form-group" rel="repwd">
+                <input type="password" class="form-control" name="repwd" placeholder="Новый пароль еще раз" value="">
+            </div>
+            <button type="button" onclick="sform('pwd')" class="btn btn-primary btn-block btn-lg">Изменить пароль</button>
+            <div class="well well-sm" style="margin:15px 0 0 0;">
+              На указанную почту придет письмо с ссылкой для подтверждения. Перейдите по ссылке и ваш новый пароль, введенный в этой форме, станет активным.
             </div>
           </div>
-        </form>
-        
-        <div class="sponsors">
-         <img src="http://game-tournaments.com/html/img/logo_gg.png" alt="">
-         <img src="http://game-tournaments.com/html/img/logo_egb.png" alt="">
-         <img src="http://game-tournaments.com/html/img/logo_home.png" alt="">
-         <img src="http://game-tournaments.com/html/img/logo_tipbet.png" alt="">
-       </div>
-      </section>
-      
-      
-      
-    </div>
-  </div>
+        </div>
+      </form>
+  </section>
+  
+  
+
+<!-- bar.html -->
 
 <!-- bar.html -->
 <div class="bar hiddenbar">
@@ -82,6 +71,7 @@
   <div class="barc">
     <a href="#!" class="gt-logo"><img src="../img/gt-logo.png" alt="Game-tournaments.com"></a>
     <div class="bar-menu">
+      <!--
       <div class="bar-block">
         <a href="#!" class="bar-ava"><img src="../img/uava.png" alt="User"></a>
         <div class="bar-username">
@@ -93,26 +83,32 @@
           </div>
         </div>
       </div>
-      <ul class="bar-nav-games">
+      -->
+      <div class="bar-block lh">
+        <a href="/log" title="Вход в свой профиль"><i class="gti-user-o"></i><span>Войти</span></a>
+        <a href="/reg" title="Регистрация"><i class="gti-user-plus"></i><span>Регистрация</span></a>
+      </div>
+      <ul class="bar-nav-games bng2">
         <li class="active">
-          <a href="#!"><img src="http://game-tournaments.com/html/img/logo-582.png" alt="Dota 2"></a>
+          <a href="#!"><i class="gti-582"></i></a>
+          
+          <ul class="bar-nav">
+              <li class="active"><a href="/ru/dota-2/matches" title="Матчи"><i class="gti-vs"></i> <span>Матчи</span></a></li>
+              <li><a href="/ru/dota-2/tournaments" title="Турниры"><i class="gti-trophy"></i><span>Турниры</span></a></li>
+              <li><a href="/ru/dota-2/news" title="Новости"><i class="gti-newspaper-o"></i><span>Новости</span></a></li>
+              <li><a href="/ru/dota-2/team" title="Команды"><i class="gti-users"></i><span>Команды</span></a></li>
+              <li><a href="/ru/dota-2/player" title="Игроки"><i class="gti-user"></i><span>Игроки</span></a></li>
+              <li><a href="/ru/dota-2/highlights" title="Хайлайты"><i class="gti-swords"></i><span>Хайлайты</span></a></li>
+              <li><a href="/ru/dota-2/video" title="Записи игр / Видео матчей"><i class="gti-play-circle-o"></i><span>Видео</span></a></li>
+          </ul>
+          
         </li>
-        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-704.png" alt="CS:GO"></a></li>
-        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-313.png" alt="League of Legends"></a></li>
-        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-758.png" alt="Heroes of the Storm"></a></li>
-        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-755.png" alt="HearthStone"></a></li>
-      </ul>
-      <ul class="bar-nav">
-        <li class="active"><a href="#!"><i class="gti-vs"></i> <span>Матчи</span></a></li>
-        <li><a href="#!"><i class="gti-trophy"></i><span>Турниры</span></a></li>
-        <li><a href="#!"><i class="gti-newspaper-o"></i><span>Новости</span></a></li>
-        <li><a href="#!"><i class="gti-users"></i><span>Команды</span></a></li>
-        <li><a href="#!"><i class="gti-user"></i><span>Игроки</span></a></li>
-        <li><a href="#!"><i class="gti-bullhorn"></i><span>Ставки</span></a></li>
-        <li><a href="#!"><i class="gti-bell"></i><span>Прогнозы</span></a></li>
-        <li><a href="#!"><i class="gti-star"></i><span>Рейтинг</span></a></li>
-        <li><a href="#!" ><i class="gti-play-circle-o"></i><span>Медиа</span></a></li>
-        <li><a href="#!"><i class="gti-comments"></i><span>Форум</span></a></li>
+        <li><a href="#!"><i class="gti-582"></i></a></li>
+        <li><a href="#!"><i class="gti-704"></i></a></li>
+        <li><a href="#!"><i class="gti-313"></i></a></li>
+        <li><a href="#!"><i class="gti-800"></i></a></li>
+        <li><a href="#!"><i class="gti-755"></i></a></li>
+        <!--<li><a href="#!"><i class="gti-hots"></i></a></li>-->
       </ul>
       <div class="dropers">
         <div class="s-lang">
@@ -152,6 +148,15 @@
   </div> 
 </div>
 <span class="swipe-area"></span>
+
+
+
+
+
+
+
+
+
 
 
 <!-- Modal STAVKA -->
@@ -563,7 +568,7 @@
                 <a href="">Nikname 1</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -590,7 +595,7 @@
                 <a href="">Nikname 4</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -599,7 +604,7 @@
                 <a href="">Nikname 5</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -608,7 +613,7 @@
                 <a href="">Nikname 6</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -617,7 +622,7 @@
                 <a href="">Nikname 7</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -694,7 +699,7 @@
 
 <!-- Site Sripts -->
 <script src="../inc/main.js"></script>
-<script src="../inc/func_init.js?13"></script>
+<script src="../inc/func_init.js?24"></script>
 
 <!--PAGES select only dev-->
 <style>
@@ -739,11 +744,13 @@
     <a href="/vodlist2.html" class="m2 btn btn-sm btn-success" style="opacity.5">Vod List2</a>
     <a href="/vod.html" class="m2 btn btn-sm btn-success">Vod</a>
     <a href="/light.html" class="m2 btn btn-sm btn-success">HighLight</a>
-    <a href="/user-login.html" class="m2 btn btn-sm btn-warning">U login</a>
-    <a href="/user-reg.html" class="m2 btn btn-sm btn-warning">U reg</a>
-    <a href="/user-pass.html" class="m2 btn btn-sm btn-warning">U pass</a>
-    <a href="/user-acc.html" class="m2 btn btn-sm btn-warning">U acc</a>
+    <a href="/user-login.html" class="m2 btn btn-sm btn-success">U login</a>
+    <a href="/user-reg.html" class="m2 btn btn-sm btn-success">U reg</a>
+    <a href="/user-pass.html" class="m2 btn btn-sm btn-success">U pass</a>
+    <a href="/user-acc.html" class="m2 btn btn-sm btn-success">U acc</a>
     <a href="/user-page.html" class="m2 btn btn-sm btn-warning">U page</a>
+    <a href="/user-pay.html" class="m2 btn btn-sm btn-warning">U pay</a>
+    <!--
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Bets</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Predict</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Media</a>
@@ -751,7 +758,11 @@
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Search</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Text</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">stickers</a>
+    -->
     <a href="/fonts.html" class="m2 btn btn-sm btn-success">Ico</a>
+    <a href="/mail-pwd_ru.html" class="m2 btn btn-sm btn-warning">m1</a>
+    <a href="/mail-pwd_count_ru.html" class="m2 btn btn-sm btn-warning">m2</a>
+    <a href="/mail-reg.html" class="m2 btn btn-sm btn-warning">m3</a>
   </div>
 </div>
 

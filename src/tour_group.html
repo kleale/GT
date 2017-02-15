@@ -18,16 +18,12 @@
         <h1>Dota 2 турнир WESG </h1>
         {% include "template/match-page/stage-block.html" %}
         <div class="thd">
-          <div class="row">
-            <div class="col-md-4">
-              {% include "template/tours/tour-block.html" %}
-            </div>
-            <div class="col-md-8 clearfix">
+
               <div class="ggrid share-it aborder draw meet">
                 {% for i in 1..5 %}
                   <div class="gdiv">
                     <h3 class="mlh"><span>Group {{i}}</span></h3>
-                    <div class="table-responsive gtable">
+                    <div class="gtable">
                       <table class="table-striped table table-hover">
                         <thead>
                           <tr>
@@ -55,14 +51,17 @@
                         </tbody>
                       </table>
                     </div>
-                    
+                    <div class="shr-sm">
+                      <a href="javascript:;" onclick="Share.vkontakte();" class="shr"><i class="gti-share"></i> Поделиться</a>
+                    </div>
+                    <!--
                     <div class="shr-sm">
                       <a href="javascript:;" onclick="Share.vkontakte();" class="shr"><i class="gti-vk"></i><span class="share-vk"></span></a>
                       <a href="javascript:;" onclick="Share.facebook();" class="shr"><i class="gti-fb"></i><span class="share-fb"></span></a>
                       <a href="javascript:;" onclick="Share.twitter();" class="shr"><i class="gti-tw"></i><span class="share-tw"></span></a>
                       <a href="javascript:;" onclick="Share.google();" class="shr"><i class="gti-gg"></i><span class="share-gg"></span></a>
                     </div>
-                    
+                    -->
                   </div>
                 {% endfor %}
                 
@@ -74,8 +73,6 @@
                 </ul>
                 
               </div>
-            </div>
-          </div>
         </div>
       </section>
       
@@ -94,7 +91,7 @@
             </div>
           </div>
           <div class="col-md-4">
-
+            {% include "template/tours/tour-block.html" %}
             {% include "template/liveblock.html" %}
 
             <h4 class="mlh"><span>Новости турнира</span></h4>

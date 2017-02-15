@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   
   <!-- Import main styles -->
-  <link rel="stylesheet" href="../css/main.css?46">
+  <link rel="stylesheet" href="../css/main.css?51">
   
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,18 +52,8 @@
         <div class="heroBg" style="background-image:url(../img/noplayers.png)"></div>
         <h1 class="mlh">Username #1323</h1>
         <div class="user-menu">
-          <div class="al">
-            <a class="uava">
-              <img src="http://game-tournaments.com/media/user/pic-20150909-800x847-4949833890.png" alt="">
-            </a>
-            <div style="width:125px" data-count="1" data-rel="1" data-input="logo" data-title="ulogo" class="loader"></div>
-            <div class="uava-btns">
-                <a class="button-ulogo1 btn-primary btn btn-xs" href="javascript:;" style="overflow: hidden; direction: ltr;"><i class="gti-picture-o"></i> Загрузить<input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 18px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"></a> 
-                <!--<a onclick="sform('update')" class="btn btn-default btn-xs">Сохранить</a>-->
-                <a onclick="if (confirm('Вы уверены?')) delete_logo(this)" href="javascript:;" class="btn btn-default btn-xs"><i class="gti-times"></i> удалить</a>
-            </div>
-          </div>
           <ul class="nav nav-pills nav-stacked nav-user">
+            <li><a href="/account"><i class="gti-user-circle"></i><u>Мой профиль</u></a></li>
             <li class="active"><a href="/account"><i class="gti-cog"></i><u>Настройки</u></a></li>
             <li><a href="/account"><i class="gti-bullhorn"></i><u>Мои прогнозы</u></a></li>
             <li><a href="/account"><i class="gti-bell-o"></i><u>Подписки</u></a></li>
@@ -73,8 +63,34 @@
         </div>
         <div class="user-body">
           <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-4 makefirstonmobile">
+             
+              
               <div class="panel panel-light">
+                  <div class="panel-heading">
+                    <h3 class="panel-title mlh mlhSM"><span>Аватар</span></h3>
+                  </div>
+                  <div class="panel-body" style="padding: 10px 30px">
+
+                    <div class="al">
+                      <a class="uava">
+                        <img src="http://game-tournaments.com/media/user/pic-20150909-800x847-4949833890.png" alt="">
+                      </a>
+                    </div>
+                    <div style="width:125px" data-count="1" data-rel="1" data-input="logo" data-title="ulogo" class="loader"></div>
+                    <div class="uava-btns">
+                      <a class="button-ulogo1 btn-primary btn btn-sm" href="javascript:;" style="overflow: hidden; direction: ltr;">Загрузить<input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 18px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"></a> 
+                      <!--<a onclick="sform('update')" class="btn btn-default btn-xs">Сохранить</a>-->
+                      <a onclick="if (confirm('Вы уверены?')) delete_logo(this)" href="javascript:;" class="btn btn-default btn-sm"> Удалить</a>
+                    </div>
+                  
+                </div>
+              </div>
+              
+            </div>
+          
+            <div class="col-md-8">
+              <div class="panel panel-light withJsLabel">
                 <div class="panel-heading">
                   <h3 class="mlh mlhSM">
                     <span>твой ID – 18</span>
@@ -94,12 +110,7 @@
                     </p>
                   </div>
                   <div class="form-group" rel="nick">
-                    <div class="input-group">
-                      <input type="text" rel="1" name="nick" class="form-control" maxlength="20" placeholder="Твой ник">
-                      <span class="input-group-btn">
-                      <a href="" target="_blank"  class="btn btn-default tip" title="Генератор ников"><i class="gti-wrench"></i></a>
-                      </span>
-                    </div>
+                    <input type="text" rel="1" name="nick" class="form-control" maxlength="20" placeholder="Твой ник">
                   </div>
                   <div class="form-group" rel="timezone">
                     <select rel="1" name="timezone" class="form-control">
@@ -171,117 +182,7 @@
                   </div>
                 </div>
               </div>
-              
-            </div>
-            <div class="col-md-5">
-              <div class="panel panel-light payment">
-                <div class="panel-heading">
-                  <h3 class="panel-title mlh mlhSM"><span>Счет</span></h3>
-                </div>
-                <div class="panel-body">
-                  <div class="umoney"><i class="gti-coins3"></i> 1.09 $</div>
-                  <div class="umoney-btn"> <a href="javascript:;" class="btn btn-sm btn-default" data-toggle="modal" data-target="#wms" ><i class="gti-plus"></i> Пополнить</a> <a href="javascript:;" class="btn btn-sm btn-default" data-toggle="modal" data-target="#wms2"><i class="gti-money"></i> Заказать выплату</a>
-                  </div>
-                </div>
-                <div id="block_pay">
-                  <table class="table table-striped" style="margin-bottom:0;">
-                    <tbody>
-                     
-                      <tr class="text-success">
-                        <td width="20">
-                          <i class="gti-check"></i>
-                        </td>
-                        <td>2016-11-01 Снятие</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">+1.2 <i class="gti-usd"></i></abbr> </td>
-                      </tr>
-                      
-                      <tr class="text-danger">
-                        <td width="20">
-                          <i class="gti-times"></i>
-                        </td>
-                        <td>2016-11-02 Пополнение</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">-1.5 <i class="gti-usd"></i></abbr> </td>
-                      </tr>
-                      
-                      <tr class="text-success">
-                        <td width="20">
-                          <i class="gti-check"></i>
-                        </td>
-                        <td>2016-11-03 Снятие</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">+1.2 <i class="gti-usd"></i></abbr> </td>
-                      </tr>
-                      
-                      <tr class="text-danger">
-                        <td width="20">
-                          <i class="gti-times"></i>
-                        </td>
-                        <td>2016-11-04 Снятие</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">-1.5 <i class="gti-usd"></i></abbr> </td>
-                      </tr>
-                      
-                      <tr class="text-success">
-                        <td width="20">
-                          <i class="gti-check"></i>
-                        </td>
-                        <td>2016-11-05 Снятие</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">+1.2 <i class="gti-usd"></i></abbr> </td>
-                      </tr>
-                      
-                      <tr class="text-success">
-                        <td width="20">
-                          <i class="gti-times"></i>
-                        </td>
-                        <td>2016-11-06 Пополнение</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">+1.2 <i class="gti-usd"></i></abbr> </td>
-                      </tr>
-                      
-                      <tr class="text-success">
-                        <td width="20">
-                          <i class="gti-check"></i>
-                        </td>
-                        <td>2016-11-07 Снятие</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">+1.2 <i class="gti-usd"></i></abbr> </td>
-                      </tr>
-                      
-                      <tr class="text-danger">
-                        <td width="20">
-                          <i class="gti-check"></i>
-                        </td>
-                        <td>2016-11-08 Снятие</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">+1.2 <i class="gti-usd"></i></abbr> </td>
-                      </tr>
-                      
-                      <tr class="text-success">
-                        <td width="20">
-                          <i class="gti-times"></i>
-                        </td>
-                        <td>2016-11-09 Пополнение</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">+1.2 <i class="gti-usd"></i></abbr> </td>
-                      </tr>
-                      
-                      <tr class="text-danger">
-                        <td width="20">
-                          <i class="gti-check"></i>
-                        </td>
-                        <td>2016-11-010 Пополнение</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">+1.2 <i class="gti-usd"></i></abbr> </td>
-                      </tr>
-                      
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- pager.html -->
-<nav class="nav-pager">
-  <ul class="pagination">
-    <li class="active"><a href="javascript:;">1</a></li>
-    <li><a href="javascript:;">2</a></li>
-    <li><a href="javascript:;">3</a></li>
-    <li><a href="javascript:;">4</a></li>
-    <li><a href="javascript:;">5</a></li>
-    <li class="prr"><a href="javascript:;"><span aria-hidden="true">»</span></a></li>
-  </ul>
-</nav>
+              <a href="" class="btn btn-primary btn-lg">Сохранить настройки</a>
             </div>
           </div>
         </div>
@@ -311,11 +212,14 @@
   </div>
 
 <!-- bar.html -->
+
+<!-- bar.html -->
 <div class="bar hiddenbar">
    <span id="menu-toggle" class="opener"><i class="gti-bars"></i></span>
   <div class="barc">
     <a href="#!" class="gt-logo"><img src="../img/gt-logo.png" alt="Game-tournaments.com"></a>
     <div class="bar-menu">
+      <!--
       <div class="bar-block">
         <a href="#!" class="bar-ava"><img src="../img/uava.png" alt="User"></a>
         <div class="bar-username">
@@ -327,26 +231,32 @@
           </div>
         </div>
       </div>
-      <ul class="bar-nav-games">
+      -->
+      <div class="bar-block lh">
+        <a href="/log" title="Вход в свой профиль"><i class="gti-user-o"></i><span>Войти</span></a>
+        <a href="/reg" title="Регистрация"><i class="gti-user-plus"></i><span>Регистрация</span></a>
+      </div>
+      <ul class="bar-nav-games bng2">
         <li class="active">
-          <a href="#!"><img src="http://game-tournaments.com/html/img/logo-582.png" alt="Dota 2"></a>
+          <a href="#!"><i class="gti-582"></i></a>
+          
+          <ul class="bar-nav">
+              <li class="active"><a href="/ru/dota-2/matches" title="Матчи"><i class="gti-vs"></i> <span>Матчи</span></a></li>
+              <li><a href="/ru/dota-2/tournaments" title="Турниры"><i class="gti-trophy"></i><span>Турниры</span></a></li>
+              <li><a href="/ru/dota-2/news" title="Новости"><i class="gti-newspaper-o"></i><span>Новости</span></a></li>
+              <li><a href="/ru/dota-2/team" title="Команды"><i class="gti-users"></i><span>Команды</span></a></li>
+              <li><a href="/ru/dota-2/player" title="Игроки"><i class="gti-user"></i><span>Игроки</span></a></li>
+              <li><a href="/ru/dota-2/highlights" title="Хайлайты"><i class="gti-swords"></i><span>Хайлайты</span></a></li>
+              <li><a href="/ru/dota-2/video" title="Записи игр / Видео матчей"><i class="gti-play-circle-o"></i><span>Видео</span></a></li>
+          </ul>
+          
         </li>
-        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-704.png" alt="CS:GO"></a></li>
-        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-313.png" alt="League of Legends"></a></li>
-        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-758.png" alt="Heroes of the Storm"></a></li>
-        <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-755.png" alt="HearthStone"></a></li>
-      </ul>
-      <ul class="bar-nav">
-        <li class="active"><a href="#!"><i class="gti-vs"></i> <span>Матчи</span></a></li>
-        <li><a href="#!"><i class="gti-trophy"></i><span>Турниры</span></a></li>
-        <li><a href="#!"><i class="gti-newspaper-o"></i><span>Новости</span></a></li>
-        <li><a href="#!"><i class="gti-users"></i><span>Команды</span></a></li>
-        <li><a href="#!"><i class="gti-user"></i><span>Игроки</span></a></li>
-        <li><a href="#!"><i class="gti-bullhorn"></i><span>Ставки</span></a></li>
-        <li><a href="#!"><i class="gti-bell"></i><span>Прогнозы</span></a></li>
-        <li><a href="#!"><i class="gti-star"></i><span>Рейтинг</span></a></li>
-        <li><a href="#!" ><i class="gti-play-circle-o"></i><span>Медиа</span></a></li>
-        <li><a href="#!"><i class="gti-comments"></i><span>Форум</span></a></li>
+        <li><a href="#!"><i class="gti-582"></i></a></li>
+        <li><a href="#!"><i class="gti-704"></i></a></li>
+        <li><a href="#!"><i class="gti-313"></i></a></li>
+        <li><a href="#!"><i class="gti-800"></i></a></li>
+        <li><a href="#!"><i class="gti-755"></i></a></li>
+        <!--<li><a href="#!"><i class="gti-hots"></i></a></li>-->
       </ul>
       <div class="dropers">
         <div class="s-lang">
@@ -390,9 +300,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
 <!-- Site Sripts -->
 <script src="../inc/main.js"></script>
-<script src="../inc/func_init.js?51"></script>
+<script src="../inc/func_init.js?46"></script>
 
 <!--PAGES select only dev-->
 <style>
@@ -437,11 +356,13 @@
     <a href="/vodlist2.html" class="m2 btn btn-sm btn-success" style="opacity.5">Vod List2</a>
     <a href="/vod.html" class="m2 btn btn-sm btn-success">Vod</a>
     <a href="/light.html" class="m2 btn btn-sm btn-success">HighLight</a>
-    <a href="/user-login.html" class="m2 btn btn-sm btn-warning">U login</a>
-    <a href="/user-reg.html" class="m2 btn btn-sm btn-warning">U reg</a>
-    <a href="/user-pass.html" class="m2 btn btn-sm btn-warning">U pass</a>
-    <a href="/user-acc.html" class="m2 btn btn-sm btn-warning">U acc</a>
+    <a href="/user-login.html" class="m2 btn btn-sm btn-success">U login</a>
+    <a href="/user-reg.html" class="m2 btn btn-sm btn-success">U reg</a>
+    <a href="/user-pass.html" class="m2 btn btn-sm btn-success">U pass</a>
+    <a href="/user-acc.html" class="m2 btn btn-sm btn-success">U acc</a>
     <a href="/user-page.html" class="m2 btn btn-sm btn-warning">U page</a>
+    <a href="/user-pay.html" class="m2 btn btn-sm btn-warning">U pay</a>
+    <!--
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Bets</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Predict</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Media</a>
@@ -449,7 +370,11 @@
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Search</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Text</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">stickers</a>
+    -->
     <a href="/fonts.html" class="m2 btn btn-sm btn-success">Ico</a>
+    <a href="/mail-pwd_ru.html" class="m2 btn btn-sm btn-warning">m1</a>
+    <a href="/mail-pwd_count_ru.html" class="m2 btn btn-sm btn-warning">m2</a>
+    <a href="/mail-reg.html" class="m2 btn btn-sm btn-warning">m3</a>
   </div>
 </div>
 

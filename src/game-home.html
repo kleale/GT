@@ -2,6 +2,8 @@
 
 {% set trrr = ['http://game-tournaments.com/media/tournament/pic-20161211-280x80-7531323404.jpeg', 'http://game-tournaments.com/media/tournament/pic-20161227-279x150-1329323807.jpeg', 'http://game-tournaments.com/media/tournament/pic-20160919-265x150-7398845851.jpeg', 'http://game-tournaments.com/media/tournament/pic-20160919-265x150-7398845851.jpeg', 'http://game-tournaments.com/media/tournament/pic-20161213-300x117-3383168368.png','http://game-tournaments.com/media/tournament/pic-20160912-600x267-6676783403.png'] %}
 
+{% set trrrsm = ['http://game-tournaments.com/media/tournament/_60/pic-20170203-600x400-1661038906.jpeg','http://ggscore.com/media/tournament/_60/pic-20170118-255x101-6693628211.png','http://ggscore.com/media/tournament/_60/pic-20170110-280x80-1208457909.jpeg','http://ggscore.com/media/tournament/_60/pic-20161211-280x80-7531323404.jpeg','http://ggscore.com/media/tournament/_60/pic-20170118-255x101-6693628211.png','http://ggscore.com/media/tournament/_60/pic-20170110-300x117-9029284240.png'] %}
+
 
 <!DOCTYPE html>
 <html>
@@ -10,64 +12,196 @@
   <div class="container mainwrap">
     {% include "template/breadcrumbs.html" %}
     <div class="otstup">
-    {#
-      <section class="newstop" style="background-image:url(http://game-tournaments.com/media/news/no.jpg)">
+      <section class="trtop hero" style="background-image:url(/img/dotahead1.jpg);">
         <div>
-          <ul class="news-games">
-            <li class="active"><a href="#!"><img src="http://game-tournaments.com/html/img/logo-582.png" alt="Dota 2">#Dota 2</a></li>
-            <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-704.png" alt="CS:GO">#CS:GO</a></li>
-            <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-313.png" alt="League of Legends">#LoL</a></li>
-            <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-758.png" alt="Heroes of the Storm">#HOTS</a></li>
-            <li><a href="#!"><img src="http://game-tournaments.com/html/img/logo-755.png" alt="HearthStone">#HS</a></li>
-          </ul>
-          <h1>GT: <strong>#Dota 2</strong></h1>
-        </div>
-      </section>
-    #}
-      <section class="trtop">
-        <div>
-          <h1 class="mlh"><span>Dota 2 leagues & matches</span></h1>
+          <h1 class="mh"><span>Dota 2 leagues & matches</span></h1>
+          
+          {#
           <ul class="trlist clearfix">
           {% for i in 0..2 %}
-            <li class="live">
+            <li class="live lg">
               <a href="" style="background-image:url({{random(trrr)}})">
-                <span>DC vs VoidBoys @ Canada Cup 7, GRAND FINAL <b>#DOTA2</b></span>
+                <span>SL i-League StarSeries Season 3 <b>#DOTA2</b></span>
                 <u>Текущий</u>
                 <s>$ 1,700,000</s>
               </a>
             </li>
             {% endfor %}
-            {% for i in 0..0 %}
-            <li>
-              <a href="" style="background-image:url({{random(trrr)}})">
-                <span>DC vs VoidBoys @ Canada Cup 7, GRAND FINAL <b>#DOTA2</b></span>
-                <u>прошедший</u>
-                <s>$ 1,700,000</s>
-              </a>
-            </li>
+            {% for i in 1..2 %}
+              <li class="live sm">
+                <a href="" style="background-image:url({{random(trrrsm)}})">
+                  <span>SL i-League StarSeries Season 3</span>
+                  <u>11 фев 2016</u>
+                  <s>$ 1,700,000</s>
+                </a>
+              </li>
             {% endfor %}
+              <li class="sm">
+                <a href="" style="background-image:url({{random(trrrsm)}})">
+                  <span>SL i-League StarSeries Season 3</span>
+                  <u>11 фев 2016</u>
+                  <s>$ 1,700,000</s>
+                </a>
+              </li>
+              <li class="end">
+                <div class="mlh"><span><a href="/en/dota-2/highlights" class="btn btn-default btn-xs">Все турниры</a></span></div>
+              </li>
           </ul>
-          <div class="live-row" style="padding:0 10px 10px;">
-            <div class="row" style="position:relative;">
-              <div class="col-md-7">
-                {% include "template/game-home/match-list-live.html" %}
-              </div>
-              <div class="col-md-5" style="position:absolute; bottom:0;top:15px;right: 0;">
-                <iframe rel="stream" site="twitch" title="esl_csgo_fr" allowfullscreen="" frameborder="0" width="100%" height="100%" src="http://player.twitch.tv/?autoplay=false&amp;channel=esl_csgo_fr"></iframe>
-              </div>
-            </div>
-          </div>
+          #}
         </div>
       </section>
      
-      <section class="m-sec m-even">
+      <section class="m-sec m-even subgr">
         <div class="row">
-          <div class="col-md-7">
-            {% include "template/game-home/news-block.html" %}
-            {% include "template/pager.html" %}
+          <div class="col-md-8">
+            
+            {# VARS FOR NEWS #}
+            
+            {% set pic = ['http://www.gosugamers.net/uploads/images/news/42728-1482872435-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42727-1482864622-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42720-1482829305-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42725-1482841447-small.jpeg', 'http://www.gosugamers.net/uploads/images/news/42723-1482835201-small.jpeg'] %}
+            {% set ntype = ['gti-gt','gti-rss','gti-facebook','gti-twitter'] %}
+            {% set ohot = ['hot','','',''] %}
+            {% set txt = ['Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы','Александр «s1mple» Костылев попал на четвертое место в списке 20 лучших игроков 2016 года по версии HLTV.org','Виталий «V1lat» Волочай: «Мы просто хотели собрать команду друзей» ','Квалификация SL i-League StarSeries. Geek Fam и WG.Unity сыграли вничью с Execration и Mineski','Пол «ReDeYe» Шалоне: «В апреле 2017 Dota 2 станет первым видом киберспорта, чьи суммарные призовые за все турниры превысят 100 миллионов долларов»','Карло «Kuku» Палад: «После неудач мы всегда говорим, что следующий раз выступим лучше».','Питер «ppd» Дагер: «Virtus.Pro должна была брать второе или третье место на The Boston Major, но вошла лишь в топ-8»','Назван список участников квалификации DAC 2017, Na’Vi сыграют в европейском регионе'] %}
+            
+            <!--
+            <h3 class="mlh" style="margin-top:-10px;"><span>Новости дня</span></h3>
+            -->
+            <div class="block m-news">
+              <div class="bh clearfix" style="padding:0px 0 5px 0;">
+                <h3 style="padding:0;"><i class="ih gti-newspaper-o"></i> News</h3>
+                <ul class="block-menu">
+                    <li class="nall active"><a href="/en/dota-2/news">All</a></li>
+                </ul>
+              </div>
+              <div class="tnb">
+                <ul class="nlist">
+                  {% for i in 0..5 %}
+                   <li class="{{random(ohot)}} {% if i == 2 %} nopic{% endif %}">
+                      {#
+                      <a href="" class="npic-sm"><img src="{{random(pic)}}" alt="Заголовок"></a>
+                      #}
+                      <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+                      <div>
+                        <time>29 дек, 11:35</time>
+                        <i class="{{random(ntype)}}"></i>
+                        <a href="">
+                          {{random(txt)}}
+                        </a>
+                      </div>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            {#
+            <div class="tse-news">
+              <ul class="nlist">
+                {% for i in 0..4 %}
+                  <li class="{{random(ohot)}} {% if i == 2 %} nopic{% endif %}">
+                    {% if i == 2 %} 
+                    {% elseif i == 3 %} 
+                      <a class="nopic" href="">
+                        <i class="{{random(ntype)}}"></i>
+                      </a>
+                    {% else %}
+                      <a class="npic" href="" style="background-image:url({{random(pic)}})">
+                        <b><i class="{{random(ntype)}}"></i></b>
+                      </a>
+                    {% endif %}
+                     <div>
+                      <h4>
+                        <a href="">
+                          <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
+                        </a>
+                      </h4>
+                      <p>
+                        Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+                      </p>
+                      <u>
+                        <time>29 дек, 11:35</time>
+                      </u>
+                      <span>
+                        <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                        <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                        <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                        <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+                      </span>
+                    </div>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+            #}
+            
+            {% include "template/game-home/match-block.html" %}
+            
+            <div class="block m-news">
+              <div class="tnb">
+                <ul class="nlist">
+                  {% for i in 0..5 %}
+                   <li class="{{random(ohot)}} {% if i == 2 %} nopic{% endif %}">
+                      <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+                      <div>
+                        <time>29 дек, 11:35</time>
+                        <i class="{{random(ntype)}}"></i>
+                        <a href="">
+                          {{random(txt)}}
+                        </a>
+                      </div>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            
+            {% include "template/game-home/game-tr-block.html" %}
+            
+            <div class="block m-news">
+              <div class="tnb">
+                <ul class="nlist">
+                  {% for i in 0..5 %}
+                   <li class="{{random(ohot)}} {% if i == 2 %} nopic{% endif %}">
+                      <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+                      <div>
+                        <time>29 дек, 11:35</time>
+                        <i class="{{random(ntype)}}"></i>
+                        <a href="">
+                          {{random(txt)}}
+                        </a>
+                      </div>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            
+            {% include "template/game-home/hightlight-block.html" %}
+            
+            <div class="block m-news">
+              <div class="tnb">
+                <ul class="nlist">
+                  {% for i in 0..5 %}
+                   <li class="{{random(ohot)}} {% if i == 2 %} nopic{% endif %}">
+                      <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+                      <div>
+                        <time>29 дек, 11:35</time>
+                        <i class="{{random(ntype)}}"></i>
+                        <a href="">
+                          {{random(txt)}}
+                        </a>
+                      </div>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            
+            <div class="mlh" style="margin:15px 0 0 0"><span><a href="/en/dota-2/highlights" class="btn btn-default">Все новости</a></span></div>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-4" style="padding-top:32px;">
+            
             {% include "template/liveblock.html" %}
+            
+            {#
             
             {% include "template/game-home/match-list-future.html" %}
             {% include "template/pager.html" %}
@@ -75,15 +209,18 @@
             {% include "template/game-home/match-list-past.html" %}
             {% include "template/pager.html" %}
             
+            #}
           </div>
         </div>
       </section>
       
+      {#
       <section class="m-sec m-odd">
         <div class="game-page-news">
           {% include "template/slider-news.html" %}
         </div>
       </section>
+      #}
       
       {#
       <section class="m-sec m-even">

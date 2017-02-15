@@ -11,6 +11,11 @@
 //= ../assets/js/jvfloat.js
 //= ../assets/js/jquery.touchSwipe.min.js
 
+//= ../assets/js/jquery.montage.min.js
+
+//= ../assets/js/fancy/jquery.fancybox.pack.js
+//= ../assets/js/fancy/helpers/jquery.fancybox-thumbs.js
+
 /*
  * Custom
  */
