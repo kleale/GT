@@ -618,6 +618,9 @@ Headline
         color: $link-gray-active;
         text-decoration: none;
       }
+      &.standin{
+        border-bottom: 1px dashed #3f79a2;
+      }
     }
   }
   

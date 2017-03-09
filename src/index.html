@@ -163,7 +163,38 @@
 
       </section><!-- /m-head" -->
 
-      <section class="player" id="player">
+      <section class="player player-video" id="player">
+        
+        <div class="nav-wr mobmenu-open">
+          <span class="mobmenu"><i class="gti-bars"></i> Стрим: Игра 1 <i class="livebetpin"></i></span>
+          <ul id="videos" class="nav nav-tabs">
+            <li><a href="javascript:;" id="vidtab">Игра 1 </a></li>
+            <li class="active"><a href="javascript:;" id="strtab">Игра 2: <b>LIVE</b> <i class="livebetpin"></i></a></li>
+            {% for i in 3..5 %}
+                <li><a href="#">Игра {{i}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        
+        <div class="video_block" id="video" style="display:none;">
+            <figure><img src="http://game-tournaments.com/media/export/start/41085-1.jpg"></figure>
+            <div class="gamevid" style="top: 285px;">
+              <h2>Смотреть видео Even Team Secret vs Cloud9</h2>
+              <div id="gvlist" class="tse">
+                  <div class="tse-content">
+                    <a class="g-rezults fancybox" href="/media/export/result/41085-1.jpg">
+                      <u><i class="gti-bar-chart"></i></u> 
+                      <span><b>Показать результаты игры</b><em>Статистика и результаты матча</em></span> 
+                      <sup><i class="gti-arrow-right"></i> Смотреть</sup>
+                    </a>
+                    <a class="g-rezults g-d2m" style="background-color: rgba(240, 80, 32, 0.2)" target="_blank" href="http://dotaviewer.com/ru/2916500234"> <u><i class="gti-dotaviewer"></i></u> <span><b>DotaViewer</b><em>Смотреть все важные моменты игры</em></span> <sup><i class="gti-arrow-right"></i> Смотреть</sup> </a>
+                    <a class="video" href="#"> <u style="background-image:url(http://game-tournaments.com/media/flag/3.png)"><i class="gti-play"></i></u> <span><b>[RU] Cloud 9 vs TNC Pro Team, Game 1, Final, 2016 WESG Dota 2 Grand Final presented by Alipay</b><em>WESG</em><s><i class="gti-eye"></i> 3056</s></span> <sup><i class="gti-youtube-play"></i> Смотреть</sup><i class="gti-times close"></i></a>
+                    <a class="video" href="#"> <u style="background-image:url(http://game-tournaments.com/media/flag/3.png)"><i class="gti-play"></i></u> <span><b>[EN] Cloud 9 vs TNC Pro Team, Game 1, Final, 2016 WESG Dota 2 Grand Final presented by Alipay</b><em>WESG</em><s><i class="gti-eye"></i> 29918</s></span> <sup><i class="gti-youtube-play"></i> Смотреть</sup><i class="gti-times close"></i></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+        
         <div id="srteamslider" class="toggled_stream srteamslider branded" rel="XXX">
           <div class="srteamview clearfix" id="mainstream">
             {% include "template/match-page/player-html5.html" %}
@@ -202,6 +233,27 @@
             </div>
           </div>
         </div>
+        
+        <script>
+          $(document).ready(function () {
+            // tabs example
+            $('#vidtab').click(function() {
+              $('#video').show();
+              $('#srteamslider').hide();
+              $(this).parent('li').addClass('active');
+              $(this).parent('li').siblings('li').removeClass('active');
+            });
+            
+            $("#strtab").click(function() {
+              $('#video').hide();
+              $('#srteamslider').show();
+              $(this).parent('li').addClass('active');
+              $(this).parent('li').siblings('li').removeClass('active');
+            });
+            
+          });
+        </script>
+        
       </section><!-- /m-player" -->
 
       <section id="m-koef" class="m-sec m-even">

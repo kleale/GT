@@ -420,8 +420,8 @@ Branding - Match of the day
     span{
       width: 20px;
       padding: 19px 10px 5px 0;
-      img{
-        width: 20px;
+      i {
+          font-size: 20px;
       }
     }
     b{

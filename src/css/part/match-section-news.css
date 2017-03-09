@@ -291,7 +291,7 @@
           text-decoration: none;
 
           &:hover{
-            color: #9bb0c5;
+            color: #7caec3;
           }
         }
         > i{
@@ -302,7 +302,7 @@
           display: inline-block;
           text-align: center;
           opacity: .7;
-          color: #9bb0c5;
+          color: #7caec3;
         }
         .share{
           font-size: 12px;
@@ -355,7 +355,6 @@
         width: 12px;
         display: inline-block;
         text-align: center;
-        opacity: .7;
         color: #9bb0c5;
       }
       a{

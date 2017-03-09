@@ -18,8 +18,24 @@
     background: rgb(49, 55, 58);
   }
   &.prPay{
+    padding-left: 50px!important;
     .prh a{
       color: rgb(218, 212, 136);
+    }
+    .prt{
+      font-size: 13px;
+      b{
+        color: #a6c6cb;
+      }
+      table{
+        width: 100%;
+        text-align: center;
+        label{
+          margin: 0 3px;
+          position: relative;
+          top: -1px;
+        }
+      }
     }
   }
   &.active,
@@ -125,7 +141,6 @@
   .prt{
     color: #cccccc;
     font-weight: 400;
-    margin-top: 4px;
     font-size: 11px;
     line-height: 1.2;
     .hh{
@@ -135,7 +150,7 @@
       display: block;
     }
   }
-  .pr_st{
+/*  .pr_st{
     margin: 4px -10px -10px -10px;
     background: url(../img/spoiler.png) repeat 0 0;
     padding: 3px 0;
@@ -153,7 +168,9 @@
         color: $link-light-blue;
       }
     }
-  }
+  }*/
+  
+  
   /*.wl{
     span{
       color: $link-light-blue;
@@ -211,6 +228,30 @@
   }
 }
 
+.prp-ava.prp{
+  padding-left: 90px;
+  min-height: 36px;
+  &.prp-logo{
+    padding-left: 90px;
+  }
+  .ava-sm{
+    position: absolute 50% * * 8px;
+    transform: translate(0,-50%);
+    width: 30px;
+    height: 30px;
+    line-height: 27px;
+    img{
+      width: 100%;
+    }
+  }
+  .logo{
+    position: absolute 50% * * 50px;
+    transform: translate(0,-50%);
+    img{
+      width: 25px;
+    }
+  }  
+}
 
 /*prp*/
 /*
@@ -473,7 +514,7 @@
     margin-top: 10px;
   }
 }*/
-
+/*
 .ifbet{
   padding: 20px;
   font-size: 16px;
@@ -493,7 +534,7 @@
   .mlh{
     padding: 10px 0 10px 0;
   }
-}
+}*/
 
 .sumpr{ 
   background: #37424c url("../img/spoiler.png") repeat scroll 0 0;
@@ -501,8 +542,23 @@
   position: relative;
   z-index: 3;
   margin-bottom: 5px;
+  &.suk{
+    text-align: center;
+    color: #a6c6cb;
+    p{
+      padding: 13px 15px;
+      b {
+        color: #e8b038;
+        font-weight: 600;
+      }
+      a {
+        color: #82ac4e;
+      }
+    }
+  }
+  
   table{
-    width: 50%;
+    width: 49.95%;
     float: left;
     &:first-child{
       text-align: right;
@@ -521,7 +577,7 @@
     }
     td{
       vertical-align: middle;
-      padding: 10px 10px;
+      padding: 15px 10px 20px;
       white-space: nowrap;
       a{
         color: #fff;
@@ -538,11 +594,15 @@
           text-overflow: ellipsis;
           max-width: 100px;
           vertical-align: middle;
-          margin: 0 5px
+          margin: 0 0;
         }
       }
       img{
         height: 40px;
+        margin: 3px 0;
+        @media (max-width: $SM){
+          display: none;  
+        }
       }
       b{
         font-size: 18px;
@@ -556,7 +616,7 @@
   }
   .btn{
     position: absolute * * -10px 50%;
-    margin-left: -45px;
+    transform: translate(-50%);
   }
 } /*sumpr*/
 

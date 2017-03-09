@@ -185,31 +185,33 @@
     color: $green;
     text-transform: uppercase;
   }
-  .tags{
-    position: relative;
-    padding: 10px 0 0 20px;
-    font-size: 13px;
-    float: right;
-    color: #82ac4e;
-    i{
+  .tagsc{
+    overflow: hidden;
+    .tags{
+      position: relative;
+      padding: 0 0 0 20px;
       font-size: 13px;
-      display: block;
-      top: 13px;
-      left: 0;
-      position: absolute;
-      margin: 0 0px;
-    }
-    a{
-      display: inline;
-      padding: .3em .4em;
-      line-height: 1;
-      text-align: center;
-      white-space: nowrap;
-      vertical-align: baseline;
-      border-radius: .25em;
+      float: right;
+      color: #82ac4e;
+      i{
+        font-size: 13px;
+        display: block;
+        top: 4px;
+        left: 0;
+        position: absolute;
+        margin: 0 0px;
+      }
+      a{
+        display: inline;
+        padding: .3em .4em;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: .25em;
+      }
     }
   }
-  
   .quote{
     padding: 20px 20px 20px 30px;
     border-left: 3px solid #91cdd7;
@@ -233,6 +235,26 @@
     line-height: 1.6;
     font-weight: lighter;
     color: #d6d6d6;
+    p{
+      img{
+        margin: 5px 0; 
+        border: 2px solid #4b5258;
+      }
+      &:last-of-type{
+        margin-bottom: 20px;
+      }
+    }
+    table{
+      margin: 10px 0;
+      td{
+        border: 2px solid #4b5258;
+        vertical-align: middle;
+        padding: 5px;
+        p{
+          margin: 0!important;
+        }
+      }
+    }
   }
 }
 
@@ -240,7 +262,7 @@
 .sub_ms{
   background-position: 100% 0;
   background-repeat: no-repeat;
-  margin: 20px 0 10px;
+  margin: 10px 0 10px;
   clear: both;
   h5{
     text-align: left;
@@ -267,7 +289,7 @@
     .tri{
       display: block;
       float: left;
-      margin: 5px 12px 0 0;
+      margin: 2px 12px 0 0;
       box-shadow: 0 0 0 2px #454a4e;
       span{
         display: block;
@@ -373,8 +395,7 @@ Block ramka
   border-bottom:1px solid #454a4e;
   position: relative;
   padding-top: 1px;
-  margin-top: 35px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   
   .btxt{
     padding: 15px 15px 20px;

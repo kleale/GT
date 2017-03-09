@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   
   <!-- Import main styles -->
-  <link rel="stylesheet" href="../css/main.css?51">
+  <link rel="stylesheet" href="../css/main.css?46">
   
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -203,7 +203,42 @@
 
       </section><!-- /m-head" -->
 
-      <section class="player" id="player">
+      <section class="player player-video" id="player">
+        
+        <div class="nav-wr mobmenu-open">
+          <span class="mobmenu"><i class="gti-bars"></i> Стрим: Игра 1 <i class="livebetpin"></i></span>
+          <ul id="videos" class="nav nav-tabs">
+            <li><a href="javascript:;" id="vidtab">Игра 1 </a></li>
+            <li class="active"><a href="javascript:;" id="strtab">Игра 2: <b>LIVE</b> <i class="livebetpin"></i></a></li>
+            
+                <li><a href="#">Игра 3</a></li>
+            
+                <li><a href="#">Игра 4</a></li>
+            
+                <li><a href="#">Игра 5</a></li>
+            
+          </ul>
+        </div>
+        
+        <div class="video_block" id="video" style="display:none;">
+            <figure><img src="http://game-tournaments.com/media/export/start/41085-1.jpg"></figure>
+            <div class="gamevid" style="top: 285px;">
+              <h2>Смотреть видео Even Team Secret vs Cloud9</h2>
+              <div id="gvlist" class="tse">
+                  <div class="tse-content">
+                    <a class="g-rezults fancybox" href="/media/export/result/41085-1.jpg">
+                      <u><i class="gti-bar-chart"></i></u> 
+                      <span><b>Показать результаты игры</b><em>Статистика и результаты матча</em></span> 
+                      <sup><i class="gti-arrow-right"></i> Смотреть</sup>
+                    </a>
+                    <a class="g-rezults g-d2m" style="background-color: rgba(240, 80, 32, 0.2)" target="_blank" href="http://dotaviewer.com/ru/2916500234"> <u><i class="gti-dotaviewer"></i></u> <span><b>DotaViewer</b><em>Смотреть все важные моменты игры</em></span> <sup><i class="gti-arrow-right"></i> Смотреть</sup> </a>
+                    <a class="video" href="#"> <u style="background-image:url(http://game-tournaments.com/media/flag/3.png)"><i class="gti-play"></i></u> <span><b>[RU] Cloud 9 vs TNC Pro Team, Game 1, Final, 2016 WESG Dota 2 Grand Final presented by Alipay</b><em>WESG</em><s><i class="gti-eye"></i> 3056</s></span> <sup><i class="gti-youtube-play"></i> Смотреть</sup><i class="gti-times close"></i></a>
+                    <a class="video" href="#"> <u style="background-image:url(http://game-tournaments.com/media/flag/3.png)"><i class="gti-play"></i></u> <span><b>[EN] Cloud 9 vs TNC Pro Team, Game 1, Final, 2016 WESG Dota 2 Grand Final presented by Alipay</b><em>WESG</em><s><i class="gti-eye"></i> 29918</s></span> <sup><i class="gti-youtube-play"></i> Смотреть</sup><i class="gti-times close"></i></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+        
         <div id="srteamslider" class="toggled_stream srteamslider branded" rel="XXX">
           <div class="srteamview clearfix" id="mainstream">
             <!-- /match-page/player-html5.html -->
@@ -218,40 +253,11 @@
 
   <div class="iframer">
 
-    <iframe rel="stream" site="twitch" title="starladder1" allowfullscreen="" frameborder="0" width="100%" height="100%" src="http://player.twitch.tv/?autoplay=false&amp;channel=starladder1"></iframe>
+    <iframe rel="stream" site="twitch" title="starladder1" allowfullscreen="" frameborder="0" width="100%" height="100%" src="http://player.twitch.tv/?autoplay=false&amp;channel=moonducktv"></iframe>
 
-    <div class="subs">
-      <div class="subsc">
-        <span class="nap">
-          напомнить мне<br>
-          об этом матче
-        </span>
-        <div>
-          <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="gti-clock-o"></i> За 1 час <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="#">За 1 час</a></li>
-              <li><a href="#">За 2 часа</a></li>
-              <li><a href="#">За 12 часов</a></li>
-              <li><a href="#">За 24 часа</a></li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <i class="gti-envelope-o"></i>
-          <input class="form-control input-sm" type="text" placeholder="Email адрес">
-        </div>
-        <div>
-          <a href="" class="btn-input btn btn-sm btn-primary">OK</a>
-        </div>
-      </div>
-    </div>
-
-    <div id="clickMe" class="iframerClicker" style="background-image:url(https://static-cdn.jtvnw.net/jtv_user_pictures/starladder1-channel_offline_image-66cfd87c0cb35e0f-1920x1080.jpeg);">
+    <div id="clickMe" class="iframerClicker" style="background-image:url(https://static-cdn.jtvnw.net/previews-ttv/live_user_moonducktv-1280x720.jpg);">
       <div class="iframerChannel">
-        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/starladder1-profile_image-f29cbdd38a9c2c5e-300x300.jpeg"/>
+        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/moonducktv-profile_image-949c134b00f9b6ed-300x300.png"/>
         <div>
           <h4>Starladder1</h4>
           <h5>[RU] T.O.T. vs NL5.Reborn | Grand Final | WESG 2016 Asia-Pacific</h5>
@@ -867,6 +873,27 @@
             </div>
           </div>
         </div>
+        
+        <script>
+          $(document).ready(function () {
+            // tabs example
+            $('#vidtab').click(function() {
+              $('#video').show();
+              $('#srteamslider').hide();
+              $(this).parent('li').addClass('active');
+              $(this).parent('li').siblings('li').removeClass('active');
+            });
+            
+            $("#strtab").click(function() {
+              $('#video').hide();
+              $('#srteamslider').show();
+              $(this).parent('li').addClass('active');
+              $(this).parent('li').siblings('li').removeClass('active');
+            });
+            
+          });
+        </script>
+        
       </section><!-- /m-player" -->
 
       <section id="m-koef" class="m-sec m-even">
@@ -1465,6 +1492,9 @@
 
 
 
+
+
+
 <div class="block" id="m-prognoz">
   <div class="bh clearfix">
     <h3>
@@ -1473,8 +1503,8 @@
       <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О площадке + дополнительные сведения о матче" class="inf gti-info-circle"></i>
     </h3>
     <ul class="block-menu" role="tablist">
-      <li class="active"><a href="#p-all" role="tab" data-toggle="tab">Все</a></li>
-      <li><a role="tab" data-toggle="tab" href="#p-pay">Платные</a></li>
+      <li><a href="#p-all" role="tab" data-toggle="tab">Все</a></li>
+      <li class="active"><a role="tab" data-toggle="tab" href="#p-pay">Платные</a></li>
     </ul>
   </div><!-- bh -->
 
@@ -1494,8 +1524,7 @@
               <b>54%</b>
             </td>
           </tr>
-        </table>
-        <table class="lose">
+        </table><table class="lose">
           <tr>
            <td>
               <b>46%</b>
@@ -1512,11 +1541,20 @@
         <a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#prognozList">Подробнее</a>
       </div>
               
-      <div id="p-all" role="tabpanel" class="tab-pane active">
+      <div id="p-all" role="tabpanel" class="tab-pane">
           <div class="block_prognoz">
               
-                <div class="prp prp-free active">
-                  <a class="nick" href="">entryAd</a> &nbsp;&bull;&nbsp; <b>Secret</b> &nbsp;&bull;&nbsp; 
+                <div class="prp prp-free prp-ava prp-logo ">
+                  
+                  <a href="" class="ava-sm">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20170113-640x427-4358198381.jpeg" alt="">
+                  </a>
+                  <a href="" class="logo">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20161110-600x450-6323255579.png" alt="">
+                  </a>
+                  
+                  <!--<a class="nick" href="">entryAd</a> &nbsp;&bull;&nbsp; -->
+                  <!--<b>Secret</b> &nbsp;&bull;&nbsp;--> 
                   <div class="prt">
                     Комментарий: последние 4 встречи закончились победой OG. Хотя все они были в прошлой мете и это нельзя отбрасывать. После мажора, у EG была<em>...</em>
                     <span class="hh">
@@ -1526,8 +1564,37 @@
                   <a class="prm" href="javascript:;">еще</a>
                 </div>
               
-                <div class="prp prp-free ">
-                  <a class="nick" href="">STORM BETS</a> &nbsp;&bull;&nbsp; <b>Liquid</b> &nbsp;&bull;&nbsp; 
+                <div class="prp prp-free prp-ava prp-logo ">
+                  
+                  <a href="" class="ava-sm">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20170118-600x900-7399228955.jpeg" alt="">
+                  </a>
+                  <a href="" class="logo">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20161110-600x450-6323255579.png" alt="">
+                  </a>
+                  
+                  <!--<a class="nick" href="">entryAd</a> &nbsp;&bull;&nbsp; -->
+                  <!--<b>Liquid</b> &nbsp;&bull;&nbsp;--> 
+                  <div class="prt">
+                    Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же<em>...</em>
+                    <span class="hh">
+                        турнире, где они обыграв Wings и Newbee заняли 1 место, но это довольно мало. На этот турнир команда приехала не с одной заготовкой, коры показывают пикабельность 6/6 и 5/6. Причём вчера в решающей карте против Secret они отважились взять героев, которыми ранее на про сцене не играли, взять такую заготовку в 1 карте можно было бы понять, но брать в решающей это говорит уже о другом. Так же Вилат поведал что команда OG в сборе менее недели, после праздников они только съехались и особо не тренили и будут использовать этот турнир как тренировочный плацдарм. Исходя из выше изложенного в этом матче я не рекомендую ставить на фаворита, если вы так в нём уверены лучше пропустите, разумная будет ставка на фору EG либо пару % на чистую победу.
+                    </span>
+                  </div>
+                  <a class="prm" href="javascript:;">еще</a>
+                </div>
+              
+                <div class="prp prp-free prp-ava prp-logo ">
+                  
+                  <a href="" class="ava-sm">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20170118-600x900-7399228955.jpeg" alt="">
+                  </a>
+                  <a href="" class="logo">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20161110-600x450-6323255579.png" alt="">
+                  </a>
+                  
+                  <!--<a class="nick" href="">4 года опыта</a> &nbsp;&bull;&nbsp; -->
+                  <!--<b>Liquid</b> &nbsp;&bull;&nbsp;--> 
                   <div class="prt">
                     Комментарий: последние 4 встречи закончились победой OG. Хотя все они были в прошлой мете и это нельзя отбрасывать. После мажора, у EG была<em>...</em>
                     <span class="hh">
@@ -1537,8 +1604,17 @@
                   <a class="prm" href="javascript:;">еще</a>
                 </div>
               
-                <div class="prp prp-free ">
-                  <a class="nick" href="">Аналитика от Den-а</a> &nbsp;&bull;&nbsp; <b>Liquid</b> &nbsp;&bull;&nbsp; 
+                <div class="prp prp-free prp-ava prp-logo ">
+                  
+                  <a href="" class="ava-sm">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20170113-640x427-4358198381.jpeg" alt="">
+                  </a>
+                  <a href="" class="logo">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20161110-600x600-5478339632.png" alt="">
+                  </a>
+                  
+                  <!--<a class="nick" href="">Аналитика от Den-а</a> &nbsp;&bull;&nbsp; -->
+                  <!--<b>Liquid</b> &nbsp;&bull;&nbsp;--> 
                   <div class="prt">
                     Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же<em>...</em>
                     <span class="hh">
@@ -1548,19 +1624,17 @@
                   <a class="prm" href="javascript:;">еще</a>
                 </div>
               
-                <div class="prp prp-free ">
-                  <a class="nick" href="">КАТАВАСИЯ В ДОТА 2</a> &nbsp;&bull;&nbsp; <b>Secret</b> &nbsp;&bull;&nbsp; 
-                  <div class="prt">
-                    Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же<em>...</em>
-                    <span class="hh">
-                        турнире, где они обыграв Wings и Newbee заняли 1 место, но это довольно мало. На этот турнир команда приехала не с одной заготовкой, коры показывают пикабельность 6/6 и 5/6. Причём вчера в решающей карте против Secret они отважились взять героев, которыми ранее на про сцене не играли, взять такую заготовку в 1 карте можно было бы понять, но брать в решающей это говорит уже о другом. Так же Вилат поведал что команда OG в сборе менее недели, после праздников они только съехались и особо не тренили и будут использовать этот турнир как тренировочный плацдарм. Исходя из выше изложенного в этом матче я не рекомендую ставить на фаворита, если вы так в нём уверены лучше пропустите, разумная будет ставка на фору EG либо пару % на чистую победу.
-                    </span>
-                  </div>
-                  <a class="prm" href="javascript:;">еще</a>
-                </div>
-              
-                <div class="prp prp-free ">
-                  <a class="nick" href="">КАТАВАСИЯ В ДОТА 2</a> &nbsp;&bull;&nbsp; <b>Secret</b> &nbsp;&bull;&nbsp; 
+                <div class="prp prp-free prp-ava prp-logo ">
+                  
+                  <a href="" class="ava-sm">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20170116-600x720-2654157159.jpeg" alt="">
+                  </a>
+                  <a href="" class="logo">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20161110-300x300-6683929543.png" alt="">
+                  </a>
+                  
+                  <!--<a class="nick" href="">Аналитика от Den-а</a> &nbsp;&bull;&nbsp; -->
+                  <!--<b>Liquid</b> &nbsp;&bull;&nbsp;--> 
                   <div class="prt">
                     Комментарий: последние 4 встречи закончились победой OG. Хотя все они были в прошлой мете и это нельзя отбрасывать. После мажора, у EG была<em>...</em>
                     <span class="hh">
@@ -1570,8 +1644,37 @@
                   <a class="prm" href="javascript:;">еще</a>
                 </div>
               
-                <div class="prp prp-free ">
-                  <a class="nick" href="">Global Bets | Dota</a> &nbsp;&bull;&nbsp; <b>Secret</b> &nbsp;&bull;&nbsp; 
+                <div class="prp prp-free prp-ava prp-logo ">
+                  
+                  <a href="" class="ava-sm">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20170118-600x900-7399228955.jpeg" alt="">
+                  </a>
+                  <a href="" class="logo">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20161110-300x300-752810928.png" alt="">
+                  </a>
+                  
+                  <!--<a class="nick" href="">Аналитика от Den-а</a> &nbsp;&bull;&nbsp; -->
+                  <!--<b>Liquid</b> &nbsp;&bull;&nbsp;--> 
+                  <div class="prt">
+                    Комментарий: последние 4 встречи закончились победой OG. Хотя все они были в прошлой мете и это нельзя отбрасывать. После мажора, у EG была<em>...</em>
+                    <span class="hh">
+                        турнире, где они обыграв Wings и Newbee заняли 1 место, но это довольно мало. На этот турнир команда приехала не с одной заготовкой, коры показывают пикабельность 6/6 и 5/6. Причём вчера в решающей карте против Secret они отважились взять героев, которыми ранее на про сцене не играли, взять такую заготовку в 1 карте можно было бы понять, но брать в решающей это говорит уже о другом. Так же Вилат поведал что команда OG в сборе менее недели, после праздников они только съехались и особо не тренили и будут использовать этот турнир как тренировочный плацдарм. Исходя из выше изложенного в этом матче я не рекомендую ставить на фаворита, если вы так в нём уверены лучше пропустите, разумная будет ставка на фору EG либо пару % на чистую победу.
+                    </span>
+                  </div>
+                  <a class="prm" href="javascript:;">еще</a>
+                </div>
+              
+                <div class="prp prp-free prp-ava prp-logo ">
+                  
+                  <a href="" class="ava-sm">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20170113-640x427-4358198381.jpeg" alt="">
+                  </a>
+                  <a href="" class="logo">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20161110-300x300-752810928.png" alt="">
+                  </a>
+                  
+                  <!--<a class="nick" href="">Global Bets | Dota</a> &nbsp;&bull;&nbsp; -->
+                  <!--<b>Secret</b> &nbsp;&bull;&nbsp;--> 
                   <div class="prt">
                     Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же<em>...</em>
                     <span class="hh">
@@ -1581,21 +1684,19 @@
                   <a class="prm" href="javascript:;">еще</a>
                 </div>
               
-                <div class="prp prp-free ">
-                  <a class="nick" href="">Аналитика от Den-а</a> &nbsp;&bull;&nbsp; <b>Secret</b> &nbsp;&bull;&nbsp; 
+                <div class="prp prp-free prp-ava prp-logo active">
+                  
+                  <a href="" class="ava-sm">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20170116-600x720-2654157159.jpeg" alt="">
+                  </a>
+                  <a href="" class="logo">
+                    <img src="http://ggscore.com/media/logo/_60/pic-20161110-600x450-6323255579.png" alt="">
+                  </a>
+                  
+                  <!--<a class="nick" href="">Аналитика от Den-а</a> &nbsp;&bull;&nbsp; -->
+                  <!--<b>Liquid</b> &nbsp;&bull;&nbsp;--> 
                   <div class="prt">
-                    Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же<em>...</em>
-                    <span class="hh">
-                        турнире, где они обыграв Wings и Newbee заняли 1 место, но это довольно мало. На этот турнир команда приехала не с одной заготовкой, коры показывают пикабельность 6/6 и 5/6. Причём вчера в решающей карте против Secret они отважились взять героев, которыми ранее на про сцене не играли, взять такую заготовку в 1 карте можно было бы понять, но брать в решающей это говорит уже о другом. Так же Вилат поведал что команда OG в сборе менее недели, после праздников они только съехались и особо не тренили и будут использовать этот турнир как тренировочный плацдарм. Исходя из выше изложенного в этом матче я не рекомендую ставить на фаворита, если вы так в нём уверены лучше пропустите, разумная будет ставка на фору EG либо пару % на чистую победу.
-                    </span>
-                  </div>
-                  <a class="prm" href="javascript:;">еще</a>
-                </div>
-              
-                <div class="prp prp-free active">
-                  <a class="nick" href="">КАТАВАСИЯ В ДОТА 2</a> &nbsp;&bull;&nbsp; <b>Secret</b> &nbsp;&bull;&nbsp; 
-                  <div class="prt">
-                    Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик,но побеждать должны все-же<em>...</em>
+                    Комментарий: последние 4 встречи закончились победой OG. Хотя все они были в прошлой мете и это нельзя отбрасывать. После мажора, у EG была<em>...</em>
                     <span class="hh">
                         турнире, где они обыграв Wings и Newbee заняли 1 место, но это довольно мало. На этот турнир команда приехала не с одной заготовкой, коры показывают пикабельность 6/6 и 5/6. Причём вчера в решающей карте против Secret они отважились взять героев, которыми ранее на про сцене не играли, взять такую заготовку в 1 карте можно было бы понять, но брать в решающей это говорит уже о другом. Так же Вилат поведал что команда OG в сборе менее недели, после праздников они только съехались и особо не тренили и будут использовать этот турнир как тренировочный плацдарм. Исходя из выше изложенного в этом матче я не рекомендую ставить на фаворита, если вы так в нём уверены лучше пропустите, разумная будет ставка на фору EG либо пару % на чистую победу.
                     </span>
@@ -1610,109 +1711,106 @@
           </div>
       </div>
       
-      <div id="p-pay" role="tabpanel" class="tab-pane">
+      <div id="p-pay" role="tabpanel" class="tab-pane active">
         <div class="block_pay_prognoz">
-          <div class="prp active prPay">
-                <div class="prh">
-                  <table>
-                    <tbody><tr>
-                      <td>
-                        <a href="">entryAd</a> &nbsp;&bull;&nbsp;
-                    <b>Liquid</b>
-                      </td>
-                      <td class="nwr">
-                        <u>
-                          <em>123 <i class="gti-user tip" title="число подписчиков"></i></em>
-                          <button class="btn btn-xs btn-primary">подписка оформлена</button>
-                        </u>
-                      </td>
-                    </tr>
-                  </tbody></table>
-                </div>
-                <div class="prt">
-                  Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик...
-                </div>
-                <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
-              </div>
-              
-              <div class="prp prPay">
-                <div class="prh">
-                  <table>
-                    <tbody><tr>
-                      <td>
-                        <a href="">entryAd</a> &nbsp;&bull;&nbsp;
-                    <b>Liquid</b>
-                      </td>
-                      <td class="nwr">
-                        <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button></u>
-                      </td>
-                    </tr>
-                  </tbody></table>
-                </div>
-                <div class="pr_st">
-                  <table>
-                    <tbody><tr>
-                      <th>Прогнозы</th>
-                      <th>Проходимость</th>
-                      <th>ROI</th>
-                      <th>Ставки</th>
-                      <th>Подписки</th>
-                    </tr>
-                    <tr>
-                      <td>32</td>
-                      <td>76.6%</td>
-                      <td>76.6%</td>
-                      <td>23</td>
-                      <td>239</td>
-                    </tr>
-                  </tbody></table>
-                </div>
-                <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
-              </div>
-              
-                <div class="prp prPay">
-                  <div class="prh">
-                    <table>
-                      <tbody><tr>
-                        <td>
-                          <a href="">entryAd</a>&nbsp;&bull;&nbsp;
-                    <b>Liquid</b>
-                        </td>
-                        <td class="nwr">
-                          <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button>
-                          </u>
-                        </td>
-                      </tr>
-                    </tbody></table>
-                  </div>
-                  <div class="prt">
-                    Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик...
-                  </div>
-                  <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
-                </div>
-              
-                <div class="prp prPay">
-                  <div class="prh">
-                    <table>
-                      <tbody><tr>
-                        <td>
-                          <a href="">entryAd</a>&nbsp;&bull;&nbsp;
-                    <b>Secret</b>
-                        </td>
-                        <td class="nwr">
-                          <u><button class="btn btn-xs btn-default">$ 3.5/МЕС</button>
-                          </u>
-                        </td>
-                      </tr>
-                    </tbody></table>
-                  </div>
-                  <div class="prt">
-                    Для меня конечно фавориты альянс,но фнатики не настолько слабы,подавно после игры с vg.Моя ставка на +1.5 за фнатик...
-                  </div>
-                  <a class="prm" href="" data-toggle="modal" data-target="#prm1">еще</a>
-                </div>
-              
-            
+          <div class="prp prPay prp-ava active">
+            <a href="" class="ava-sm">
+              <img src="http://ggscore.com/media/logo/_60/pic-20170116-600x720-2654157159.jpeg" alt="">
+            </a>
+            <div class="prt">
+              <table>
+                <tr>
+                  <td>Прогнозы <b>32</b></td>
+                  <td>Проходимость <b>76.6%</b>	</td>
+                  <td>Подписка <span class="label label-primary">Оформлена</span></td>
+                </tr>
+              </table>
+            </div>
+            <!--<a class="prm" href="javascript:;"><i class="gti-angle-right"></i></a>-->
+          </div>
+          
+          <div class="prp prPay prp-ava">
+            <a href="" class="ava-sm">
+              <img src="http://ggscore.com/media/logo/_60/Dai.jpeg" alt="">
+            </a>
+            <div class="prt">
+              <table>
+                <tr>
+                  <td>Прогнозы: <b>32</b></td>
+                  <td>Проходимость <b>76.6%</b>	</td>
+                  <td>Подписка <span class="label label-default">$ 3.5/МЕС</span></td>
+                </tr>
+              </table>
+            </div>
+            <!--<a class="prm" href="javascript:;"><i class="gti-angle-right"></i></a>-->
+          </div>
+          
+          <div class="prp prPay prp-ava">
+            <a href="" class="ava-sm">
+              <img src="http://ggscore.com/media/logo/_60/Dai.jpeg" alt="">
+            </a>
+            <div class="prt">
+              <table>
+                <tr>
+                  <td>Прогнозы: <b>32</b></td>
+                  <td>Проходимость <b>76.6%</b>	</td>
+                  <td>Подписка <span class="label label-default">$ 3.5/МЕС</span></td>
+                </tr>
+              </table>
+            </div>
+            <!--<a class="prm" href="javascript:;"><i class="gti-angle-right"></i></a>-->
+          </div>
+          
+          <div class="prp prPay prp-ava">
+            <a href="" class="ava-sm">
+              <img src="http://ggscore.com/media/logo/_60/pic-20170113-640x427-4358198381.jpeg" alt="">
+            </a>
+            <div class="prt">
+              <table>
+                <tr>
+                  <td>Прогнозы: <b>32</b></td>
+                  <td>Проходимость <b>76.6%</b>	</td>
+                  <td>Подписка <span class="label label-default">$ 3.5/МЕС</span></td>
+                </tr>
+              </table>
+            </div>
+            <!--<a class="prm" href="javascript:;"><i class="gti-angle-right"></i></a>-->
+          </div>
+          
+          <div class="prp prPay prp-ava">
+            <a href="" class="ava-sm">
+              <img src="http://ggscore.com/media/logo/_60/pic-20170118-600x900-7399228955.jpeg" alt="">
+            </a>
+            <div class="prt">
+              <table>
+                <tr>
+                  <td>Прогнозы: <b>32</b></td>
+                  <td>Проходимость <b>76.6%</b>	</td>
+                  <td>Подписка <span class="label label-default">$ 3.5/МЕС</span></td>
+                </tr>
+              </table>
+            </div>
+            <!--<a class="prm" href="javascript:;"><i class="gti-angle-right"></i></a>-->
+          </div>
+          
+          <div class="prp prPay prp-ava">
+            <a href="" class="ava-sm">
+              <img src="http://ggscore.com/media/logo/_60/Dai.jpeg" alt="">
+            </a>
+            <div class="prt">
+              <table>
+                <tr>
+                  <td>Прогнозы: <b>32</b></td>
+                  <td>Проходимость <b>76.6%</b>	</td>
+                  <td>Подписка <span class="label label-default">$ 3.5/МЕС</span></td>
+                </tr>
+              </table>
+            </div>
+            <!--<a class="prm" href="javascript:;"><i class="gti-angle-right"></i></a>-->
+          </div>
+          
+          
+         
         </div>
       </div>
     </div><!--bc-->
@@ -1808,7 +1906,7 @@ $(document).ready(function(){
     <div class="block-content">
       <div class="spider">
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-sm-3">
             <div class="sr_t sr_t1">
               <a class="sr_pic" href="">
                 <img src="http://game-tournaments.com/media/logo/_60/pic-20160415-256x187-3994387532.png">
@@ -1820,11 +1918,11 @@ $(document).ready(function(){
               </div>
             </div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-6">
             <div id="spider_chart">
             </div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-3">
             <div class="sr_t sr_t2">
               <a class="sr_pic" href="">
                 <img src="http://game-tournaments.com/media/logo/_60/pic-20160415-256x187-3994387532.png">
@@ -1842,109 +1940,55 @@ $(document).ready(function(){
         </div>
       </div>
       
-      <div class="teams_stats">
-        <div class="teams_bars">
-          <div class="tbs1">
-            <table>
-              <tr>
-                <th>RANK</th>
-                <td>53</td>
-              </tr>
-              <tr>
-                <th>APR</th>
-                <td>46</td>
-              </tr>
-              <tr>
-                <th>MATCHES</th>
-                <td class="red">53</td>
-              </tr>
-              <tr>
-                <th>WINS</th>
-                <td>46</td>
-              </tr>
-              <tr>
-                <th>KDA</th>
-                <td class="green">53</td>
-              </tr>
-            </table>
-          </div>
+      <!-- Graf -->
+      
+      <div class="teams_stats clearfix">
+        <div class="teams_bars ts2">
+          
           <div class="tbsb">
-            <div id="teams_compare"></div>
-          </div>
-          <div class="tbs2">
-            <table>
-              <tr>
-                <td>5</td>
-                <th>RANK</th>
-              </tr>
-              <tr>
-                <td class="red">4</td>
-                <th>APR</th>
-              </tr>
-              <tr>
-                <td>55</td>
-                <th>MATCHES</th>
-              </tr>
-              <tr>
-                <td>44</td>
-                <th>WINS</th>
-              </tr>
-              <tr>
-                <td class="green">55</td>
-                <th>KDA</th>
-              </tr>
+            
+             <table class="intable">
+              <tbody>
+                <tr>
+                  <td><span class="red">34</span></td>
+                  <td align="center">SAFE</td>
+                  <td><span class="green">51</span></td>
+                </tr>
+                <tr>
+                  <td><span class="red">59</span></td>
+                  <td align="center">HARD</td>
+                  <td><span class="green">62</span></td>
+                </tr>
+                <tr>
+                  <td><span class="red">52</span></td>
+                  <td align="center">MID</td>
+                  <td><span class="green">69</span></td>
+                </tr>
+                <tr>
+                  <td><span class="red">37</span></td>
+                  <td align="center">FOREST</td>
+                  <td><span class="green">41</span></td>
+                </tr>
+                <tr>
+                  <td><span class="green">23</span></td>
+                  <td align="center">LAST GAMES OF REAMS</td>
+                  <td><span class="red">10</span></td>
+                </tr>
+                <tr>
+                  <td><span class="green">74</span></td>
+                  <td align="center">LAST MATCHES</td>
+                  <td><span class="red">64</span></td>
+                </tr>
+              </tbody>
             </table>
+           
+            <div class="tcgraf" id="teams_compare"></div>
           </div>
-        </div>
-        <div class="team_s_t tst1">
-          <table>
-            <tr>
-              <th>Форма</th>
-              <td class="red">34</td>
-            </tr>
-            <tr>
-              <th>Побед</th>
-              <td class="green">10</td>
-            </tr>
-            <tr>
-              <th>Поражений</th>
-              <td>11</td>
-            </tr>
-            <tr>
-              <th>Игр в мес.</th>
-              <td>60</td>
-            </tr>
-            <tr>
-              <th>П-П</th>
-              <td>890</td>
-            </tr>
-          </table>
-        </div>
-        <div class="team_s_t tst2">
-          <table>
-            <tr>
-              <td class="red">34</td>
-              <th>Форма</th>
-            </tr>
-            <tr>
-              <td>10</td>
-              <th>Побед</th>
-            </tr>
-            <tr>
-              <td>11</td>
-              <th>Поражений</th>
-            </tr>
-            <tr>
-              <td>60</td>
-              <th>Игр в мес.</th>
-            </tr>
-            <tr>
-              <td>890</td>
-              <th>П-П</th>
-            </tr>
-          </table>
+          
         </div>
       </div>
+      
+      
       
     </div><!-- block-content -->
   </div><!-- block -->
@@ -1956,7 +2000,7 @@ $(document).ready(function(){
         <!-- /match-page/section-players.html -->
  
   <div class="row" id="m-players">
-    <div class="col-md-7">
+    <div class="col-md-12">
       <div class="block">
         <div class="bh clearfix">
           <h3>
@@ -2368,182 +2412,9 @@ $(document).ready(function(){
       </div><!-- block -->
     </div><!-- col-sm-7 -->
     
-    <div class="col-md-5">
-      <div class="block" id="m-history">
-        <div class="bh clearfix">
-          <h3>
-            <i class="ih gti-history"></i>
-            История матчей
-            <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="О сравнении" class="inf gti-info-circle"></i>
-          </h3>
-        </div><!-- bh -->
+    
 
-        <div class="block-content">
-          <div class="histb">
-            <h3>
-            История личных встреч:
-            </h3>
-            <table>
-               
-                <tr>
-                  <th>2016-02-24</th>
-                  <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                  <td class="red"><u>Secret</u></td>
-                  <td class="hisc"><b class="red">43</b> : 67</td>
-                  <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-                </tr>
-                <tr>
-                  <th>2016-02-24</th>
-                  <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                  <td class="green"><u>Secret</u></td>
-                  <td class="hisc"><b class="green">3</b> : 7</td>
-                  <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-                </tr>
-              
-                <tr>
-                  <th>2016-02-24</th>
-                  <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                  <td class="red"><u>Secret</u></td>
-                  <td class="hisc"><b class="red">43</b> : 67</td>
-                  <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-                </tr>
-                <tr>
-                  <th>2016-02-24</th>
-                  <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                  <td class="green"><u>Secret</u></td>
-                  <td class="hisc"><b class="green">3</b> : 7</td>
-                  <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-                </tr>
-              
-                <tr>
-                  <th>2016-02-24</th>
-                  <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                  <td class="red"><u>Secret</u></td>
-                  <td class="hisc"><b class="red">43</b> : 67</td>
-                  <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-                </tr>
-                <tr>
-                  <th>2016-02-24</th>
-                  <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                  <td class="green"><u>Secret</u></td>
-                  <td class="hisc"><b class="green">3</b> : 7</td>
-                  <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-                </tr>
-              
-            </table>
-          </div><!-- histb -->
-          <div class="histb">
-            <h3 class="blue">
-            История личных встреч:
-            </h3>
-            <table>
-              
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="red"><u>Secret</u></td>
-                <td class="hisc">43 : 67</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="green"><u>Secret</u></td>
-                <td class="hisc">3 : 7</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="red"><u>Secret</u></td>
-                <td class="hisc">43 : 67</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="green"><u>Secret</u></td>
-                <td class="hisc">3 : 7</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="red"><u>Secret</u></td>
-                <td class="hisc">43 : 67</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="green"><u>Secret</u></td>
-                <td class="hisc">3 : 7</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              
-            </table>
-          </div><!-- histb -->
-          <div class="histb">
-            <h3 class="red">
-            История личных встреч:
-            </h3>
-            <table>
-              
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="red"><u>Secret</u></td>
-                <td class="hisc">43 : 67</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="green"><u>Secret</u></td>
-                <td class="hisc">3 : 7</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="red"><u>Secret</u></td>
-                <td class="hisc">43 : 67</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="green"><u>Secret</u></td>
-                <td class="hisc">3 : 7</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="red"><u>Secret</u></td>
-                <td class="hisc">43 : 67</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              <tr>
-                <th>2016-02-24</th>
-                <td><u class="tip lg" title="Click-Storm Dota 2 League">Click-Storm Dota 2 League</u></td>
-                <td class="green"><u>Secret</u></td>
-                <td class="hisc">3 : 7</td>
-                <td><u class="tip" title="London Conspyracy Dota2">London Conspyracy Dota2</u></td>
-              </tr>
-              
-            </table>
-          </div><!-- histb -->
-        </div><!-- block-content -->
-      </div><!-- block -->
-    </div><!-- col-sm-5 -->
   </div><!-- row -->
-
-
 
 <!-- /Players compare -->
       </section>
@@ -3004,7 +2875,7 @@ $(document).ready(function(){
               <li class=" ">
                 
                   <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42723-1482835201-small.jpeg)">
-                    <b><i class="gti-twitter"></i></b>
+                    <b><i class="gti-gtlogo"></i></b>
                   </a>
                 
                  <div>
@@ -3030,8 +2901,8 @@ $(document).ready(function(){
           
               <li class=" ">
                 
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42720-1482829305-small.jpeg)">
-                    <b><i class="gti-rss"></i></b>
+                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42725-1482841447-small.jpeg)">
+                    <b><i class="gti-twitter"></i></b>
                   </a>
                 
                  <div>
@@ -3082,7 +2953,7 @@ $(document).ready(function(){
               <li class=" ">
                  
                   <a class="nopic" href="">
-                    <i class="gti-gtlogo"></i>
+                    <i class="gti-rss"></i>
                   </a>
                 
                  <div>
@@ -3109,33 +2980,6 @@ $(document).ready(function(){
               <li class=" ">
                 
                   <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42723-1482835201-small.jpeg)">
-                    <b><i class="gti-gtlogo"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42727-1482864622-small.jpeg)">
                     <b><i class="gti-gtlogo"></i></b>
                   </a>
                 
@@ -3187,10 +3031,10 @@ $(document).ready(function(){
                 </div>
               </li>
           
-              <li class="hot ">
+              <li class=" ">
                 
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42725-1482841447-small.jpeg)">
-                    <b><i class="gti-twitter"></i></b>
+                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42727-1482864622-small.jpeg)">
+                    <b><i class="gti-facebook"></i></b>
                   </a>
                 
                  <div>
@@ -3217,6 +3061,60 @@ $(document).ready(function(){
               <li class=" ">
                 
                   <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42723-1482835201-small.jpeg)">
+                    <b><i class="gti-gtlogo"></i></b>
+                  </a>
+                
+                 <div>
+                  <h4>
+                    <a href="">
+                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
+                    </a>
+                  </h4>
+                  <p>
+                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+                  </p>
+                  <u>
+                    <time>29 дек, 11:35</time>
+                  </u>
+                  <span>
+                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+                  </span>
+                </div>
+              </li>
+          
+              <li class="hot ">
+                
+                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42728-1482872435-small.jpeg)">
+                    <b><i class="gti-facebook"></i></b>
+                  </a>
+                
+                 <div>
+                  <h4>
+                    <a href="">
+                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
+                    </a>
+                  </h4>
+                  <p>
+                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
+                  </p>
+                  <u>
+                    <time>29 дек, 11:35</time>
+                  </u>
+                  <span>
+                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
+                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
+                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
+                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
+                  </span>
+                </div>
+              </li>
+          
+              <li class=" ">
+                
+                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42720-1482829305-small.jpeg)">
                     <b><i class="gti-facebook"></i></b>
                   </a>
                 
@@ -3245,33 +3143,6 @@ $(document).ready(function(){
                 
                   <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42727-1482864622-small.jpeg)">
                     <b><i class="gti-facebook"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class="hot ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42728-1482872435-small.jpeg)">
-                    <b><i class="gti-twitter"></i></b>
                   </a>
                 
                  <div>
@@ -3880,7 +3751,7 @@ $(document).ready(function(){
                 <a href="">Nikname 1</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -3898,7 +3769,7 @@ $(document).ready(function(){
                 <a href="">Nikname 3</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -3907,7 +3778,7 @@ $(document).ready(function(){
                 <a href="">Nikname 4</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -3916,7 +3787,7 @@ $(document).ready(function(){
                 <a href="">Nikname 5</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -3925,7 +3796,7 @@ $(document).ready(function(){
                 <a href="">Nikname 6</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -3943,7 +3814,7 @@ $(document).ready(function(){
                 <a href="">Nikname 8</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -4011,7 +3882,7 @@ $(document).ready(function(){
 
 <!-- Site Sripts -->
 <script src="../inc/main.js"></script>
-<script src="../inc/func_init.js?51"></script>
+<script src="../inc/func_init.js?24"></script>
 
 <!--PAGES select only dev-->
 <style>
@@ -4061,7 +3932,7 @@ $(document).ready(function(){
     <a href="/user-pass.html" class="m2 btn btn-sm btn-success">U pass</a>
     <a href="/user-acc.html" class="m2 btn btn-sm btn-success">U acc</a>
     <a href="/user-page.html" class="m2 btn btn-sm btn-warning">U page</a>
-    <a href="/user-pay.html" class="m2 btn btn-sm btn-warning">U pay</a>
+    <a href="/user-pay.html" class="m2 btn btn-sm btn-success">U pay</a>
     <!--
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Bets</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Predict</a>
@@ -4072,9 +3943,9 @@ $(document).ready(function(){
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">stickers</a>
     -->
     <a href="/fonts.html" class="m2 btn btn-sm btn-success">Ico</a>
-    <a href="/mail-pwd_ru.html" class="m2 btn btn-sm btn-warning">m1</a>
-    <a href="/mail-pwd_count_ru.html" class="m2 btn btn-sm btn-warning">m2</a>
-    <a href="/mail-reg.html" class="m2 btn btn-sm btn-warning">m3</a>
+    <a href="/mail-pwd_ru.html" class="m2 btn btn-sm btn-success">m1</a>
+    <a href="/mail-pwd_count_ru.html" class="m2 btn btn-sm btn-success">m2</a>
+    <a href="/mail-reg.html" class="m2 btn btn-sm btn-success">m3</a>
   </div>
 </div>
 

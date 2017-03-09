@@ -931,7 +931,7 @@ $(function () {
 /* Teams compare*/
 $(function () {
     $('#teams_compare').highcharts({
-        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
+        colors: ["#3f79a2", "#d94c4c"],
         chart: {
           type: 'bar',
           backgroundColor: 'none',
@@ -944,7 +944,7 @@ $(function () {
           enabled: false
         },
         xAxis: {
-           categories: ['RANK', 'APR', 'MATCHES', 'WINS', 'KDA'],
+           categories: ['SAFE', 'HARD', 'MID', 'FOREST', 'GAMES', 'MATCH'],
            lineWidth: 0,
            minorGridLineWidth: 0,
            lineColor: 'transparent',
@@ -987,29 +987,51 @@ $(function () {
               groupPadding: 0.1
             }
         },
-        tooltip: {
+/*        tooltip: {
             headerFormat: '',
             useHTML: true,
             pointFormat: '{series.name}<br>{point.name}: {point.y}'
-        },
+        },*/
+        
+        tooltip : {
+            headerFormat: '',
+            useHTML: true,
+            formatter: function() {
+                var tooltip;
+                if ( this.series.data.indexOf( this.point ) == 4) {
+                    tooltip = 'История встреч<br>между командами:<br>' +  this.point.series.name + ': ' + this.point.y + ' побед';
+                }
+                else if ( this.series.data.indexOf( this.point ) == 5) {
+                    tooltip = 'Последние 5<br>матчей команд:<br>' +  this.point.series.name + ': ' + this.point.y + ' побед';
+                }
+                else {
+                    tooltip =  this.point.series.name + '<br>' + this.point.name + ':' + this.point.y;
+                }
+                return tooltip;
+            }
+        }, 
+      
+      
         series: [{
             name: 'London',
             data: [
-                  ['RANK', 53],
-                  ['APR', 46],
-                  ['MATCHES', 53],
-                  ['WINS', 46],
-                  ['KDA', 53]
+                  ['SAFE', 53],
+                  ['HARD', 53],
+                  ['MID', 46],
+                  ['FOREST', 53],
+                  ['GAMES', 46],
+                  ['MATCH', 53]
             ],
             index: 4
         }, {
             name: 'Secret',
             data: [
-                  ['RANK', 5],
-                  ['APR', 4],
-                  ['MATCHES', 55],
-                  ['WINS', 44],
-                  ['KDA', 55]
+                  ['SAFE', 5],
+                  ['HARD', 4],
+                  ['MID', 55],
+                  ['FOREST', 44],
+                  ['GAMES', 44],
+                  ['MATCH', 5]
             ],
             index: 3
         }]
@@ -1035,13 +1057,16 @@ $(function () {
           enabled: false
         },
         xAxis: {
-           categories: ['FORM', 'STR', 'STAT', 'MVP', 'LANE', 'GOLD', 'FIGHTS', 'EXP'],
-           lineWidth: 0,
-           minorGridLineWidth: 0,
-           lineColor: 'transparent',
-           labels: {
+          categories: ['FORM', 'STR', 'STAT', 'MVP', 'LANE', 'GOLD', 'FIGHTS', 'EXP'],
+          lineWidth: 0,
+          minorGridLineWidth: 0,
+          lineColor: 'transparent',
+          gridLineColor: 'transparent',
+          minorTickLength: 0,
+          tickLength: 0,
+          labels: {
                enabled: false
-           },
+          },
           title: {
             enabled: false
           },
@@ -1050,17 +1075,18 @@ $(function () {
           
         },
         yAxis: {
-           lineWidth: 0,
-           minorGridLineWidth: 0,
-           lineColor: 'transparent',
-           labels: {
-               enabled: false
-           },
+          lineWidth: 0,
+          gridLineWidth: 0,
+          minorGridLineWidth: 0,
+          lineColor: 'transparent',
+          minorTickLength: 0,
+          tickLength: 0,
+          labels: {
+             enabled: false
+          },
           title: {
             enabled: false
-          },
-           minorTickLength: 0,
-           tickLength: 0
+          }
         },
         title: {
             enabled: false,
@@ -1146,6 +1172,7 @@ $(function () {
         yAxis: {
            lineWidth: 0,
            minorGridLineWidth: 0,
+           gridLineWidth: 0,
            lineColor: 'transparent',
            labels: {
                enabled: false
@@ -1240,6 +1267,7 @@ $(function () {
         yAxis: {
            lineWidth: 0,
            minorGridLineWidth: 0,
+          gridLineWidth: 0,
            lineColor: 'transparent',
            labels: {
                enabled: false

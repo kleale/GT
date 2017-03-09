@@ -14,7 +14,11 @@
   position: relative;
   
   .bh{
-      overflow: hidden;
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
     .block-menu{
       float: right;
       list-style: none;
@@ -166,6 +170,11 @@
       opacity: 1;
     }
   }
+  &.tab-content{
+    .table{
+      margin-bottom: 0;
+    }
+  }
   .table{
     width: 100%;
     background-color: transparent;
@@ -181,7 +190,7 @@
     
     td{
       border-top:0;
-      padding: 10px 5px;
+      padding: 7px 5px;
       vertical-align: middle;
       
       &:first-child{
@@ -202,7 +211,7 @@
       max-width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 300;
       color: $link-white;
       vertical-align: middle;
@@ -217,7 +226,7 @@
     
     .tkf{
       white-space: nowrap;
-      font-size: 16px;
+      font-size: 14px;
       text-align: center;
       @media (max-width: $M){
         font-size: 12px;

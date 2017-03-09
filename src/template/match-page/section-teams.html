@@ -41,7 +41,7 @@
     <div class="block-content">
       <div class="spider">
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-sm-3">
             <div class="sr_t sr_t1">
               <a class="sr_pic" href="">
                 <img src="http://game-tournaments.com/media/logo/_60/pic-20160415-256x187-3994387532.png">
@@ -53,11 +53,11 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-6">
             <div id="spider_chart">
             </div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-3">
             <div class="sr_t sr_t2">
               <a class="sr_pic" href="">
                 <img src="http://game-tournaments.com/media/logo/_60/pic-20160415-256x187-3994387532.png">
@@ -75,29 +75,151 @@
         </div>
       </div>
       
-      <div class="teams_stats">
+      <!-- Graf -->
+      
+      <div class="teams_stats clearfix">
+        <div class="teams_bars ts2">
+          {#<div class="tbs1">
+            <table>
+              <tr>
+                <th>SAFE</th>
+                <td>53</td>
+              </tr>
+              <tr>
+                <th>HARD</th>
+                <td>46</td>
+              </tr>
+              <tr>
+                <th>MID</th>
+                <td class="">53</td>
+              </tr>
+              <tr>
+                <th>FOREST</th>
+                <td>46</td>
+              </tr>
+              <tr>
+                <th><i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="История встреч между командами" class="inf gti-info-circle"></i> GAMES
+                </th>
+                <td class="">53</td>
+              </tr>
+              <tr>
+                <th>
+                 <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Последние 5 матчей команд" class="inf gti-info-circle"></i> 
+                  MATCH 
+                </th>
+                <td class="">53</td>
+              </tr>
+            </table>
+          </div>#}
+          <div class="tbsb">
+            
+             <table class="intable">
+              <tbody>
+                <tr>
+                  <td><span class="red">34</span></td>
+                  <td align="center">SAFE</td>
+                  <td><span class="green">51</span></td>
+                </tr>
+                <tr>
+                  <td><span class="red">59</span></td>
+                  <td align="center">HARD</td>
+                  <td><span class="green">62</span></td>
+                </tr>
+                <tr>
+                  <td><span class="red">52</span></td>
+                  <td align="center">MID</td>
+                  <td><span class="green">69</span></td>
+                </tr>
+                <tr>
+                  <td><span class="red">37</span></td>
+                  <td align="center">FOREST</td>
+                  <td><span class="green">41</span></td>
+                </tr>
+                <tr>
+                  <td><span class="green">23</span></td>
+                  <td align="center">LAST GAMES OF REAMS</td>
+                  <td><span class="red">10</span></td>
+                </tr>
+                <tr>
+                  <td><span class="green">74</span></td>
+                  <td align="center">LAST MATCHES</td>
+                  <td><span class="red">64</span></td>
+                </tr>
+              </tbody>
+            </table>
+           
+            <div class="tcgraf" id="teams_compare"></div>
+          </div>
+          {#
+          <div class="tbs2">
+            <table>
+              <tr>
+                <td>5</td>
+                <th>SAFE</th>
+              </tr>
+              <tr>
+                <td class="">4</td>
+                <th>HARD</th>
+              </tr>
+              <tr>
+                <td>55</td>
+                <th>MID</th>
+              </tr>
+              <tr>
+                <td>44</td>
+                <th>FOREST</th>
+              </tr>
+              <tr>
+                <td class="">53</td>
+                <th>GAMES 
+                <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="История встреч между командами" class="inf gti-info-circle"></i>
+                </th>
+              </tr>
+              <tr>
+                <td class="">53</td>
+                <th>
+                  MATCH 
+                <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Последние 5 матчей команд" class="inf gti-info-circle"></i>
+                </th>
+              </tr>
+            </table>
+          </div>
+          #}
+        </div>
+      </div>
+      
+      {#
+      <div class="teams_stats clearfix">
         <div class="teams_bars">
           <div class="tbs1">
             <table>
               <tr>
-                <th>RANK</th>
+                <th>SAFE</th>
                 <td>53</td>
               </tr>
               <tr>
-                <th>APR</th>
+                <th>HARD</th>
                 <td>46</td>
               </tr>
               <tr>
-                <th>MATCHES</th>
-                <td class="red">53</td>
+                <th>MID</th>
+                <td class="">53</td>
               </tr>
               <tr>
-                <th>WINS</th>
+                <th>FOREST</th>
                 <td>46</td>
               </tr>
               <tr>
-                <th>KDA</th>
-                <td class="green">53</td>
+                <th><i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="История встреч между командами" class="inf gti-info-circle"></i> GAMES
+                </th>
+                <td class="">53</td>
+              </tr>
+              <tr>
+                <th>
+                 <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Последние 5 матчей команд" class="inf gti-info-circle"></i> 
+                  MATCH 
+                </th>
+                <td class="">53</td>
               </tr>
             </table>
           </div>
@@ -108,28 +230,38 @@
             <table>
               <tr>
                 <td>5</td>
-                <th>RANK</th>
+                <th>SAFE</th>
               </tr>
               <tr>
-                <td class="red">4</td>
-                <th>APR</th>
+                <td class="">4</td>
+                <th>HARD</th>
               </tr>
               <tr>
                 <td>55</td>
-                <th>MATCHES</th>
+                <th>MID</th>
               </tr>
               <tr>
                 <td>44</td>
-                <th>WINS</th>
+                <th>FOREST</th>
               </tr>
               <tr>
-                <td class="green">55</td>
-                <th>KDA</th>
+                <td class="">53</td>
+                <th>GAMES 
+                <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="История встреч между командами" class="inf gti-info-circle"></i>
+                </th>
+              </tr>
+              <tr>
+                <td class="">53</td>
+                <th>
+                  MATCH 
+                <i data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="Последние 5 матчей команд" class="inf gti-info-circle"></i>
+                </th>
               </tr>
             </table>
           </div>
         </div>
-        <div class="team_s_t tst1">
+        
+        <!--<div class="team_s_t tst1">
           <table>
             <tr>
               <th>Форма</th>
@@ -152,8 +284,9 @@
               <td>890</td>
             </tr>
           </table>
-        </div>
-        <div class="team_s_t tst2">
+        </div>-->
+        
+        <!--<div class="team_s_t tst2">
           <table>
             <tr>
               <td class="red">34</td>
@@ -176,8 +309,382 @@
               <th>П-П</th>
             </tr>
           </table>
+        </div>-->
+      </div>
+     
+      <hr>
+      
+      
+       <div class="teams_stats clearfix">
+        <div class="teams_bars">
+          <div class="tbs1">
+            <table>
+              <tr>
+                <th>SAFE</th>
+                <td>53</td>
+              </tr>
+              <tr>
+                <th>HARD</th>
+                <td>46</td>
+              </tr>
+              <tr>
+                <th>MID</th>
+                <td class="">53</td>
+              </tr>
+              <tr>
+                <th>FOREST</th>
+                <td>46</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <th></th>
+              </tr>
+              <tr>
+                <th>GAMES
+                </th>
+                <td class="">53</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <th></th>
+              </tr>
+              <tr>
+                <th>
+                  MATCH 
+                </th>
+                <td class="">53</td>
+              </tr>
+            </table>
+          </div>
+          <div class="tbsb">
+            <div id="teams_compare1"></div>
+            <b>Последние 5 матчей команд</b>
+            <div id="teams_compare2"></div>
+            <b>История встреч между командами</b>
+            <div id="teams_compare3"></div>
+          </div>
+          <div class="tbs2">
+            <table>
+              <tr>
+                <td>5</td>
+                <th>SAFE</th>
+              </tr>
+              <tr>
+                <td class="">4</td>
+                <th>HARD</th>
+              </tr>
+              <tr>
+                <td>55</td>
+                <th>MID</th>
+              </tr>
+              <tr>
+                <td>44</td>
+                <th>FOREST</th>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <th></th>
+              </tr>
+              <tr>
+                <td class="">53</td>
+                <th>GAMES 
+                </th>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <th></th>
+              </tr>
+              <tr>
+                <td class="">53</td>
+                <th>
+                  MATCH 
+                </th>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
+<style>
+  .teams_stats .teams_bars {
+    margin: 0px 150px;
+    height: auto;
+  }
+  .tbsb b{
+    text-align: center;
+    display: block;
+    padding: 4px 0 0;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #ccc;
+    font-weight: 300;
+    margin-bottom: -2px;
+  }
+  #teams_compare1{
+    height: 79px;
+    margin: -6px 30px;
+  }
+  #teams_compare2{
+    height:20px;
+    margin: 0 30px;
+  }
+  #teams_compare3{
+    height:20px;
+    margin: 0 30px;
+  }
+</style>
+<script>
+      
+$(function () {
+  $('#teams_compare1').highcharts({
+        colors: ["#3f79a2", "#d94c4c"],
+        chart: {
+          type: 'bar',
+          backgroundColor: 'none',
+          spacingBottom: 5,
+          spacingTop: 5,
+          spacingLeft: 0,
+          spacingRight: 0
+        },
+        credits: {
+          enabled: false
+        },
+        xAxis: {
+           categories: ['SAFE', 'HARD', 'MID', 'FOREST'],
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+         minorTickLength: 0,
+         tickLength: 0,
+          
+        },
+        yAxis: {
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+           minorTickLength: 0,
+           tickLength: 0
+        },
+        title: {
+            enabled: false,
+            text:''
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+              stacking: 'percent',
+              crop: false,
+              title:'',
+              pointPadding: 0.01,
+              groupPadding: 0.15
+            }
+        },
+/*        tooltip: {
+            headerFormat: '',
+            useHTML: true,
+            pointFormat: '{series.name}<br>{point.name}: {point.y}'
+        },*/
+        
+        tooltip : {
+            headerFormat: '',
+            useHTML: true,
+            pointFormat: '{series.name}<br>{point.name}: {point.y}'
+        }, 
+      
+        series: [{
+            name: 'London',
+            data: [
+                  ['SAFE', 53],
+                  ['HARD', 53],
+                  ['MID', 46],
+                  ['FOREST', 53]
+            ],
+            index: 4
+        }, {
+            name: 'Secret',
+            data: [
+                  ['SAFE', 5],
+                  ['HARD', 4],
+                  ['MID', 55],
+                  ['FOREST', 44]
+            ],
+            index: 3
+        }]
+    });
+  
+  $('#teams_compare2').highcharts({
+        colors: ["#3f79a2", "#d94c4c"],
+        chart: {
+          type: 'bar',
+          backgroundColor: 'none',
+          spacingBottom: 5,
+          spacingTop: 5,
+          spacingLeft: 0,
+          spacingRight: 0
+        },
+        credits: {
+          enabled: false
+        },
+        xAxis: {
+           categories: ['GAMES'],
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+         minorTickLength: 0,
+         tickLength: 0,
+          
+        },
+        yAxis: {
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+           minorTickLength: 0,
+           tickLength: 0
+        },
+        title: {
+            enabled: false,
+            text:''
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+              stacking: 'percent',
+              crop: false,
+              title:'',
+              pointPadding: 0.01,
+              groupPadding: 0.1
+            }
+        },
+        tooltip : {
+            headerFormat: '',
+            useHTML: true,
+            pointFormat: '{series.name}<br>{point.name}: {point.y}'
+        }, 
+        series: [{
+            name: 'London',
+            data: [
+                  ['GAMES', 53]
+            ],
+            index: 4
+        }, {
+            name: 'Secret',
+            data: [
+                  ['GAMES', 5]
+            ],
+            index: 3
+        }]
+    });
+  
+  $('#teams_compare3').highcharts({
+        colors: ["#3f79a2", "#d94c4c"],
+        chart: {
+          type: 'bar',
+          backgroundColor: 'none',
+          spacingBottom: 5,
+          spacingTop: 5,
+          spacingLeft: 0,
+          spacingRight: 0
+        },
+        credits: {
+          enabled: false
+        },
+        xAxis: {
+           categories: ['MATCH'],
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+         minorTickLength: 0,
+         tickLength: 0,
+          
+        },
+        yAxis: {
+           lineWidth: 0,
+           minorGridLineWidth: 0,
+           lineColor: 'transparent',
+           labels: {
+               enabled: false
+           },
+          title: {
+            enabled: false
+          },
+           minorTickLength: 0,
+           tickLength: 0
+        },
+        title: {
+            enabled: false,
+            text:''
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+              stacking: 'percent',
+              crop: false,
+              title:'',
+              pointPadding: 0.01,
+              groupPadding: 0.1
+            }
+        },
+        tooltip : {
+            headerFormat: '',
+            useHTML: true,
+            pointFormat: '{series.name}<br>{point.name}: {point.y}'
+        }, 
+        series: [{
+            name: 'London',
+            data: [
+                  ['MATCH', 53]
+            ],
+            index: 4
+        }, {
+            name: 'Secret',
+            data: [
+                  ['MATCH', 5]
+            ],
+            index: 3
+        }]
+    });
+});
+
+      
+</script>
+     
+     
+     #}
       
     </div><!-- block-content -->
   </div><!-- block -->

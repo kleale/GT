@@ -861,5 +861,172 @@
   }
 }
 
+.block-plw{
+    margin-bottom: 25px;
+    background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
+    border: 1px solid rgb(74, 88, 101);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  .plw{
+    overflow: hidden;
+    position: relative;
+  }
+  .logo{
+    display: block;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    float: left;
+    width: 60px;
+    margin: 10px;
+    &:hover{
+      color: #2faee7;
+    }
+    figure{
+      margin: 0;
+      img{
+        max-width: 100%;
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px #4a5865;
+      }
+    }
+    b{
+      position: absolute * -6px -20px *;
+      border-radius: 50%;
+      text-align: center;
+      width: 30px;
+      line-height: 30px;
+      background: #4a5865;
+      display: block;
+      z-index: 3;
+      @media (min-width: $XXL) {
+        position: absolute * -16px -1px *;
+      }
+      img{
+        width: 80%;
+      }
+    }
+  }
+  .name{
+    display: block;
+    font-size: 16px;
+    padding: 13px 0 0 0;
+    margin-left: 90px;
+    @media (min-width: $XXL) {
+      margin-left: 100px;
+    }
+    img{
+      width: 21px;
+      vertical-align: text-top;
+    }
+    em{
+      font-size: .7em;
+      font-style: normal;
+      color: #ccc;
+      display: block;
+      line-height: 1.2;
+    }
+  }
+  .hits{
+    display: block;
+    padding: 5px 0 10px;
+    font-size: 16px;
+    margin-left: 90px;
+    
+    @media (min-width: $XXL) {
+      position: absolute 16px 10px * *;
+      margin: 0;
+      padding: 0;
+      span{
+        display: none;
+      }
+      b{
+        color: #ed7b2e;
+        width: 70px;
+        display: block;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 30px;
+        border: 1px solid;
+        font-size: 21px;
+      }
+    }
+    
+    b{
+      color: #ed7b2e;
+    }
+  }
+  .table{
+    margin-bottom: 0;
+    .nick{
+      margin-top: 4px;
+      img{
+        vertical-align: text-top;
+      }
+      span{
+        font-size: .8em;
+      }
+    }
+    .ava-sm{
+      border-color:  #4a5865;
+      &:hover{
+        color: #2faee7;
+      }
+    }
+    b{
+      font-size: 13px;
+    }
+  }
+}
+
+.mlh-sm small{
+  display: block;
+  padding: 3px;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 90%;
+}
+
+.block-bs{
+  .hits{
+    display: block;
+    position: relative;
+    margin-left: 100px;
+    top: 0;
+    right: 0;
+    em{
+      font-size: .7em;
+      font-style: normal;
+      color: #ccc;
+      display: block;
+      line-height: 1.2;
+    }
+  }
+  .beststrike{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/lasthit6.svg);
+    vertical-align: middle;
+    position: absolute * -12px -1px *;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

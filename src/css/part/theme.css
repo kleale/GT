@@ -602,7 +602,10 @@ Tabs mobile
     border-radius: 1px;
 }
 .progress-bar-danger {
-    background-color: #d62f0c;
+    background-color: #d94c4c;
+}
+.progress-bar-primary {
+    background-color: #3f79a2;
 }
 .progress {
     background-color: #3f464c;

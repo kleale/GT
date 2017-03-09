@@ -83,8 +83,7 @@
     
     @media (max-width: $XM){
       text-align: center;
-      margin-bottom: 50px;
-      margin-right: 0px;
+      margin: 0px;
     }
     
     > div{
@@ -117,7 +116,7 @@
     
     @media (max-width: $XM){
       text-align: center;
-      margin-left: 0px;
+      margin: 0px;
     }
     
     > div{
@@ -180,19 +179,20 @@
 }
 .teams_stats{
   position: relative;
-  min-height: 90px;
-  overflow: hidden;
   td, th{
      font-size: 12px;
   }
   .teams_bars{
-    margin:0 200px;
+    margin: 0 200px;
     height: 100px;
-    
-    @media (max-width: $XM){
-        margin: 20px 0;
+    &.ts2{
+      height: auto;
+      margin: 0 10%;
     }
-    .tbs1, .tbs2{
+    @media (max-width: $XM){
+      margin: 20px 0;
+    }
+    /*.tbs1, .tbs2{
       width:100px;
       table{
         width:100%;
@@ -205,7 +205,7 @@
         }
         td{
           text-align: right;
-          color:$text-gray-3;
+          color: #e4e4e4;
           padding: 0px 5px;
         }
       }
@@ -219,15 +219,52 @@
     }
     .tbs2{
       float: right;
-    }
+    }*/
     
     .tbsb{
-      float: left;
-      width: calc(100% - 200px);
+      /*float: left;*/
+      /*width: calc(100% - 200px);*/
+      position: relative;
+      .tcgraf{
+        position: absolute -6px 10px -7px 10px;
+        margin: 0 20%;
+        z-index: 1;
+        /*height: 149px;*/
+      }
+      .intable{
+        position: relative;
+        z-index: 2;
+        width: 100%;
+
+        tr{
+          background: transparent;
+          td {
+              font-size: 14px;
+              padding: 3px 5px;
+              height: 20px;
+            &:first-child {
+                text-align: right;
+                color: #fff;
+                width: 20%;
+            }
+            &:nth-child(2) {
+                text-transform: uppercase;
+                font-size: 11px;
+                color: #fff;
+                text-shadow: 0 1px 1px #000;
+            }
+            &:last-child {
+                text-align: left;
+                color: #fff;
+                width: 20%;
+            }
+          }
+        }
+      }
     }
   }
     
-  .team_s_t{
+/*  .team_s_t{
     position: absolute 0 * * 0;
     text-transform: uppercase;
     font-size: 12px;
@@ -260,7 +297,6 @@
         }
       }
     }
-
     &.tst2{
       position: absolute 0 0 auto auto;
       
@@ -276,17 +312,18 @@
         margin: 20px 0;
       }
     }
-    
-    
-  }
+  }*/
   
 }
 
 #teams_compare{
-  height:95px;
   margin: -5px 30px;
 }
-
+.ts2{
+  #teams_compare{
+    margin: 0 20%;
+  }
+}
 
 
 

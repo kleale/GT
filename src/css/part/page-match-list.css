@@ -159,7 +159,7 @@
   }
   .times{
     position: absolute 7px 10px * *;
-    z-index: 2;
+    z-index: 12;
     
     &:hover,
     &:focus,
@@ -341,7 +341,7 @@
     @media (max-width: $M){
       width:auto;
       font-size: 12px;
-      white-space: normal;
+/*      white-space: normal;*/
       line-height: 1;
     }
     @media (max-width: $SM){
@@ -946,6 +946,9 @@
       }
     }
   }
+}
+.bootstrap-switch-container{
+  height: 26px;
 }
 .tresult {
   &:hover{
