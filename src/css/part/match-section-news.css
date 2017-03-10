@@ -243,36 +243,7 @@
           font-size: 12px;
         }
       }
-      /*
-      &.wp{
-        a.npic-sm{
-          position: absolute 0 * * 0;
-          width: 70px;
-          display: block;
-          
-          &:after {
-            content: '';
-            display: block;
-            background: #363b40;
-            height: 100%;
-            width: 10px;
-            top: 0;
-            right: -6px;
-            bottom: 0;
-            position: absolute;
-            transform: skew(-10deg);
-            border-left: 1px solid #454a4e;
-          }
-          img{
-            width: 100%;
-          }
-        }
-        
-        div{
-          padding-left: 65px;
-        }
-      }
-      */
+
       div{
         line-height: 1.4;
         font-size: 13px;

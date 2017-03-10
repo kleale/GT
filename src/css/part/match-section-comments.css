@@ -20,24 +20,12 @@
 }
 .comblock{
   position: relative;
-  /*
-  height: 550px;
-  */
   .chat-action{
     position: absolute * 0 0 0;
   }
   
   .tse-com{
-    padding-bottom: 90px;
-    /*
-    position: absolute 0 0 60px 0;
-    */
-    /*tse*/
-    /*
-    overflow-x: hidden;
-    overflow-y: auto;
-    */
-    /* /tse*/
+    padding-bottom: 60px;
   }
   
   .m-com-list{
@@ -46,8 +34,15 @@
     list-style: none;
 
     li{
-      margin: 15px 0 0 0;
-
+      margin: 0 0 15px 0;
+      background: #31373a;
+      padding: 10px;
+      &:nth-child(even){
+        background: #3b4145;
+      }
+      &:last-child{
+        margin: 0;
+      }
       a{
         float: left;
         width:35px;
@@ -60,7 +55,7 @@
       }
       div{
         margin-left: 50px;
-        font-size: 13px;
+        font-size: 12px;
 
         b{
           color: #fff;
@@ -68,6 +63,7 @@
         }
         span{
           color: color($text-gray-3 l(60%));
+          font-size: 11px;
         }
         p{
           color: $text-gray-3;

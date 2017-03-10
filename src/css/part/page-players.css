@@ -183,12 +183,39 @@ player.html
     max-height: 485px;
     
     @media (max-width: $XM) {
-      max-width: 200px;
-      height: 200px;
+      max-height: 300px;
     }
     img{
       display: inline-block;
       width: 100%;
+    }
+    i{
+      font-size: 210px;
+      margin: 25px 0 0;
+      display: block;
+      opacity: .6;
+      @media (max-width: $XM) {
+        font-size: 210px;
+        margin: 15px 0 0;
+      }
+      &.gti-582{
+        color: rgb(164, 39, 16);
+      }
+      &.gti-704{
+        color: #dbd4c8;
+      }
+      &.gti-313{
+        color: #d4be58;
+      }
+      &.gti-800{
+        color: #fa9c1e;
+      }
+      &.gti-755{
+        color: #0091d3;
+      }
+      &.gti-hots{
+        color: #77bbcb;
+      }
     }
   }
   .tLogo {
@@ -546,11 +573,12 @@ player.html
     padding: 0 10px;
     font-size: 24px;
   }
-  a.btn{
+  a.btn.all{
     position: relative;
     z-index: 10;
     margin-top: 10px;
     margin-right: 10px;
+    float: right;
   }
 }
 

@@ -571,6 +571,11 @@ section.hero{
     width: 100%;
     white-space: normal;
   }
+  @media (min-width: 1600px){
+    th{
+      height: 48px;
+    }
+  }
   thead{
     th{
       text-align: center;

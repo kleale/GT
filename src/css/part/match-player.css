@@ -36,7 +36,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 1;
   @media (max-width: $XM){
     position: relative;
   }
@@ -54,7 +54,7 @@
   padding: 0;
   background-image: inline(../img/nav-line1.png);
   background-repeat: no-repeat;
-  background-position: 0 100%;
+  background-position: 0 99%;
   margin: 0;
   
   li{
@@ -221,6 +221,9 @@
     @media (max-width: 450px){
       height: 250px;
     }
+    > *{
+      float: left;
+    }
     &.active{
       .subs{
         display:none;
@@ -229,42 +232,17 @@
         display:none;
       }
     }
-    .white_noize{
-      position: absolute 0 0 0 0;
-      background: url(../img/whitenoise2.gif) no-repeat 0 0;
-      background-size: cover;
-      
-      &:after{
-        content:'';
-        position: absolute 0 0 0 0;
-        background: #1b3540;
-        opacity: .8;
-      }
-      
-      .nostream{
-        position: absolute 50% * * *;
-        width: 100%;
-        margin-top: -30px;
-        color: #037db5;
-        text-align: center;
-        font-size: 13px;
-        text-transform: uppercase;
-        z-index: 2;
-        i{
-          font-size: 50px;
-          display: block;
-        }
-      }
-    }
   }
-  
+
   .iframerClicker{
-    position: absolute 0 0 0 0;
+    /*position: absolute 0 0 0 0;*/
+    position: relative;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
     background-color: #111;
+    display: inline-block;
     &:before{
       content:'';
       display: block;
@@ -382,6 +360,34 @@
   }
 }
 
+.white_noize{
+  position: absolute 0 0 0 0;
+  background: url(../img/whitenoise2.gif) no-repeat 0 0;
+  background-size: cover;
+
+  &:after{
+    content:'';
+    position: absolute 0 0 0 0;
+    background: #1b3540;
+    opacity: .8;
+  }
+
+  .nostream{
+    position: absolute 50% * * *;
+    width: 100%;
+    margin-top: -30px;
+    color: #037db5;
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    z-index: 2;
+    i{
+      font-size: 50px;
+      display: block;
+    }
+  }
+}
+
 .fullscreener{
   position: absolute 15px 15px * *;
   z-index: 2;
@@ -466,10 +472,10 @@
 
 
 .subs{
-  position: absolute * 43px 110px 43px;
+  position: absolute * 0px 0px 0px;
   z-index: 2;
-  padding: 10px 25px;
-  background: rgba(0, 0, 0, 0.8);
+  padding: 15px 15px 10px;
+  background: rgba(0, 0, 0, 0.6);
   
   @media (max-width: 1599px) {
     position: absolute * 0px 0 0px;
@@ -491,10 +497,9 @@
       text-transform: uppercase;
       font-size: 11px;
       color: $text-main;
-      display: block;
-      padding: 0px;
-      float: left;
-      margin-right: 15px;
+      display: table-cell;
+      vertical-align: middle;
+      padding-right: 15px;
       line-height: 1.5;
       @media (max-width: 599px) {
         display: none;
@@ -504,21 +509,8 @@
       display: table-cell;
       position: relative;
       vertical-align: top;
-
-      .btn-group{
-        display: block;
-      }
-
-      button,
-      input{
-        display: block;
-        width:97%;
-      }
-
-      > div{
-        @media (max-width: $XM){
-          width:100%;
-        }
+      > .btn-group{
+        float: right;
       }
     }
   }
@@ -552,7 +544,6 @@
   li{
     transition: $tease;
     padding: 5px 15px;
-    /*opacity: .5;*/
     position: relative;
     overflow: hidden;
     
@@ -700,7 +691,7 @@
       cursor: pointer;
 
       &:after{
-        content:'';
+        content: '\f00c';
       }
       &:hover{
         opacity: 1;
@@ -859,10 +850,9 @@ Video after stream
 */
 .player-video{
   .nav-wr{
-    background: #191E21;
+    background-color: #191E21;
     background-image: inline(../img/tile.png);
     background-repeat: repeat;
-    background-position: center;
     border-bottom: 1px solid #2c3135;
   }
   .mobmenu{
@@ -1048,6 +1038,9 @@ Video after stream
             }
             &.lPH {
               background-image: url(/media/flag/29.png);
+            }
+            &.lTH {
+              background-image: url(/media/flag/30.png);
             }
           }
           &.g-d2m {

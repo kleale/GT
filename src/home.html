@@ -3,54 +3,81 @@
 <!DOCTYPE html>
 <html>
 {% include "template/head.html" %}
-<body class="">
+<body class="index">
 
   <div class="container mainwrap">
     {% include "template/breadcrumbs.html" %}
     <div class="otstup">
-    
-      <section class="player" id="player">
-        <div id="srteamslider" class="toggled_stream srteamslider branded" rel="XXX">
-          <div class="srteamview clearfix" id="mainstream">
-            {% include "template/match-page/player-html5.html" %}
-          </div>
-          <div class="srteamtoggle">
-            <div class="st_inner">
-              <div class="stream_action">
-                <!--<span class="st-btn active" id="stream-toggle"><i class="gti-bars"></i></span>
-                <span class="st-btn odtip" id="stream-expand" title="Развернуть на весь экран"><i class="gti-expand"></i></a>-->
-                <ul id="stream_menu" class="player-menu" role="tablist">
-                  <li rel="stream"  class="active">
-                    <a role="tab" data-toggle="tab" href="#player-streams"><i class="gti-video-camera"></i>
-                    <span>Трансляции</span></a>
-                  </li>
-                  <li rel="stat" title="Статистика">
-                   <a role="tab" data-toggle="tab" href="#player-stat"><i class="gti-pie-chart"></i>
-                    <span>Статистика</span></a>
-                  </li>
-                  <li id="achat" rel="log">
-                    <a role="tab" data-toggle="tab" href="#player-log"><i class="gti-list-ul"></i>
-                    <span>Лог матча</span></a>
-                  </li>
-                  <li id="achat" rel="chat">
-                    <a role="tab" data-toggle="tab" href="#player-chat"><i class="gti-comments-o"></i>
-                      <span>Чат матча</span></a>
-                  </li>
-                </ul>
-              </div>
+      <div class="indexwrap">
+        <section class="hpower" style="background-image:url(../img/w-home.jpg)">
+          <div>
+            <h3 class="mlh"><i class="gti-gt2"></i> This is BETA version <br> of the new esport portal!</h3>
+            <h4 class="mlh"><span>explore now!</span></h4>
 
-              <div id="stmblocks" class="stmblocks tab-content">
-                  {% include "template/match-list/player-streams-by-teams.html" %}
-                  {% include "template/match-page/player-stat.html" %}
-                  {% include "template/match-page/player-chat.html" %}
-                  {% include "template/match-page/player-log.html" %}
-              </div>
+            <div class="icons">
+              <span>
+                <i class="gti-vs"></i>
+                <b>Matches & Live Streams</b>
+              </span>
+              <span>
+                <i class="gti-trophy"></i>
+                <b>Tournaments</b>
+              </span>
+              <span>
+                <i class="gti-newspaper-o"></i>
+                <b>Cybersport News</b>
+              </span>
+              <span>
+                <i class="gti-users"></i>
+                <b>Teams stats & ratings</b>
+              </span>
+              <span>
+                <i class="gti-user"></i>
+                <b>Players stats</b>
+              </span>
+              <span>
+                <i class="gti-swords"></i>
+                <b>Highlights <em class="label label-primary">NEW</em></b>
+              </span>
+              <span>
+                <i class="gti-play-circle-o"></i>
+                <b>Match vods with logs</b>
+              </span>
             </div>
+            <h4 class="mlh" style="margin:30px 0 0"><span>Games in progress!</span></h4>
           </div>
+        </section>
+
+        <div class="hgames">
+          <a href="" style="background-image:url(../img/w-582.jpg)">
+            <i class="gti-582"></i>
+            <b>DOTA 2</b>
+            <em>90%</em>
+          </a>
+          <a href="" style="background-image:url(../img/w-704.jpg)">
+            <i class="gti-704"></i>
+            <b>Counter-Strike: GO</b>
+            <em>50%</em>
+          </a>
+          <a href="" style="background-image:url(../img/w-313.jpg)">
+            <i class="gti-313"></i>
+            <b>League of Legends</b>
+            <em>70%</em>
+          </a>
+          <a href="" style="background-image:url(../img/w-800.jpg)">
+            <i class="gti-800"></i>
+            <b>Overwatch</b>
+            <em>60%</em>
+          </a>
+          <a href="" style="background-image:url(../img/w-755.jpg)">
+            <i class="gti-755"></i>
+            <b>HEARTHSTONE</b>
+            <em>30%</em>
+          </a>
         </div>
-      </section><!-- /m-player" -->
-
-
+      </div>
+    
+    {#
       <section class="m-sec m-even">
         <div class="mlist-wr">
           <div class="mlist">
@@ -61,22 +88,13 @@
           </div>
         </div>
       </section>
-
-
-      <section id="m-news" class="m-sec m-even">
-        <div class="row">
-          <div class="col-md-7">
-            {% include "template/match-page/section-news.html" %}
-          </div>
-          <div class="col-md-5">
-            {% include "template/match-page/section-soc.html" %}
-          </div>
-        </div>
-      </section>
-
+    #}
+    {#
       <div class="bn">
         <img src="../img/ad.jpg" alt="">
       </div>
+    #}
+     
       {% include "template/footer.html" %}
     </div>
   </div>

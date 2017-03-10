@@ -16,9 +16,6 @@ Branding - Match of the day
     color: #fff;
   }
 }
-.menu-open .abg{
-  /*left: 170px;*/
-}
 .abg_wrap{
   position: relative;
   max-width: 1200px;
@@ -111,9 +108,6 @@ Branding - Match of the day
     right: 100%;
     width: 170px;
     top: 0;
-  @media (max-width: $XM) {
-    
-  }
 }
 .abg_right{
     display: block;
@@ -271,7 +265,6 @@ Branding - Match of the day
     font-size: 32px;
     font-weight: bold;
     text-align: center;
-	
 	opacity: .7;
 	transition: all .3s linear;
 }
@@ -525,11 +518,7 @@ Branding - Match of the day
   }
 }
 
-
-
-/*-------------------------------------*/
 /* Live banner */
-/*-------------------------------------*/
 .ablive{
   height:90px;
   overflow:hidden;
@@ -637,10 +626,7 @@ Branding - Match of the day
     text-transform: uppercase;
     height: 93px;
     text-shadow: 0 0 15px #10c7f9;
-	background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 25%, rgba(0,0,0,0.65) 98%);
-	background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 25%,rgba(0,0,0,0.65) 98%);
 	background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 25%,rgba(0,0,0,0.65) 98%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );
 }
 .abl_tms{
 	max-width: 400px;
@@ -755,8 +741,6 @@ Branding - Match of the day
 	left: auto;
 	right:106px;
 }
-
-
 
 @media (max-width : 1000px) {
 	.ablive{
@@ -880,9 +864,7 @@ Branding - Match of the day
 }
 
 /* 
-============================== 
 LIVE BLOCK
-=================================
 */
 .livebet{
   font-size: .9em;

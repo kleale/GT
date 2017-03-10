@@ -143,17 +143,6 @@
         color:$link-light-blue;
         border-radius: 50px;
       }
-      /*
-      &.prr{
-        a{
-          padding: 4px 0;
-          width: 24px;
-          margin: 4px 2px;
-          display: inline-block;
-          height: 24px;
-        }
-      }
-      */
     }
   }
   
@@ -268,7 +257,19 @@
 
 .fights{
   margin-bottom: 15px;
-  
+  &.grid-sm{
+    .inliner{
+      .bestEvent{
+        width: 45%;
+        margin: 0 2.3% 15px 2.3%;
+        
+        @media (max-width: $SM) {
+          width: 100%;
+          margin: 0 0 15px 0;
+        }
+      }
+    }
+  }
   .iconFights{
     width: 30px;
     height: 30px;

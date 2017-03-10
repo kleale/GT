@@ -104,11 +104,12 @@ match-vid.css
             margin-top: 2px;
           }
           .name{
-            width: 110px;
-            @media (max-width: $SM){
-              a{
-                font-size: 13px;
-              }
+            width: 130px;
+            @media (min-width: $XXL){
+              width: 150px;
+            }
+            @media (max-width: $L){
+              width: 120px;
             }
             @media (max-width: $XM){
               text-align: center!important;
@@ -116,6 +117,11 @@ match-vid.css
               max-width: 100%;
               width: 100%;
               margin: 10px 0 0 0;
+            }
+            @media (max-width: $SM){
+              a{
+                font-size: 13px;
+              }
             }
             span{
               display: block;
@@ -151,7 +157,7 @@ match-vid.css
               }
               @media (max-width: $SM){
                 margin: 2px 0 0 0;
-                display: block;
+                display: inline-block;
               }
             }
           }
@@ -161,6 +167,9 @@ match-vid.css
           margin: 0 8px;
           a{
             font-size: 16px;
+            &.standin{
+              border-bottom: 1px dashed #3f79a2;
+            }
           }
           span{
             font-size: 10px;

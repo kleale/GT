@@ -1,31 +1,158 @@
 /* page-home.css */
 
-.gametopsel{
-  display: table;
-  table-layout: fixed;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  list-style: none;
-  width: 100%;
-  border: 1px solid rgba(238,238,238,0.1);
+.indexwrap{
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3); 
+}
+.index{
+  .footer{
+    background: #18252d url(../img/spoiler.png) center repeat;
+  }
+}
+.hpower{
+  overflow: hidden;
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
+  position: relative;
   
-  li{
-    display: table-cell;
-    opacity: .3;
-    padding: 8px 0;
-    transition: $tease;
-    
-    &.active,
-    &:hover{
-      opacity: 1;
-    }
-    a{
+  &:before{
+    content: '';
+    display: block;
+    position: absolute 0 0 0 0;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 300px rgba(3, 169, 244, 0.3) inset;
+    border: 1px solid rgba(3, 169, 244, 0.3);
+  }
+  >div{
+    z-index: 1;
+    padding: 50px 0 0;
+    position: relative;
+    text-align: center;
+    i{
       display: block;
-      img{
-        max-width: 37px;
-        width: 100%;
+      text-align: center;
+      font-size: 160px;
+      margin-bottom: 0px;
+      color: #7faec3;
+    }
+    h3{
+      color: #eee;
+      font-weight: 300;
+      font-size: 30px;
+      margin: 0 10% 45px;
+      padding: 0;
+      span{
+        &:before,
+        &:after{
+          margin-top: -27px;
+        }
       }
     }
-  } 
+    .icons{
+      text-align: center;
+      margin: 10px 10%;
+      span{
+        display: inline-block;
+        vertical-align: top;
+        color: #7faec3;
+        margin: 15px;
+        font-size: 14px;
+        text-transform: uppercase;
+        width: 100px;
+        i{
+          display: block;
+          font-size: 30px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+.hgames{
+  background: #0f191f  url(../img/spoiler.png) center repeat;
+  overflow: hidden;
+  padding: 0 1px;
+  a{
+    display: block;
+    float: left;
+    width: 20%;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    color: #acddf3;
+    padding: 30px 10px;
+    border-top: 2px solid #111;
+    border-left: 1px solid #111;
+    border-right: 1px solid #111;
+    border-bottom: 2px solid #111;
+    box-shadow:  0 0 2px rgb(3, 169, 244) inset;
+    
+    &:hover,
+    &:focus,
+    &:active{
+      text-decoration: none;
+      color: #eee;
+      
+      &:before{
+        box-shadow: 0 0 100px rgba(3, 169, 244, 0.53) inset;
+      }
+    }
+    &:before{
+      content: '';
+      display: block;
+      position: absolute 0 0 0 0;
+      background: rgba(0, 0, 0, 0.65);
+      transition: $tease;
+      box-shadow: 0 0 100px rgba(18, 45, 66, 0.81) inset;
+    }
+    > i,
+    > b,
+    >em{
+      position: relative;
+      z-index: 1;
+    }
+    i{
+      display: block;
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #7faec3;
+      &.gti-582{
+        color: rgb(164, 39, 16);
+      }
+      &.gti-704{
+        color: #dbd4c8;
+      }
+      &.gti-313{
+        color: #d4be58;
+      }
+      &.gti-800{
+        color: #fa9c1e;
+      }
+      &.gti-755{
+        color: #0091d3;
+      }
+      &.gti-hots{
+        color: #77bbcb;
+      }
+    }
+    b{
+      display: block;
+    }
+    em{
+      font-weight: 200;
+      display: inline-block;
+      font-style: normal;
+      font-size: 20px;
+      margin-top: 10px;
+      border-radius: 60px;
+      width: 80px;
+      height: 41px;
+      line-height: 40px;
+      border: 1px solid rgba(127, 174, 195, 0.40);
+    }
+  }
 }

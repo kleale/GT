@@ -6,6 +6,8 @@
   display: table;
   width: 100%;
   text-align: center;
+  background-color: #152b35;
+  font-size: 11px;
   
   span{
     transition: $tease;
@@ -16,13 +18,13 @@
     cursor: pointer;
       
     &.active{
-      color:#c5d8ed;
-      background: #12232d;
+      color: #c5d8ed;
+      background: #037db5;
     }
     &:hover,
     &:active,
     &:focus{
-      color:#c5d8ed;
+      color: #c5d8ed;
     }
   }
 }

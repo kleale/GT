@@ -123,10 +123,11 @@
     list-style: none;
     margin: 10px;
     display: inline-block;
-    filter: grayscale(1);
-    
     &.active{
-      filter: grayscale(0);
+      a{
+        color: #fff;
+        opacity: 1;
+      }
     }
     a{
       display: block;
@@ -136,15 +137,34 @@
       opacity: .8;
       
       &:hover,
-      &:active,
+      &:focus,
       &:active {
         opacity: 1;
         text-decoration: none;
-        filter: grayscale(0);
       }
-      img{
-        width: 30px;
+      i{
+        font-size: 25px;
+        display: block;
+        text-align: center;
         margin-bottom: 5px;
+        &.gti-582{
+          color: rgb(164, 39, 16);
+        }
+        &.gti-704{
+          color: #dbd4c8;
+        }
+        &.gti-313{
+          color: #d4be58;
+        }
+        &.gti-800{
+          color: #fa9c1e;
+        }
+        &.gti-755{
+          color: #0091d3;
+        }
+        &.gti-hots{
+          color: #77bbcb;
+        }
       }
     }
   }

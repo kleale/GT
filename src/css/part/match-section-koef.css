@@ -29,8 +29,6 @@
         float: none;
         text-align: center;
         margin-bottom: 15px;
-        /*padding-bottom: 10px;
-        border-bottom: 1px solid color($bg-main l(40%));*/
       }
       li{
         display: inline-block;
@@ -192,19 +190,23 @@
       border-top:0;
       padding: 7px 5px;
       vertical-align: middle;
+      width: 20%;
       
       &:first-child{
-        padding-left: 10px;
+        padding-left: 5px;
+        text-align: center;
       }
       &:last-child{
-        padding-right: 10px;
+        padding-right: 5px;
       }
     }
     
     .td-tn1{
       text-align: right;
     }
-    
+    .td-tn2{
+      
+    }
     .tn1, .tn2{
       white-space: nowrap;
       display: inline-block;
@@ -215,7 +217,6 @@
       font-weight: 300;
       color: $link-white;
       vertical-align: middle;
-      
       @media (max-width: $M){
         width:auto;
         font-size: 12px;
@@ -223,7 +224,6 @@
         line-height: 1;
       }
     }
-    
     .tkf{
       white-space: nowrap;
       font-size: 14px;
@@ -232,27 +232,31 @@
         font-size: 12px;
         font-weight: 600;
       }
-      
-      .kbig{
-        color: #6fcf58;
-      }
-      .ksm{
-        color: #ef5454;
-      }
-      sup{
-        
+      span{
+        display: inline-block;
+        min-width: 36px;
+        &:first-child{
+          text-align: right;
+        }
+        &.kbig{
+          color: #6fcf58;
+        }
+        &.ksm{
+          color: #ef5454;
+        }
       }
     }
     .td-btn{
       text-align: right;
+      a{
+        padding-right: 6px;
+        padding-left: 6px;
+      }
     }
   }
   .bl{
     width: 100%;
     max-width: 70px;
-    @media (max-width: $M){
-      width: 30px;
-    }
   }
   .bc-bottom{
     padding: 5px; 
