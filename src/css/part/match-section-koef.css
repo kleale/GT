@@ -478,14 +478,20 @@
   }
 }
 .no100{
-  border: 2px solid;
+  border: 1px solid #39444c;
   color: #4d5963;
   text-align: center;
   font-size: 12px;
   padding: 30px;
-  margin: 15px 0;
+  margin: 0;
   text-transform: uppercase;
   font-weight: bold;
+  background:rgba(145, 205, 215, 0.02) url(../img/spoiler.png) 0 0 repeat;
+  position: relative;
+  >div{
+    position: absolute 50% 0 * 0;
+    transform: translate(0, -50%);
+  }
 }
 .graf{
   background: #2D3C48;

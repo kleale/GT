@@ -9,8 +9,17 @@ body{
   }
 }
 .mainwrap{
-  padding-top: 120px;
+  padding-top: 60px;
   position: relative;
+  @media (max-width: $SM) {
+    padding-top: 45px;
+  }
+  &.pad120{
+    padding-top: 120px;
+    @media (max-width: 800px) {
+      padding-top: 160px;
+    }
+  }
 }
 .otstup{
   position: relative;

@@ -14,7 +14,7 @@ section.hero{
   overflow: hidden;
   border-top: 1px solid rgb(46, 51, 55);
   
-  @media (max-width: $SM){
+  @media (max-width: $XM){
     padding: 20px;
     margin-bottom: 0px;
     min-height: 0;
@@ -70,7 +70,7 @@ section.hero{
 .temsList{
   margin-left: -30px;
   @media (max-width: $XM){
-    margin: 0px -14px;
+    margin: 5px -14px 0;
   }
   thead{
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -109,7 +109,7 @@ section.hero{
         }
         @media (max-width: $SM){
           display: inline-block;
-          max-width: 30px;
+          max-width: 100%;
           overflow: hidden;
           text-overflow: ellipsis;
           vertical-align: inherit;
@@ -526,10 +526,18 @@ section.hero{
 .spider_chart_team{
   height: 360px;
   margin-bottom: 50px;
+  @media (max-width: $SM){
+    height: 180px; 
+    margin: 40px 0;
+  }
 }
 .pageTeam .spider_chart_team{
   height: 310px;
   margin-bottom: 30px;
+  @media (max-width: $SM){
+    height: 180px; 
+    margin: 40px 0;
+  }
 }
 
 .grphilter{
@@ -647,5 +655,11 @@ section.hero{
   }
 }
 
-
+.team-matches .block_matches_past .mtable .tdate{
+  padding-right: 15px!important;
+  @media (max-width: $XM){
+    padding-right: 15px!important;
+    text-align: right;
+  }
+}
 

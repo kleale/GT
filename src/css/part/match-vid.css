@@ -18,6 +18,8 @@ match-vid.css
       z-index: 2;
       @media (max-width: $SM){
         margin: 0 23%;
+        top: -7px;
+        bottom: -6px;
       }
     }
     &.gh4{
@@ -202,11 +204,9 @@ match-vid.css
             font-size: 11px;
             padding: 3px 5px;
             height: 17px;
-            
             @media (max-width: $SM){
               font-size: 9px;
             }
-            
             &:first-child{
               text-align: right;
               color: #fff;
@@ -218,6 +218,9 @@ match-vid.css
               font-size: 9px;
               color: #fff;
               text-shadow: 0 1px 1px #000;
+              @media (max-width: $SM){
+                font-size: 8px;
+              }
             }
             &:last-child{
               text-align: left;
@@ -250,9 +253,15 @@ match-vid.css
 .rezult.rhide {
   background: #000;
   padding: 0;
+  overflow-y: auto;
   img{
-    position: absolute 50% 0 * 0;
-    transform: translate(0,-50%);
+    /*position: absolute 50% 0 * 0;
+    transform: translate(0,-50%);*/
+    width: auto !important;
+    height: 80% !important;
+    transform: translate(0, -50%);
+    top: 50%;
+    position: relative;
   }
 }
 .rezult {

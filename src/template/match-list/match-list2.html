@@ -19,7 +19,7 @@
 </script>
  
   <div class="block mlt">
-    {#
+    <!--
     <div class="bh">
       <div class="rigter">
         <i class="gti-undo" id="refresher"></i>
@@ -66,8 +66,97 @@
           <li><a href="javascript:;" onclick="mfilter('team',12692);">4 DAUNA I GRISHKA / 4 DAUNA I GRISHKA</a></li>
         </ul>
       </div>
-    </div><!-- bh -->
-    #}
+    </div>
+    -->
+    
+    
+    <div class="bh">
+      <h1 class="mH1">Матчи Dota 2</h1>
+      <div class="ft">
+       <!-- <div class="ft1">
+          <h1 class="mH1">Матчи Dota 2</h1>
+        </div>-->
+        <div class="ft2">
+          <div class="mlt-filter">
+            <input id="mlt-filter" type="text" value="" placeholder="Команда или турнир..." class="form-control team input-sm" autocomplete="off">
+            <a href="" class="sicon"></a>
+            <ul class="dropdown-menu" id="#t1">
+              <li class="dropdown-header">Выбери команду</li>
+              <li><a href="javascript:;" onclick="mfilter('team',5806);">4manDOTA+Dnarek / 4manDOTA+Dnarek</a></li>
+              <li><a href="javascript:;" onclick="mfilter('team',6537);">4ChertaiSatana / 4ChertaiSatana</a></li>
+              <li><a href="javascript:;" onclick="mfilter('team',7034);">4 Classmates + Konama / 4 Classmates + Konama</a></li>
+              <li><a href="javascript:;" onclick="mfilter('team',8223);">4 Dragons and Snake / 4 Dragons and Snake</a></li>
+              <li><a href="javascript:;" onclick="mfilter('team',8288);">"NO"NAME" / "NO"NAME"</a></li>
+              <li><a href="javascript:;" onclick="mfilter('team',8430);">#DeaD!DyNasTy# / #DeaD!DyNasTy#</a></li><li><a href="javascript:;" onclick="mfilter('team',10033);">2K Ownage / 2K Ownage</a></li>
+              <li><a href="javascript:;" onclick="mfilter('team',11925);">#PINASmile / #PINASmile</a></li><li><a href="javascript:;" onclick="mfilter('team',12549);">-Banana Esports- / -Banana Esports-</a></li>
+              <li><a href="javascript:;" onclick="mfilter('team',12692);">4 DAUNA I GRISHKA / 4 DAUNA I GRISHKA</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="ft3">
+          <label class="checkbox-inline1 tip" title="Показать\скрыть счет">
+            <input type="checkbox" name="score1">
+          </label>
+        </div>
+        <div class="ft4">
+          <div class="dropdown">
+            <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"><i class="gti-clock-o"></i> <span class="utime">09:57 MSK</span> <span class="caret"></span></button>
+            <div class="dropdown-backdrop"></div>
+            <ul class="dropdown-menu timezone">
+              <li>
+                <input class="elapsed" type="checkbox" name="elapsed" onclick="set_elapsed(this.checked)"> Время до матча</li>
+              <li rel="-720"><a href="javascript:;" onclick="set_time(-720)">18:56 (UTC -12:00)</a></li>
+              <li rel="-660"><a href="javascript:;" onclick="set_time(-660)">19:56 (UTC -11:00)</a></li>
+              <li rel="-600"><a href="javascript:;" onclick="set_time(-600)">20:56 (UTC -10:00)</a></li>
+              <li rel="-540"><a href="javascript:;" onclick="set_time(-540)">21:56 (UTC -9:00)</a></li>
+              <li rel="-480"><a href="javascript:;" onclick="set_time(-480)">22:56 <b>PST</b> (UTC -8:00)</a></li>
+              <li rel="-420"><a href="javascript:;" onclick="set_time(-420)">23:56 <b>PDT</b> (UTC -7:00)</a></li>
+              <li rel="-360"><a href="javascript:;" onclick="set_time(-360)">00:56 <b>CST</b> (UTC -6:00)</a></li>
+              <li rel="-300"><a href="javascript:;" onclick="set_time(-300)">01:56 <b>EST</b> (UTC -5:00)</a></li>
+              <li rel="-240"><a href="javascript:;" onclick="set_time(-240)">02:56 <b>EDT</b> (UTC -4:00)</a></li>
+              <li rel="-210"><a href="javascript:;" onclick="set_time(-210)">03:26 (UTC -3:30)</a></li>
+              <li rel="-180"><a href="javascript:;" onclick="set_time(-180)">03:56 <b>CLST</b> (UTC -3:00)</a></li>
+              <li rel="-120"><a href="javascript:;" onclick="set_time(-120)">04:56 (UTC -2:00)</a></li>
+              <li rel="-60"><a href="javascript:;" onclick="set_time(-60)">05:56 (UTC -1:00)</a></li>
+              <li rel="0"><a href="javascript:;" onclick="set_time(0)">06:56 (UTC +0:00)</a></li>
+              <li rel="60"><a href="javascript:;" onclick="set_time(60)">07:56 <b>CET</b> (UTC +1:00)</a></li>
+              <li rel="120"><a href="javascript:;" onclick="set_time(120)">08:56 <b>CEST</b> (UTC +2:00)</a></li>
+              <li rel="180" class="active"><a href="javascript:;" onclick="set_time(180)">09:56 <b>MSK</b> (UTC +3:00)</a></li>
+              <li rel="210"><a href="javascript:;" onclick="set_time(210)">10:26 (UTC +3:30)</a></li>
+              <li rel="240"><a href="javascript:;" onclick="set_time(240)">10:56 (UTC +4:00)</a></li>
+              <li rel="270"><a href="javascript:;" onclick="set_time(270)">11:26 (UTC +4:30)</a></li>
+              <li rel="300"><a href="javascript:;" onclick="set_time(300)">11:56 (UTC +5:00)</a></li>
+              <li rel="330"><a href="javascript:;" onclick="set_time(330)">12:26 (UTC +5:30)</a></li>
+              <li rel="360"><a href="javascript:;" onclick="set_time(360)">12:56 (UTC +6:00)</a></li>
+              <li rel="420"><a href="javascript:;" onclick="set_time(420)">13:56 (UTC +7:00)</a></li>
+              <li rel="480"><a href="javascript:;" onclick="set_time(480)">14:56 <b>SGT</b> (UTC +8:00)</a></li>
+              <li rel="540"><a href="javascript:;" onclick="set_time(540)">15:56 (UTC +9:00)</a></li>
+              <li rel="570"><a href="javascript:;" onclick="set_time(570)">16:26 (UTC +9:30)</a></li>
+              <li rel="600"><a href="javascript:;" onclick="set_time(600)">16:56 (UTC +10:00)</a></li>
+              <li rel="660"><a href="javascript:;" onclick="set_time(660)">17:56 (UTC +11:00)</a></li>
+              <li rel="720"><a href="javascript:;" onclick="set_time(720)">18:56 (UTC +12:00)</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="ft5">
+          <div class="dropdown">
+            <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span id="bookmaker">ggBet</span> <span class="caret"></span></button>
+            <ul class="dropdown-menu" id="bookmakers">
+              <li class="active" rel="gg"><a href="javascript:;" onclick="bookmaker('gg')">ggBet</a></li>
+              <li rel="egb"><a href="javascript:;" onclick="bookmaker('egb')">EGB.com</a></li>
+              <li rel="1xbet"><a href="javascript:;" onclick="bookmaker('1xbet')">1xBet</a></li>
+              <li rel="will"><a href="javascript:;" onclick="bookmaker('will')">WilliamHill</a></li>
+              <li rel="home"><a href="javascript:;" onclick="bookmaker('home')">Bet at Home</a></li>
+              <li rel="tipbet"><a href="javascript:;" onclick="bookmaker('tipbet')">TipBet</a></li>
+              <li rel="pin"><a href="javascript:;" onclick="bookmaker('pin')">PinnacleSports</a></li>
+              <li rel="betway"><a href="javascript:;" onclick="bookmaker('betway')">Betway</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
     <div class="block-content">
       <h3 class="mh"><span>Live матчи</span></h3>
       <div class="table-responsive">
@@ -176,7 +265,7 @@
               </td>
             </tr>
 
-          {% for i in 0..4 %}
+          {% for i in 0..1 %}
             <tr class="m-item" data-href="http://game-tournaments.com/link" itemscope="itemscope" itemtype="https://schema.org/Event">
               <td class="ticon">
                 <span class="m-i-2" title="Самый ожидаемый"></span>

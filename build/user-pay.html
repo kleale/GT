@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   
   <!-- Import main styles -->
-  <link rel="stylesheet" href="../css/main.css?46">
+  <link rel="stylesheet" href="../css/main.css?24">
   
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -79,21 +79,21 @@
                      
                       <tr class="text-success">
                         <td width="20">
-                          <i class="gti-check"></i>
-                        </td>
-                        <td>2016-11-01 Снятие</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">-1.5 <i class="gti-usd"></i></abbr> </td>
-                      </tr>
-                      
-                      <tr class="text-danger">
-                        <td width="20">
                           <i class="gti-times"></i>
                         </td>
-                        <td>2016-11-02 Пополнение</td>
+                        <td>2016-11-01 Снятие</td>
                         <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">+1.2 <i class="gti-usd"></i></abbr> </td>
                       </tr>
                       
                       <tr class="text-success">
+                        <td width="20">
+                          <i class="gti-times"></i>
+                        </td>
+                        <td>2016-11-02 Снятие</td>
+                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">-1.5 <i class="gti-usd"></i></abbr> </td>
+                      </tr>
+                      
+                      <tr class="text-danger">
                         <td width="20">
                           <i class="gti-times"></i>
                         </td>
@@ -109,9 +109,9 @@
                         <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">-1.5 <i class="gti-usd"></i></abbr> </td>
                       </tr>
                       
-                      <tr class="text-success">
+                      <tr class="text-danger">
                         <td width="20">
-                          <i class="gti-times"></i>
+                          <i class="gti-check"></i>
                         </td>
                         <td>2016-11-05 Снятие</td>
                         <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">-1.5 <i class="gti-usd"></i></abbr> </td>
@@ -122,7 +122,7 @@
                           <i class="gti-check"></i>
                         </td>
                         <td>2016-11-06 Снятие</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">-1.5 <i class="gti-usd"></i></abbr> </td>
+                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">+1.2 <i class="gti-usd"></i></abbr> </td>
                       </tr>
                       
                       <tr class="text-success">
@@ -130,14 +130,6 @@
                           <i class="gti-times"></i>
                         </td>
                         <td>2016-11-07 Пополнение</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">-1.5 <i class="gti-usd"></i></abbr> </td>
-                      </tr>
-                      
-                      <tr class="text-danger">
-                        <td width="20">
-                          <i class="gti-times"></i>
-                        </td>
-                        <td>2016-11-08 Снятие</td>
                         <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">+1.2 <i class="gti-usd"></i></abbr> </td>
                       </tr>
                       
@@ -145,16 +137,24 @@
                         <td width="20">
                           <i class="gti-check"></i>
                         </td>
+                        <td>2016-11-08 Пополнение</td>
+                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">+1.2 <i class="gti-usd"></i></abbr> </td>
+                      </tr>
+                      
+                      <tr class="text-danger">
+                        <td width="20">
+                          <i class="gti-times"></i>
+                        </td>
                         <td>2016-11-09 Пополнение</td>
                         <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">-1.5 <i class="gti-usd"></i></abbr> </td>
                       </tr>
                       
                       <tr class="text-danger">
                         <td width="20">
-                          <i class="gti-check"></i>
+                          <i class="gti-times"></i>
                         </td>
                         <td>2016-11-010 Снятие</td>
-                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">-1.5 <i class="gti-usd"></i></abbr> </td>
+                        <td class="text-center"> <abbr class="tip" title="Оплата аккаунта: Player">+1.2 <i class="gti-usd"></i></abbr> </td>
                       </tr>
                       
                     </tbody>
@@ -353,7 +353,7 @@
 
 <!-- Site Sripts -->
 <script src="../inc/main.js"></script>
-<script src="../inc/func_init.js?35"></script>
+<script src="../inc/func_init.js?51"></script>
 
 <!--PAGES select only dev-->
 <style>
@@ -404,6 +404,7 @@
     <a href="/user-acc.html" class="m2 btn btn-sm btn-success">U acc</a>
     <a href="/user-page.html" class="m2 btn btn-sm btn-warning">U page</a>
     <a href="/user-pay.html" class="m2 btn btn-sm btn-success">U pay</a>
+    <a href="/user-page-sbscr.html" class="m2 btn btn-sm btn-warning">U sbscr</a>
     <!--
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Bets</a>
     <a href="/stickers.html" class="m2 btn btn-sm btn-default">Predict</a>

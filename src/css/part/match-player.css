@@ -535,7 +535,9 @@
     top: 2px;
   }
 }
-
+.tse_slist .tse-content{
+  width: 100%;
+}
 .slist{
   list-style: none;
   margin: 0;
@@ -550,36 +552,81 @@
     &:nth-child(odd){
       background: rgba(0, 0, 0, 0.18);
     }
-    &:hover,
+    &:hover{
+      cursor: pointer;
+      background: #037db5;
+      &.live em{
+        color: #037db5;
+        background: #fff;
+        box-shadow: none!important;
+        text-shadow: none;
+      }
+    }
+    /*&.live span:after {
+      content: '';
+      background-color: #f03a3a;
+      border: 1px solid #f03a3a;
+      border-radius: 12px;
+      box-shadow: 0 0 20px 5px #f03a3a;
+      display: inline-block;
+      height: 7px;
+      margin-left: 0;
+      margin-right: 5px;
+      margin-top: -2px;
+      position: absolute;
+      right: -3px;
+      top: 4px;
+      vertical-align: middle;
+      width: 7px;
+    }*/
+    &.live em {
+      
+      /*box-shadow: 0 0 3px 2px rgba(240, 58, 58, 0.5) inset;*/
+      
+      /*color: #fff;*/
+/*      box-shadow: 0 0 3px 1px rgba(253, 20, 20, 0.85);
+      background: rgba(240, 58, 58, 0.2);*/
+      
+      color: #f03a3a;
+      text-shadow: -1px 3px 8px rgb(255, 0, 0);
+    }
     &.active{
       cursor: pointer;
       background: #037db5;
       em{
         opacity: 1;
-        background: $button-blue;
-        color: $button-blue-text;
-        box-shadow: 0 0 1px #fff;
-      }
-      &.active{
-        em{
-          &:after{
-            content: '\f00d';
-          }
-          &:hover{
-            background: $button-blue-text;
-            color: $button-blue;
-          }
+        background: rgb(0, 107, 156);
+        color: #57bfef;
+        &:after{
+          content: '\f00d';
+        }
+        &:hover{
+          background: $button-blue-text;
+          color: $button-blue;
         }
       }
       u{
         color: #eee;
       }
     }
-    &.active:hover strong{
-      cursor: default;
+    &.active.live em{
+      background: rgb(26, 40, 46);
+      color: #c53535;
+      text-shadow: none;
     }
-    &.active:hover img{
-      cursor: default;
+    &.active:hover {
+      strong, img{
+        cursor: default;
+      }
+      em{
+        &:hover{
+          background: $button-blue-text;
+          color: $button-blue;
+        }
+        &:hover:after{
+          content: '\f00d';
+        }
+      }
     }
     &.vod span:after{
       content: 'видео';
@@ -680,7 +727,7 @@
       font-size: 16px;
       font-family: 'gticons';
       color: $text-main;
-      opacity: .5;
+      opacity: .8;
       width: 25px;
       height: 25px;
       line-height: 25px;
@@ -940,8 +987,6 @@ Video after stream
       right: 170px;
       position: absolute;
       top: 50%;
-      /*margin-top: -77px;*/
-      /*transition: $tease;*/
       transform: translate(0,-50%);
       @media (max-width: $XM){
         left: 20px;
@@ -1108,7 +1153,7 @@ Video after stream
       
       &.vid-played{
         position: absolute -40px 0 * auto;
-        width: 300px;
+        width: 230px;
         top: -41px  !important;
         margin-top: 0 !important;
         transform: translate(0,0);
@@ -1121,7 +1166,7 @@ Video after stream
         }
         a{
           display: none;
-          padding: 7px 60px 7px 40px;
+          padding: 7px 40px 7px 40px;
           font-size: 12px;
           u{
             top: 8px;
@@ -1171,6 +1216,7 @@ Video after stream
     }
     .mobmenu-open{
       position: relative;
+      z-index: 100;
       .mobmenu{
         background: #146489;
       }

@@ -12,9 +12,6 @@
     text-align: center;
     padding-bottom: 15px;
   }
-  @media (max-width: $M){
-    overflow: hidden;
-  }
 }
 
 .stage{
@@ -24,20 +21,23 @@
   margin: -70px -40px 25px;
   
   @media (max-width: $M){
-    margin: -35px -20px 20px -20px;
-    overflow: inherit;
+    margin: -50px -40px 10px -40px;
+    overflow: visible;
   }
   
   em{
     display:none;
     font-style: normal;
-    padding: 10px;
+    padding: 7px;
     font-size: 13px;
-    color: #8f8f8f;
-    background-color: #444950;
-    border-radius: 2px;
+    color: #fff;
+    background-color: #037db5;
+    border-radius: 2px 2px 0 0;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    
+    cursor: pointer;
+    @media (max-width: $M){
+      display:block;
+    }
     &:hover,
     &:active,
     &:focus{
@@ -45,9 +45,9 @@
       color: $button-blue-text;
       text-decoration: none;
     }
-    
-    @media (max-width: $M){
-      display:block;
+    b{
+      margin-right: 10px;
+      
     }
   }
   
@@ -69,6 +69,11 @@
       width: auto;
       padding: 0 5px;
       position: relative;
+      &:first-child{
+        a span{
+          color: #f6c000!important;;
+        }
+      }
       
       a{
         display: inline-block;
@@ -92,6 +97,11 @@
           position: relative;
           z-index: 1;
           text-align: center;
+          &.gti-trophy{
+            background: #f6c000;
+            color: #db6522;
+            text-shadow: none;
+          }
           
           &:after {
             box-shadow: 0 0 0 2px #fff;
@@ -156,7 +166,6 @@
       }
       &.s-pass:before{
         background: rgb(3, 88, 128);
-        
         @media (max-width: $M){
           display:block;
         }
@@ -182,15 +191,15 @@
             color: color($button-blue b(30%));
           }
           &:hover{
-            b:after {
+            b:after, i:after {
                 opacity: 1;
-                transform: scale(1)
+                transform: scale(1);
             }
           }
         }
       }
       &.active{
-        b{ 
+        b,i{ 
           color: #fff;
           &:after {
             opacity: 1;
@@ -203,7 +212,7 @@
   
   &.stage-open ul{
     display: block!important;
-    background: #305c7b;
+    background: #014363 url("../img/spoiler.png") repeat scroll 0 0;
     box-shadow: 7px 7px 10px rgba(0,0,0,.4);
     padding: 0;
     margin: -1px 0;
@@ -224,7 +233,16 @@
     li{
       display: block;
       padding: 0;
-      
+      border-bottom: 1px solid #48799c;
+      &:last-child{
+        border-bottom: 0;
+      }
+      &:after{
+        display: none;
+      }
+      &:before{
+        display: none;
+      }
       &.s-pass:before,
       &.active:before{
         display: none;
@@ -241,24 +259,26 @@
       
       a{
         color: #b7b7b7;
-        padding: 10px 15px;
+        padding: 5px 15px;
         display: block;
         clear: both;
         font-weight: 400;
         line-height: 1.42857143;
         white-space: nowrap;
-        border-bottom: 1px solid #3E3E3E;
-        
         &:hover,
         &:active,
         &:focus{
           background-color: color($button-blue l(30%));
           color: #fff;
         }
-        
+        i,b{
+          margin-bottom: 0;
+          box-shadow: none;
+        }
         span{
-          display: inline-block;
+          display: inline-block!important;
           margin-left: 20px;
+          vertical-align: text-bottom
         }
       }
     }
@@ -320,6 +340,7 @@ Headline
   font-weight: 300;
   font-size: 12px;
   line-height: 1;
+  display: inline-block;
 }
 
 .m-title{
@@ -330,8 +351,7 @@ Headline
   line-height: 1;
   
   @media (max-width: $XM){
-    font-size: 24px;
-    margin-top:15px;
+    font-size: 19px;
   }
   
   > span{
@@ -348,6 +368,14 @@ Headline
       content: inline(../img/hline.png);
       position: absolute -6px 100% * *;
       margin-right: 0px;
+    }
+    > span{
+      @media (max-width: $XM){
+        display: block;
+      }
+      @media (max-width: $M){
+        display: inline;
+      }
     }
   }
 }
@@ -366,6 +394,10 @@ Headline
     text-align: center;
     margin-bottom: -9px;
     font-size: 12px;
+    @media (max-width: $SM){
+      display: inline-block;
+      margin-left: 10px;
+    }
   }
 }
 
@@ -470,7 +502,7 @@ Headline
     }
     
     @media (max-width: $XM){
-      position: fixed 0 0 auto 50px;
+      position: fixed -50px 0 auto 50px;
       display: table;
       width:calc(100% - 50px);
     }
@@ -496,7 +528,7 @@ Headline
           line-height: 27px;
 
           @media (max-width: $XM){
-            height: 50px;
+            height: 40px;
             line-height: 37px;
           }
 
@@ -526,11 +558,20 @@ Headline
   @media (max-width: $L){
     text-align: center;
   }
-  
   .mtn{
     font-size: 22px;
     text-decoration: none;
     color: $text-main;
+    @media (max-width: $M){
+      font-size: 18px;
+      display: block;
+      clear: both;
+/*      min-height: 40px;*/
+      line-height: 1;
+    }
+    @media (max-width: $M){
+      font-size: 16px;
+    }
   }
   .mtp{
     display: block;
@@ -567,7 +608,9 @@ Headline
     }
     @media (max-width: $M){
       background: inline(../img/hline-c.png) no-repeat 50% 100%;
-      padding-bottom: 20px;
+      padding-bottom: 5px;
+      text-align: right;
+      padding-right: 5px;
     }
     .mtp{
       float: right;
@@ -575,6 +618,10 @@ Headline
       @media (max-width: $L){
         margin: 0 auto;
         float: none;
+      }
+      @media (max-width: $M){
+        margin: 0;
+        float: right;
       }
     }
   }
@@ -593,6 +640,9 @@ Headline
     @media (max-width: $M){
       background-image:none;
     }
+    @media (max-width: $SM){
+      min-height: 55px;
+    }
     a{
       color: $link-gray;
       &:hover,
@@ -609,8 +659,10 @@ Headline
   
   &.mt2{
     @media (max-width: $M){
-      background: inline(../img/hline-c.png) no-repeat 50% 0;
-      padding-top: 20px;
+      background: inline(../img/hline-c.png) no-repeat 50% 100%;
+      text-align: left;
+      padding-bottom: 5px!important;
+      padding-left: 5px;
     }
     .mpl{
       background: inline(../img/hline_l1.png) no-repeat 0 0;
@@ -627,10 +679,13 @@ Headline
     .mtp{
       float: left;
       margin-right: 20px;
-      
       @media (max-width: $L){
         margin: 0 auto;
         float: none;
+      }
+      @media (max-width: $M){
+        margin: 0;
+        float: left;
       }
       b{
         position: absolute * -10px * -10px;
@@ -639,6 +694,54 @@ Headline
   }
 }
 
+.mmhd{
+  position: relative;
+  margin-bottom: 15px;
+  .mmr{
+    float: left;
+    position: relative;
+    z-index: 1;
+    @media (max-width: $SM){
+      float: none;
+    }
+  }
+  .mtt{
+    text-align: center;
+    position: relative;
+    margin: 0 240px;
+    padding-top: 1px;
+    @media (max-width: $M){
+      margin: 0 0 15px 0;
+      clear: both;
+    }
+  }
+  .mmshr{
+    float: right;
+    position: relative;
+    z-index: 1;
+    @media (max-width: $SM){
+      float: none;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+.mmtms_a{
+  @media (max-width: $M){
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+  }
+}
+.mmtms{
+  @media (max-width: $M){
+    padding-bottom: 80px;
+    position: relative;
+    margin: 0 -40px;
+  }
+}
 .match-text{
   display: block;
   font-size: 12px;
@@ -798,9 +901,6 @@ Banners
     margin-bottom: 15px;
   }
   .m-team {
-    .mtn {
-      
-    }
     .mtp{
       height: 50px;
       width: 50px;

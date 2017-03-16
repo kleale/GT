@@ -1,6 +1,18 @@
 /*
 * Section prognoz
 */
+#m-koef{
+  > .row {
+    > div{
+      &:first-child{
+        @media (max-width: $XM) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
 .prp{
   padding: 10px 12px;
   position: relative;
@@ -571,7 +583,7 @@
         height: 40px;
         margin: 3px;
         @media (max-width: $SM){
-          display: none;  
+          height: 26px;
         }
       }
       b{

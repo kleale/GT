@@ -1,0 +1,110 @@
+{% set title = "Аккаунт: Лента" %}
+
+{% set pic = ['http://ggscore.com/media/logo/_60/pic-20161110-500x500-1758574228.png', 'http://ggscore.com/media/logo/_60/pic-20161110-600x600-7320131375.png'] %}
+{% set name = ['Virtus.Pro','OG','Secret'] %}
+{% set tour = ['The Kiev Major','Swiss Dota League Season 1','AEF Dota 2 League Season 1'] %}
+
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+<body class="">
+  <div class="container mainwrap" style="padding-top:60px;">
+    {% include "template/breadcrumbs.html" %}
+    <div class="otstup">
+      <section class="t-top user-ac">
+        <div class="heroBg" style="background-image:url(../img/noplayers.png)"></div>
+        <h1 class="mlh"><span>Подписки</span></h1>
+        <div class="user-list-page">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="panel panel-light sbscr-panel">
+                <table class="table table-hover table-striped sbscr-list">
+                  <thead>
+                    <tr>
+                      <th class="ec">
+                        <i class="gti-envelope-o tip" title="Включить в рассылку"></i>
+                      </th>
+                      <th colspan="2">
+                        Подписки пользователя
+                      </th>
+                      <th>
+                        Удалить
+                      </th>
+                    </tr>
+                  </thead>
+                  {% for i in 0..5 %}
+                    <tr rel="i">
+                      <td class="ec">
+                        <div class="email_chek"><input type="checkbox" onclick=""></div>
+                      </td>
+                      <td class="icon">
+                        <a href="" class="icon_a">
+                          <img src="{{random(pic)}}">
+                        </a>
+                      </td>
+                      <td class="inf">
+                          <a href="" class="name">{{random(name)}}</a>
+                          <!--<p>Самые свежие новости игр</p>-->
+                      </td>
+                      <td class="ac">
+                        <a class="gdel" href="javascript:;" onclick=""><i class="gti-times-circle-o"></i></a>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                    <tr rel="i">
+                      <td class="ec">
+                        <div class="email_chek"><input type="checkbox" onclick=""></div>
+                      </td>
+                      <td class="icon">
+                        <a class="ava-sm" href="/ru/dota-2/player/xboct" style="background-image:url(http://ggscore.com/media/logo/_60/XBOCT.jpeg);"></a>
+                      </td>
+                      <td class="inf pl">
+                          <span class="flag"><img src="http://ggscore.com/media/flag/33.png" alt="Финляндия" title="Финляндия"></span> 
+                          <a title="Lasse Urpalainen" href="/ru/dota-2/player/matumbaman">MATUMBAMAN</a>
+                          <u>Liquid</u>                                           
+                      </td>
+                      <td class="ac">
+                        <a class="gdel" href="javascript:;" onclick=""><i class="gti-times-circle-o"></i></a>
+                      </td>
+                    </tr>
+                    
+                    <tr rel="i">
+                      <td class="ec">
+                        <div class="email_chek"><input type="checkbox" onclick=""></div>
+                      </td>
+                      <td class="icon">
+                        <a class="tour" href=""><img src="http://ggscore.com/media/tournament/_60/pic-20170110-280x80-1208457909.jpeg"></a>
+                      </td>
+                      <td class="inf">
+                          <a href="" class="name">Swiss Dota League Season 1</a>
+                          <!--<p>Самые свежие новости игр</p>-->
+                      </td>
+                      <td class="ac">
+                        <a class="gdel" href="javascript:;" onclick=""><i class="gti-times-circle-o"></i></a>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+              {% include "template/pager.html" %}
+            </div>
+            <div class="col-md-4">
+              {% include "template/news/com-block.html" %}
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+{#
+{% include "template/branding.html" %}
+#}
+{% include "template/bar.html" %}
+
+{% include "template/scripts.html" %}
+
+
+</body>
+</html>

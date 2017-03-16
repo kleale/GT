@@ -45,7 +45,6 @@
     tr{
       background: #363b40;
       position: relative;
-/*      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
       border-bottom: 1px solid rgb(44, 49, 53);
       &:hover{
         background: rgb(71, 82, 93);
@@ -72,6 +71,9 @@
       .mp1,
       .mp2{
         margin: 0 3px;
+        @media (max-width: $M){
+          display: inline-block;
+        }
       }
     }
     .mscore {
@@ -135,7 +137,7 @@
     background: linear-gradient(to bottom, rgba(46,51,55,1) 0%, rgba(46,51,55,0) 100%);
   }
   > div{
-    margin-top: -80px;
+    margin-top: -40px;
   }
 }
 .trtop.hero{
@@ -144,15 +146,51 @@
   background-repeat: repeat;
   background-position: center;
   position: relative;
-  padding-bottom: 0px;
+  padding-bottom: 50px;
   margin: 0px;
-  min-height: 220px;
+  min-height: initial;
+
   > div {
     position: relative;
     z-index: 3;
     h1{
-      padding: 45px 0 50px;
+      padding: 5px 0 25px;
       text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.59);
+    }
+    nav{
+      ul{
+        margin: 0;
+        padding: 0;
+        li{
+          display: inline-block;
+          margin: 0 1%;
+          a{
+            display: block;
+            text-align: center;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.34);
+            &:hover{
+              text-decoration: none;
+              span{
+                color: #2faee7;
+              }
+            }
+            i{
+              font-size: 20px;
+            }
+            span{
+              display: block;
+              margin-top: 5px;
+              text-transform: uppercase;
+              font-size: 11px;
+              font-weight: 300;
+              color: #eee;
+              @media (max-width: $SM){
+                font-size: 9px;
+              }
+            }
+          }
+        }
+      }
     }
   }
   &:before{

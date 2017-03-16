@@ -9,6 +9,9 @@
         &:nth-child(1){
           text-align: left;
           padding-left: 20px;
+          @media (max-width: $XM) {
+            padding-left: 10px;
+          }
         }
         &:nth-child(3),
         &:nth-child(4),
@@ -23,6 +26,14 @@
           text-align: left;
           padding-left: 20px;
           padding-right: 5px;
+          @media (max-width: $XM) {
+            padding-left: 0;
+            padding-right: 0;
+            width:0;
+            img{
+              display: none;
+            }
+          }
         }
         &:nth-child(3),
         &:nth-child(4),
@@ -133,6 +144,11 @@ section.t-top{
     position: relative;
     z-index: 2;
     font-size: 1.8em;
+    @media (max-width: $M) {
+      margin: 10px 0 20px;
+      font-size: 1.5em;
+      text-align: center;
+    }
     span{
       font-size: .7em;
     }
@@ -145,6 +161,10 @@ section.t-top{
     text-shadow: 0 1px #000;
     @media (max-width: $XM) {
       margin: 20px -20px;
+    }
+    @media (max-width: $M) {
+      overflow: visible;
+      margin: 0;
     }
     ul li {
       a span {
@@ -198,6 +218,10 @@ section.t-top{
     border: 1px solid #37424c;
     min-height: 125px;
     vertical-align: top;
+    @media (max-width: $M){
+      margin: 5px .5% 0;
+      width: 31%;
+    }
     > a{
       white-space: nowrap;
       overflow: hidden;
@@ -399,7 +423,7 @@ table.places{
     }
     @media (max-width: 700px) {
       width: 100%;
-      margin: 0;
+      margin: 15px 0 0 0;
     }
     .gtable{
       background-image: inline(../img/spoiler.png);
@@ -473,7 +497,6 @@ table.places{
   }
 }
 
-
 .share-it{
   transition: $tease;
   .news-soc{
@@ -512,7 +535,12 @@ animate border - to share
   position: relative;
   padding: 15px 0;
   margin: -10px 0 0;
-  
+  @media (max-width: $M){
+    margin: 10px -15px 0;
+    padding: 0;
+    background-color: rgba(46, 51, 56, 0.33);
+    border: 2px solid #37424c!important;
+  }
   &::before,
   &::after {
     box-sizing: border-box;
@@ -522,81 +550,85 @@ animate border - to share
     height: 100%;
   }
 }
-.draw {
-  &:hover{
-    background-color: rgba(46, 51, 56, 0.33);
-  }
-  
-  &::before,
-  &::after {
-    border: 2px solid transparent; /*// Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts*/
-    width: 0;
-    height: 0;
-  }
 
-/*  This covers the top & right borders (expands right, then down)*/
-  &::before {
-    top: 0;
-    left: 0;
-  }
+@media (min-width: $XM){
+  .draw {
+    &:hover{
+      background-color: rgba(46, 51, 56, 0.33);
+    }
 
-/*  // And this the bottom & left borders (expands left, then up)*/
-  &::after {
-    bottom: 0;
-    right: 0;
-  }
+    &::before,
+    &::after {
+      border: 2px solid transparent; /*// Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts*/
+      width: 0;
+      height: 0;
+    }
 
-/*  // Hover styles*/
-  &:hover::before,
-  &:hover::after {
-    width: 100%;
-    height: 100%;
-  }
+  /*  This covers the top & right borders (expands right, then down)*/
+    &::before {
+      top: 0;
+      left: 0;
+    }
 
-  &:hover::before {
-    border-top-color: cyan; /*// Make borders visible*/
-    border-right-color: cyan;
-    transition:
-      width 0.25s ease-out, /*// Width expands first*/
-      height 0.25s ease-out 0.25s; /*// And then height*/
-  }
+  /*  // And this the bottom & left borders (expands left, then up)*/
+    &::after {
+      bottom: 0;
+      right: 0;
+    }
 
-  &:hover::after {
-    border-bottom-color: cyan; /*// Make borders visible*/
-    border-left-color: cyan;
-    transition:
-      border-color 0s ease-out 0.5s,/* // Wait for ::before to finish before showing border*/
-      width 0.25s ease-out 0.5s, /*// And then exanding width*/
-      height 0.25s ease-out 0.75s; /*// And finally height*/
-  }
-}
+  /*  // Hover styles*/
+    &:hover::before,
+    &:hover::after {
+      width: 100%;
+      height: 100%;
+    }
 
-/*// Inherits from .draw*/
-.meet {
-/*  // Start ::after in same position as ::before*/
-  &::after {
-    top: 0;
-    left: 0;
+    &:hover::before {
+      border-top-color: cyan; /*// Make borders visible*/
+      border-right-color: cyan;
+      transition:
+        width 0.25s ease-out, /*// Width expands first*/
+        height 0.25s ease-out 0.25s; /*// And then height*/
+    }
+
+    &:hover::after {
+      border-bottom-color: cyan; /*// Make borders visible*/
+      border-left-color: cyan;
+      transition:
+        border-color 0s ease-out 0.5s,/* // Wait for ::before to finish before showing border*/
+        width 0.25s ease-out 0.5s, /*// And then exanding width*/
+        height 0.25s ease-out 0.75s; /*// And finally height*/
+    }
   }
 
-/*  // Change colors*/
-  &:hover::before {
-    border-top-color: #424d56;
-    border-right-color: #424d56;
+  /*// Inherits from .draw*/
+  .meet {
+  /*  // Start ::after in same position as ::before*/
+    &::after {
+      top: 0;
+      left: 0;
+    }
+
+  /*  // Change colors*/
+    &:hover::before {
+      border-top-color: #424d56;
+      border-right-color: #424d56;
+    }
+
+    &:hover::after {
+      border-bottom-color: #424d56;
+      border-left-color: #424d56;
+      transition: /*// Animate height first, then width*/
+        height 0.25s ease-out,
+        width 0.25s ease-out 0.25s;
+    }
+
   }
-
-  &:hover::after {
-    border-bottom-color: #424d56;
-    border-left-color: #424d56;
-    transition: /*// Animate height first, then width*/
-      height 0.25s ease-out,
-      width 0.25s ease-out 0.25s;
-  }
-
-}
-
+} /* min-width: $XM */
 
 /*PLAYOFF STAGE PAGE*/
+.thd{
+}
 .fa-info-circle {
   font-family: 'gticons' !important;
   &:before {
@@ -611,9 +643,15 @@ animate border - to share
     z-index: 2;
     font-size: 12px;
     line-height: 1.5;
+    @media (max-width: $M){
+      margin-bottom: 0px;
+    }
   > div {
     overflow: auto;
     padding: 50px 30px 0;
+    @media (max-width: $M){
+      padding: 30px 10px 0;
+    }
   }
   .match_round {
     color: #d9d9d9;

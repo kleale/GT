@@ -30,7 +30,7 @@ section.light-head{
   h1{
     margin: 0 0 4px 0 !important;
     @media (max-width: 950px){
-      margin: 60px 0 4px 0 !important;
+      margin: 77px 0 4px 0 !important;
       text-align: center
     }
   }
@@ -66,6 +66,9 @@ section.light-head{
     }
     @media (max-width: 650px){
       height: 300px;
+    }
+    @media (max-width: 450px){
+      height: 200px;
     }
   }
   .iframerClicker{
@@ -122,6 +125,9 @@ section.light-head{
     color: #ccc;
     width: 140px;
     vertical-align: middle;
+    @media (max-width: $M){
+      width: 100px;
+    }
   }
   td{
     padding: 3px;

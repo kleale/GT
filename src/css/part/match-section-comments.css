@@ -25,7 +25,7 @@
   }
   
   .tse-com{
-    padding-bottom: 60px;
+    padding-bottom: 59px;
   }
   
   .m-com-list{
@@ -43,7 +43,21 @@
       &:last-child{
         margin: 0;
       }
-      a{
+      &:hover,
+      &:active,
+      &:focus{
+        p{
+          color: #e8e8e8;
+        }
+      }
+      .hlc{
+        color: #f58563;
+        float: right;
+        width: auto;
+        height: auto;
+      }
+      
+      > a{
         float: left;
         width:35px;
         height: 35px;
@@ -56,7 +70,6 @@
       div{
         margin-left: 50px;
         font-size: 12px;
-
         b{
           color: #fff;
           font-weight: 400;
@@ -71,14 +84,6 @@
           line-height: 1.2;
           font-weight: 400;
           transition: $tease;
-        }
-      }
-      &:hover,
-      &:active,
-      &:focus{
-
-        p{
-          color: #e8e8e8;
         }
       }
     }

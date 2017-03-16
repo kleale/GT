@@ -296,6 +296,11 @@
     box-shadow: 0 0 20px rgba(82, 212, 255, 0.22), 0 0 0 2px rgba(82, 212, 255, 0.22);
     background: #1f3d4c url(../img/spoiler.png) repeat 0 0;
     line-height: 60px;
+    
+    @media (max-width: $SM) {
+      display: block;
+      margin: 0 auto 15px;
+    }
     img {
       width: 100%;
     }
@@ -303,14 +308,15 @@
   .button-ulogo1{
     position: relative;
   }
-  .uava-btns{
-    
-  }
   .uavaload{
     display: inline-block;
     vertical-align: middle;
     width: 245px;
-    margin-right: -10px;
+    margin-right: -20px;
+    @media (max-width: $SM) {
+      display: block;
+      margin: 0 auto;
+    }
     >div{
       width: auto;
     }
@@ -328,6 +334,10 @@
     text-align: center;
     border: 1px dashed #376170;
     padding: 10px 0;
+    @media (max-width: $SM) {
+      display: block;
+      margin: 15px auto 0;
+    }
     p{
       color: #7eb6ca;
       font-size: 11px;
@@ -593,7 +603,6 @@
     }
   }
   table{
-    text-align: center;
     tr{
       td{
         padding: 0;
@@ -603,20 +612,57 @@
           td{
             padding: 10px 5px;
             &:first-child{
-              width:35%;
+              width:100px;
+              text-align: left;
+              label{
+                padding-left: 35px;
+                .input{
+                  position: absolute 50% * * 5px;
+                  margin-top: -8px;
+                }
+              }
+              @media (max-width: $SM) {
+                width:80px;
+                label{
+                  padding-left: 25px;
+                }
+              }
             }
             &:last-child{
-              width:35%;
+              width:100px;
+              text-align: right;
+              label{
+                padding-right: 35px;
+                .input{
+                  position: absolute 50% 5px * *;
+                  margin-top: -8px;
+                }
+                &.active:after{
+                  left: auto;
+                  right: 0;
+                }
+              }
+              @media (max-width: $SM) {
+                width:80px;
+                label{
+                  padding-right: 25px;
+                }
+              }
             }
             label{
               cursor: pointer;
               position: relative;
+              text-align: center;
+              margin: 5px 0 0 0;
+              &:after{
+                opacity: 0;
+              }
               &.active{
                 color: #FFC107;
                   &:after{
                     content: 'win';
                     position: absolute;
-                    left: 50%;
+                    left: 0;
                     width: 30px;
                     padding: 0 3px;
                     text-align: center;
@@ -624,27 +670,37 @@
                     color: #4c3813;
                     font-size: 9px;
                     border-radius: 2px;
-                    top: 63px;
-                    margin-left: -16px;
+                    top: 50%;
+                    margin-top: -8px;
                     text-transform: uppercase;
+                    transition: $tease;
+                    opacity: 1;
                   }
                 &:hover{
                   &:after{
-                    display: none;
+                    opacity: 0;
                   }
                 }
               }
             }
             b{
-              font-weight: 300;
               display: block;
               font-size: 12px;
+              @media (max-width: $SM) {
+                font-size: 10px;
+                font-weight: 300;
+              }
             }
             img{
               width: 40px;
               margin-bottom: 2px;
             }
-            span{
+            .mlink{
+              float: right;
+              font-size: 11px;
+              margin-top: 3px;
+            }
+            /*span{
               display: block;
             }
             .gray{
@@ -653,7 +709,7 @@
             u{
               text-decoration: none;
               color: #fff;
-            }
+            }*/
             .sct{
               font-size: 11px;
             }
@@ -661,25 +717,106 @@
               display: block;
               font-size: 11px;
             }
-            .btn{
+/*            .btn{
               text-transform: none;
-            } 
+            } */
           }
         }
         
-        .writer{
+        .form-control{
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) inset;
+          background: #303c46;
+          font-size: 12px;
+          line-height: 1;
+          min-height: 50px;
+          padding: 8px;
+          margin-top: 2px;
+        }
+/*        .writer{
           padding: 0 5px 5px;
           .form-control{
             box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) inset;
             background: #303c46;
           }
-        }
+        }*/
       }
     }
   }
 }
-
-
+.sbscr-panel{
+  margin: 0;
+}
+.sbscr-list {
+  margin-bottom: 0px;
+  padding-left: 0;
+  vertical-align: middle;
+  tr{
+    td{
+      vertical-align: middle!important;
+      
+      &.icon{
+        width: 60px;
+        text-align: center;
+        .icon_a{
+          img{
+            max-height: 30px;
+          }
+        }
+        .tour{
+          width: 60px;
+          img{
+            width: 100%;
+          }
+        }
+      }
+      &.inf {
+        .name{
+        }
+        &.pl{
+          .flag{
+            vertical-align: text-bottom;
+            img{
+              width: 16px;
+            }
+          }
+          u {
+            opacity: .6;
+            text-decoration: none;
+            font-size: .8em;
+            font-weight: 300;
+          }
+        }
+      }
+      &.ac{
+        width: 40px;
+        text-align: center!important;
+        .gdel{
+          font-size: 20px;
+          &:hover{
+            text-decoration: none;
+            color: #2faee7;
+          }
+        }
+      }
+      &.ec{
+        width: 40px;
+        text-align: center!important;
+        font-size: 15px;
+        .email_chek{
+          margin-top: 1px;
+        }
+      }
+    }
+  }
+  th{
+      &.ec{
+        width: 40px;
+        text-align: center!important;
+        font-size: 15px;
+        padding: 4px 10px;
+      }
+    }
+}
 
 
 

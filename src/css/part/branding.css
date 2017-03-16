@@ -469,9 +469,6 @@ Branding - Match of the day
     left: -90px;
     width: 89px;
   }
-  .mainwrap {
-    padding-top: 160px;
-  }
   .abg_left u {
     top: 73px;
   }
@@ -504,7 +501,7 @@ Branding - Match of the day
   }
   .abg_day {
     top: 92px;
-    padding: 0px 0 0 81px;
+    padding: 8px 0 0 81px;
     font-size: 10px;
     line-height: 1.4;
     b {

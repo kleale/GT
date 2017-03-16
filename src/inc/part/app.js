@@ -97,20 +97,21 @@
 	});
     
     // checkbox to switch
-    $("[name='score']").bootstrapSwitch();
+    //$("[name='score']").bootstrapSwitch(); 
     
+    // js label in inputs
     $(".withJsLabel input[type='text']").jvFloat();
     
     // countdown on top match list
-    $('[data-countdown]').each(function() {
+    /*$('[data-countdown]').each(function() {
       var $this = $(this), finalDate = $(this).data('countdown');
       $this.countdown(finalDate, function(event) {
         $this.html(event.strftime('До начала %H:%M:%S'));
       });
-    });
+    });*/
     
     // news read more slider
-    $('.ns1 ul').owlCarousel({
+    /*$('.ns1 ul').owlCarousel({
       loop:true,
       navigation: true,
       navigationText: ["назад","вперед"],
@@ -123,10 +124,10 @@
         //$(".mlh").width($('.owl-item').width());
         //$(".mlh").height($('.owl-item').height());
       }
-    });
+    });*/
     
     // слайдер новостей 2
-    $('.ns2 ul').owlCarousel({
+    /*$('.ns2 ul').owlCarousel({
       loop:true,
       navigation: true,
       navigationText: ["назад","вперед"],
@@ -146,10 +147,10 @@
               loop:false
           }
       }
-    });
+    });*/
     
     // слайдер новостей 3
-    $('.ns3 ul').owlCarousel({
+    /*$('.ns3 ul').owlCarousel({
       loop:true,
       navigation: true,
       navigationText: ["назад","вперед"],
@@ -169,10 +170,10 @@
               loop:false
           }
       }
-    });
+    });*/
 
     // слайдер замеса горизонт
-    $('.ns4 ul').owlCarousel({
+    /*$('.ns4 ul').owlCarousel({
       loop:true,
       navigation: true,
       navigationText: ["назад","вперед"],
@@ -181,10 +182,10 @@
       itemsDesktop : [1000,4], 
       itemsDesktopSmall : [900,3],
       itemsTablet: [600,2] 
-    });
+    });*/
   
     // слайдер игроков на странице команды
-    $('#slPlayers').owlCarousel({
+    /*$('#slPlayers').owlCarousel({
       navigation: true,
       navigationText: ["назад","вперед"],
       responsiveClass:true,
@@ -192,7 +193,7 @@
       itemsDesktop : [1000,4], 
       itemsDesktopSmall : [900,3],
       itemsTablet: [600,2] 
-    }); 
+    });*/ 
     
   }); //end ready
 

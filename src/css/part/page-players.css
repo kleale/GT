@@ -220,8 +220,11 @@ player.html
   }
   .tLogo {
     text-align: center;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     display: block;
+    @media (max-width: $M){
+      padding-bottom: 0;
+    }
     img {
       display: inline;
       width: 100%;
@@ -579,11 +582,22 @@ player.html
     margin-top: 10px;
     margin-right: 10px;
     float: right;
+    @media (max-width: $SM){
+      float: none;
+      display: block;
+      margin: 0 auto 15px;
+      max-width: 170px;
+      padding: 2px 10px;
+    }
   }
 }
 
 .pageTeam{ 
   padding-bottom: 30px;
+  .playerava{
+    padding: 30px 20% 0;
+  }
+  /*  
   .tLogo{
     text-align: center;
     padding: 30px 20% 0;
@@ -594,7 +608,7 @@ player.html
       max-width: 100%;
       width: auto;
     }
-  }
+  }*/
   .pInf{
     h2{
       margin-bottom: 0px;
@@ -647,6 +661,9 @@ player.html
 
 .teamP{
   margin: -30px 0px;
+  @media (max-width: $XM){
+    margin: 5px 0px -20px;
+  }
   >.row{
     text-align: center;
     >div{
@@ -906,6 +923,9 @@ player.html
 }
 
 .playerGames{
+  @media (max-width: $M){
+    margin: 0 -15px;
+  }
   .mtable {
     thead{
       th{
@@ -934,6 +954,19 @@ player.html
       }
       td:last-child{
         padding-right: 10px;
+      }
+      
+      @media (max-width: $M){
+        .tplogo{
+          padding: 0;
+          width: 0;
+          img{
+            display: none;
+          }
+        }
+        .heropic img{
+          max-width: 40px
+        }
       }
     } 
   }
