@@ -1509,6 +1509,38 @@ body{
   margin: 0;
   display: block;
 }
+.bar-nav-games > li > a{
+  transition: all .1s linear;
+  display: block;
+  width: 50px;
+  text-align: center;
+  padding: 10px;
+  opacity: .5;
+  font-size: 25px;
+  line-height: 1;
+  text-decoration: none;
+  position: relative;
+}
+.bar-nav-games > li > a:active,
+      .bar-nav-games > li > a:focus,
+      .bar-nav-games > li > a:hover{
+  opacity: 1;
+  text-decoration: none;
+}
+.bar-nav-games > li > a img{
+  max-width: 100%;
+}
+.bar-nav-games > li > a i{
+  display: block;
+}
+.bar-nav-games > li > a span{
+  top: 16px;
+  left: 66px;
+  position: absolute;
+  white-space: nowrap;
+  font-size: 15px;
+  text-transform: uppercase;
+}
 .bar-nav-games > li.active>a, .bar-nav-games > li >a:hover{
   opacity: 1;
   background: rgba(14, 130, 184, 0.24);
@@ -1531,28 +1563,11 @@ body{
 .bar-nav-games > li.active>a i.gti-hots,.bar-nav-games > li >a:hover i.gti-hots{
   color: #77bbcb;
 }
-.bar-nav-games > li > a{
-  transition: all .1s linear;
-  display: block;
-  width: 50px;
-  text-align: center;
-  padding: 10px;
-  opacity: .5;
-  font-size: 25px;
-  line-height: 1;
-  text-decoration: none;
+.bar-nav-games > li.active>a span,.bar-nav-games > li >a:hover span{
+  color: #fff;
 }
-.bar-nav-games > li > a:active,
-      .bar-nav-games > li > a:focus,
-      .bar-nav-games > li > a:hover{
-  opacity: 1;
-  text-decoration: none;
-}
-.bar-nav-games > li > a img{
-  max-width: 100%;
-}
-.bar-nav-games > li > a i{
-  display: block;
+.bar-nav-games.ingame > li > a span{
+  display: none;
 }
 .bar-block{ 
   background: rgba(0, 0, 0, 0.18);
@@ -1986,7 +2001,13 @@ footer .f-soc a:active,
 .hiddenbar .bar-nav-games{
   float: none;
 }
-.hiddenbar .bar-nav-games a{
+.hiddenbar .bar-nav-games > li > a{
+  padding: 10px;
+}
+.hiddenbar .bar-nav-games > li > a span{
+  display: none;
+}
+.hiddenbar .bar-nav-games > li ul a{
   padding: 10px;
 }
 .hiddenbar .bar-ava{
@@ -2542,8 +2563,17 @@ Banners
 .green, .text-success{
   color: #82ac4e !important;
 }
+.subgreen{
+  color: #e8f39a !important;
+}
 .blue, .text-primary{
   color: #037db5 !important;
+}
+.lightblue{
+  color: #4396f7 !important;
+}
+.orange{
+  color: #f58563 !important;
 }
 .text-info{
   color: #4396f7 !important;
@@ -5662,6 +5692,11 @@ LIVE BLOCK
     padding-bottom: 15px;
   }
 }
+@media (max-width: 550px){
+  .m-head {
+    overflow: hidden;
+  }
+}
 .stage{
   text-align: center;
   overflow: hidden;
@@ -6227,6 +6262,11 @@ Headline
   background-color: rgba(21, 32, 37, 0.34);
   border-radius:50%;
 }
+.m-team .mtp span{
+  overflow: hidden;
+  border-radius: 16px;
+  display: inline-block;
+}
 .m-team .mtp b{
   background-color: rgba(21, 32, 37, 0.34);
   border: 1px solid #33393c;
@@ -6634,7 +6674,7 @@ Banners
   padding: 0;
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdYAAAABCAYAAABjVo95AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAL9JREFUeNqsVMsNQzEI80tvnbOrdY1O0XmgOfRAEQaC+iSU5NkY8oHr8Xy/ANy3ybZr2/qOcKM1i8H4eD4cdxENiyPQ8Fq3gsfygIvDeCvIveIh+Z/tBcl68qmbK+Eo8ZGmnjb1NdE/4QnJWZJ9SYB7nhCsg/tY2uBpYj5ehGtTx64lOFcZ6Ew4/9izHPImOtM40d1341TnA3d/2dsD8ave3snbRlFP0qxzVtfa6DenfQTkDtiY5Zvp//TNjwADANFn2+CmLI0+AAAAAElFTkSuQmCC');
   background-repeat: no-repeat;
-  background-position: 0 99%;
+  background-position: 0 99.5%;
   margin: 0;
 }
 .player-menu li{
@@ -6675,7 +6715,7 @@ Banners
 /*player-menu*/
 .stmblocks{
   background: linear-gradient(to bottom,  rgba(27,53,64,1) 0%,rgba(27,53,64,0) 100%);
-  top: 57px;
+  top: 58px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -8662,12 +8702,13 @@ Video after stream
 .nostat {
   position: relative;
   text-align: center;
-  color: #386E92;
+  color: #386E92 !important;
 }
 .nostat i {
   display: block;
   font-size: 50px;
   margin: 90px 0 10px;
+  color: #386E92 !important;
 }
 .nostat span {
   display: block;
@@ -8780,7 +8821,7 @@ Video after stream
     position:relative;
 }
 .splayers{
-  padding: 10px 15px;
+  padding: 5px;
   list-style: none;
   margin: 0;
 }
@@ -8829,7 +8870,7 @@ Video after stream
   display: inline-block;
   height: 2px;
   vertical-align: middle;
-  width: 40%;
+  width: 31%;
   margin-right:-10px;
 }
 .splayers li .sprogress u {
@@ -8882,7 +8923,7 @@ Video after stream
   font-size: 12px;
   font-weight: 500;
   line-height: 12px;
-  max-width: 115px;
+/*  max-width: 115px;*/
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -8901,7 +8942,7 @@ Video after stream
     display: block;
     float: left;
     overflow: hidden;
-    width: 20%;
+    width: 30%;
     padding:0 5px;
 }
 .statsblock .stname:first-child{
@@ -11242,8 +11283,7 @@ match-vid.css
     transform: translate(0,-50%);*/
   width: auto !important;
   height: 80% !important;
-  transform: translate(0, -50%);
-  top: 50%;
+  top: 10%;
   position: relative;
 }
 .rezult {
@@ -11453,13 +11493,15 @@ match-vid.css
 }
 .mlt-filter .sicon{
   font-family: 'gticons' !important;
-  top: 1px;
-  right: 7px;
+  top: 0;
+  right: 0;
   position: absolute;
   font-size: 18px;
-  color: #7f8789;
-  opacity: .5;
+  color: #a6c6bc;
+  opacity: .9;
   z-index: 3;
+  height: 34px;
+  padding: 5px 7px;
 }
 .mlt-filter .sicon:after{
   content: '\f002';
@@ -11471,9 +11513,12 @@ match-vid.css
   text-decoration: none;
 }
 .mlt-filter .times{
-  top: 7px;
-  right: 10px;
+  top: 0;
+  right: 0;
   position: absolute;
+  height: 34px;
+  padding: 5px 10px;
+  line-height: 24px;
   z-index: 12;
 }
 .mlt-filter .times:hover,
@@ -11483,14 +11528,17 @@ match-vid.css
   text-decoration: none;
 }
 .mlt-filter .dropdown-menu .times{
-  top: inherit;
+  top: 0;
+  padding: 0px 10px;
+  line-height: 25px;
+  height: 25px;
 }
 .mlt-filter .input-group {
   width: 100%;
 }
 .sorter{
   padding: 0 5px;
-  opacity: .5;
+  opacity: .8;
   display: inline-block;
 }
 .sorter.active{
@@ -12612,6 +12660,7 @@ match-vid.css
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #363b40;
   position: relative;  
 }
 .newstop:after{
@@ -14632,7 +14681,7 @@ section.hero h1{
   font-size: 10px;
   background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
 }
-@media (max-width: 380px){
+@media (max-width: 550px){
   .temsList thead th {
     font-size: 8px;
   }
@@ -14653,9 +14702,15 @@ section.hero h1{
 .temsList thead th:nth-child(2){
   text-align: left;
 }
+@media (max-width: 550px){
+  .temsList thead th.role {
+    display: none;
+  }
+}
 .temsList thead th span, .temsList thead th a{
   cursor: pointer;
   color: #fff;
+  position: relative;
 }
 .temsList thead th span:hover,
         .temsList thead th span:active,
@@ -14666,13 +14721,23 @@ section.hero h1{
   color: #a6c6cb;
   text-decoration: none;
 }
+.temsList thead th span.active,.temsList thead th a.active{
+  color: #a6c6cb;
+}
 @media (max-width: 550px){
   .temsList thead th span, .temsList thead th a {
     display: inline-block;
-    max-width: 100%;
-    overflow: hidden;
+    max-width: 100%;/*overflow: hidden;*/
     text-overflow: ellipsis;
     vertical-align: inherit;
+  }
+  @media (max-width: 550px){
+    .temsList thead th span .sorter,.temsList thead th a .sorter {
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      margin-left: -9px;
+    }
   }
 }
 /*thead*/
@@ -14704,12 +14769,20 @@ section.hero h1{
   position: relative;
   padding-left: 30px;
 }
-@media (max-width: 380px){
+@media (max-width: 550px){
   .temsList .mtable .t-item td h4 {
     padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
   }
   .temsList .mtable .t-item td h4 a{
     font-size: 12px;
+  }
+  .temsList .mtable .t-item td h4 em{
+    display: block;
+    margin-left: 25px;
   }
   .temsList .mtable .t-item td h4 u{
     display: none;
@@ -14737,14 +14810,11 @@ section.hero h1{
   margin: -5px 0;
   vertical-align: baseline;
 }
-@media (max-width: 380px){
+@media (max-width: 550px){
   .temsList .mtable .t-item td h4 .flag img {
     width: 16px;
-    margin: -3px 0;
+    margin: -2px 0 -4px;
   }
-}
-.temsList .mtable .t-item td h4 a{
-  color: #a6c6cb;
 }
 .temsList .mtable .t-item td h4 u{
   opacity: .6;
@@ -14752,18 +14822,31 @@ section.hero h1{
   font-size: .8em;
   font-weight: 300;
 }
+@media (max-width: 550px){
+  .temsList .mtable .t-item td h4 u {
+    display: none;
+  }
+}
+.temsList .mtable .t-item td h4 a{
+  color: #a6c6cb;
+}
 .temsList .mtable .t-item td:nth-child(1){
   padding-left: 10px;
   padding-right: 20px;
   text-align: right;
 }
-@media (max-width: 380px){
+@media (max-width: 550px){
   .temsList .mtable .t-item td:nth-child(1) {
     width: 40px;
   }
 }
 .temsList .mtable .t-item td:nth-child(2){
   
+}
+@media (max-width: 550px){
+  .temsList .mtable .t-item td.role {
+    display: none;
+  }
 }
 .temsList .mtable .t-item td:nth-child(3){
   text-align: right;
@@ -14808,7 +14891,7 @@ section.hero h1{
   font-size: 13px;
 }
 .filter .mlt-filter .sicon{
-  top: 5px;
+  top: 0px;
 }
 .filter .notm {
   font-size: 11px;
@@ -15289,6 +15372,9 @@ section.hero h1{
   .temsList.playerList .mtable td h4 a,.temsList.playerList .mtable th h4 a{
     font-size: 11px;
   }
+  .temsList.playerList .mtable td h4 u,.temsList.playerList .mtable th h4 u{
+    display: inline;
+  }
 }
 .temsList.playerList .mtable td h4 .logo,.temsList.playerList .mtable th h4 .logo{
   float: left;
@@ -15301,6 +15387,35 @@ section.hero h1{
 @media (max-width: 550px){
   .temsList.playerList .mtable td h4 .flag,.temsList.playerList .mtable th h4 .flag {
     position: relative;
+  }
+}
+@media (max-width: 550px){
+  .temsList.playerList .mtable td h4 u,.temsList.playerList .mtable th h4 u {
+    font-size: .85em;
+    display: inline;
+  }
+}
+.temsList.playerList .mtable td h4 em,.temsList.playerList .mtable th h4 em{
+  font-style: normal;
+}
+.temsList.playerList .mtable td h4 em i,.temsList.playerList .mtable th h4 em i{
+  display: none;
+}
+@media (max-width: 550px){
+  .temsList.playerList .mtable td h4 em i,.temsList.playerList .mtable th h4 em i {
+    display: inline;
+  }
+}
+.temsList.playerList .mtable td h4 b,.temsList.playerList .mtable th h4 b{
+  opacity: .8;
+  font-size: .8em;
+  font-weight: 300;
+  display: none;
+}
+@media (max-width: 550px){
+  .temsList.playerList .mtable td h4 b,.temsList.playerList .mtable th h4 b {
+    display: inline;
+    font-size: .85em;
   }
 }
 .fightsPlayers .bestKill a >span u s{

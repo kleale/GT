@@ -213,16 +213,37 @@
             
             {% include "template/game-home/block-player-week.html" %}
             
+            <!-- Лучшие моменты -->
+            <h3 class="mlh mlh-sm">
+              <span>Лучшие моменты <small>за неделю</small></span>
+            </h3>
             
-            {#
+            <div class="block-plw">
+              <ul class="hlist">
+                <li class="wa-r">
+                  <a href="/ru/dota-2/highlights/7838" class="trpic" style="background-image:url(https://ggscore.com/media/tournament/_60/pic-20161004-600x407-3475515376.jpeg)"></a> <a class="htitle" href="https://ggscore.com/ru/dota-2/highlights/7838">Monet <b>Triple Kill</b> on Ursa vs VG</a> </li>
+                <li class="wa-r">
+                  <a href="/ru/dota-2/highlights/7953" class="trpic" style="background-image:url(https://ggscore.com/media/tournament/_60/pic-20161004-600x407-3475515376.jpeg)"></a> <a class="htitle" href="https://ggscore.com/ru/dota-2/highlights/7953">Miracle- <b>Triple Kill</b> on Puck vs Fantastic Five</a> </li>
+                <li class="wa-r">
+                  <a href="/ru/dota-2/highlights/15393" class="trpic" style="background-image:url(https://ggscore.com/media/tournament/_60/pic-20161211-280x80-7531323404.jpeg)"></a> <a class="htitle" href="https://ggscore.com/ru/dota-2/highlights/15393">Jacko snatches the Aegis on Lifestealer vs Execration</a> </li>
+                <li class="wa-r">
+                  <a href="/ru/dota-2/highlights/13739" class="trpic" style="background-image:url(https://ggscore.com/media/tournament/_60/pic-20161227-279x150-1329323807.jpeg)"></a> <a class="htitle" href="https://ggscore.com/ru/dota-2/highlights/13739">Shachlo <b>Triple Kill</b> on Weaver vs Vega</a> </li>
+                  <li class="wa-r">
+                  <a href="/ru/dota-2/highlights/7838" class="trpic" style="background-image:url(https://ggscore.com/media/tournament/_60/pic-20161004-600x407-3475515376.jpeg)"></a> <a class="htitle" href="https://ggscore.com/ru/dota-2/highlights/7838">Monet <b>Triple Kill</b> on Ursa vs VG</a> </li>
+                <li class="wa-r">
+                  <a href="/ru/dota-2/highlights/7953" class="trpic" style="background-image:url(https://ggscore.com/media/tournament/_60/pic-20161004-600x407-3475515376.jpeg)"></a> <a class="htitle" href="https://ggscore.com/ru/dota-2/highlights/7953">Miracle- <b>Triple Kill</b> on Puck vs Fantastic Five</a> </li>
+                <li class="wa-r">
+                  <a href="/ru/dota-2/highlights/15393" class="trpic" style="background-image:url(https://ggscore.com/media/tournament/_60/pic-20161211-280x80-7531323404.jpeg)"></a> <a class="htitle" href="https://ggscore.com/ru/dota-2/highlights/15393">Jacko snatches the Aegis on Lifestealer vs Execration</a> </li>
+                <li class="wa-r">
+                  <a href="/ru/dota-2/highlights/13739" class="trpic" style="background-image:url(https://ggscore.com/media/tournament/_60/pic-20161227-279x150-1329323807.jpeg)"></a> <a class="htitle" href="https://ggscore.com/ru/dota-2/highlights/13739">Shachlo <b>Triple Kill</b> on Weaver vs Vega</a> </li>
+              </ul>
+            </div>
+            <div class="mlh mlh-sm" style="margin-top:-36px;">
+              <span><a href="" class="btn btn-default btn-xs">Все моменты</a></span>
+            </div>
             
-            {% include "template/game-home/match-list-future.html" %}
-            {% include "template/pager.html" %}
-            
-            {% include "template/game-home/match-list-past.html" %}
-            {% include "template/pager.html" %}
-            
-            #}
+            {% include "template/news/com-block.html" %}
+
           </div>
         </div>
       </section>

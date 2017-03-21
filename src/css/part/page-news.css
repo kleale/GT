@@ -366,7 +366,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #363b40;
   position: relative;
+  
   
   &:after{
     position: absolute 0 0 0 0;

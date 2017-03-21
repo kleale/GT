@@ -47,6 +47,9 @@
           a{
             font-size: 11px;
           }
+          u{
+            display: inline;
+          }
         }
         .logo{
           float: left;
@@ -55,6 +58,32 @@
           position: absolute 0 * * 0;
           @media (max-width: $SM){
             position: relative;
+          }
+        }
+        
+        u{
+          @media (max-width: $SM){
+            font-size: .85em;
+            display: inline;
+          }
+        }
+        em{
+          font-style: normal;
+          i{
+            display: none;
+            @media (max-width: $SM){
+              display: inline;
+            }
+          }
+        }
+        b{
+          opacity: .8;
+          font-size: .8em;
+          font-weight: 300;
+          display: none;
+          @media (max-width: $SM){
+            display: inline;
+            font-size: .85em;
           }
         }
       }

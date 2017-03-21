@@ -192,7 +192,38 @@ body{
     padding: 0;
     margin: 0;
     display: block;
-    
+    > a{
+      transition: $tease;
+      display: block;
+      width: 50px;
+      text-align: center;
+      padding: 10px;
+      opacity: .5;
+      font-size: 25px;
+      line-height: 1;
+      text-decoration: none;
+      position: relative;
+      &:active,
+      &:focus,
+      &:hover{
+        opacity: 1;
+        text-decoration: none;
+      }
+      img{
+        max-width: 100%;
+      }
+      i{
+        display: block;
+      }
+      span{
+        top: 16px;
+        left: 66px;
+        position: absolute;
+        white-space: nowrap;
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+    }
     &.active>a, >a:hover{
       opacity: 1;
       background: rgba(14, 130, 184, 0.24);
@@ -216,28 +247,16 @@ body{
           color: #77bbcb;
         }
       }
+      span{
+        color: #fff;
+      }
     }
-    > a{
-      transition: $tease;
-      display: block;
-      width: 50px;
-      text-align: center;
-      padding: 10px;
-      opacity: .5;
-      font-size: 25px;
-      line-height: 1;
-      text-decoration: none;
-      &:active,
-      &:focus,
-      &:hover{
-        opacity: 1;
-        text-decoration: none;
-      }
-      img{
-        max-width: 100%;
-      }
-      i{
-        display: block;
+  }
+  
+  &.ingame{
+    > li > a{
+      span{
+        display: none;
       }
     }
   }
@@ -649,7 +668,6 @@ footer{
       margin-left: 50px;
     }
   }
-  
   .gt-logo{
     margin: 0;
     padding: 0 0;
@@ -684,40 +702,42 @@ footer{
   }
   .bar-nav-games{
     float: none;
-    
-    a{
-      padding: 10px;
+    > li{ 
+      > a{
+        padding: 10px;
+        span{
+          display: none;
+        }
+      }
+      ul{
+        a{
+          padding: 10px;
+        }
+      }
     }
   }
-  
   .bar-ava{
     float: none;
     padding: 10px;
     background: transparent;
     border-top: 1px solid #484848;
   }
-  
   .bar-username{
     display: none;
   }
-  
   .bar-nav{
     padding-left: 0;
     background: rgba(14, 130, 184, 0.24);
-    
     a{
       color: #7faec3;
-      
       span{
         display: none;
       }
-
       i{
         font-size: 16px;
       }
     }
   }
-  
   .s-lang{
     display: none;
   }

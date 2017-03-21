@@ -32,12 +32,12 @@
 .nostat {
   position: relative;
   text-align: center;
-  color: #386E92;
-  
+  color: #386E92 !important;
   i {
     display: block;
     font-size: 50px;
     margin: 90px 0 10px;
+    color: #386E92 !important;
   }
   span {
     display: block;
@@ -160,7 +160,7 @@
 }
 
 .splayers{
-  padding: 10px 15px;
+  padding: 5px;
   list-style: none;
   margin: 0;
   
@@ -214,7 +214,7 @@
       display: inline-block;
       height: 2px;
       vertical-align: middle;
-      width: 40%;
+      width: 31%;
       margin-right:-10px;
       
       u {
@@ -280,7 +280,7 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 12px;
-  max-width: 115px;
+/*  max-width: 115px;*/
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -303,7 +303,7 @@
     display: block;
     float: left;
     overflow: hidden;
-    width: 20%;
+    width: 30%;
     padding:0 5px;
 }
 .statsblock .stname:first-child{
@@ -415,6 +415,8 @@
     border-radius: 0;
   }
 }
+
+
 
 
 

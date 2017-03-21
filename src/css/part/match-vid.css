@@ -259,8 +259,7 @@ match-vid.css
     transform: translate(0,-50%);*/
     width: auto !important;
     height: 80% !important;
-    transform: translate(0, -50%);
-    top: 50%;
+    top: 10%;
     position: relative;
   }
 }

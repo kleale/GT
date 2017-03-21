@@ -8,8 +8,17 @@
 .green, .text-success{
   color: $green !important;
 }
+.subgreen{
+  color: $subgreen !important;
+}
 .blue, .text-primary{
   color: $blue !important;
+}
+.lightblue{
+  color: $lightblue !important;
+}
+.orange{
+  color: $orange !important;
 }
 .text-info{
   color: $lightblue !important;

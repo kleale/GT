@@ -12,6 +12,9 @@
     text-align: center;
     padding-bottom: 15px;
   }
+  @media (max-width: $SM){
+    overflow: hidden;
+  }
 }
 
 .stage{
@@ -205,6 +208,9 @@
             opacity: 1;
             transform: scale(1)
           }
+        }
+        span{
+          color: #fff;
         }
       }
     }
@@ -582,7 +588,11 @@ Headline
     position: relative;
     background-color: $overlay-blue;
     border-radius:50%;
-    
+    span{
+      overflow: hidden;
+      border-radius: 16px;
+      display: inline-block;
+    }
     b{
       background-color: $overlay-blue;
       border: 1px solid $bg-main;

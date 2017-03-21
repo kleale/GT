@@ -81,7 +81,7 @@ section.hero{
       text-align: right;
       font-size: 10px;
       background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
-      @media (max-width: $SSM){
+      @media (max-width: $SM){
         font-size: 8px;
       }
       &:first-child{
@@ -98,21 +98,38 @@ section.hero{
       &:nth-child(2){
         text-align: left;
       }
+      &.role{
+        @media (max-width: $SM){
+          display: none;
+        }
+      }
       span, a{
         cursor: pointer;
         color: #fff;
+        position: relative;
         &:hover,
         &:active,
         &:focus{
           color: $link-light-blue;
           text-decoration: none;
         }
+        &.active{
+          color: #a6c6cb;
+        }
         @media (max-width: $SM){
           display: inline-block;
           max-width: 100%;
-          overflow: hidden;
+          /*overflow: hidden;*/
           text-overflow: ellipsis;
           vertical-align: inherit;
+          .sorter{
+            @media (max-width: $SM){
+              position: absolute;
+              bottom: -8px;
+              left: 50%;
+              margin-left: -9px;
+            }
+          }
         }
       }
     }
@@ -144,10 +161,18 @@ section.hero{
           margin: 0;
           position: relative;
           padding-left: 30px;
-          @media (max-width: $SSM){
+          @media (max-width: $SM){
             padding-left: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 100%;
+            text-overflow: ellipsis;
             a{
               font-size: 12px;
+            }
+            em{
+              display: block;
+              margin-left: 25px;
             }
             u{
               display: none;
@@ -170,31 +195,39 @@ section.hero{
               width: 20px;
               margin: -5px 0;
               vertical-align: baseline;
-              @media (max-width: $SSM){
+              @media (max-width: $SM){
                 width: 16px;
-                margin: -3px 0;
+                margin: -2px 0 -4px;
               }
             }
-          }
-          a{
-            color: $link-light-blue;
           }
           u{
             opacity: .6;
             text-decoration: none;
             font-size: .8em;
             font-weight: 300;
+            @media (max-width: $SM){
+              display: none;
+            }
+          }
+          a{
+            color: $link-light-blue;
           }
         }
         &:nth-child(1){
           padding-left: 10px;
           padding-right: 20px;
           text-align: right;
-          @media (max-width: $SSM){
+          @media (max-width: $SM){
             width: 40px;
           }
         }
         &:nth-child(2){
+        }
+        &.role{
+          @media (max-width: $SM){
+            display: none;
+          }
         }
         &:nth-child(3){
           text-align: right;
@@ -241,7 +274,7 @@ section.hero{
       font-size: 13px; 
     }
     .sicon{
-      top: 5px;
+      top: 0px;
     }
   }
   .notm {
