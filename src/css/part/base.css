@@ -2,20 +2,14 @@
   Base
 */
 body{
-  color:$text-main;
+  color: $text-main;
   font-family: 'Roboto', Arial, sans-serif;
   background: $body-bg;
   position: relative;
   padding-left: 50px;
 }
-.csgo{
-  background-image: url(../img/bg.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-}
 a{
   color: $link-light-blue;
-  
   &:active,
   &:focus,
   &:hover{
@@ -23,6 +17,3 @@ a{
     text-decoration: underline;
   } 
 }
-
-
-

@@ -9,7 +9,7 @@
     overflow: hidden;
     .pth{
       text-align: right;
-      width:30%;
+      width: 30%;
       float: left;
       h4{
         margin: 0 0 2px 0;
@@ -33,7 +33,6 @@
         font-size: 12px;
         text-transform: uppercase;
         u{
-          border-radius: &br;
           background: color($body-bg l(35%));
           text-decoration: none;
           padding: 2px 5px;

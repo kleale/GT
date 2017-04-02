@@ -22,8 +22,8 @@
         alert("boo tresult");
     });
     $(".m-item .dice-win").click(function (event) {
-        event.stopPropagation();
-        alert("boo dice");
+        //event.stopPropagation();
+        //alert("boo dice");
     });
     
     /*

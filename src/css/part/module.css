@@ -9,8 +9,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
-  width:32px;
-  height:32px;
+  width: 32px;
+  height: 32px;
 }
 .m-i-1{
   background-image: url(../img/mi1.svg);
@@ -54,8 +54,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
-  width:32px;
-  height:32px;
+  width: 32px;
+  height: 32px;
   vertical-align: text-bottom;
 }
 .p-i-1{
@@ -87,19 +87,12 @@
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
-  padding-right: 0px;
+  padding-right: 0;
 }
 
 .nav-pager{
   text-align: right;
   border-top: 1px solid #4d5963;
-  /*
-  background-image: inline(../img/match-tr-bg-line.png);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  border-top: 1px solid #424f5a;
-  background-image: linear-gradient(to bottom, rgb(55, 66, 76) 0%, rgba(46, 51, 55, 0) 100%);
-  */
   margin-bottom: 10px;
   
   .pagination{
@@ -118,8 +111,8 @@
       }
       a{
         background: #454a4e;
-        color:$link-light-blue;
-        border-radius: 0px;
+        color: $link-light-blue;
+        border-radius: 0;
         border: 1px solid rgba(3, 105, 153, 0);
         padding: 8px 0 0;
         width: 35px;
@@ -213,7 +206,7 @@
       top: 50%;
       right: 100%;
       position: absolute;
-      margin-right: 0px;
+      margin-right: 0;
       margin-top: -17px;
     }
     &:after {
@@ -221,7 +214,7 @@
       top: 50%;
       left: 100%;
       position: absolute;
-      margin-left: 0px;
+      margin-left: 0;
       margin-top: -17px;
     }
     .btn{
@@ -314,7 +307,7 @@
           display: block;
           padding: 3px 10px;
           background: #424f5a;
-          color:#fff;
+          color: #fff;
           font-size: 11px;
           max-width: calc(100% - 80px);
           
@@ -356,7 +349,7 @@
   .bestKill{
     a{
       > span{
-        color:#fff;
+        color: #fff;
         margin-top: -26px;
         display: block;
         position: relative;
@@ -396,7 +389,7 @@
   .comeBack{
     a{
       > span{
-        color:#fff;
+        color: #fff;
         margin-top: -30px;
         display: block;
         position: relative;
@@ -457,8 +450,6 @@
           display: block;
           margin: 0 15px;
           overflow: hidden;
-/*          background: #424f5a;
-          border: 1px solid #424f5a;*/
           margin-bottom: -2px;
           u{
             margin: 0;

@@ -164,9 +164,11 @@
 }
 
 /*vods list tablr style*/
-.mlt.vodstable{
-  @media (max-width: $SM){
-    margin: 5px -15px 0;
+.vodstable{
+  &.mlt {
+    @media (max-width: $SM){
+      margin: 5px -15px 0;
+    }
   }
   thead tr th,
   tr td{
@@ -174,7 +176,7 @@
     width: auto;
     
     &:first-child {
-      width: auto;
+      width: auto!important;
       padding-left: 25px;
       @media (max-width: $XM){
         padding-left: 15px;
@@ -265,12 +267,12 @@
   }
 }
 
-
-
-/* --------------------------------
+/*
 match-banner.css
 match-banner.html
 */
+
+/*
 .mban{
   color: #fff;
   line-height: 1;
@@ -322,7 +324,7 @@ match-banner.html
           font-size: 10px;
           white-space: nowrap;
         }
-      } /*abg_md*/
+      }
       
       .abg_i1, .abg_i2 {
         width: 110px;
@@ -361,10 +363,10 @@ match-banner.html
         }
       }
       .abg_i1 {
-          left: 0px;
+          left: 0;
       }
       .abg_i2 {
-        right: 0px;
+        right: 0;
         &:before {
             background: url(http://game-tournaments.com/html/img/tp2.png) no-repeat 50% 50%;
         }
@@ -381,9 +383,8 @@ match-banner.html
         font-weight: 800;
         font-size: 20px;
       }
-    } /*abg_top*/
-  } /*abg_wrap*/
-
+    }
+  }
 
   .dobet{
       padding: 5px;
@@ -458,8 +459,7 @@ match-banner.html
     }
 
   }
-
-} /*mban*/ --------------------------------
+}
    
 @media (max-width: 1300px) {
   .mban {
@@ -555,20 +555,21 @@ match-banner.html
     }
   }
 }
+*/
+
 /*
-END ===============================
+END
 match-banner.css
 match-banner.html
 */
 
 
-
-
 /*
-  Page VOD styles -----------------------------
+  Page VOD styles
 */
+
 .pageMatch{
-  padding-bottom: 0px!important;
+  padding-bottom: 0!important;
 }
 .matchWrap{
   padding: 50px 0 120px 50px;
@@ -607,7 +608,7 @@ match-banner.html
     }
     @media (max-width: 990px) {
       width: calc(100% - 180px);
-      margin-left: 0px;
+      margin-left: 0;
       h1{
         font-size: 12px;
         margin-top: 16px;
@@ -668,7 +669,7 @@ match-banner.html
     .mMap{
       text-decoration: none;
     }
-  } /*.mheader*/
+  }
   
   .sLang{
     float: right;
@@ -681,9 +682,6 @@ match-banner.html
     @media (max-width: 990px) {
       .dropdown{
         margin: 2px 3px;
-      }
-      .btn{
-        
       }
     }
     .gti-youtube-play{
@@ -734,8 +732,9 @@ match-banner.html
       margin: 11px 0 10px 0;
     }
   }
-  
-} /*matchwrap*/
+} 
+
+/*matchwrap*/
 
 .pageMatch{
   footer{
@@ -771,11 +770,11 @@ match-banner.html
       color: #fff;
     }
     .caret {
-      margin: 8px 0px 8px 5px;
+      margin: 8px 0 8px 5px;
       position: absolute;
       right: 8px;
       @media (max-width: 990px) {
-        right: 0px;
+        right: 0;
         margin: 8px 10px 8px 5px;
       }
     }
@@ -853,7 +852,7 @@ match-banner.html
       position: absolute;
       display: block;
       width: 1px;
-      background: ##295978;
+      background: #295978;
       top: 30px;
       bottom: -10px;
       margin-left: 71px;
@@ -926,7 +925,7 @@ match-banner.html
     }
     .fightTable{
       position:relative;
-      margin:2px 0 0 0;
+      margin: 2px 0 0 0;
       background: transparent;
       text-align: right;
       
@@ -983,7 +982,7 @@ match-banner.html
 
 
 .summary{
-  padding: 5px 0px 15px 0px;
+  padding: 5px 0 15px 0;
   background: #2a231e;
   border-top: 1px solid #4c3c31;
   
@@ -1098,7 +1097,7 @@ ONLY portrait orientation
   .matchWrap{
     .frameblock{
       position: relative 0 0 0 0;
-      margin-top: 0px;
+      margin-top: 0;
       /*
       .frameTop{
         position: relative 0 0 0 0;
@@ -1196,7 +1195,7 @@ ONLY portrait orientation
     }
   }
   .mban {
-    top: 0px;
+    top: 0;
   }
 }
 
@@ -1297,7 +1296,7 @@ ONLY landscape orientation
     .frameblock{
       right: 283px;
       .frame{
-        bottom: 0px!important;
+        bottom: 0!important;
         top: 50px;
       }
       .frameBottom{
@@ -1356,7 +1355,7 @@ ONLY landscape orientation
 }
 
 /*
-  END Page VOD styles =====================
+  END Page VOD styles
 */
 
 

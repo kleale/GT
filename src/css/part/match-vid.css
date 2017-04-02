@@ -61,7 +61,7 @@ match-vid.css
       }
       > td{
         text-align: center;
-        padding: 10px 0px;
+        padding: 10px 0;
         @media (max-width: $SM){
           padding: 3px 3px!important;
         }
@@ -192,7 +192,7 @@ match-vid.css
             background:transparent;
             &:nth-of-type(2n+1),
             &:nth-of-type(2n){
-              border-bottom: 0px solid rgb(57, 63, 66);
+              border-bottom: 0;
             }
             &:hover{
               td:nth-child(2){
@@ -255,8 +255,6 @@ match-vid.css
   padding: 0;
   overflow-y: auto;
   img{
-    /*position: absolute 50% 0 * 0;
-    transform: translate(0,-50%);*/
     width: auto !important;
     height: 80% !important;
     top: 10%;
@@ -302,7 +300,7 @@ match-vid.css
         margin-top: 24px;
       .progress{
         height: 10px;
-        border-radius: 0px;
+        border-radius: 0;
         margin-bottom: 14px;
         background-color: #2e89b3;
         .progress-bar{

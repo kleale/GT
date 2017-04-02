@@ -5,7 +5,7 @@
 body{
   background: #333 url(../img/bg_news.jpg) 50% 50% repeat;
   @media (max-width: $XM) {
-    padding-left: 0px;
+    padding-left: 0;
   }
 }
 .mainwrap{
@@ -80,11 +80,11 @@ body{
   background-image: inline(../img/tile.png);
   background-repeat: repeat;
   background-position: center;
-  width:200px;
+  width: 200px;
   z-index: 100;
   
   @media (max-width: 1585px) {
-    margin-left: 0px;
+    margin-left: 0;
   }
   @media (max-width: $XM) {
     margin-left: -50px;
@@ -315,7 +315,7 @@ body{
       margin: 5px 10px;
       font-size: 12px;
       &:nth-child(1){
-        border-bottom:0;
+        border-bottom: 0;
       }
       i{
         
@@ -497,7 +497,7 @@ body{
   }
   .caret{
     float: right;
-    margin: 5px 0px;
+    margin: 5px 0;
   }
 }
 
@@ -534,7 +534,7 @@ body{
     display: block;
     color: $link-light-blue;
     position: absolute 0 0 0 *;
-    padding:5px;
+    padding: 5px;
     line-height: 1;
     padding: 10px;
     opacity: .7;
@@ -552,7 +552,7 @@ body{
 @media (max-width: $XM){
   .swipe-area {
     position: absolute;
-    width: 0px;
+    width: 0;
     left: 0;
     top: 0;
     height: 100%;
@@ -657,10 +657,9 @@ footer{
 }
 
 .hiddenbar{
-  width:50px;
-  
+  width: 50px;
   .barc{
-    top:50px;
+    top: 50px;
   }
   .opener{
     position: relative 0 0 0 0;
@@ -670,7 +669,7 @@ footer{
   }
   .gt-logo{
     margin: 0;
-    padding: 0 0;
+    padding: 0;
      &:after{
       content: "\e904";
       font-family: 'gticons' !important;

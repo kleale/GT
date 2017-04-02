@@ -12,7 +12,7 @@
 }
 .m-news{
   .bh{
-    margin: 0 0 0 0;
+    margin: 0;
     padding: 0;
     background-image: inline(../img/nav-line.png);
     background-position: 100% 100%;
@@ -36,7 +36,7 @@
 }
 
 .tse-news{
-  padding: 0 0 0 0;
+  padding: 0;
   margin-top: -1px;
   
   ul.nlist{
@@ -71,7 +71,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         overflow: hidden;
-        box-shadow: -1px 0px 0 1px #454a4e inset;
+        box-shadow: -1px 0 0 1px #454a4e inset;
         
         &:after{
           content: '';
@@ -219,7 +219,7 @@
         height: 100%;
         width: 3px;
         top: 0;
-        right: 0px;
+        right: 0;
         bottom: 0;
         position: absolute;
       }
@@ -491,10 +491,6 @@
       }
       span{
         margin: 0 0 0 9px;
-        /*&.share-vk{}
-        &.share-fb{}
-        &.share-tw{}
-        &.share-gg{}*/
       }
     }
   }
@@ -561,7 +557,7 @@
 .newslist{
   padding: 10px 30px;
   @media (max-width: $XM) {
-    padding: 0px 15px;
+    padding: 0 15px;
   }
   .tse-news, 
   .tse-sc {
@@ -582,7 +578,7 @@
   }
   h2{
     position: relative;
-    margin: 30px 0 15px 0px;
+    margin: 30px 0 15px 0;
     font-weight: 300;
     color: $green;
   }
@@ -610,7 +606,7 @@
         top: 4px;
         left: 0;
         position: absolute;
-        margin: 0 0px;
+        margin: 0;
       }
       a{
         display: inline;
@@ -631,15 +627,6 @@
     font-weight: 300;
     margin: 20px 0;
     background:rgba(145, 205, 215, 0.02) url(../img/spoiler.png) 0 0 repeat;
-    
-    /*
-    background:
-    radial-gradient(#243e42 15%, transparent 16%) 0 0,
-    radial-gradient(#243e42 15%, transparent 16%) 8px 8px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-size: 16px 16px;
-    */
   }
   .news-desc{
     font-size: 16px;
@@ -778,7 +765,7 @@
         color:#898d98;
         text-decoration: none;
         i{
-          padding: 6px 0px;
+          padding: 6px 0;
           border-radius: 30px;
           width: 30px;
           height: 30px;
@@ -820,7 +807,7 @@ Block ramka
     padding: .2em 0;
     color: #82ac4e;
     text-transform: uppercase;
-    margin: -12px 0 0px 0;
+    margin: -12px 0 0 0;
     
     &:before,
     &:after {
@@ -1009,7 +996,7 @@ Block ramka
   .comblock{
     height: auto;
     margin-top: -1px;
-    padding: 10px 0px;
+    padding: 10px 0;
     
     .m-com-list li div {
       font-size: 14px;
@@ -1175,7 +1162,7 @@ Block ramka
       &:after {
         content: '';
         position: absolute;
-        top: 0px;
+        top: 0;
         left: 40px;
         right: 40px;
         height: 20px;

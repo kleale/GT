@@ -2,12 +2,12 @@
 Branding - Match of the day
 */
 .abg{
-  position:fixed 0 0 0 50px;
-  z-index:1;
-  background:#000 url(../img/bg.jpg) no-repeat 50% -50px;
+  position: fixed 0 0 0 50px;
+  z-index: 1;
+  background: #000 url(../img/bg.jpg) no-repeat 50% -50px;
   color: #fff;
   line-height: 1;
-  overflow:hidden;
+  overflow: hidden;
   z-index: 1;
   
   &:hover,
@@ -49,7 +49,7 @@ Branding - Match of the day
     font-style: normal;
     text-transform: uppercase;
 	font-size: 10px;
-	white-space:nowrap;
+	white-space: nowrap;
 }
 .abg_i1,
 .abg_i2{
@@ -63,10 +63,10 @@ Branding - Match of the day
     margin-top: 5px;
 }
 .abg_i1{
-    left: 0px;
+    left: 0;
 }
 .abg_i2{
-    right: 0px;
+    right: 0;
 }
 .abg_i1 img,
 .abg_i2 img{
@@ -86,7 +86,6 @@ Branding - Match of the day
     top: 50%;
     left: 50%;
     background: url(../img/tp1.png) no-repeat 50% 50%;
-    /* background-size: cover; */
     display: block;
     width: 295px;
     height: 200px;
@@ -120,7 +119,7 @@ Branding - Match of the day
     display: table;
     position: absolute;
     top: 22px;
-    left: 0px;
+    left: 0;
     width: 380px;
     text-decoration: none;
 }
@@ -134,9 +133,9 @@ Branding - Match of the day
     padding-right: 30px;
 }
 .abg_mp img{
-	width:100%;
-	border-radius:5px;
-	opacity:.7;
+	width: 100%;
+	border-radius: 5px;
+	opacity: .7;
 }
 .abg_mt {
     font-size: 12px;
@@ -486,7 +485,7 @@ Branding - Match of the day
 }
 @media (max-width : 767px) {
   .abg{
-    left: 0px;
+    left: 0;
     position: absolute;
   }
   .abg_left {
@@ -506,7 +505,7 @@ Branding - Match of the day
     line-height: 1.4;
     b {
       font-size: 30px;
-      top: 0px;
+      top: 0;
       left: 40px;
     }
   }
@@ -517,12 +516,12 @@ Branding - Match of the day
 
 /* Live banner */
 .ablive{
-  height:90px;
-  overflow:hidden;
-  position:relative;
+  height: 90px;
+  overflow: hidden;
+  position: relative;
   background: url(../img/ban.jpg) no-repeat 50% 0;
-  color:#fff;
-  display:block;
+  color: #fff;
+  display: block;
   transition: initial;
   clear: both;
 }
@@ -594,9 +593,9 @@ Branding - Match of the day
 }
 .abl_mtr{
     position: absolute;
-    left: 0px;
-    top: 0px;
-    bottom: 0px;
+    left: 0;
+    top: 0;
+    bottom: 0;
     width: 200px;
     height: 70px;
     display: table;
@@ -604,7 +603,7 @@ Branding - Match of the day
 }
 .abl_mp{
     display: table-cell;
-    padding: 0px 0 0 30px;
+    padding: 0 0 0 30px;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -639,9 +638,9 @@ Branding - Match of the day
     font-weight: bolder;
     text-transform: uppercase;
     text-shadow: 0 0 15px #10c7f9;
-	display:table;
-	text-decoration:none;
-	right:100%;
+	display: table;
+	text-decoration: none;
+	right: 100%;
 	width: 100px;
     text-align: right;
 }
@@ -652,9 +651,9 @@ Branding - Match of the day
 }
 .abl_t1 b,
 .abl_t2 b{
-	display:table-cell;
-	vertical-align:middle;
-	height:90px;
+	display: table-cell;
+	vertical-align: middle;
+	height: 90px;
 }
 .abl_day1{
 	width: 150px;
@@ -741,7 +740,7 @@ Branding - Match of the day
 
 @media (max-width : 1000px) {
 	.ablive{
-		display:none;
+      display:none;
 	}
 }
 /* END Live banner*/
@@ -823,10 +822,10 @@ Branding - Match of the day
       height: auto;
   }
   .abl_k1{
-      left:90px;
+      left: 90px;
   }
   .abl_k2{
-      right:90px;
+      right: 90px;
   }
   .lk_up:before, 
   .lk_down:before {
@@ -856,7 +855,7 @@ Branding - Match of the day
     margin: -80px -184px;
   }
   .abl_i2:before{
-      left:100%;
+      left: 100%;
   }
 }
 
@@ -898,14 +897,14 @@ LIVE BLOCK
     top: 12px;
     width: 10px;
     height: 10px;
-    left:auto;
-	right:15px;
-	position:absolute;
+    left: auto;
+	right: 15px;
+	position: absolute;
   }
   .soon-t{
-	left:auto;
-	right:15px;
-	position:absolute;
+	left: auto;
+	right: 15px;
+	position: absolute;
   }
   
   .table{
@@ -928,14 +927,14 @@ LIVE BLOCK
     .livetop {
       text-align: left;
       font-weight: bold;
-      position:relative;
+      position: relative;
       font-size: 13px;
       @media (max-width: $XM){
         font-size: 12px;
       }
       a {
         position: relative;
-        padding: 10px 0px 0px 5px;
+        padding: 10px 0 0 5px;
         line-height: 1.6;
         display: block;
         color: #fff;
@@ -969,7 +968,7 @@ LIVE BLOCK
     }
     .livebet_do{
       div{
-        text-align:left;
+        text-align: left;
         padding: 0 0 0 8px;
         position: relative;
         max-width: 80px;
@@ -1017,7 +1016,3 @@ LIVE BLOCK
     color: #7faec3;
   }
 }
-
-
-
-

@@ -23,16 +23,13 @@
   .chat-action{
     position: absolute * 0 0 0;
   }
-  
   .tse-com{
     padding-bottom: 59px;
   }
-  
   .m-com-list{
     margin: 0;
     padding: 0;
     list-style: none;
-
     li{
       margin: 0 0 15px 0;
       background: #31373a;
@@ -59,7 +56,7 @@
       
       > a{
         float: left;
-        width:35px;
+        width: 35px;
         height: 35px;
         
         img{
@@ -80,7 +77,7 @@
         }
         p{
           color: $text-gray-3;
-          margin-top:5px;
+          margin-top: 5px;
           line-height: 1.2;
           font-weight: 400;
           transition: $tease;

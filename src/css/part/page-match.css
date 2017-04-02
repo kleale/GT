@@ -29,7 +29,7 @@
   }
   
   em{
-    display:none;
+    display: none;
     font-style: normal;
     padding: 7px;
     font-size: 13px;
@@ -39,7 +39,7 @@
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     @media (max-width: $M){
-      display:block;
+      display: block;
     }
     &:hover,
     &:active,
@@ -89,7 +89,7 @@
         b,i{
           background: $button-gray;
           display: inline-block;
-          width:30px;
+          width: 30px;
           height: 30px;
           line-height: 31px;
           font-size: 14px;
@@ -170,7 +170,7 @@
       &.s-pass:before{
         background: rgb(3, 88, 128);
         @media (max-width: $M){
-          display:block;
+          display: block;
         }
       }
       &.s-pass:after{
@@ -209,7 +209,7 @@
             transform: scale(1)
           }
         }
-        span{
+        a span{
           color: #fff;
         }
       }
@@ -256,7 +256,7 @@
       
       &.s-pass span,
       &.active span{
-        color:#fff;
+        color: #fff;
       }
       
       &:last-item a{
@@ -368,12 +368,12 @@ Headline
     &:after{
       content: inline(../img/hline1.png);
       position: absolute -6px * * 100%;
-      margin-left: 0px;
+      margin-left: 0;
     }
     &:before{
       content: inline(../img/hline.png);
       position: absolute -6px 100% * *;
-      margin-right: 0px;
+      margin-right: 0;
     }
     > span{
       @media (max-width: $XM){
@@ -503,7 +503,7 @@ Headline
     opacity: 0;
     
     &.fix{
-      top:0px;
+      top: 0;
       opacity: 1;
     }
     
@@ -572,7 +572,6 @@ Headline
       font-size: 18px;
       display: block;
       clear: both;
-/*      min-height: 40px;*/
       line-height: 1;
     }
     @media (max-width: $M){
@@ -587,7 +586,7 @@ Headline
     padding: 7px;
     position: relative;
     background-color: $overlay-blue;
-    border-radius:50%;
+    border-radius: 50%;
     span{
       overflow: hidden;
       border-radius: 16px;
@@ -596,13 +595,12 @@ Headline
     b{
       background-color: $overlay-blue;
       border: 1px solid $bg-main;
-      color: $link-light-blue;
       position: absolute -10px -10px * *;
       display: block;
       width: 30px;
       height: 30px;
-      line-height: 30px;
-      font-size: 11px;
+      line-height: 29px;
+      font-size: 12px;
       text-align: center;
       border-radius: 50%
     }
@@ -663,6 +661,12 @@ Headline
       }
       &.standin{
         border-bottom: 1px dashed #3f79a2;
+      }
+    }
+    img{
+      margin-left: 3px;
+      &:first-child {
+        margin-left: 0;
       }
     }
   }
@@ -783,6 +787,7 @@ Headline
   .m-links{
     margin: 10px 0;
     font-size: 11px;
+    line-height: 1.3;
   }
 }
 .m-r-ozh{
@@ -923,7 +928,7 @@ Banners
   .m-time {
     font-size: 11px;
     font-weight: normal;
-    margin: 0px 0 5px 0;
+    margin: 0 0 5px 0;
   }
   .m-team.mt1 .mpl{
     display: none;

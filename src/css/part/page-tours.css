@@ -48,7 +48,7 @@
           vertical-align: middle;
         }
         h4{
-          padding-left: 0px;
+          padding-left: 0;
         }
         a{
           text-decoration: none;
@@ -109,7 +109,7 @@ section.t-top{
   border-bottom: 1px solid #37424c;
   background-color: #2e3338;
   padding: 20px 30px 30px;
-  box-shadow: 0px -15px 20px 0px rgba(0, 0, 0, 0.15) inset;
+  box-shadow: 0 -15px 20px 0 rgba(0, 0, 0, 0.15) inset;
   @media (max-width: $XM) {
     padding: 20px;
   }
@@ -190,7 +190,7 @@ section.t-top{
       }
       .mlh {
         text-align: left;
-        padding-right: 0px;
+        padding-right: 0;
         span {
           padding-left: 0;
           &:after {
@@ -320,17 +320,17 @@ table.places{
       border-bottom: 1px solid rgba(57, 62, 64, 0.65);
     }
     &.first-place {
-      background: rgba(248, 255, 0, 0.08) none repeat scroll 0 0;
+      background: rgba(248, 255, 0, 0.08);
       color: #e0db6a;
       font-size: 16px;
     }
     &.second-place {
       color: #eee;
-      background: rgba(248, 255, 0, 0.04) none repeat scroll 0 0;
+      background: rgba(248, 255, 0, 0.04);
     }
     .third-place {
       color: #B7731B;
-      background: rgba(248, 255, 0, 0.02) none repeat scroll 0 0;
+      background: rgba(248, 255, 0, 0.02);
     }
     b {
       margin: 0 0 0 15px;
@@ -360,7 +360,7 @@ table.places{
     display: block;
     padding: 20px;
     font-weight: 400;
-    background: rgba(248, 255, 0, 0.08) none repeat scroll 0 0;
+    background: rgba(248, 255, 0, 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.16);
   }
   .noplaces-t{
@@ -644,7 +644,7 @@ animate border - to share
     font-size: 12px;
     line-height: 1.5;
     @media (max-width: $M){
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   > div {
     overflow: auto;
@@ -663,7 +663,7 @@ animate border - to share
     width: 170px;
     position: absolute;
     top: -12px;
-    left: 0px;
+    left: 0;
   }
   .match_date {
     color: #d9d9d9;
@@ -673,7 +673,7 @@ animate border - to share
     width: 170px;
     position: absolute;
     bottom: -12px;
-    left: 0px;
+    left: 0;
   }
   .match_qtip {
     ul {
@@ -751,7 +751,7 @@ animate border - to share
           float: right;
           padding: 5px 10px 4px;
           &.mwin {
-            background: #00afff none repeat scroll 0 0;
+            background: #00afff;
           }
         }
       }

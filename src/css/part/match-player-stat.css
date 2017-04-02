@@ -11,7 +11,7 @@
   
   span{
     transition: $tease;
-    color:#3f79a2;
+    color: #3f79a2;
     padding: 10px 0;
     display: table-cell;
     text-transform: uppercase;
@@ -49,7 +49,7 @@
 .filters{
   position: relative;
   z-index: 20;
-  padding: 0px 10px;
+  padding: 0 10px;
   
   table{
     width: 100%;
@@ -90,7 +90,7 @@
       position: absolute 10px 10px * *;
     }
     input{
-      padding-right:30px;
+      padding-right: 30px;
       margin-right: 40px;
       width: 100px;
     }
@@ -136,7 +136,7 @@
     line-height: 50px;
     opacity: 0.4;
     text-align: center;
-    position:relative;
+    position: relative;
     
     .current {
       background: #333;
@@ -156,7 +156,7 @@
 }
 .stats {
     padding: 7px;
-    position:relative;
+    position: relative;
 }
 
 .splayers{
@@ -199,14 +199,14 @@
       font-size: 13px;
       
       b{
-        font-weight:500;
+        font-weight: 500;
       }
       .snum{
         color: #f9ffc2;
         display: inline-block;
         width: 80px;
-        margin-right:-10px;
-        font-weight:400;
+        margin-right: -10px;
+        font-weight: 400;
       }
     }
     
@@ -215,13 +215,13 @@
       height: 2px;
       vertical-align: middle;
       width: 31%;
-      margin-right:-10px;
+      margin-right: -10px;
       
       u {
         background: #fff;
         display: block;
         height: 2px;
-        position:relative;
+        position: relative;
         
         &:after {
           background: #fcffa0;
@@ -237,8 +237,6 @@
         }
       }
     }
-    
-    
   }
 } /*splayers*/
 
@@ -258,13 +256,11 @@
 
 
 .listbyteams{
-    margin-bottom:10px;
-    
+  margin-bottom: 10px;
   li.radiant:before,
   li.radiant:after {
     background: linear-gradient(to right,  rgba(3,229,0,0.79) 0%,rgba(2,158,0,0.05) 100%);
   }
-  
   li.dire:before,
   li.dire:after {
     background: linear-gradient(to right,  rgba(224,0,0,0.79) 0%,rgba(204,0,0,0.05) 100%);
@@ -280,7 +276,6 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 12px;
-/*  max-width: 115px;*/
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -304,7 +299,7 @@
     float: left;
     overflow: hidden;
     width: 30%;
-    padding:0 5px;
+    padding: 0 5px;
 }
 .statsblock .stname:first-child{
     margin-top:-5px;
@@ -329,7 +324,7 @@
 
 /*Dalay*/
 .dblock{
-  position:relative;
+  position: relative;
   
   > a {
     color: #8b8b8b;
@@ -337,8 +332,8 @@
     padding: 6px;
     
     &:hover {
-      text-decoration:none;
-      cursor:pointer;
+      text-decoration: none;
+      cursor: pointer;
     }
   }
   .dropdown-menu {
@@ -355,7 +350,7 @@
   float: left; 
   width: 130px; 
   margin-right: 10px;
-  position:relative;
+  position: relative;
   
   b {
     color: #8195ae;
@@ -415,8 +410,6 @@
     border-radius: 0;
   }
 }
-
-
 
 
 

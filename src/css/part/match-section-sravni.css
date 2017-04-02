@@ -18,9 +18,9 @@
     margin-left: 2px;
     
     .dropdown-menu{
-      right:0;
-      left:auto;
-      width:inherit;
+      right: 0;
+      left: auto;
+      width: inherit;
     }
   }
   > b{
@@ -65,7 +65,7 @@
     h3{
       margin: 0;
       font-size: 24px;
-      color:#fff;
+      color: #fff;
     }
     u{
       text-transform: uppercase;
@@ -83,14 +83,14 @@
     
     @media (max-width: $XM){
       text-align: center;
-      margin: 0px;
+      margin: 0;
     }
     
     > div{
       margin-right: 100px;
       
       @media (max-width: $XM){
-        margin-right: 0px;
+        margin-right: 0;
       }
     }
     .sr_pic{
@@ -116,7 +116,7 @@
     
     @media (max-width: $XM){
       text-align: center;
-      margin: 0px;
+      margin: 0;
     }
     
     > div{
@@ -164,8 +164,8 @@
   height: 270px;
   margin-top: -20px;
   @media (max-width: $XM){
-    margin-top: 0px;
-    padding:20px 0;
+    margin-top: 0;
+    padding: 20px 0;
     height: 220px;
   }
 }
@@ -174,7 +174,7 @@
 }
 #m-teams {
   .block-content{
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 .teams_stats{
@@ -192,44 +192,12 @@
     @media (max-width: $XM){
       margin: 20px 0;
     }
-    /*.tbs1, .tbs2{
-      width:100px;
-      table{
-        width:100%;
-        
-        th{
-          color:$text-gray-3;
-          font-weight: 400;
-          padding: 0px 5px;
-          text-transform: uppercase;
-        }
-        td{
-          text-align: right;
-          color: #e4e4e4;
-          padding: 0px 5px;
-        }
-      }
-    }
-    .tbs1{
-      float: left;
-      
-      th{
-        text-align: right;
-      }
-    }
-    .tbs2{
-      float: right;
-    }*/
-    
     .tbsb{
-      /*float: left;*/
-      /*width: calc(100% - 200px);*/
       position: relative;
       .tcgraf{
         position: absolute -6px 10px -7px 10px;
         margin: 0 20%;
         z-index: 1;
-        /*height: 149px;*/
       }
       .intable{
         position: relative;
@@ -286,13 +254,5 @@
     margin: 0 20%;
   }
 }
-
-
-
-
-
-
-
-
 
 

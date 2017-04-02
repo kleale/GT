@@ -20,8 +20,8 @@ section.light-head{
     }
   }
   .thumb{
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     position: relative;
     float: left;
     margin-right: 20px;
@@ -110,7 +110,6 @@ section.light-head{
     }
     
     img{
-      /*opacity: 0;*/
       width: 100%;
     }
   }
@@ -133,7 +132,7 @@ section.light-head{
     padding: 3px;
     .heropic{
       width: 50px;
-      padding-right: 0px;
+      padding-right: 0;
       margin: 5px 15px 5px 0;
       img{
         width: 100%;

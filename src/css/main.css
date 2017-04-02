@@ -55,5 +55,7 @@
 @import "part/page-vods.css";
 @import "part/page-light.css";
 @import "part/page-user.css";
+@import "part/page-predicts.css";
+@import "part/page-studio.css";
 /*states*/
 @import "part/state.css";

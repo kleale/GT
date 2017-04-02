@@ -37,7 +37,6 @@
       &:hover,
       &:active,
       &:focus{
-        
         p{
           color: #e8e8e8;
         }

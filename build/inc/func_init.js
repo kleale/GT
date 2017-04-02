@@ -10,22 +10,22 @@
     $("[name='score']").bootstrapSwitch();
   
     // match list tr
-    $('.m-item').on('click', function (e) {
+/*    $('.m-item').on('click', function (e) {
         var $this = $(e.currentTarget);
         if (e.ctrlKey == true) {
           window.open($this.attr('data-href'));
         } else {
           window.location.href = $this.attr('data-href');
         }
-    });
-    $(".m-item .tresult").click(function (event) {
+    });*/
+/*    $(".m-item .tresult").click(function (event) {
         event.stopPropagation();
         alert("boo tresult");
     });
     $(".m-item .dice-win").click(function (event) {
-        event.stopPropagation();
-        alert("boo dice");
-    });
+        //event.stopPropagation();
+        //alert("boo dice");
+    });*/
     
     /*
     $('.m-item').on('click', function (e) {

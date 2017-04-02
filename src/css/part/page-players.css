@@ -640,7 +640,7 @@ player.html
   }*/
   .pInf{
     h2{
-      margin-bottom: 0px;
+      margin-bottom: 0;
       padding-right: 0;
       text-align: left;
       span{
@@ -689,9 +689,9 @@ player.html
 }
 
 .teamP{
-  margin: -30px 0px;
+  margin: -30px 0;
   @media (max-width: $XM){
-    margin: 5px 0px -20px;
+    margin: 5px 0 -20px;
   }
   >.row{
     text-align: center;
@@ -788,7 +788,7 @@ player.html
     table-layout: fixed;
 
     tr:last-child td{
-      border-bottom: 0px;
+      border-bottom: 0;
     }
     th{
       width: 50px;
@@ -886,7 +886,7 @@ player.html
     line-height: 21px;
     background: #607D8B;
     border-radius: 50%;
-    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.48), 0 1px 0 rgba(142, 142, 142, 0.41) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.48), 0 1px 0 rgba(142, 142, 142, 0.41) inset;
     text-shadow:0 1px rgba(0, 0, 0, 0.5);
   }
   &.p1 b{

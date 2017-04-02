@@ -351,7 +351,6 @@
     width: 100%;
 }
 .hi-1 {
-    /*background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;*/
     transition: background 0.2s ease 0s, color 0.2s ease 0s;
     position: relative;
 }
@@ -365,7 +364,7 @@
     transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
 }
 .hi-1a:hover {
-    background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
+    background: rgba(255, 255, 255, 1);
     color: #303539;
 }
 .hi-1a:hover *{
