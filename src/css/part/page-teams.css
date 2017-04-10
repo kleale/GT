@@ -60,11 +60,15 @@ section.hero{
   width: 35px;
   line-height: 35px;
   position: relative;
-  background-position: top center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
   border: 1px solid;
+  img{
+    width: 100%;
+    display: block;
+  }
 }
 
 .temsList{

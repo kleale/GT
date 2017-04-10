@@ -206,35 +206,15 @@ page-predicts.css
   text-overflow: ellipsis;
 }
 .przstat{
-  font-size: 16px;
+  color: #e0e2e4;
+  font-size: 13px;
   text-align: center;
   padding: 15px;
-  margin: 0 0 35px 0;
-  border: 2px solid #424d56;
+  margin: 0 0 20px 0;
+  border: 1px solid #424d56;
   background-color: rgba(46,51,56,.33);
-  .prztext{
-    font-size: 15px;
-    padding: 10px 10px 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #424d56;
-  }
-  i{
-    display: block;
-    height: 50px;
-    width: 50px;
-    margin: auto;
-  }
-  label{
-    color: #fff;
-    text-transform: uppercase;
-    padding: 10px 0;
-    display: block;
-    font-weight: 500;
-    font-size: 12px;
-  }
-  b{
-    color: #b2daf7;
-    font-size: 16px;
+  .mlh{
+    padding-bottom: 10px;
   }
 }
 .przlist{
@@ -243,6 +223,21 @@ page-predicts.css
     margin: 0;
     padding: 0;
     font-size: 12px;
+    thead{
+      th{
+        &.tmz{
+          background-color: #303a44;
+          text-align: center;
+        }
+      }
+    }
+    tr:nth-of-type(2n+1) {
+      td{
+        &.tmz{
+          border-bottom: 1px solid rgba(57, 62, 64, 0.65);
+        }
+      }
+    }
     td{
       &.tname{
         width: 60px;
@@ -250,6 +245,7 @@ page-predicts.css
       &.tmz{
         width: 150px;
         text-align: center;
+        background: rgba(55, 66, 76, 0.15) url(../img/spoiler.png) repeat scroll 0 0;
         .logo {
           display: inline-block;
           position: relative;
@@ -264,41 +260,38 @@ page-predicts.css
             opacity: 1;
             filter: grayscale(0);
             color: #FFC107;
-            /*   
-            &:after{
-              content: 'win';
-              position: absolute;
-              left: 10px;
-              width: 30px;
-              padding: 0 3px;
-              text-align: center;
-              background: #FFC107;
-              color: #4c3813;
-              font-size: 9px;
-              border-radius: 2px;
-              bottom: -12px;
-              margin-top: -7px;
-              text-transform: uppercase;
-              transition: $tease;
-              opacity: 1;
-            }
-            &:hover{
-              &:after{
-                opacity: 0;
-              }
-            }*/
+          }
+          span{
+            display: inline-block;
+            height: 35px;
+            line-height: 35px;
+            margin: 0 0 4px 0;
+          }
+          b{
+            display: block;
+            font-weight: 300;
           }
           img {
             max-height: 35px;
             max-width: 35px;
-            display: block;
-            margin: 0 auto 4px;
+            display: inline-block;
+          }
+          &:hover,
+          &:focus,
+          &:active{
+            text-decoration: none;
           }
         }
       }
       &.tprp{
+        padding: 0;
+        .tour{
+          font-size: 11px;
+        }
         .prpf{
           position: relative;
+          padding: 15px 20px;
+          min-height: 92px;
           .hh{
             display: none;
           }
@@ -308,9 +301,9 @@ page-predicts.css
             }
           }
           .prt {
-            color: #cccccc;
+            color: #eee;
             font-weight: 400;
-            font-size: 13px;
+            font-size: 12px;
             line-height: 1.4;
           }
           .prm {
@@ -320,13 +313,11 @@ page-predicts.css
             font-size: 11px;
             display: inline-block;
             background: #3b4145;
-            float: right;
-            border-radius: 2px;
             
-            /*right: -5px;
-            bottom: -12px;
-            position: absolute;*/
-/*            &:before {
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            &:before {
               content: '';
               width: 10px;
               height: 100%;
@@ -335,13 +326,15 @@ page-predicts.css
               transform: skewX(-15deg);
               transition: all .1s linear;
               background: #3b4145;
-            }*/
+              display: block;
+              position: absolute;
+            }
             &:hover {
               color: #a6c6cb;
               background: #4789b8;
-              /*&:before {
+              &:before {
                 background: #4789b8;
-              }*/
+              }
             }
           }
         }

@@ -16,13 +16,11 @@
     <div class="otstup">
       
       
-      <section class="t-top tHero plCard pageTeam">
+      <section class="t-top tHero">
 		<div class="heroBg" style="background-image:url(https://ggscore.com/html/img/headpic_582.jpg)"></div>
         <a href="/ru/dota-2/team" class="btn all btn-default">Все прогнозисты Dota 2</a>
-        <h1>DotA 2_hot_bets <span class="label label-default upro">PRO</span></h1>
-        
-         
-        {# 
+        <h1>DotA 2_hot_bets <span class="label label-default upro">PRO</span></h1>        
+
         <div class="row">
           <div class="col-md-4">
             <div class="pAva">
@@ -49,45 +47,50 @@
                         <td>Место в рейтинге</td>
                         <td>#1</td>
                       </tr>
+                      <tr>
+                        <td>Прогнозов</td>
+                        <td>16</td>
+                      </tr>
+                      <tr>
+                        <td>Проходимость</td>
+                        <td>100.0%</td>
+                      </tr>
+                      <tr>
+                        <td>Последний</td>
+                        <td>4 дн. назад</td>
+                      </tr>
+                      <tr>
+                        <td>Подписка</td>
+                        <td>бесплатно</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
-                <div class="fans"> <a href="javascript:;" onclick="subscribe()" class="btn btn-primary">Подписаться</a><b>30 подписок</b> </div>
+                <div class="fans"> <a href="javascript:;" onclick="subscribe()" class="btn btn-primary">Подписаться бесплатно</a><b>30 подписок</b> </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-8">
-            <h3 class="mlh"><span>О прогнозисте</span></h3>
-            <div class="prztext">
-              Узнай, как заработать $1000 на live ставках всего за один месяц! Все live ставки я даю в группе!
-            </div>
-            <div class="przstat">
-              <div class="row">
-                <div class="col col-sm-3"><i class="p-i-1"></i> <label>Прогнозов</label> <b>16</b></div>
-                <div class="col col-sm-3"><i class="p-i-2"></i> <label>Проходимость</label> <b>100.0%</b></div>
-                <div class="col col-sm-3"><i class="m-i-5"></i> <label>Последний</label> <b>4 дн. назад</b></div>
-                <div class="col col-sm-3"><i class="p-i-3"></i> <label>Подписка</label> <b>бесплатно</b></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        #}
-      </section>
-      
-      <section class="m-sec m-even">
-        <div class="row">
-          <div class="col-md-8">
+            <br>
+            
             <div class="przstat">
               <div class="prztext">
+                <h3 class="mlh mlhSM"><span>О прогнозисте</span></h3>
                 Узнай, как заработать $1000 на live ставках всего за один месяц! Все live ставки я даю в группе!
               </div>
-              <div class="row">
-                <div class="col col-sm-3"><i class="p-i-1"></i> <label>Прогнозов</label> <b>16</b></div>
-                <div class="col col-sm-3"><i class="p-i-2"></i> <label>Проходимость</label> <b>100.0%</b></div>
-                <div class="col col-sm-3"><i class="m-i-5"></i> <label>Последний</label> <b>4 дн. назад</b></div>
-                <div class="col col-sm-3"><i class="p-i-3"></i> <label>Подписка</label> <b>бесплатно</b></div>
-              </div>
             </div>
+            
+            <div class="well">
+              Инфо блок.
+            </div>
+            
+            {#
+              {% include "template/liveblock.html" %}
+              {% include "template/players/blockzames-vertical.html" %}
+            #}
+          </div>
+           
+          <div class="col-md-8">
+            
+            
             
             <div class="filter">
               <form method="get" id="filter">
@@ -132,15 +135,16 @@
             
             <div class="przlist">
               <table class="mtable">
+                <thead>
+                  <tr>
+                    <th class="tmz">Прогноз</th>
+                    <th>Описание прогноза</th>
+                  </tr>
+                </thead>
                 {% for i in 0..19 %}
                 <tr>
-                  <td class="tname">
-                    <a class="tour-pop"  itemprop="name" data-placement="top" data-container="body" title="Esports Championship League - Америка" data-content=" <img src='http://game-tournaments.com/media/tournament/pic-20160615-264x150-3615944418.jpeg'><b>Регулярный сезон</b>
-                    <span><i class='gti gti-trophy'></i> Малайзия, Куала Лумпур</span>
-                    <span><i class='gti gti-clock-o'></i> 10 апр — 20 апр</span><span><i class='gti gti-money'></i> 200 000$</span>"><img src="https://ggscore.com/media/tournament/_60/pic-20170202-1280x720-8347517899.jpeg" alt=""></a>
-                  </td>
-                  <td class="tmz tip" title="10:11MSK - 10 СЕН 2017">
-                    <a href="#" class="logo win"><img src="{{random(logo)}}">{{random(team)}}</a> <a href="" title="Страница матча">bo2</a> <a href="#" class="logo"><img src="{{random(logo)}}">{{random(team)}}</a>
+                  <td class="tmz tip" title="05 апр, 13:30 at Esports Championship League - Америка">
+                    <a href="#" class="{{random(['win','',''])}} logo"><span><img src="{{random(logo)}}"></span><b>{{random(team)}}</b></a> <a href="" title="Страница матча">vs</a> <a href="#" class="{{random(['','win',''])}} logo"><span><img src="{{random(logo)}}"></span><b>{{random(team)}}</b></a>
                   </td>
                   <td class="tprp">
                     <div class="prpf">
@@ -173,41 +177,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="pAva">
-              <div class="pAvaBg">
-                <span class="playerava">
-                  <img src="http://game-tournaments.com/media/user/pic-20170309-566x600-393639798.png" alt="DotA 2_hot_bets">
-                </span>
-                <div class="pInf">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td width="250px">Язык</td>
-                        <td>Английский <img width="16px" src="https://ggscore.com/media/flag/25.png"></td>
-                      </tr>
-                      <tr>
-                        <td width="250px">Стус</td>
-                        <td><span class="upro">PRO</span></td>
-                      </tr>
-                      <tr>
-                        <td width="250px">Ссылка</td>
-                        <td><a href="" class="pzlink">https://vk.com/betsbyboss</a></td>
-                      </tr>
-                      <tr>
-                        <td>Место в рейтинге</td>
-                        <td>#1</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="fans"> <a href="javascript:;" onclick="subscribe()" class="btn btn-primary">Подписаться бесплатно</a><b>30 подписок</b> </div>
-              </div>
-            </div>
-           
-            {% include "template/liveblock.html" %}
-            {% include "template/players/blockzames-vertical.html" %}
-          </div>
+          
         </div>
       </section>
 

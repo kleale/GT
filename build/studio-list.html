@@ -3,11 +3,6 @@
 
 
 
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 
@@ -18,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Игроки дота 2. Рейтинг игроков Dota 2</title>  
+  <title>Список студий</title>  
   <!-- Import fonts -->
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   
@@ -28,7 +23,7 @@
   <link rel="stylesheet" href="../inc/assets/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   
   <!-- Import main styles -->
-  <link rel="stylesheet" href="../css/main.css?35">
+  <link rel="stylesheet" href="../css/main.css?46">
   
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -42,228 +37,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>  
 </head>
 <body class="">
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-<script>
-/*!
-* jquery.counterup.js 1.0
-*
-* Copyright 2013, Benjamin Intal http://gambit.ph @bfintal
-* Released under the GPL v2 License
-*
-* Date: Nov 26, 2013
-*/(function(e){"use strict";e.fn.counterUp=function(t){var n=e.extend({time:400,delay:10},t);return this.each(function(){var t=e(this),r=n,i=function(){var e=[],n=r.time/r.delay,i=t.text(),s=/[0-9]+,[0-9]+/.test(i);i=i.replace(/,/g,"");var o=/^[0-9]+$/.test(i),u=/^[0-9]+\.[0-9]+$/.test(i),a=u?(i.split(".")[1]||[]).length:0;for(var f=n;f>=1;f--){var l=parseInt(i/n*f);u&&(l=parseFloat(i/n*f).toFixed(a));if(s)while(/(\d+)(\d{3})/.test(l.toString()))l=l.toString().replace(/(\d+)(\d{3})/,"$1,$2");e.unshift(l)}t.data("counterup-nums",e);t.text("0");var c=function(){t.text(t.data("counterup-nums").shift());if(t.data("counterup-nums").length)setTimeout(t.data("counterup-func"),r.delay);else{delete t.data("counterup-nums");t.data("counterup-nums",null);t.data("counterup-func",null)}};t.data("counterup-func",c);setTimeout(t.data("counterup-func"),r.delay)};t.waypoint(i,{offset:"100%",triggerOnce:!0})})}})(jQuery);
-  
-jQuery(document).ready(function($) {
-    $('.counter').counterUp({
-        delay: 10,
-        time: 500
-    });
-});
-</script>
-
-<script src="../inc/assets/js/highcharts.js"></script>
-<script src="../inc/assets/js/highcharts-more.js"></script>
-<!--
-<script src="../inc/assets/js/highcharts-exporting.js"></script>
--->
-<script src="../inc/assets/js/highcharts-theme.js"></script>
-<script>
-/* Player spider graph*/
-$(function () {
-
-    $('#spider_chart_player').highcharts({
-        colors: ["#3f79a2", "#d94c4c", "#2d6185", "#b63b3b"],
-        chart: {
-            polar: true,
-            type: 'line',
-            backgroundColor: 'none',
-            spacingBottom: 5,
-            spacingTop: 5,
-            spacingLeft: 0,
-            spacingRight: 0
-        },
-        title: {
-            text: '',
-            x: -80
-        },
-        pane: {
-            size: '95%'
-        },
-        plotOptions: {
-            series: {
-              title:''
-            }
-        },
-        credits: {
-          enabled: false
-        },
-        xAxis: {
-            categories: ['Mid', 'Safe', 'Hard', 'Jungle', 'Roaming'],
-            tickmarkPlacement: 'on',
-            lineWidth: 0,
-            labels: {
-                style: {
-                  textTransform: 'uppercase',
-                  color: '#c7c7c7'
-                }
-            }
-        },
-        yAxis: {
-            gridLineInterpolation: 'polygon',
-            //lineWidth: 0,
-            tickInterval: 2,
-            min: 0,
-            max: 100,
-            title: {
-              enabled: true
-            },
-            labels: {
-               enabled: true
-            },
-            plotBands: [{ // visualize
-                from: 0,
-                to: 20,
-                color: 'rgba(68, 118, 213, 0.1)'
-            },
-            {
-                from: 20,
-                to: 40,
-                color: 'rgba(68, 118, 213, 0.05)'
-            },
-            {
-                from: 40,
-                to: 60,
-                color: 'rgba(68, 118, 213, 0.1)'
-            },
-            {
-                from: 60,
-                to: 80,
-                color: 'rgba(68, 118, 213, 0.05)'
-            },
-            {
-                from: 80,
-                to: 100,
-                color: 'rgba(68, 118, 213, 0.1)'
-            },
-            ]
-        },
-        plotOptions: {
-            series: {
-                fillOpacity: 0.5
-            }
-        },
-        tooltip: {
-            shared: true,
-            pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
-        },
-        legend: {
-            enabled: false
-        },
-        series: [{
-            name: 'Line',
-            type: 'area',
-            data: [20, 10, 15, 15, 40],
-            pointPlacement: 'on'
-        }]
-
-    });
-});
-
-/* Player role graph line*/
-$(function () {
-        var role = {1:'Carry',2:'Semi-Carry',3:'Hard Lane',4:'Support',5:'Support'};
-        var lane = {'mid':'Mid','safe':'Safe','hard':'Hard','forest':'Jungler','roaming':'Roaming'};
-		
-        $('#playerRole').highcharts({
-            colors: ["#3f79a2", "#5f9fcc", "#80b9e2", "#a1d5fa"],
-            chart: {
-                type: 'bar',
-                backgroundColor: 'none',
-                spacingBottom: 5,
-                spacingTop: 5,
-                spacingLeft: 0,
-                spacingRight: 0
-            },
-            credits: {
-                enabled: false
-            },
-            xAxis: {
-                categories: ['Role'],
-                lineWidth: 0,
-                minorGridLineWidth: 0,
-                lineColor: 'transparent',
-                labels: {
-                    enabled: false
-                },
-                title: {
-                    enabled: false
-                },
-                minorTickLength: 0,
-                tickLength: 0
-            },
-            yAxis: {
-                lineWidth: 0,
-                minorGridLineWidth: 0,
-                lineColor: 'transparent',
-                labels: {
-                    enabled: false
-                },
-                title: {
-                    enabled: false
-                },
-                minorTickLength: 0,
-                tickLength: 0
-            },
-            title: {
-                enabled: false,
-                text: ''
-            },
-            legend: {
-                enabled: false
-            },
-            plotOptions: {
-                series: {
-                    stacking: 'percent',
-                    crop: false,
-                    title: '',
-                    pointPadding: 0.01,
-                    groupPadding: 0.1,
-                    dataLabels: {
-	                    enabled: true,
-						style: {
-						  textTransform: 'uppercase',
-						  color: '#c7c7c7'
-						},
-	                    formatter: function () {
-                            return (this.y > 12 ? this.point.name+': '+this.y+'%' : null);
-                        }
-	                }
-                }
-            },
-            tooltip: {
-                formatter: function () {
-                    return this.point.name+': '+this.y+'%';
-                }
-            },
-              series: [{
-                  name: 'Core',
-                  data: [
-                        ['Role', 80]
-                  ],
-                  index: 4
-              }, {
-                  name: 'Support',
-                  data: [
-                        ['Role', 20]
-                  ],
-                  index: 3
-              }]
-        });
-});  
-
-</script>
- 
   <div class="container mainwrap">
     <!-- breadcrumb.html -->
 <div class="bread">
@@ -277,1154 +50,498 @@ $(function () {
   </ol>
 </div>
     <div class="otstup">
-      
-      <section class="hero pagePlayerHero" style="background-image:url(../img/headpic.jpg); height:auto;">
-        <a href="" class="btn pull-right btn-default">Все игроки</a>
-        <h1><span>Карточка игрока <a href="/dota-2">DOTA 2</a> Miracle</span></h1>
+      <section class="hero" data-orig-offset="0" style="background-image:url(../img/headpic.jpg);">
+        <h1 class="mh"><span>Список студий</span></h1>
+        <p>В данном разделе представлены все профессиональные студии транслирующие киберспортивные события</p>
       </section>
-      
-      
-      <section class="m-sec m-even plCard">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="pAva">
-              <div class="pAvaBg">
-                <span class="playerava">
-                    <img alt="Miracle-" src="http://game-tournaments.com/media/logo/pic-20151127-294x196-3464574203.jpeg">
-                </span>
-                <div class="pInf">
-                  <a class="pt" href="#"><img src="http://game-tournaments.com/media/logo/_60/pic-20161027-600x600-9332827152.png" alt="Liquid"></a>
-                  <h2>Miracle <b class="badge tip" title="Место в рейтинге">#1</b></h2>
-                  <h3>Amer al-Barqawi, 23 года</h3>
-                  <p>
-                     Иордания <img src="http://game-tournaments.com/media/flag/48.png"><br>
-                    <b>Команда: <a href="">Team Liquid</a></b>
-                  </p>
-                  <div class="niks">
-                    <b>Играл под никами:</b>
-                     Miracle-, KnowledgeIsPower, 123, Weew, Mamacita, M.., NevaEvaMoonBabe, :], WarChiLD-, LMAO, Dylan, OG.Miracle-.DO, Liquid`Miracle-, Miracle-RyOuta
-                  </div>
-                </div>
-                <div class="pRate">
-                  <table>
-                    <tr>
-                      <td>
-                        <label>SOLO MMR <i class="gti-question-circle tip" title="О параметре"></i></label>
-                        <b><span class="counter">9681</span></b>
-                      </td>
-                      <td>
-                        <label>форма <i class="gti-question-circle tip" title="Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)"></i></label>
-                        <b><span class="counter">150</span>%</b>
-                        <div class="progress progress-small">
-                            <div class="progress-bar progress-bar-primary" style="width:50%">
-						    <span class="sr-only">100% форма</span>
-                          </div>
-                          <div class="progress-bar progress-bar-success" style="width:28%">
-                            <span class="sr-only">up 28% форма</span>
-                          </div>
-					    </div>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-                <div class="fans">
-                  <a href="" class="btn btn-primary"><i class="gti-flag-o"></i>Подписаться</a><b>123 фанов</b>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-8">
-            <div class="maingraph">
-              <h3 class="mlh mlhSM"><span>ПОЗИЦИЯ</span></h3>
-              <div class="pRd">
-                <div id="playerRole" class="playerRole"></div>
-                <span>Core 80%</span>
-                <b>Support 20%</b>
-              </div>
-              <h3 class="mlh mlhSM"><span>ЛИНИЯ</span></h3>
-              <div class="row">
-                <div class="col-md-8">
-                  <div id="spider_chart_player" class="spider_chart_player"></div>
-                </div>
-                <div class="col-md-4">
-                  <div class="spiderInfo">
-                    <label>Form</label>
-                    <p>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</p>
-                    <label>Stat</label>
-                    <p>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</p>
-                    <label>MVP</label>
-                    <p>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</p>
-                    <label>Fights</label>
-                    <p>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</p>
-                    <label>LANING</label>
-                    <p>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</p>
-                    <label>Gold</label>
-                    <p>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</p>
-                    <label>Expirience</label>
-                    <p>Форма показывает насколько хороши текущие показатели игрока (последние 15 игр), относительно его средних показателей (последние 50 игр)</p>
-                  
-                  
-                </div>
-                </div>
-              </div>
-            </div>
-            <div class="pRate">
-              <table>
-                <tbody><tr>
-                  <td>
-                    <label>Число игр</label>
-                    <b><span class="counter">961</span></b>
-                  </td>
-                  <td>
-                    <label>MVP <i class="gti-question-circle tip" title="О параметре"></i></label>
-                    <b><span class="counter">20</span>%</b>
-                    <div class="progress progress-small">
-                      <div class="progress-bar progress-bar-primary" style="width:20%">
-                        <span class="sr-only">20% MVP</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <label>Fights <i class="gti-question-circle tip" title="О параметре"></i></label>
-                    <b><span class="counter">167</span>%</b>
-                    <div class="progress progress-small">
-    				    <div class="progress-bar progress-bar-primary" style="width:50%">
-    				      <span class="sr-only">100%</span>
-    				    </div>
-    				    <div class="progress-bar progress-bar-success" style="width:28%">
-                          <span class="sr-only">up 67% Fights</span>
-                        </div>
-    				</div>
-                  </td>
-                  <td>
-                    <label>Inactivity <i class="gti-question-circle tip" title="О параметре"></i></label>
-                    <b><span class="counter">41</span>%</b>
-                    <div class="progress progress-small">
-    				    <div class="progress-bar progress-bar-primary" style="width:20%">
-    				      <span class="sr-only">41%</span>
-    				    </div>
-    				</div>
-                  </td>
-                </tr>
-              </tbody></table>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="m-sec m-odd pTeams">
-        <h3 class="mlh mlhSM"><span>Команды за которые играл Miracle</span></h3>
-        <div class="row">
-          
-            <div class="col-md-4">
-                <div class="pTeam">
-                  <figure class="teamLogo">
-                     <a class="pt" href="#"><img src="http://game-tournaments.com/media/logo/_60/pic-20161110-600x450-6323255579.png" alt="OG"></a>
-                  </figure>
-                  <div>
-                    <b><a href=""> Evil Geniuses</a></b>
-                    <em>Период: 10/11/15 - 10/11/16</em>
-                    <u>Матчей: 211</u>
-                    <s>Роль: core</s>
-                  </div>
-                </div>
-            </div>
-          
-            <div class="col-md-4">
-                <div class="pTeam">
-                  <figure class="teamLogo">
-                     <a class="pt" href="#"><img src="http://game-tournaments.com/media/logo/_60/pic-20161110-600x450-6323255579.png" alt="Wings"></a>
-                  </figure>
-                  <div>
-                    <b><a href="">NewBee</a></b>
-                    <em>Период: 10/11/15 - 10/11/16</em>
-                    <u>Матчей: 211</u>
-                    <s>Роль: core</s>
-                  </div>
-                </div>
-            </div>
-          
-            <div class="col-md-4">
-                <div class="pTeam">
-                  <figure class="teamLogo">
-                     <a class="pt" href="#"><img src="http://game-tournaments.com/media/logo/_60/pic-20161110-600x600-7320131375.png" alt="Wings"></a>
-                  </figure>
-                  <div>
-                    <b><a href="">Virtus.Pro</a></b>
-                    <em>Период: 10/11/15 - 10/11/16</em>
-                    <u>Матчей: 211</u>
-                    <s>Роль: core</s>
-                  </div>
-                </div>
-            </div>
-          
-        </div>
-      </section>
-      
       <section class="m-sec m-even">
-        <h3 class="mlh mlhSM"><span>Последние матчи Miracle</span></h3>
-        <!-- /players/player-games.html -->
+        <div class="row">
+          <div class="col-md-8">
+            <div class="filter">
+              
+              <script>
+              // команда-турнир фильтр
+                $(document).ready(function() {
+                  $('#mlt-filter').on('keyup', function(){
+                    $('.mlt-filter').addClass('open');
+                  });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  <div class="block-content temsList playerGames">
-    <table class="mtable">
-      <thead>
-        <th>Герой</th>
-        <th>В/П</th>
-        <th>За команду</th>
-        <th></th>
-        <th>Против команды</th>
-        <th>Турнир</th>
-        <th>Роль / Позиция</th>
-        <th> MVP / Fights / Inactivity</th>
-        <th>Серия</th>
-        <th>Когда</th>
-      </thead>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="red">Проиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-               Evil Geniuses
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              Wings
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-500x500-918003572.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160909-378x119-9085315335.jpeg"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">1</b>
-          </td>
-          <td>
-            <b class="blue">74</b> / <b class="red">73</b> / <b class="green">22</b>
-          </td>
-          <td>
-            <a href="">Rampage x3</a><br>
-            <a href="">Ultra kill x1</a>
-          </td>
-          <td>
-            вчера
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="red">Проиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              NewBee
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              Virtus.Pro
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-300x300-2206743285.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160912-600x267-6676783403.png"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">5</b>
-          </td>
-          <td>
-            <b class="blue">74</b> / <b class="red">65</b> / <b class="green">74</b>
-          </td>
-          <td>
-            <a href="">Rampage x3</a><br>
-            <a href="">Ultra kill x1</a>
-          </td>
-          <td>
-            —
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="red">Проиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              OG
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-500x500-918003572.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              EHOME
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x450-6323255579.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160909-378x119-9085315335.jpeg"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">3</b>
-          </td>
-          <td>
-            <b class="blue">65</b> / <b class="red">22</b> / <b class="green">96</b>
-          </td>
-          <td>
-            <a href="">Ultra kill x1</a><br>
-            <a href="">Ultra kill x1</a>
-          </td>
-          <td>
-            2 года
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="green">Выиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              Virtus.Pro
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              OG
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-500x500-918003572.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160831-478x178-7586446600.jpeg"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">1</b>
-          </td>
-          <td>
-            <b class="blue">22</b> / <b class="red">22</b> / <b class="green">74</b>
-          </td>
-          <td>
-            <a href="">Ultra kill x1</a><br>
-            <a href="">Ultra kill x1</a>
-          </td>
-          <td>
-            1 год
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="red">Проиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-               Evil Geniuses
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-500x500-918003572.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-               Evil Geniuses
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x450-6323255579.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160831-478x178-7586446600.jpeg"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">5</b>
-          </td>
-          <td>
-            <b class="blue">65</b> / <b class="red">50</b> / <b class="green">22</b>
-          </td>
-          <td>
-            <a href="">Ultra kill x1</a><br>
-            <a href="">Ultra kill x1</a>
-          </td>
-          <td>
-            —
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="green">Выиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              Virtus.Pro
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              OG
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-5478339632.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160912-600x267-6676783403.png"></a>
-          </td>
-          <td>
-            Core / <b title="Расшифровка" class="tip">4</b>
-          </td>
-          <td>
-            <b class="blue">74</b> / <b class="red">74</b> / <b class="green">74</b>
-          </td>
-          <td>
-            <a href="">Rampage x3</a><br>
-            <a href="">Rampage x3</a>
-          </td>
-          <td>
-            2 года
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="red">Проиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-               Evil Geniuses
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x450-6323255579.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              NewBee
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160912-600x267-6676783403.png"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">2</b>
-          </td>
-          <td>
-            <b class="blue">96</b> / <b class="red">50</b> / <b class="green">74</b>
-          </td>
-          <td>
-            <a href="">Ultra kill x1</a><br>
-            <a href="">Rampage x3</a>
-          </td>
-          <td>
-            сегодня
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="green">Выиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              Virtus.Pro
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-500x500-918003572.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-               Evil Geniuses
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-5478339632.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160831-478x178-7586446600.jpeg"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">3</b>
-          </td>
-          <td>
-            <b class="blue">74</b> / <b class="red">50</b> / <b class="green">96</b>
-          </td>
-          <td>
-            <a href="">Rampage x3</a><br>
-            <a href="">Rampage x3</a>
-          </td>
-          <td>
-            —
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="red">Проиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              Virtus.Pro
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-300x300-2206743285.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              OG
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x450-6323255579.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160926-280x80-6342360083.jpeg"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">3</b>
-          </td>
-          <td>
-            <b class="blue">65</b> / <b class="red">65</b> / <b class="green">65</b>
-          </td>
-          <td>
-            <a href="">Rampage x3</a><br>
-            <a href="">Ultra kill x1</a>
-          </td>
-          <td>
-            вчера
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="red">Проиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              EHOME
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-5478339632.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              NewBee
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160831-478x178-7586446600.jpeg"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">4</b>
-          </td>
-          <td>
-            <b class="blue">22</b> / <b class="red">96</b> / <b class="green">65</b>
-          </td>
-          <td>
-            <a href="">Rampage x3</a><br>
-            <a href="">Ultra kill x1</a>
-          </td>
-          <td>
-            вчера
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="red">Проиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              NewBee
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-500x500-918003572.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              NewBee
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160912-600x267-6676783403.png"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">3</b>
-          </td>
-          <td>
-            <b class="blue">73</b> / <b class="red">74</b> / <b class="green">74</b>
-          </td>
-          <td>
-            <a href="">Rampage x3</a><br>
-            <a href="">Rampage x3</a>
-          </td>
-          <td>
-            2 года
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="green">Выиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              NewBee
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-               Evil Geniuses
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160912-600x267-6676783403.png"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">5</b>
-          </td>
-          <td>
-            <b class="blue">22</b> / <b class="red">65</b> / <b class="green">22</b>
-          </td>
-          <td>
-            <a href="">Rampage x3</a><br>
-            <a href="">Ultra kill x1</a>
-          </td>
-          <td>
-            2 года
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="green">Выиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              Virtus.Pro
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-300x300-2206743285.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              Wings
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160831-478x178-7586446600.jpeg"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">3</b>
-          </td>
-          <td>
-            <b class="blue">50</b> / <b class="red">50</b> / <b class="green">65</b>
-          </td>
-          <td>
-            <a href="">Rampage x3</a><br>
-            <a href="">Ultra kill x1</a>
-          </td>
-          <td>
-            173 дн.
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="red">Проиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              Virtus.Pro
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x450-6323255579.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              EHOME
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-300x300-2206743285.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160909-378x119-9085315335.jpeg"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">3</b>
-          </td>
-          <td>
-            <b class="blue">65</b> / <b class="red">50</b> / <b class="green">96</b>
-          </td>
-          <td>
-            <a href="">Ultra kill x1</a><br>
-            <a href="">Ultra kill x1</a>
-          </td>
-          <td>
-            2 года
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="red">Проиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-               Evil Geniuses
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x450-6323255579.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              Virtus.Pro
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-500x500-918003572.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160926-280x80-6342360083.jpeg"></a>
-          </td>
-          <td>
-            Core / <b title="Расшифровка" class="tip">4</b>
-          </td>
-          <td>
-            <b class="blue">50</b> / <b class="red">22</b> / <b class="green">22</b>
-          </td>
-          <td>
-            <a href="">Rampage x3</a><br>
-            <a href="">Ultra kill x1</a>
-          </td>
-          <td>
-            —
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="red">Проиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              Wings
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-500x500-918003572.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              Virtus.Pro
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160926-280x80-6342360083.jpeg"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">4</b>
-          </td>
-          <td>
-            <b class="blue">65</b> / <b class="red">74</b> / <b class="green">50</b>
-          </td>
-          <td>
-            <a href="">Ultra kill x1</a><br>
-            <a href="">Ultra kill x1</a>
-          </td>
-          <td>
-            173 дн.
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="red">Проиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              OG
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              NewBee
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-5478339632.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160831-478x178-7586446600.jpeg"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">1</b>
-          </td>
-          <td>
-            <b class="blue">73</b> / <b class="red">96</b> / <b class="green">50</b>
-          </td>
-          <td>
-            <a href="">Ultra kill x1</a><br>
-            <a href="">Ultra kill x1</a>
-          </td>
-          <td>
-            —
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="green">Выиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              EHOME
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              OG
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-300x300-2206743285.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160926-280x80-6342360083.jpeg"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">4</b>
-          </td>
-          <td>
-            <b class="blue">96</b> / <b class="red">65</b> / <b class="green">22</b>
-          </td>
-          <td>
-            <a href="">Ultra kill x1</a><br>
-            <a href="">Rampage x3</a>
-          </td>
-          <td>
-            —
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="red">Проиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              EHOME
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-600x600-7320131375.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              OG
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-500x500-918003572.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160912-600x267-6676783403.png"></a>
-          </td>
-          <td>
-            Core / <b title="Расшифровка" class="tip">3</b>
-          </td>
-          <td>
-            <b class="blue">73</b> / <b class="red">50</b> / <b class="green">96</b>
-          </td>
-          <td>
-            <a href="">Ultra kill x1</a><br>
-            <a href="">Rampage x3</a>
-          </td>
-          <td>
-            вчера
-          </td>
-        </tr>
-      
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b><span class="green">Выиграл</span></b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              OG
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-500x500-918003572.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              EHOME
-              <img class="logo" src="http://game-tournaments.com/media/logo/pic-20161110-500x500-918003572.png"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/pic-20160831-478x178-7586446600.jpeg"></a>
-          </td>
-          <td>
-            Support / <b title="Расшифровка" class="tip">1</b>
-          </td>
-          <td>
-            <b class="blue">65</b> / <b class="red">96</b> / <b class="green">22</b>
-          </td>
-          <td>
-            <a href="">Rampage x3</a><br>
-            <a href="">Rampage x3</a>
-          </td>
-          <td>
-            2 года
-          </td>
-        </tr>
-      
-    </table>
-  </div>
-        <!-- pager.html -->
+                  $(document).click(function(){
+                    $('.mlt-filter').removeClass('open');
+                  });
+                  $("#dropdown").click(function(e){
+                    e.stopPropagation();
+                    $('.mlt-filter').removeClass('open');
+                  });
+                });
+              </script>
+              
+              <div class="row">
+                <div class="col-sm-2">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle caret-abs" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                      Язык
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Европа</a></li>
+                      <li><a href="#">Америка</a></li>
+                      <li><a href="#">Азия</a></li>
+                      <li><a href="#">Тихоокеантский регион</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle caret-abs" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                      Live?
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Все</a></li>
+                      <li><a href="#">Live</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="mlt-filter">
+                    <input id="mlt-filter" type="text" value="" placeholder="Название студии\канала..." class="form-control team" autocomplete="off">
+                    <a href="" class="sicon"></a>
+                    <ul class="dropdown-menu" id="#t1">
+                      <li class="dropdown-header"><a href="#">Название студии\канала</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="mlt-filter">
+                    <input id="mlt-filter" type="text" value="" placeholder="Имя\ник комментатора..." class="form-control team" autocomplete="off">
+                    <a href="" class="sicon"></a>
+                    <ul class="dropdown-menu" id="#t1">
+                      <li class="dropdown-header"><a href="#">Имя\ник комментатора</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="block mlt studiolist">
+              
+              <table class="mtable">
+                <thead>
+                  <tr>
+                    <th>Lang</th>
+                    <th>Name</th>
+                    <th>Channel</th>
+                    <th>Commentators</th>
+                    <th>Live</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="lang">[RU]</td>
+                    <td class="vname">
+                      <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg">
+                      <a class="vtitle" href="javascript:;">EpgTV</a>
+                    </td>
+                    <td class="chan">
+                      <a href="">RuHub</a>
+                    </td>
+                    <td class="cmtrs">
+                      <ul>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="live">
+                      <b class="livebetpin"></b>
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell tip" title="Напомнить мне"><i class="gti-bell-o"></i></a>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="lang">[RU]</td>
+                    <td class="vname">
+                      <a href=""><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></a>
+                      <a class="vtitle" href="javascript:;">RuHub</a>
+                    </td>
+                    <td class="chan">
+                      <a href="">RuHub</a>
+                    </td>
+                    <td class="cmtrs">
+                      <ul>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/2.png"> <span title="Виталий Ивакин" class="tip">Vedroider</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/25.png"> <span title="Виталий Ивакин" class="tip">Maniak</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="live">
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell active tip" title="Убрать напоминание"><i class="gti-bell"></i></a>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="lang">[RU]</td>
+                    <td class="vname">
+                      <a href=""><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></a>
+                      <a class="vtitle" href="javascript:;">Dota2TV</a>
+                    </td>
+                    <td class="chan">
+                      <a href="">Dota2TV</a>
+                    </td>
+                    <td class="cmtrs">
+                      <ul>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/2.png"> <span title="Виталий Ивакин" class="tip">Vedroider</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/25.png"> <span title="Виталий Ивакин" class="tip">Maniak</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="live">
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell active tip" title="Убрать напоминание"><i class="gti-bell"></i></a>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="lang">[RU]</td>
+                    <td class="vname">
+                      <a href=""><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></a>
+                      <a class="vtitle" href="javascript:;">Dota2TV</a>
+                    </td>
+                    <td class="chan">
+                      <a href="">EpgTV</a>
+                    </td>
+                    <td class="cmtrs">
+                      <ul>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/2.png"> <span title="Виталий Ивакин" class="tip">Vedroider</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/25.png"> <span title="Виталий Ивакин" class="tip">Maniak</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="live">
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell active tip" title="Убрать напоминание"><i class="gti-bell"></i></a>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="lang">[RU]</td>
+                    <td class="vname">
+                      <a href=""><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></a>
+                      <a class="vtitle" href="javascript:;">EpgTV</a>
+                    </td>
+                    <td class="chan">
+                      <a href="">IgorTV</a>
+                    </td>
+                    <td class="cmtrs">
+                      <ul>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/2.png"> <span title="Виталий Ивакин" class="tip">Vedroider</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/25.png"> <span title="Виталий Ивакин" class="tip">Maniak</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="live">
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell active tip" title="Убрать напоминание"><i class="gti-bell"></i></a>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="lang">[RU]</td>
+                    <td class="vname">
+                      <a href=""><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></a>
+                      <a class="vtitle" href="javascript:;">Dota2TV</a>
+                    </td>
+                    <td class="chan">
+                      <a href="">RuHub</a>
+                    </td>
+                    <td class="cmtrs">
+                      <ul>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/2.png"> <span title="Виталий Ивакин" class="tip">Vedroider</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/25.png"> <span title="Виталий Ивакин" class="tip">Maniak</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="live">
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell active tip" title="Убрать напоминание"><i class="gti-bell"></i></a>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="lang">[RU]</td>
+                    <td class="vname">
+                      <a href=""><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></a>
+                      <a class="vtitle" href="javascript:;">Dota2TV</a>
+                    </td>
+                    <td class="chan">
+                      <a href="">Dota2TV</a>
+                    </td>
+                    <td class="cmtrs">
+                      <ul>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/2.png"> <span title="Виталий Ивакин" class="tip">Vedroider</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/25.png"> <span title="Виталий Ивакин" class="tip">Maniak</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="live">
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell active tip" title="Убрать напоминание"><i class="gti-bell"></i></a>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="lang">[RU]</td>
+                    <td class="vname">
+                      <a href=""><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></a>
+                      <a class="vtitle" href="javascript:;">Dota2TV</a>
+                    </td>
+                    <td class="chan">
+                      <a href="">Dota2TV</a>
+                    </td>
+                    <td class="cmtrs">
+                      <ul>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/2.png"> <span title="Виталий Ивакин" class="tip">Vedroider</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/25.png"> <span title="Виталий Ивакин" class="tip">Maniak</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="live">
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell active tip" title="Убрать напоминание"><i class="gti-bell"></i></a>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="lang">[RU]</td>
+                    <td class="vname">
+                      <a href=""><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></a>
+                      <a class="vtitle" href="javascript:;">IgorTV</a>
+                    </td>
+                    <td class="chan">
+                      <a href="">IgorTV</a>
+                    </td>
+                    <td class="cmtrs">
+                      <ul>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/2.png"> <span title="Виталий Ивакин" class="tip">Vedroider</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/25.png"> <span title="Виталий Ивакин" class="tip">Maniak</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="live">
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell active tip" title="Убрать напоминание"><i class="gti-bell"></i></a>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="lang">[RU]</td>
+                    <td class="vname">
+                      <a href=""><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></a>
+                      <a class="vtitle" href="javascript:;">RuHub</a>
+                    </td>
+                    <td class="chan">
+                      <a href="">RuHub</a>
+                    </td>
+                    <td class="cmtrs">
+                      <ul>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/2.png"> <span title="Виталий Ивакин" class="tip">Vedroider</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/25.png"> <span title="Виталий Ивакин" class="tip">Maniak</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="live">
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell active tip" title="Убрать напоминание"><i class="gti-bell"></i></a>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="lang">[RU]</td>
+                    <td class="vname">
+                      <a href=""><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></a>
+                      <a class="vtitle" href="javascript:;">Dota2TV</a>
+                    </td>
+                    <td class="chan">
+                      <a href="">IgorTV</a>
+                    </td>
+                    <td class="cmtrs">
+                      <ul>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/2.png"> <span title="Виталий Ивакин" class="tip">Vedroider</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/25.png"> <span title="Виталий Ивакин" class="tip">Maniak</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="live">
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell active tip" title="Убрать напоминание"><i class="gti-bell"></i></a>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="lang">[RU]</td>
+                    <td class="vname">
+                      <a href=""><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></a>
+                      <a class="vtitle" href="javascript:;">EpgTV</a>
+                    </td>
+                    <td class="chan">
+                      <a href="">EpgTV</a>
+                    </td>
+                    <td class="cmtrs">
+                      <ul>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/2.png"> <span title="Виталий Ивакин" class="tip">Vedroider</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/25.png"> <span title="Виталий Ивакин" class="tip">Maniak</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="live">
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell active tip" title="Убрать напоминание"><i class="gti-bell"></i></a>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="lang">[RU]</td>
+                    <td class="vname">
+                      <a href=""><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></a>
+                      <a class="vtitle" href="javascript:;">IgorTV</a>
+                    </td>
+                    <td class="chan">
+                      <a href="">RuHub</a>
+                    </td>
+                    <td class="cmtrs">
+                      <ul>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/2.png"> <span title="Виталий Ивакин" class="tip">Vedroider</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/25.png"> <span title="Виталий Ивакин" class="tip">Maniak</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="live">
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell active tip" title="Убрать напоминание"><i class="gti-bell"></i></a>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="lang">[RU]</td>
+                    <td class="vname">
+                      <a href=""><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/epgtv-profile_image-ca6391e7935f878a-300x300.jpeg"></a>
+                      <a class="vtitle" href="javascript:;">RuHub</a>
+                    </td>
+                    <td class="chan">
+                      <a href="">RuHub</a>
+                    </td>
+                    <td class="cmtrs">
+                      <ul>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/3.png"> <span title="Виталий Ивакин" class="tip">N0tail</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/2.png"> <span title="Виталий Ивакин" class="tip">Vedroider</span>, 
+                        </li>
+                        <li>
+                          <img width="16px" src="https://ggscore.com/media/flag/25.png"> <span title="Виталий Ивакин" class="tip">Maniak</span>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="live">
+                    </td>
+                    <td class="belltd">
+                      <a href="" class="bell active tip" title="Убрать напоминание"><i class="gti-bell"></i></a>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+              <!-- pager.html -->
 <nav class="nav-pager">
   <ul class="pagination">
     <li class="active"><a href="javascript:;">1</a></li>
@@ -1435,10 +552,79 @@ $(function () {
     <li class="prr"><a href="javascript:;"><span aria-hidden="true">»</span></a></li>
   </ul>
 </nav>
-      </section>
-      
-      <section id="m-zames" class="m-sec m-odd m-zames">
-        <!-- /players/player-blockzames.html -->
+
+              
+              <div class="well well-info">
+                Инфо текст
+              </div>
+              
+            </div>
+            
+          </div>
+          <div class="col-md-4">
+            
+            <div class="box livebet lsoon-div lsoon-div-2">
+  <a class="ggbhead" href="/go?to=gg&amp;b" onclick="yaCounter30589062.reachGoal('koef'); return true;" target="_blank"></a>
+  <h3>Live ставки</h3>
+  <div id="live_odds">
+    <table class="table table-striped table-condensed">
+      <tbody><tr>
+        <td colspan="5" class="livetop">
+          <b class="livebetpin"></b>
+          <noindex><a rel="nofollow" href="http://betahit.click/gg/bet/?mid=836642&amp;param=game-tournaments_livefeed" target="_blank">
+          <span>Acion Arena</span> vs <span>Next Generation</span></a></noindex>
+        </td>
+      </tr>
+      <tr>
+        <td class="livebet_do">
+            <div>
+                Winner Map 2
+                <noindex><a rel="nofollow" href="http://betahit.click/gg/bet/?mid=836642&amp;param=game-tournaments_livefeed" target="_blank" class="btn btn-success btn-xs">Сделать ставку</a></noindex>
+            </div>
+        </td>
+        <td align="right"><span class="teamname c1"><b>Acion Arena</b></span></td>
+        <td class="livetd">2.75</td>
+        <td class="livetd">1.41</td>
+        <td><span class="teamname"><b>Next Generation</b></span></td>
+      </tr>
+      <tr>
+        <td class="livebet_do">
+            <div>
+                Odd/Even Kills (map 2)
+                <noindex><a rel="nofollow" href="http://betahit.click/gg/bet/?mid=836642&amp;param=game-tournaments_livefeed" target="_blank" class="btn btn-success btn-xs">Сделать ставку</a></noindex>
+            </div>
+        </td>
+        <td align="right"><span class="teamname c1"><b>Odd</b></span></td>
+        <td class="livetd">1.86</td>
+        <td class="livetd">1.86</td>
+        <td><span class="teamname"><b>Even</b></span></td>
+      </tr>
+    </tbody></table>
+    <a class="ablive abliveVertical" target="_blank" href="/go?to=gg&amp;b&amp;m=39002">
+      <u class="abl_mtr">
+        <span class="abl_mp">
+            <b class="abl_mt">The Summit 6<br>Playoff, Upper Bracket, Round 1</b>
+        </span>
+      </u>
+      <span class="abl_tms">
+        <span class="abl_md"><i>Матч дня</i></span>
+        <u class="abl_i1"><img src="http://game-tournaments.com/media/logo/pic-20150825-340x216-3370444942.png"></u>
+        <u class="abl_i2"><img src="http://game-tournaments.com/media/logo/pic-20161110-600x600-5478339632.png"></u>
+        <u class="abl_t1"><b>DC</b></u>
+        <u class="abl_k1">1.96</u>
+        <u class="abl_t2"><b>OG</b></u>
+        <u class="abl_k2">1.82</u>
+        <span class="abl_day1"><b>17</b> ноября 2016 21:00 MSK</span>
+        <span class="abl_btn">Сделать ставку</span>
+        <span class="ggbetL"></span>
+      </span>
+    </a>
+    <div class="livetext">
+      <b><b>100%</b> бонус на первый депозит<br><b>500</b> рублей фрибет в подарок</b>
+    </div>
+  </div>
+</div>
+            <!-- /players/blockzames-vertical.html -->
 
 
 
@@ -1447,12 +633,180 @@ $(function () {
 
 <!-- /template/blockzames.html -->
 <div class="fights fightsPlayers">
-  <h3 class="mlh mlh2"><span><a href="">Лучшие моменты Miracle</a></span></h3>
+  <i class="iconFights"></i>
+  <h3 class="mlh"><span><a href="">Лучшие моменты</a></span></h3>
+  
+    <!-- bestKill -->
+    <div class="bestEvent bestKill"> 
+      <a href="">
+        <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+          <span><i class="gti-youtube-play"></i> Team Secret VS Og</span>
+          <time>3:12 - 4:11</time>
+        </b>
+        <span>
+          <figure class="heroava">
+            <img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png">
+          </figure>
+          <em>Multi kill</em>
+          <u>Potroshitel9000.<s>Team Secret</s></u>
+          <s>DMG 123</s>
+          <i>GOLD 3124</i>
+        </span>
+        <div>
+          <figure class="teamHeroes">
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
+            
+          </figure>
+        </div>
+      </a>
+    </div>
+  
+    <!-- bestKill -->
+    <div class="bestEvent bestKill"> 
+      <a href="">
+        <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+          <span><i class="gti-youtube-play"></i> Team Secret VS Og</span>
+          <time>3:12 - 4:11</time>
+        </b>
+        <span>
+          <figure class="heroava">
+            <img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png">
+          </figure>
+          <em>Multi kill</em>
+          <u>Potroshitel9000.<s>Team Secret</s></u>
+          <s>DMG 123</s>
+          <i>GOLD 3124</i>
+        </span>
+        <div>
+          <figure class="teamHeroes">
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+            
+          </figure>
+        </div>
+      </a>
+    </div>
+  
+    <!-- bestKill -->
+    <div class="bestEvent bestKill"> 
+      <a href="">
+        <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+          <span><i class="gti-youtube-play"></i> Team Secret VS Og</span>
+          <time>3:12 - 4:11</time>
+        </b>
+        <span>
+          <figure class="heroava">
+            <img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png">
+          </figure>
+          <em>Multi kill</em>
+          <u>Potroshitel9000.<s>Team Secret</s></u>
+          <s>DMG 123</s>
+          <i>GOLD 3124</i>
+        </span>
+        <div>
+          <figure class="teamHeroes">
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
+            
+          </figure>
+        </div>
+      </a>
+    </div>
+  
+    <!-- bestKill -->
+    <div class="bestEvent bestKill"> 
+      <a href="">
+        <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+          <span><i class="gti-youtube-play"></i> Team Secret VS Og</span>
+          <time>3:12 - 4:11</time>
+        </b>
+        <span>
+          <figure class="heroava">
+            <img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png">
+          </figure>
+          <em>Multi kill</em>
+          <u>Potroshitel9000.<s>Team Secret</s></u>
+          <s>DMG 123</s>
+          <i>GOLD 3124</i>
+        </span>
+        <div>
+          <figure class="teamHeroes">
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
+            
+              <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
+            
+          </figure>
+        </div>
+      </a>
+    </div>
+  
+  
+  <div class="mlh"><span><a href="" class="btn btn-default">Все лучшие моменты</a></span></div>
+</div>
+
+
+          </div>
+        </div>
+      </section>
+      
+      <section class="grid">
+        <!-- /players/blockzames-grid.html -->
+
+
+
+
+
+
+<!-- /template/blockzames.html -->
+<div class="fights fightsPlayers">
+  <!--<i class="iconFights"></i>-->
+  <h3 class="mlh"><span><a href="">Лучшие моменты</a></span></h3>
   <div class="row">
-    
-    
-    <div class="col-sm-4 col-lg-3">
-    <!-- bestKill -->
+   
+   <div class="col-sm-4 col-lg-3">
+      <!-- bestKill -->
       <div class="bestEvent bestKill"> 
         <a href="">
           <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
@@ -1461,7 +815,7 @@ $(function () {
           </b>
           <span>
             <figure class="heroava">
-              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png">
+              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png">
             </figure>
             <em>Multi kill</em>
             <u>Potroshitel9000.<s>Team Secret</s></u>
@@ -1471,22 +825,14 @@ $(function () {
           <div>
             <figure class="teamHeroes">
               
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"/></u>
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
               
                 <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
               
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
               
-              <u></u>
-              <u></u>
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
+              
               <u></u>
             </figure>
           </div>
@@ -1494,48 +840,6 @@ $(function () {
       </div>
     </div>
     
-    <div class="col-sm-4 col-lg-3">
-    <!-- bestKill -->
-      <div class="bestEvent bestKill"> 
-        <a href="">
-          <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
-            <span><i class="gti-youtube-play"></i> Team Secret VS Og</span>
-            <time>3:12 - 4:11</time>
-          </b>
-          <span>
-            <figure class="heroava">
-              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png">
-            </figure>
-            <em>Multi kill</em>
-            <u>Potroshitel9000.<s>Team Secret</s></u>
-            <s>DMG 123</s>
-            <i>GOLD 3124</i>
-          </span>
-          <div>
-            <figure class="teamHeroes">
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
-              
-              <u></u>
-              <u></u>
-              <u></u>
-            </figure>
-          </div>
-        </a>
-      </div>
-    </div>
     
     <div class="col-sm-4 col-lg-3">
     <!-- bestKill -->
@@ -1557,19 +861,19 @@ $(function () {
           <div>
             <figure class="teamHeroes">
               
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
-              
                 <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
               
                 <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
               
               <u></u>
               <u></u>
@@ -1590,7 +894,222 @@ $(function () {
           </b>
           <span>
             <figure class="heroava">
-              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png">
+              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png">
+            </figure>
+            <em>Multi kill</em>
+            <u>Potroshitel9000.<s>Team Secret</s></u>
+            <s>DMG 123</s>
+            <i>GOLD 3124</i>
+          </span>
+          <div>
+            <figure class="teamHeroes">
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
+              
+              <u></u>
+              <u></u>
+              <u></u>
+            </figure>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="col-sm-4 col-lg-3">
+    <!-- bestKill -->
+      <div class="bestEvent bestKill"> 
+        <a href="">
+          <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+            <span><i class="gti-youtube-play"></i> Team Secret VS Og</span>
+            <time>3:12 - 4:11</time>
+          </b>
+          <span>
+            <figure class="heroava">
+              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png">
+            </figure>
+            <em>Multi kill</em>
+            <u>Potroshitel9000.<s>Team Secret</s></u>
+            <s>DMG 123</s>
+            <i>GOLD 3124</i>
+          </span>
+          <div>
+            <figure class="teamHeroes">
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+              
+              <u></u>
+              <u></u>
+              <u></u>
+            </figure>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="col-sm-4 col-lg-3">
+    <!-- bestKill -->
+      <div class="bestEvent bestKill"> 
+        <a href="">
+          <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+            <span><i class="gti-youtube-play"></i> Team Secret VS Og</span>
+            <time>3:12 - 4:11</time>
+          </b>
+          <span>
+            <figure class="heroava">
+              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png">
+            </figure>
+            <em>Multi kill</em>
+            <u>Potroshitel9000.<s>Team Secret</s></u>
+            <s>DMG 123</s>
+            <i>GOLD 3124</i>
+          </span>
+          <div>
+            <figure class="teamHeroes">
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
+              
+              <u></u>
+              <u></u>
+              <u></u>
+            </figure>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="col-sm-4 col-lg-3">
+    <!-- bestKill -->
+      <div class="bestEvent bestKill"> 
+        <a href="">
+          <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+            <span><i class="gti-youtube-play"></i> Team Secret VS Og</span>
+            <time>3:12 - 4:11</time>
+          </b>
+          <span>
+            <figure class="heroava">
+              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png">
+            </figure>
+            <em>Multi kill</em>
+            <u>Potroshitel9000.<s>Team Secret</s></u>
+            <s>DMG 123</s>
+            <i>GOLD 3124</i>
+          </span>
+          <div>
+            <figure class="teamHeroes">
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
+              
+              <u></u>
+              <u></u>
+              <u></u>
+            </figure>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="col-sm-4 col-lg-3">
+    <!-- bestKill -->
+      <div class="bestEvent bestKill"> 
+        <a href="">
+          <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+            <span><i class="gti-youtube-play"></i> Team Secret VS Og</span>
+            <time>3:12 - 4:11</time>
+          </b>
+          <span>
+            <figure class="heroava">
+              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png">
+            </figure>
+            <em>Multi kill</em>
+            <u>Potroshitel9000.<s>Team Secret</s></u>
+            <s>DMG 123</s>
+            <i>GOLD 3124</i>
+          </span>
+          <div>
+            <figure class="teamHeroes">
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
+              
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/gyrocopter_hphover.png"/></u>
+              
+              <u></u>
+              <u></u>
+              <u></u>
+            </figure>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="col-sm-4 col-lg-3">
+    <!-- bestKill -->
+      <div class="bestEvent bestKill"> 
+        <a href="">
+          <b><img src="http://download.gamezone.com/assets/old/screenshots/dota_2_3.jpg" alt="Заголовок">
+            <span><i class="gti-youtube-play"></i> Team Secret VS Og</span>
+            <time>3:12 - 4:11</time>
+          </b>
+          <span>
+            <figure class="heroava">
+              <img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png">
             </figure>
             <em>Multi kill</em>
             <u>Potroshitel9000.<s>Team Secret</s></u>
@@ -1602,17 +1121,17 @@ $(function () {
               
                 <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
               
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
               
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/medusa_hphover.png"/></u>
               
                 <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
               
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/ember_spirit_hphover.png"/></u>
+              
                 <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sniper_sb.png"/></u>
               
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/vengefulspirit_hphover.png"/></u>
-              
-                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/rattletrap_hphover.png"/></u>
+                <u class="heroava dead tip" title="Loshok.Og"><img src="http://cdn.dota2.com/apps/dota2/images/heroes/sven_hphover.png"/></u>
               
               <u></u>
               <u></u>
@@ -1624,554 +1143,12 @@ $(function () {
     </div>
     
   </div>
-  <div class="mlh"><span><a href="" class="btn btn-default">Все лучшие моменты Miracle</a></span></div>
+  <div class="mlh"><span><a href="" class="btn btn-default">Все лучшие моменты</a></span></div>
 </div>
       </section>
       
-      <section id="m-news" class="m-sec m-even">
-        <div class="row">
-          <div class="col-md-7">
-            <!-- /match-page/section-news.html -->
-
-
-
-
-
-<div class="block m-news">
-  <div class="bh clearfix">
-    <h3>
-      <i class="ih gti-newspaper-o"></i>
-      Новости
-    </h3>
-    <ul class="block-menu">
-      <li class="nall active"><a href="">ВСЕ</a></li>
-      <li><a href="#"><i class="gti-gtlogo"></i></a></li>
-      <li><a href="#"><i class="gti-users"></i></a></li>
-    </ul>
-  </div><!-- bh -->
-    <div class="tse-sc tse-news">
-      <div class="tse-content">
-        <ul class="nlist">
-          
-              <li class=" ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42723-1482835201-small.jpeg)">
-                    <b><i class="gti-rss"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42720-1482829305-small.jpeg)">
-                    <b><i class="gti-rss"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class="  nopic">
-                 
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                 
-                  <a class="nopic" href="">
-                    <i class="gti-rss"></i>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class="hot ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42728-1482872435-small.jpeg)">
-                    <b><i class="gti-gtlogo"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42720-1482829305-small.jpeg)">
-                    <b><i class="gti-facebook"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42727-1482864622-small.jpeg)">
-                    <b><i class="gti-twitter"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class="hot ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42728-1482872435-small.jpeg)">
-                    <b><i class="gti-twitter"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class="hot ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42723-1482835201-small.jpeg)">
-                    <b><i class="gti-rss"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42723-1482835201-small.jpeg)">
-                    <b><i class="gti-gtlogo"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-              <li class=" ">
-                
-                  <a class="npic" href="" style="background-image:url(http://www.gosugamers.net/uploads/images/news/42725-1482841447-small.jpeg)">
-                    <b><i class="gti-twitter"></i></b>
-                  </a>
-                
-                 <div>
-                  <h4>
-                    <a href="">
-                      <span><i class="gti-commenting-o"></i>&nbsp;12</span> IEM Katowice — дебют обновленного RuHub!
-                    </a>
-                  </h4>
-                  <p>
-                    Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-                  </p>
-                  <u>
-                    <time>29 дек, 11:35</time>
-                  </u>
-                  <span>
-                    <a href="" class="shr"><i class="gti-vk"></i>993</a>
-                    <a href="" class="shr"><i class="gti-facebook"></i>123</a>
-                    <a href="" class="shr"><i class="gti-twitter"></i>13</a>
-                    <a href="" class="shr"><i class="gti-google-plus"></i>12</a>
-                  </span>
-                </div>
-              </li>
-          
-        </ul>
-      </div>
-  </div>
-</div>
-
-<!-- /section NEWS -->
-
-
-
-          </div>
-          <div class="col-md-5">
-            <!-- /match-page/section-soc.html -->
-<div class="block m-soc">
-  <div class="bh clearfix">
-    <h3>
-      <i class="ih gti-hand-peace-o"></i>
-      Социальные сети
-    </h3>
-    <ul class="block-menu" role="tablist">
-      <li class="active"><a id="k_tab" href="#tzn" role="tab" data-toggle="tab">ВСЕ</a></li>
-      <li><a id="k_graf" href="#tgraf" role="tab" data-toggle="tab"><i class="gti-vk"></i></a></li>
-      <li><a id="k_hist" role="tab" data-toggle="tab" href="#thist"><i class="gti-facebook"></i></a></li>
-      <li><a id="k_hist" role="tab" data-toggle="tab" href="#thist"><i class="gti-twitter"></i></a></li>
-    </ul>
-  </div><!-- bh -->
-  <div class="tab-content">
-    <div class="tse-sc tse-soc">
-      <div class="tse-content">
-        <ul>
-          
-          <li>
-            <i class="gti-twitter"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          <li>
-            <i class="gti-facebook"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="gti-twitter"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          <li>
-            <i class="gti-facebook"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="gti-twitter"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          <li>
-            <i class="gti-facebook"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="gti-twitter"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          <li>
-            <i class="gti-facebook"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="gti-twitter"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          <li>
-            <i class="gti-facebook"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="gti-twitter"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          <li>
-            <i class="gti-facebook"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="gti-twitter"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          <li>
-            <i class="gti-facebook"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="gti-twitter"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          <li>
-            <i class="gti-facebook"></i>
-            <div>
-              <span>
-                Денди
-              </span>
-              <p>
-                Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы ...
-              </p>
-            </div>
-          </li>
-          
-        </ul>
-        <div class="no100"><i class="gti-info-circle"></i> Ничего нет</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- /section social news -->
-          </div>
-        </div>
-      </section>
+      
+      
       
       <div class="bn">
         <img src="../img/ad.jpg" alt="">
@@ -3499,7 +2476,7 @@ $(function () {
                 <a href="">Nikname 1</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -3508,7 +2485,7 @@ $(function () {
                 <a href="">Nikname 2</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -3517,7 +2494,7 @@ $(function () {
                 <a href="">Nikname 3</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -3535,7 +2512,7 @@ $(function () {
                 <a href="">Nikname 5</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -3553,7 +2530,7 @@ $(function () {
                 <a href="">Nikname 7</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -3562,7 +2539,7 @@ $(function () {
                 <a href="">Nikname 8</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -3630,7 +2607,7 @@ $(function () {
 
 <!-- Site Sripts -->
 <script src="../inc/main.js"></script>
-<script src="../inc/func_init.js?46"></script>
+<script src="../inc/func_init.js?24"></script>
 
 <!--PAGES select only dev-->
 <style>

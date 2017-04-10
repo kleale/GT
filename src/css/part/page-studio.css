@@ -65,9 +65,6 @@ page-studio
       width: 60px;
       margin-bottom: 10px;
       border: 2px solid #37424c;
-      img{
-        width: 100%;
-      }
     }
     .splinks{
       padding: 3px 3px;
@@ -252,6 +249,9 @@ page-studio
       &:nth-child(1){
         width: 30px;
       }
+      &:last-child(1) {
+        width: 30px;
+      }
     }
   }
   td{
@@ -261,8 +261,10 @@ page-studio
     }
     &.vname{
       width: auto;
+      img{
+        margin-right: 10px;
+      }
       .vtitle {
-        margin-left: 10px;
         &:hover{
           text-decoration: none;
         }
@@ -374,7 +376,150 @@ page-studio
 }
 
 
+.studiolist{
+  .mtable{
+    thead{
+      th{
+        &:nth-child(1){
+          width: 30px;
+          padding-left: 30px;
+        }
+        &:last-child(1) {
+          width: 30px;
+        }
+      }
+    }
+    td{
+      &:nth-child(1){
+        width: 30px;
+        padding-left: 30px;
+      }
+      &.live{
+        width: 30px;
+        .livebetpin {
+            background-color: #f03a3a;
+            border: 1px solid #f03a3a;
+            border-radius: 12px;
+            box-shadow: 0 0 30px 4px #f03a3a;
+            display: inline-block;
+            vertical-align: middle;
+            width: 10px;
+            height: 10px;
+        }
+      }
+      &.lang{
+        width: 30px;
+      }
+      &.vname{
+        width: 35%;
+        img{
+          width: 30px;
+          margin-right: 10px;
+          border-radius: 2px;
+        }
+        .vtitle {
+          font-weight: 600;
+          color: #c0e3e8;
+        }
+      }
+      &.chan{
+        color: #c7c7c7;
+      }
+      &.cmtrs{
+        ul{
+          margin: -5px 0;
+          padding: 0;
+          font-size: 10px;
+          list-style: none;
+          li{
+            display: inline-block;
+          }
+        }
+      }
+      &.belltd{
+        width: 30px;
+        .bell{
+          &:hover,
+          &.active{
+            text-decoration: none;
+            color: #FF9800;
+          }
+        }
+      }
+    }
+  }
+}
 
-
-
-
+.streamerslist{
+  .mtable{
+    thead{
+      th{
+        &:nth-child(1){
+          width: 30px;
+          padding-left: 30px;
+        }
+        &:last-child(1) {
+          width: 30px;
+        }
+      }
+    }
+    td{
+      &:nth-child(1){
+        width: 30px;
+        padding-left: 30px;
+      }
+      &.live{
+        width: 30px;
+        .livebetpin {
+            background-color: #f03a3a;
+            border: 1px solid #f03a3a;
+            border-radius: 12px;
+            box-shadow: 0 0 30px 4px #f03a3a;
+            display: inline-block;
+            vertical-align: middle;
+            width: 10px;
+            height: 10px;
+        }
+      }
+      &.lang{
+        width: 30px;
+      }
+      &.vname{
+        width: 35%;
+        table{
+          td{
+            padding: 0 3px;
+            vertical-align: middle;
+          }
+        }
+        img{
+          width: 30px;
+          margin-right: 10px;
+          border-radius: 2px;
+        }
+        .vtitle {
+          font-weight: 600;
+          color: #c0e3e8;
+        }
+      }
+      &.chan{
+        color: #c7c7c7;
+        img{
+          width: 30px;
+          margin-right: 10px;
+          border-radius: 2px;
+        }
+      }
+      &.belltd{
+        width: 30px;
+        .bell{
+          &:hover,
+          &.active{
+            text-decoration: none;
+            color: #FF9800;
+          }
+        }
+      }
+    }
+  }
+}

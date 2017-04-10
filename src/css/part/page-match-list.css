@@ -963,6 +963,30 @@
       margin: 0;
       display: inline-block;
       vertical-align: middle;
+      width: 37px;
+      height: 28px;
+      em{
+        font-style: inherit;
+        position: absolute;
+        left: 11px;
+        top: 6px;
+      }
+      input{
+        opacity: 0;
+        & + em::after{
+          background: #454a4e;
+        }
+        & + em::before{
+          border: 2px solid #819a9e;
+          background: #454a51;
+          border-radius: 2px;
+        }
+        &:checked + em::before {
+          border-color: #009688;
+          border-top-style: none;
+          border-right-style: none;
+        }
+      }
     }
   }
   .ft4{
@@ -976,7 +1000,15 @@
     }
   }
 }
-
+.score-on:after {
+  content: '5:0';
+  position: absolute;
+  top: -4px;
+  font-size: 23px;
+  left: 2px;
+  color: #3c4146;
+  text-shadow: 0 1px 0px rgba(255, 255, 255, 0.05);
+}
 
 
 
