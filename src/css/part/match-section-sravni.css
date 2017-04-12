@@ -43,7 +43,7 @@
     position: relative;
     background-color: rgba(3, 125, 181, 0.13);
     border-radius: 50%;
-    
+    text-align: center;
     &:after{
       content: '';
       display: block;
@@ -54,12 +54,11 @@
       background: #eee;
       border-radius: 50px;
     }
-    
     img{
       width: 100%;
+      display: block;
     }
   }
-  
   > div{
     padding-top: 20px;
     h3{
@@ -69,7 +68,7 @@
     }
     u{
       text-transform: uppercase;
-      font-size: 12px;
+      font-size: 11px;
       color: #8f8f8f;
       text-decoration: none;
       display: block;
@@ -80,12 +79,10 @@
   &.sr_t1{
     text-align: right;
     margin-right: -50px;
-    
     @media (max-width: $XM){
       text-align: center;
       margin: 0;
     }
-    
     > div{
       margin-right: 100px;
       
@@ -96,20 +93,16 @@
     .sr_pic{
       float: right;
       margin-left: 20px;
-      
       &:after{
         background: $blue;
       }
-      
       @media (max-width: $XM){
         float: none;
         margin: 0 0 20px 0;
         display: inline-block;
       }
-      
     }
   }
-  
   &.sr_t2{
     text-align: left;
     margin-left: -50px;
@@ -145,7 +138,6 @@
   .thumb{
     margin: 0;
     border-color: #203C50;
-    
     &:hover,
     &:active,
     &:focus{
@@ -203,32 +195,30 @@
         position: relative;
         z-index: 2;
         width: 100%;
-
         tr{
           background: transparent;
           td {
-              font-size: 14px;
-              padding: 3px 5px;
-              height: 20px;
+            font-size: 14px;
+            padding: 3px 5px;
+            height: 20px;
             &:first-child {
-                text-align: right;
-                color: #fff;
-                width: 20%;
+              text-align: right;
+              color: #fff;
+              width: 20%;
             }
             &:nth-child(2) {
-                text-transform: uppercase;
-                font-size: 11px;
-                color: #fff;
-                text-shadow: 0 1px 1px #000;
+              text-transform: uppercase;
+              font-size: 11px;
+              color: #fff;
+              text-shadow: 0 1px 1px #000;
             }
             &:last-child {
-                text-align: left;
-                color: #fff;
-                width: 20%;
+              text-align: left;
+              color: #fff;
+              width: 20%;
             }
           }
         }
-        
         .red a{
           color: #ea6465;
           text-decoration: none;

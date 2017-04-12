@@ -1,7 +1,6 @@
 /*
   Layout
 */
-
 body{
   background: #333 url(../img/bg_news.jpg) 50% 50% repeat;
   @media (max-width: $XM) {
@@ -25,9 +24,6 @@ body{
   position: relative;
   z-index: 2;
 }
-/*
-  Breadcrums Bar
-*/
 .bread{
   position: absolute 0 * * *;
   z-index: 2;
@@ -44,21 +40,21 @@ body{
     color: #fff;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding: 4px 8px 4px;
     margin: 0;
+    height: 40px;
     @media (max-width: $XM) {
       padding: 10px;
-      min-height: 40px;
     }
-    
     li {
       display: inline-block;
-    
+      overflow: hidden;
+      max-width: 460px;
+      text-overflow: ellipsis;
+      color: #a6c6cb;
       a {
         font-size: 12px;
         color: $link-light-blue;
         text-decoration: none;
-        
         &:active,
         &:focus,
         &:hover{
@@ -69,7 +65,6 @@ body{
     }
   }
 }
-
 /*
   Left Bar
 */
@@ -82,7 +77,6 @@ body{
   background-position: center;
   width: 200px;
   z-index: 100;
-  
   @media (max-width: 1585px) {
     margin-left: 0;
   }
@@ -131,7 +125,6 @@ body{
       padding: 5px 10px;
     }
   }
-  
   .gt-logo {
     display: block;
     padding: 15px 0;
@@ -154,7 +147,7 @@ body{
       transform: skewX(15deg);
     }
     @media (max-height: $XM) {
-        padding: 10px 0;
+      padding: 10px 0;
     }
     img{
       width:100px;
@@ -171,7 +164,6 @@ body{
 
 .bar-menu{
   position: relative;
-
   &:before{
     display: block;
     content: "";
@@ -186,7 +178,6 @@ body{
   width: 50px;
   padding: 0;
   margin: 0;
-
   > li{
     list-style: none;
     padding: 0;
@@ -252,7 +243,6 @@ body{
       }
     }
   }
-  
   &.ingame{
     > li > a{
       span{
@@ -268,7 +258,6 @@ body{
   padding: 5px;
   position: relative;
   min-height: 50px;
-
   .bar-ava{
     display: inline-block;
     float: left;

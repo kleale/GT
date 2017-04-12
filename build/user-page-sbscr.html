@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="../inc/assets/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   
   <!-- Import main styles -->
-  <link rel="stylesheet" href="../css/main.css?51">
+  <link rel="stylesheet" href="../css/main.css?24">
   
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -154,7 +154,7 @@
                       </td>
                       <td class="icon">
                         <a href="" class="icon_a">
-                          <img src="http://ggscore.com/media/logo/_60/pic-20161110-600x600-7320131375.png">
+                          <img src="http://ggscore.com/media/logo/_60/pic-20161110-500x500-1758574228.png">
                         </a>
                       </td>
                       <td class="inf">
@@ -176,7 +176,7 @@
                         </a>
                       </td>
                       <td class="inf">
-                          <a href="" class="name">OG</a>
+                          <a href="" class="name">Secret</a>
                           <!--<p>Самые свежие новости игр</p>-->
                       </td>
                       <td class="ac">
@@ -190,11 +190,11 @@
                       </td>
                       <td class="icon">
                         <a href="" class="icon_a">
-                          <img src="http://ggscore.com/media/logo/_60/pic-20161110-600x600-7320131375.png">
+                          <img src="http://ggscore.com/media/logo/_60/pic-20161110-500x500-1758574228.png">
                         </a>
                       </td>
                       <td class="inf">
-                          <a href="" class="name">Secret</a>
+                          <a href="" class="name">OG</a>
                           <!--<p>Самые свежие новости игр</p>-->
                       </td>
                       <td class="ac">
@@ -212,7 +212,7 @@
                         </a>
                       </td>
                       <td class="inf">
-                          <a href="" class="name">Virtus.Pro</a>
+                          <a href="" class="name">OG</a>
                           <!--<p>Самые свежие новости игр</p>-->
                       </td>
                       <td class="ac">
@@ -248,7 +248,7 @@
                         </a>
                       </td>
                       <td class="inf">
-                          <a href="" class="name">Virtus.Pro</a>
+                          <a href="" class="name">OG</a>
                           <!--<p>Самые свежие новости игр</p>-->
                       </td>
                       <td class="ac">
@@ -1253,7 +1253,7 @@
 
 <script>
   $(document).ready(function () {
-      // match bar affix
+    // chat
     $('.ch_times').click(function () {
       $('body').toggleClass('chat-open');
       $(this).toggleClass('active');
@@ -1262,6 +1262,12 @@
       $('body').toggleClass('chat-open');
       $(this).toggleClass('active');
     });
+    $('.emotic-btn').click(function () {
+/*      alert('sd');*/
+      $('.emo_block').toggleClass('active');
+      $(this).toggleClass('active');
+    });
+    
   });
 </script>
 
@@ -1274,7 +1280,7 @@
 
 <!-- Site Sripts -->
 <script src="../inc/main.js"></script>
-<script src="../inc/func_init.js?13"></script>
+<script src="../inc/func_init.js?24"></script>
 
 <!--PAGES select only dev-->
 <style>
@@ -1289,6 +1295,8 @@
     background: rgba(0, 0, 0, 0.9);
     padding: 5px;
     border-radius: 5px 0px 0px 0px;
+    
+    display: none;
   }
   .project-menu a{
     font-size: 10px;

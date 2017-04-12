@@ -78,7 +78,7 @@
   color: #99fffd;
   font-size: 31px;
   margin-right: 10px;
-  opacity: 0.6;
+  opacity: .6;
   text-shadow: 0 1px 0 #000000;
 }
 
@@ -133,7 +133,7 @@
       }
       span{
         background: transparent;
-        color:$link-light-blue;
+        color: $link-light-blue;
         border-radius: 50px;
       }
     }
@@ -221,7 +221,8 @@
       color: #fff;
     }
   }
-  &.mlhSM, &.mlh-sm{
+  &.mlhSM,
+  &.mlh-sm{
     font-size: 12px;
     line-height: 1;
     margin-top: 3px;
@@ -250,12 +251,12 @@
 
 .fights{
   margin-bottom: 15px;
+  margin-top: 13px;
   &.grid-sm{
     .inliner{
       .bestEvent{
         width: 45%;
         margin: 0 2.3% 15px 2.3%;
-        
         @media (max-width: $SM) {
           width: 100%;
           margin: 0 0 15px 0;
@@ -275,11 +276,9 @@
   }
   .bestEvent{
     margin-bottom: 20px;
-    
     a{
       display: block;
       position: relative;
-      
       &:hover,
       &:focus,
       &:active{
@@ -288,10 +287,9 @@
           border-color: #4482b5;
         }
       }
-      
       > b{
         display: block;
-        height: 120px;
+        min-height: 100px;
         overflow: hidden;
         font-weight: 400;
         border: 2px solid #424f5a;
@@ -300,7 +298,7 @@
         border-radius: 2px;
         
         img{
-          width:100%;
+          width: 100%;
         }
         > span{
           position: absolute 0 * * 0;
@@ -337,7 +335,7 @@
         }
         
         &:after{
-          content:'';
+          content: '';
           display: block;
           position: absolute * 0 0 0;
           height: 50px;
@@ -393,7 +391,6 @@
         margin-top: -30px;
         display: block;
         position: relative;
-        
         .teamLogo{
           width: 80px;
           float: left;
@@ -533,9 +530,3 @@
 }
 
 /* .block zames */
-
-
-
-
-
-

@@ -4401,7 +4401,7 @@
 
 <script>
   $(document).ready(function () {
-      // match bar affix
+    // chat
     $('.ch_times').click(function () {
       $('body').toggleClass('chat-open');
       $(this).toggleClass('active');
@@ -4410,6 +4410,12 @@
       $('body').toggleClass('chat-open');
       $(this).toggleClass('active');
     });
+    $('.emotic-btn').click(function () {
+/*      alert('sd');*/
+      $('.emo_block').toggleClass('active');
+      $(this).toggleClass('active');
+    });
+    
   });
 </script>
 
@@ -4733,7 +4739,7 @@
                 <a href="">Nikname 1</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -4742,7 +4748,7 @@
                 <a href="">Nikname 2</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -4760,7 +4766,7 @@
                 <a href="">Nikname 4</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -4769,7 +4775,7 @@
                 <a href="">Nikname 5</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -4787,7 +4793,7 @@
                 <a href="">Nikname 7</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -4805,7 +4811,7 @@
                 <a href="">Nikname 9</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -4864,7 +4870,7 @@
 
 <!-- Site Sripts -->
 <script src="../inc/main.js"></script>
-<script src="../inc/func_init.js?35"></script>
+<script src="../inc/func_init.js?24"></script>
 
 <!--PAGES select only dev-->
 <style>
@@ -4879,6 +4885,8 @@
     background: rgba(0, 0, 0, 0.9);
     padding: 5px;
     border-radius: 5px 0px 0px 0px;
+    
+    display: none;
   }
   .project-menu a{
     font-size: 10px;

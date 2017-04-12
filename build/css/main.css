@@ -1312,9 +1312,6 @@ body{
   position: relative;
   z-index: 2;
 }
-/*
-  Breadcrums Bar
-*/
 .bread{
   top: 0;
   position: absolute;
@@ -1337,17 +1334,20 @@ body{
   color: #fff;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding: 4px 8px 4px;
   margin: 0;
+  height: 40px;
 }
 @media (max-width: 991px) {
   .bread ol {
     padding: 10px;
-    min-height: 40px;
   }
 }
 .bread ol li {
   display: inline-block;
+  overflow: hidden;
+  max-width: 460px;
+  text-overflow: ellipsis;
+  color: #a6c6cb;
 }
 .bread ol li a {
   font-size: 12px;
@@ -2124,7 +2124,7 @@ Banners
   color: #99fffd;
   font-size: 31px;
   margin-right: 10px;
-  opacity: 0.6;
+  opacity: .6;
   text-shadow: 0 1px 0 #000000;
 }
 .tse-sc{
@@ -2174,7 +2174,7 @@ Banners
 }
 .nav-pager .pagination li span{
   background: transparent;
-  color:#a6c6cb;
+  color: #a6c6cb;
   border-radius: 50px;
 }
 /*newsicons*/
@@ -2250,7 +2250,8 @@ Banners
 .mlh span .btn{
   color: #fff;
 }
-.mlh.mlhSM, .mlh.mlh-sm{
+.mlh.mlhSM,
+  .mlh.mlh-sm{
   font-size: 12px;
   line-height: 1;
   margin-top: 3px;
@@ -2275,7 +2276,8 @@ Banners
   margin: 10px -3px;
 }
 .fights{
-  margin-bottom: 15px;/*multideath*/
+  margin-bottom: 15px;
+  margin-top: 13px;/*multideath*/
 
 }
 .fights.grid-sm .inliner .bestEvent{
@@ -2315,7 +2317,7 @@ Banners
 }
 .fights .bestEvent a > b{
   display: block;
-  height: 120px;
+  min-height: 100px;
   overflow: hidden;
   font-weight: 400;
   border: 2px solid #424f5a;
@@ -2324,7 +2326,7 @@ Banners
   border-radius: 2px;
 }
 .fights .bestEvent a > b img{
-  width:100%;
+  width: 100%;
 }
 .fights .bestEvent a > b > span{
   top: 0;
@@ -2362,7 +2364,7 @@ Banners
   font-size: 11px;
 }
 .fights .bestEvent a > b:after{
-  content:'';
+  content: '';
   display: block;
   right: 0;
   bottom: 0;
@@ -3700,13 +3702,15 @@ Branding - Match of the day
     vertical-align: middle;
 }
 .abg_mp{
-    width: 175px;
-    padding-right: 30px;
+  width: 175px;
+  padding-right: 30px;
+  text-align: center;
 }
 .abg_mp img{
-	width: 100%;
-	border-radius: 5px;
-	opacity: .7;
+  max-width: 100%;
+  border-radius: 5px;
+  opacity: .7;
+  max-height: 70px;
 }
 .abg_mt {
     font-size: 12px;
@@ -4119,12 +4123,12 @@ Branding - Match of the day
     display: block;
     text-align: center;
     text-decoration: none;
-	left: 25px;
+	left: 20px;
     line-height: 70px;
     vertical-align: middle;
 }
 .abl_i2{
-	right: 25px;
+	right: 20px;
 	left: auto;
 }
 .abl_i1 img,
@@ -6073,7 +6077,7 @@ Headline
 .m-rate span:before {
   color: rgb(133, 133, 133);
   content: "";
-  padding-right: 4px;
+  padding-right: 2px;
 }
 .m-rate span:hover:before,
     .m-rate span:hover ~ span:before{
@@ -6721,16 +6725,15 @@ Banners
 .srteamslider{
   position: relative;
   background-image: url(../img/section_bg_1.jpg);
-  /*background: #252a2c;*/
   background: #0B0C0C;
 }
 .srteamslider .srteamtoggle {
-  transition: all .1s linear;/*background: #252a2c;*/
+  transition: all .1s linear;
   background: #191E21;
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAChJREFUeNpi+P//PwMQy0JpMMYQAGFGsAwqkGVAUyUL086Abi5AgAEANCs/VAxOWCIAAAAASUVORK5CYII=');
   background-repeat: repeat;
   background-position: center;
-  width: 386px;
+  width: 390px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -6738,7 +6741,7 @@ Banners
 }
 @media (max-width: 1600px){
   .srteamslider .srteamtoggle {
-    width: 320px;
+    width: 325px;
   }
 }
 @media (max-width: 991px){
@@ -6936,13 +6939,13 @@ Banners
 }
 /*subm*/
 .srteamview {
-  margin-right: 386px;
-  background: #292828;
+  margin-right: 390px;
+  background: #151a1d url(../img/spoiler.png) repeat scroll 0 0;
   position: relative;
 }
 @media (max-width: 1600px){
   .srteamview {
-    margin-right: 320px;
+    margin-right: 325px;
   }
 }
 @media (max-width: 991px){
@@ -6978,7 +6981,7 @@ Banners
 .srteamview .iframer.active .iframeBanner{
   display:none;
 }
-.srteamview .iframerClicker{/*position: absolute 0 0 0 0;*/
+.srteamview .iframerClicker{
   position: relative;
   background-position: center;
   background-size: contain;
@@ -7328,7 +7331,7 @@ Banners
 }
 .slist li{
   transition: all .1s linear;
-  padding: 5px 15px;
+  padding: 5px 5px;
   position: relative;
   overflow: hidden;
 }
@@ -7338,6 +7341,7 @@ Banners
 .slist li:hover{
   cursor: pointer;
   background: #037db5;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.14) inset;
 }
 .slist li:hover.live em{
   color: #037db5;
@@ -7345,23 +7349,9 @@ Banners
   box-shadow: none!important;
   text-shadow: none;
 }
-/*&.live span:after {
-      content: '';
-      background-color: #f03a3a;
-      border: 1px solid #f03a3a;
-      border-radius: 12px;
-      box-shadow: 0 0 20px 5px #f03a3a;
-      display: inline-block;
-      height: 7px;
-      margin-left: 0;
-      margin-right: 5px;
-      margin-top: -2px;
-      position: absolute;
-      right: -3px;
-      top: 4px;
-      vertical-align: middle;
-      width: 7px;
-    }*/
+.slist li:hover u{
+  color: #eee;
+}
 .slist li.live em {
   color: #f03a3a;
   text-shadow: -1px 3px 8px rgb(255, 0, 0);
@@ -7369,6 +7359,7 @@ Banners
 .slist li.active{
   cursor: pointer;
   background: #037db5;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.14) inset;
 }
 .slist li.active em{
   opacity: 1;
@@ -7453,12 +7444,13 @@ Banners
 .slist li span{
   float: left;
   position: relative;
-  width: 32px;
+  width: 37px;
   cursor: pointer;
+  margin: -3px;
+  background: #0f1215;
 }
 .slist li span img{
   width: 100%;
-  border-radius: 2px;
 }
 .slist li span time{
   bottom: 0;
@@ -8043,7 +8035,7 @@ Video after stream
   position: absolute;
 }
 .chat-head {
-  background: #152b35;
+  background: #163545 url(../img/spoiler.png) repeat scroll 0 0;
   height: 45px;/*ch_options*/
 }
 .chat-head .dropdown{
@@ -8157,6 +8149,10 @@ Video after stream
 .chat-head .ch_opti{
   float: right;
 }
+.chat-head .ch_opti .dropdown-backdrop {
+  background: #000;
+  opacity: .4;
+}
 .chat-head .ch_cog,
   .chat-head .ch_users,
   .chat-head .ch_times{
@@ -8198,9 +8194,10 @@ Video after stream
   line-height: 18px;
   padding: 3px 6px 1px;
   position: relative;
-  top: -1px;
+  top: 0px;
   vertical-align: middle;
   border: 1px solid;
+  min-height: 13px;
 }
 .chat-head .ch_users span:hover{
   color: #fff;
@@ -8233,9 +8230,10 @@ Video after stream
 .chat-head .ch_header {
   background: #0e82b8;
   color: #cef3fe;
-  font-size: 16px;
+  font-size: 14px;
   left: 0;
-  padding: 10px 11px;
+  padding: 9px 11px;
+  height: 38px;
   position: absolute;
   right: 0;
   text-align: center;
@@ -8246,14 +8244,15 @@ Video after stream
   color: #CEF3FE;
   cursor: pointer;
   float: right;
-  font-size: 20px;
-  margin: -10px;
-  padding: 11px;
-  width: 40px;
-  transition:all .2s linear;
+  font-size: 18px;
+  margin: -9px;
+  padding: 10px 9px;
+  width: 38px;
+  line-height: 16px;
+  height: 38px;
 }
-.chat-head .cwcl a:hover, .chat-head .cexternal a:hover {
-  transform:scale(1.2);
+.chat-head .cwcl:hover, .chat-head .cexternal:hover {
+  color: #fff;
 }
 .chat-head .cexternal {
   float: left;
@@ -8308,20 +8307,23 @@ Video after stream
 .chat-head .dropdown a.dropdown-toggle:hover,
 .chat-head .dropdown.open a.dropdown-toggle,
 .ch_times:hover{
-    text-decoration: none;
-    background: transparent;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
+}
+.chat-head .dropdown.open a.dropdown-toggle{
+  background: #0e82b8;
 }
 /*EMO*/
 .emotic-btn {
   cursor: pointer;
   font-size: 20px;
-  opacity: .8;
+  opacity: .4;
   position: absolute;
   right: 66px;
   top: 7px;
 }
-.emotic-btn:hover{
+.emotic-btn:hover,
+  .emotic-btn.active{
   opacity:1;
   text-decoration: none;
 }
@@ -8355,7 +8357,7 @@ Video after stream
 }
 /*.emo_block*/
 .stickerer{
-  width: 328px;
+  /*width: 300px;*/
   height: 270px; 
 }
 .stickerer .stickers-list{
@@ -8363,7 +8365,7 @@ Video after stream
 }
 .stickerer .stickers-list img{
   margin: 0;
-  width: 49px;
+  width: 52px;
 }
 .stickerer .stickers-list a:hover{
   text-decoration: none;
@@ -8535,10 +8537,10 @@ Video after stream
   position: relative;
 }
 .chat-action .chat-text textarea {
-  background-color: #252A2C;
+  background-color: #2b3033;
   border: 1px solid rgba(255, 255, 255, 0);
   color: #71b6e7;
-  font-size: 13px;
+  font-size: 12px;
   display: block;
   height: 40px;
   line-height: 14px;
@@ -8595,7 +8597,7 @@ Video after stream
   position: relative;
   word-wrap: break-word;
   color: #8c8c9c;
-  line-height: 20px;
+  line-height: 1.4;
   font-size: 13px;
 }
 .tse-list > div span {
@@ -8844,14 +8846,14 @@ Bar chatter
   right: 0;
   bottom: 0;
   left: 0;
-  position: absolute;
-  background: rgb(27,53,64);
+  position: absolute;/*background: rgb(27,53,64);*/
+  background: rgb(24, 37, 45);
 }
 .bar-chat .stmblocks .chat-inner .chat-head{
   height: 49px;
 }
 .bar-chat .stmblocks .chat-inner .chat-head .ch_room .dropdown-toggle{
-  padding: 16px 5px 14px 5px;
+  padding: 16px 5px 14px 10px;
   max-width: 175px;
 }
 .bar-chat .stmblocks .chat-inner .chat-head .ch_cog,
@@ -8920,7 +8922,7 @@ Bar chatter
   width: 100%;
   text-align: center;
   background-color: #152b35;
-  font-size: 11px;
+  font-size: 10px;
 }
 .stf span{
   transition: all .1s linear;
@@ -8942,17 +8944,17 @@ Bar chatter
 .nostat {
   position: relative;
   text-align: center;
-  color: #386E92 !important;
+  color: #587a8a;
+  margin-top: 140px;
+  opacity: .4;
 }
 .nostat i {
   display: block;
-  font-size: 50px;
-  margin: 90px 0 10px;
-  color: #386E92 !important;
+  font-size: 30px;
+  margin: 0px 0 10px;
 }
 .nostat span {
   display: block;
-  margin-bottom: 140px;
   text-transform: uppercase;
 }
 .filters{
@@ -9061,7 +9063,7 @@ Bar chatter
     position: relative;
 }
 .splayers{
-  padding: 5px;
+  padding: 0;
   list-style: none;
   margin: 0;
 }
@@ -9069,7 +9071,7 @@ Bar chatter
   margin: 0 0 2px;
   position: relative;
   line-height: 27px;
-  min-height: 27px;
+  min-height: 30px;
 }
 .splayers li.radiant{
   background: linear-gradient(to right,  rgba(44,186,37,0.2) 0%,rgba(97,225,99,0.09) 57%,rgba(137,255,145,0) 100%);
@@ -9090,7 +9092,7 @@ Bar chatter
   float:left;
 }
 .splayers li .heroava img{
-  height: 28px;
+  height: 30px;
   display:block;
 }
 .splayers li .sitem {
@@ -9144,7 +9146,7 @@ Bar chatter
   width: 22px;
 }
 .listbyteams{
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 .listbyteams li.radiant:before,
   .listbyteams li.radiant:after {
@@ -9166,7 +9168,7 @@ Bar chatter
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding-top:2px;
+  padding-top: 4px;
 }
 .sname a{
   color: #fff;
@@ -9182,10 +9184,10 @@ Bar chatter
     float: left;
     overflow: hidden;
     width: 30%;
-    padding: 0 5px;
+    padding: 0;
 }
 .statsblock .stname:first-child{
-    margin-top:-5px;
+    margin-top:-2px;
 }
 .pskills {
   float: right;
@@ -9246,24 +9248,25 @@ Bar chatter
   margin-top: 1px;
   position: relative;
   text-align: center;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
+  font-size: 11px;
 }
-.stname:after {
-  background: #4f4f4f;
-  bottom: 8px;
-  content: "";
-  display: block;
-  height: 1px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  width: 100%;
-}
+/*  &:after {
+    background: #4f4f4f;
+    bottom: 8px;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }*/
 .stname span {
-  background: #333333;
   padding: 0 10px;
   position: relative;
   z-index: 1;
+  text-shadow: 0 1px #000;
 }
 /*Match Select*/
 .stat_m_select {
@@ -10299,6 +10302,7 @@ Bar chatter
   position: relative;
   background-color: rgba(3, 125, 181, 0.13);
   border-radius: 50%;
+  text-align: center;
 }
 .sr_t .sr_pic:after{
   content: '';
@@ -10314,6 +10318,7 @@ Bar chatter
 }
 .sr_t .sr_pic img{
   width: 100%;
+  display: block;
 }
 .sr_t > div{
   padding-top: 20px;
@@ -10325,7 +10330,7 @@ Bar chatter
 }
 .sr_t > div u{
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 11px;
   color: #8f8f8f;
   text-decoration: none;
   display: block;
@@ -12070,8 +12075,8 @@ match-vid.css
   height: 40px;
   margin: 10px;
 }
-.timezone li{
-  min-width: 170px;
+.timezone{
+  min-width: 190px;
 }
 .timezone li:first-child{
   font-size: 11px;
@@ -15384,9 +15389,9 @@ player.html
   overflow: hidden;
 }
 .pAva{
-    background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
-    margin-bottom: 25px;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
+  margin-bottom: 25px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 .pAva .playerava{
   text-align: center;
@@ -15468,7 +15473,7 @@ player.html
 .pAva .pInf .pt img{
   width: 60px;
 }
-.pAva .pInf h2{/*in player block*/
+.pAva .pInf h2{
   text-align: left;
   font-size: 18px;
   font-size: 21px;
@@ -15574,7 +15579,6 @@ player.html
   cursor: help;
 }
 .pRate{
-  /*background: #424d56;*/
   padding: 15px;
   margin-bottom: 15px;
 }
@@ -15612,7 +15616,6 @@ player.html
 .plCard{
   background: #232b31;
   padding-bottom: 1px;
-  
 }
 .plCard .maingraph{
   margin-bottom: 10px;
@@ -15690,7 +15693,7 @@ player.html
   }
 }
 .highcharts-container, svg:not(:root) {
-  overflow: visible  !important;
+  overflow: visible !important;
 }
 .pTeams{
   background-color: rgb(19, 29, 38);
@@ -15810,24 +15813,12 @@ player.html
     padding: 2px 10px;
   }
 }
-.pageTeam{ 
+.pageTeam{
   padding-bottom: 30px;
 }
 .pageTeam .playerava{
-  padding: 30px 20% 0;
+  padding: 30px 0 0;
 }
-/*  
-  .tLogo{
-    text-align: center;
-    padding: 30px 20% 0;
-    display: block;
-    
-    img{
-      display: inline;
-      max-width: 100%;
-      width: auto;
-    }
-  }*/
 .pageTeam .pInf h2{
   margin-bottom: 0;
   padding-right: 0;
@@ -15854,6 +15845,9 @@ player.html
   width: 30px;
   margin-right: 10px;
 }
+.pageTeam .pAvaBg .playerava img{
+  max-width: 180px;
+}
 .pageTeam .pAvaBg .pRate{
   border-top: 1px solid #19222b;
   box-shadow: 0 1px 0 0 #435363 inset;
@@ -15869,7 +15863,8 @@ player.html
   margin: 15px 0;
 }
 .teamP{
-  margin: -30px 0;
+  margin: 20px 0 -30px;
+  clear: both;
 }
 @media (max-width: 991px){
   .teamP {
@@ -16017,7 +16012,7 @@ player.html
   bottom: 0;
   left: 2px;
   position: absolute;
-  width:20px;
+  width: 20px;
 }
 .slPlayers .slPlayer .teamLogo a img{
   min-width: 100%;
@@ -16160,7 +16155,7 @@ player.html
     display: none;
   }
   .playerGames .mtable .t-item .heropic img{
-    max-width: 40px
+    max-width: 40px;
   }
 }
 /*

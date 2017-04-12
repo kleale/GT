@@ -781,9 +781,8 @@
   margin: 10px;
 }
 .timezone{
+  min-width: 190px;
   li{
-    min-width: 170px;
-    
     &:first-child{
       font-size: 11px;
       background: #0b75a7 url(../img/spoiler.png) repeat 0 0;

@@ -303,11 +303,9 @@ Headline
   position: relative;
   top: 4px;
   margin: 1px -3px 0 -10px;
-  
   @media (max-width: $L){
     margin: 1px;
   }
-  
   span {
     display: block;
     float: right;
@@ -315,11 +313,10 @@ Headline
     font-style: normal;
     font-weight: normal;
     cursor: pointer;
-    
     &:before {
       color: color($link-light-blue b(60%));
       content: "";
-      padding-right: 4px;
+      padding-right: 2px;
     }
     &:hover:before,
     &:hover ~ span:before{

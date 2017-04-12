@@ -129,13 +129,15 @@ Branding - Match of the day
     vertical-align: middle;
 }
 .abg_mp{
-    width: 175px;
-    padding-right: 30px;
+  width: 175px;
+  padding-right: 30px;
+  text-align: center;
 }
 .abg_mp img{
-	width: 100%;
-	border-radius: 5px;
-	opacity: .7;
+  max-width: 100%;
+  border-radius: 5px;
+  opacity: .7;
+  max-height: 70px;
 }
 .abg_mt {
     font-size: 12px;
@@ -555,12 +557,12 @@ Branding - Match of the day
     display: block;
     text-align: center;
     text-decoration: none;
-	left: 25px;
+	left: 20px;
     line-height: 70px;
     vertical-align: middle;
 }
 .abl_i2{
-	right: 25px;
+	right: 20px;
 	left: auto;
 }
 .abl_i1 img,

@@ -397,7 +397,7 @@
 
 <script>
   $(document).ready(function () {
-      // match bar affix
+    // chat
     $('.ch_times').click(function () {
       $('body').toggleClass('chat-open');
       $(this).toggleClass('active');
@@ -406,6 +406,12 @@
       $('body').toggleClass('chat-open');
       $(this).toggleClass('active');
     });
+    $('.emotic-btn').click(function () {
+/*      alert('sd');*/
+      $('.emo_block').toggleClass('active');
+      $(this).toggleClass('active');
+    });
+    
   });
 </script>
 

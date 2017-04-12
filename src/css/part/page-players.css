@@ -199,9 +199,9 @@ player.html
   overflow: hidden;
 }
 .pAva{
-    background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
-    margin-bottom: 25px;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  background: #37424c url(../img/spoiler.png) repeat scroll 0 0;
+  margin-bottom: 25px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   .playerava{
     text-align: center;
     display: block;
@@ -210,7 +210,6 @@ player.html
     background-position: top center;
     overflow: hidden;
     max-height: 485px;
-    
     @media (max-width: $XM) {
       max-height: 300px;
     }
@@ -275,7 +274,7 @@ player.html
         width: 60px;
       }
     }
-    h2{ /*in player block*/
+    h2{
       text-align: left;
       font-size: 18px;
       font-size: 21px;
@@ -317,7 +316,6 @@ player.html
   .niks{
     font-size: .8em;
     color: #c8c8c8;
-    
     b{
       display: block;
       color: #fff;
@@ -329,7 +327,6 @@ player.html
     position: relative;
     padding: 0 10px 20px;
     text-align: center;
-    
     .btn{
       position: relative;
       i{
@@ -344,7 +341,6 @@ player.html
       font-size: 11px;
       margin-left: 10px;
       position: relative;
-      
       &:before{
         content: '';
         top: 50%;
@@ -385,10 +381,8 @@ player.html
   }
 }
 .pRate{
-  /*background: #424d56;*/
   padding: 15px;
   margin-bottom: 15px;
-
   table{
     width: 100%;
     table-layout: fixed;
@@ -425,7 +419,6 @@ player.html
 .plCard{
   background: #232b31;
   padding-bottom: 1px;
-  
   .maingraph{
     margin-bottom: 10px;
     .mlhSM{
@@ -468,33 +461,32 @@ player.html
   }
   
   .spiderInfo{
-      padding: 10px;
-      font-size: 10px;
-      border: 1px solid #334859;
-      @media (max-width: $XM) {
-        display: none;
+    padding: 10px;
+    font-size: 10px;
+    border: 1px solid #334859;
+    @media (max-width: $XM) {
+      display: none;
+    }
+    table{
+      td,th{
+        vertical-align: top;
+        padding: 3px 10px;
       }
-      table{
-        td,th{
-          vertical-align: top;
-          padding: 3px 10px;
-        }
-        th{
-          text-align: right;
-        }
-      }
-      label {
-        display: block;
-        font-size: 10px;
-        text-transform: uppercase;
-        margin-bottom: 0;
-      }
-      p{
-        font-size: 10px;
-        line-height: 1.2;
+      th{
+        text-align: right;
       }
     }
-  
+    label {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    p{
+      font-size: 10px;
+      line-height: 1.2;
+    }
+  }
 }
 
 .maingraph{
@@ -507,7 +499,7 @@ player.html
 }
 
 .highcharts-container, svg:not(:root) {
-  overflow: visible  !important;
+  overflow: visible !important;
 }
 
 .pTeams{
@@ -520,7 +512,6 @@ player.html
     height: 50px;
     background: linear-gradient(to bottom, rgb(35, 43, 49) 0%,rgba(19,29,38,0) 100%);
   }
- 
   > div{
     position: relative;
   }
@@ -555,7 +546,6 @@ player.html
 .pTeam{
   position: relative;
   padding: 5px 0 5px 0;
-  
   .teamLogo{
     float: left;
     margin: 5px 10px;
@@ -608,12 +598,10 @@ player.html
   padding: 20px 20px 20px;
   overflow: hidden;
   min-height: 120px;
-  
   .heroBg{
     height: 210px !important;
     background-position: 0 100% !important;
   }
-
   h1{
     text-align: left;
     padding: 0 10px;
@@ -635,23 +623,11 @@ player.html
   }
 }
 
-.pageTeam{ 
+.pageTeam{
   padding-bottom: 30px;
   .playerava{
-    padding: 30px 20% 0;
+    padding: 30px 0 0;
   }
-  /*  
-  .tLogo{
-    text-align: center;
-    padding: 30px 20% 0;
-    display: block;
-    
-    img{
-      display: inline;
-      max-width: 100%;
-      width: auto;
-    }
-  }*/
   .pInf{
     h2{
       margin-bottom: 0;
@@ -683,6 +659,11 @@ player.html
     }
   }
   .pAvaBg {
+    .playerava{
+      img{
+        max-width: 180px;
+      }
+    }
     .pRate{
       border-top: 1px solid #19222b;
       box-shadow: 0 1px 0 0 #435363 inset;
@@ -703,7 +684,8 @@ player.html
 }
 
 .teamP{
-  margin: -30px 0;
+  margin: 20px 0 -30px;
+  clear: both;
   @media (max-width: $XM){
     margin: 5px 0 -20px;
   }
@@ -730,7 +712,6 @@ player.html
   .pSmLogo{
     text-align: center;
     margin: 0 0 5px 0;
-
     a{
       display: block;
       overflow: hidden;
@@ -853,7 +834,7 @@ player.html
       
       > img{
         position: absolute * * 0 2px;
-        width:20px;
+        width: 20px;
       }
       a img{
         min-width: 100%;
@@ -1008,7 +989,7 @@ player.html
           }
         }
         .heropic img{
-          max-width: 40px
+          max-width: 40px;
         }
       }
     } 

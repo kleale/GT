@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="../inc/assets/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   
   <!-- Import main styles -->
-  <link rel="stylesheet" href="../css/main.css?35">
+  <link rel="stylesheet" href="../css/main.css?46">
   
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -2077,7 +2077,7 @@
 
 <script>
   $(document).ready(function () {
-      // match bar affix
+    // chat
     $('.ch_times').click(function () {
       $('body').toggleClass('chat-open');
       $(this).toggleClass('active');
@@ -2086,6 +2086,12 @@
       $('body').toggleClass('chat-open');
       $(this).toggleClass('active');
     });
+    $('.emotic-btn').click(function () {
+/*      alert('sd');*/
+      $('.emo_block').toggleClass('active');
+      $(this).toggleClass('active');
+    });
+    
   });
 </script>
 
@@ -2418,7 +2424,7 @@
                 <a href="">Nikname 2</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -2427,7 +2433,7 @@
                 <a href="">Nikname 3</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -2445,7 +2451,7 @@
                 <a href="">Nikname 5</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -2454,7 +2460,7 @@
                 <a href="">Nikname 6</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -2472,7 +2478,7 @@
                 <a href="">Nikname 8</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -2481,7 +2487,7 @@
                 <a href="">Nikname 9</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -2555,6 +2561,8 @@
     background: rgba(0, 0, 0, 0.9);
     padding: 5px;
     border-radius: 5px 0px 0px 0px;
+    
+    display: none;
   }
   .project-menu a{
     font-size: 10px;

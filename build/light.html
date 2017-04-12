@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="../inc/assets/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   
   <!-- Import main styles -->
-  <link rel="stylesheet" href="../css/main.css?24">
+  <link rel="stylesheet" href="../css/main.css?46">
   
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -171,11 +171,11 @@
                          <td>
                            <span class="heropic" title="Vengeful Spirit">  <b>Sapport</b><img   src="http://ggscore.com/media/game/hero/582/_59/mirana_lg.png" alt="Vengeful Spirit logo">
                            </span>
-                           <a href="">Bu<small class="g">.OG</small></a>
+                           <a href="">DlinnonikoWahWah<small class="g">.OG</small></a>
                          </td>
                          
                          <td>
-                           <span class="heropic" title="Vengeful Spirit">  <b>Carry</b><img   src="http://ggscore.com/media/game/hero/582/_59/mirana_lg.png" alt="Vengeful Spirit logo">
+                           <span class="heropic" title="Vengeful Spirit">  <b>Sapport</b><img   src="http://ggscore.com/media/game/hero/582/_59/mirana_lg.png" alt="Vengeful Spirit logo">
                            </span>
                            <a href="">Bu<small class="g">.OG</small></a>
                          </td>
@@ -548,12 +548,21 @@
         <time>29 дек, 11:35</time>
         <i class="gti-twitter"></i>
         <a href="">
-          Совсем недавно Virtus.pro совместно с RuHub и Storm Studio объявили о слиянии и начале совместной работы
+          Карло «Kuku» Палад: «После неудач мы всегда говорим, что следующий раз выступим лучше».
           <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
         </a>
       </li>
     
      <li class="">
+        <time>29 дек, 11:35</time>
+        <i class="gti-twitter"></i>
+        <a href="">
+          Александр «s1mple» Костылев попал на четвертое место в списке 20 лучших игроков 2016 года по версии HLTV.org
+          <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+        </a>
+      </li>
+    
+     <li class="hot">
         <time>29 дек, 11:35</time>
         <i class="gti-gt"></i>
         <a href="">
@@ -562,7 +571,16 @@
         </a>
       </li>
     
-     <li class="hot">
+     <li class="">
+        <time>29 дек, 11:35</time>
+        <i class="gti-facebook"></i>
+        <a href="">
+          Виталий «V1lat» Волочай: «Мы просто хотели собрать команду друзей» 
+          <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
+        </a>
+      </li>
+    
+     <li class="">
         <time>29 дек, 11:35</time>
         <i class="gti-facebook"></i>
         <a href="">
@@ -573,27 +591,9 @@
     
      <li class="hot">
         <time>29 дек, 11:35</time>
-        <i class="gti-rss"></i>
+        <i class="gti-gt"></i>
         <a href="">
-          Александр «s1mple» Костылев попал на четвертое место в списке 20 лучших игроков 2016 года по версии HLTV.org
-          <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
-        </a>
-      </li>
-    
-     <li class="hot">
-        <time>29 дек, 11:35</time>
-        <i class="gti-rss"></i>
-        <a href="">
-          Виталий «V1lat» Волочай: «Мы просто хотели собрать команду друзей» 
-          <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
-        </a>
-      </li>
-    
-     <li class="hot">
-        <time>29 дек, 11:35</time>
-        <i class="gti-rss"></i>
-        <a href="">
-          Александр «s1mple» Костылев попал на четвертое место в списке 20 лучших игроков 2016 года по версии HLTV.org
+          Карло «Kuku» Палад: «После неудач мы всегда говорим, что следующий раз выступим лучше».
           <span class="com"><i class="gti-commenting-o"></i>&nbsp;12</span>
         </a>
       </li>
@@ -1604,7 +1604,7 @@
 
 <script>
   $(document).ready(function () {
-      // match bar affix
+    // chat
     $('.ch_times').click(function () {
       $('body').toggleClass('chat-open');
       $(this).toggleClass('active');
@@ -1613,6 +1613,12 @@
       $('body').toggleClass('chat-open');
       $(this).toggleClass('active');
     });
+    $('.emotic-btn').click(function () {
+/*      alert('sd');*/
+      $('.emo_block').toggleClass('active');
+      $(this).toggleClass('active');
+    });
+    
   });
 </script>
 
@@ -1981,7 +1987,7 @@
                 <a href="">Nikname 6</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -1999,7 +2005,7 @@
                 <a href="">Nikname 8</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -2017,7 +2023,7 @@
                 <a href="">Nikname 10</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -2082,6 +2088,8 @@
     background: rgba(0, 0, 0, 0.9);
     padding: 5px;
     border-radius: 5px 0px 0px 0px;
+    
+    display: none;
   }
   .project-menu a{
     font-size: 10px;

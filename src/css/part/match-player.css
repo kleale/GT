@@ -5,23 +5,18 @@
 .srteamslider{
   position: relative;
   background-image: url(../img/section_bg_1.jpg);
-  /*background: $bg-sub;*/
   background: #0B0C0C;
-  
   .srteamtoggle {
     transition: $tease;
-    /*background: $bg-sub;*/
     background: #191E21;
     background-image: inline(../img/tile.png);
     background-repeat: repeat;
     background-position: center;
-    width: 386px;
+    width: 390px;
     position: absolute 0 0 0 *;
-    
     @media (max-width: 1600px){
-      width: 320px;
+      width: 325px;
     }
-    
     @media (max-width: $XM){
       width: 100%;
       position: relative;
@@ -197,13 +192,12 @@
   }
 }/*subm*/
 
-
 .srteamview {
-  margin-right: 386px;
-  background: #292828;
+  margin-right: 390px;
+  background: #151a1d url(../img/spoiler.png) repeat scroll 0 0;
   position: relative;
   @media (max-width: 1600px){
-    margin-right: 320px;
+    margin-right: 325px;
   }
   @media (max-width: $XM){
     margin-right: 0;
@@ -235,7 +229,6 @@
   }
 
   .iframerClicker{
-    /*position: absolute 0 0 0 0;*/
     position: relative;
     background-position: center;
     background-size: contain;
@@ -545,7 +538,7 @@
   
   li{
     transition: $tease;
-    padding: 5px 15px;
+    padding: 5px 5px;
     position: relative;
     overflow: hidden;
     
@@ -555,30 +548,17 @@
     &:hover{
       cursor: pointer;
       background: #037db5;
+      box-shadow: 0 1px rgba(0, 0, 0, 0.14) inset;
       &.live em{
         color: #037db5;
         background: #fff;
         box-shadow: none!important;
         text-shadow: none;
       }
+      u{
+        color: #eee;
+      }
     }
-    /*&.live span:after {
-      content: '';
-      background-color: #f03a3a;
-      border: 1px solid #f03a3a;
-      border-radius: 12px;
-      box-shadow: 0 0 20px 5px #f03a3a;
-      display: inline-block;
-      height: 7px;
-      margin-left: 0;
-      margin-right: 5px;
-      margin-top: -2px;
-      position: absolute;
-      right: -3px;
-      top: 4px;
-      vertical-align: middle;
-      width: 7px;
-    }*/
     &.live em {
       color: #f03a3a;
       text-shadow: -1px 3px 8px rgb(255, 0, 0);
@@ -586,6 +566,7 @@
     &.active{
       cursor: pointer;
       background: #037db5;
+      box-shadow: 0 1px rgba(0, 0, 0, 0.14) inset;
       em{
         opacity: 1;
         background: rgb(0, 107, 156);
@@ -671,12 +652,12 @@
     span{
       float: left;
       position: relative;
-      width: 32px;
+      width: 37px;
       cursor: pointer;
-      
+      margin: -3px;
+      background: #0f1215;
       img{
         width: 100%;
-        border-radius: 2px;
       }
       time{
         position: absolute * * 0 0;
