@@ -26,6 +26,7 @@ body{
 }
 .bread{
   position: absolute 0 * * *;
+  margin-left: -1px;
   z-index: 2;
   background: #035880;
     @media (max-width: $XM) {
@@ -41,7 +42,9 @@ body{
     text-overflow: ellipsis;
     white-space: nowrap;
     margin: 0;
-    height: 40px;
+    height: 30px;
+    padding: 5px 10px;
+    
     @media (max-width: $XM) {
       padding: 10px;
     }
@@ -119,7 +122,8 @@ body{
   
   .dropdown-menu{
     @media (max-height: $MH) {
-      position:absolute auto 0 100% 0;
+      position: absolute auto 0 100% 0;
+      max-height: 226px;
     }
     a{
       padding: 5px 10px;
@@ -558,7 +562,6 @@ body{
 /*
 * Footer
 */
-
 footer{
   color: $text-gray-3;
   font-size: 12px;
@@ -567,7 +570,7 @@ footer{
   text-transform: uppercase;
   background: $body-bg;
     
-  @media (max-width: $XM) {
+  @media (max-width: $XXL) {
     text-align: center;
     padding: 10px;
     font-size: 9px;
@@ -579,7 +582,7 @@ footer{
   .f-coppy{
     float: left;
     padding: 5px 0;
-    @media (max-width: $XM) {
+    @media (max-width: $XXL) {
       float: none;
     }
     copy{
@@ -595,7 +598,7 @@ footer{
     margin: 5px 0 0 20px;
     padding: 0;
     display: inline-block;
-    @media (max-width: $XM) {
+    @media (max-width: $XXL) {
       margin: 10px 0 5px;
     }
     li{
@@ -617,7 +620,7 @@ footer{
     float: right;
     margin: 2px 0;
     
-    @media (max-width: $XM) {
+    @media (max-width: $XXL) {
       text-align:center;
       float: none;
     }

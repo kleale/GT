@@ -9,21 +9,23 @@
 .chat-head {
   background: #163545 url(../img/spoiler.png) repeat scroll 0 0;
   height: 45px;
-  
+  @media (max-width: 900px) {
+    margin-top: -5px;
+    height: 45px!important;
+  }
   .dropdown{
     display:inline-block;
   }
   .dropdown-menu{
+    
     li a{
       color: inherit;
       padding: 0;
-      
       &:hover{
         background: transparent;
       }
     }
   }
-  
   .ch_room {
     .dropdown-toggle {
       color: #fff;
@@ -261,6 +263,8 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    position: absolute 40px 0 0 0;
+    overflow: auto;
     li{
       padding: 0 20px;
     }
@@ -525,7 +529,6 @@
 
   .chat-text{
     position: relative;
-  
     textarea {
       background-color: #2b3033;
       border: 1px solid rgba(255, 255, 255, 0);
@@ -641,7 +644,6 @@
     vertical-align: middle;
     max-height: 40px;
   }
-  
 }
 .tse-list > div > b,
 .ulist li > b {
@@ -709,14 +711,10 @@
     text-shadow: none;
     top: 2px;
 }
-.userpop .gti-times:hover {
-    
-}
 .userpop {
     padding: 0 0 0 70px;
     position: relative;
 }
-
 .cuva > img {
     border-radius: 40px;
     width: 100%;
@@ -784,25 +782,52 @@
   }
 }
 
-
 /*
 Bar chatter
 */
-
 .chat-btn{
   display: block;
-  padding: 14px 10px;
   font-size: 12px;
-  font-weight: 300;
   line-height: 1;
-  text-transform: uppercase;
-  color: #7faec3;
   text-align: center;
-  background: rgba(22, 53, 69, 0.34);
-  border-top: 1px solid #293f4c;
-  border-bottom: 1px solid #293f4c;
-  position: relative;
+  position: fixed 0 0 * *;
+  background: #035880;
+  color: #a6c6cb;
+  z-index: 8;
+  cursor: pointer;
+  width: 60px;
+  border-radius: 0 0 0 40px;
+  padding: 13px 10px;
   
+  @media (max-width: 900px) {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    padding: 9px 4px;
+  }
+  b{
+    position: absolute 4px 4px auto auto;
+    background: #7faec3;
+    border-radius: 2px;
+    color: #000;
+    font-size: 9px;
+    padding: 1px 2px;
+    font-weight: 400;
+    line-height: 10px;
+    height: 11px;
+    display: block;
+    @media (max-width: 900px) {
+      top: 1px;
+      right: 1px;
+    }
+  }
+  i{
+    font-size: 20px;
+    opacity: .6;
+  }
+  span{
+    display: none;
+  }
   &:hover,
   &:focus,
   &:active
@@ -814,25 +839,6 @@ Bar chatter
       opacity: 1; 
     }
   }
-  b{
-    bottom: -4px;
-    right: 15px;
-    position: absolute;
-    background: #7faec3;
-    border-radius: 2px;
-    color: #000;
-    font-size: 9px;
-    padding: 0 2px;
-    font-weight: 400;
-    width: 20px;
-  }
-  i{
-    font-size: 20px;
-    opacity: .6;
-  }
-  span{
-    display: none;
-  }
 }
 
 .bar-chat{
@@ -841,9 +847,10 @@ Bar chatter
   width: 300px;
   z-index: 10;
   border-left: 2px solid #152b35;
+  transition: .2s all ease-out;
+  opacity: 0;
   .stmblocks{
     position: absolute 0 0 0 0;
-    /*background: rgb(27,53,64);*/
     background: rgb(24, 37, 45);
     .chat-inner{
       .chat-head{
@@ -869,15 +876,17 @@ Bar chatter
         }
         .dropdown-menu{
           max-height: 100%;
-          width: 299px;
+          width: 100%;
           top: 50px;
+          @media (max-width: 900px) {
+            top: 40px;
+          }
         }
       }
       .chat-wrap{
         top: 50px;
         .tse-sc{
           max-height: 100%;
-          
           .tse-list {
             .msg-admin{
               margin: 5px;
@@ -891,27 +900,29 @@ Bar chatter
     }
   }
 }
-.chat-btn-right{
-  position: fixed 0 0 * *;
-  background: #035880;
-  color: #a6c6cb;
-  z-index: 8;
-  border: 0;
-  cursor: pointer;
-  width: 60px;
-  border-radius: 0 0 0 40px;
-  b{
-    position: absolute 5px 5px auto auto;
-  }
-}
 
 .chat-open{
   padding-right: 300px;
+  
+  @media (max-width: 900px) {
+    padding-right: 0;
+  }
+  .chat-btn{
+    display: none;
+  }
   .abg{
     right: 300px;
+    @media (max-width: 900px) {
+      right: 0;
+    }
   }
   .bar-chat{
     margin-right: 0;
+    opacity: 1;
+    @media (max-width: 900px) {
+      right: 0;
+      width: 280px;
+    }
   }
 }
 

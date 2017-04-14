@@ -46,6 +46,16 @@
 
 .well.bg-info, .bg-info {
   background-color: #3f5560!important;
+  a{
+    color: #9de0ff;
+    border-bottom: 1px dotted;
+    &:hover,
+    &:focus,
+    &:active{
+      text-decoration: none;
+      border: 0;
+    }
+  }
 }
 
 .well.bg-warning, .bg-warning {
@@ -140,11 +150,11 @@
 }
 
 .dropdown-header{
-    text-transform: uppercase;
-    color: #fff;
-    padding: 4px 6px;
-    background: #037db5 url(../img/spoiler.png) repeat 0 0!important;
-    font-size: 11px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 4px 6px;
+  background: #037db5 url(../img/spoiler.png) repeat 0 0!important;
+  font-size: 11px;
 }
 
 /*
@@ -197,7 +207,6 @@
 .btn-default{
   background: #454a4e;
   color: #b5b5b5;
-  
   &:active,
   &:focus,
   &:hover{
@@ -278,9 +287,9 @@ body .open>.dropdown-toggle.btn-default:focus{
 .btn-default.active, 
 .btn-default:active, 
 .open>.dropdown-toggle.btn-default {
-    color: #7faec3;
-    background-color: #035880;
-    border-color: #0b75a7;
+  color: #7faec3;
+  background-color: #035880;
+  border-color: #0b75a7;
 }
 .input-group{
   width: 100%;
@@ -380,7 +389,6 @@ select.form-control{
 }
 
 
-
 /* bootstrap hack: fix content width inside hidden tabs */
 .tab-content > .tab-pane:not(.active),
 .pill-content > .pill-pane:not(.active) {
@@ -395,9 +403,7 @@ select.form-control{
 /*
 Choosen
 */
-
 body .chosen-container-multi{
-  
   .chosen-choices{
     background-color: color($button-blue l(25%));
     border-color: transparent;
@@ -481,24 +487,22 @@ body .chosen-container-active .chosen-choices{
 Choosen end
 */
 
-
 /*
 Tabs mobile
 */
-
 .mtb {
   display: none;
   position: relative;
   &:after{
-      content: "";
-      display: inline-block;
-      position: absolute 15px 10px * *;
-      width: 0;
-      height: 0;
-      vertical-align: middle;
-      border-top: 5px solid color($button-blue l(60%));
-      border-right: 5px solid transparent;
-      border-left: 5px solid transparent;
+    content: "";
+    display: inline-block;
+    position: absolute 15px 10px * *;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-top: 5px solid color($button-blue l(60%));
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
   }
 }
 @media screen and (max-width: $M) {

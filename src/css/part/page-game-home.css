@@ -29,7 +29,6 @@
     margin-top: -28px;
     overflow: hidden;
     padding-bottom: 0;
-    
     span {
       padding: 5px 10px;
       background: #454a4e;
@@ -95,7 +94,6 @@
       }
     }
   }
-  
   @media (max-width: $XXL){
     .tname{
       display: none;
@@ -114,7 +112,6 @@
 .main-news-list.tse-news{
   padding: 0;
   max-height: none;
-  
   ul.nlist {
     padding: 0;
     
@@ -675,14 +672,14 @@
     }
     figure{
       margin: 0;
+      /*border-radius: 50px;*/
+      box-shadow: 0 0 0 2px #4a5865;
       img{
         max-width: 100%;
-        border-radius: 50%;
-        box-shadow: 0 0 0 2px #4a5865;
       }
     }
     b{
-      position: absolute * -6px -20px *;
+      position: absolute * -6px -5px *;
       border-radius: 50%;
       text-align: center;
       width: 30px;

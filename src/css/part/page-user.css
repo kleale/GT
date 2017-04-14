@@ -126,7 +126,7 @@
   .umoney {
     text-align: center;
     font-size: 35px;
-    color: #7faec3;
+    /*color: #7faec3;*/
     margin-top: -10px;
     i{
       margin-right: 5px;
@@ -231,7 +231,10 @@
         color: #cacaca;
         font-size: 11px;
         padding-left: 15px;
-        width: 90px;
+        width: 120px;
+      }
+      &:last-child{
+        width: 10%;
       }
     }
   }
@@ -301,6 +304,7 @@
     @media (max-width: $SM) {
       display: block;
       margin: 0 auto 15px;
+      float: none;
     }
     img {
       width: 100%;
@@ -340,6 +344,7 @@
           vertical-align: top;
           a{
             display: block;
+            padding: 5px;
           }
         }
       }

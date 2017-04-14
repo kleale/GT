@@ -999,7 +999,7 @@
     }
   }
 }
-.score-on:after {
+/*.score-on:after {
   content: '5:0';
   position: absolute;
   top: -4px;
@@ -1007,12 +1007,7 @@
   left: 2px;
   color: #3c4146;
   text-shadow: 0 1px 0px rgba(255, 255, 255, 0.05);
-}
-
-
-
-
-
+}*/
 
 
 
