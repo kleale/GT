@@ -211,7 +211,7 @@ player.html
     overflow: hidden;
     max-height: 485px;
     @media (max-width: $XM) {
-      max-height: 300px;
+      max-height: 400px;
     }
     img{
       display: inline-block;

@@ -574,10 +574,15 @@ section.user-ac{
     list-style: none;
     
     li{
-      font-size: 13px;
+      font-size: 12px;
       margin-bottom: 5px;
       padding: 10px 0;
       border-bottom: 1px solid #2d3237;
+      .game{
+        color: #7faec3;
+        margin: 0 7px 0 0;
+        font-size: 11px;
+      }
       .title{
         font-weight:500;
         color: #cccccc;
@@ -593,7 +598,7 @@ section.user-ac{
         top: 1px;
       }
       div{
-        padding-top: 10px;
+        padding-top: 5px;
         font-size: 11px;
         time{
           color: rgb(153, 153, 153);

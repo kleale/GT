@@ -274,256 +274,256 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .bestEvent{
-    margin-bottom: 20px;
-    a{
-      display: block;
-      position: relative;
-      &:hover,
-      &:focus,
-      &:active{
-        text-decoration: none;
-        b{
-          border-color: #4482b5;
-        }
+}/*fights*/
+.bestEvent{
+  margin-bottom: 20px;
+  a{
+    display: block;
+    position: relative;
+    &:hover,
+    &:focus,
+    &:active{
+      text-decoration: none;
+      b{
+        border-color: #4482b5;
       }
-      > b{
+    }
+    > b{
+      display: block;
+      min-height: 100px;
+      overflow: hidden;
+      font-weight: 400;
+      border: 2px solid #424f5a;
+      position: relative;
+      background: #37424c url("../img/spoiler.png") repeat scroll 0 0;
+      border-radius: 2px;
+
+      img{
+        width: 100%;
+      }
+      > span{
+        position: absolute 0 * * 0;
         display: block;
-        min-height: 100px;
-        overflow: hidden;
-        font-weight: 400;
-        border: 2px solid #424f5a;
-        position: relative;
-        background: #37424c url("../img/spoiler.png") repeat scroll 0 0;
-        border-radius: 2px;
-        
-        img{
-          width: 100%;
+        padding: 3px 10px;
+        background: #424f5a;
+        color: #fff;
+        font-size: 11px;
+        max-width: calc(100% - 80px);
+
+        i{
+          margin-right: 5px;
+          vertical-align: text-bottom;
         }
-        > span{
-          position: absolute 0 * * 0;
-          display: block;
-          padding: 3px 10px;
-          background: #424f5a;
-          color: #fff;
-          font-size: 11px;
-          max-width: calc(100% - 80px);
-          
-          i{
-            margin-right: 5px;
-            vertical-align: text-bottom;
-          }
-          &:after{
-            content: '';
-            display: block;
-            background: #424f5a;
-            height: 100%;
-            width: 8px;
-            top: 0;
-            right: -3px;
-            bottom: 0;
-            position: absolute;
-            transform: skew(-15deg);
-          }
-        }
-        
-        time{
-          position: absolute 5px 5px * *;
-          color: #fff;
-          text-shadow: 1px 1px 2px #000;
-          font-size: 11px;
-        }
-        
         &:after{
           content: '';
           display: block;
-          position: absolute * 0 0 0;
-          height: 50px;
-          background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 100%);
-        }
-      } /*b*/
-    } /*a*/
-  }
-  .bestKill{
-    a{
-      > span{
-        color: #fff;
-        margin-top: -26px;
-        display: block;
-        position: relative;
-        
-        .heroava{
-          border: 2px solid #424f5a;
-          width: 80px;
-          float: left;
-          margin: 0 15px 0 15px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-          img{
-            width: 100%;
-            display: block;
-          }
-        }
-        em{
-          color: #ff0000;
-          display: block;
-          margin-bottom: 7px;
-          font-size: 16px;
-          font-style: normal;
-          text-transform: uppercase;
-          font-weight: bold;
-        }
-        u{
-          text-decoration: none;
-          font-size: 13px;
-          display: block;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          background: #424f5a;
+          height: 100%;
+          width: 8px;
+          top: 0;
+          right: -3px;
+          bottom: 0;
+          position: absolute;
+          transform: skew(-15deg);
         }
       }
-    }/*a*/
-  }/*bestKill*/
-  
-  .comeBack{
-    a{
-      > span{
+
+      time{
+        position: absolute 5px 5px * *;
         color: #fff;
-        margin-top: -30px;
+        text-shadow: 1px 1px 2px #000;
+        font-size: 11px;
+      }
+
+      &:after{
+        content: '';
         display: block;
-        position: relative;
-        .teamLogo{
-          width: 80px;
-          float: left;
-          margin: 0 15px 10px 15px;
-          text-align: center;
-          
+        position: absolute * 0 0 0;
+        height: 50px;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 100%);
+      }
+    } /*b*/
+  } /*a*/
+}
+.bestKill{
+  a{
+    > span{
+      color: #fff;
+      margin-top: -26px;
+      display: block;
+      position: relative;
+
+      .heroava{
+        border: 2px solid #424f5a;
+        width: 80px;
+        float: left;
+        margin: 0 15px 0 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        img{
+          width: 100%;
+          display: block;
+        }
+      }
+      em{
+        color: #ff0000;
+        display: block;
+        margin-bottom: 7px;
+        font-size: 16px;
+        font-style: normal;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      u{
+        text-decoration: none;
+        font-size: 13px;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }/*a*/
+}/*bestKill*/
+
+.comeBack{
+  a{
+    > span{
+      color: #fff;
+      margin-top: -30px;
+      display: block;
+      position: relative;
+      .teamLogo{
+        width: 80px;
+        float: left;
+        margin: 0 15px 10px 15px;
+        text-align: center;
+
+        img{
+          width: 55px;
+          height: 55px;
+        }
+      }
+      em{
+        color: #ff0000;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-style: normal;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      u{
+        text-decoration: none;
+        font-size: 13px;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        span{
+          color: #c78730;
           img{
-            width: 55px;
-            height: 55px;
+            margin-right: -1px;
+            width: 23px;
+            margin-top: -1px;
           }
         }
-        em{
-          color: #ff0000;
-          display: block;
-          margin-bottom: 10px;
-          font-size: 16px;
-          font-style: normal;
-          text-transform: uppercase;
-          font-weight: bold;
+        i{
+          margin: 0 3px;
+          font-size: 11px;
+          color: #8a8a8a;
         }
+      }
+    }
+  }/*a*/
+}/*comeBack*/
+
+.multideath{
+  a{
+    > span{
+      margin-top: -30px;
+      display: block;
+      position: relative;
+
+      .teamHeroes{
+        display: block;
+        margin: 0 15px;
+        overflow: hidden;
+        margin-bottom: -2px;
         u{
-          text-decoration: none;
-          font-size: 13px;
+          margin: 0;
+          border: 1px solid #424f5a;
           display: block;
-          white-space: nowrap;
+          width: 20%;
+          float: left;
+          position: relative;
           overflow: hidden;
-          text-overflow: ellipsis;
-          span{
-            color: #c78730;
+          min-height: 30px;
+          background: #39454e;
+
+          &.dead{
             img{
-              margin-right: -1px;
-              width: 23px;
-              margin-top: -1px;
+              opacity: .5;
+              filter: grayscale(1);
+              transition: $tease;
             }
-          }
-          i{
-            margin: 0 3px;
-            font-size: 11px;
-            color: #8a8a8a;
-          }
-        }
-      }
-    }/*a*/
-  }/*comeBack*/
-  
-  .multideath{
-    a{
-      > span{
-        margin-top: -30px;
-        display: block;
-        position: relative;
-        
-        .teamHeroes{
-          display: block;
-          margin: 0 15px;
-          overflow: hidden;
-          margin-bottom: -2px;
-          u{
-            margin: 0;
-            border: 1px solid #424f5a;
-            display: block;
-            width: 20%;
-            float: left;
-            position: relative;
-            overflow: hidden;
-            min-height: 30px;
-            background: #39454e;
-            
-            &.dead{
-              img{
-                opacity: .5;
-                filter: grayscale(1);
-                transition: $tease;
+            &:after{
+              content: '';
+              top: 50%;
+              right: -10px;
+              position: absolute;
+              display: block;
+              height: 1px;
+              width: 125%;
+              background: #c50c0c;
+              transform: rotate(30deg);
+            }
+            &:hover{
+              img{ 
+                opacity: 1;
+                filter: grayscale(0);
               }
               &:after{
-                content: '';
-                top: 50%;
-                right: -10px;
-                position: absolute;
-                display: block;
-                height: 1px;
-                width: 125%;
-                background: #c50c0c;
-                transform: rotate(30deg);
-              }
-              &:hover{
-                img{ 
-                  opacity: 1;
-                  filter: grayscale(0);
-                }
-                &:after{
-                  opacity: 0;
-                }
+                opacity: 0;
               }
             }
-            img{
-              width: 100%;
-              height: auto;
-            }
           }
-        }
-        em{
-          color: #ff0000;
-          display: block;
-          margin-bottom: 10px;
-          font-size: 16px;
-          font-style: normal;
-          text-transform: uppercase;
-          font-weight: bold;
-          margin: -43px 0 0 14px;
-        }
-        u{
-          text-decoration: none;
-          font-size: 13px;
-          span{
-            color: #c78730;
-            img{
-              margin-right: -1px;
-              width: 23px;
-              margin-top: -1px;
-            }
-          }
-          i{
-            margin: 0 3px;
-            font-size: 11px;
-            color: #8a8a8a;
+          img{
+            width: 100%;
+            height: auto;
           }
         }
       }
-    }/*a*/
-  }/*multideath*/
+      em{
+        color: #ff0000;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-style: normal;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: -43px 0 0 14px;
+      }
+      u{
+        text-decoration: none;
+        font-size: 13px;
+        span{
+          color: #c78730;
+          img{
+            margin-right: -1px;
+            width: 23px;
+            margin-top: -1px;
+          }
+        }
+        i{
+          margin: 0 3px;
+          font-size: 11px;
+          color: #8a8a8a;
+        }
+      }
+    }
+  }/*a*/
+}/*multideath*/
 
-}/*fights*/
 
 .nrm-slider .bestEvent{
   padding: 0 10px;

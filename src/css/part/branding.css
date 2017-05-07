@@ -1016,5 +1016,6 @@ LIVE BLOCK
     text-transform: uppercase;
     font-weight: 700;
     color: #7faec3;
+    border-top: 1px solid #4a5865;
   }
 }

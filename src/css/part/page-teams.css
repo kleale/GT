@@ -64,10 +64,11 @@ section.hero{
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
-  border: 1px solid;
+  border: 1px solid transparent;
   img{
     width: 100%;
     display: block;
+    background-color: #24282b;
   }
 }
 

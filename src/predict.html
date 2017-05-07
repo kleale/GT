@@ -89,9 +89,6 @@
           </div>
            
           <div class="col-md-8">
-            
-            
-            
             <div class="filter">
               <form method="get" id="filter">
                 <div class="row">
@@ -144,10 +141,18 @@
                 {% for i in 0..19 %}
                 <tr>
                   <td class="tmz tip" title="05 апр, 13:30 at Esports Championship League - Америка">
-                    <a href="#" class="{{random(['win','',''])}} logo"><span><img src="{{random(logo)}}"></span><b>{{random(team)}}</b></a> <a href="" title="Страница матча">vs</a> <a href="#" class="{{random(['','win',''])}} logo"><span><img src="{{random(logo)}}"></span><b>{{random(team)}}</b></a>
+                    <a href="#" class="{{random(['win','',''])}} logo guess tip" title="{{random(team)}}">
+                      <span><img src="{{random(logo)}}"></span>
+                      {#<b>{{random(team)}}</b>#}
+                    </a>
+                    <a href="" title="Страница матча" class="vs">vs</a>
+                    <a href="#" class="{{random(['','win',''])}} logo noguess tip" title="{{random(team)}}">
+                      <span><img src="{{random(logo)}}"></span>
+                      {#<b>{{random(team)}}</b>#}
+                    </a>
                   </td>
                   <td class="tprp">
-                    <div class="prpf">
+                    <div class="prpc">
                       <div class="prt">
                         {{random(txt)}}<em style="display: inline;">...</em><span class="hh">
                         Риск очень высокий.<br>

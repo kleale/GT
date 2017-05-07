@@ -348,13 +348,15 @@
 .stickerer{
   /*width: 300px;*/
   height: 270px;
-  
   .stickers-list{
     padding: 9px;
-    
+    hr{
+      margin: 7px 80px 15px;
+      border-top: 1px solid #3ea1d0;
+    }
     img{
-      margin: 0;
-      width: 52px;
+      margin: 3px;
+      width: 37px;
     }
     a:hover{
       text-decoration: none;
@@ -587,7 +589,6 @@
   }
 }
 
-
 .tse-list {
   > div {
     padding: 3px 10px;
@@ -596,7 +597,6 @@
     color: #8c8c9c;
     line-height: 1.4;
     font-size: 13px;
-    
     span {
       color: #85a5b2;
     }
@@ -611,38 +611,24 @@
       margin-right: 4px;
     }
   }
-  .msg-admin {
-    background: #0b1f27;
-    color: #82b6da;
+  .msg-admin,
+  .msg-stream {
+    background: #163545 url(../img/spoiler.png) repeat scroll 0 0;
     margin: 0;
-    padding: 15px 10px;
-    text-align: center;
-    
-    i{
-      margin: 0 5px;
-      position: relative;
-      top: 1px;
-    }
-  }
-  .msg-stream{
-    color: #7EA9BA;
-    text-align: center;
-    margin: 5px 0;
     padding: 10px;
-    background: #0E1E23;
+    text-align: center;
     i{
       margin: 0 5px;
-      position: relative;
-      top: 1px;
+      vertical-align: text-bottom;
     }
   }
   .emoticon {
     background-position: center center;
     background-repeat: no-repeat;
     display: inline-block;
-    margin: -10px 0;
+    margin: -5px 0;
     vertical-align: middle;
-    max-height: 40px;
+    max-height: 30px;
   }
 }
 .tse-list > div > b,
@@ -653,35 +639,38 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     max-width: 105px;
-    font-weight: 700;
-    vertical-align: bottom;
-    font-size: 13px;
+    vertical-align: top;
 }
 .tse-list > div > b:hover,
 .ulist li > b:hover {
     cursor:pointer;
     text-decoration:underline;
 }
-.tse-list > div > u i.moderator,
-.ulist u i.moderator{
+.tse-list > div > u i.moderator:after,
+.ulist u i.moderator:after{
   content:'\e911';
   font-family: 'gticons' !important;
 }
 .tse-list > div > u i,
 .ulist u i {
-    display: inline-block;
-    float: left;
-    height: 18px;
-    margin: 1px 3px 1px 0;
-    min-width: 18px;
-    vertical-align: middle;
+  display: inline-block;
+  margin: 0px 4px 0px 0;
+  vertical-align: text-bottom;
+  font-size: 10px;
+  background: #20404d;
+  width: 19px;
+  height: 16px;
+  line-height: 17px;
+  text-align: center;
+  border-radius: 2px;
+  color: #9acd2f;
 }
 
 /*chatpopover*/
 .user-popover .popover-content {
-    height: 85px;
-    padding: 0;
-    width: 255px;
+  height: 85px;
+  padding: 0;
+  width: 255px;
 }
 .popover.user-popover {
     background: #00adee;
@@ -892,7 +881,7 @@ Bar chatter
               margin: 5px;
             }
             .msg-stream{
-               margin: 5px;
+              margin: 5px;
             }
           }
         }

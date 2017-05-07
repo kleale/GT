@@ -43,8 +43,18 @@ page-predicts.css
     thead{
       tr{
         th{
+          &:nth-child(1){
+            padding-left: 25px;
+            @media (max-width: $M){
+              padding-left: 5px;
+              width: 30px;
+            }
+          }
           &:nth-child(2){
             width: 50px;
+            text-align: center;
+          }
+          &:nth-child(3){
             text-align: center;
           }
           &:nth-child(4){
@@ -98,9 +108,20 @@ page-predicts.css
         &:last-child{
           text-align: right
         }
+        .tabled{
+          display: table;
+          span{
+            display: table-row;
+            em{
+              display: table-cell;
+              font-style: normal;
+              vertical-align: middle;
+            }
+          }
+        }
         .ava-sm{
           vertical-align: middle;
-          margin: -4px 5px -4px 0;
+          margin: -4px 10px -4px 0;
         }
         .flag img{
           width: 18px;
@@ -127,97 +148,100 @@ page-predicts.css
     }
   }
 }
-.prognozStata{
-  margin-top: 10px;
-  position: relative;
-  z-index: 2;
-  text-align: left;
-  table{
-    td{
-      line-height: 1.3!important;
+.block-prw{
+  .plw{
+    padding-bottom: 10px;
+  }
+  .logo {
+    width: 50px;
+  }
+}
+
+.predictor{
+  .playerava{
+    i{
+      margin: 0 auto;
+      display: block;
+      height: 160px;
+      width: 100%;
+      background-color: #2d3a46;
+      opacity: .5;
+      background-size: initial;
+      @media (max-width: $XM) {
+        margin: 15px auto;
+      }
     }
   }
-  .block-plw {
-    .hits{
-      em {
-        font-size: .7em;
-        font-style: normal;
-        color: #ccc;
-        display: block;
-        line-height: 1.2;
+  .przrinf{
+    text-align: center;
+    font-size: 11px;
+    margin: 0 20px 20px;
+    color: #51da89;
+    border: 1px solid #424d56;
+    padding: 10px;
+    &.prrr{
+      border: 0;
+      padding: 0;
+      margin: 0 0 20px 0;
+      color: #E91E63;
+    }
+  }
+  .pzlink{
+    display: inline-block;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .przstat{
+    color: #e0e2e4;
+    font-size: 13px;
+    text-align: center;
+    padding: 15px;
+    margin: 0 0 20px 0;
+    border: 1px solid #424d56;
+    background-color: rgba(46,51,56,.33);
+    .mlh{
+      padding-bottom: 10px;
+    }
+  }
+  
+}
+
+.przlist{
+  .przstat{
+    border-top: 0;
+    margin-top: 10px;
+    .mlh{
+      margin: -22px -15px 0;
+      & span:after,
+      & span:before{
+        background: #424d56;
+        height: 1px;
+        content: '';
+        width: 1000px;
+        top: 16px;
       }
     }
-    em {
-        font-size: .7em;
-        font-style: normal;
-        color: #ccc;
-        display: block;
-        line-height: 1.2;
-      }
-    .logo{
-      height: 60px;
-      b{
-        height: 30px;
-        i{ 
-          width: 25px;
-          height: 25px;
-          margin-top: 1px;
+    table{
+      width: 100%;
+      td{
+        padding: 5px;
+        width: 50%;
+        font-size: 16px;
+        b{
+          color: #7faec3;
+        }
+        .gti-question-circle {
+          opacity: .3;
+          margin: 0 3px;
+          font-size: 13px;
+          &:hover{
+            opacity: 1;
+          }
         }
       }
     }
-    .prstd{
-      display: inline-block;
-      text-align: center;
-      i{
-        
-      }
-      b{
-        display: block;
-      }
-    }
   }
-  .pTeamOther{
-    .tlogo{
-      text-align: center;
-      width: 85px;
-    }
-    .logo{
-      width: 35px;
-      height: 35px;
-      margin: 2px 0;
-      display: inline-block;
-      float: none;
-      img{
-        width: 100%;
-      }
-    }
-  }
-  .prst{
-    td{
-      vertical-align: middle;
-      height: 45px;
-    }
-  }
-}
-.pzlink{
-  display: inline-block;
-  max-width: 150px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.przstat{
-  color: #e0e2e4;
-  font-size: 13px;
-  text-align: center;
-  padding: 15px;
-  margin: 0 0 20px 0;
-  border: 1px solid #424d56;
-  background-color: rgba(46,51,56,.33);
-  .mlh{
-    padding-bottom: 10px;
-  }
-}
-.przlist{
   table{
     list-style: none;
     margin: 0;
@@ -239,13 +263,17 @@ page-predicts.css
       }
     }
     td{
+      padding: 7px 5px;
       &.tname{
         width: 60px;
       }
       &.tmz{
-        width: 150px;
+        width: 160px;
         text-align: center;
         background: rgba(55, 66, 76, 0.15) url(../img/spoiler.png) repeat scroll 0 0;
+        .vs{
+          margin: 0 8px;
+        }
         .logo {
           display: inline-block;
           position: relative;
@@ -254,18 +282,45 @@ page-predicts.css
           text-align: center;
           vertical-align: middle;
           width: 50px;
-          opacity: .7;
-          filter: grayscale(1);
+          height: 50px;
           &.win{
-            opacity: 1;
-            filter: grayscale(0);
             color: #FFC107;
+          }
+          &:after{
+            content: '';
+            display: block;
+            top: 0;
+            left: 0;
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+          }
+          &.guess{
+            &:after{
+              background: rgba(76, 175, 80, 0.2);
+              border: 1px solid #246927;
+            }
+          }
+          &.noguess{
+            &:after{
+              background: rgba(175, 91, 76, 0.2);
+              border: 1px solid #693c24;
+            }
+          }
+          &.def{
+            &:after{
+              background: rgba(87, 87, 87, 0.2);
+              border: 1px solid #5c5c5c;
+            }
           }
           span{
             display: inline-block;
             height: 35px;
-            line-height: 35px;
+            line-height: 50px;
             margin: 0 0 4px 0;
+            position: relative;
+            z-index: 2;
           }
           b{
             display: block;
@@ -275,6 +330,7 @@ page-predicts.css
             max-height: 35px;
             max-width: 35px;
             display: inline-block;
+            border-radius: 3px;
           }
           &:hover,
           &:focus,
@@ -288,10 +344,10 @@ page-predicts.css
         .tour{
           font-size: 11px;
         }
-        .prpf{
+        .prpc{
           position: relative;
-          padding: 15px 20px;
-          min-height: 92px;
+          padding: 10px 15px;
+          min-height: 62px;
           .hh{
             display: none;
           }
