@@ -19,6 +19,7 @@
   }
 }
 .comblock{
+  margin-top: 13px;
   position: relative;
   .chat-action{
     position: absolute * 0 0 0;
@@ -31,11 +32,11 @@
     padding: 0;
     list-style: none;
     li{
-      margin: 0 0 15px 0;
+      margin: 0;
       background: #31373a;
       padding: 10px;
       &:nth-child(even){
-        background: #3b4145;
+        background: #2b3133;
       }
       &:last-child{
         margin: 0;
@@ -81,6 +82,7 @@
           line-height: 1.2;
           font-weight: 400;
           transition: $tease;
+          margin-bottom: 0;
         }
       }
     }

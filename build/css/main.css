@@ -10858,6 +10858,7 @@ Bar chatter
   vertical-align: top;
 }
 .comblock{
+  margin-top: 13px;
   position: relative;
 }
 .comblock .chat-action{
@@ -10875,12 +10876,12 @@ Bar chatter
   list-style: none;
 }
 .comblock .m-com-list li{
-  margin: 0 0 15px 0;
+  margin: 0;
   background: #31373a;
   padding: 10px;
 }
 .comblock .m-com-list li:nth-child(even){
-  background: #3b4145;
+  background: #2b3133;
 }
 .comblock .m-com-list li:last-child{
   margin: 0;
@@ -10921,6 +10922,7 @@ Bar chatter
   line-height: 1.2;
   font-weight: 400;
   transition: all .1s linear;
+  margin-bottom: 0;
 }
 .c_inf {
     color: #2faee7;
