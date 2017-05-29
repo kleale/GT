@@ -20554,7 +20554,7 @@ page-studio
 }
 .studio-logos{
   padding: 15px 10px;
-  margin-top: 20px;
+  margin: 20px 0;
   text-align: center;
   background: rgb(55, 66, 76) url(../img/spoiler.png) repeat scroll 0 0;
 }
@@ -20649,6 +20649,25 @@ page-studio
 .studio-streams{
   padding: 5px;
   background: #17222c url(../img/spoiler.png) repeat scroll 0 0;
+  margin-bottom: 25px;
+}
+.studio-streams .srteamview{
+  margin-right: 0;
+}
+.studio-streams .srteamview #player-menu{
+  display: none;
+}
+.studio-streams .srteamslider .srteamtoggle{
+  width: 100%;
+  position: relative;
+  height: 200px;
+}
+.studio-streams .stream_action{
+  display: none;
+}
+.studio-streams .stmblocks{
+  top:0;
+  background: linear-gradient(to bottom, rgb(45, 61, 76) 0%,rgba(27,53,64,0) 100%);
 }
 .studio-streams .slist li {
   padding: 5px 5px;

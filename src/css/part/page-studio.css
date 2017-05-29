@@ -148,7 +148,7 @@ page-studio
 }
 .studio-logos{
   padding: 15px 10px;
-  margin-top: 20px;
+  margin: 20px 0;
   text-align: center;
   background: rgb(55, 66, 76) url(../img/spoiler.png) repeat scroll 0 0;
   a{
@@ -246,7 +246,27 @@ page-studio
 .studio-streams{
   padding: 5px;
   background: #17222c url(../img/spoiler.png) repeat scroll 0 0;
+  margin-bottom: 25px;
+  .srteamview{
+    margin-right: 0;
+    #player-menu{
+      display: none;
+    }
+  }
+  .srteamslider .srteamtoggle{
+    width: 100%;
+    position: relative;
+    height: 200px;
+  }
+  .stream_action{
+    display: none;
+  }
+  .stmblocks{
+    top:0;
+    background: linear-gradient(to bottom, rgb(45, 61, 76) 0%,rgba(27,53,64,0) 100%);
+  }
   .slist{
+    
     li {
       padding: 5px 5px;
     }

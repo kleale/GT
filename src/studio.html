@@ -197,6 +197,8 @@
             
           </div>
 		  <div class="col-md-8">
+           
+{#
             <div id="srteamslider" class="toggled_stream srteamslider studio-frame" rel="XXX">
               <div class="srteamview clearfix" id="mainstream">
                 <div class="iframer">
@@ -255,6 +257,82 @@
               </ul>
             </div>
             <br>
+#}
+            <div class="studio-streams">
+              <div id="srteamslider" class="srteamslider branded" rel="XXX">
+                <div class="srteamview clearfix" id="mainstream">
+                  {% include "template/match-page/player-html5.html" %}
+                </div>
+                <div class="srteamtoggle">
+                  <div class="st_inner">
+                    <div class="stream_action">
+                      <!--<span class="st-btn active" id="stream-toggle"><i class="gti-bars"></i></span>
+                      <span class="st-btn odtip" id="stream-expand" title="Развернуть на весь экран"><i class="gti-expand"></i></a>-->
+                      <ul id="stream_menu" class="player-menu" role="tablist">
+                        <li rel="stream"  class="active">
+                          <a role="tab" data-toggle="tab" href="#player-streams"><i class="gti-video-camera"></i>
+                          <span>Трансляции</span></a>
+                        </li>
+                        <li rel="stat" title="Статистика">
+                         <a role="tab" data-toggle="tab" href="#player-stat"><i class="gti-pie-chart"></i>
+                          <span>Статистика</span></a>
+                        </li>
+                        <li id="achat" rel="log">
+                          <a role="tab" data-toggle="tab" href="#player-log"><i class="gti-list-ul"></i>
+                          <span>Лог матча</span></a>
+                        </li>
+                        <li id="achat" rel="chat">
+                          <a role="tab" data-toggle="tab" href="#player-chat"><i class="gti-comments-o"></i>
+                            <span>Чат матча</span></a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div id="stmblocks" class="stmblocks tab-content">
+                      <div id="player-streams" rel="stream" class="stmblock active">
+                          <div class="tse-sc tse_slist ps-container ps-theme-default" data-ps-id="dabbe042-0282-13fd-5c12-5e4a964601f2">
+                              <div class="tse-content">
+                                  <ul id="index_stream" class="slist">
+                                    <div class="mltText text-center" style="margin:10px">No online streams found</div>
+                                  </ul>
+                              </div>
+                          <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+                      </div>
+                      <div id="player-stat" rel="stat" class="stmblock fade" style="display:none;">
+                          <div class="stf" id="ustat">
+                              <span class="active" rel="1" onclick="stat_filter(1)">Picks</span>
+                              <span rel="81" onclick="stat_filter(81)">KDA</span>
+                              <span rel="87" onclick="stat_filter(87)">LH/DN</span>
+                              <span rel="69" onclick="stat_filter(69)">LVL</span>
+                              <span rel="84" onclick="stat_filter(84)">Gold</span>
+                              <span rel="82" onclick="stat_filter(82)">XPM</span>
+                              <span rel="89" onclick="stat_filter(89)">NW</span>
+                              <span rel="85" onclick="stat_filter(85)">GPM</span>
+                              <span rel="90" onclick="stat_filter(90)">ART</span>
+                              <span rel="88" onclick="stat_filter(88)">ABL</span>
+                          </div>
+                          <div class="stats" id="bstats">
+                              <div class="statsblock" rel="0"><div class="nostat"><i class="fa fa-info-circle"></i><span>Нет данных статистики</span></div></div>
+                              <div class="statsblock" rel="1" style="display:none;"></div>
+                              <div class="statsblock" rel="81" style="display:none;"></div>
+                              <div class="statsblock" rel="87" style="display:none;"></div>
+                              <div class="statsblock" rel="69" style="display:none;"></div>
+                              <div class="statsblock" rel="82" style="display:none;"></div>
+                              <div class="statsblock" rel="84" style="display:none;"></div>
+                              <div class="statsblock" rel="89" style="display:none;"></div>
+                              <div class="statsblock" rel="85" style="display:none;"></div>
+                              <div class="statsblock" rel="90" style="display:none;"></div>
+                              <div class="statsblock" rel="88" style="display:none;"></div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            
             <div class="bn">
               <img src="../img/ad.jpg" alt="">
             </div>
