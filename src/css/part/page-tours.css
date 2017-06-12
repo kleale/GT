@@ -104,11 +104,10 @@ Page TOURNIR
 =======================================
 */
 section.t-top{
-/*  overflow: visible;
-  height: auto;*/
+  position: relative;
   border-bottom: 1px solid #37424c;
   background-color: #2e3338;
-  padding: 20px 30px 30px;
+  padding: 30px;
   box-shadow: 0 -15px 20px 0 rgba(0, 0, 0, 0.15) inset;
   @media (max-width: $XM) {
     padding: 20px;
@@ -116,7 +115,6 @@ section.t-top{
   &:before{
     opacity: .9;
   }
-  
   .heroBg{
     position: absolute 0 0 * 0;
     height: 350px;
@@ -139,7 +137,7 @@ section.t-top{
     }
   }
   h1{
-    margin: 10px 0 30px;
+    margin: 10px 0 20px;
     text-align: left;
     position: relative;
     z-index: 2;

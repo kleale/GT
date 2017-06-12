@@ -23,66 +23,34 @@
 {% set last = ['сегодня', 'вчера', '17 дн.', '173 дн.', '1 год', '2 года', '—'] %}
   
 
-  <div class="block-content temsList playerGames">
+  <div class="block-content playerGames">
     <table class="mtable">
       <thead>
-        <th>Герой</th>
-        <th>В/П</th>
-        <th>За команду</th>
-        <th></th>
-        <th>Против команды</th>
-        <th>Турнир</th>
-        <th>Роль / Позиция</th>
-        <th> MVP / Fights / Inactivity</th>
-        <th>Серия</th>
-        <th>Когда</th>
+        <tr>
+	     <th> Герой </th>
+          <th>Результат</th>
+          <th></th>
+          <th>Матч</th>
+          <th>Турнир</th>
+          <th>MVP / <span class="tip" title="" data-original-title="Битвы">Битвы</span></th>
+          <th>Серия убийств</th>
+          </tr>
       </thead>
       {% for i in 0..19 %}
-        <tr class="t-item">
-          <td>
-              <a href="" class="hero">
-                <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}" alt="hero" title="hero">
-              </a>
-          </td>
-          <td>
-            <b>{{random(win)}}</b>
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              {{random(team)}}
-              <img class="logo" src="http://game-tournaments.com/media/logo/{{random(logo)}}"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            vs
-          </td>
-          <td>
-           <h4>
-            <a href="">
-              {{random(team)}}
-              <img class="logo" src="http://game-tournaments.com/media/logo/{{random(logo)}}"/>
-            </a>
-            </h4>
-          </td>
-          <td>
-            <a href="" class="tip" title="Название турнира"><img alt="Название турнира"  src="http://game-tournaments.com/media/tournament/{{random(tourlogo)}}"></a>
-          </td>
-          <td>
-            {{random(pos)}} / <b title="Расшифровка" class="tip">{{random(role)}}</b>
-          </td>
-          <td>
-            <b class="blue">{{random(mvp)}}</b> / <b class="red">{{random(fights)}}</b> / <b class="green">{{random(inactivity)}}</b>
-          </td>
-          <td>
-            <a href="">{{random(kills)}}</a><br>
-            <a href="">{{random(kills)}}</a>
-          </td>
-          <td>
-            {{random(last)}}
-          </td>
-        </tr>
+      <tr class="t-item">
+        <td> <span class="heropic" title="Medusa"><b>Mid</b><img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{random(hero)}}" alt="Medusa logo"></span> </td>
+        <td> <a href="/ru/dota-2/summit-7/china/ig-vs-ig-vitality-48185" class="red">{{random(win)}}</a>
+          <div class="sca" data-time="1494388800">3н назад</div>
+        </td>
+        <td class="tplogo"><img class="logo" style="width:30px" src="http://game-tournaments.com/media/logo/{{random(logo)}}"></td>
+        <td> <a href="/ru/dota-2/team/ig-vitality">{{random(team)}}</a>
+          <br> vs <a href="/ru/dota-2/team/ig">{{random(team)}}</a> </td>
+        <td>
+          <a href="/ru/dota-2/summit-7/china" class="tip" title="" data-original-title="The Summit 7, China"><img src="http://game-tournaments.com/media/tournament/_60/pic-20170401-280x80-6856705518.png"></a>
+        </td>
+        <td> <b>3%</b> / <b>50%</b> </td>
+        <td> </td>
+      </tr>
       {% endfor %}
     </table>
   </div>

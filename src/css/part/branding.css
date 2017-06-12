@@ -2,7 +2,7 @@
 Branding - Match of the day
 */
 .abg{
-  position: fixed 0 0 0 50px;
+  position: fixed 0 0 0 0;
   z-index: 1;
   background: #000 url(../img/bg.jpg) no-repeat 50% -50px;
   color: #fff;
@@ -38,7 +38,7 @@ Branding - Match of the day
     top: 10px;
     left: 50%;
     margin-left: -50px;
-	z-index: 2;
+	z-index: 5;
 }
 .abg_md i{
     position: absolute;
@@ -238,7 +238,7 @@ Branding - Match of the day
     display: block;
     padding: 6px 0 0 81px;
     position: absolute;
-    top: 22px;
+    top: 24px;
     right: 100%;
     font-weight: bolder;
     font-size: 12px;
@@ -262,7 +262,6 @@ Branding - Match of the day
     width: 130px;
     height: 130px;
     padding: 50px 0 35px 0;
-    text-align: right;
     font-size: 32px;
     font-weight: bold;
     text-align: center;
@@ -368,7 +367,7 @@ Branding - Match of the day
     display: none;
     position: absolute;
     left: 50%;
-    bottom: 10px;
+    bottom: 20px;
     width: 140px;
     text-align: center;
     margin-left: -70px;
@@ -391,8 +390,78 @@ Branding - Match of the day
     top: 28px;
   }
 }
-
-@media (max-width: 1400px){
+@media (max-width: 1300px){
+  .abg_right{
+    margin-left: -25px;
+  }
+  .abg_left{
+    margin-right: -25px;
+    u{
+      left: 15px;
+      span {
+        height: 48px;
+        img{
+          max-height: 21px;
+        }
+      }
+    }
+  }
+  .abg_game{
+    top: 20px;
+    left: 62px;
+    b{
+      display: none;
+    }
+    span img {
+      width: 30px;
+    }
+  }
+  .ggbet{
+    left: 30px;
+    width: 110px;
+    height: 40px;
+    top: 380px;
+  }
+  .abg_right .ggbet{
+    left: 35px;
+  }
+  .ggbetT{
+    font-size: 14px;
+    top: 460px;
+  }
+  .abg_right .ggbetT {
+    left: 40px;
+  }
+  .abg_left .ggbetT {
+    right: 40px;
+  }
+  .abg_t1, .abg_t2{
+    width: 130px;
+    height: 154px;
+  }
+  .abg_t1 b, .abg_t2 b {
+    font-size: 13px;
+    padding: 0;
+  }
+  .abg_kf{
+    top: 190px;
+    width: 100px;
+    height: 127px;
+    padding: 50px 0 35px 0;
+    font-size: 28px;
+  }
+  .abg_btn{
+    top: 325px;
+    width: 140px;
+    height: 24px;
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+  .abg_t1 img, .abg_t2 img {
+    width: 60px;
+  }
+}
+@media (max-width: 1200px){
   .abg_kf,
   .abg_t2,
   .abg_t1,
@@ -409,8 +478,7 @@ Branding - Match of the day
     display:block;
   }
   .abg_game{
-    top: -27px;
-    left: -140px;
+    display: none;
     span{
       width: 20px;
       padding: 19px 10px 5px 0;
@@ -428,8 +496,8 @@ Branding - Match of the day
     top: 0;
     left: 0;
     u {
-      top: 18px;
-      left: 0;
+      top: 28px;
+      left: 20px;
       max-width: 270px;
     }
   }
@@ -443,12 +511,19 @@ Branding - Match of the day
     }
   }
 }
-@media (max-width: $L) {
-  .abg_left u {
-    left: 20px;
-  }
-}
 @media (max-width: $XM) {
+  .abg_left u {
+    top: 25px;
+  }
+  .abg_left u span.abg_mt{
+    height: 45px;
+    width: 140px;
+    display: block;
+    font-size: 11px;
+  }
+  .abg_wrap{
+    max-width: 750px;
+  }
   .abg {
     left: 0;
   }
@@ -462,53 +537,42 @@ Branding - Match of the day
     }
   }
 }
+
 @media (max-width : 800px) {
-  .abg_i1, .abg_i2{
-    top: 20px;
+  body .abg .abg_i2 img,
+  body .abg .abg_i1 img{
+    height: 40px;
   }
-  .abg_game{
-    left: -90px;
-    width: 89px;
-  }
-  .abg_left u {
-    top: 73px;
-  }
-  .abg_day {
-    top: 73px;
-  }
-  .kmob{
-    display: block;
-    bottom: 10px;
-    font-size: 16px;
-  }
-  .abg_left u {
-    width: 250px;
-  }
-}
-@media (max-width : 767px) {
   .abg{
     left: 0;
     position: absolute;
+  }
+  .abg_top {
+    max-width: 60%;
+  }
+  .abg_right {
+    margin-left: -5px;
   }
   .abg_left {
     u {
       width: 150px;
       left: 10px;
-      top: 92px;
+      top: 28px;
       span{
         height: 45px;
+        width: 100px;
+        display: block;
+        font-size: 9px;
       }
     }
   }
   .abg_day {
-    top: 92px;
-    padding: 8px 0 0 81px;
-    font-size: 10px;
-    line-height: 1.4;
+    font-size: 11px;
+    padding: 7px 0 0 81px;
     b {
-      font-size: 30px;
-      top: 0;
-      left: 40px;
+      font-size: 22px;
+      top: 4px;
+      left: 50px;
     }
   }
   .abg_mt {
@@ -944,7 +1008,7 @@ LIVE BLOCK
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        margin: -10px 50px 0 0;
+        margin: -10px 0 0 0;
         
         &:hover {
           text-decoration:none;

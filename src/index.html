@@ -26,14 +26,14 @@
 <script src="../inc/match-page.js"></script>
 <script src="../inc/match-chart.init.js"></script>-->
 
-
- <body class="chat-open">
-  <div class="container mainwrap">
+ <body class="matchpage">
+  {% include "template/header.html" %}
+  <div class="container mainwrap pad120">
     {% include "template/breadcrumbs.html" %}
     
     <div class="otstup">
       <section class="m-head">
-        <div class="m-f">
+        <!--<div class="m-f">
           <div class="m-fast" id="m-fast">
             <ul class="nav">
                <li><a href="#player" title="Стрим"><i class="gti-video-camera"></i></a></li>
@@ -47,7 +47,7 @@
                <li><a href="#m-news" title="Новости"><i class="gti-newspaper-o"></i></a></li>
             </ul>
           </div>
-        </div>
+        </div>-->
         <div class="stage">
           <em><b>3</b>China <span class="caret"></span></em>
           <ul>
@@ -92,6 +92,7 @@
           <div class="col-lg-6 mtt">
             <h1 class="m-title"><span>Матч London Conspiracy Dota2 vs SuperCloud7</span></h1>
             <div class="m-time">29 ЯНВ 2016 15:30 МСК</div>
+            {#
             <div class="m-icons">
               <span class="m-i-1"></span>
               <!--<span class="m-i-2"></span>
@@ -100,6 +101,7 @@
               <span class="m-i-5"></span>
               <span class="m-i-6"></span>-->
             </div>
+            #}
           </div>
           <div class="col-lg-3">
             <div class="ms">

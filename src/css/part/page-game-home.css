@@ -530,13 +530,17 @@
   .mtr{
     font-size: 11px;
     display: block;
-    padding: 10px 5px 0;
-    text-transform: uppercase;
+    padding: 6px 5px 0;
+    margin-bottom: -8px;
     position: relative;
     b{
       display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    
     &:before, &:after {
       content: '';
       position: absolute;
@@ -596,9 +600,23 @@
       left: 5px;
       vertical-align: middle;
       font-size: 12px;
+      &:before {
+        position: absolute;
+        content: '';
+        box-shadow: 0 0 0 25px rgba(127, 174, 195, 0.1), 0 0 0 20px rgba(127, 174, 195, 0.2), 0 0 0 15px rgba(127, 174, 195, 0.2), 0 0 0 10px rgba(127, 174, 195, 0.2);
+        left: 48%;
+        right: 48%;
+        top: 48%;
+        bottom: 48%;
+        border-radius: 50%;
+        z-index: 0;
+        background: rgba(127, 174, 195, 0.5);
+      }
       img{
         max-height: 70%;
         max-width: 70%;
+        z-index: 1;
+        position: relative;
       }
       i{
         text-align: center;
@@ -613,8 +631,8 @@
         display: block;
         line-height: 14px;
         font-size: 12px;
-        padding-top: 5px;
-        
+        padding-top: 2px;
+        color: #a0d3ea;
         &.up{
           color: $green;
         }
@@ -638,14 +656,21 @@
     .i2{
       left: auto;
       right: 5px;
+      &:before{
+        box-shadow: 0 0 0 25px rgba(195, 127, 127, 0.1), 0 0 0 20px rgba(195, 127, 127, 0.2), 0 0 0 15px rgba(195, 127, 127, 0.2), 0 0 0 10px rgba(195, 127, 127, 0.2);
+      }
     }
     .day{
       width: 60px;
       font-size: 10px;
       position: absolute;
-      top: 60px;
+      top: 65px;
       margin-left: -30px;
       line-height: 12px;
+      text-transform: uppercase;
+      b{
+        
+      }
     }
   }
 }
@@ -723,7 +748,7 @@
   .hits{
     display: block;
     padding: 5px 0 0px;
-    font-size: 16px;
+    font-size: 14px;
     margin-left: 90px;
     
     @media (min-width: $XXL) {

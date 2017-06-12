@@ -426,12 +426,12 @@ page-studio
       &.live{
         width: 30px;
         .livebetpin {
-            background-color: #f03a3a;
+/*            background-color: #f03a3a;
             border: 1px solid #f03a3a;
             border-radius: 12px;
             box-shadow: 0 0 30px 4px #f03a3a;
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: middle;*/
             width: 10px;
             height: 10px;
         }
@@ -500,12 +500,12 @@ page-studio
       &.live{
         width: 30px;
         .livebetpin {
-            background-color: #f03a3a;
+            /*background-color: #f03a3a;
             border: 1px solid #f03a3a;
             border-radius: 12px;
             box-shadow: 0 0 30px 4px #f03a3a;
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: middle;*/
             width: 10px;
             height: 10px;
         }

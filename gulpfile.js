@@ -137,7 +137,7 @@ gulp.task('style:build', function () {
       postcssColor,
       postcssAssets,
       autoprefixer({browsers: ['last 2 version']}),
-      //cssnano(),  // разкомментить для минимайза
+      cssnano(),  // разкомментить для минимайза
     ];
     return gulp.src(path.src.style) //Выберем наш main.scss
         .pipe(postcss(processors))

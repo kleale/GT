@@ -16,51 +16,14 @@
 <html>
 {% include "template/head.html" %}
 <body class="index">
-
-  <div class="container mainwrap">
-    {% include "template/breadcrumbs.html" %}
+  {% include "template/header-home.html" %}
+  <div class="container mainwrap" style="padding-top:20px;">
+    {#{% include "template/breadcrumbs.html" %}#}
     <div class="otstup">
       <div class="indexwrap">
         <div class="homepage">
           <div class="heroBg" style="background-image:url(../img/w-home.jpg)"></div>
           <div>
-            <ul class="homenav" role="tablist">
-              <li class="active" href="#dota2" role="tab" data-toggle="tab"><a href="/en/dota-2"><i class="gti-582"></i><span>dota2</span></a>
-              </li>
-              <li><a href="#csgo" role="tab" data-toggle="tab"><i class="gti-704"></i><span>csgo</span></a></li>
-              <li><a href="#lol" role="tab" data-toggle="tab"><i class="gti-313"></i><span>lol</span></a></li>
-              <li><a href="#overwatch" role="tab" data-toggle="tab"><i class="gti-800"></i><span>overwatch</span></a></li>
-              <li><a href="#hearthstone" role="tab" data-toggle="tab"><i class="gti-755"></i><span>hearthstone</span></a></li>
-            </ul>
-            <div class="tab-content">
-              <ul class="homenav-sub tab-pane fade in active" id="dota2" role="tabpanel">
-                <li><a href="/en/dota-2/matches" title="Matches"><i class="gti-vs"></i> <span>Matches<br>& Live streams</span></a></li>
-                <li><a href="/en/dota-2/tournaments" title="Events"><i class="gti-trophy"></i><span>Tournaments<br>& events</span></a></li>
-                <li><a href="/en/dota-2/news" title="News"><i class="gti-newspaper-o"></i><span>Cybersport<br>News</span></a></li>
-                <li><a href="/en/dota-2/team" title="Teams"><i class="gti-users"></i><span>TEAMS STATS<br>& RATINGS</span></a></li>
-                <li><a href="/en/dota-2/player" title="Players"><i class="gti-user"></i><span>PLAYERS<br>STATS</span></a></li>
-                <li><a href="/en/dota-2/highlights" title="Highlights"><i class="gti-swords"></i><span>HIGHLIGHTS<br><b class="label">NEW</b></span></a></li>
-                <li><a href="/en/dota-2/video" title="Video / Match vods"><i class="gti-play-circle-o"></i><span>MATCH VODS<br>WITH Full LOGS</span></a></li>
-              </ul>
-              <ul class="homenav-sub tab-pane fade" id="csgo" role="tabpanel">
-                <li><a href="/en/csgo/matches" title="Matches"><i class="gti-vs"></i> <span>Matches<br>& Live streams</span></a></li>
-                <li><a href="/en/csgo/tournaments" title="Events"><i class="gti-trophy"></i><span>Tournaments<br>& events</span></a></li>
-                <li><a href="/en/csgo/news" title="News"><i class="gti-newspaper-o"></i><span>Cybersport<br>News</span></a></li>
-                <li><a href="/en/csgo/team" title="Teams"><i class="gti-users"></i><span>TEAMS STATS<br>& RATINGS</span></a></li>
-                <li><a href="/en/csgo/player" title="Players"><i class="gti-user"></i><span>PLAYERS<br>STATS</span></a></li>
-                <li><a href="/en/csgo/highlights" title="Highlights"><i class="gti-swords"></i><span>HIGHLIGHTS<br><b class="label">NEW</b></span></a></li>
-                <li><a href="/en/csgo/video" title="Video / Match vods"><i class="gti-play-circle-o"></i><span>MATCH VODS<br>WITH Full LOGS</span></a></li>
-              </ul>
-              <ul class="homenav-sub tab-pane fade" id="lol" role="tabpanel">
-                <li><a href="" title="Matches"><i class="gti-vs"></i> <span>Matches<br>& Live streams</span></a></li>
-              </ul>
-              <ul class="homenav-sub tab-pane fade" id="overwatch" role="tabpanel">
-                <li><a href="" title="Matches"><i class="gti-vs"></i> <span>Matches<br>& Live streams</span></a></li>
-              </ul>
-              <ul class="homenav-sub tab-pane fade" id="hearthstone" role="tabpanel">
-                <li><a href="" title="Matches"><i class="gti-vs"></i> <span>Matches<br>& Live streams</span></a></li>
-              </ul>
-            </div>
             
             <div class="homepage-content">
               <div class="row">
@@ -80,9 +43,6 @@
                     </li>
                     <li>
                       <a href=""><i class="gti-755"></i></a>
-                    </li>
-                    <li>
-                      <a href="" class="btn">ALL</a>
                     </li>
                   </ul>
                   <h2 class="mlh mlhsm">Fresh news</h2>

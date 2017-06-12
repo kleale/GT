@@ -9,11 +9,14 @@
 <html>
 {% include "template/head.html" %}
 <body class="">
-  <div class="container mainwrap">
+  {% include "template/header.html" %}
+  <div class="container mainwrap pad120">
     {% include "template/breadcrumbs.html" %}
     <div class="otstup">
+      <!--
       <section class="trtop hero" style="background-image:url(/img/dotahead1.jpg);">
         <div>
+          {#
           <h1 class="mh"><span>Dota 2</span></h1>
           <nav>
             <ul>
@@ -26,6 +29,7 @@
               <li><a href="/ru/dota-2/video" title="Записи игр / Видео матчей"><i class="gti-play-circle-o"></i><span>Видео</span></a></li>
             </ul>
           </nav>
+          #}
           {#
           <ul class="trlist clearfix">
           {% for i in 0..2 %}
@@ -60,8 +64,8 @@
           #}
         </div>
       </section>
-     
-      <section class="m-sec m-even subgr">
+     -->
+      <section class="m-sec m-even"> <!-- .subgr -->
         <div class="row">
           <div class="col-md-8">
             

@@ -17,110 +17,33 @@
   <link rel="icon" type="image/png" href="/favicon32.png">
   
    <!-- Import bootstrap -->
-  <link rel="stylesheet" href="../inc/assets/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="../inc/assets/css/bootstrap.min.css">
   
   <!-- Import main styles -->
-  <link rel="stylesheet" href="../css/main.css?46">
+  <link rel="stylesheet" href="../css/main.css?24">
   
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
   
   <!--Import jQuery-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+  <script src="../inc/assets/js/jquery-2.1.1.min.js"></script> 
+    
   <!-- Latest compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script> --> 
+  <script src="../inc/assets/js/bootstrap.min.js"></script> 
 </head>
 <body class="thereGoingSomethingStrange">
   <!-- bar.html -->
 
-<!-- bar.html -->
-<div class="bar hiddenbar">
-   <span id="menu-toggle" class="opener"><i class="gti-bars"></i></span>
-  <div class="barc">
-    <a href="#!" class="gt-logo"><img src="../img/gt-logo.png" alt="Game-tournaments.com"></a>
-    <div class="bar-menu">
-      <!--
-      <div class="bar-block">
-        <a href="#!" class="bar-ava"><img src="../img/uava.png" alt="User"></a>
-        <div class="bar-username">
-          <a href="#!" class="bar-name">Алексей Kleale Алексей Kleale</a>
-          <div class="bar-links">
-            <span class="bar-label">pro</span>
-            <a href="#!" class="u-off"><i class="gti-sign-out"></i></a>
-            <a href="#!" class="u-opt"><i class="gti-wrench"></i></a>
-          </div>
-        </div>
-      </div>
-      -->
-      <div class="bar-block lh">
-        <a href="/log" title="Вход в свой профиль"><i class="gti-user-o"></i><span>Войти</span></a>
-        <a href="/reg" title="Регистрация"><i class="gti-user-plus"></i><span>Регистрация</span></a>
-      </div>
-      <ul class="bar-nav-games bng2">
-        <li class="active">
-          <a href="#!"><i class="gti-582"></i><span>Dota 2</span></a>
-          <ul class="bar-nav">
-              <li class="active"><a href="/ru/dota-2/matches" title="Матчи"><i class="gti-vs"></i> <span>Матчи</span></a></li>
-              <li><a href="/ru/dota-2/tournaments" title="Турниры"><i class="gti-trophy"></i><span>Турниры</span></a></li>
-              <li><a href="/ru/dota-2/news" title="Новости"><i class="gti-newspaper-o"></i><span>Новости</span></a></li>
-              <li><a href="/ru/dota-2/team" title="Команды"><i class="gti-users"></i><span>Команды</span></a></li>
-              <li><a href="/ru/dota-2/player" title="Игроки"><i class="gti-user"></i><span>Игроки</span></a></li>
-              <li><a href="/ru/dota-2/highlights" title="Хайлайты"><i class="gti-swords"></i><span>Хайлайты</span></a></li>
-              <li><a href="/ru/dota-2/video" title="Записи игр / Видео матчей"><i class="gti-play-circle-o"></i><span>Видео</span></a></li>
-          </ul>
-        </li>
-        <li><a href="#!"><i class="gti-704"></i><span>CS:GO</span></a></li>
-        <li><a href="#!"><i class="gti-313"></i><span>LOL</span></a></li>
-        <li><a href="#!"><i class="gti-800"></i><span>OVERWATCH</span></a></li>
-        <li><a href="#!"><i class="gti-755"></i><span>HEARTHSTONE</span></a></li>
-        <!--<li><a href="#!"><i class="gti-hots"></i></a></li>-->
-      </ul>
-      <div class="dropers">
-        <div class="s-lang">
-          <div class="dropdown">
-            <a class="dla" id="ddlang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              RU
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="ddlang">
-              <li class="active"><a href="#">Русский</a></li>
-              <li><a href="#">English</a></li>
-              <li><a href="#">Italiano</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="s-time">
-          <div class="dropdown">
-            <a class="sub" id="ddtime" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              15:08 (GMT +3:00)
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="ddtime">
-              <li><a href="#">12:08 (GMT 0:00)</a></li>
-              <li><a href="#">13:08 (GMT +1:00)</a></li>
-              <li><a href="#">14:08 (GMT +2:00)</a></li>
-              <li class="active"><a href="#">15:08 (GMT +2:00)</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <a class="chat-btn active" href="#!"><i class="gti-comments-o"></i><span>Чат</span><b>99+</b></a>
-    </div>
-
-    <div class="sercher">
-      <input type="text" name="" id="" class="form-control" placeholder="Поиск">
-      <a href=""><i class="gti-search"></i></a>
-    </div>
-  </div> 
-</div>
-<span class="swipe-area"></span>
 
 
 <!-- bar-chat -->
-<a class="chat-btn chat-btn-right" href="#!"><i class="gti-comments-o"></i><span>Чат</span><b>99+</b></a>
+<!--<a class="chat-btn chat-btn-right" href="#!"><i class="gti-comment-o"></i><span>Чат</span><b>99+</b></a>-->
 <div class="bar-chat">
   
   <!-- /match-page/player-chat.html -->
@@ -1628,7 +1551,7 @@
                 <a href="">Nikname 1</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -1637,7 +1560,7 @@
                 <a href="">Nikname 2</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -1655,7 +1578,7 @@
                 <a href="">Nikname 4</a>
               </td>
               <td class="text-right">
-                Liquid
+                Secret
               </td>
             </tr>
           
@@ -1664,7 +1587,7 @@
                 <a href="">Nikname 5</a>
               </td>
               <td class="text-right">
-                Secret
+                Liquid
               </td>
             </tr>
           
@@ -1759,7 +1682,7 @@
 
 <!-- Site Sripts -->
 <script src="../inc/main.js"></script>
-<script src="../inc/func_init.js?35"></script>
+<script src="../inc/func_init.js?24"></script>
 
 <!--PAGES select only dev-->
 <style>
@@ -1784,7 +1707,7 @@
   <div class="btn-group" role="group" id="hpages">
     <a href="/home1.html" class="m1 btn btn-sm btn-warning">Home Full</a>
     <!--<a href="/logo.html" class="m2 btn btn-sm btn-success">Logo</a>-->
-    <a href="/home.html" class="m1 btn btn-sm btn-success">Home</a>
+    <!--<a href="/home.html" class="m1 btn btn-sm btn-success">Home</a>-->
     <a href="/game-home.html" class="m1 btn btn-sm btn-success">Game Home</a>
     <a href="/index.html" class="m1 btn btn-sm btn-success">Match</a>
     <a href="/match_end.html" class="m1 btn btn-sm btn-success">Match Vid</a>
@@ -1798,7 +1721,7 @@
     <a href="/player.html" class="m2 btn btn-sm btn-success">Player</a>
     <a href="/tours.html" class="m2 btn btn-sm btn-success">Tours</a>
     <a href="/tour.html" class="m2 btn btn-sm btn-success">Tour</a>
-    <a href="/tour2.html" class="m2 btn btn-sm btn-success" style="opacity.5">Tour2</a>
+<!--    <a href="/tour2.html" class="m2 btn btn-sm btn-success" style="opacity.5">Tour2</a>-->
     <a href="/tour_group.html" class="m2 btn btn-sm btn-success">Tour Group</a>
     <a href="/tour_poff.html" class="m2 btn btn-sm btn-success">Tour Playoff</a>
     <a href="/404.html" class="m2 btn btn-sm btn-success">404</a>

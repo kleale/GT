@@ -208,121 +208,8 @@
   }
 }
 
-.homenav{
-  list-style: none;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  li{
-    float: left;
-    
-    &.active{
-      a{
-        background: #7faec3;
-        color: #03547a;
-        &:focus,
-        &:active{
-          background: #7faec3;
-          color: #03547a;
-        }
-      }
-    }
-    a{
-      display: block;
-      padding: 9px 20px;
-      transition: $tease;
-      &:hover,
-      &:focus,
-      &:active{
-        text-decoration: none;
-        background: #02557c;
-        color: #fff;
-      }
-      @media (max-width: $XM) {
-        padding: 9px 15px;
-      }
-      i{
-        font-size: 24px;
-        margin-right: 10px;
-        vertical-align: middle;
-        @media (max-width: $M) {
-          margin-right: 0;
-        }
-      }
-      span{
-        text-transform: uppercase;
-        font-weight: 700;
-        @media (max-width: $M) {
-          display: none;
-        }
-      }
-    }
-  }
-}
-.homenav-sub{
-  padding: 0;
-  margin: 0;
-  background: #7faec3;
-  overflow: hidden;
-  list-style: none;
-  li{
-    float: left;
-    a{
-      color: #03547a;
-      padding: 20px 25px;
-      display: block;
-      line-height: 13px;
-      text-align: left;
-      font-size: 12px;
-      white-space: nowrap;
-      overflow: hidden;
-      transition: $tease;
-      @media (max-width: $XXL) {
-        padding: 15px 15px;
-      }
-      @media (max-width: $L) {
-        padding: 15px 10px;
-        font-size: 11px;
-      }
-      @media (max-width: $XM) {
-        padding: 10px 9px;
-        font-size: 10px;
-        letter-spacing: -.5pt;
-        line-height: 10px;
-      }
-      &:hover,
-      &:focus,
-      &:active{
-        text-decoration: none;
-        background: #5189a2;
-        color: #fff;
-      }
-      i{
-        font-size: 24px;
-        margin-right: 10px;
-        vertical-align: middle;
-        float: left;
-        @media (max-width: $XM) {
-          font-size: 18px;
-          margin-right: 10px;
-          vertical-align: middle;
-          float: left;
-        }
-        @media (max-width: $toM) {
-          display: none;
-        }
-      }
-      span{
-        text-transform: uppercase;
-        font-weight: 400;
-        display: block;
-        float: left;
-        .label{
-          background: #03547a;
-        }
-      }
-    }
-  }
+a.game, span.game{
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.36);
 }
 
 .homepage-content{
@@ -467,6 +354,7 @@
       height: 140px;
       @media (max-width: 1600px) {
         width: 30.8%;
+        height: 130px;
       }
       @media (max-width: $M) {
         margin: 0 .8%;

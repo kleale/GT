@@ -195,7 +195,7 @@ player.html
 */
 .pAvaBg{
   background: url(../img/pava.png) repeat-x scroll 0 100%;
-  border: 1px solid rgb(27, 43, 56);
+  border: 1px solid rgb(68, 82, 95);
   overflow: hidden;
 }
 .pAva{
@@ -258,10 +258,10 @@ player.html
       width: 100%;
     }
   }
+
   .pInf{
     padding: 20px 15px 15px;
     position: relative;
-    
     .pt{
       display: block;
       position: absolute -45px 15px * *;
@@ -313,7 +313,7 @@ player.html
       }
     }
   }
-  .niks{
+/*  .niks{
     font-size: .8em;
     color: #c8c8c8;
     b{
@@ -322,7 +322,7 @@ player.html
       margin-bottom: 1px;
       font-size: 1.2em;
     }
-  }
+  }*/
   .fans{
     position: relative;
     padding: 0 10px 20px;
@@ -459,8 +459,7 @@ player.html
       }
     }
   }
-  
-  .spiderInfo{
+/*  .spiderInfo{
     padding: 10px;
     font-size: 10px;
     border: 1px solid #334859;
@@ -486,7 +485,7 @@ player.html
       font-size: 10px;
       line-height: 1.2;
     }
-  }
+  }*/
 }
 
 .maingraph{
@@ -604,14 +603,13 @@ player.html
   }
   h1{
     text-align: left;
-    padding: 0 10px;
+    padding: 0;
     font-size: 24px;
   }
   a.btn.all{
     position: relative;
     z-index: 10;
     margin-top: 10px;
-    margin-right: 10px;
     float: right;
     @media (max-width: $SM){
       float: none;

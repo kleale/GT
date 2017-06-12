@@ -21,13 +21,13 @@
   text-align: center;
   overflow: hidden;
   position: relative;
-  margin: -70px -40px 25px;
+  margin: -70px -40px 15px;
+  z-index: 3;
   
   @media (max-width: $M){
     margin: -50px -40px 10px -40px;
     overflow: visible;
   }
-  
   em{
     display: none;
     font-style: normal;
@@ -50,7 +50,6 @@
     }
     b{
       margin-right: 10px;
-      
     }
   }
   
@@ -181,6 +180,7 @@
       }
       &.active:before{
         width:50%;
+        background: #035880;
       }
       &.s-pass {
         a{
@@ -203,7 +203,8 @@
       }
       &.active{
         b,i{ 
-          color: #fff;
+          color: #31363a;
+          background: #f6c000;
           &:after {
             opacity: 1;
             transform: scale(1)
@@ -482,7 +483,7 @@ Headline
   }
 }
 
-.m-f{
+/*.m-f{
   position: absolute -1px 0 * 0;
   max-width: 1200px;
   z-index: 20;
@@ -555,7 +556,7 @@ Headline
       }
     }
   }
-}
+}*/
   
 .m-team{
   @media (max-width: $L){

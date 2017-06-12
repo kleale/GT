@@ -20,7 +20,7 @@
 <html>
 {% include "template/head.html" %}
 <body class="">
- 
+   {% include "template/header.html" %}
 <!-- Счетчик циферок -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <script>
@@ -245,16 +245,11 @@ $(function () {
 // END CHARTS
 </script> 
  
-  <div class="container mainwrap">
+  <div class="container mainwrap pad120">
     {% include "template/breadcrumbs.html" %}
     <div class="otstup">
-      
-      <section class="hero pageTeamHero" style="background-image:url(../img/headpic.jpg); height:auto;">
-        <a href="" class="btn pull-right btn-default">Все команды DOTA 2</a>
-        <h1><span>Карточка команды <a href="/dota-2">DOTA 2</a> Team Liquid</span></h1>
-      </section>
-      
-      <section class="m-sec m-even plCard pageTeam">
+      <section class="t-top tHero plCard pageTeam">
+        <div class="heroBg" style="background-image:url(/html/img/headpic_582.jpg)"></div>
         <div class="row">
           <div class="col-md-4">
             <div class="pAva">
@@ -356,17 +351,19 @@ $(function () {
             </div>
           </div>
           <div class="col-md-8">
+            <a href="/ru/dota-2/team" class="btn all btn-default btn-sm">Все команды Dota 2</a>
+            <h1 class="teamh1">Team Liquid</h1>
             <div class="maingraph">
                     <h3 class="mlh"><span>Team statistics</span></h3>
                     <div class="grphilter clearfix">
                         <div>
-                            <div class="input-group">
-                                <input type="text" class="form-control input-sm fteam" placeholder="Team for comparison" value="">
-                                <div class="input-group-btn mlt-dropdown" id="fteam">
-                                	<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown"><span class="caret"></span></button>
-									<ul class="dropdown-menu dropdown-menu-right"></ul>
-                                </div>
-                            </div>
+                          <div class="input-group">
+                              <input type="text" class="form-control input-sm fteam" placeholder="Team for comparison" value="">
+                              <div class="input-group-btn mlt-dropdown" id="fteam">
+                                  <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown"><span class="caret"></span></button>
+                                  <ul class="dropdown-menu dropdown-menu-right"></ul>
+                              </div>
+                          </div>
                         </div>
                     </div>
                     <div id="spider_chart_team" class="spider_chart_team"></div>
@@ -455,9 +452,7 @@ $(function () {
             </div>
           </div>
         </div> 
-      </section>
-      
-      <section class="m-sec m-even teamP">
+        <div class="m-sec m-even teamP">
           <h3 class="mlh"><span>Evil Geniuses Roster</span></h3>
             <div class="row">
               {% for i in 0..4 %}
@@ -488,8 +483,8 @@ $(function () {
                 </div>
               {% endfor %}
               </div>
+        </div>
       </section>
-      
       <section class="m-sec m-even">
         <div class="row">
           <div class="col-sm-7">

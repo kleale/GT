@@ -860,50 +860,35 @@
   }
 }
 .livebetpin{
-    background-color: #f03a3a;
-    border: 1px solid #f03a3a;
-    border-radius: 12px;
-    box-shadow: 0 0 30px 4px #f03a3a;
-    display: inline-block;
-    height: 11px;
-    margin: 1px 3px 3px 3px;
-    vertical-align: middle;
-    width: 11px;
-    
+  background-color: #f03a3a;
+  border: 1px solid #f03a3a;
+  border-radius: 12px;
+  box-shadow: 0 0 30px 4px #f03a3a;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin: 1px 3px 3px 3px;
+  vertical-align: middle;
+  width: 1-px;
+  position: relative;
+  /*&:before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    top: -6px;
+    left: -6px;
+    position: absolute;
+    animation: pulse 1.5s ease-in-out infinite;
+    border: 1px solid #ff0000;
+    border-radius: 50%;
+    opacity: 0;
+  }*/
 }
-
-/*
-.bootstrap-switch-handle-off,
-.bootstrap-switch-handle-on{
-  transition: $tease;
+@keyframes pulse{
+  0%{opacity:0;transform:scale(0)}
+  50%{opacity:1}
+  100%{opacity:0;transform:scale(1)}
 }
-.bootstrap-switch-off{
-  .bootstrap-switch-container{
-    .bootstrap-switch-handle-off{
-      background: #643030;
-    }
-    &:hover{
-      .bootstrap-switch-handle-off{
-        opacity: .5;
-      }
-    }
-  }
-}
-.bootstrap-switch-on{
-  .bootstrap-switch-container{
-    .bootstrap-switch-label{
-    }
-    &:hover{
-      .bootstrap-switch-handle-on{
-        opacity: .5;
-      }
-    }
-  }
-}
-.bootstrap-switch-container{
-  height: 26px;
-}
-*/
 
 .tresult {
   &:hover{
