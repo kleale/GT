@@ -48,7 +48,7 @@ Branding - Match of the day
     text-align: center;
     font-style: normal;
     text-transform: uppercase;
-	font-size: 10px;
+	font-size: 8px;
 	white-space: nowrap;
 }
 .abg_i1,
@@ -376,6 +376,52 @@ Branding - Match of the day
     font-size: 20px; 
 }
 
+body .abg{
+  top: 43px;
+  @media (max-width: $XM) {
+    top: 0;
+  }
+  .abg_i1, .abg_i2{
+    top: 20px;
+    &:before{
+      opacity: .8;
+    }
+    img {
+      height: 55px;
+    }
+  }
+  .abg_md {
+    width: 60px;
+    height: 42px;
+    top: 18px;
+    margin-left: -30px;
+    i{
+      bottom: 1px;
+    }
+  }
+  .kmob{
+    font-size: 15px;
+    bottom: 21px;
+    display: block;
+  }
+}
+
+@media (min-width: 1200px){
+  body{
+    .abg_left,
+    .abg_right{
+      top: 45px;
+    }
+    .abg_top,
+    .abg_day{
+      display: none;
+    }
+    .abg_mt{
+      opacity:0;
+    }
+  } 
+}
+
 @media (max-width : 1599px) {
   .mainwrap {
     max-width: 1030px;
@@ -401,7 +447,7 @@ Branding - Match of the day
       span {
         height: 48px;
         img{
-          max-height: 21px;
+          max-height: 31px;
         }
       }
     }
@@ -579,6 +625,17 @@ Branding - Match of the day
       font-size: 10px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* Live banner */
 .ablive{

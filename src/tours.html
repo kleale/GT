@@ -10,7 +10,6 @@
 <body class="">
    {% include "template/header.html" %}
   <div class="container mainwrap pad120">
-    {% include "template/breadcrumbs.html" %}
     <div class="otstup">
       <section class="hero" data-orig-offset="0" style="background-image:url(../img/headpic.jpg);">
         <h1 class="mh"><span>Турниры <a href="/dota-2">DOTA 2</a></span></h1>
@@ -94,9 +93,12 @@
         {% include "template/blockzames.html" %}
       </section>
       #}
+    {#
       <div class="bn">
         <img src="../img/ad.jpg" alt="">
       </div>
+    #}
+      {% include "template/breadcrumbs.html" %}
       {% include "template/footer.html" %}
     </div>
   </div>

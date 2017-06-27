@@ -118,7 +118,6 @@ $(document).ready(function() {
 <body class="matchpage">
   {% include "template/header.html" %}
   <div class="container mainwrap pad120">
-  {% include "template/breadcrumbs.html" %}
     
     <div class="otstup">
       <section class="m-head">
@@ -484,9 +483,12 @@ $(document).ready(function() {
       
 #}
 
+    {#
       <div class="bn">
         <img src="../img/ad.jpg" alt="">
       </div>
+    #}
+      {% include "template/breadcrumbs.html" %}
       {% include "template/footer.html" %}
     </div>
   </div>

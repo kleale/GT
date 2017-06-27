@@ -246,7 +246,6 @@ $(function () {
 </script> 
  
   <div class="container mainwrap pad120">
-    {% include "template/breadcrumbs.html" %}
     <div class="otstup">
       <section class="t-top tHero plCard pageTeam">
         <div class="heroBg" style="background-image:url(/html/img/headpic_582.jpg)"></div>
@@ -684,9 +683,12 @@ $(function () {
         </div>
       </section>
       
+    {#
       <div class="bn">
         <img src="../img/ad.jpg" alt="">
       </div>
+    #}
+      {% include "template/breadcrumbs.html" %}
       {% include "template/footer.html" %}
     </div>
   </div>

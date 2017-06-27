@@ -11,7 +11,6 @@
 <body class="">
    {% include "template/header.html" %}
   <div class="container mainwrap pad120">
-    {% include "template/breadcrumbs.html" %}
     <div class="otstup">
       <section class="hero" data-orig-offset="0" style="background-image:url(../img/headpic.jpg);">
         <h1 class="mh"><span>Рейтинг команд <a href="/dota-2">DOTA 2</a></span></h1>
@@ -101,6 +100,93 @@
               </div>
             </div>
             <div class="block mlt temsList">
+              <style>
+                .block-top-team {
+                  margin: 10px 0 20px 30px;
+                }
+                .block-top-team .plw{
+                  padding-left: 50px;
+                  margin-right: -30px;
+                }
+                .block-top-team .logo {
+                    display: inline-block;
+                    position: relative;
+                    color: #fff;
+                    text-align: center;
+                    float: left;
+                    width: 60px;
+                    margin: 10px;
+                }
+                .block-top-team b{
+                  line-height: 46px;
+                  color: #d2c68b;
+                  background: url(http://game-tournaments.com/html/img/trophy.png) no-repeat scroll 49% 54%;
+                  text-align: center;
+                  width: 50px;
+                  height: 50px;
+                  display: inline-block;
+                }
+                .block-top-team .tname{
+                  font-size: 16px;
+                }
+                .block-top-team table{
+                  height: 80px;
+                  width: 100%;
+                }
+                .block-top-team table td{
+                  vertical-align: middle;
+                  font-size: 13px;
+                }
+                .block-top-team label{
+                  font-size: 12px;
+                  text-transform: uppercase;
+                  display: block;
+                }
+                .block-top-team p{
+                  font-size: .8em;
+                  font-style: normal;
+                  color: #ccc;
+                  display: block;
+                  line-height: 1.2;
+                  margin: 0;
+                }
+              </style>
+              <div class="block-plw block-bs block-top-team">
+                    <table>
+                      <tr>
+                        <td width="50" style="padding-left:20px;">
+                          <b>1</b>
+                        </td>
+                        <td width="100">
+                          <a href="" class="logo">
+                            <img src="http://ggscore.com/media/logo/_60/pic-20160203-600x600-6826089355.png" alt="Wings">
+                          </a>
+                        </td>
+                        <td>
+                          <a class="tname" href="">
+                            Evil Geniuses 
+                          </a>
+                          <img src="http://ggscore.com/media/flag/4.png" alt="China">
+                          <p>
+                            Рекорд побед подряд: 9 побед 3м назад
+                          </p>
+                        </td>
+                        <td>
+                          <label>Всего игр</label>
+                          130 / 364
+                        </td>
+                        <td>
+                          <label>% побед</label>
+                          55% / 43%
+                        </td>
+                        <td>
+                          <label>Заработано</label>
+                          $43K / $98K
+                        </td>
+                      </tr>
+                    </table>
+              </div>
+               
               {% include "template/teams/teams-list.html" %}
               {% include "template/pager.html" %}
               
@@ -147,9 +233,12 @@
         {% include "template/blockzames.html" %}
       </section>
 
+    {#
       <div class="bn">
         <img src="../img/ad.jpg" alt="">
       </div>
+    #}
+      {% include "template/breadcrumbs.html" %}
       {% include "template/footer.html" %}
     </div>
   </div>

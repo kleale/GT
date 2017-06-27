@@ -6,7 +6,6 @@
 <body class="">
   {% include "template/header.html" %}
   <div class="container mainwrap pad120">
-    {% include "template/breadcrumbs.html" %}
     <div class="otstup">
       <section class="player" id="player">
         <!--<div id="srteamslider" class="toggled_stream srteamslider branded" rel="XXX">-->
@@ -88,14 +87,17 @@
         </div>
       </section>
       #}
-
+      {#
       <section id="m-zames" class="m-sec m-even m-zames">
         {% include "template/blockzames.html" %}
       </section>
-
+      #}
+      {#
       <div class="bn">
         <img src="../img/ad.jpg" alt="">
       </div>
+      #}
+      {% include "template/breadcrumbs.html" %}
       {% include "template/footer.html" %}
     </div>
   </div>

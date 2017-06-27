@@ -18,17 +18,44 @@
         <th><span>Заработано <i class="gti-chevron-up sorter"></i></span></th>
         <th><span>Посл. игра</span></th>
       </thead>
-      {% for i in 0..19 %}
+      <tr class="t-item first-team">
+        <td>
+          1
+        </td>
+        <td class="teaminfo">
+          <a href="" class="logo"><img src="http://game-tournaments.com/media/logo/pic-20161110-600x450-6323255579.png"></a>
+            <span class="flag">
+              <img src="http://game-tournaments.com/media/flag/6.png" alt="Европа" title="Европа">
+            </span>
+          <h4>
+            <a href="">NewBee</a>
+            <u>NewBee</u>
+          </h4>
+        </td>
+        <td>
+          1,511
+        </td>
+        <td>
+          —
+        </td>
+        <td>
+          —
+        </td>
+        <td>
+          173 дн.
+        </td>
+      </tr>
+      {% for i in 1..19 %}
         <tr class="t-item">
           <td>
             {{i+1}}
           </td>
-          <td>
+          <td class="teaminfo">
+            <a href="" class="logo"><img class="logo" src="http://game-tournaments.com/media/logo/{{random(logo)}}"/></a>
+            <span class="flag">
+              <img src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" alt="Европа" title="Европа">
+            </span>
             <h4>
-              <img class="logo" src="http://game-tournaments.com/media/logo/{{random(logo)}}"/>
-              <span class="flag">
-                <img src="http://game-tournaments.com/media/flag/{{random(flag)}}.png" alt="Европа" title="Европа">
-              </span>
               <a href="">{{random(team)}}</a>
               <u>{{random(team)}}</u>
             </h4>

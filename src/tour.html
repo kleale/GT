@@ -12,7 +12,6 @@
 <body class="">
    {% include "template/header.html" %}
   <div class="container mainwrap">
-    {% include "template/breadcrumbs.html" %}
     <div class="otstup">
       <section class="t-top">
         <div class="heroBg" style="background-image:url(http://ggscore.com/media/tournament/pic-20160831-478x178-7586446600.jpeg);"></div>
@@ -183,9 +182,12 @@
       
 
       
+    {#
       <div class="bn">
         <img src="../img/ad.jpg" alt="">
       </div>
+    #}
+      {% include "template/breadcrumbs.html" %}
       {% include "template/footer.html" %}
     </div>
   </div>

@@ -11,7 +11,6 @@
 <body class="">
   {% include "template/header.html" %}
   <div class="container mainwrap pad120">
-    {% include "template/breadcrumbs.html" %}
     <div class="otstup">
       <!--
       <section class="trtop hero" style="background-image:url(/img/dotahead1.jpg);">
@@ -65,7 +64,7 @@
         </div>
       </section>
      -->
-      <section class="m-sec m-even"> <!-- .subgr -->
+      <section class="m-sec m-even" style="padding-top:20px;"> <!-- .subgr -->
         <div class="row">
           <div class="col-md-8">
             
@@ -278,9 +277,13 @@
         </div>
       </section>
       #}
+      {#
       <div class="bn">
         <img src="../img/ad.jpg" alt="">
       </div>
+      #}
+        
+      {% include "template/breadcrumbs.html" %}
       {% include "template/footer.html" %}
     </div>
   </div>

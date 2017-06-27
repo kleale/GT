@@ -2,15 +2,6 @@
   State
 */
 
-.menu-open {
-  .bar{
-    margin-left: 0;
-  }
-  .menu-toggle{
-    color: $link-white-active;
-  }
-}
-
 .htip{
   background-color: #0d1921!important;
   &.bottom>.arrow{
@@ -246,14 +237,6 @@
     right: 368px;
 }
 
-
-
-
-
-
-
-
-
 .expanded.toggled_stream .stm_koef {
     background: #3c3c3c;
     display: block;
@@ -267,6 +250,8 @@
     right:0;
     bottom:0;
 }
+
+
 /*BRAND*/
 .expanded.toggled_stream.branded .st_brand {
     background-position: 50% 50%;
@@ -277,7 +262,6 @@
     right: 0;
     height:60px;
 }
-
 .expanded.branded .srteamtoggle .stat_m_select .dropdown .btn {
     background: #333;
 }
@@ -306,15 +290,14 @@
     display:none;
 }
 
-
-
 /*
-      BRANDS --------------------------------
+  BRANDS BG
 */
+/*
 .st_brand{
     transition:all .2s linear;
 }
-/* .b_head */
+
 #srteamslider.expanded.branded.toggled_stream.b_headshot .srteamtoggle{
     background: url("/html/imgbrand/st_bg_head.jpg") no-repeat scroll 50% 0;
 }
@@ -322,7 +305,7 @@
     background-image: url(/html/imgbrand/sbrand_head.png);
 }
 
-/* .b_egb */
+
 #srteamslider.expanded.branded.toggled_stream.b_egb .srteamtoggle{
     background: url("/html/imgbrand/st_bg_egb.jpg") no-repeat scroll 50% 0;
 }
@@ -330,17 +313,19 @@
     background-image: url(/html/imgbrand/sbrand_egb.png);
 }
 
-/* .b_vital */
+
 #srteamslider.expanded.branded.toggled_stream.b_vital .srteamtoggle{
     background: url("/html/imgbrand/st_bg_vital.jpg") no-repeat scroll 50% 0;
 }
 .b_vital .st_brand{
     background-image: url(/html/imgbrand/sbrand_vital.png);
 }
-/* ------------------------------------------ */
+*/
+/* -- */
 
 
 /*HOVERS*/
+/*
 .hi-1::after {
     border-radius: 50px;
     box-sizing: content-box;
@@ -374,3 +359,5 @@
     opacity: 1;
     transform: scale(1);
 }
+*/
+

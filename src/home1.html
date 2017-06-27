@@ -12,13 +12,18 @@
 
 {% set game = ['gti-582', 'gti-704','gti-313','gti-800','gti-755'] %}
 
+<style>
+  .index .header {
+    height: auto;
+  }
+</style>
+
 <!DOCTYPE html>
 <html>
 {% include "template/head.html" %}
 <body class="index">
   {% include "template/header-home.html" %}
   <div class="container mainwrap" style="padding-top:20px;">
-    {#{% include "template/breadcrumbs.html" %}#}
     <div class="otstup">
       <div class="indexwrap">
         <div class="homepage">
@@ -565,7 +570,7 @@
         <img src="../img/ad.jpg" alt="">
       </div>
     #}
-     
+      {% include "template/breadcrumbs.html" %}
       {% include "template/footer.html" %}
     </div>
   </div>

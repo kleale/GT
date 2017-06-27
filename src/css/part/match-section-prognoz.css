@@ -238,10 +238,10 @@
     }
     .ava-sm{
       transform: translate(0);
-      top: 8px;
+      top: 9px;
     }
     .logo{
-      top: 8px;
+      top: 13px;
       transform: translate(0);
     }
   }
@@ -346,21 +346,6 @@
   tr{
     td{
       padding: 7px;
-    }
-  }
-}
-
-.modal-body{
-    background: rgb(32, 37, 39);
-    background-image: url(../img/spoiler.png);
-    background-repeat: repeat;
-    background-position: center;
-  .mtable tr{
-    &:nth-of-type(2n) {
-      background: rgba(54, 59, 64, 0.14);
-    }
-    &:nth-of-type(2n+1) {
-      border-bottom: 1px solid rgba(57, 62, 64, 0.25);
     }
   }
 }

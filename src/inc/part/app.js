@@ -47,6 +47,7 @@
 	});
     
     // swappable left bar
+    /*
     $(".swipe-area").swipe({
       swipeStatus: function (event, phase, direction, distance, duration, fingers) {
         if (phase == "move" && direction == "right") {
@@ -63,6 +64,7 @@
         }
       }
     });
+    */
     
     // tabs on mobile
     function setScale(){

@@ -572,22 +572,23 @@ match-banner.html
   padding-bottom: 0!important;
 }
 .matchWrap{
-  padding: 50px 0 120px 50px;
+  padding: 50px 0 120px 0;
   overflow: hidden;
   .bread {
     top: 0;
     position: fixed;
     z-index: 20;
     right: 0;
-    left: 50px;
+    /*left: 50px;*/
+    left: 0;
     background: #33393c;
-    
     display: table;
-    width: calc(100% - 50px);
-    
+    /*width: calc(100% - 50px);*/
+    width: 100%;
     ol{
-      padding: 15px;
+      padding: 17px 10px 13px 0;
       float: left;
+      height: 50px;
       @media (max-width: 990px) {
         display: none;
       }
@@ -619,7 +620,6 @@ match-banner.html
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-
       @media (max-width: 990px) {
         width: calc(100% - 85px);
         margin-right: 85px;
@@ -693,7 +693,7 @@ match-banner.html
   }
   
   .frameblock{
-    position: fixed 0 383px 0 50px;
+    position: fixed 0 383px 0 0;
     height: 100%;
     z-index: 4;
     
@@ -735,7 +735,6 @@ match-banner.html
 } 
 
 /*matchwrap*/
-
 .pageMatch{
   footer{
     width: 383px;
@@ -1098,11 +1097,6 @@ ONLY portrait orientation
     .frameblock{
       position: relative 0 0 0 0;
       margin-top: 0;
-      /*
-      .frameTop{
-        position: relative 0 0 0 0;
-      }
-      */
       .frame{
         position: relative 0 0 0 0;
         height: 550px;
@@ -1156,36 +1150,6 @@ ONLY portrait orientation
    .matchWrap{
     .frameblock{
       height: auto;
-      /*
-      .frameTop {
-        height: auto;
-        padding: 10px 0;
-        .row{
-          display: block;
-
-          >div{
-            display: block;
-            height: auto;
-            vertical-align: middle;
-            float: none;
-            width: 100%!important;
-            text-align: center!important;
-            
-            i {
-              font-size: 18px;
-              margin: 0;
-            }
-            h1{
-              font-size: 16px;
-              margin: 5px 0;
-            }
-            b {
-              font-size: 11px;
-            }
-          }
-        }
-      }
-      */
       .frameBottom{
         display: none;
       }
